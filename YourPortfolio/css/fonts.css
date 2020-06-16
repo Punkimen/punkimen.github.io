@@ -1,0 +1,13 @@
+@font-face{
+	font-family: monster;
+	src: url("font/montserrat.woff") format("woff");
+}
+@font-face{
+	font-family: helvetic;
+	src: url("font/HelveticaNeueCyr.woff") format("woff");
+}
+
+@font-face{
+	font-family: MyriadPro;
+	src: url("font/MyriadPro.woff") format("woff");
+}
