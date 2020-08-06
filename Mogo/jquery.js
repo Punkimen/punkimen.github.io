@@ -1,86 +1,86 @@
-$(function(){
-	
+$(function () {
+
 	var header = $("#header"),
-		introH = $("#intro").innerHeight(),	
+		introH = $("#intro").innerHeight(),
 		scrollOffset = $(window).scrollTop;
-	
-/*Fixed Header*/	
+
+	/*Fixed Header*/
 	checkScroll(scrollOffset);
-	
-	$(window).on("scroll", function(){
-		
+
+	$(window).on("scroll", function () {
+
 		scrollOffset = $(this).scrollTop();
-		
-	    checkScroll(scrollOffset);
-		
-	})	
-	
-	function checkScroll(){
-		
-		
-		if (scrollOffset >= introH){
+
+		checkScroll(scrollOffset);
+
+	})
+
+	function checkScroll() {
+
+
+		if (scrollOffset >= introH) {
 			header.addClass("fixed");
-		}else{
+		} else {
 			header.removeClass("fixed");
 		}
 	}
-	
-	
-	
+
+
+
 	/*Smooth scroll*/
-	
-	
-	$("[data-scroll]").on("click", function(event){
+
+
+	$("[data-scroll]").on("click", function (event) {
 		event.preventDefault();
-		
+
 		var $this = $(this)
-			blockId = $this.data('scroll'),
+		blockId = $this.data('scroll'),
 			blockOffset = $(blockId).offset().top;
-			
-		$this.addClass("active"); 	
-		
+
+		$this.addClass("active");
+
 		$("html, body").animate({
 			scrollTop: blockOffset
 		})
 	});
-	
-	
-	
+
+
+
 	/*menu togle*/
-	
-	$("#nav_togle").on("click", function(event){
+
+	$("#nav_togle").on("click", function (event) {
 		event.preventDefault();
-		
-		$(this).toggleClass("active"); 
+
+		$(this).toggleClass("active");
 		$("#nav").toggleClass("active");
 	})
-	
-	
+
+
 	/*Colapse*/
-	
-	
-	$("[data-collapse]").on("click", function(event){
+
+
+	$("[data-collapse]").on("click", function (event) {
 		event.preventDefault();
-		
+
 		var $this = $(this)
-			blockId = $this.data('collapse');
-			
-		$this.toggleClass("active")	
-		
-		
+		blockId = $this.data('collapse');
+
+		$this.toggleClass("active")
+
+
 	})
-	
-	
+
+
 	/*Slider*/
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
 })	
