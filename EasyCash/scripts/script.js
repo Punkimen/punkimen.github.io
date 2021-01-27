@@ -3,10 +3,6 @@ lang.on('click', function () {
     $(this).addClass('active').siblings().removeClass('active');
 })
 
-$('#about').on('click', function () {
-    $('.mainMenu').slideToggle();;
-});
-
 $('.accordion__title').on('click', function () {
     $(this).toggleClass('active').next().slideToggle();
     return false;
@@ -20,7 +16,7 @@ $('.info__slider').slick({
 });
 
 $('.burger__menu').on('click', function () {
-    $('.header__menu').slideToggle();
+    $('.mainMenu').slideToggle();
     return false;
 })
 
@@ -71,82 +67,6 @@ $('.passport__inner').addClass('visible');
 let stepItem = $('.reg__step-code');
 let index = 0;
 
-// function steps() {
-//     // let index = 0;
-//     $('#step__btn-next').on('click', function (event) {
-//         stepItem.eq(index).fadeOut();
-//         if (index !== 3) {
-//             index += 1;
-//         }
-//         stepItem.eq(index).fadeIn();
-//         let inner = +$('.step__inner-num > span').html()
-//         if (inner !== 5) {
-//             inner += 1;
-//             $('.step__inner-num > span').html(inner);
-//         }
-//         if (inner == 5) {
-//             $('#newBtn').addClass('visible');
-//             $('#step__btn-next').hide()
-//         }
-//         return false
-//     })
-
-//     $('#step__btn-prev').on('click', function () {
-//         stepItem.eq(index).fadeOut();
-//         if (index !== 0) {
-//             index -= 1;
-//         }
-//         stepItem.eq(index).fadeIn();
-//         let inner = +$('.step__inner-num > span').html()
-//         if (inner !== 2) {
-//             inner -= 1;
-//             $('.step__inner-num > span').html(inner);
-//             console.log(inner)
-//         };
-//         if (inner !== 5) {
-//             $('#newBtn').removeClass('visible');
-//             $('#step__btn-next').show()
-//         }
-//     })
-//     function validateForm() {
-//         let error = 0;
-//         let req = $('.req');
-//         console.log('work')
-//         $.each(req, function (index) {
-//             const input = req.eq(index)
-//             removeError(input);
-//             if (input.value === '') {
-//                 formAddError(input);
-//                 error++;
-//             };
-//             if (error !== 0) {
-//                 return false
-//             }
-//         })
-
-//     }
-//     function addError(input) {
-//         input.parent('reg__input').addClass('inp-error')
-//     }
-//     function removeError(input) {
-//         input.parent('reg__input').removeClass('inp-error')
-//     }
-// }
-// steps();
-// function validateForm() {
-//     let x, y, i, valid = true;
-//     x = $('.reg__step-code');
-//     y = x.eq(index).find('input, select');
-//     console.log(y);
-//     for (i = 0; i < y.length; i++) {
-//         if (y.eq(i).value == "") {
-//             y.eq(i).addClass('inp-error');
-//             valid = false;
-//             console.log(y.eq(i).value)
-//         }
-//     }
-//     return valid;
-// }
 
 $('#price-range-filter-header').click(function () {
     FilterContainerSlideUpDown('filter_but', 'price-range-filter-header');
@@ -203,3 +123,63 @@ if ($(window).width() >= '450') {
         console.log($(window).scrollTop())
     });;
 }
+
+let checkboxAdress = $('input[name="checkbox-adressNo"]');
+
+checkboxAdress.on('change', function (event) {
+    if (this.checked == true) {
+        $('.adress__reg-check').show(200);
+    } else {
+        $('.adress__reg-check').hide(200);
+    }
+
+})
+
+let selectStatus = $('#live-status');
+selectStatus.on('change', function () {
+    let value = $(this).val();
+    if (value == 1) {
+        $('.reg-item_work').hide(200);
+        $('.reg-item_study').show(200);
+        $('.reg-item_ip').hide(200);
+    } else if (value == 2) {
+        $('.reg-item_work').show(200);
+        $('.reg-item_study').hide(200);
+        $('.reg-item_ip').hide(200);
+    } else if (value == 3) {
+        $('.reg-item_work').hide(200);
+        $('.reg-item_study').hide(200);
+        $('.reg-item_ip').show(200);
+    } else {
+        $('.reg-item_work').hide(200);
+        $('.reg-item_study').hide(200);
+        $('.reg-item_ip').hide(200);
+    }
+    console.log($(this).val())
+})
+// $('.reg-item_newCard').hide();
+$('#addCard').on('click', function () {
+    $('.reg-item_newCard').show(200);
+    return false;
+})
+
+function equalHeight(group) {
+    var tallest = 0;
+    group.each(function () {
+        thisHeight = $(this).height();
+        if (thisHeight > tallest) {
+            tallest = thisHeight;
+        }
+    });
+    group.height(tallest);
+}
+$(document).ready(function () {
+    equalHeight($(".balance__wrapper-window"));
+});
+
+$('.account__name').on('click', function () {
+    $('.account__name-menu').slideToggle();
+})
+$('.header__account-phone').on('click', function () {
+    $('.account__name-menu').slideToggle();
+})

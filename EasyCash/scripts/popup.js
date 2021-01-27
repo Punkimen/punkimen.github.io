@@ -14,3 +14,12 @@ $(function () {
         $.magnificPopup.close();
     });
 });
+
+$('.sms-code').on('click', function () {
+    $('.login__forgot-window').show();
+    const hideWindow = () => {
+        $('.login__forgot-window').hide();
+    }
+    setTimeout(hideWindow, 5000);
+    return false;
+})

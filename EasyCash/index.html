@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/slick.css">
     <link rel="stylesheet" href="style/jquery-ui.css">
+    <link rel="stylesheet" href="style/magnific-popup.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/media.css">
+    <link rel="stylesheet" href="style/newStyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts/slick.min.js" defer></script>
     <script src="scripts/jquery-ui.min.js"></script>
     <script src="scripts/jquery.ui.touch-punch.min.js"></script>
+    <script src="scripts/jquery.magnific-popup.min.js"></script>
+    <script src="scripts/popup.js" defer></script>
     <script src="scripts/calc.js" defer></script>
     <script src="scripts/script.js" defer></script>
 </head>
@@ -42,7 +46,7 @@
                 </div>
                 <div class="header__left">
                     <div class="logo">
-                        <a href="#">
+                        <a href="index.html">
                             <img src="images/logo.png" alt="">
                         </a>
                     </div>
@@ -50,17 +54,17 @@
                         <nav class="menu">
                             <ul class="menu__list">
                                 <li class="menu__list-item">
-                                    <a id="about" class="menu__list-link" href="#">
+                                    <a id="about" class="menu__list-link" href="about.html">
                                         О нас
                                     </a>
                                 </li>
                                 <li class="menu__list-item">
-                                    <a class="menu__list-link" href="#">
+                                    <a class="menu__list-link popup-modal" href="#popup__register">
                                         Получить
                                     </a>
                                 </li>
                                 <li class="menu__list-item">
-                                    <a class="menu__list-link" href="#">
+                                    <a class="menu__list-link" href="news.html">
                                         Акции
                                     </a>
                                 </li>
@@ -68,20 +72,30 @@
                         </nav>
                     </div>
                 </div>
+                <div class="header__support">
+                    <div class="header__support-label">
+                        Поддержка:
+                    </div>
+                    <div class="header__support-phones">
+                        <a href="tel:380633163030">+38 (063) 316-30-30</a>
+                        <a href="tel:380633163030">+38 (067) 316-30-30</a>
+                        <a href="tel:380633163030">+38 (066) 316-30-30</a>
+                    </div>
+                </div>
                 <div class="header__account">
                     <div class="account__language">
                         <div class="account__language-item">ua</div>
                         <div class="account__language-item active">ru</div>
                     </div>
-                    <a href="#" class="account btn  btn-bg">
+                    <a href="loan.html" class="account btn  btn-bg">
                         Погасить
                     </a>
-                    <a href="#" class="account btn  btn-transparent">
+                    <a href="personalCabinet_1.html" class="account btn  btn-transparent">
                         Личный кабинет
                     </a>
                 </div>
                 <div class="header__account-phone">
-                    <a href="#" class="account-phone">
+                    <a href="personalCabinet_1.html" class="account-phone">
                         Личный кабинет
                     </a>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,85 +112,56 @@
             </div>
         </div>
         <div class="mainMenu">
-            <div class="container">
-                <div class="mainMenu__inner">
-                    <div class="mainMenu__inner-menu">
-                        <nav class="mainMenu__menu">
-                            <ul class="mainMenu__list">
-                                <li class="mainMenu__list-item">
-                                    <a href="#" class="mainMenu__list-link">
-                                        О компании
-                                    </a>
-                                </li>
-                                <li class="mainMenu__list-item">
-                                    <a href="#" class="mainMenu__list-link">
-                                        Акции
-                                    </a>
-                                </li>
-                                <li class="mainMenu__list-item">
-                                    <a href="#" class="mainMenu__list-link">
-                                        Новости
-                                    </a>
-                                </li>
-                                <li class="mainMenu__list-item">
-                                    <a href="#" class="mainMenu__list-link">
-                                        Вопросы и ответы
-                                    </a>
-                                </li>
-                                <li class="mainMenu__list-item">
-                                    <a href="#" class="mainMenu__list-link">
-                                        Контакты
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+
+            <div class="mainMenu__inner">
+                <div class="mainMenu__inner-menu">
+                    <nav class="mainMenu__menu">
+                        <ul class="mainMenu__list">
+                            <li class="mainMenu__list-item">
+                                <a href="about.html" class="mainMenu__list-link">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="mainMenu__list-item">
+                                <a href="news.html" class="mainMenu__list-link">
+                                    Акции
+                                </a>
+                            </li>
+                            <li class="mainMenu__list-item">
+                                <a href="news.html" class="mainMenu__list-link">
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="mainMenu__list-item">
+                                <a href="answer.html" class="mainMenu__list-link">
+                                    Вопросы и ответы
+                                </a>
+                            </li>
+                            <li class="mainMenu__list-item">
+                                <a href="#" class="mainMenu__list-link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="mainMenu__inner-lang">
+                    <div class="account__language-item">ua</div>
+                    <div class="account__language-item active">ru</div>
+                </div>
+                <div class="header__support header__support_mobile">
+                    <div class="header__support-label">
+                        Поддержка:
                     </div>
-                    <div class="mainMenu__inner-info">
-                        <div class="info__title">
-                            Юридическая информация
-                        </div>
-                        <div class="info__inner">
-                            <ul class="info__item">
-                                <li class="info__item-text">
-                                    <a href="#">
-                                        Правовая информация
-                                    </a>
-                                </li>
-                                <li class="info__item-text">
-                                    <a href="#">
-                                        Кредитный договор
-                                    </a>
-                                </li>
-                                <li class="info__item-text">
-                                    <a href="#">
-                                        Подтверждение
-                                    </a>
-                                </li>
-                                <li class="info__item-text">
-                                    <a href="#">
-                                        Паспорт кредита
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="info__item">
-                                <li class="info__item-text">
-                                    <a href="#">
-                                        Публичное предложение
-                                    </a>
-                                </li>
-                                <li class="info__item-text">
-                                    <a href="#">
-                                        Согласие на обработку персональных данных
-                                    </a>
-                                </li>
-                                <li class="info__item-text">
-                                    <a href="#">
-                                        Политика конфиденциальности
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="header__support-phones">
+                        <a href="tel:380633163030">+38 (063) 316-30-30</a>
+                        <a href="tel:380633163030">+38 (067) 316-30-30</a>
+                        <a href="tel:380633163030">+38 (066) 316-30-30</a>
                     </div>
+                </div>
+                <div class="mainMenu__inner-btns">
+                    <a href="personalCabinet_1.html" class="mainMenu__inner-btn btn btn-transparent">Личный кабинет</a>
+                    <a href="loan.html" class="mainMenu__inner-btn btn">Погасить</a>
                 </div>
             </div>
         </div>
@@ -206,7 +191,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="info__slider-item">
+                    <div class="info__slider-item">
                         <div class="info__slider-bg">
                             <div class="container">
                                 <div class="slider__content">
@@ -245,7 +230,7 @@
 
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -348,9 +333,12 @@
                             </div>
                         </div>
                     </div>
-                    <button class="credits__calc-btn btn">
+                    <div class="credits__calc-promo">
+                        <a class="popup-modal" href="#popup__promo">У меня есть промо-код</a>
+                    </div>
+                    <a class="credits__calc-btn btn popup-modal" href="#popup__register">
                         Оформить кредит
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -363,66 +351,67 @@
                 <div class="loan__item">
                     <div class="loan__item-text">Платежная карта</div>
                     <div class="loan__item-img">
-                        <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M42.9268 16.0919L28.9732 2.12967C28.2157 1.37217 27.2171 0.958984 26.1411 0.958984C25.0737 0.958984 24.0666 1.37217 23.3091 2.12967L1.1865 24.2523C0.437599 25.0098 0.0244141 26.0083 0.0244141 27.0843C0.0244141 28.1517 0.437599 29.1588 1.1951 29.9163L2.91671 31.6379L14.4859 43.2071H12.8848C12.3769 43.2071 11.9637 43.6203 11.9637 44.1282C11.9637 44.6361 12.3769 45.0492 12.8848 45.0492H17.9807H31.2457C31.7536 45.0492 32.1667 44.6361 32.1667 44.1282C32.1667 43.6203 31.7536 43.2071 31.2457 43.2071H21.4756L42.9268 21.7559C44.4848 20.1893 44.4848 17.6499 42.9268 16.0919ZM41.6269 20.4475L19.5043 42.5701C19.0998 42.9747 18.5575 43.1985 17.9807 43.1985H17.9721C17.3954 43.1985 16.8531 42.9747 16.4485 42.5701L4.86212 30.9837L26.1067 9.73916C26.4682 9.37762 26.4682 8.80089 26.1067 8.43935C25.7452 8.07781 25.1684 8.07781 24.8069 8.43935L3.56231 29.6839L2.48631 28.6079C2.08173 28.2034 1.85792 27.661 1.85792 27.0757C1.85792 26.4904 2.08173 25.9481 2.48631 25.5435L24.6089 3.42088C25.0135 3.0163 25.5558 2.79249 26.1411 2.79249C26.7179 2.79249 27.2688 3.0163 27.6734 3.42088L32.6402 8.3877L11.3956 29.6409C11.0341 30.0024 11.0341 30.5792 11.3956 30.9407C11.5764 31.1215 11.8088 31.2075 12.0412 31.2075C12.2736 31.2075 12.5146 31.1215 12.6868 30.9407L33.9314 9.69612L41.6183 17.3831C42.4705 18.2353 42.4705 19.6039 41.6269 20.4475Z"
+                                d="M42.9268 18.0919L28.9732 4.12967C28.2157 3.37217 27.2171 2.95898 26.1411 2.95898C25.0737 2.95898 24.0666 3.37217 23.3091 4.12967L1.1865 26.2523C0.437599 27.0098 0.0244141 28.0083 0.0244141 29.0843C0.0244141 30.1517 0.437599 31.1588 1.1951 31.9163L2.91671 33.6379L14.4859 45.2071H12.8848C12.3769 45.2071 11.9637 45.6203 11.9637 46.1282C11.9637 46.6361 12.3769 47.0492 12.8848 47.0492H17.9807H31.2457C31.7536 47.0492 32.1667 46.6361 32.1667 46.1282C32.1667 45.6203 31.7536 45.2071 31.2457 45.2071H21.4756L42.9268 23.7559C44.4848 22.1893 44.4848 19.6499 42.9268 18.0919ZM41.6269 22.4475L19.5043 44.5701C19.0998 44.9747 18.5575 45.1985 17.9807 45.1985H17.9721C17.3954 45.1985 16.8531 44.9747 16.4485 44.5701L4.86212 32.9837L26.1067 11.7392C26.4682 11.3776 26.4682 10.8009 26.1067 10.4393C25.7452 10.0778 25.1684 10.0778 24.8069 10.4393L3.56231 31.6839L2.48631 30.6079C2.08173 30.2034 1.85792 29.661 1.85792 29.0757C1.85792 28.4904 2.08173 27.9481 2.48631 27.5435L24.6089 5.42088C25.0135 5.0163 25.5558 4.79249 26.1411 4.79249C26.7179 4.79249 27.2688 5.0163 27.6734 5.42088L32.6402 10.3877L11.3956 31.6409C11.0341 32.0024 11.0341 32.5792 11.3956 32.9407C11.5764 33.1215 11.8088 33.2075 12.0412 33.2075C12.2736 33.2075 12.5146 33.1215 12.6868 32.9407L33.9314 11.6961L41.6183 19.3831C42.4705 20.2353 42.4705 21.6039 41.6269 22.4475Z"
                                 fill="url(#paint0_linear)" />
                             <path
-                                d="M22.6461 27.4803C22.2846 27.1187 21.7078 27.1187 21.3463 27.4803L14.1242 34.7024C13.7626 35.0639 13.7626 35.6407 14.1242 36.0022C14.3049 36.183 14.5374 36.2691 14.7698 36.2691C15.0022 36.2691 15.2432 36.183 15.4154 36.0022L22.6375 28.7801C23.0076 28.4185 23.0076 27.8418 22.6461 27.4803Z"
+                                d="M22.6466 29.4803C22.2851 29.1187 21.7083 29.1187 21.3468 29.4803L14.1247 36.7024C13.7631 37.0639 13.7631 37.6407 14.1247 38.0022C14.3054 38.183 14.5379 38.2691 14.7703 38.2691C15.0027 38.2691 15.2437 38.183 15.4159 38.0022L22.638 30.7801C23.0081 30.4185 23.0081 29.8418 22.6466 29.4803Z"
                                 fill="url(#paint1_linear)" />
                             <path
-                                d="M19.6849 34.3409L16.7238 37.302C16.3623 37.6635 16.3623 38.2403 16.7238 38.6018C16.9046 38.7826 17.137 38.8687 17.3694 38.8687C17.6018 38.8687 17.8428 38.7826 18.015 38.6018L20.9762 35.6407C21.3377 35.2791 21.3377 34.7024 20.9762 34.3409C20.6146 33.9793 20.0379 33.9793 19.6849 34.3409Z"
+                                d="M19.6854 36.3409L16.7243 39.302C16.3627 39.6635 16.3627 40.2403 16.7243 40.6018C16.905 40.7826 17.1375 40.8687 17.3699 40.8687C17.6023 40.8687 17.8433 40.7826 18.0155 40.6018L20.9766 37.6407C21.3382 37.2791 21.3382 36.7024 20.9766 36.3409C20.6151 35.9793 20.0384 35.9793 19.6854 36.3409Z"
                                 fill="url(#paint2_linear)" />
                             <path
-                                d="M22.4051 31.6121L22.0177 31.9995C21.6562 32.361 21.6562 32.9377 22.0177 33.2993C22.1985 33.4801 22.4309 33.5661 22.6633 33.5661C22.8958 33.5661 23.1368 33.4801 23.3089 33.2993L23.6963 32.9119C24.0578 32.5504 24.0578 31.9736 23.6963 31.6121C23.352 31.2592 22.7666 31.2592 22.4051 31.6121Z"
+                                d="M22.4046 33.6121L22.0172 33.9995C21.6557 34.361 21.6557 34.9377 22.0172 35.2993C22.198 35.4801 22.4304 35.5661 22.6628 35.5661C22.8953 35.5661 23.1363 35.4801 23.3084 35.2993L23.6958 34.9119C24.0573 34.5504 24.0573 33.9736 23.6958 33.6121C23.3515 33.2592 22.7661 33.2592 22.4046 33.6121Z"
                                 fill="url(#paint3_linear)" />
                             <path
-                                d="M35.0677 15.0675C34.8955 14.8953 34.6631 14.8007 34.4221 14.8007C34.181 14.8007 33.9486 14.8953 33.7765 15.0675L29.8684 18.9583C29.6963 19.1305 29.6016 19.3629 29.6016 19.6039C29.6016 19.845 29.6963 20.0774 29.8684 20.2495L32.468 22.8492C32.6488 23.0299 32.8812 23.116 33.1136 23.116C33.3461 23.116 33.5871 23.0299 33.7592 22.8492L37.6587 18.9497C38.0202 18.5882 38.0202 18.0114 37.6587 17.6499L35.0677 15.0675ZM33.1136 20.9037L31.8138 19.6039L34.4134 17.0043L35.7133 18.3041L33.1136 20.9037Z"
+                                d="M35.0677 17.0675C34.8955 16.8953 34.6631 16.8007 34.4221 16.8007C34.181 16.8007 33.9486 16.8953 33.7765 17.0675L29.8684 20.9583C29.6963 21.1305 29.6016 21.3629 29.6016 21.6039C29.6016 21.845 29.6963 22.0774 29.8684 22.2495L32.468 24.8492C32.6488 25.0299 32.8812 25.116 33.1136 25.116C33.3461 25.116 33.5871 25.0299 33.7592 24.8492L37.6587 20.9497C38.0202 20.5882 38.0202 20.0114 37.6587 19.6499L35.0677 17.0675ZM33.1136 22.9037L31.8138 21.6039L34.4134 19.0043L35.7133 20.3041L33.1136 22.9037Z"
                                 fill="url(#paint4_linear)" />
                             <path
-                                d="M27.5958 7.87117C27.8282 7.87117 28.0692 7.78509 28.2414 7.60432L28.6287 7.21696C28.9903 6.85542 28.9903 6.27869 28.6287 5.91715C28.2672 5.55561 27.6905 5.55561 27.3289 5.91715L26.9416 6.30451C26.58 6.66605 26.58 7.24278 26.9416 7.60432C27.1309 7.77648 27.3634 7.87117 27.5958 7.87117Z"
+                                d="M27.5963 9.87117C27.8287 9.87117 28.0697 9.78509 28.2419 9.60432L28.6292 9.21696C28.9908 8.85542 28.9908 8.27869 28.6292 7.91715C28.2677 7.55561 27.6909 7.55561 27.3294 7.91715L26.9421 8.30451C26.5805 8.66605 26.5805 9.24278 26.9421 9.60432C27.1314 9.77648 27.3638 9.87117 27.5963 9.87117Z"
                                 fill="url(#paint5_linear)" />
                             <path
-                                d="M9.25226 31.7842L8.8649 32.1716C8.50337 32.5331 8.50337 33.1099 8.8649 33.4714C9.04567 33.6522 9.27809 33.7383 9.5105 33.7383C9.74292 33.7383 9.98394 33.6522 10.1561 33.4714L10.5435 33.084C10.905 32.7225 10.905 32.1458 10.5435 31.7842C10.1905 31.4313 9.6138 31.4313 9.25226 31.7842Z"
+                                d="M9.25226 33.7842L8.8649 34.1716C8.50337 34.5331 8.50337 35.1099 8.8649 35.4714C9.04567 35.6522 9.27809 35.7383 9.5105 35.7383C9.74292 35.7383 9.98394 35.6522 10.1561 35.4714L10.5435 35.084C10.905 34.7225 10.905 34.1458 10.5435 33.7842C10.1905 33.4313 9.6138 33.4313 9.25226 33.7842Z"
                                 fill="url(#paint6_linear)" />
                             <defs>
-                                <linearGradient id="paint0_linear" x1="11.9603" y1="2.79608" x2="43.4922" y2="10.0432"
+                                <linearGradient id="paint0_linear" x1="11.9603" y1="4.79608" x2="43.4922" y2="12.0432"
                                     gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#B534BE" />
-                                    <stop offset="1" stop-color="#451472" />
+                                    <stop offset="0.223958" stop-color="#5D4157" />
+                                    <stop offset="1" stop-color="#A8CABA" />
                                 </linearGradient>
-                                <linearGradient id="paint1_linear" x1="16.3076" y1="27.5866" x2="22.7916" y2="29.078"
+                                <linearGradient id="paint1_linear" x1="16.3081" y1="29.5866" x2="22.7921" y2="31.078"
                                     gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#B534BE" />
-                                    <stop offset="1" stop-color="#451472" />
+                                    <stop offset="0.223958" stop-color="#5D4157" />
+                                    <stop offset="1" stop-color="#A8CABA" />
                                 </linearGradient>
-                                <linearGradient id="paint2_linear" x1="17.7512" y1="34.2697" x2="21.1818" y2="35.0578"
+                                <linearGradient id="paint2_linear" x1="17.7517" y1="36.2697" x2="21.1823" y2="37.0578"
                                     gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#B534BE" />
-                                    <stop offset="1" stop-color="#451472" />
+                                    <stop offset="0.223958" stop-color="#5D4157" />
+                                    <stop offset="1" stop-color="#A8CABA" />
                                 </linearGradient>
-                                <linearGradient id="paint3_linear" x1="22.3481" y1="31.4399" x2="23.9368" y2="31.8055"
+                                <linearGradient id="paint3_linear" x1="22.3476" y1="33.4399" x2="23.9363" y2="33.8055"
                                     gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#B534BE" />
-                                    <stop offset="1" stop-color="#451472" />
+                                    <stop offset="0.223958" stop-color="#5D4157" />
+                                    <stop offset="1" stop-color="#A8CABA" />
                                 </linearGradient>
-                                <linearGradient id="paint4_linear" x1="31.8571" y1="15.1471" x2="37.8147" y2="16.5191"
+                                <linearGradient id="paint4_linear" x1="31.8571" y1="17.1471" x2="37.8147" y2="18.5191"
                                     gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#B534BE" />
-                                    <stop offset="1" stop-color="#451472" />
+                                    <stop offset="0.223958" stop-color="#5D4157" />
+                                    <stop offset="1" stop-color="#A8CABA" />
                                 </linearGradient>
-                                <linearGradient id="paint5_linear" x1="27.2742" y1="5.73871" x2="28.869" y2="6.10611"
+                                <linearGradient id="paint5_linear" x1="27.2747" y1="7.73871" x2="28.8695" y2="8.10611"
                                     gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#B534BE" />
-                                    <stop offset="1" stop-color="#451472" />
+                                    <stop offset="0.223958" stop-color="#5D4157" />
+                                    <stop offset="1" stop-color="#A8CABA" />
                                 </linearGradient>
-                                <linearGradient id="paint6_linear" x1="9.19523" y1="31.612" x2="10.784" y2="31.9776"
+                                <linearGradient id="paint6_linear" x1="9.19523" y1="33.612" x2="10.784" y2="33.9776"
                                     gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#B534BE" />
-                                    <stop offset="1" stop-color="#451472" />
+                                    <stop offset="0.223958" stop-color="#5D4157" />
+                                    <stop offset="1" stop-color="#A8CABA" />
                                 </linearGradient>
                             </defs>
                         </svg>
+
                     </div>
                 </div>
                 <div class="loan__item">
@@ -951,7 +940,7 @@
                 <div class="footer__wrapper-up">
                     <div class="footer__wrapper-left">
                         <div class="footer__left-title">
-                            <a href="#">О компании</a>
+                            <a href="about.html">О компании</a>
                         </div>
                         <div class="footer__left-title">
                             <a href="#">Полезные ссылки</a>
@@ -961,6 +950,8 @@
                         <div class="footer__right-support">
                             <div class="support__title">Служба поддержки</div>
                             <div class="support__phone">
+                                <a href="#">+38 (044) 338-07-79</a>
+                                <a href="#">+38 (044) 338-07-79</a>
                                 <a href="#">+38 (044) 338-07-79</a>
                             </div>
                         </div>
@@ -999,6 +990,256 @@
                     Telegram</a></div>
         </div>
         <img src="images/chatbot.png" alt="">
+    </div>
+    <div class="popups" style="display: none;">
+        <div id="popup__sent" class="popup__sent popup">
+            <img src="images/popup-happy.png" alt="">
+            <div class="popup__title">Ваша заявка отправлена</div>
+            <div class="sent__text popup__text">Ваша заявка отправлена на проверку! Вы получите сообщение, как только
+                заявка будет
+                рассмотрена!</div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__mistake" class="popup__mistake popup">
+            <img src="images/popup-unhappy.png" alt="">
+            <div class="popup__title">Ошибка отправки</div>
+            <div class="sent__text popup__text">При отправке заявки возникли проблемы, пожалуйста, попробуйте еще раз!
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__congr-1" class="popup__congr popup">
+            <img src="images/popup-happy.png" alt="">
+            <div class="popup__title">Поздравляем!</div>
+            <div class="sent__text popup__text">Ваш кредит на сумму <span>4500 грн</span> одобрен!
+            </div>
+            <a href="#" class="popup-btn btn  btn-bg">
+                Перейти в кабинет
+            </a>
+            <div class="login__register">
+                <a href="#" class="login__regist">Отказаться</a>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__congr-2" class="popup__congr popup">
+            <img src="images/popup-happy.png" alt="">
+            <div class="popup__title">Поздравляем!</div>
+            <div class="sent__text popup__text">Ваш кредит пролонгирован!
+            </div>
+            <a href="#" class="popup-btn btn  btn-bg">
+                На главную
+            </a>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+        <div id="popup__congr-3" class="popup__congr popup">
+            <img src="images/popup-happy.png" alt="">
+            <div class="popup__title">Поздравляем!</div>
+            <div class="sent__text popup__text">Ваш кредит закрыт!
+            </div>
+            <a href="#" class="popup-btn btn  btn-bg">
+                Оформить новый
+            </a>
+            <div class="login__register">
+                <a href="#" class="login__regist">Отказаться</a>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+        <div id="popup__congr-4" class="popup__congr popup">
+            <img src="images/popup-happy.png" alt="">
+            <div class="sent__text popup__text">
+                Я ознакомлен с “Кредитным договором” и подтверждаю свое согласие с условиями Договора и понимаю в полном
+                объеме изложенную в нем информацию.
+            </div>
+            <a href="#" class="popup-btn btn  btn-bg">
+                Подписать кредитный договор
+            </a>
+            <div class="login__register">
+                <a href="#" class="login__regist">Отказаться</a>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+        <div id="popup__sorry" class="popup__sorry popup">
+            <img src="images/popup-unhappy.png" alt="">
+            <div class="popup__title">Ошибка транзакции</div>
+            <div class="sent__text popup__text">При проведении платежа возникли проблемы, пожалуйста, попробуйте еще раз
+                или обратитесь в поддержку!</div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__login" class="popup__login popup">
+            <div class="login__inner">
+                <div class="form__label popup__title">Войти в кабинет</div>
+                <form class="login__form">
+                    <div class="login__form-item">
+                        <label>Номер телефона*</label>
+                        <input type="phone">
+                    </div>
+                    <div class="login__form-item">
+                        <label>Введите код одноразового идентификатора из sms-сообщения*</label>
+                        <input>
+                    </div>
+                    <div class="login__forgot">
+                        <div class="login__forgot-window">
+                            <p>Если в течении 5 минут Вы не получили смс, обратитесь в службу поддержки по номеру 8 800
+                                950 123.</p>
+                        </div>
+                        <a id="" href="#" class="sms-code">Не получили смс с кодом?</a>
+                    </div>
+                    <a href="#" class="popup-btn login-btn">Войти</a>
+                    <div class="login__register">
+                        <a href="#" class="login__regist">Регистрация</a>
+                    </div>
+                </form>
+                <div class="login__inner-enter login-enter">
+                    <div class="login-enter__title">или войти через:</div>
+                    <div class="login-enter__wrapper">
+                        <a class="login-enter__wrapper-link" href="">
+                            <img src="images/social/facebook.svg" alt="">
+                            <span>Facebook</span>
+                        </a>
+                        <a class="login-enter__wrapper-link" href="">
+                            <img src="images/social/bank.svg" alt="">
+                            <span>Bank ID</span>
+                        </a>
+                        <a class="login-enter__wrapper-link" href="">
+                            <img src="images/social/google.svg" alt="">
+                            <span>Google</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__promo" class="popup popup__promo">
+            <div class="popup__title">Введите промо-код</div>
+            <div class="login__form-item">
+                <form class="login__form">
+                    <input>
+                    <button href="#" class="popup-btn login-btn">Подтвердить</button>
+                </form>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__promoErr" class="popup popup__promo">
+            <div class="popup__title">Введите промо-код</div>
+            <div class="popup__error-text">
+                Неверный промо-код
+            </div>
+            <div class="login__form-item">
+                <form class="login__form">
+                    <input>
+                    <button href="#" class="popup-btn login-btn">Подтвердить</button>
+                </form>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+        <div id="popup__verification-timer" class="popup popup__verification">
+            <img src="images/popup-happy.png" alt="">
+            <div class="popup__title">Проходит идентификация личности</div>
+            <div class="popup__text">Подождите, пожалуйста, процесс проверки займет не больше 5 минут</div>
+            <img src="images/clockOrange.svg" alt="">
+            <div class="timer"></div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+        <div id="popup__verification" class="popup popup__verification">
+            <img src="images/popup-happy.png" alt="">
+            <div class="popup__title">Ваш аккаунт проверяется</div>
+            <div class="popup__text">Мы успешно получили данные, которые вы отправили для верификации своего аккаунта.
+                Ваш аккаунт на этапе проверки. Как только ваш аккаунт будет верифицирован, вы получитеуведомление.</div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+        <div id="popup__register" class="popup__login popup">
+            <div class="login__inner">
+                <div class="form__label popup__title">Регистрация</div>
+                <form class="login__form">
+                    <div class="login__form-item">
+                        <label>Номер телефона*</label>
+                        <input type="phone">
+                    </div>
+                    <div class="login__form-item">
+                        <label>Введите код одноразового идентификатора из sms-сообщения*</label>
+                        <input>
+                    </div>
+                    <div class="login__forgot">
+                        <div class="login__forgot-window">
+                            <p>Если в течении 5 минут Вы не получили смс, обратитесь в службу поддержки по номеру 8 800
+                                950 123.</p>
+                        </div>
+                        <a id="" href="#" class="sms-code">Не получили смс с кодом?</a>
+                    </div>
+                    <a href="step_1.html" class="popup-btn login-btn">Зарегестрироваться</a>
+                    <div class="login__register">
+                        <a href="#" class="login__regist">отмена</a>
+                    </div>
+                </form>
+                <div class="login__inner-enter login-enter">
+                    <div class="login-enter__title">или войти через:</div>
+                    <div class="login-enter__wrapper">
+                        <a class="login-enter__wrapper-link" href="">
+                            <img src="images/social/facebook.svg" alt="">
+                            <span>Facebook</span>
+                        </a>
+                        <a class="login-enter__wrapper-link" href="">
+                            <img src="images/social/bank.svg" alt="">
+                            <span>Bank ID</span>
+                        </a>
+                        <a class="login-enter__wrapper-link" href="">
+                            <img src="images/social/google.svg" alt="">
+                            <span>Google</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
+        <div id="popup__code" class="popup popup__promo">
+            <div class="popup__title">Кредитный договор</div>
+            <div class="sent__text popup__text">Данным одноразовым идентификатором подписываю Кредитный договор и
+                направляю кредитору сообщение о принятии в полном объеме условий Кредитного договора</div>
+            <div class="login__form-item">
+                <form class="login__form">
+                    <label>Код*</label>
+                    <input type="">
+                    <button href="#" class="popup-btn login-btn">Подписать</button>
+                    <div class="login__register">
+                        <a href="#" class="login__regist">Прислать код еще раз</a>
+                    </div>
+                </form>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="images/exitBig.png" alt="">
+            </a>
+        </div>
     </div>
 </body>
 

@@ -287,14 +287,24 @@ lang:focus {
 /* mainMenu */
 .mainMenu {
     color: #333;
-    padding: 0;
+    padding: 0 15px;
     margin: 0;
-    background-color: #fff;
     position: absolute;
     right: 0;
     left: 0;
     z-index: 16;
     display: none;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.mainMenu__inner-lang {
+    display: flex;
+}
+
+.mainMenu__inner-lang .account__language-item+.account__language-item {
+    margin-left: 15px;
 }
 
 .mainMenu.visible {
@@ -485,7 +495,7 @@ lang:focus {
 }
 
 .info__slider-bg {
-    background: linear-gradient(102.95deg, #B534BE 22.8%, #451472 84.04%);
+    background: linear-gradient(102.95deg, #5D4157 36.52%, #A8CABA 84.04%);
     opacity: 0.7;
     height: 100%;
 }
@@ -582,7 +592,7 @@ lang:focus {
     padding: 20px;
     text-align: center;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 30px;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
@@ -677,7 +687,7 @@ lang:focus {
     display: block;
     width: 5px;
     height: 5px;
-    background-color: #580575;
+    background-color: #5D4157;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -700,7 +710,7 @@ lang:focus {
 
 .credits .ui-widget-header,
 .news__info .ui-widget-header {
-    background: linear-gradient(102.95deg, #B534BE 22.8%, #451472 84.04%);
+    background: linear-gradient(102.95deg, #5D4157 36.52%, #A8CABA 84.04%);
     border-radius: 5px;
     font-weight: bold;
 }
@@ -835,7 +845,7 @@ html .ui-button.ui-state-disabled:hover {
     width: calc(100% + 2px);
     height: calc(100% + 2px);
     position: absolute;
-    background: linear-gradient(102.95deg, #B534BE 22.8%, #451472 84.04%);
+    background: #5D4157;
     z-index: -1;
     border-radius: 5px;
 }
@@ -945,7 +955,7 @@ html .ui-button.ui-state-disabled:hover {
 /* how */
 .how {
     padding: 90px 0px 100px;
-    background: linear-gradient(102.95deg, #B534BE 22.8%, #451472 84.04%);
+    background: linear-gradient(102.95deg, #5D4157 36.52%, #A8CABA 84.04%);
 }
 
 .how .container {
@@ -1044,14 +1054,14 @@ html .ui-button.ui-state-disabled:hover {
     display: block;
     padding: 20px 25px;
     position: relative;
-    border: 1px solid #B534BE;
+    border: 1px solid #A4A4A4;
     box-sizing: border-box;
     border-radius: 5px;
     transition: all .3s;
 }
 
 .accordion__title a:hover {
-    background: linear-gradient(102.95deg, #B534BE 22.8%, #451472 84.04%);
+    background: linear-gradient(102.95deg, #5D4157 36.52%, #A8CABA 84.04%);
     color: #FFF;
     border-radius: 5px 5px 0px 0px;
     outline: none;
@@ -1064,8 +1074,8 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .accordion__title.active a {
-    background: linear-gradient(102.95deg, #B534BE 22.8%, #451472 84.04%);
-    border: 2px solid #B534BE;
+    background: linear-gradient(102.95deg, #5D4157 36.52%, #A8CABA 84.04%);
+    border: 2px solid #5D4157;
     border-radius: 5px 5px 0px 0px;
     outline: none;
     color: #fff;
@@ -1093,7 +1103,7 @@ html .ui-button.ui-state-disabled:hover {
     line-height: 20px;
     padding: 20px 25px;
     background: #fff;
-    border: 2px solid #B534BE;
+    border: 2px solid #5D4157;
     border-radius: 0px 0px 5px 5px;
     color: #333;
     border-top: none;
@@ -1174,14 +1184,14 @@ html .ui-button.ui-state-disabled:hover {
 
 /* safety */
 .safety {
-    padding: 30px 15px 90px;
+    padding: 80px 15px 90px;
     background: #F4F4F9;
 }
 
 .safety__inner {
     display: flex;
     justify-content: space-around;
-    padding: 140px 0 80px 0px;
+    /* padding: 140px 0 80px 0px; */
     border-radius: 10px;
     margin: 0 auto;
     max-width: 1322px;
@@ -1321,7 +1331,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .online__content::-webkit-scrollbar-thumb {
-    background: linear-gradient(102.95deg, #B534BE 22.8%, #451472 84.04%);
+    background: #5D4157;
     border-radius: 5px;
     height: 5%;
 }
@@ -1333,7 +1343,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .online__content::-moz-scrollbar-thumb {
-    background: linear-gradient(102.95deg, #B534BE 22.8%, #451472 84.04%);
+    background: #5D4157;
     border-radius: 5px;
     height: 5%;
 }
@@ -1389,7 +1399,7 @@ html .ui-button.ui-state-disabled:hover {
     font-size: 18px;
     line-height: 20px;
     color: #333;
-    background: rgba(88, 5, 117, 0.1);
+    background: rgba(93, 65, 87, 0.1);
     border-radius: 5px;
     padding: 13px 15px;
     display: flex;
@@ -1442,7 +1452,7 @@ html .ui-button.ui-state-disabled:hover {
 /* footer */
 
 .footer {
-    background: #44444B;
+    background: #392034;
     padding: 50px 0 20px;
     color: #fff;
     font-family: 'Ubhuntu', sans-serif;
@@ -1504,6 +1514,7 @@ html .ui-button.ui-state-disabled:hover {
 
 .support__phone a {
     color: #fff;
+    display: block;
 }
 
 .footer__social {
@@ -1521,8 +1532,8 @@ html .ui-button.ui-state-disabled:hover {
 /* popups */
 
 .popups {
-    padding: 100px;
-    display: none;
+    /* padding: 100px; */
+    display: block;
 }
 
 .popup {
@@ -1541,7 +1552,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .popup__title {
-    font-weight: 500;
+    font-weight: bold;
     font-size: 22px;
     line-height: 24px;
     color: #333;
@@ -1562,6 +1573,13 @@ html .ui-button.ui-state-disabled:hover {
 .mistake__text {
     max-width: 412px;
     margin: 0 auto;
+}
+
+.popup__text span {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: #5D4157;
 }
 
 .popup__exit {
@@ -1641,6 +1659,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .login__form-item label {
+    text-align: left;
     display: block;
     font-size: 12px;
     line-height: 13px;
@@ -1663,13 +1682,53 @@ html .ui-button.ui-state-disabled:hover {
     border: 1px solid #fF3D00;
 }
 
+.login__form {
+    margin-top: 20px;
+}
+
 .login__forgot {
-    display: inline-block;
+    text-align: right;
+    position: relative;
+}
+
+.login__forgot-window {
+    max-width: 360px;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    bottom: calc(100% + 15px);
+    right: 0;
+    display: none;
+}
+
+.login__forgot-window::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 34px 34px;
+    border-color: transparent transparent #fff transparent;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+.login__forgot a {
     color: #A4A4A4;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
     border-bottom: 1px dotted #A4A4A4;
+    margin-left: auto;
 }
 
 .login-btn {
@@ -1684,6 +1743,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .login__regist {
+    margin-top: 15px;
     font-size: 14px;
     line-height: 20px;
     color: #A4A4A4;
@@ -1692,6 +1752,31 @@ html .ui-button.ui-state-disabled:hover {
 
 .popup__promo {
     padding: 50px 60px;
+}
+
+.login-enter {
+    margin-top: 20px;
+}
+
+.login-enter__title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 13px;
+}
+
+.login-enter__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.login-enter__wrapper-link span {
+    display: block;
+    font-size: 10px;
+    line-height: 14px;
+    color: #A4A4A4;
+    text-align: center;
 }
 
 .popup__promo button {
@@ -1723,7 +1808,7 @@ html .ui-button.ui-state-disabled:hover {
 .loan__link a {
     display: block;
     padding: 28px;
-    background: linear-gradient(102.95deg, #B534BE 22.8%, #451472 84.04%);
+    background: linear-gradient(102.95deg, #5D4157 36.52%, #A8CABA 84.04%);
     font-weight: 500;
     font-size: 22px;
     line-height: 24px;
@@ -1836,6 +1921,11 @@ html .ui-button.ui-state-disabled:hover {
 
 .register-btn {
     display: inline-block;
+}
+
+.registration__phone-btns {
+    display: flex;
+    align-items: center;
 }
 
 .register__enter {
@@ -2981,19 +3071,18 @@ html .ui-button.ui-state-disabled:hover {
 .card-num {
     position: relative;
     text-align: center;
-    padding-left: 20px;
 }
 
 .transiction-item-text.card-num:before {
     content: url('../images/table-arrows.png');
     position: absolute;
-    left: 10px;
+    left: 5px;
 }
 
 .table__transiction-item.unactive .transiction-item-text.card-num:before {
     content: url(../images/table-delete.png);
     position: absolute;
-    left: 10px;
+    left: 5px;
 }
 
 .table__transiction-item.unactive .table__item-status {
@@ -4661,6 +4750,8 @@ a.photo__btn {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    max-width: 785px;
+    margin: 0 auto;
 }
 
 .verification__inner-text {
