@@ -94,12 +94,12 @@ function steps() {
 
     })
     $('#newBtn').on('click', function () {
-        const form = document.getElementById('form');
-        form.addEventListener('submit', formSend);
-        async function formSend(e) {
-            e.preventDefault();
-            let error = formValidate(form);
-        }
+        // const form = document.getElementById('form');
+        // form.addEventListener('submit', formSend);
+        // async function formSend(e) {
+        //     e.preventDefault();
+        //     let error = formValidate(form);
+        // }
 
 
     })

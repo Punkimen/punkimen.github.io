@@ -33,6 +33,12 @@ button {
     width: 100%;
 }
 
+.header__container {
+    max-width: 1440px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
 .container {
     max-width: 1140px;
     padding: 0 15px;
@@ -229,11 +235,12 @@ button {
     margin-left: 8px;
 }
 
-.header__exit {
+.header__exit a {
     display: flex;
     align-items: center;
     margin-left: 15px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .header__exit img {
