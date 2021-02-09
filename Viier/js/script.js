@@ -1,30 +1,46 @@
 $('.burger__icon').on('click', function () {
     $(this).toggleClass('active');
     $('.header-mobile__menu').toggleClass('show')
+});
+
+if ($(window).width() < 1440) {
+    $('.welcome-spiral__left').append($('.welcome-spiral__info_buy'));
+    $('.welcome-spiral__info_decision').before($('.welcome-spiral__info_interest'))
+}
+
+const adaptiveHeight = () => {
+    let spiralInnerHeight = $('.welcome-spiral__inner').height();
+    let generalHeight = spiralInnerHeight + 36;
+    $('.welcome-spiral').css('height', generalHeight + 'px')
+    console.log(`spiralInnerHeight  ${spiralInnerHeight}`);
+    console.log(`${spiralInnerHeight}  ${generalHeight}`);
+}
+$(window).resize(function () {
+    let windowWidth = $(window).width();
+    let spiral = $('.welcome-spiral__img');
+    if (windowWidth < 1440) {
+        $('.welcome-spiral__left').append($('.welcome-spiral__info_buy'));
+        $('.welcome-spiral__info_decision').before($('.welcome-spiral__info_interest'))
+    } else {
+        $('.welcome-spiral__right').append($('.welcome-spiral__info_interest'));
+        $('.welcome-spiral__right').append($('.welcome-spiral__info_buy'));
+    }
+    if (windowWidth < 768) {
+        adaptiveHeight()
+    } else {
+        $('.welcome-spiral').css('height', 'auto')
+    }
+
+    let max_col_height = 0;
+    $('.services-item__wrapper').each(function () {
+        if ($(this).height() > max_col_height) {
+            max_col_height = $(this).height();
+        }
+    });
+    $('.services-item__wrapper').height(max_col_height);
 })
 
-let spiral = $('.welcome-spiral__img');
-if ($(window).width() < '1440') {
-    $('.welcome-spiral__left').append($('.welcome-spiral__info_interest'));
-    $('.welcome-spiral__left').append($('.welcome-spiral__info_buy'));
-}
-
-let spiralHeight = $('.welcome-spiral').height();
-let spiralInnerHeight = $('.welcome-spiral__inner').height();
-let generalHeight = spiralHeight + spiralInnerHeight
-
-if ($(window).width() < '769') {
-    generalHeight += 35;
-    $('.welcome-spiral').css('height', generalHeight + 'px')
-}
-
-let max_col_height = 0;
-$('.services-item__wrapper').each(function () {
-    if ($(this).height() > max_col_height) {
-        max_col_height = $(this).height();
-    }
-});
-$('.services-item__wrapper').height(max_col_height);
+adaptiveHeight();
 
 AOS.init({
     easing: 'linear',

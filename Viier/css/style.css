@@ -2331,12 +2331,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .welcome-spiral__info_decision {
-    left: -50px;
+    left: -100px;
     top: 0;
   }
 
   .welcome-spiral__info_interest {
-    left: -100px;
+    left: -50px;
     top: 0;
   }
 
@@ -2568,12 +2568,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .welcome-spiral__info_decision {
     left: 0px;
-    margin-left: -40px;
+    margin-left: -90px;
   }
 
   .welcome-spiral__info_interest {
     left: 0px;
-    margin-left: -90px;
+    margin-left: -40px;
   }
 
   .welcome-spiral__info_buy {
