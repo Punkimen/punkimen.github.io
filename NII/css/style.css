@@ -399,6 +399,10 @@ body {
   color: #393F51;
 }
 
+body.overflow-hidden {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -1655,17 +1659,8 @@ textarea {
 }
 
 @media (max-width: 1200px) {
-  .main {
-    padding-top: 85px;
-  }
-
   .header {
     padding: 10px 0;
-    position: fixed;
-    z-index: 99;
-    right: 0;
-    left: 0;
-    top: 0;
   }
 
   .header-top::after {

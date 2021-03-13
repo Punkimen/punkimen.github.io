@@ -14,6 +14,7 @@ $(document).ready(function () {
     $('.burger__icon').on('click', function () {
         $(this).toggleClass('active');
         $('.header-mobile').toggleClass('show');
+        $('body').toggleClass('overflow-hidden')
     });
     $('.header-mobile__link--more').on('click', function () {
         $(this).toggleClass('open')
