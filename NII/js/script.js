@@ -27,9 +27,6 @@ $(document).ready(function () {
         return false
     })
 
-
-
-
     $('.reviews-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -62,3 +59,28 @@ $(document).ready(function () {
 
     // вызов общих функций end
 });
+
+// Валидацмя формы
+$('#validForm').validate({
+    rules: {
+        phone: {
+            required: true,
+        },
+        name: {
+
+        },
+    },
+    messages: {
+        phone: {
+            required: "Пожалуйста введите телефон",
+            minlength: "В имени миниму 2 символа"
+        },
+    },
+    highlight: function (element) {
+        $(element).parent().addClass("field-error");
+    },
+    unhighlight: function (element) {
+        $(element).parent().removeClass("field-error");
+    },
+});
+$('#phone').mask('+7(000)-000-00-00');

@@ -530,6 +530,26 @@ textarea {
   line-height: 36px;
 }
 
+.field-error {
+  position: relative;
+}
+
+.field-error .form-label {
+  color: red;
+}
+
+.field-error input {
+  border-color: red;
+}
+
+.field-error label.error {
+  font-size: 12px;
+  line-height: 14px;
+  position: absolute;
+  bottom: -15px;
+  color: red;
+}
+
 .form-label {
   text-transform: uppercase;
   font-weight: bold;
@@ -1135,6 +1155,7 @@ textarea {
 }
 
 .question-form__btn {
+  width: 100%;
   padding: 20px;
   margin-top: 70px;
   font-size: 22px;
