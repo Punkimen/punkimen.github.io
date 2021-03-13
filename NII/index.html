@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&d?family=Lato:wght@700&isplay=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
@@ -29,6 +29,11 @@
                         отделение лекарственных методов лечения (химиотерапевтическое) №17
                     </div>
                     <button class="header-top__btn btn btn-blue">Записаться на прием</button>
+                    <button class="mobile-btn btn">
+                        <svg class="mobile-btn__call">
+                            <use xlink:href="./img/icons/icons.svg#Call"></use>
+                        </svg>
+                    </button>
                 </div>
                 <div class="header-bottom">
                     <nav class="header-menu">
@@ -52,6 +57,114 @@
                     </nav>
                 </div>
             </div>
+            <div class="header-phone">
+                <div class="header-phone__label">
+                    <span>МЕНЮ</span>
+                    <span style="display: none;">Закрыть</span>
+                </div>
+                <div class="header__burger">
+                    <div class="burger__icon icon-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="header-mobile">
+            <nav class="header-mobile__menu">
+                <ul class="header-mobile__list">
+                    <li class="header-mobile__elem">
+                        <a href="#" class="header-mobile__link">Главная</a>
+                    </li>
+                    <li class="header-mobile__elem header-mobile__elem">
+                        <a href="#" class="header-mobile__link header-mobile__link--more">Пациентам</a>
+                        <ul class="header-mobile__sublist">
+                            <li class="sublist-elem"><a href="">Диагностика и лечение</a></li>
+                            <li class="sublist-elem"><a href="">Лечение рака легкого</a></li>
+                            <li class="sublist-elem">
+                                <a class="sublist-elem--more" href="">Этапы диагностики и лечения</a>
+                                <ul class="sublist-elem__sublist">
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Оформление амбулаторной карты</a>
+                                    </li>
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Форма 057-У</a>
+                                    </li>
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Амбулаторный прием</a>
+                                    </li>
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Разработка индивидуального плана лечения</a>
+                                    </li>
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Мультидисциплинарный консилиум</a>
+                                    </li>
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Выбор персинализированного лечения</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sublist-elem">
+                                <a class="sublist-elem--more" href="">Виды лечения</a>
+                                <ul class="sublist-elem__sublist">
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Химиотерапия</a>
+                                    </li>
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Иммунотерапия</a>
+                                    </li>
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Хирургическое лечение</a>
+                                    </li>
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Таргетная терапия</a>
+                                    </li>
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Лучевая терапия</a>
+                                    </li>
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Клинические исследования</a>
+                                    </li>
+                                    <li class="sublist-elem__sublist-elem">
+                                        <a href="">Госпитализация в отделение</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-mobile__elem">
+                        <a href="#" class="header-mobile__link header-mobile__link--more">Специалистам</a>
+                        <ul class="header-mobile__sublist">
+                            <li class="sublist-elem"><a href="">Клинические исследования</a></li>
+                            <li class="sublist-elem"><a href="">Школы для специалистов</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-mobile__elem">
+                        <a href="#" class="header-mobile__link header-mobile__link--more">Про отделение</a>
+                        <ul class="header-mobile__sublist">
+                            <li class="sublist-elem"><a href="">Наша команда</a></li>
+                            <li class="sublist-elem"><a href="">О нас</a></li>
+                            <li class="sublist-elem"><a href="">СМИ о нас</a></li>
+                            <li class="sublist-elem"><a href="">Отзывы</a></li>
+                            <li class="sublist-elem"><a href="">НООП/МОСОП</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-mobile__elem">
+                        <a href="#" class="header-mobile__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-mobile__footer">
+                НИИ клинической онкологии им. Н.Н. Трапезникова
+                отделение лекарственных методов лечения (химиотерапевтическое) №17
+            </div>
+            <a href="" class="header-mobile__call">
+                <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#Call"></use>
+                </svg>
+            </a>
         </div>
     </div>
 </header>
@@ -253,7 +366,7 @@
             <div class="info-block__img">
                 <img src="./img/info_2.jpg" alt="">
             </div>
-            <div class="info-block__content">
+            <div class="info-block__content info-block__content--tiser">
                 <div class="info-block__tiser">
                     Новостной тизер
                 </div>
@@ -452,7 +565,58 @@
     </div>
 </section>
         </main>
-        
+        <footer class="footer">
+    <div class="container footer-container">
+        <div class="footer__wrapper">
+            <div class="footer-info">
+                <div class="footer-title">НИИ клинической онкологии им. Н.Н. Трапезникова</div>
+                <div class="footer-info__text">ФГБУ «Национальный медицинский исследовательский центр онкологии им. Н.Н.
+                    Блохина» Минздрава России – крупнейшая онкологическая клиника России и Европы, одна из самых крупных
+                    онкологических клиник в мире, имеющая в своем арсенале новейшее оборудование и все передовые
+                    методики диагностики и лечения рака.</div>
+            </div>
+            <div class="footer-contacts">
+                <div class="footer-title">КОНТАКТЫ</div>
+                <div class="footer-contacts__item footer-contacts--adress">
+                    <span class="footer-contacts__icon">
+                        <img src="img/icons/Location.svg" alt="">
+                    </span>
+                    <div class="footer-contacts__text"> Адрес: 115478, г. Москва, Каширское шоссе д. 23</div>
+                </div>
+                <div class="footer-contacts__item footer-contacts--phone">
+                    <span class="footer-contacts__icon">
+                        <img src="img/icons/Call.svg" alt="">
+                    </span>
+                    <div class="footer-contacts__phone">
+                        <a href="tel:84993242424" class="footer-contacts__link">8 (499) 324-24-24</a>
+                        <div class="footer-contacts__descr">
+                            единая справочная служба
+                            <span>будни с 8:30 до 17:15</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contacts__item footer-contacts--email">
+                    <span class="footer-contacts__icon">
+                        <img src="img/icons/Message.svg" alt="">
+                    </span>
+                    <a href="#" class="footer-contacts__link footer-contacts__link--email">info@immunooncology.ru</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__sites">
+            <a href="www.ronc.ru" class="footer__sites-link">www.ronc.ru</a>
+            <a href="www.immunooncology.ru" class="footer__sites-link">www.immunooncology.ru</a>
+            <a href="www.onconext.ru" class="footer__sites-link">www.onconext.ru</a>
+        </div>
+        <div class="footer__links">
+            <a href="" class="footer__links-link">Пользовательское соглашение</a>
+            <a href="" class="footer__links-link">Политика конфиденциальности</a>
+        </div>
+        <div class="footer__copy">
+            Copyright © 2021 АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ "НАЦИОНАЛЬНОЕ ОБЩЕСТВО ОНКО-ПУЛЬМОНОЛОГОВ"
+        </div>
+    </div>
+</footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
