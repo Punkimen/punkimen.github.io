@@ -124,5 +124,4 @@ $(".scrollMenu").click(function () {
     $('.burger__icon').removeClass('active');
     $('.header-mobile__menu').removeClass('show')
     return false;
-
 })
