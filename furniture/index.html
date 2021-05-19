@@ -56,23 +56,25 @@
                     </div>
                 </form>
             </div>
-            <div class="header-phone">
-                <a href="tel:81234567890" class="header-phone__icon">
-                    <img src="img/call.png" alt="">
-                </a>
-                <div class="header-phone__right">
-                    <div class="header-phone__info">
-                        <span>Тел:</span>8 (123) 456 78 90
+            <div class="header-main__right">
+                <div class="header-phone">
+                    <a href="tel:81234567890" class="header-phone__icon">
+                        <img src="img/call.png" alt="">
+                    </a>
+                    <div class="header-phone__right">
+                        <div class="header-phone__info">
+                            <span>Тел:</span>8 (123) 456 78 90
+                        </div>
+                        <button class="header-phone__order btn-reset">Заказать звонок</button>
                     </div>
-                    <button class="header-phone__order btn-reset">Заказать звонок</button>
                 </div>
+                <a href="#" class="header-basket">
+                    <svg class="">
+                        <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                    </svg>
+                    <div class="header-basket__quantity">0</div>
+                </a>
             </div>
-            <a href="#" class="header-basket">
-                <svg class="">
-                    <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
-                </svg>
-                <div class="header-basket__quantity">0</div>
-            </a>
         </div>
     </div>
     <div class="header-bottom">
@@ -115,6 +117,9 @@
                 </ul>
             </nav>
         </div>
+    </div>
+    <div class="header-mobile">
+        <div class="header-mobile__container container"></div>
     </div>
 </header>
         <main class="main">
@@ -172,6 +177,29 @@
         <div class="recomended__header">
             <h3 class="recomended__title">Новинки магазина</h3>
             <div class="recomended__navigation">
+                <div class="recomended__navigation-select">
+                    <div class="costum-select">
+                        <div class="costum-select__header">
+                            <span class="costum-select__current" data-current="latest">
+                                Категории
+                            </span>
+                            <div class="costum-select__icon">
+                                <svg class="">
+                                    <use xlink:href="./img/icons/icons.svg#angle-arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="costum-select__body">
+                            <div class="costum-select__item" data-value="retail"><a href="">Все</a></div>
+                            <div class="costum-select__item" data-value="installments"><a href="">Кухни</a></div>
+                            <div class="costum-select__item" data-value="installments"><a href="">Диваны</a></div>
+                            <div class="costum-select__item" data-value="installments"><a href="">Гостиные</a></div>
+                            <div class="costum-select__item" data-value="installments"><a href="">Спальни</a></div>
+                            <div class="costum-select__item" data-value="installments"><a href="">Матрасы</a></div>
+                            <div class="costum-select__item" data-value="installments"><a href="">Шкафы</a></div>
+                        </div>
+                    </div>
+                </div>
                 <nav class="recomended__nav">
                     <ul class="recomended__list">
                         <li class="recomended__elem active"><a href="#" class="recomended__link">Все</a></li>
@@ -183,18 +211,18 @@
                         <li class="recomended__elem"><a href="#" class="recomended__link">Шкафы</a></li>
                     </ul>
                 </nav>
-            </div>
-            <div class="recomended__arrows">
-                <button class="recomended__arrow recomended__arrow--left btn-reset">
-                    <svg class="">
-                        <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
-                    </svg>
-                </button>
-                <button class="recomended__arrow recomended__arrow--right btn-reset">
-                    <svg class="">
-                        <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
-                    </svg>
-                </button>
+                <div class="recomended__arrows">
+                    <button class="recomended__arrow recomended__arrow--left btn-reset">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
+                        </svg>
+                    </button>
+                    <button class="recomended__arrow recomended__arrow--right btn-reset">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
         <div class="recomended__catalog catalog">
@@ -380,6 +408,29 @@
         <div class="recomended__header">
             <h3 class="recomended__title">Хиты продаж</h3>
             <div class="recomended__navigation">
+                <div class="recomended__navigation-select">
+                    <div class="costum-select">
+                        <div class="costum-select__header">
+                            <span class="costum-select__current" data-current="latest">
+                                Категории
+                            </span>
+                            <div class="costum-select__icon">
+                                <svg class="">
+                                    <use xlink:href="./img/icons/icons.svg#angle-arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="costum-select__body">
+                            <div class="costum-select__item" data-value="retail"><a href="">Все</a></div>
+                            <div class="costum-select__item" data-value="installments"><a href="">Кухни</a></div>
+                            <div class="costum-select__item" data-value="installments"><a href="">Диваны</a></div>
+                            <div class="costum-select__item" data-value="installments"><a href="">Гостиные</a></div>
+                            <div class="costum-select__item" data-value="installments"><a href="">Спальни</a></div>
+                            <div class="costum-select__item" data-value="installments"><a href="">Матрасы</a></div>
+                            <div class="costum-select__item" data-value="installments"><a href="">Шкафы</a></div>
+                        </div>
+                    </div>
+                </div>
                 <nav class="recomended__nav">
                     <ul class="recomended__list">
                         <li class="recomended__elem active"><a href="#" class="recomended__link">Все</a></li>
@@ -560,21 +611,24 @@
             <section class="example-products example-products--grey">
     <div class="container">
         <div class="example-products__wrapper">
-            <div class="example-products__descr">
-                <h3 class="recomended__title example-products__title">Кухни</h3>
-                <p class="example-products__info">Максимальное качество, красота и
-                    функциональность — главные
-                    требования к современным кухням.</p>
-                <a href="#" class="example-products__link link-to-catalog">
-                    <span>В каталог</span>
-                    <svg class="">
-                        <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
-                    </svg>
-                </a>
+            <div class="example-products__inner">
+                <div class="example-products__descr">
+                    <h3 class="recomended__title example-products__title">Кухни</h3>
+                    <p class="example-products__info">Максимальное качество, красота и
+                        функциональность — главные
+                        требования к современным кухням.</p>
+                    <a href="#" class="example-products__link link-to-catalog">
+                        <span>В каталог</span>
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="example-products__photo">
+                    <img src="img/example-photo.jpg" alt="">
+                </div>
             </div>
-            <div class="example-products__photo">
-                <img src="img/example-photo.jpg" alt="">
-            </div>
+
             <div class="example-products__catalog catalog">
                 <div class="example-products__product product-card">
                     <img class="product-card__img" src="img/product_1.jpg" alt="">
@@ -657,20 +711,22 @@
             <section class="example-products">
     <div class="container">
         <div class="example-products__wrapper">
-            <div class="example-products__descr">
-                <h3 class="recomended__title example-products__title">Гостиные</h3>
-                <p class="example-products__info">В нашем каталоге есть все
-                    востребованные покупателями стили
-                    респектабельного внешнего вида.</p>
-                <a href="#" class="example-products__link link-to-catalog">
-                    <span>В каталог</span>
-                    <svg class="">
-                        <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="example-products__photo">
-                <img src="img/example-photo.jpg" alt="">
+            <div class="example-products__inner">
+                <div class="example-products__descr">
+                    <h3 class="recomended__title example-products__title">Гостиные</h3>
+                    <p class="example-products__info">В нашем каталоге есть все
+                        востребованные покупателями стили
+                        респектабельного внешнего вида.</p>
+                    <a href="#" class="example-products__link link-to-catalog">
+                        <span>В каталог</span>
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="example-products__photo">
+                    <img src="img/example-photo.jpg" alt="">
+                </div>
             </div>
             <div class="example-products__catalog catalog">
                 <div class="example-products__product product-card">
@@ -754,21 +810,23 @@
             <section class="example-products example-products--grey">
     <div class="container">
         <div class="example-products__wrapper">
-            <div class="example-products__descr">
-                <h3 class="recomended__title example-products__title">Диваны</h3>
-                <p class="example-products__info">Диваны из качественных материалов
-                    по бюджетной цене совершенно точно
-                    придутся по вкусу вашим покупателям
-                    и для квартиры, и для дачи.</p>
-                <a href="#" class="example-products__link link-to-catalog">
-                    <span>В каталог</span>
-                    <svg class="">
-                        <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="example-products__photo">
-                <img src="img/example-photo.jpg" alt="">
+            <div class="example-products__inner">
+                <div class="example-products__descr">
+                    <h3 class="recomended__title example-products__title">Диваны</h3>
+                    <p class="example-products__info">Диваны из качественных материалов
+                        по бюджетной цене совершенно точно
+                        придутся по вкусу вашим покупателям
+                        и для квартиры, и для дачи.</p>
+                    <a href="#" class="example-products__link link-to-catalog">
+                        <span>В каталог</span>
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="example-products__photo">
+                    <img src="img/example-photo.jpg" alt="">
+                </div>
             </div>
             <div class="example-products__catalog catalog">
                 <div class="example-products__product product-card">
@@ -852,20 +910,22 @@
             <section class="example-products">
     <div class="container">
         <div class="example-products__wrapper">
-            <div class="example-products__descr">
-                <h3 class="recomended__title example-products__title">Спальни</h3>
-                <p class="example-products__info">Место, где можно отдохнуть от суеты
-                    и набраться сил перед новым рабочим
-                    днём.</p>
-                <a href="#" class="example-products__link link-to-catalog">
-                    <span>В каталог</span>
-                    <svg class="">
-                        <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="example-products__photo">
-                <img src="img/example-photo.jpg" alt="">
+            <div class="example-products__inner">
+                <div class="example-products__descr">
+                    <h3 class="recomended__title example-products__title">Спальни</h3>
+                    <p class="example-products__info">Место, где можно отдохнуть от суеты
+                        и набраться сил перед новым рабочим
+                        днём.</p>
+                    <a href="#" class="example-products__link link-to-catalog">
+                        <span>В каталог</span>
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="example-products__photo">
+                    <img src="img/example-photo.jpg" alt="">
+                </div>
             </div>
             <div class="example-products__catalog catalog">
                 <div class="example-products__product product-card">
@@ -949,20 +1009,22 @@
             <section class="example-products example-products--grey">
     <div class="container">
         <div class="example-products__wrapper">
-            <div class="example-products__descr">
-                <h3 class="recomended__title example-products__title">Детские</h3>
-                <p class="example-products__info">Комплекты для детских комнат от
-                    нашей фабрики удобны, безопасны
-                    и комфортны.</p>
-                <a href="#" class="example-products__link link-to-catalog">
-                    <span>В каталог</span>
-                    <svg class="">
-                        <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="example-products__photo">
-                <img src="img/example-photo.jpg" alt="">
+            <div class="example-products__inner">
+                <div class="example-products__descr">
+                    <h3 class="recomended__title example-products__title">Детские</h3>
+                    <p class="example-products__info">Комплекты для детских комнат от
+                        нашей фабрики удобны, безопасны
+                        и комфортны.</p>
+                    <a href="#" class="example-products__link link-to-catalog">
+                        <span>В каталог</span>
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="example-products__photo">
+                    <img src="img/example-photo.jpg" alt="">
+                </div>
             </div>
             <div class="example-products__catalog catalog">
                 <div class="example-products__product product-card">
@@ -1046,22 +1108,24 @@
             <section class="example-products">
     <div class="container">
         <div class="example-products__wrapper">
-            <div class="example-products__descr">
-                <h3 class="recomended__title example-products__title">Прихожие
-                </h3>
-                <p class="example-products__info">Наши модели выполняют три главных
-                    задачи: занимают мало пространства,
-                    обеспечивают удобные места для
-                    хранения одежды.</p>
-                <a href="#" class="example-products__link link-to-catalog">
-                    <span>В каталог</span>
-                    <svg class="">
-                        <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="example-products__photo">
-                <img src="img/example-photo.jpg" alt="">
+            <div class="example-products__inner">
+                <div class="example-products__descr">
+                    <h3 class="recomended__title example-products__title">Прихожие
+                    </h3>
+                    <p class="example-products__info">Наши модели выполняют три главных
+                        задачи: занимают мало пространства,
+                        обеспечивают удобные места для
+                        хранения одежды.</p>
+                    <a href="#" class="example-products__link link-to-catalog">
+                        <span>В каталог</span>
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="example-products__photo">
+                    <img src="img/example-photo.jpg" alt="">
+                </div>
             </div>
             <div class="example-products__catalog catalog">
                 <div class="example-products__product product-card">
@@ -1145,19 +1209,21 @@
             <section class="example-products example-products--grey">
     <div class="container">
         <div class="example-products__wrapper">
-            <div class="example-products__descr">
-                <h3 class="recomended__title example-products__title">Шкафы - купе</h3>
-                <p class="example-products__info">Только проверенные шкафы-купе,
-                    которые успешно продаются.</p>
-                <a href="#" class="example-products__link link-to-catalog">
-                    <span>В каталог</span>
-                    <svg class="">
-                        <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="example-products__photo">
-                <img src="img/example-photo.jpg" alt="">
+            <div class="example-products__inner">
+                <div class="example-products__descr">
+                    <h3 class="recomended__title example-products__title">Шкафы - купе</h3>
+                    <p class="example-products__info">Только проверенные шкафы-купе,
+                        которые успешно продаются.</p>
+                    <a href="#" class="example-products__link link-to-catalog">
+                        <span>В каталог</span>
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="example-products__photo">
+                    <img src="img/example-photo.jpg" alt="">
+                </div>
             </div>
             <div class="example-products__catalog catalog">
                 <div class="example-products__product product-card">
@@ -1241,22 +1307,24 @@
             <section class="example-products">
     <div class="container">
         <div class="example-products__wrapper">
-            <div class="example-products__descr">
-                <h3 class="recomended__title example-products__title">Столы и стулья
-                </h3>
-                <p class="example-products__info">В нашем ассортименте представлено
-                    большое количество столов и стульев,
-                    чтобы ваши покупатели могли все
-                    необходимое покупать только у вас.</p>
-                <a href="#" class="example-products__link link-to-catalog">
-                    <span>В каталог</span>
-                    <svg class="">
-                        <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="example-products__photo">
-                <img src="img/example-photo.jpg" alt="">
+            <div class="example-products__inner">
+                <div class="example-products__descr">
+                    <h3 class="recomended__title example-products__title">Столы и стулья
+                    </h3>
+                    <p class="example-products__info">В нашем ассортименте представлено
+                        большое количество столов и стульев,
+                        чтобы ваши покупатели могли все
+                        необходимое покупать только у вас.</p>
+                    <a href="#" class="example-products__link link-to-catalog">
+                        <span>В каталог</span>
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="example-products__photo">
+                    <img src="img/example-photo.jpg" alt="">
+                </div>
             </div>
             <div class="example-products__catalog catalog">
                 <div class="example-products__product product-card">
@@ -1340,22 +1408,24 @@
             <section class="example-products example-products--grey">
     <div class="container">
         <div class="example-products__wrapper">
-            <div class="example-products__descr">
-                <h3 class="recomended__title example-products__title">Комплектующие</h3>
-                <p class="example-products__info">Большой выбор комплектующих
-                    (кухонные фартуки, посудосушители,
-                    матрасы, различные виды навесов
-                    и крепежей, петли, плинтус, цоколь,
-                    ручки для мебели и так далее).</p>
-                <a href="#" class="example-products__link link-to-catalog">
-                    <span>В каталог</span>
-                    <svg class="">
-                        <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="example-products__photo">
-                <img src="img/example-photo.jpg" alt="">
+            <div class="example-products__inner">
+                <div class="example-products__descr">
+                    <h3 class="recomended__title example-products__title">Комплектующие</h3>
+                    <p class="example-products__info">Большой выбор комплектующих
+                        (кухонные фартуки, посудосушители,
+                        матрасы, различные виды навесов
+                        и крепежей, петли, плинтус, цоколь,
+                        ручки для мебели и так далее).</p>
+                    <a href="#" class="example-products__link link-to-catalog">
+                        <span>В каталог</span>
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#right-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="example-products__photo">
+                    <img src="img/example-photo.jpg" alt="">
+                </div>
             </div>
             <div class="example-products__catalog catalog">
                 <div class="example-products__product product-card">
@@ -1496,6 +1566,7 @@
     <div class="footer__body">
         <div class="footer__container container">
             <nav class="footer__nav footer__nav--flex footer__col footer__col--1">
+                <div class="footer__nav-title">Каталог</div>
                 <ul class="footer__list">
                     <li class="footer__elem">
                         <a href="#" class="footer__link">Кухни</a>
@@ -1532,6 +1603,7 @@
                 </ul>
             </nav>
             <nav class="footer__nav footer__col footer__col--2">
+                <div class="footer__nav-title">Компания</div>
                 <ul class="footer__list">
                     <li class="footer__elem">
                         <a href="#" class="footer__link">О нас</a>
@@ -1542,6 +1614,7 @@
                 </ul>
             </nav>
             <nav class="footer__nav footer__col footer__col--3">
+                <div class="footer__nav-title">Клиентам</div>
                 <ul class="footer__list">
                     <li class="footer__elem">
                         <a href="#" class="footer__link">Доставка и установка</a>
@@ -1555,6 +1628,7 @@
                 </ul>
             </nav>
             <div class="footer__contacts footer__col footer__col--4">
+                <div class="footer__nav-title">Контакты</div>
                 <div class="footer-phone">
                     <div class="footer-phone__icon">
                         <img src="img/call.png" alt="">
