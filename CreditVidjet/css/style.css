@@ -486,10 +486,12 @@ ul {
     cursor: pointer;
 }
 
+
+
 .input-radio__indificator {
     position: absolute;
     left: 0;
-    top: 3px;
+    top: 0px;
     width: 16px;
     height: 16px;
     border: 1px solid #C2C9CC;
@@ -1078,7 +1080,7 @@ textarea {
 
 .credit__vidget-info p {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 14px;
 }
 
 .text-width--310 {
@@ -1176,6 +1178,7 @@ textarea {
 
 .credit__vidget-label--personal {
     font-size: 12px;
+    line-height: 1;
 }
 
 .credit__vidget-label--phone {
@@ -1333,6 +1336,7 @@ textarea {
 }
 
 .credit__vidget-input--numCard .input--numCard__type {
+    display: block;
     position: absolute;
     top: 15px;
     right: 0;
@@ -1612,7 +1616,6 @@ textarea {
 .credit__vidget-list {
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 15px;
 }
 
 .credit__vidget-elem {
@@ -1881,8 +1884,14 @@ textarea {
 }
 
 .bank-btns__rows {
+    padding-top: 5px;
     display: flex;
     margin-bottom: 15px;
+}
+
+.credit-flex__upper--scroll {
+    height: 370px;
+    font-size: 16px;
 }
 
 .bank-btns__btn {
@@ -1940,7 +1949,7 @@ textarea {
 }
 
 .popup__content {
-    /* height: 594px; */
+    height: 594px;
     padding: 0 36px 0;
 }
 
@@ -2084,13 +2093,9 @@ screen and (max-height: 300px) {
 
 @media (max-width: 500px) {
     .credit__vidget {
-        max-width: 360px;
+        max-width: 348px;
         height: 631px;
-        border-radius: 0px;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        -ms-border-radius: 0px;
-        -o-border-radius: 0px;
+        /* border-radius: 0px; */
     }
 
     .credit-flex__content--scroll {
@@ -2098,7 +2103,8 @@ screen and (max-height: 300px) {
     }
 
     .credit__vidget-header {
-        padding: 24px 16px;
+        padding: 16px 14px;
+        line-height: 1;
     }
 
     .credit__vidget-header img {
@@ -2106,15 +2112,19 @@ screen and (max-height: 300px) {
     }
 
     .credit__vidget-wrapper {
-        padding: 24px 16px 0;
+        padding: 24px 14px 0;
     }
 
     .credit__vidget-info {
-        margin-bottom: 10px;
+        margin-bottom: 16px;
     }
 
     .credit__vidget-info p {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+    .credit-cardInfo {
+        margin-top: 23px;
     }
 
     .credit__vidget-wrapper-error {
@@ -2122,6 +2132,7 @@ screen and (max-height: 300px) {
     }
 
     .credit-flex__upper--scroll {
+        height: 365px;
         font-size: 16px;
     }
 
@@ -2135,7 +2146,7 @@ screen and (max-height: 300px) {
     }
 
     .credit__vidget-elem:not(:last-child) {
-        margin-bottom: 10px;
+        margin-bottom: 16px;
     }
 
     .credit-pagination {
@@ -2147,16 +2158,20 @@ screen and (max-height: 300px) {
     }
 
     .credit-footer {
-        padding: 20px 16px;
+        padding: 20px 14px;
+    }
+
+    .mCSB_inside>.mCSB_container {
+        margin-right: 0;
     }
 
     .popup {
-        border-radius: 0px;
+        /* border-radius: 0px; */
         height: 600px;
     }
 
     .popup__content {
-        padding: 0 18px 0;
+        padding: 0 14px 0;
     }
 }
 
@@ -2210,9 +2225,9 @@ screen and (max-height: 300px) {
     }
 }
 
-@media (max-width: 359px) {
+/* @media (max-width: 359px) {
     .credit__vidget-info {
         font-size: 14px;
         line-height: 18px;
     }
-}
+} */
