@@ -19,9 +19,9 @@
         <header class="header">
     <div class="container header__container">
         <div class="header__logo">
-            <img src="img/logo/cum-logo.jpg" alt="">
+            <img class="cum-logo" src="img/logo/cum-logo.jpg" alt="">
             <img class="header__logo-add" src="img/logo/add.svg" alt="">
-            <img src="img/logo/rizh-logo.png" alt="">
+            <img class="rizh-logo" src="img/logo/rizh-logo.svg" alt="">
         </div>
         <div class="header__right">
             <a href="#" class="header__link">Як це працює</a>
@@ -31,6 +31,26 @@
                 </svg>
                 <span>Увійти</span>
             </button>
+        </div>
+        <div class="header__burger">
+            <div class="burger__icon icon-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="header-mobile">
+            <div class="header-mobile__content">
+                <nav class="header-mobile__nav">
+                    <ul class="header-mobile__list">
+                        <li class="header-mobile__elem"><a href="" class="header-mobile__link">Як це працює</a></li>
+                        <li class="header-mobile__elem"><a href="" class="header-mobile__link">Увійти</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-mobile__footer">
+                2021 © ТОВ Ріж Платіж, усі права захищені
+            </div>
         </div>
     </div>
 </header>
@@ -44,7 +64,7 @@
             </svg>
         </a>
         <div class="steps-banner__logo">
-            <img src="img/steps-logo.png" alt="">
+            <img src="img/steps-logo.svg" alt="">
             <div class="steps-banner__text">плати, як хочеш,<br>
                 про решту дбаємо ми</div>
         </div>
@@ -73,32 +93,34 @@
 
 </section>
             <section class="step-content">
-                <div class="container">
+                <div class="container step-content__container">
                     <div class="step-content__inner bg-border">
                         <div class="step-content__info">Крок 2. Вхід / реєстрація</div>
                         <h1 class="step-content__title">Увійдіть до Ріж платіж</h1>
                         <div class="step-content__wrapper">
                             <div class="step-content__left">
                                 <div class="step-content__block">
-                                    <form action="" class="step-content__form form-step2">
-                                        <div class="form-step2__item" style="display: none;">
+                                    <form id="step2-form" action="" class="step-content__form form-step2">
+                                        <div class="form-step2__item active" data-step="1">
                                             <div class="form-step2__body">
                                                 <div class="form-step2__input">
                                                     <label for="" class="form-step2__label">Ваш номер телефону</label>
                                                     <input type="phone" name="phone"
-                                                        class="form-step2__inp costum-input">
+                                                        class="form-step2__inp costum-input" value="+380(">
                                                 </div>
-                                                <button class="form-step2__bnt btn btn-yellow">Продовжити</button>
+                                                <button
+                                                    class="form-step2__bnt btn btn-yellow next-step">Продовжити</button>
                                             </div>
                                         </div>
-                                        <div class="form-step2__item sms-code" style="display: none;">
+                                        <div class="form-step2__item sms-code" data-step="2">
                                             <div class="form-step2__body">
                                                 <div class="form-step2__input">
                                                     <label for="" class="form-step2__label">Введіть код з СМС #1</label>
                                                     <div class="sms-code__flex">
                                                         <input type="text" name="sms-code"
                                                             class="form-step2__inp costum-input">
-                                                        <button class="form-step2__bnt btn btn-yellow">ок</button>
+                                                        <button
+                                                            class="form-step2__bnt btn btn-yellow next-step">ок</button>
                                                     </div>
                                                 </div>
                                                 <div class="sms-code__btns">
@@ -107,10 +129,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-step2__item date-born">
+                                        <div class="form-step2__item date-born" data-step="3">
                                             <div class="form-step2__benner step2-benner">
                                                 <div class="step2-benner__img">
-                                                    <img src="img/creditbuy-banner.png" alt="">
+                                                    <img src="img/creditbuy-banner.svg" alt="">
                                                 </div>
                                                 <div class="step2-benner__text">
                                                     <span>Бачу, що ви новий юзер. Раді вітати!</span>
@@ -141,7 +163,7 @@
                                                     </label>
                                                     <label class="date-born__checkbox costum-checkbox">
                                                         Згода на обробку Персональних Даних
-                                                        <input value="" type="checkbox" name="" />
+                                                        <input id="accept" value="" type="checkbox" name="" />
                                                         <div class="costum-checkbox__indicator"></div>
                                                     </label>
                                                 </div>
@@ -160,17 +182,17 @@
                                                 <div class="form-step2__body">
                                                     <div class="form-questionnaire__inp">
                                                         <div class="form-questionnaire__label">Прізвище</div>
-                                                        <input type="text"
+                                                        <input type="text" name="surname"
                                                             class="form-questionnaire__input costum-input">
                                                     </div>
                                                     <div class="form-questionnaire__inp">
                                                         <div class="form-questionnaire__label">Ім’я</div>
-                                                        <input type="text"
+                                                        <input type="text" name="name"
                                                             class="form-questionnaire__input costum-input">
                                                     </div>
                                                     <div class="form-questionnaire__inp">
                                                         <div class="form-questionnaire__label">По батькові</div>
-                                                        <input type="text"
+                                                        <input type="text" name="father-name"
                                                             class="form-questionnaire__input costum-input">
                                                     </div>
                                                     <div class="form-questionnaire__inp">
@@ -179,25 +201,25 @@
                                                                 <use xlink:href="./img/icons/icons.svg#support"></use>
                                                             </svg>
                                                         </div>
-                                                        <input type="text"
+                                                        <input type="text" name="IPN"
                                                             class="form-questionnaire__input costum-input">
                                                     </div>
                                                     <div class="form-questionnaire__radios">
                                                         <div class="form-questionnaire__label">Тип документу</div>
                                                         <label class="control control-radio costum-radio">
                                                             Паспорт
-                                                            <input class="choosen-radio" value="1" type="radio" name="1"
-                                                                checked />
+                                                            <input class="choosen-radio document-choosen"
+                                                                value="passport" type="radio" name="1" checked />
                                                             <div class="control_indicator"></div>
                                                         </label>
                                                         <label class="control control-radio costum-radio">
                                                             ID картка
-                                                            <input class="choosen-radio" value="1" type="radio" name="1"
-                                                                checked />
+                                                            <input class="choosen-radio document-choosen"
+                                                                value="id-card" type="radio" name="1" />
                                                             <div class="control_indicator"></div>
                                                         </label>
                                                     </div>
-                                                    <div class="form-questionnaire__pasports">
+                                                    <div class="form-questionnaire__pasports active">
                                                         <div class="form-questionnaire__inp">
                                                             <label for="" class="form-step2__label">
                                                                 <span>Серія та номер паспорту</span>
@@ -207,26 +229,54 @@
                                                                 </svg>
                                                             </label>
                                                             <div class="form-questionnaire__inp-flex">
-                                                                <input type="text"
+                                                                <input type="text" name="passport-ser"
                                                                     class="form-questionnaire__input costum-input">
-                                                                <input type="text"
+                                                                <input type="text" name="passport-num"
                                                                     class="form-questionnaire__input costum-input">
                                                             </div>
                                                         </div>
                                                         <div class="form-questionnaire__inp">
-                                                            <label for="" class="form-step2__label">Дата
-                                                                народження</label>
+                                                            <label for="" class="form-step2__label">Дата видачі</label>
                                                             <div class="date-born__flex">
                                                                 <div class="date-born__inp" data-label="день"><input
-                                                                        type="text" name="date-day"
+                                                                        type="text" name="passport-day"
                                                                         class="form-step2__inp costum-input">
                                                                 </div>
                                                                 <div class="date-born__inp" data-label="місяць"><input
-                                                                        type="text" name="date-mouth"
+                                                                        type="text" name="passport-mouth"
                                                                         class="form-step2__inp costum-input">
                                                                 </div>
                                                                 <div class="date-born__inp" data-label="рік"> <input
-                                                                        type="text" name="date-year"
+                                                                        type="text" name="passport-year"
+                                                                        class="form-step2__inp costum-input"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-questionnaire__idCard">
+                                                        <div class="form-questionnaire__inp">
+                                                            <label for="" class="form-step2__label">
+                                                                <span>Документ №*</span>
+                                                                <svg class="svg-support">
+                                                                    <use xlink:href="./img/icons/icons.svg#support">
+                                                                    </use>
+                                                                </svg>
+                                                            </label>
+                                                            <input type="text" name="idCard-num"
+                                                                class="form-questionnaire__input costum-input">
+                                                        </div>
+                                                        <div class="form-questionnaire__inp">
+                                                            <label for="" class="form-step2__label">Дата видачі</label>
+                                                            <div class="date-born__flex">
+                                                                <div class="date-born__inp" data-label="день"><input
+                                                                        type="text" name="idCard-day"
+                                                                        class="form-step2__inp costum-input">
+                                                                </div>
+                                                                <div class="date-born__inp" data-label="місяць"><input
+                                                                        type="text" name="idCard-mouth"
+                                                                        class="form-step2__inp costum-input">
+                                                                </div>
+                                                                <div class="date-born__inp" data-label="рік"> <input
+                                                                        type="text" name="idCard-year"
                                                                         class="form-step2__inp costum-input"></div>
                                                             </div>
                                                         </div>
@@ -237,28 +287,47 @@
                                                                 <use xlink:href="./img/icons/icons.svg#support"></use>
                                                             </svg>
                                                         </div>
-                                                        <input type="email"
+                                                        <input type="email" name="email"
                                                             class="form-questionnaire__input costum-input">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-step2__body">
-                                                <button class="date-born__btn btn btn-yellow">Продовжити</button>
+                                                <button id="form2-submit-btn" class="date-born__btn btn btn-yellow"
+                                                    disabled>Продовжити</button>
                                             </div>
                                         </div>
                                     </form>
                                     <div class="or">або</div>
                                     <div class="enter__items">
-                                        <a href="" class="enter__item">
-                                            <div class="enter__label">Швидкий вхід через Дія</div>
-                                            <div class="enter__icon enter__icon--relative">
-                                                <img src="img/dia-logo.svg" alt="">
+                                        <a href="" class="enter__item ">
+                                            <div class="enter__item-flex">
+                                                <div class="enter__label">Швидкий вхід через Дія</div>
+                                                <div class="enter__icon enter__icon--relative">
+                                                    <img src="img/dia-logo.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="enter__item-qr enter-qr">
+                                                <div class="enter-qr__img">
+                                                    <img src="img/qr.png" alt="">
+                                                </div>
+                                                <div class="enter-qr__text">Відскануйте QR-код за допомогою вашої камери
+                                                    для швидкого входу/реєстрації в Ріж Платіж</div>
                                             </div>
                                         </a>
                                         <a href="" class="enter__item">
-                                            <div class="enter__label">Швидкий вхід через ID Gov UA</div>
-                                            <div class="enter__icon">
-                                                <img src="img/idgovua-logo.svg" alt="">
+                                            <div class="enter__item-flex">
+                                                <div class="enter__label">Швидкий вхід через ID Gov UA</div>
+                                                <div class="enter__icon">
+                                                    <img src="img/idgovua-logo.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="enter__item-qr enter-qr">
+                                                <div class="enter-qr__img">
+                                                    <img src="img/qr.png" alt="">
+                                                </div>
+                                                <div class="enter-qr__text">Відскануйте QR-код за допомогою вашої камери
+                                                    для швидкого входу/реєстрації в Ріж Платіж</div>
                                             </div>
                                         </a>
                                     </div>
@@ -310,7 +379,7 @@
                                                 </button>
                                             </div>
                                             <div class="product-body__right">
-                                                <img src="img/apple.png" class="product-body__img" alt="">
+                                                <img src="img/apple.svg" class="product-body__img" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -557,6 +626,10 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.0.0/nouislider.min.js"
     integrity="sha512-6vo59lZMHB6GgEySnojEnfhnugP7LR4qm6akxptNOw/KW+i9o9MK4Gaia8f/eJATjAzCkgN3CWlIHWbVi2twpg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+    integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/vendor.min.js"></script>
 <script src="js/script.min.js"></script>

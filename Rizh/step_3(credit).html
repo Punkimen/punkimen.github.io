@@ -4,19 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>step-3(credit)</title>
     <link rel="stylesheet" href="css/normalize.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.0.0/nouislider.min.css"
     integrity="sha512-kSH0IqtUh1LRE0tlO8dWN7rbmdy5cqApopY6ABJ4U99HeKulW6iKG5KgrVfofEXQOYtdQGFjj2N/DUBnj3CNmQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="css/vendor.min.css">
 <link rel="stylesheet" href="css/style.min.css">
-
 </head>
 
 <body>
-    <div class="site-container">
-        <header class="header">
+    <div class="site-container"><header class="header">
     <div class="container header__container">
         <div class="header__logo">
             <img class="cum-logo" src="img/logo/cum-logo.jpg" alt="">
@@ -53,8 +51,7 @@
             </div>
         </div>
     </div>
-</header>
-        <main class="main">
+</header> <main class="main">
             <section class="steps-banner">
     <div class="container">
         <a href="#" class="steps-banner__link">
@@ -91,188 +88,157 @@
         </div>
     </div>
 
-</section>
-            <section class="step-content">
+</section> <section class="step-content">
                 <div class="container step-content__container">
                     <div class="step-content__inner bg-border">
-                        <div class="step-content__info">Крок 1. Варіант оплати</div>
-                        <h1 class="step-content__title">Оберіть, як бажаєте сплатити покупку</h1>
+                        <div class="step-content__info">Крок 3. Ухвалення угоди</div>
+                        <h1 class="step-content__title">Пропозиції для вас: оберіть найвигіднішу</h1>
                         <div class="step-content__wrapper">
                             <div class="step-content__left">
-                                <div class="step-content__item buy-choose active">
-                                    <div class="buy-choose__head">
-                                        <div class="buy-choose__radio">
-                                            <label class="control control-radio">
-                                                <input class="choosen-radio" value="1" type="radio" name="1" checked />
-                                                <div class="control_indicator"></div>
-                                            </label>
-                                        </div>
-                                        <div class="buy-choose__content">
-                                            <div class="buy-choose__title">Всю суму пізніше (до 45 днів)</div>
-                                            <div class="buy-choose__info">Перші 15 днів без переплати</div>
-                                            <button type="button" class="buy-choose__showMore btn">
-                                                <span>сховати деталі</span>
-                                                <svg class="">
-                                                    <use xlink:href="./img/icons/icons.svg#arrow-down"></use>
+                                <form action="" class="choosen-bank__form">
+                                    <div class="step-content__block loading-request">
+                                        <div class="loading-request__progress">
+                                            <div class="loading-request__percent">
+                                                <svg>
+                                                    <circle cx="30" cy="30" r="30"></circle>
+                                                    <circle cx="30" cy="30" r="30"></circle>
                                                 </svg>
-                                            </button>
+                                                <div class="loading-request__number">
+                                                    5 <span>хв</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="buy-choose__img">
-                                            <img src="img/apple.svg" alt="">
+                                        <div class="loading-request__text">Зачекайте пока триває пошук (максимум 15
+                                            хвилин)
+                                            – поки ми чекаємо підтвердження від фінансових установ. Щоб не прогавити
+                                            кращу
+                                            пропозицію.</div>
+                                    </div>
+                                    <div class="searching-bank__title">
+                                        <span>Знайдено: 20</span> лендерів готових фінансувати ваш заказ
+                                    </div>
+                                    <div class="step-content__item buy-choose active profitable">
+                                        <div class="buy-choose__head">
+                                            <div class="buy-choose__radio">
+                                                <label class="control control-radio">
+                                                    <input class="choosen-radio" value="2" type="radio" name="2"
+                                                        checked />
+                                                    <div class="control_indicator"></div>
+                                                </label>
+                                            </div>
+                                            <div class="buy-choose__content">
+                                                <div class="buy-choose__title">Альфа Банк: легкая рассрочка</div>
+                                                <div class="buy-choose__info">4 платежі, кожні 15 днів по <span
+                                                        class="blue">3872₴</span><br>
+                                                    перший платіж сьогодні</div>
+                                            </div>
+                                            <div class="buy-choose__img buy-choose__img--bank">
+                                                <img src="img/logo/alfa-logo.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="choose-bank__footer">
+                                            <div class="choose-bank__info">👍 Без переплати</div>
+                                            <a href="" class="choose-bank__link">показати деталі угоди</a>
                                         </div>
                                     </div>
-                                    <div class="buy-choose__body fullbuy-body">
-                                        <div class="fullbuy-body__title">Без преплати, якщо внести всю суму до 15 днів
-                                        </div>
-                                        <div class="fullbuy-body__table">
-                                            <div class="fullbuy-body__row">
-                                                <div class="fullbuy-body__label">Перші 15 днів</div>
-                                                <div class="fullbuy-body__line"></div>
-                                                <div class="fullbuy-body__info">
-                                                    <span>без переплати</span>
-                                                    <svg class="svg-support">
-                                                        <use xlink:href="./img/icons/icons.svg#support"></use>
-                                                    </svg>
-                                                </div>
+                                    <div class="step-content__item buy-choose">
+                                        <div class="buy-choose__head">
+                                            <div class="buy-choose__radio">
+                                                <label class="control control-radio">
+                                                    <input class="choosen-radio" value="2" type="radio" name="2" />
+                                                    <div class="control_indicator"></div>
+                                                </label>
                                             </div>
-                                            <div class="fullbuy-body__row">
-                                                <div class="fullbuy-body__label">З 16 по 45 день</div>
-                                                <div class="fullbuy-body__line"></div>
-                                                <div class="fullbuy-body__info">1% в день</div>
+                                            <div class="buy-choose__content">
+                                                <div class="buy-choose__title">Купуй зараз – плати пізніше</div>
+                                                <div class="buy-choose__info"> 4 платежі, кожні 15 днів по <span
+                                                        class="blue">3888₴</span><br>
+                                                    перший платіж сьогодні</div>
                                             </div>
-                                            <div class="fullbuy-body__row">
-                                                <div class="fullbuy-body__label">Сума процентів з 16 по 45 день</div>
-                                                <div class="fullbuy-body__line"></div>
-                                                <div class="fullbuy-body__info">3000 ₴</div>
+                                            <div class="buy-choose__img buy-choose__img--bank">
+                                                <img src="img/logo/bank-2-logo.svg" alt="">
                                             </div>
                                         </div>
-                                        <div class="fullbuy-body__footer">
-                                            <div class="fullbuy-body__summ">Сума, якщо сплатити до 31.05</div>
-                                            <div class="fullbuy-body__price">7 110,65 <span>₴</span></div>
-                                        </div>
-                                        <button type="button" class="fullbuy-body__btn btn btn-yellow">Обрати і
-                                            продовжити</button>
-                                    </div>
-                                </div>
-                                <div class="step-content__item buy-choose">
-                                    <div class="buy-choose__head">
-                                        <div class="buy-choose__radio">
-                                            <label class="control control-radio">
-                                                <input class="choosen-radio" value="2" type="radio" name="1" />
-                                                <div class="control_indicator"></div>
-                                            </label>
-                                        </div>
-                                        <div class="buy-choose__content">
-                                            <div class="buy-choose__title">Частинами за (до 12 місяців)</div>
-                                            <div class="buy-choose__info">Рівні частини, найвигідніші умови</div>
-                                            <button type="button" class="buy-choose__showMore btn">
-                                                <span>показати деталі</span>
-                                                <svg class="">
-                                                    <use xlink:href="./img/icons/icons.svg#arrow-down"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                        <div class="buy-choose__img">
-                                            <img src="img/apple_2.svg" alt="">
+                                        <div class="choose-bank__footer">
+                                            <div class="choose-bank__info">👍 Переплата 0,01%</div>
+                                            <a href="" class="choose-bank__link">показати деталі угоди</a>
                                         </div>
                                     </div>
-                                    <div class="buy-choose__body creditbuy-body">
-                                        <form action="#" class="creditbuy-body__form">
-                                            <div class="creditbuy-body__row">
-                                                <div class="range__up">
-                                                    <div class="creditbuy-body__label m0">Кількість платежів</div>
-                                                    <div class="info__inp">
-                                                        <input id="input-quantity" class="costum-input range__input"
-                                                            type="text" value="4">
-                                                    </div>
-                                                </div>
-                                                <div id="quantity-pay" class="costum-range__input">
-                                                </div>
+                                    <div class="step-content__item buy-choose">
+                                        <div class="buy-choose__head">
+                                            <div class="buy-choose__radio">
+                                                <label class="control control-radio">
+                                                    <input class="choosen-radio" value="2" type="radio" name="2" />
+                                                    <div class="control_indicator"></div>
+                                                </label>
                                             </div>
-                                            <div class="creditbuy-body__row">
-                                                <div class="range clearfix">
-                                                    <div class="range__up">
-                                                        <div class="creditbuy-body__label m0">Період виплати (днів)
-                                                        </div>
-                                                        <div class="info__inp">
-                                                            <input id="input-term" class="costum-input range__input"
-                                                                type="text" value="90">
-                                                        </div>
-                                                    </div>
-                                                    <div id="term-pay" class="costum-range__input">
-                                                    </div>
-                                                </div>
+                                            <div class="buy-choose__content">
+                                                <div class="buy-choose__title">Гроші від Ідея Банк</div>
+                                                <div class="buy-choose__info">4 платежі, кожні 15 днів по <span
+                                                        class="blue">4235₴</span><br>
+                                                    перший платіж сьогодні</div>
                                             </div>
-                                            <div class="creditbuy-body__row">
-                                                <div class="creditbuy-body__label">Хочу зробити перший внесок</div>
-                                                <div class="creditbuy-body__checkbox">
-                                                    <label class="costum-checkbox">
-                                                        сьогодні
-                                                        <input value="" type="checkbox" name="1" />
-                                                        <div class="costum-checkbox__indicator"></div>
-                                                    </label>
-                                                </div>
+                                            <div class="buy-choose__img buy-choose__img--bank">
+                                                <img src="img/logo/bank-3-logo.svg" alt="">
                                             </div>
-                                            <div class="creditbuy-body__row">
-                                                <div class="creditbuy-body__label">Сума першого внеску</div>
-                                                <div class="creditbuy-body__input creditbuy-body__input--unit">
-                                                    <input class="creditbuy-body__firstpay costum-input" type="text"
-                                                        value="2000">
-                                                    <span class="unit-span">₴</span>
-                                                </div>
-                                            </div>
-                                            <div class="creditbuy-body__row">
-                                                <div class="creditbuy-body__label">9 платежів кожні 10 днів</div>
-                                                <div class="creditbuy-body__pay">
-                                                    <div class="creditbuy-body__summ">567 <span>₴</span></div>
-                                                    <a href="#" class="creditbuy-body__link">
-                                                        <span>+ % лендера</span>
-                                                        <svg class="svg-support">
-                                                            <use xlink:href="./img/icons/icons.svg#support"></use>
-                                                        </svg>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="creditbuy-body__banner creditbuy-banner">
-                                                <div class="creditbuy-banner__img">
-                                                    <img src="img/creditbuy-banner.svg" alt="">
-                                                </div>
-                                                <div class="creditbuy-banner__info">
-                                                    <span>Персонаж прогнозує, що </span>
-                                                    на ці умови погодяться 29 з 30 банків
-                                                </div>
-                                            </div>
-                                            <button type="button" class="fullbuy-body__btn btn btn-yellow">Обрати і
-                                                продовжити</button>
-                                        </form>
+                                        </div>
+                                        <div class="choose-bank__footer">
+                                            <div class="choose-bank__info">🤔 Переплата 0,02%</div>
+                                            <a href="" class="choose-bank__link">показати деталі угоди</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <button class="step-content__btn btn btn-yellow">Продовжити</button>
+                                    <div class="choosen-bank__footer">
+                                        <button type="button" class="choosen-bank__show btn">Показати наступні 3
+                                            заявки</button>
+                                        <button type="button"
+                                            class="choosen-bank__btn btn btn-yellow">Продовжити</button>
+                                    </div>
+                                    <div class="choosen-bank__questions">
+                                        <div class="choosen-bank__label">Чому я бачу декілька варіантів?</div>
+                                        <a href="" class="choosen-bank__text">Пояснення про агрегатор </a>
+                                    </div>
+                                </form>
                             </div>
                             <div class="step-content__right">
                                 <div class="step-content__product step-product bg-border">
-                                    <div class="step-product__head">
-                                        <div class="step-product__img">
-                                            <img src="img/product.jpg" alt="">
-                                        </div>
+                                    <div class="step-product__head border-none">
+                                        <div class="step-product__img"><img src="img/product.jpg" alt=""></div>
                                         <div class="step-product__content">
                                             <div class="step-product__code">Код: 14558408</div>
                                             <div class="step-product__name">Душова кабіна Kolo Record 90x90
                                                 PKPG902223 з піддоном XBN1690000</div>
-                                            <div class="step-product__price">7 110,65₴</div>
+                                            <div class="step-product__price">7 110,
+                                                65₴</div>
+                                        </div>
+                                        <div class="product__method">метод сплати</div>
+                                    </div>
+                                    <div class="step-product__body product-body">
+                                        <div class="product-body__wrapper">
+                                            <div class="product-body__left">
+                                                <div class="product-body__label">Всю суму пізніше (до 45 днів)</div>
+                                                <button type="button"
+                                                    class="buy-choose__showMore btn product-showMore"><span>показати
+                                                        деталі</span><svg class="">
+                                                        <use xlink:href="./img/icons/icons.svg#arrow-down"></use>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="product-body__right"><img src="img/apple.svg"
+                                                    class="product-body__img" alt=""></div>
                                         </div>
                                     </div>
-                                    <div class="step-product__footer">
-                                        <div class="step-product__footer-summ">Сумма до розрізання: </div>
-                                        <div class="step-product__footer-price">7 110,65₴</div>
+                                    <div class="step-product__footer product-footer">
+                                        <div class="product-footer__wrapper">
+                                            <div class="product-footer__label">Сумма до розрізання: </div>
+                                            <div class="product-footer__price">7 110,
+                                                65₴</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="questions">
+            </section><section class="questions">
     <div class="container">
         <div class="questions__wrapper">
             <div class="questions-aside">
@@ -478,9 +444,7 @@
             </div>
         </div>
     </div>
-</section>
-        </main>
-        <footer class="footer">
+</section> </main><footer class="footer">
     <div class="footer__container container">
         <div class="footer__wrapper">
             <div class="footer__left">
@@ -497,8 +461,7 @@
         </div>
         <div class="footer__copy">2021 © ТОВ Ріж Платіж, усі права захищені</div>
     </div>
-</footer>
-    </div>
+</footer> </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.0.0/nouislider.min.js"
