@@ -104,3 +104,14 @@ tab.on('click', function () {
     tabItem.removeClass('show')
     tabItem.eq(index).addClass('show')
 })
+
+// chooseMap
+
+function chooseMap() {
+    const map = $('.start-map')
+    map.on('click', function () {
+        map.removeClass('checked')
+        $(this).addClass('checked')
+    })
+}
+chooseMap()

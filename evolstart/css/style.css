@@ -447,6 +447,7 @@ textarea {
 }
 
 .btn-reset {
+  text-align: center;
   font-family: 'Play', sans-serif;
   display: block;
   border: none;
@@ -1739,6 +1740,7 @@ textarea {
 }
 
 .start-map {
+  cursor: pointer;
   border-radius: 10px;
   width: 24%;
   margin-bottom: 35px;
