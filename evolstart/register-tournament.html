@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+    <div class="header__container container">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="header__search">
+                <form name="search-form" action="">
+                    <input class="input-reset search-input" type="search" placeholder="Поиск по сайту">
+                    <button class="btn-reset search-btn" type="button">
+                        <img src="img/icon/lope.svg" alt="">
+                    </button>
+                </form>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__elem">
+                        <a href="#" class="header__link">
+                            Турниры
+                        </a>
+                    </li>
+                    <li class="header__elem">
+                        <a href="#" class="header__link">
+                            Игры
+                        </a>
+                    </li>
+                    <li class="header__elem">
+                        <a href="#" class="header__link">
+                            Новости
+                        </a>
+                    </li>
+                    <li class="header__elem">
+                        <a href="#" class="header__link">
+                            О нас
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__language language">
+                <div class="language__select costum-select">
+                    <div class="costum-select__header">
+                        <div class="costum-select__current" data-lang="ru">
+                            <div class="language__icon">
+                                <img src="img/icon/russia.svg" alt="">
+                            </div>
+                            <span>RU</span>
+                        </div>
+
+                        <div class="costum-select__arrow">
+                            <img src="img/icon/down-chevron.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="costum-select__body">
+                        <ul class="costum-select__list">
+                            <li class="costum-select__elem active" data-lang="ru">
+                                <img class="language__icon" src="img/icon/russia.svg" alt="">
+                                <span>RU</span>
+                            </li>
+                            <li class="costum-select__elem" data-lang="en">
+
+                                <img class="language__icon" src="img/icon/russia.svg" alt="">
+                                <span>EN</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header__btns">
+                <button type="button" class="header__btns-btn header__btns-btn--enter btn-reset btn-red">Вход</button>
+                <button type="button" class="header__btns-btn btn-reset btn-dark">Регистрация</button>
+            </div>
+            <div class="header__burger">
+                <div class="burger__icon icon-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-mobile">
+        <div class="header-mobile__container container"></div>
+    </div>
+</header>
+    <main class="main">
+        <section class="tournament-banner">
+            <div class="shadow-block">
+
+            </div>
+        </section>
+        <section class="tournament-rigester">
+            <div class="container">
+                <div class="tournament-rigester__header">
+                    <div class="tournament-rigester__information">
+                        <div class="tournament-rigester__icon">
+                            <img src="img/tournament-icon.png" alt="">
+                        </div>
+                        <div class="tournament-rigester__content">
+                            <div class="tournament-rigester__name">
+                                <span class="bold">Evolsar CS GO 5x5</span> classic #1
+                            </div>
+                            <div class="tournament-rigester__moreInfo information-tournament">
+                                <div class="information-tournament__status">Открыт</div>
+                                <div class="information-tournament__date">
+                                    <div class="information-tournament__day">Сегодня</div>
+                                    <div class="information-tournament__time">20:00</div>
+                                </div>
+                                <div class="information-tournament__places">
+                                    Свободных мест: <span class="quantity-places">9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tournament-rigester__accept">
+                        <div class="tournament-rigester__timer start-timer">
+                            <div class="start-timer__icon">
+                                <img src="img/icon/clock.svg" alt="">
+                            </div>
+                            <div class="start-timer__time">
+                                Начинается через <span class="timer-clock">06:07:52</span>
+                            </div>
+                        </div>
+                        <button class="tournament-rigester__btn btn-reset btn-red">
+                            Принять участие в турнире
+                        </button>
+                    </div>
+                </div>
+                <div class="tournament-rigester__body tabs">
+                    <div class="tournament-rigester__tabs tabs__header">
+                        <div class="tournament-rigester__tab  tabs-tab active">Обзор турнира</div>
+                        <div class="tournament-rigester__tab tabs-tab ">Тернирная таблица</div>
+                    </div>
+                    <div class="tabs__body">
+                        <div class="tabs__item show">
+                            <div class="tournament-rigester__wrapper tournament-tabs__item">
+                                <div class="tournament-rigester__item tournament-overview">
+                                    <div class="tournament-overview__wrapper">
+                                        <div class="tournament-overview__title">Формат</div>
+                                        <div class="tournament-overview__formats">
+                                            <div class="tournament-overview__item">
+                                                <div class="tournament-overview__icon">
+                                                    <img src="img/icon/tournament-format_1.png" alt="">
+                                                </div>
+                                                <div class="tournament-overview__inner">
+                                                    <div class="tournament-overview__label">Игра и регион</div>
+                                                    <div class="tournament-overview__text">CS:GO, Global</div>
+                                                </div>
+                                            </div>
+                                            <div class="tournament-overview__item">
+                                                <div class="tournament-overview__icon">
+                                                    <img src="img/icon/tournament-format_2.png" alt="">
+                                                </div>
+                                                <div class="tournament-overview__inner">
+                                                    <div class="tournament-overview__label">Срок регистрации:</div>
+                                                    <div class="tournament-overview__text">10 минут до начала</div>
+                                                </div>
+                                            </div>
+                                            <div class="tournament-overview__item">
+                                                <div class="tournament-overview__icon">
+                                                    <img src="img/icon/tournament-format_3.png" alt="">
+                                                </div>
+                                                <div class="tournament-overview__inner">
+                                                    <div class="tournament-overview__label">Размер команды:</div>
+                                                    <div class="tournament-overview__text">1v1</div>
+                                                </div>
+                                            </div>
+                                            <div class="tournament-overview__item">
+                                                <div class="tournament-overview__icon">
+                                                    <img src="img/icon/tournament-format_4.png" alt="">
+                                                </div>
+                                                <div class="tournament-overview__inner">
+                                                    <div class="tournament-overview__label">Плата за участие</div>
+                                                    <div class="tournament-overview__text">Бесплатное участие</div>
+                                                </div>
+                                            </div>
+                                            <div class="tournament-overview__item">
+                                                <div class="tournament-overview__icon">
+                                                    <img src="img/icon/tournament-format_5.png" alt="">
+                                                </div>
+                                                <div class="tournament-overview__inner">
+                                                    <div class="tournament-overview__label">Призовой пул:</div>
+                                                    <div class="tournament-overview__text">Awm экзоскилет</div>
+                                                </div>
+                                            </div>
+                                            <div class="tournament-overview__item">
+                                                <div class="tournament-overview__icon">
+                                                    <img src="img/icon/tournament-format_6.png" alt="">
+                                                </div>
+                                                <div class="tournament-overview__inner">
+                                                    <div class="tournament-overview__label">Формат Турнир:</div>
+                                                    <div class="tournament-overview__text">До 1 поражения</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="tournament-overview__btn btn-reset btn-light">
+                                            Связь с администратором
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="tournament-rigester__item">
+                                    <div class="tournament-rigester__block tournament-participants">
+                                        <div class="tournament-overview__title">Участники</div>
+                                        <div class="tournament-rigester__border">
+                                            <div class="tournament-participants__header">
+                                                <div class="tournament-participants__item">
+                                                    <div class="tournament-participants__label">
+                                                        Зарегистрированы</div>
+                                                    <div class="tournament-participants__quantity">3</div>
+                                                </div>
+                                                <div class="tournament-participants__item">
+                                                    <div class="tournament-participants__label">Подтвердите
+                                                        участие</div>
+                                                    <div class="tournament-participants__quantity">3</div>
+                                                </div>
+                                                <div class="tournament-participants__item">
+                                                    <div class="tournament-participants__label">Доступные
+                                                        места</div>
+                                                    <div class="tournament-participants__quantity">9</div>
+                                                </div>
+                                            </div>
+                                            <div class="tournament-participants__body">
+                                                <div class="tournament-participants__user user">
+                                                    <div class="user__photo">
+                                                        <img src="img/icon/user_1.png" alt="">
+                                                    </div>
+                                                    <div class="user__name">Ivanov1</div>
+                                                </div>
+                                                <div class="tournament-participants__user user">
+                                                    <div class="user__photo">
+                                                        <img src="img/icon/user_2.png" alt="">
+                                                    </div>
+                                                    <div class="user__name">Ivanov1</div>
+                                                </div>
+                                                <div class="tournament-participants__user user">
+                                                    <div class="user__photo">
+                                                        <img src="img/icon/user_3.png" alt="">
+                                                    </div>
+                                                    <div class="user__name">Ivanov1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tournament-rigester__block tournament-chat">
+                                        <div class="tournament-overview__title tournament-overview__title--flex">
+                                            <span>Чат</span>
+                                            <a href="#" class="open-newPage">Открыть во вкладке</a>
+                                        </div>
+                                        <div class="tournament-rigester__border chat-block">
+                                            <div class="chat-block__input">
+                                                <input class="chat-block__inp input-reset costum-input" type="text"
+                                                    placeholder="Сообщение">
+                                                <button class="chat-block__btn btn-reset">
+                                                    <svg class="">
+                                                        <use xlink:href="./img/icons/icons.svg#send"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs__item ">
+                            <div class="tournament-tabs__item tournament-table">
+                                <div class="tournament-table__header">
+                                    <div class="tournament-table__col">
+                                        <div class="tournament-table__title">
+                                            Четвертьфинал
+                                            <div class="tournament-table__matches">4 матча</div>
+                                        </div>
+                                    </div>
+                                    <div class="tournament-table__col">
+                                        <div class="tournament-table__title">
+                                            Полуфинал
+                                            <div class="tournament-table__matches">2 матча</div>
+                                        </div>
+                                    </div>
+                                    <div class="tournament-table__col">
+                                        <div class="tournament-table__title">
+                                            Финал
+                                            <div class="tournament-table__matches">1 матч</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tournament-table__body">
+                                    <div class="tournament-table__col tournament-table__col--1"
+                                        data-label="Четвертьфинал">
+                                        <div class="tournament-table__wrapper">
+                                            <div class="tournament-table__item tournament-match tournament-match--line">
+                                                <div class="tournament-match__wrapper">
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <img src="img/icon/user_1.png" alt="">
+                                                        </div>
+                                                        <div class="tournament-match__name">Ivanov</div>
+                                                    </div>
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <img src="img/icon/user_1.png" alt="">
+                                                        </div>
+                                                        <div class="tournament-match__name">Ivanov</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tournament-match__number">
+                                                    Матч 1
+                                                </div>
+                                                <div class="table-arrow">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="tournament-table__item tournament-match">
+                                                <div class="tournament-match__wrapper">
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <img src="img/icon/user_1.png" alt="">
+                                                        </div>
+                                                        <div class="tournament-match__name">Ivanov</div>
+                                                    </div>
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <img src="img/icon/user_1.png" alt="">
+                                                        </div>
+                                                        <div class="tournament-match__name">Ivanov</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tournament-match__number">
+                                                    Матч 2
+                                                </div>
+                                            </div>
+                                            <div class="tournament-table__item tournament-match tournament-match--line">
+                                                <div class="tournament-match__wrapper">
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <img src="img/icon/user_1.png" alt="">
+                                                        </div>
+                                                        <div class="tournament-match__name">Ivanov</div>
+                                                    </div>
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <img src="img/icon/user_1.png" alt="">
+                                                        </div>
+                                                        <div class="tournament-match__name">Ivanov</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tournament-match__number">
+                                                    Матч 3
+                                                </div>
+                                                <div class="table-arrow">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="tournament-table__item tournament-match">
+                                                <div class="tournament-match__wrapper">
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <img src="img/icon/user_1.png" alt="">
+                                                        </div>
+                                                        <div class="tournament-match__name">Ivanov</div>
+                                                    </div>
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <img src="img/icon/user_1.png" alt="">
+                                                        </div>
+                                                        <div class="tournament-match__name">Ivanov</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tournament-match__number">
+                                                    Матч 4
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tournament-table__col tournament-table__col--2" data-label="Полуфинал">
+                                        <div class="tournament-table__wrapper">
+                                            <div class="tournament-table__item tournament-match tournament-match--line">
+                                                <div class="tournament-match__wrapper">
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <!-- <img src="img/icon/user_1.png" alt=""> -->
+                                                        </div>
+                                                        <div class="tournament-match__name"></div>
+                                                    </div>
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <!-- <img src="img/icon/user_1.png" alt=""> -->
+                                                        </div>
+                                                        <div class="tournament-match__name"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tournament-match__number">
+                                                    Матч 5
+                                                </div>
+                                                <div class="table-arrow table-arrow--longer">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="tournament-table__item tournament-match">
+                                                <div class="tournament-match__wrapper">
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <!-- <img src="img/icon/user_1.png" alt=""> -->
+                                                        </div>
+                                                        <div class="tournament-match__name"></div>
+                                                    </div>
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <!-- <img src="img/icon/user_1.png" alt=""> -->
+                                                        </div>
+                                                        <div class="tournament-match__name"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tournament-match__number">
+                                                    Матч 6
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tournament-table__col" data-label="Финал">
+                                        <div class="tournament-table__wrapper">
+                                            <div class="tournament-table__item tournament-match">
+                                                <div class="tournament-match__wrapper">
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <!-- <img src="img/icon/user_1.png" alt=""> -->
+                                                        </div>
+                                                        <div class="tournament-match__name"></div>
+                                                    </div>
+                                                    <div class="tournament-match__item">
+                                                        <div class="tournament-match__icon">
+                                                            <!-- <img src="img/icon/user_1.png" alt=""> -->
+                                                        </div>
+                                                        <div class="tournament-match__name"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tournament-match__number">
+                                                    Матч 7
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="footer__links">
+                    <a href="#" class="footer__info">Политика конфиденциальности</a>
+                    <a href="#" class="footer__info">Условия использования</a>
+                </div>
+            </div>
+            <div class="footer__right">
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__elem">
+                            <a href="#" class="footer__link">Турниры</a>
+                        </li>
+                        <li class="footer__elem">
+                            <a href="#" class="footer__link">Игры</a>
+                        </li>
+                        <li class="footer__elem">
+                            <a href="#" class="footer__link">Новости</a>
+                        </li>
+                        <li class="footer__elem">
+                            <a href="#" class="footer__link">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__btns">
+                    <button class="footer__btn footer__btn--enter btn-reset btn-red">Вход</button>
+                    <button class="footer__btn btn-reset btn-dark">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+    <div class="header__container container">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="header__search">
+                <form name="search-form" action="">
+                    <input class="input-reset search-input" type="search" placeholder="Поиск по сайту">
+                    <button class="btn-reset search-btn" type="button">
+                        <img src="img/icon/lope.svg" alt="">
+                    </button>
+                </form>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__elem">
+                        <a href="#" class="header__link">
+                            Турниры
+                        </a>
+                    </li>
+                    <li class="header__elem">
+                        <a href="#" class="header__link">
+                            Игры
+                        </a>
+                    </li>
+                    <li class="header__elem">
+                        <a href="#" class="header__link">
+                            Новости
+                        </a>
+                    </li>
+                    <li class="header__elem">
+                        <a href="#" class="header__link">
+                            О нас
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__language language">
+                <div class="language__select costum-select">
+                    <div class="costum-select__header">
+                        <div class="costum-select__current" data-lang="ru">
+                            <div class="language__icon">
+                                <img src="img/icon/russia.svg" alt="">
+                            </div>
+                            <span>RU</span>
+                        </div>
+
+                        <div class="costum-select__arrow">
+                            <img src="img/icon/down-chevron.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="costum-select__body">
+                        <ul class="costum-select__list">
+                            <li class="costum-select__elem active" data-lang="ru">
+                                <img class="language__icon" src="img/icon/russia.svg" alt="">
+                                <span>RU</span>
+                            </li>
+                            <li class="costum-select__elem" data-lang="en">
+
+                                <img class="language__icon" src="img/icon/russia.svg" alt="">
+                                <span>EN</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header__btns">
+                <button type="button" class="header__btns-btn header__btns-btn--enter btn-reset btn-red">Вход</button>
+                <button type="button" class="header__btns-btn btn-reset btn-dark">Регистрация</button>
+            </div>
+            <div class="header__burger">
+                <div class="burger__icon icon-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-mobile">
+        <div class="header-mobile__container container"></div>
+    </div>
+</header>
+    <main class="main">
+        <section class="start">
+            <div class="container">
+                <div class="start__vs">
+                    <div class="start__user">
+                        <div class="start__user-name">
+                            Ivanov1
+                        </div>
+                        <div class="start__user-icon">
+                            <img src="img/icon/user-large_1.png" alt="">
+                        </div>
+
+                    </div>
+                    <div class="cs-logo">
+                        <img src="img/icon/VS.png" alt="">
+                    </div>
+                    <div class="start__user start__user--reverse">
+                        <div class="start__user-name">
+                            Ivanov2
+                        </div>
+                        <div class="start__user-icon">
+                            <img src="img/icon/user-large_2.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="start__timer">
+                    <span>00</span>:
+                    <span>23</span>
+                </div>
+                <div class="start__choose-map">
+                    Выберите карту
+                </div>
+                <div class="start__maps">
+                    <div class="start-map checked">
+                        <div class="start-map__img">
+                            <img src="img/map_1.png" alt="">
+                        </div>
+                        <div class="start-map__name">Название карты</div>
+                    </div>
+                    <div class="start-map">
+                        <div class="start-map__img">
+                            <img src="img/map_2.png" alt="">
+                        </div>
+                        <div class="start-map__name">Название карты</div>
+                    </div>
+                    <div class="start-map">
+                        <div class="start-map__img">
+                            <img src="img/map_2.png" alt="">
+                        </div>
+                        <div class="start-map__name">Название карты</div>
+                    </div>
+                    <div class="start-map">
+                        <div class="start-map__img">
+                            <img src="img/map_3.png" alt="">
+                        </div>
+                        <div class="start-map__name">Название карты</div>
+                    </div>
+                    <div class="start-map">
+                        <div class="start-map__img">
+                            <img src="img/map_4.png" alt="">
+                        </div>
+                        <div class="start-map__name">Название карты</div>
+                    </div>
+                    <div class="start-map">
+                        <div class="start-map__img">
+                            <img src="img/map_5.png" alt="">
+                        </div>
+                        <div class="start-map__name">Название карты</div>
+                    </div>
+                    <div class="start-map">
+                        <div class="start-map__img">
+                            <img src="img/map_6.png" alt="">
+                        </div>
+                        <div class="start-map__name">Название карты</div>
+                    </div>
+                    <div class="start-map">
+                        <div class="start-map__img">
+                            <img src="img/map_7.png" alt="">
+                        </div>
+                        <div class="start-map__name">Название карты</div>
+                    </div>
+                </div>
+                <div class="start__tabs tabs">
+                    <div class="tabs__header">
+                        <div class="tabs-tab active">Состав команды</div>
+                        <div class="tabs-tab ">Чат</div>
+                    </div>
+                    <div class="tabs__body">
+                        <div class="tabs__item show">
+                            <div class="rivals__wrapper">
+                                <div class="tabs__person">
+                                    <div class="tabs__person-name">Ivanov</div>
+                                    <div class="tournament-match__item">
+                                        <div class="tournament-match__icon">
+                                            <img src="img/icon/user_1.png" alt="">
+                                        </div>
+                                        <div class="tournament-match__name">Ivanov</div>
+                                    </div>
+                                </div>
+                                <div class="tabs__person">
+                                    <div class="tabs__person-name">Ivanov</div>
+                                    <div class="tournament-match__item">
+                                        <div class="tournament-match__icon">
+                                            <img src="img/icon/user_1.png" alt="">
+                                        </div>
+                                        <div class="tournament-match__name">Ivanov</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs__item chat">
+                            <div class="tournament-rigester__block tournament-chat">
+                                <div class="tournament-overview__title tournament-overview__title--flex">
+                                    <span>Чат</span>
+                                    <a href="#" class="open-newPage">Открыть во вкладке</a>
+                                </div>
+                                <div class="tournament-rigester__border chat-block">
+                                    <div class="chat-block__input">
+                                        <input class="chat-block__inp input-reset costum-input" type="text"
+                                            placeholder="Сообщение">
+                                        <button class="chat-block__btn btn-reset">
+                                            <svg class="">
+                                                <use xlink:href="./img/icons/icons.svg#send"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="footer__links">
+                    <a href="#" class="footer__info">Политика конфиденциальности</a>
+                    <a href="#" class="footer__info">Условия использования</a>
+                </div>
+            </div>
+            <div class="footer__right">
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__elem">
+                            <a href="#" class="footer__link">Турниры</a>
+                        </li>
+                        <li class="footer__elem">
+                            <a href="#" class="footer__link">Игры</a>
+                        </li>
+                        <li class="footer__elem">
+                            <a href="#" class="footer__link">Новости</a>
+                        </li>
+                        <li class="footer__elem">
+                            <a href="#" class="footer__link">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__btns">
+                    <button class="footer__btn footer__btn--enter btn-reset btn-red">Вход</button>
+                    <button class="footer__btn btn-reset btn-dark">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+
+</html>

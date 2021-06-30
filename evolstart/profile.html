@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+    <div class="header__container container">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="header__search">
+                <form name="search-form" action="">
+                    <input class="input-reset search-input" type="search" placeholder="Поиск по сайту">
+                    <button class="btn-reset search-btn" type="button">
+                        <img src="img/icon/lope.svg" alt="">
+                    </button>
+                </form>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__elem">
+                        <a href="#" class="header__link">
+                            Турниры
+                        </a>
+                    </li>
+                    <li class="header__elem">
+                        <a href="#" class="header__link">
+                            Игры
+                        </a>
+                    </li>
+                    <li class="header__elem">
+                        <a href="#" class="header__link">
+                            Новости
+                        </a>
+                    </li>
+                    <li class="header__elem">
+                        <a href="#" class="header__link">
+                            О нас
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__language language">
+                <div class="language__select costum-select">
+                    <div class="costum-select__header">
+                        <div class="costum-select__current" data-lang="ru">
+                            <div class="language__icon">
+                                <img src="img/icon/russia.svg" alt="">
+                            </div>
+                            <span>RU</span>
+                        </div>
+
+                        <div class="costum-select__arrow">
+                            <img src="img/icon/down-chevron.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="costum-select__body">
+                        <ul class="costum-select__list">
+                            <li class="costum-select__elem active" data-lang="ru">
+                                <img class="language__icon" src="img/icon/russia.svg" alt="">
+                                <span>RU</span>
+                            </li>
+                            <li class="costum-select__elem" data-lang="en">
+
+                                <img class="language__icon" src="img/icon/russia.svg" alt="">
+                                <span>EN</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header__btns">
+                <button type="button" class="header__btns-btn header__btns-btn--enter btn-reset btn-red">Вход</button>
+                <button type="button" class="header__btns-btn btn-reset btn-dark">Регистрация</button>
+            </div>
+            <div class="header__burger">
+                <div class="burger__icon icon-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-mobile">
+        <div class="header-mobile__container container"></div>
+    </div>
+</header>
+    <main class="main">
+        <section class="profile">
+            <div class="profile__banner section-baner">
+                <div class="shadow-block">
+
+                </div>
+            </div>
+            <div class="profile__inner section-relative">
+                <div class="container">
+                    <div class="profile-user">
+                        <div class="profile-user__photo"></div>
+                        <div class="profile-user__name">Ivan 1</div>
+                        <div class="profile-user__status">
+                            <span class="profile-user__status-circle green"></span>
+                            Сейчас онлайн
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <div class="profile-info__item">
+                            <div class="profile-info__label">Сыграно матчей</div>
+                            <div class="profile-info__quantity">10</div>
+                        </div>
+                        <div class="profile-info__item">
+                            <div class="profile-info__label">Винрейт</div>
+                            <div class="profile-info__quantity">35%</div>
+                        </div>
+                        <div class="profile-info__item">
+                            <div class="profile-info__label">Репутация</div>
+                            <div class="profile-info__quantity">1500</div>
+                        </div>
+                    </div>
+                    <div class="profile__tabs tabs">
+                        <div class="tabs__header">
+                            <div class="tabs-tab active">Профиль</div>
+                            <div class="tabs-tab ">Статистика</div>
+                            <div class="tabs-tab ">Команды</div>
+                            <div class="tabs-tab ">Терниры</div>
+                        </div>
+                        <div class="tabs__body">
+                            <div class="tabs__item profile-form show">
+                                <form action="">
+
+                                    <div class="profile-form__top">
+                                        <div class="profile-form__wrapper">
+                                            <div class="profile-form__left profile-form__left--col">
+                                                <div class="profile-form__inp">
+                                                    <label for="" class="profile-form__label">Ник</label>
+                                                    <input type="text"
+                                                        class="profile-form__input costum-input input-reset"
+                                                        value="Ivan">
+                                                </div>
+                                                <div class="profile-form__inp">
+                                                    <label for="" class="profile-form__label">О себе</label>
+                                                    <textarea type="text"
+                                                        class="profile-form__input profile-form__textarea costum-input input-reset"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="profile-form__right">
+                                                <div class="profile-form__inp profile-form__inp--file">
+                                                    <label for=""
+                                                        class="profile-form__label profile-form__label--hide">Загрузите
+                                                        фаил</label>
+                                                    <div class="costum-file profile-form__file">
+                                                        <input type="file"
+                                                            class="profile-form__input costum-input input-reset"></input>
+                                                        <div class="select-file">
+                                                            <div class="select-file__icon">
+                                                                <img src="img/icon/user.svg" alt="">
+                                                            </div>
+                                                            <div class="select-file__text">Загрузить файл</div>
+                                                        </div>
+                                                        <!-- <span class="downloaded-file">Файл загружен</span> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="profile-form__bottom">
+                                        <div class="profile-form__wrapper">
+                                            <div class="profile-form__left">
+                                                <div class="profile-form__inp">
+                                                    <div class="profile-form__label">Страна</div>
+                                                    <select name="" id=""
+                                                        class="profile-form__select input-reset costum-input">
+                                                        <option value="">1</option>
+                                                        <option value="">
+                                                            2
+                                                        </option>
+                                                        <option value="">3</option>
+                                                        <option value="">4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="profile-form__right">
+                                                <div class="profile-form__inp">
+                                                    <div class="profile-form__label">Язык</div>
+                                                    <select name="" id=""
+                                                        class="profile-form__select input-reset costum-input">
+                                                        <option value="">1</option>
+                                                        <option value="">
+                                                            2
+                                                        </option>
+                                                        <option value="">3</option>
+                                                        <option value="">4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="tabs__item profile-statistic">
+                                <div class="profile-statistic__header">
+                                    <h2 class="profile-statistic__title section-title">Ваша статистика в игре</h2>
+                                    <div class="profile-statistic__btns">
+                                        <button class="profile-statistic__btn btn-reset btn-red">За все время</button>
+                                        <button class="profile-statistic__btn btn-reset btn-dark">В среднем за
+                                            игру</button>
+                                    </div>
+                                </div>
+                                <div class="profile-statistic__table statistic-table">
+                                    <div class="statistic-table__header">
+                                        <div class="statistic-table__col">Матчей</div>
+                                        <div class="statistic-table__col">ТОП-3</div>
+                                        <div class="statistic-table__col">% побед</div>
+                                        <div class="statistic-table__col">КРМ</div>
+                                        <div class="statistic-table__col">Убито</div>
+                                        <div class="statistic-table__col">Средний урон</div>
+                                        <div class="statistic-table__col">Всего урона</div>
+                                    </div>
+                                    <div class="statistic-table__body">
+                                        <div class="statistic-table__col" data-title="Матчей">1325</div>
+                                        <div class="statistic-table__col" data-title="ТОП-3">645</div>
+                                        <div class="statistic-table__col" data-title="% побед">45,35%</div>
+                                        <div class="statistic-table__col" data-title="КРМ">3,08</div>
+                                        <div class="statistic-table__col" data-title="Убито">4958</div>
+                                        <div class="statistic-table__col" data-title="Средний урон">1015</div>
+                                        <div class="statistic-table__col" data-title="Всего урона">1654895</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__item profile-team">
+                                <div class="profile-team__wrapper">
+                                    <div class="profile-team__left">
+                                        <div class="profile-team__block">
+                                            <div class="profile-team__icon">
+                                                <img src="img/team-icon.png" alt="">
+                                            </div>
+                                            <div class="profile-team__content">
+                                                <div class="profile-team__name">Название команды</div>
+                                                <div class="profile-team__info">
+                                                    <div class="profile-team__participants">
+                                                        Участники:
+                                                        <span>1556</span>
+                                                    </div>
+                                                    <div class="profile-team__reputation">
+                                                        Репутация:
+                                                        <span>1556556</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="profile-team__showMore">
+                                                <span></span><span></span><span></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="profile-team__right">
+                                        <button class="profile-team__btn btn-reset btn-red">Создать команду</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__item profile-tournament">
+                                <div class="profile-tournament__catalog catalog">
+                                    <div class="catalog__wrapper">
+                                        <div class="profile-tournament__card tournament-card">
+                                            <div class="tournament-card__img">
+                                                <img src="img/tournament-card_1.png" alt="">
+                                            </div>
+                                            <div class="tournament-card__title">
+                                                <span class="bold">Evolsar</span>
+                                                <img class="tournament-card__cs-logo" src="img/icon/cs-go__logo.png"
+                                                    alt="">
+                                                <span>5x5 classic #1</span>
+                                            </div>
+                                            <div class="tournament-card__footer">
+                                                <div class="profile-tournament__status win">Победа</div>
+                                                <div class="profile-tournament__prize">
+                                                    Выигрыш: <span>1000 $</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-tournament__card tournament-card">
+                                            <div class="tournament-card__img">
+                                                <img src="img/tournament-card_1.png" alt="">
+                                            </div>
+                                            <div class="tournament-card__title">
+                                                <span class="bold">Evolsar</span>
+                                                <img class="tournament-card__cs-logo" src="img/icon/cs-go__logo.png"
+                                                    alt="">
+                                                <span>5x5 classic #1</span>
+                                            </div>
+                                            <div class="tournament-card__footer">
+                                                <div class="profile-tournament__status lose">Проигрыш</div>
+                                                <div class="profile-tournament__prize">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-tournament__card tournament-card">
+                                            <div class="tournament-card__img">
+                                                <img src="img/tournament-card_1.png" alt="">
+                                            </div>
+                                            <div class="tournament-card__title">
+                                                <span class="bold">Evolsar</span>
+                                                <img class="tournament-card__cs-logo" src="img/icon/cs-go__logo.png"
+                                                    alt="">
+                                                <span>5x5 classic #1</span>
+                                            </div>
+                                            <div class="tournament-card__footer">
+                                                <div class="profile-tournament__status win">Победа</div>
+                                                <div class="profile-tournament__prize">
+                                                    Выигрыш: <span>1000 $</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="footer__links">
+                    <a href="#" class="footer__info">Политика конфиденциальности</a>
+                    <a href="#" class="footer__info">Условия использования</a>
+                </div>
+            </div>
+            <div class="footer__right">
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__elem">
+                            <a href="#" class="footer__link">Турниры</a>
+                        </li>
+                        <li class="footer__elem">
+                            <a href="#" class="footer__link">Игры</a>
+                        </li>
+                        <li class="footer__elem">
+                            <a href="#" class="footer__link">Новости</a>
+                        </li>
+                        <li class="footer__elem">
+                            <a href="#" class="footer__link">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__btns">
+                    <button class="footer__btn footer__btn--enter btn-reset btn-red">Вход</button>
+                    <button class="footer__btn btn-reset btn-dark">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+
+</html>
