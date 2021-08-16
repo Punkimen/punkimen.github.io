@@ -230,7 +230,223 @@
         <footer class="footer">
             <div class="container"></div>
         </footer>
+        <div class="popups-inner">
+            <div id="popup-password" class="popup border-block">
+                <div class="popup__header bg-dark">Password change
+                </div>
+                <div class="popup__body bg-light">
+                    <form action="#" class="popup-form">
+                        <input type="password" placeholder="Password" name="password" class="popup-input">
+                        <input type="password" placeholder="New Password" name="new password" class="popup-input">
+                        <input type="password" placeholder="Repeat  Password " name="Repeat  Password "
+                            class="popup-input">
+                        <input type="email" placeholder="E-mail" name="E-mail" class="popup-input">
+                        <div class="popup-form__btns">
+                            <div class="popup-form__capcha">
+
+                            </div>
+                            <button class="popup-form__btn btn btn-purple">Enter</button>
+                        </div>
+                    </form>
+                </div>
+                <button class="btn btn-close">
+                    <img src="img/icon/close.svg" alt="">
+                </button>
+            </div>
+            <div id="popup-error" class="popup border-block popup-error bg-dark">
+                <div class="popup__body popup-error__body">
+                    <div class="popup-error__icon">
+                        <img src="img/error.svg" alt="">
+                    </div>
+                    <div class="popup-error__content">
+                        <div class="popup-error__title main-text">Service Error </div>
+                        <div class="popup-error__text">You are kindly requested to check the connection or reload the
+                            page</div>
+                    </div>
+                </div>
+                <button class="btn btn-close">
+                    <img src="img/icon/close.svg" alt="">
+                </button>
+            </div>
+            <div id="popup-reg" class="popup border-block">
+                <div class="popup__header bg-dark">Registration
+                </div>
+                <div class="popup__body bg-light">
+                    <form action="#" class="popup-form">
+                        <input type="text" placeholder="Username" name="username" class="popup-input">
+                        <input type="email" placeholder="E-mail" name="E-mail" class="popup-input">
+                        <input type="password" placeholder="Password" name="password" class="popup-input">
+                        <div class="popup-form__btns">
+                            <div class="popup-form__capcha">
+
+                            </div>
+                            <button class="popup-form__btn btn btn-purple">Enter</button>
+                        </div>
+                    </form>
+                </div>
+                <button class="btn btn-close">
+                    <img src="img/icon/close.svg" alt="">
+                </button>
+            </div>
+            <div id="popup-login" class="popup border-block">
+                <div class="popup__header bg-dark">Log in
+                </div>
+                <div class="popup__body bg-light">
+                    <form action="#" class="popup-form">
+                        <input type="text" placeholder="Username" name="username" class="popup-input">
+                        <input type="password" placeholder="Password" name="password" class="popup-input">
+                        <div class="popup-form__btns">
+                            <div class="popup-form__capcha">
+
+                            </div>
+                            <button class="popup-form__btn btn btn-purple">Enter</button>
+                        </div>
+                    </form>
+                </div>
+                <button class="btn btn-close">
+                    <img src="img/icon/close.svg" alt="">
+                </button>
+            </div>
+            <div id="popup-multi" class="popup border-block">
+                <div class="popup__header bg-dark">Multi-factor authentication
+                </div>
+                <div class="popup__body popup-multi__body bg-light">
+                    <div class="popup-text">
+                        <p>Multi-factor authentication increases the security of your account by requiring a code (
+                            elther SMS or from a token provider) above your normal password for auntication.</p>
+                        <p>Please choose the type of multi-factor authentication you would like to activate on your
+                            account. </p>
+                    </div>
+                    <button class="btn btn-token btn-purple">Token</button>
+                </div>
+                <button class="btn btn-close">
+                    <img src="img/icon/close.svg" alt="">
+                </button>
+            </div>
+            <div id="popup-auth" class="popup border-block">
+                <div class="popup__header bg-dark">Multi-factor authentication
+                </div>
+                <div class="popup__body popup-multi__body bg-light">
+                    <div class="popup-auth__content">
+                        <div class="popup-auth__item">
+                            <div class="popup-auth__label popup-text">Issuer</div>
+                            <div class="popup-auth__value">Mobie</div>
+                        </div>
+                        <div class="popup-auth__item">
+                            <div class="popup-auth__label popup-text">Account</div>
+                            <div class="popup-auth__value">privetvsem@gmail.com</div>
+                        </div>
+                        <div class="popup-auth__item">
+                            <div class="popup-auth__label popup-text">Key</div>
+                            <div class="popup-auth__value">F5545345345acdgrwfwGFDGFEFgPW</div>
+                        </div>
+                        <div class="popup-text popup-auth__info">Please enter the One Pin (OTP) provided by your
+                            multi-factor
+                            authentication app</div>
+                    </div>
+                    <div class="popup-auth__submits">
+                        <input type="text" placeholder="OTP" name="otp" class="popup-input">
+                        <button class="popup-auth__btn btn btn-purple">Sumbit</button>
+                    </div>
+                </div>
+                <button class="btn btn-close">
+                    <img src="img/icon/close.svg" alt="">
+                </button>
+            </div>
+            <div id="popup-wallet" class="popup border-block">
+                <div class="popup__header bg-dark popup-wallet__wrapper">
+                    <div class="popup-wallet__name">
+                        <div class="popup-wallet__icon">
+                            <img src="img/wallet-logo_2.svg" alt="">
+                        </div>
+                        <span>Ethereum</span>
+                    </div>
+                    <a href="#" class="popup-wallet__link">
+                        Your ETH Address
+                    </a>
+                </div>
+                <div class="popup__body  bg-light">
+                    <div class="popup-wallet__key main-text">1MbbFedek12lvFkfdkdfdfllldwdwXPE</div>
+                    <button class="btn btn-purple popup-wallet__copy">Copy</button>
+                </div>
+            </div>
+            <div id="popup-balance" class="popup border-block">
+                <div class="popup__header bg-dark popup-balance__header">
+                    <div class="popup-wallet__name">
+                        <div class="popup-wallet__icon">
+                            <img src="img/wallet-logo_2.svg" alt="">
+                        </div>
+                        <span>Ethereum</span>
+                    </div>
+                </div>
+                <div class="popup__body  bg-light">
+                    <div class="popup-balance__etc">0 <span>ETH</span></div>
+                    <div class="popup-balance__usd">0 USD</div>
+                    <div class="popup-balance__btns">
+                        <button class="popup-balance__btn btn btn-purple">Receive</button>
+                        <button class="popup-balance__btn btn btn-purple">Send</button>
+                    </div>
+                </div>
+            </div>
+            <div id="popup-send" class="popup border-block" style="display: block;">
+                <div class="popup__header bg-dark popup-balance__header">
+                    <div class="popup-wallet__name">
+                        <div class="popup-wallet__icon">
+                            <img src="img/wallet-logo_2.svg" alt="">
+                        </div>
+                        <span>Ethereum</span>
+                        <span class="color-purple">(ETH)</span>
+                    </div>
+                </div>
+                <div class="popup__body  bg-light">
+                    <form action="" class="popup-send">
+                        <div class="popup-send__input">
+                            <input type="text" placeholder="Click here to paste address or domain"
+                                class="popup-send__inp">
+                            <div class="pencel">
+                                <img src="img/icon/pen.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="popup-send__input">
+                            <div class="popup-send__label">Amount</div>
+                            <div class="popup-send__input-inner">
+                                <input type="text" value="0.00" class="popup-send__inp">
+                                <span class="popup-send__unit">ETH</span>
+                            </div>
+                            <div class="popup-send__input-inner popup-send__input-inner--grey">
+                                <input type="text" value="0.00" class="popup-send__inp">
+                                <span class="popup-send__unit">USD</span>
+                            </div>
+                        </div>
+                        <div class="popup-send__flex">
+                            <div class="popup-send__left">
+                                <div class="popup-send__label">Available:</div>
+                                <div class="popup-send__value">0 ETH</div>
+                                <div class="popup-send__balance">0.000000000 USD</div>
+                            </div>
+                            <div class="popup-send__right">
+                                <button class="btn btn-purple popup-send__btn">Send all</button>
+                            </div>
+                        </div>
+                        <div class="popup-send__flex">
+                            <div class="popup-send__left">
+                                <div class="popup-send__label">Network fee:</div>
+                                <div class="popup-send__value">0.0000198 ETH</div>
+                                <div class="popup-send__balance">0.7485 USD</div>
+                            </div>
+                            <div class="popup-send__right">
+                                <button class="btn btn-purple popup-send__btn">Set fee</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-purple popup-send__send">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
 
     <script src="js/script.js" defer></script>
 </body>
