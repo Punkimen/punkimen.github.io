@@ -206,12 +206,6 @@ li {
   background-position: center;
 }
 
-.main__wrapper--big .aside {
-  max-width: 100%;
-  margin-bottom: 20px;
-  margin-right: 0;
-}
-
 .aside {
   margin-right: 5%;
 }
@@ -708,6 +702,12 @@ li {
 @media (max-width: 992px) {
   .main__wrapper--big {
     display: block;
+  }
+
+  .main__wrapper--big .aside {
+    max-width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0;
   }
 
   .player-block__up .personal-cabinet__exit {
