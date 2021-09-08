@@ -250,13 +250,11 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
-
-
     $('.accor-title-js').on('click', function () {
+        console.log('w');
+
         $(this).toggleClass('active')
         $(this).next().slideToggle()
-
     })
 
     // scroll
