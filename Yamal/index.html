@@ -169,7 +169,7 @@
             </div>
         </div>
     </div>
-    <div class="location-menu">
+    <div class="location-menu location-menu--main">
         <div class="location-menu__search">
             <div class="location-menu__search-container container">
                 <button type="btn" class="location-menu__search-btn js-show-cities btn">
@@ -431,13 +431,16 @@
                 </div>
             </div>
             <div class="weather-block__content">
-                <h2 class="weather-block__title section-title">Насладитесь
+                <h2 class="weather-block__title section-title" data-aos="fade-down" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000">Насладитесь
                     гармонией
                     арктики</h2>
-                <p class="weather-block__text section-text">Мы создали уникальную систему подбора маршрутов, которая
+                <p class="weather-block__text section-text" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1500">Мы создали уникальную систему подбора маршрутов, которая
                     учитывает множество скрытых факторов,
                     чтобы насладиться отдыхом сполна.</p>
-                <button class="weather-block__btn btn btn-green">Пройти опрос</button>
+                <button class="weather-block__btn btn btn-green" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">Пройти опрос</button>
             </div>
             <div class="weather-block__widjets widjets">
                 <div class="widjets-item widjets-block widjets-weather">
@@ -466,62 +469,74 @@
                     </div>
                 </div>
                 <div class="widjets-item northern-lights">
-                    <div class="northern-lights__slider">
-                        <div class="northern-lights__slide widjets-block">
-                            <div class="widjets-block__header">
-                                <div class="widjets-block__label">
-                                    <svg class="">
-                                        <use xlink:href="./img/icons/icons.svg#sound
+                    <div class="northern-lights__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="northern-lights__slide widjets-block swiper-slide">
+                                <div class="widjets-block__header">
+                                    <div class="widjets-block__label">
+                                        <svg class="">
+                                            <use xlink:href="./img/icons/icons.svg#sound
                                         "></use>
-                                    </svg>
-                                    <span>Северное сияние</span>
+                                        </svg>
+                                        <span>Северное сияние</span>
+                                    </div>
+                                    <div class="widjets-block__time">15 сен.</div>
                                 </div>
-                                <div class="widjets-block__time">15 сен.</div>
-                            </div>
-                            <div class="widjets-block__body">
-                                <div class="northern-lights__level">
-                                    7 уровень
-                                    <span class="northern-lights__level-small">из 10</span>
+                                <div class="widjets-block__body">
+                                    <div class="northern-lights__level">
+                                        7 уровень
+                                        <span class="northern-lights__level-small">из 10</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="northern-lights__slide widjets-block">
-                            <div class="widjets-block__header">
-                                <div class="widjets-block__label">
-                                    <svg class="">
-                                        <use xlink:href="./img/icons/icons.svg#sound
+                            <div class="northern-lights__slide widjets-block swiper-slide">
+                                <div class="widjets-block__header">
+                                    <div class="widjets-block__label">
+                                        <svg class="">
+                                            <use xlink:href="./img/icons/icons.svg#sound
                                         "></use>
-                                    </svg>
-                                    <span>Северное сияние</span>
+                                        </svg>
+                                        <span>Северное сияние</span>
+                                    </div>
+                                    <div class="widjets-block__time">15 сен.</div>
                                 </div>
-                                <div class="widjets-block__time">15 сен.</div>
-                            </div>
-                            <div class="widjets-block__body">
-                                <div class="northern-lights__level">
-                                    7 уровень
-                                    <span class="northern-lights__level-small">из 10</span>
+                                <div class="widjets-block__body">
+                                    <div class="northern-lights__level">
+                                        7 уровень
+                                        <span class="northern-lights__level-small">из 10</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="northern-lights__slide widjets-block">
-                            <div class="widjets-block__header">
-                                <div class="widjets-block__label">
-                                    <svg class="">
-                                        <use xlink:href="./img/icons/icons.svg#sound
+                            <div class="northern-lights__slide widjets-block swiper-slide">
+                                <div class="widjets-block__header">
+                                    <div class="widjets-block__label">
+                                        <svg class="">
+                                            <use xlink:href="./img/icons/icons.svg#sound
                                         "></use>
-                                    </svg>
-                                    <span>Северное сияние</span>
+                                        </svg>
+                                        <span>Северное сияние</span>
+                                    </div>
+                                    <div class="widjets-block__time">15 сен.</div>
                                 </div>
-                                <div class="widjets-block__time">15 сен.</div>
-                            </div>
-                            <div class="widjets-block__body">
-                                <div class="northern-lights__level">
-                                    7 уровень
-                                    <span class="northern-lights__level-small">из 10</span>
+                                <div class="widjets-block__body">
+                                    <div class="northern-lights__level">
+                                        7 уровень
+                                        <span class="northern-lights__level-small">из 10</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <button type="button" class="slick-arrow northern-lights-arrow__prev btn">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#arrow-slide"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="slick-arrow northern-lights-arrow__next btn">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#arrow-slide"></use>
+                        </svg>
+                    </button>
                 </div>
                 <div class="widjets-item widjets-block attention">
                     <div class="attention__body">
@@ -542,42 +557,47 @@
     <div class="container quote__container">
         <div class="quote__wrapper">
             <div class="quote__content">
-                <h2 class="quote__title section-title">
+                <h2 class="quote__title section-title" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000">
                     <span>— Если вы пришелец, почему говорите, как северянин?!</span>
                     <span>— У многих планет есть север</span>
                 </h2>
-                <div class="quote__copy">
+                <div class="quote__copy" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
                     &#169; «Доктор Кто» (2005)
                 </div>
-                <div class="quote__text">
+                <div class="quote__text" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     Равным образом, структура организации требует анализа кластеризации усилий. Каждый из нас понимает
                     очевидную вещь: разбавленное изрядной долей эмпатии.
                 </div>
                 <button type="button" class="quote__about-btn btn btn-green">О Ямале</button>
             </div>
             <div class="quote__photos">
-                <div class="quote__photos-descr quote__photos-descr--first descr-block">
+                <div class="quote__photos-descr quote__photos-descr--first descr-block rellax" data-rellax-speed="2">
                     <div class="descr-block__title">> 50 000</div>
                     <div class="descr-block__text">ручьев, озер и рек</div>
                 </div>
-                <div class="quote__photos-descr quote__photos-descr--second descr-block">
+                <div class="quote__photos-descr quote__photos-descr--second descr-block rellax" data-rellax-speed="3">
                     <div class="descr-block__title">2293 видов</div>
                     <div class="descr-block__text">животных и птиц</div>
                 </div>
-                <div class="quote__photos-photo quote__photos-photo--first">
+                <div class="quote__photos-photo quote__photos-photo--first" data-aos="fade-down"
+                    data-aos-duration="1000" data-aos-easing="ease-out-cubic">
                     <img src="img/north-photo_1.jpg" alt="Северный пейзаж">
                 </div>
-                <div class="quote__photos-photo quote__photos-photo--second">
+                <div class="quote__photos-photo quote__photos-photo--second" data-aos="fade-down"
+                    data-aos-duration="1500" data-aos-easing="ease-out-cubic">
                     <picture>
                         <source srcset="img/mobile-north_1.jpg" media="(max-width: 568px)">
                         <source srcset="img/north-photo_2.jpg">
                         <img src="img/north-photo_2.jpg" alt="Северный пейзаж">
                     </picture>
                 </div>
-                <div class="quote__photos-photo quote__photos-photo--third">
+                <div class="quote__photos-photo quote__photos-photo--third" data-aos="fade-up" data-aos-duration="2000"
+                    data-aos-easing="ease-out-cubic">
                     <img src="img/north-photo_3.jpg" alt="Северный пейзаж">
                 </div>
-                <div class="quote__photos-photo quote__photos-photo--fourth">
+                <div class="quote__photos-photo quote__photos-photo--fourth" data-aos="fade-up" data-aos-duration="2500"
+                    data-aos-easing="ease-out-cubic">
                     <picture>
                         <source srcset="img/mobile-north_2.jpg" media="(max-width: 568px)">
                         <source srcset="img/north-photo_4.jpg">
@@ -593,13 +613,16 @@
     <div class="container banner__container">
         <div class="banner__wrapper">
             <div class="banner__content">
-                <h2 class="banner__title section-title">Скидки в заведениях Ямала</h2>
-                <div class="banner__text">Зарегистрируйтесь и получите электонную карту гостя, дающую скидку в
+                <h2 class="banner__title section-title" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000">Скидки в заведениях Ямала</h2>
+                <div class="banner__text" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1500">Зарегистрируйтесь и получите электонную карту гостя, дающую скидку в
                     заведениях Ямало-Ненецкого АО.</div>
-                <button class="banner__create-acc btn btn-green">Создать личный кабинет</button>
+                <button class="banner__create-acc btn btn-green" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">Создать личный кабинет</button>
             </div>
             <div class="banner__photos">
-                <div class="banner__photos-item photo-block">
+                <div class="banner__photos-item photo-block rellax" data-rellax-speed="1">
                     <div class="photo-block__img">
                         <img src="img/photo_1.png" alt="Ресторан «Край земли»">
                     </div>
@@ -608,7 +631,7 @@
                         <div class="photo-block__text descr-block__text">г. Салехард</div>
                     </div>
                 </div>
-                <div class="banner__photos-item photo-block">
+                <div class="banner__photos-item photo-block rellax" data-rellax-speed="-2">
                     <div class="photo-block__img">
                         <img src="img/photo_2.png" alt="Музей истории Арктики">
                     </div>
@@ -618,14 +641,14 @@
                     </div>
                 </div>
             </div>
-            <div class="sale__photos-descr descr-block">
+            <div class="sale__photos-descr descr-block rellax" data-rellax-speed="3">
                 <div class="descr-block__title">658 мест</div>
                 <div class="descr-block__text">со скидкой для гостей</div>
             </div>
-            <div class="banner__fly-icon banner__fly-icon--center fly-icon">
+            <div class="banner__fly-icon banner__fly-icon--center fly-icon rellax" data-rellax-speed="-2">
                 <img src="img/icon/receipt-disscount.svg" alt="">
             </div>
-            <div class="banner__fly-icon banner__fly-icon--right fly-icon">
+            <div class="banner__fly-icon banner__fly-icon--right fly-icon rellax" data-rellax-speed="4">
                 <img src="img/icon/buy-crypto.svg" alt="">
             </div>
         </div>
@@ -657,8 +680,10 @@
                 <div class="questions-block__dott"></div>
             </div>
             <div class="quiz-routes">
-                <h2 class="quiz-routes__title section-title">Рекомендованные машруты</h2>
-                <div class="quiz-routes__text">Ответьте на несколько вопросов, чтобы с высокой точностью посоветовать
+                <h2 class="quiz-routes__title section-title" data-aos="fade-down" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000">Рекомендованные машруты</h2>
+                <div class="quiz-routes__text" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000">Ответьте на несколько вопросов, чтобы с высокой точностью посоветовать
                     маршруты для путешествия по региону.</div>
                 <div class="quiz-routes__progress">
                     <div class="quiz-routes__progress-item active past">
@@ -708,36 +733,47 @@
     <div class="quiz-individual">
         <div class="quiz-individual__wrapper">
             <div class="quiz-individual__left-icons">
-                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--first fly-icon">
+                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--first fly-icon" data-aos="fade-down"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                     <img src="img/icon/route-square.svg" alt="">
                 </div>
-                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--second fly-icon">
+                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--second fly-icon" data-aos="fade-down"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1500">
                     <img src="img/icon/map.svg" alt="">
                 </div>
-                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--thrid fly-icon">
+                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--thrid fly-icon" data-aos="fade-down"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <img src="img/icon/location.svg" alt="">
                 </div>
             </div>
             <div class="quiz-individual__content">
-                <div class="quiz-individual__title">Больше ничего не удивляет?</div>
-                <div class="quiz-individual__text">Составьте свой индивидуальный маршрут по региону, а мы поможем
+                <div class="quiz-individual__title" data-aos="fade-down" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000">Больше ничего не удивляет?</div>
+                <div class="quiz-individual__text" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1500">Составьте свой индивидуальный маршрут по региону, а мы поможем
                     получить максимум от путешествия.</div>
-                <button class="quiz-individual__btn btn btn-green">Индивидуальный маршрут</button>
+                <button class="quiz-individual__btn btn btn-green" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">Индивидуальный маршрут</button>
             </div>
             <div class="quiz-individual__right-icons">
-                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--right-first fly-icon">
+                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--right-first fly-icon"
+                    data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                     <img src="img/icon/routing.svg" alt="">
                 </div>
-                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--right-second fly-icon">
+                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--right-second fly-icon"
+                    data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
                     <img src="img/icon/airplane.svg" alt="">
                 </div>
-                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--right-thrid fly-icon">
+                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--right-thrid fly-icon"
+                    data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <img src="img/icon/global.svg" alt="">
                 </div>
-                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--right-fourth fly-icon">
+                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--right-fourth fly-icon"
+                    data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="2500">
                     <img src="img/icon/location.svg" alt="">
                 </div>
-                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--right-fifth fly-icon">
+                <div class="quiz-individual__fly-icon quiz-individual__fly-icon--right-fifth fly-icon"
+                    data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
                     <img src="img/icon/picture-frame.svg" alt="">
                 </div>
             </div>
@@ -748,37 +784,37 @@
     <div class="container photos__container">
         <div class="photos__wrapper">
             <a href="#" class="photos__wrapper-item photo">
-                <div class="photo__img">
+                <div class="photo__img" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                     <img src="img/photo-1.png" alt="Туры по Ямалу">
                 </div>
-                <div class="photo__descr">
+                <div class="photo__descr" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                     <div class="descr-block__title">Туры по Ямалу</div>
                     <div class="descr-block__text">3524 позиций</div>
                 </div>
             </a>
             <a href="#" class="photos__wrapper-item photo">
-                <div class="photo__img">
+                <div class="photo__img" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
                     <img src="img/photo-2.png" alt="Достопримечательности">
                 </div>
-                <div class="photo__descr">
+                <div class="photo__descr" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
                     <div class="descr-block__title">Достопримечательности</div>
                     <div class="descr-block__text">365 объектов</div>
                 </div>
             </a>
             <a href="#" class="photos__wrapper-item photo">
-                <div class="photo__img">
+                <div class="photo__img" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="1700">
                     <img src="img/photo-3.png" alt="Этнографические парки">
                 </div>
-                <div class="photo__descr">
+                <div class="photo__descr" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1700">
                     <div class="descr-block__title">Этнографические парки</div>
                     <div class="descr-block__text">580 территорий</div>
                 </div>
             </a>
             <a href="#" class="photos__wrapper-item photo">
-                <div class="photo__img">
+                <div class="photo__img" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <img src="img/photo-4.png" alt="Горнолыжные комплексы">
                 </div>
-                <div class="photo__descr">
+                <div class="photo__descr" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <div class="descr-block__title">Горнолыжные комплексы</div>
                     <div class="descr-block__text">158 объектов</div>
                 </div>
@@ -1219,20 +1255,24 @@
     <div class="container flavor__container">
         <div class="flavor__wrapper">
             <div class="flavor__content">
-                <h2 class="banner__title section-title">Местный колорит</h2>
-                <div class="banner__text">Равным образом, структура организации требует анализа кластеризации
+                <h2 class="banner__title section-title" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000">Местный колорит</h2>
+                <div class="banner__text" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1500">Равным образом, структура организации требует анализа кластеризации
                     усилий. Каждый из нас понимает.</div>
-                <button class="banner__create-acc btn btn-green">Магазин сувениров</button>
+                <button class="banner__create-acc btn btn-green" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">Магазин сувениров</button>
             </div>
             <div class="flavor__photos">
-                <div class="flavor__photos-descr descr-block">
+                <div class="flavor__photos-descr descr-block rellax" data-rellax-speed="3">
                     <div class="descr-block__title">22 093 позиций</div>
                     <div class="descr-block__text">народного творчества</div>
                 </div>
-                <div class="flavor__photo">
+                <div class="flavor__photo" data-aos="fade-down" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="500">
                     <img src="img/flavor-1.jpg" alt="">
                 </div>
-                <div class="flavor__photo">
+                <div class="flavor__photo" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
                     <img src="img/flavor-2.jpg" alt="">
                 </div>
 
@@ -1327,13 +1367,16 @@
     <div class="container banner__container">
         <div class="banner__wrapper">
             <div class="banner__content">
-                <h2 class="banner__title section-title">Визит Ямал</h2>
-                <div class="banner__text">Публикуем лучшие фотографии по хештегу
+                <h2 class="banner__title section-title" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000">Визит Ямал</h2>
+                <div class="banner__text" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1300">Публикуем лучшие фотографии по хештегу
                     <a href="#" class="green">#visityamal</a> из Instagram</div>
-                <button class="banner__create-acc btn btn-green">Перейти в Instagram</button>
+                <button class="banner__create-acc btn btn-green" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1700">Перейти в Instagram</button>
             </div>
             <div class="banner__photos">
-                <div class="banner__photos-item photo-block">
+                <div class="banner__photos-item photo-block rellax" data-rellax-speed="1">
                     <div class="photo-block__img">
                         <img src="img/photo_4.png" alt="Ресторан «Край земли»">
                     </div>
@@ -1348,7 +1391,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="banner__photos-item photo-block">
+                <div class="banner__photos-item photo-block rellax" data-rellax-speed="-2">
                     <div class="photo-block__img">
                         <img src="img/photo_3.png" alt="Музей истории Арктики">
                     </div>
@@ -1364,16 +1407,16 @@
                     </div>
                 </div>
             </div>
-            <div class="banner__fly-icon banner__fly-icon--top fly-icon">
+            <div class="banner__fly-icon banner__fly-icon--top fly-icon rellax" data-rellax-speed="1">
                 <img src="img/icon/bg-icon.png" alt="">
             </div>
-            <div class="banner__fly-icon banner__fly-icon--top-center fly-icon">
+            <div class="banner__fly-icon banner__fly-icon--top-center fly-icon rellax" data-rellax-speed="2">
                 <img src="img/icon/sound.svg" alt="">
             </div>
-            <div class="banner__fly-icon banner__fly-icon--center fly-icon">
+            <div class="banner__fly-icon banner__fly-icon--center fly-icon rellax" data-rellax-speed="0">
                 <img src="img/icon/video.svg" alt="">
             </div>
-            <div class="banner__fly-icon banner__fly-icon--right fly-icon">
+            <div class="banner__fly-icon banner__fly-icon--right fly-icon rellax" data-rellax-speed="1">
                 <img src="img/icon/camera.svg" alt="">
             </div>
         </div>
@@ -1692,6 +1735,240 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="location-menu location-menu--fixed">
+            <div class="location-menu__search">
+                <div class="location-menu__search-container container">
+                    <button type="btn" class="location-menu__search-btn js-show-cities btn">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#global-edit"></use>
+                        </svg>
+                    </button>
+                    <input type="text" class="location-menu__search-inp input-reset" value="Санкт-Петербург">
+                    <button type="btn" class="location-menu__search-btn js-clear-input btn">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="location-menu__lists">
+                    <div class="container location-menu__lists-container">
+                        <div class="location-menu__lists-wrapper">
+                            <div class="location-menu__category">
+                                <div class="location-menu__category-letter">A</div>
+                                <ul class="location-menu__category-list">
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Анадырь</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Аргентина</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Азерот</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Аврора</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="location-menu__category">
+                                <div class="location-menu__category-letter">Б</div>
+                                <ul class="location-menu__category-list">
+                                    <li class="location-menu__category-city">
+                                        <button type="button"
+                                            class="location-menu__category-btn btn">Барбаросса</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бакалавр</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бейбиленд</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бейбиленд</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="location-menu__category">
+                                <div class="location-menu__category-letter">A</div>
+                                <ul class="location-menu__category-list">
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Анадырь</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Аргентина</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Азерот</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Аврора</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="location-menu__category">
+                                <div class="location-menu__category-letter">Б</div>
+                                <ul class="location-menu__category-list">
+                                    <li class="location-menu__category-city">
+                                        <button type="button"
+                                            class="location-menu__category-btn btn">Барбаросса</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бакалавр</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бейбиленд</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бейбиленд</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="location-menu__category">
+                                <div class="location-menu__category-letter">A</div>
+                                <ul class="location-menu__category-list">
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Анадырь</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Аргентина</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Азерот</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Аврора</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="location-menu__category">
+                                <div class="location-menu__category-letter">Б</div>
+                                <ul class="location-menu__category-list">
+                                    <li class="location-menu__category-city">
+                                        <button type="button"
+                                            class="location-menu__category-btn btn">Барбаросса</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бакалавр</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бейбиленд</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бейбиленд</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="location-menu__category">
+                                <div class="location-menu__category-letter">A</div>
+                                <ul class="location-menu__category-list">
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Анадырь</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Аргентина</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Азерот</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Аврора</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="location-menu__category">
+                                <div class="location-menu__category-letter">Б</div>
+                                <ul class="location-menu__category-list">
+                                    <li class="location-menu__category-city">
+                                        <button type="button"
+                                            class="location-menu__category-btn btn">Барбаросса</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бакалавр</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бейбиленд</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бейбиленд</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="location-menu__category">
+                                <div class="location-menu__category-letter">A</div>
+                                <ul class="location-menu__category-list">
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Анадырь</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Аргентина</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Азерот</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Аврора</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="location-menu__category">
+                                <div class="location-menu__category-letter">Б</div>
+                                <ul class="location-menu__category-list">
+                                    <li class="location-menu__category-city">
+                                        <button type="button"
+                                            class="location-menu__category-btn btn">Барбаросса</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бакалавр</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бейбиленд</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бейбиленд</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="location-menu__category">
+                                <div class="location-menu__category-letter">A</div>
+                                <ul class="location-menu__category-list">
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Анадырь</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Аргентина</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Азерот</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Аврора</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="location-menu__category">
+                                <div class="location-menu__category-letter">Б</div>
+                                <ul class="location-menu__category-list">
+                                    <li class="location-menu__category-city">
+                                        <button type="button"
+                                            class="location-menu__category-btn btn">Барбаросса</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бакалавр</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бейбиленд</button>
+                                    </li>
+                                    <li class="location-menu__category-city">
+                                        <button type="button" class="location-menu__category-btn btn">Бейбиленд</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
