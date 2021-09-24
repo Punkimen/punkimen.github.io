@@ -2520,6 +2520,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .photos__wrapper {
   overflow: auto;
+  display: flex;
 }
 
 .photos__wrapper .mCSB_container {
@@ -2835,7 +2836,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .flavor {
   padding-top: 117px;
-  padding-bottom: 179px;
+  padding-bottom: 96px;
 }
 
 .flavor__container {

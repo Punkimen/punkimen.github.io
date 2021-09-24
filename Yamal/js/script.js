@@ -176,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
     (function () {
         AOS.init({
             easing: 'ease-out-back',
-            duration: 1000
         });
         var rellax = new Rellax('.rellax', {
             center: true,
@@ -186,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
     (function () {
         $('.playbill__categoryes').mCustomScrollbar({
             axis: "x",
-        }); $('.photos__wrapper').mCustomScrollbar({
+        }); $('.photos__wrapper--scroll').mCustomScrollbar({
             axis: "x",
         });
     })();
