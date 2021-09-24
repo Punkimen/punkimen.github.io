@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <title>Yamal</title>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -177,8 +176,8 @@
                         <use xlink:href="./img/icons/icons.svg#global-edit"></use>
                     </svg>
                 </button>
-                <input type="text" class="location-menu__search-inp input-reset" value="Санкт-Петербург">
-                <button type="btn" class="location-menu__search-btn js-clear-input btn">
+                <input type="text" class="location-menu__search-inp input-reset" disabled value="Санкт-Петербург">
+                <button type="btn" class="location-menu__search-btn js-hide-location btn">
                     <svg class="">
                         <use xlink:href="./img/icons/icons.svg#close"></use>
                     </svg>
@@ -469,9 +468,9 @@
                     </div>
                 </div>
                 <div class="widjets-item northern-lights">
-                    <div class="northern-lights__slider swiper">
+                    <div class="northern-lights__slider widjets-block  swiper">
                         <div class="swiper-wrapper">
-                            <div class="northern-lights__slide widjets-block swiper-slide">
+                            <div class="northern-lights__slide  swiper-slide">
                                 <div class="widjets-block__header">
                                     <div class="widjets-block__label">
                                         <svg class="">
@@ -489,7 +488,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="northern-lights__slide widjets-block swiper-slide">
+                            <div class="northern-lights__slide  swiper-slide">
                                 <div class="widjets-block__header">
                                     <div class="widjets-block__label">
                                         <svg class="">
@@ -507,7 +506,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="northern-lights__slide widjets-block swiper-slide">
+                            <div class="northern-lights__slide  swiper-slide">
                                 <div class="widjets-block__header">
                                     <div class="widjets-block__label">
                                         <svg class="">
@@ -661,19 +660,31 @@
                 <div class="questions-block__title">Природа и приключения</div>
                 <div class="questions-block__wrapper">
                     <button type="button" class="questions-block__answer btn">
-                        <img src="img/icon/emoji-happy.svg" alt="">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#emoji-happy"></use>
+                        </svg>
+
                         <span>Я — авантюрист</span>
                     </button>
                     <button type="button" class="questions-block__answer btn">
-                        <img src="img/icon/emoji-normal.svg" alt="">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#emoji-normal"></use>
+                        </svg>
+
                         <span>Очень интересно</span>
                     </button>
                     <button type="button" class="questions-block__answer btn">
-                        <img src="img/icon/emoji-normal-1.svg" alt="">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#emoji-normal-1"></use>
+                        </svg>
+
                         <span>Только популярные места</span>
                     </button>
                     <button type="button" class="questions-block__answer btn">
-                        <img src="img/icon/emoji-medium.svg" alt="">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#emoji-medium"></use>
+                        </svg>
+
                         <span>Стараюсь избегать</span>
                     </button>
                 </div>
@@ -686,7 +697,7 @@
                     data-aos-duration="1000">Ответьте на несколько вопросов, чтобы с высокой точностью посоветовать
                     маршруты для путешествия по региону.</div>
                 <div class="quiz-routes__progress">
-                    <div class="quiz-routes__progress-item active past">
+                    <div class="quiz-routes__progress-item active ">
                         <div class="quiz-routes__progress-num">1</div>
                         <button type="button" class="quiz-routes__progress-btn btn btn-return">
                             <svg class="">
@@ -694,8 +705,8 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="quiz-routes__progress-item active">
-                        <div class="quiz-routes__progress-num current">2</div>
+                    <div class="quiz-routes__progress-item">
+                        <div class="quiz-routes__progress-num">2</div>
                         <button type="button" class="quiz-routes__progress-btn btn btn-return">
                             <svg class="">
                                 <use xlink:href="./img/icons/icons.svg#redo"></use>
@@ -1391,7 +1402,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="banner__photos-item photo-block rellax" data-rellax-speed="-2">
+                <div class="banner__photos-item photo-block rellax" data-rellax-speed="-1">
                     <div class="photo-block__img">
                         <img src="img/photo_3.png" alt="Музей истории Арктики">
                     </div>
@@ -1439,7 +1450,20 @@
                     <div class="gallery__slide swiper-slide">
                         <img src="img/gallery-4.png" alt="фото из инсты">
                     </div>
+                    <div class="gallery__slide swiper-slide">
+                        <img src="img/gallery-1.png" alt="фото из инсты">
+                    </div>
+                    <div class="gallery__slide swiper-slide">
+                        <img src="img/gallery-2.png" alt="фото из инсты">
+                    </div>
+                    <div class="gallery__slide swiper-slide">
+                        <img src="img/gallery-3.png" alt="фото из инсты">
+                    </div>
+                    <div class="gallery__slide swiper-slide">
+                        <img src="img/gallery-4.png" alt="фото из инсты">
+                    </div>
                 </div>
+                <div class="swiper-scrollbar"></div>
             </div>
             <button type="button" class="slick-arrow gallery-arrow__prev btn">
                 <svg class="">
@@ -1451,6 +1475,7 @@
                     <use xlink:href="./img/icons/icons.svg#arrow-slide"></use>
                 </svg>
             </button>
+
         </div>
     </div>
 </section>
@@ -1744,8 +1769,8 @@
                             <use xlink:href="./img/icons/icons.svg#global-edit"></use>
                         </svg>
                     </button>
-                    <input type="text" class="location-menu__search-inp input-reset" value="Санкт-Петербург">
-                    <button type="btn" class="location-menu__search-btn js-clear-input btn">
+                    <input type="text" class="location-menu__search-inp input-reset" disabled value="Санкт-Петербург">
+                    <button type="btn" class="location-menu__search-btn js-hide-location btn">
                         <svg class="">
                             <use xlink:href="./img/icons/icons.svg#close"></use>
                         </svg>
@@ -1976,7 +2001,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"
         integrity="sha512-Yk47FuYNtuINE1w+t/KT4BQ7JaycTCcrvlSvdK/jry6Kcxqg5vN7/svVWCxZykVzzJHaxXk5T9jnFemZHSYgnw=="
