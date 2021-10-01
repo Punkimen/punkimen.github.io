@@ -62,6 +62,7 @@ $(document).ready(function () {
             slidesPerView: "auto",
             loop: true,
             spaceBetween: 20,
+            speed: 1000,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -153,8 +154,7 @@ $(document).ready(function () {
     // fixed-menu
     (function () {
         $(window).on('scroll', function () {
-            if ($(this).scrollTop() >= 120) {
-
+            if ($(this).scrollTop() >= $(this).height()) {
                 $('.fixed-menu').addClass('show-leftMenu')
             } else {
                 $('.fixed-menu').removeClass('show-leftMenu')
@@ -347,7 +347,6 @@ $(document).ready(function () {
 
         })
     })();
-
     // questions
     (function () {
         $('.questions-item__header').on('click', function () {
