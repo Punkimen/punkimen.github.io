@@ -105,6 +105,7 @@ body {
 }
 
 body.overlay {
+  margin-right: 17px;
   overflow: hidden;
 }
 
@@ -3551,6 +3552,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   right: 14px;
 }
 
+.banners .banner-arrow__prev {
+  top: 40%;
+  left: 14px;
+}
+
 .banners .banner-slide {
   max-width: 844px;
 }
@@ -3561,6 +3567,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .catalog .container {
   max-width: 1120px;
+}
+
+.catalog .catalog__container {
+  max-width: 1168px;
 }
 
 .catalog__header {
@@ -3579,6 +3589,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.catalog__header-settings .custom-select__body {
+  left: 0;
 }
 
 .catalog__wrapper {
@@ -3620,7 +3634,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .catalog-filter .playbill__categoryes {
@@ -3709,21 +3723,16 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .card-item {
   position: relative;
-  width: 23%;
-  max-width: 216px;
-  margin-bottom: 40px;
-}
-
-.card-item:not(:nth-child(4n)) {
-  margin-right: 2%;
+  width: 25%;
+  max-width: 256px;
 }
 
 .card-item::before {
   padding: 10px 24px 10px 24px;
   content: attr(data-status);
   position: absolute;
-  top: 20px;
-  left: -36px;
+  top: 40px;
+  left: -15px;
   background: rgba(242, 242, 242, 0.9);
   border-radius: 12px;
   font-size: 12px;
@@ -4478,7 +4487,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   display: grid;
   position: fixed;
   top: 0;
-  right: 0;
+  width: 100vw;
   bottom: 0;
   left: 0;
   padding: 50px 10px;
@@ -4543,12 +4552,13 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .notification {
   padding: 20px 20px 20px 32px;
   display: none;
-  position: absolute;
+  position: fixed;
   top: 40px;
   right: 40px;
   background: #F2F2F2;
   box-shadow: 0px 7px 40px -7px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
+  z-index: 99;
 }
 
 .notification.show {
@@ -4624,6 +4634,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .fixed-menu {
     display: none !important;
+  }
+
+  .banners .banner-arrow__next {
+    right: -10px;
+  }
+
+  .banners .banner-arrow__prev {
+    left: -10px;
   }
 
   .product-card__wrapper {
@@ -5228,6 +5246,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     top: 0px;
   }
 
+  .banners .banner-arrow__next {
+    display: none;
+  }
+
+  .banners .banner-arrow__prev {
+    display: none;
+  }
+
   .banners .banner-slide {
     max-width: 640px;
   }
@@ -5258,6 +5284,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   .catalog-filter__btn {
     font-size: 12px;
     line-height: 18px;
+  }
+
+  .card-item {
+    margin-bottom: 40px;
+    max-width: 216px;
   }
 
   .card-item::before {
@@ -5986,6 +6017,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .card-item {
     width: 100%;
+    margin-right: 0;
   }
 }
 

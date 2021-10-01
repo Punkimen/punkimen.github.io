@@ -60,6 +60,7 @@ $(document).ready(function () {
         })
         const swiperBanners = new Swiper('.playbill-events__slider--banner', {
             slidesPerView: "auto",
+            loop: true,
             spaceBetween: 20,
             pagination: {
                 el: ".swiper-pagination",
@@ -103,6 +104,9 @@ $(document).ready(function () {
         })
         $('.banner-arrow__next').on('click', () => {
             swiperBanners.slideNext();
+        })
+        $('.banner-arrow__prev').on('click', () => {
+            swiperBanners.slidePrev();
         })
         $('.goods-arrow__next').on('click', () => {
             swiperGoods.slideNext();
@@ -149,7 +153,8 @@ $(document).ready(function () {
     // fixed-menu
     (function () {
         $(window).on('scroll', function () {
-            if ($(this).scrollTop() >= $(this).height()) {
+            if ($(this).scrollTop() >= 120) {
+
                 $('.fixed-menu').addClass('show-leftMenu')
             } else {
                 $('.fixed-menu').removeClass('show-leftMenu')
@@ -419,9 +424,14 @@ $(document).ready(function () {
             $('body').addClass('overlay');
             $(el).addClass('show');
         };
+        const showNotify = el => {
+            $(el).addClass('show');
+        }
+        const closeNotify = el => {
+            $('.notification').removeClass('show');
+        }
         const closeModal = () => {
             $('.popup').removeClass('show');
-            $('.notification').removeClass('show');
             $('.popups').hide();
             $('body').removeClass('overlay');
         }
@@ -429,18 +439,23 @@ $(document).ready(function () {
             let el = $(this).attr('data-popup')
             showPopup(el)
         })
-        $('.js-close').on('click', closeModal);
+        $('.js-close').on('click', function () {
+            closeModal();
+            closeNotify();
+        });
         $('.popup__btn-delete').on('click', function () {
             let el = $(this).attr('data-popup')
-            showPopup(el);
+            showNotify(el);
             $(this).parents('.popup').removeClass('show');
             $('body').removeClass('overlay');
-            setTimeout(closeModal, 5000)
+            closeModal()
+            setTimeout(closeNotify, 3000)
         })
         $('.btn-add-rewiew').on('click', function () {
             let el = $(this).attr('data-popup')
-            showPopup(el);
-            setTimeout(closeModal, 5000)
+            showNotify(el);
+            closeModal()
+            setTimeout(closeNotify, 3000)
         })
         $('.add-to-favorite').on('click', function () {
             let status = $(this).attr('data-status');
@@ -452,6 +467,69 @@ $(document).ready(function () {
             }
         })
     })();
+    // showMore
+    (function () {
+        const dataRevew = [{
+            name: 'Anon',
+            date: '12-05-2021',
+            text: `Имеется спорная точка зрения, гласящая примерно
+            следующее: независимые государства представляют собой не что иное, как
+            квинтэссенцию победы маркетинга над разумом и должны быть превращены в
+            посмешище, хотя само их существование приносит несомненную пользу обществу. В
+            целом, конечно, внедрение современных методик обеспечивает актуальность форм
+            воздействия.`,
+        },
+        {
+            name: 'User',
+            date: '12-05-2021',
+            text: `Имеется спорная точка зрения, гласящая примерно
+            следующее: независимые государства представляют собой не что иное, как
+            квинтэссенцию победы маркетинга над разумом и должны быть превращены в
+            посмешище, хотя само их существование приносит несомненную пользу обществу. В
+            целом, конечно, внедрение современных методик обеспечивает актуальность форм
+            воздействия.`,
+        },
+        {
+            name: 'Person',
+            date: '12-05-2021',
+            text: `Имеется спорная точка зрения, гласящая примерно
+            следующее: независимые государства представляют собой не что иное, как
+            квинтэссенцию победы маркетинга над разумом и должны быть превращены в
+            посмешище, хотя само их существование приносит несомненную пользу обществу. В
+            целом, конечно, внедрение современных методик обеспечивает актуальность форм
+            воздействия.`,
+        }]
+        const renderMoreReviews = function ([...dataRevew]) {
+            dataRevew.forEach(el => {
+                const review = document.createElement('div');
+                review.className = 'all-reviews__item personal-review';
+                review.innerHTML = `
+                <div class="personal-review__header">
+                <div class="personal-review__left">
+                    <div class="personal-review__status personal-review__status--like">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#like"></use>
+                        </svg>
+                    </div>
+                    <div class="personal-review__person">
+                        <div class="personal-review__name">${el.name}</div>
+                        <div class="personal-review__date">${el.date}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="personal-review__body">
+                <p class="personal-review__text">${el.text}</p>
+            </div>
+                `;
+                $('.all-reviews__show-more').before(review);
+            })
+
+        }
+        $('.all-reviews__show-more').on('click', function () {
+            renderMoreReviews(dataRevew)
+        })
+    })();
+
 });
 
 
