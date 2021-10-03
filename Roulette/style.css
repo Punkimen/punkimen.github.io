@@ -5,11 +5,12 @@ button {
     background: rgb(165, 163, 163);
 }
 
+/* 
 button {
     border: 0;
     margin: 0;
     padding: 0;
-}
+} */
 
 .title {
     margin-top: 50px;
@@ -149,4 +150,53 @@ button {
 
 .border-line--6 {
     transform: rotate(165deg);
+}
+
+@media(max-width: 600px) {
+    .roulette-container {
+        width: 320px;
+        height: 320px;
+        border: 5px solid #ccc;
+    }
+
+    .box-roulette {
+        width: 300px;
+        height: 300px;
+        border: 5px solid #ccc;
+    }
+
+    .box-roulette .label {
+        top: -40px;
+        line-height: 0px;
+    }
+
+    .box-roulette .label .text {
+        font-size: 14px;
+        line-height: 1;
+        vertical-align: middle;
+    }
+
+    .roulette-center {
+        width: 40px;
+        height: 40px;
+    }
+
+    .markers {
+        transform: translateX(-20px);
+        border-width: 40px 20px 0 20px;
+        border-color: #C9C9C9 transparent transparent transparent;
+        /* filter: drop-shadow(0px -10px 30px rgba(245, 156, 0, 0.75)); */
+    }
+
+    .markers-triangle {
+        position: absolute;
+        top: -33px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 10px 0 10px;
+        border-color: red transparent transparent transparent;
+    }
 }
