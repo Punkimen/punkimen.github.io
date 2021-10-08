@@ -133,8 +133,6 @@ $(document).ready(function () {
             const childWidth = $('.quiz-individual__wrapper').width();
             let posBlock = (childWidth - parentWidth) / 3;
             if (posBlock > 0 && windowWidth > 568) {
-                console.log('w');
-
                 $('.quiz-individual__wrapper').css({
                     "right": `${posBlock}px`
                 })
@@ -192,23 +190,38 @@ $(document).ready(function () {
             axis: "x",
         }); $('.photos__wrapper--scroll').mCustomScrollbar({
             axis: "x",
+        }); $('.catalog-choose__categories').mCustomScrollbar({
+            axis: "x",
+        });
+        $('.fixed-pay').mCustomScrollbar({
+            axis: "y",
         });
     })();
     // select-city
     (function () {
-        $('.custom-select__header').on('click', function () {
+        const openSelect = function () {
+            if ($(this).hasClass('disabled')) {
+                return false
+            }
             $(this).toggleClass('active')
             $(this).next().slideToggle();
+
             $('.custom-select__categoryes').mCustomScrollbar({
                 axis: "y",
             });
             $('.custom-select__category__elem .control').on('click', function () {
                 let text = $(this).text()
-                $('.custom-select__current-elem').text(text)
+                if ($(this).parents('.enter-banner__input')) {
+                    $(this).parents('.enter-banner__input').addClass('show-title')
+                }
+                $(this).parents('.custom-select').find('.custom-select__current-elem').text(text)
+                $(this).parents('.custom-select').addClass('filed')
                 $('.custom-select__header').removeClass('active');
                 $('.custom-select__body').hide();
             })
-        })
+
+        }
+        $('.custom-select__header').on('click', openSelect)
     })();
     // quiz
     (function () {
@@ -307,10 +320,12 @@ $(document).ready(function () {
             });
         })
         $('.js-open-filter').on('click', function () {
-            $('.fixed-filter').toggleClass('show')
+            $('.fixed-filter').addClass('show')
+            $('.fixed-pay').addClass('show')
         });
         $('.fixed-filter__close').on('click', function () {
-            $('.fixed-filter').toggleClass('show')
+            $('.fixed-filter').removeClass('show')
+            $('.fixed-pay').removeClass('show')
         })
     })();
     // catalog
@@ -441,6 +456,7 @@ $(document).ready(function () {
         $('.js-close').on('click', function () {
             closeModal();
             closeNotify();
+            $('.fixed-filter').removeClass('show')
         });
         $('.popup__btn-delete').on('click', function () {
             let el = $(this).attr('data-popup')
@@ -464,6 +480,18 @@ $(document).ready(function () {
             } else if (status === 'noAuth') {
                 showPopup(el);
             }
+        })
+        $('.btn-end').on('click', function () {
+            let el = $(this).attr('data-popup');
+            showPopup(el);
+        })
+        $('.popup__btn-sms').on('click', function () {
+            let el = $(this).attr('data-popup');
+            showPopup(el);
+        })
+        $('.buy-btn').on('click', function () {
+            let el = $(this).attr('data-popup');
+            showPopup(el);
         })
     })();
     // showMore
@@ -528,7 +556,1465 @@ $(document).ready(function () {
             renderMoreReviews(dataRevew)
         })
     })();
+    // calendar
+    (function () {
+        const addDiaposonClassForCalendar = (mounthFrom, mounthTo, idFrom, idTo) => {
+            let startIdFrom = 'calendarContainer-day-'
+            let startIdTo = 'calendarContainer-2-day-'
+            if ($('#calendarContainer-month').text() === mounthFrom) {
+                for (let i = idFrom; i < 36; i++) {
+                    $(`#${startIdFrom}${i}`).addClass('available')
+                }
+            } else if ($('#calendarContainer-month').text() === mounthTo) {
+                for (let i = 1; i < idTo; i++) {
+                    $(`#${startIdFrom}${i}`).addClass('available')
+                }
+            }
+            if ($('#calendarContainer-2-month').text() === mounthTo) {
+                for (let i = 1; i < idTo; i++) {
+                    $(`#${startIdTo}${i}`).addClass('available')
+                }
+            } else if ($('#calendarContainer-2-month').text() === mounthFrom) {
+                for (let i = idFrom; i < 36; i++) {
+                    $(`#${startIdTo}${i}`).addClass('available')
+                }
+            }
+        }
+        const $calendarInput = $('.enter-banner__input--calendar .custom-select__header');
+        $calendarInput.on('click', function () {
+            addDiaposonClassForCalendar('Октябрь', 'Ноябрь', 26, 11)
+        })
+        var calendar = new Calendar(
+            "calendarContainer", // id of html container for calendar
+            "small", // size of calendar, can be small | medium | large
+            [
+                "Wednesday", // left most day of calendar labels
+                3 // maximum length of the calendar labels
+            ],
+            [
+                "#FFFFFF", // primary color
+                "#FFFFFF", // primary dark color
+                "#009974", // text color
+                "#FFFFFF" // text dark color
+            ],
+            {
+                months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+                indicator: false,
+            },
+        );
+        calendar.setOnClickListener('days-blocks',
+            // Called when a day block is clicked
+            function (e) {
+                const dayStart = calendar.date.getDate();
+                const mounthStart = calendar.date.getMonth();
+                $('.calendar-value__start').text(`${dayStart}.${mounthStart + 1}`);
+                if ($('.calendar-value__finish').text() != '' && $('.calendar-value__start').text() != '') {
+                    $('.enter-banner__input--calendar .custom-select').addClass('filed')
+                    $('.enter-banner__input--calendar').addClass('show-title')
+                }
+            }
+        );
+        let calendarTo = new Calendar(
+            "calendarContainer-2", // id of html container for calendar
+            "small", // size of calendar, can be small | medium | large
+            [
+                "Wednesday", // left most day of calendar labels
+                3 // maximum length of the calendar labels
+            ],
+            [
+                "#FFFFFF", // primary color
+                "#FFFFFF", // primary dark color
+                "#009974", // text color
+                "#FFFFFF" // text dark color
+            ],
+            {
+                months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+            },
+        );
+        calendar.setOnClickListener('month-slider',
+            // Called when the month left arrow is clicked
+            function () {
+                addDiaposonClassForCalendar('Октябрь', 'Ноябрь', 26, 11)
+            },
+            // Called when the month right arrow is clicked
+            function () {
+                addDiaposonClassForCalendar('Октябрь', 'Ноябрь', 26, 11)
+            }
+        );
+        calendarTo.setOnClickListener('month-slider',
+            // Called when the month left arrow is clicked
+            function () {
+                addDiaposonClassForCalendar('Октябрь', 'Ноябрь', 26, 11)
+            },
+            // Called when the month right arrow is clicked
+            function () {
+                addDiaposonClassForCalendar('Октябрь', 'Ноябрь', 26, 11)
+            }
+        );
+        calendarTo.setOnClickListener('days-blocks',
+            // Called when a day block is clicked
+            function (e) {
+                const dayStart = calendarTo.date.getDate();
+                const mounthStart = calendarTo.date.getMonth();
+                $('.calendar-value__finish').text(`${dayStart}.${mounthStart + 1}`);
+                if ($('.calendar-value__finish').text() != '' && $('.calendar-value__start').text() != '') {
+                    $('.enter-banner__input--calendar .custom-select').addClass('filed')
+                    $('.enter-banner__input--calendar').addClass('show-title')
+                }
+            }
+        );
+        $('#calendarContainer-month').after($('#calendarContainer-year'));
+        $('#calendarContainer-2-month').after($('#calendarContainer-2-year'));
+        $('.cjslib-month div').html(`<img src="img/icon/calendar-arrow-left.svg">`);
+    })();
+    // google map init and stylized 
+    // steps planning way  
+    (function () {
+        let stepCount = 0;
+        // maps sеtting
 
+        function initialize() {
+            var startCity = new google.maps.LatLng(61.36087770604348, 31.326917871606124);
+            var myLatlng = new google.maps.LatLng(67.01156439141535, 73.95476052039851);
+            var pos1 = new google.maps.LatLng(66.86305851932107, 70.8545548132817);
+            var pos2 = new google.maps.LatLng(67.46201765996048, 78.70893018336228);
+            var pos3 = new google.maps.LatLng(66.55047769194653, 66.59826008447075);
+            var pos4 = new google.maps.LatLng(66.09653540676248, 76.65587017293807);
+            var pos5 = new google.maps.LatLng(65.53514113422678, 72.50449449743208);
+            var pos6 = new google.maps.LatLng(68.41641830907557, 73.12853422144906);
+            const allWays = {
+                startCity: [61.36087770604348, 31.326917871606124],
+                pos1: [66.86305851932107, 70.8545548132817],
+                pos2: [67.46201765996048, 78.70893018336228],
+                pos3: [66.09653540676248, 76.65587017293807],
+                pos4: [61.36087770604348, 31.326917871606124],
+                pos5: [65.53514113422678, 72.50449449743208],
+                pos6: [68.41641830907557, 73.12853422144906],
+            }
+            var mapOptions = {
+                zoom: 5,
+                center: myLatlng,
+                mapTypeControl: false,
+                overviewMapControl: false,
+                panControl: false,
+                zoomControl: false,
+                streetViewControl: false,
+                keyboardShortcuts: false,
+                styles: [
+                    {
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#f2f2f2"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#616161"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#f5f5f5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.land_parcel",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#bdbdbd"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#eeeeee"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e5e5e5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#9e9e9e"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#dadada"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#616161"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#9e9e9e"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.line",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e5e5e5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.station",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#eeeeee"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#cad2d4"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#bdbdbd"
+                            }
+                        ]
+                    }
+                ]
+            };
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            var marker1 = new google.maps.Marker({
+                position: pos1,
+                map: map,
+                title: 'Яр-Сале',
+                icon: {
+                    url: "img/icon/marker-sound.svg",
+                    scaledSize: new google.maps.Size(39.69, 39.69)
+                }
+
+            });
+            var infowindow1 = new google.maps.InfoWindow({
+                content: marker1.title
+            });
+            var marker2 = new google.maps.Marker({
+                position: pos2,
+                map: map,
+                title: 'Тазовский',
+                icon: {
+                    url: "img/icon/marker-sound.svg",
+                    scaledSize: new google.maps.Size(39.69, 39.69)
+                }
+            });
+            var infowindow2 = new google.maps.InfoWindow({
+                content: marker2.title
+            });
+            var marker3 = new google.maps.Marker({
+                position: pos3,
+                map: map,
+                title: 'Салехард',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+            });
+            var infowindow3 = new google.maps.InfoWindow({
+                content: marker3.title
+            });
+            var marker4 = new google.maps.Marker({
+                position: pos4,
+                map: map,
+                title: 'Новый Уренгой',
+                icon: {
+                    url: "img/icon/marker-sound.svg",
+                    scaledSize: new google.maps.Size(39.69, 39.69)
+                },
+            });
+            var infowindow4 = new google.maps.InfoWindow({
+                content: marker4.title
+            });
+            var marker5 = new google.maps.Marker({
+                position: pos5,
+                map: map,
+                title: 'Надым',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                },
+            });
+            var infowindow5 = new google.maps.InfoWindow({
+                content: marker5.title
+            });
+            var marker6 = new google.maps.Marker({
+                position: pos6,
+                map: map,
+                title: 'Сабетта',
+                icon: {
+                    url: "img/icon/marker-sound.svg",
+                    scaledSize: new google.maps.Size(39.69, 39.69)
+                },
+            });
+            var infowindow6 = new google.maps.InfoWindow({
+                content: marker6.title
+            });
+            infowindow1.open(map, marker1);
+            infowindow2.open(map, marker2);
+            infowindow3.open(map, marker3);
+            infowindow4.open(map, marker4);
+            infowindow5.open(map, marker5);
+            infowindow6.open(map, marker6);
+            const addClassForPlace = function () {
+                $('#city-to-value').parents('.custom-select').addClass('filed')
+            }
+            marker1.addListener('click', function () {
+                let startLat = startCity.lat()
+                let startLng = startCity.lng()
+                let endLat = marker1.position.lat()
+                let endLng = marker1.position.lng()
+                drawLine(startLat, startLng, endLat, endLng)
+                addClassForPlace()
+                $('#city-to-value').text(marker1.title)
+            });
+            marker2.addListener('click', function () {
+                let startLat = startCity.lat()
+                let startLng = startCity.lng()
+                let endLat = marker2.position.lat()
+                let endLng = marker2.position.lng()
+                drawLine(startLat, startLng, endLat, endLng)
+                addClassForPlace()
+                $('#city-to-value').text(marker2.title)
+            });
+            marker3.addListener('click', function () {
+                let startLat = startCity.lat()
+                let startLng = startCity.lng()
+                let endLat = marker3.position.lat()
+                let endLng = marker3.position.lng()
+                drawLine(startLat, startLng, endLat, endLng)
+                addClassForPlace()
+                $('#city-to-value').text(marker3.title)
+            });
+            marker4.addListener('click', function () {
+                let startLat = startCity.lat()
+                let startLng = startCity.lng()
+                let endLat = marker4.position.lat()
+                let endLng = marker4.position.lng()
+                drawLine(startLat, startLng, endLat, endLng)
+                addClassForPlace()
+                $('#city-to-value').text(marker4.title)
+            });
+            marker5.addListener('click', function () {
+                let startLat = startCity.lat()
+                let startLng = startCity.lng()
+                let endLat = marker5.position.lat()
+                let endLng = marker5.position.lng()
+                drawLine(startLat, startLng, endLat, endLng)
+                addClassForPlace()
+                $('#city-to-value').text(marker5.title)
+            });
+            marker6.addListener('click', function () {
+                let startLat = startCity.lat()
+                let startLng = startCity.lng()
+                let endLat = marker6.position.lat()
+                let endLng = marker6.position.lng()
+                drawLine(startLat, startLng, endLat, endLng)
+                addClassForPlace()
+                $('#city-to-value').text(marker6.title)
+            });
+            const lineSymbol = {
+                path: "M 0,-1 0,1",
+                strokeOpacity: 1,
+                scale: 1,
+                strokeWeight: 2,
+                strokeColor: "#213A8F",
+            };
+            function drawLine(startLat, startLng, endLat, endLng) {
+                const line = new google.maps.Polyline({
+                    path: [
+                        { lat: startLat, lng: startLng },
+                        { lat: endLat, lng: endLng },
+                    ],
+                    strokeOpacity: 0,
+                    icons: [
+                        {
+                            icon: lineSymbol,
+                            offset: "0",
+                            repeat: "6px",
+                        },
+                    ],
+                    map: map,
+                });
+            }
+        }
+        function initializeBuildMap() {
+            var myLatlng = new google.maps.LatLng(66.53256297859949, 66.60141403516596);
+            var pos1 = new google.maps.LatLng(66.53256677261557, 66.61196913935893);
+            var pos2 = new google.maps.LatLng(66.52692261179189, 66.59257347430562);
+            var pos3 = new google.maps.LatLng(66.53797994510903, 66.59587795576483);
+            var pos4 = new google.maps.LatLng(66.53551938734692, 66.61205704031188);
+            var pos5 = new google.maps.LatLng(66.52640978771203, 66.60338814095442);
+            var pos6 = new google.maps.LatLng(66.524683202413, 66.59579212514542);
+
+            var mapOptions = {
+                zoom: 14,
+                center: myLatlng,
+                mapTypeControl: false,
+                overviewMapControl: false,
+                panControl: false,
+                zoomControl: false,
+                streetViewControl: false,
+                keyboardShortcuts: false,
+                styles: [
+                    {
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#f2f2f2"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#616161"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#f5f5f5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.land_parcel",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#bdbdbd"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#eeeeee"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e5e5e5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#9e9e9e"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#dadada"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#616161"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#9e9e9e"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.line",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e5e5e5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.station",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#eeeeee"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#cad2d4"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#bdbdbd"
+                            }
+                        ]
+                    }
+                ]
+            };
+            var map = new google.maps.Map(document.getElementById('build-way__map'), mapOptions);
+            var marker1 = new google.maps.Marker({
+                position: pos1,
+                map: map,
+                title: 'Хостел «Хмель и Соль»',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+
+            });
+            var infowindow1 = new google.maps.InfoWindow({
+                content: marker1.title
+            });
+            var marker2 = new google.maps.Marker({
+                position: pos2,
+                map: map,
+                title: 'Тазовский',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+            });
+            var infowindow2 = new google.maps.InfoWindow({
+                content: marker2.title
+            });
+            var marker3 = new google.maps.Marker({
+                position: pos3,
+                map: map,
+                title: 'Хостел «Хмель и Соль»',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+            });
+            var infowindow3 = new google.maps.InfoWindow({
+                content: marker3.title
+            });
+            var marker4 = new google.maps.Marker({
+                position: pos4,
+                map: map,
+                title: 'Хостел «Хмель и Соль»',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+            });
+            var infowindow4 = new google.maps.InfoWindow({
+                content: marker4.title
+            });
+            var marker5 = new google.maps.Marker({
+                position: pos5,
+                map: map,
+                title: 'Хостел «Хмель и Соль»',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+            });
+            var infowindow5 = new google.maps.InfoWindow({
+                content: marker5.title
+            });
+            var marker6 = new google.maps.Marker({
+                position: pos6,
+                map: map,
+                title: 'Хостел «Хмель и Соль»',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+            });
+            var infowindow6 = new google.maps.InfoWindow({
+                content: marker6.title
+            });
+            infowindow1.open(map, marker1);
+            infowindow2.open(map, marker2);
+            infowindow3.open(map, marker3);
+            infowindow4.open(map, marker4);
+            infowindow5.open(map, marker5);
+            infowindow6.open(map, marker6);
+
+            marker1.addListener('click', function () {
+                $('#city-to-value').text(marker1.title)
+            });
+            marker2.addListener('click', function () {
+                $('#city-to-value').text(marker2.title)
+            });
+            marker3.addListener('click', function () {
+                $('#city-to-value').text(marker3.title)
+            });
+            marker4.addListener('click', function () {
+                $('#city-to-value').text(marker4.title)
+            });
+            marker5.addListener('click', function () {
+                $('#city-to-value').text(marker5.title)
+            });
+            marker6.addListener('click', function () {
+                $('#city-to-value').text(marker6.title)
+            });
+
+        }
+        function initializeChoosedMap() {
+            var myLatlng = new google.maps.LatLng(66.53256297859949, 66.60141403516596);
+            var pos1 = new google.maps.LatLng(66.53256677261557, 66.61196913935893);
+            var pos2 = new google.maps.LatLng(66.52692261179189, 66.59257347430562);
+            var pos3 = new google.maps.LatLng(66.53797994510903, 66.59587795576483);
+            var pos4 = new google.maps.LatLng(66.53551938734692, 66.61205704031188);
+            var pos5 = new google.maps.LatLng(66.52640978771203, 66.60338814095442);
+            var pos6 = new google.maps.LatLng(66.524683202413, 66.59579212514542);
+
+            var mapOptions = {
+                zoom: 14,
+                center: myLatlng,
+                mapTypeControl: false,
+                overviewMapControl: false,
+                panControl: false,
+                zoomControl: false,
+                streetViewControl: false,
+                keyboardShortcuts: false,
+                styles: [
+                    {
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#f2f2f2"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#616161"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#f5f5f5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.land_parcel",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#bdbdbd"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#eeeeee"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e5e5e5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#9e9e9e"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#dadada"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#616161"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#9e9e9e"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.line",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e5e5e5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.station",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#eeeeee"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#cad2d4"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#bdbdbd"
+                            }
+                        ]
+                    }
+                ]
+            };
+            var map = new google.maps.Map(document.getElementById('catalog-choose__map'), mapOptions);
+            var marker1 = new google.maps.Marker({
+                position: pos1,
+                map: map,
+                title: 'Хостел «Хмель и Соль»',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+
+            });
+            var infowindow1 = new google.maps.InfoWindow({
+                content: marker1.title
+            });
+            var marker2 = new google.maps.Marker({
+                position: pos2,
+                map: map,
+                title: 'Тазовский',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+            });
+            var infowindow2 = new google.maps.InfoWindow({
+                content: marker2.title
+            });
+            var marker3 = new google.maps.Marker({
+                position: pos3,
+                map: map,
+                title: 'Хостел «Хмель и Соль»',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+            });
+            var infowindow3 = new google.maps.InfoWindow({
+                content: marker3.title
+            });
+            var marker4 = new google.maps.Marker({
+                position: pos4,
+                map: map,
+                title: 'Хостел «Хмель и Соль»',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+            });
+            var infowindow4 = new google.maps.InfoWindow({
+                content: marker4.title
+            });
+            var marker5 = new google.maps.Marker({
+                position: pos5,
+                map: map,
+                title: 'Хостел «Хмель и Соль»',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+            });
+            var infowindow5 = new google.maps.InfoWindow({
+                content: marker5.title
+            });
+            var marker6 = new google.maps.Marker({
+                position: pos6,
+                map: map,
+                title: 'Хостел «Хмель и Соль»',
+                icon: {
+                    url: "img/icon/btn-location.svg",
+                    scaledSize: new google.maps.Size(32, 32)
+                }
+            });
+            var infowindow6 = new google.maps.InfoWindow({
+                content: marker6.title
+            });
+            infowindow1.open(map, marker1);
+            infowindow2.open(map, marker2);
+            infowindow3.open(map, marker3);
+            infowindow4.open(map, marker4);
+            infowindow5.open(map, marker5);
+            infowindow6.open(map, marker6);
+
+            marker1.addListener('click', function () {
+                $('#city-to-value').text(marker1.title)
+            });
+            marker2.addListener('click', function () {
+                $('#city-to-value').text(marker2.title)
+            });
+            marker3.addListener('click', function () {
+                $('#city-to-value').text(marker3.title)
+            });
+            marker4.addListener('click', function () {
+                $('#city-to-value').text(marker4.title)
+            });
+            marker5.addListener('click', function () {
+                $('#city-to-value').text(marker5.title)
+            });
+            marker6.addListener('click', function () {
+                $('#city-to-value').text(marker6.title)
+            });
+
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, 'load', initializeBuildMap);
+        google.maps.event.addDomListener(window, 'load', initializeChoosedMap);
+        // maps sеtting end
+
+        // Steps
+
+        const $steps = $('.steps-planning__step');
+        const selectInputs = $('.enter-banner__input .custom-select');
+        const values = document.querySelectorAll('#planning-form .custom-select__current-elem');
+
+        const nextStep = function () {
+            stepCount++;
+            $steps.removeClass('show')
+            $steps.eq(stepCount).addClass('show');
+            console.log(stepCount);
+            $('.catalog-choose__catalog').show()
+            if (stepCount > 1) {
+                $('#repeat-step-btn').addClass('show')
+                $('#next-step-btn').removeClass('show')
+
+            } else if (stepCount > 0) { $('.enter-banner__form').addClass('only-btn') }
+        }
+        const prevStep = function () {
+            stepCount--;
+            $steps.removeClass('show')
+            $steps.eq(stepCount).addClass('show');
+            if (stepCount == 0) {
+                $('#repeat-step-btn').removeClass('show')
+                $('#next-step-btn').addClass('show')
+                $('.enter-banner__form').removeClass('only-btn')
+            } console.log(stepCount);
+        }
+        $('#next-step-btn').on('click', function () {
+            let fieldForm = true
+            selectInputs.each((index, el) => {
+                if (!el.classList.contains('filed')) {
+                    return fieldForm = false
+                }
+            })
+            if (fieldForm === true && stepCount === 0) {
+                nextStep()
+                $(this).removeClass('show');
+                $('#repeat-step-btn').addClass('show');
+                $('#planning-form .custom-select__header').addClass('disabled')
+                values.forEach(el => {
+                    localStorage.setItem(el.getAttribute('data-title'), el.textContent)
+                })
+            }
+        })
+        $('#repeat-step-btn').on('click', function () {
+            stepCount = 0;
+            $steps.removeClass('show')
+            $steps.eq(stepCount).addClass('show');
+            $('#planning-form .custom-select__header').removeClass('disabled')
+            $(this).removeClass('show');
+            $('#next-step-btn').addClass('show'); $('.enter-banner__form').removeClass('only-btn');
+            $('.choosen-radio').prop('checked', false);
+            selectInputs.removeClass('filed')
+            $('.enter-banner__input').removeClass('show-title')
+            $('#city-from-value').text($('#city-from-value').attr('data-title'))
+            $('#city-to-value').text($('#city-to-value').attr('data-title'))
+            $('#calendar-value').html(`<span class="calendar-value__start">Когда</span> -
+            <span class="calendar-value__finish"></span>`)
+            $('#type-of-recreation').text($('#type-of-recreation').attr('data-title'))
+        })
+        $('.btn-next').on('click', function () {
+            if (stepCount < $steps.length - 1) {
+                nextStep()
+            }
+        });
+        $('.btn-back').on('click', function () {
+            if (stepCount > 0) {
+                prevStep()
+            }
+        })
+        $('.btn-end').on('click', function () {
+            $('.build-way__hendler').hide()
+            $('.build-way__hendler--done').addClass('done')
+            $('.build-plan__checkbox input').prop('disabled', true);
+            $('.build-plan__elem').addClass('done')
+            let indexCount = 0
+            if ($('.build-plan__list').css('display') === 'none') {
+                console.log('w');
+                $('.build-plan__list-date .build-plan__icon-drag').each((index, el) => {
+                    indexCount++
+                    el.innerHTML = `<span class="build-plan__num">${indexCount}</span>`
+                })
+            } else {
+                $('.build-plan__icon-drag').each((index, el) => {
+                    indexCount++
+                    el.innerHTML = `<span class="build-plan__num">${indexCount}</span>`
+                })
+            }
+
+        })
+        // Steps end
+
+        // choose btn
+        $('.catalog-choose__type-search .btn').on('click', function () {
+            if ($(this).attr('data-value') === 'list-search') {
+                console.log('list');
+                $('.catalog-choose__catalog').show()
+                $('.catalog-choose__map').hide()
+            } else if ($(this).attr('data-value') === 'map-search') {
+                $('.catalog-choose__catalog').hide()
+                $('.catalog-choose__map').show()
+            }
+        })
+        $('.choose-btn').on('click', function () {
+            if ($(this).attr('data-type') === "only") {
+                console.log($('.choose-btn[data-type="only"]'));
+                if ($(this).hasClass('current')) {
+                    $(this).removeClass('current');
+                    $('.choose-btn').prop('disabled', false);
+                    $(this).prop('disabled', false);
+                } else {
+                    $(this).addClass('current');
+                    $('.choose-btn[data-type="only"]').prop('disabled', true);
+                    $(this).prop('disabled', false);
+                }
+            } else {
+                if ($(this).hasClass('current')) {
+                    $(this).removeClass('current');
+                } else {
+                    $(this).addClass('current');
+                }
+            }
+        })
+        // choose btn end
+    })();
+    // drag list
+    (function () {
+        const defauldBuildList = document.querySelector('.build-plan__list')
+        const dateList = document.querySelector('.build-plan__list-date');
+        const planElements = document.querySelectorAll('.build-plan__elem');
+        const shareDateCheckbox = document.querySelector('.build-plan__checkbox input');
+        let dataDate = [
+            {
+                mounth: 10,
+                date: 1,
+                year: 2021,
+            },
+            {
+                mounth: 10,
+                date: 2,
+                year: 2021,
+            },
+            {
+                mounth: 10,
+                date: 3,
+                year: 2021,
+            },
+            {
+                mounth: 10,
+                date: 4,
+                year: 2021,
+            },
+            {
+                mounth: 10,
+                date: 1,
+                year: 2021,
+            }, {
+                mounth: 10,
+                date: 5,
+                year: 2021,
+            },
+            {
+                mounth: 10,
+                date: 6,
+                year: 2021,
+            }
+        ];
+        let dataElementsPlan = [
+            {
+                'id': '01',
+                'img': 'img/plan-photo.png',
+                'name': 'Отель «Сибирь»',
+                'text': '10:00 - 22:00 для регистрации',
+                "transformStatus": 'no-drag',
+                'btnStatus': 'disabled',
+                "payStatus": 'disabled',
+                'svg': 'home'
+            },
+            {
+                'id': '02',
+                'img': 'img/plan-photo.png',
+                'name': 'Отель «Сибирь»',
+                'text': '10:00 - 22:00 для регистрации',
+                "transformStatus": 'drag',
+                'btnStatus': 'drag',
+                "payStatus": 'payed',
+                'svg': 'arrows'
+            },
+            {
+                'id': '03',
+                'img': 'img/plan-photo.png',
+                'name': 'Отель «Сибирь»',
+                'text': '10:00 - 22:00 для регистрации',
+                "transformStatus": 'drag',
+                'btnStatus': 'drag',
+                "payStatus": 'no-pay',
+                'svg': 'arrows'
+            },
+            {
+                'id': '04',
+                'img': 'img/plan-photo.png',
+                'name': 'Отель «Сибирь»',
+                'text': '10:00 - 22:00 для регистрации',
+                "transformStatus": 'drag',
+                'btnStatus': 'drag',
+                "payStatus": 'payed',
+                'svg': 'arrows'
+            },
+            {
+                'id': '05',
+                'img': 'img/plan-photo.png',
+                'name': 'Отель «Сибирь»',
+                'text': '10:00 - 22:00 для регистрации',
+                "transformStatus": 'drag',
+                'btnStatus': 'drag',
+                "payStatus": 'no-pay',
+                'svg': 'arrows'
+            },
+            {
+                'id': '06',
+                'img': 'img/plan-photo.png',
+                'name': 'Отель «Сибирь»',
+                'text': '10:00 - 22:00 для регистрации',
+                "transformStatus": 'drag',
+                'btnStatus': 'drag',
+                "payStatus": 'payed',
+                'svg': 'arrows'
+            },
+            {
+                'id': '07',
+                'img': 'img/plan-photo.png',
+                'name': 'Отель «Сибирь»',
+                'text': '10:00 - 22:00 для регистрации',
+                "transformStatus": 'drag',
+                'btnStatus': 'drag',
+                "payStatus": 'no-pay',
+                'svg': 'arrows'
+            },
+        ];
+        const renderElementsPlan = (whereRender) => {
+            whereRender.textContent = '';
+            dataElementsPlan.forEach(({ id, img, name, text, transformStatus, payStatus, svg, btnStatus }) => {
+                let planElement = document.createElement('div');
+                planElement.classList.add('build-plan__elem', transformStatus);
+                planElement.setAttribute('id', `build-plan__elem-${id}`);
+                let deleteBtn = (payStatus === 'payed' || btnStatus === 'disabled') ? '' : `</button> <button class="btn btn-delete" data-id="${id}">+</button>`;
+                planElement.innerHTML = `
+                <div class="build-plan__elem-inner">
+                    <div class="build-plan__icon-drag ${btnStatus}">
+                    <svg class="">
+                        <use xlink:href="./img/icons/icons.svg#${svg}"></use>
+                    </svg>
+                    </div>
+                    <a href='#' class="build-plan__photo">
+                        <img src="${img}" alt="Ваш отель">
+                    </a>
+                    <div class="build-plan__descr">
+                        <div class="descr-block__title">${name}</div>
+                        <div class="descr-block__text">${text}</div>
+                    </div>
+                    <button type="button" class="pay-btn btn ${payStatus}" data-id="${id}">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#ticket"></use>
+                        </svg>
+                        <svg class="payed-icon">
+                            <use xlink:href="./img/icons/icons.svg#tick-pay"></use>
+                        </svg>
+                    ${deleteBtn}
+                    </div>
+                    <button type="btn" class="btn add-new-elem" data-id="${id}">
+                        <span>Добавить</span>
+                    </button>
+                    <div class="build-plan__add-elem " id="build-plan__add-elem-${id}">
+                    <div class="build-plan__add-inner build-plan__add-inner--first show">
+                        <div class="build-plan__add-btns">
+                            <button id="option-where" type="button"
+                                    class="build-plan__add-btn btn btn-green">Где
+                                    поесть</button>
+                            <button id="option-what" type="button" class="build-plan__add-btn btn btn-green">Чем
+                                    заняться</button>
+                        </div>
+                    </div>
+                    <div class="build-plan__add-inner build-plan__add-inner--second">
+                        <div class="build-plan__add__label">Где поесть</div>
+                        <div class="build-plan__add-btns">
+                            <a href="" type="button" class="build-plan__add-btn btn btn-green">По пути</a>
+                            <a href="" type="button" class="build-plan__add-btn btn btn-green">Другое</a>
+                        </div>
+                    </div>
+                </div>
+                `;
+                whereRender.append(planElement)
+            })
+        }
+
+        const renderDateList = () => {
+            dateList.textContent = '';
+            let countId = 0
+            dataDate.forEach(({ mounth, date, year }) => {
+                countId++
+                let dateElem = document.createElement('div');
+                dateElem.classList.add('build-list__date');
+                dateElem.innerHTML = `
+                <div class="build-list__date-label">
+                    <span>${date}.${mounth}.${year}</span>
+                </div>
+                <div id="dragulaId-${countId}" class="build-list__date-inner container"></div>
+                `;
+                dateList.append(dateElem)
+            })
+        };
+        shareDateCheckbox.addEventListener('change', function () {
+            if (shareDateCheckbox.checked === true) {
+
+                renderDateList()
+                const dateInnerBlocks = document.querySelectorAll('.build-list__date-inner')
+                renderElementsPlan(dateInnerBlocks[0])
+                let arrayForDrag = []
+                dateInnerBlocks.forEach(el => arrayForDrag.push(el))
+                dragulaInit(arrayForDrag)
+                defauldBuildList.style.display = 'none';
+            } else {
+                dateList.textContent = '';
+                defauldBuildList.style.display = 'block';
+                planElements.forEach(el => {
+                    defauldBuildList.append(el)
+                })
+
+            }
+        });
+        const deleteElementPlan = (id) => {
+            dataElementsPlan = dataElementsPlan.filter((el) => id !== el.id);
+            if (document.querySelector('.build-plan__list').style.display == 'none') {
+                renderElementsPlan(document.querySelector('.build-list__date-inner'));
+            } else if (document.querySelector('.build-list__date-inner')) {
+                renderElementsPlan(defauldBuildList);
+            }
+        }
+        renderElementsPlan(defauldBuildList);
+        document.addEventListener('click', e => {
+            if (e.target.closest('.btn-delete')) {
+                let id = e.target.getAttribute('data-id');
+                deleteElementPlan(id)
+            }
+            if (e.target.closest('.add-new-elem')) {
+                let id = e.target.getAttribute('data-id');
+                e.target.style.opacity = 0;
+                e.target.style.height = 0;
+                document.querySelector(`#build-plan__add-elem-${id}`).classList.add('show')
+            }
+            if (e.target.closest('.build-plan__add-btn')) {
+                document.querySelector('.build-plan__add-inner--first').classList.remove('show')
+                document.querySelector('.build-plan__add-inner--second').classList.add('show')
+            }
+            if (e.target.closest('.pay-btn.no-pay')) {
+                let id = e.target.getAttribute('data-id');
+                if (id === '03') {
+                    $('#new-pay').addClass('show')
+                } else if (id === '05') {
+                    $('#history-pay').addClass('show')
+                }
+            }
+        })
+        $('.js-buy-btn').on('click', function () { $('#new-pay').addClass('show') })
+        function dragulaInit(elements) {
+            dragula(elements, {
+
+                // or 'horizontal'
+                direction: 'vertical',
+
+                // determine whether to copy elements rather than moving
+                // if a method is passed, it'll be called whenever an element starts being dragged in order to decide whether it should follow copy behavior or not. 
+                copy: false,
+
+                // determine whether to sort elements in copy-source containers.
+                copySortSource: false,
+
+                // spilling will put the element back where it was dragged from, if this is true
+                revertOnSpill: false,
+
+                // spilling will `.remove` the element, if this is true
+                removeOnSpill: false,
+
+                // set the element that gets mirror elements appended
+                mirrorContainer: document.body,
+
+                // allows users to select input text
+                ignoreInputTextSelection: true,
+
+                // allows users to select the amount of movement on the X axis before it is considered a drag instead of a click   
+                slideFactorX: 0,
+
+                // allows users to select the amount of movement on the Y axis before it is considered a drag instead of a click      
+                slideFactorY: 0,
+
+                // only elements in drake.containers will be taken into account
+                isContainer: function (el) {
+                    return false;
+                },
+
+                // elements are always draggable by default
+                moves: function (el, source, handle, sibling) {
+                    return true;
+                },
+
+                // elements can be dropped in any of the `containers` by default
+                accepts: function (el, target, source, sibling) {
+                    const allElemContainer = document.querySelectorAll('.build-list__date');
+                    allElemContainer.forEach(el => {
+                        el.classList.add('active');
+                        if (el.querySelector('.build-list__date-inner').innerHTML == '') {
+                            el.classList.remove('active');
+                        }
+                    })
+                    return true;
+                },
+
+                // don't prevent any drags from initiating by default
+                invalid: function (el, handle) {
+                    return el.closest('.no-drag');
+                }
+
+            });
+        }
+    })()
 });
 
 
