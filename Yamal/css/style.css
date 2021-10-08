@@ -3091,6 +3091,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   border-radius: 12px;
 }
 
+.photo.hovered {
+  background: #f2f2f2;
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
 .photo__img {
   margin-bottom: 26px;
 }
@@ -5345,6 +5351,73 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   display: none !important;
 }
 
+.catalog-choose__map {
+  position: relative;
+}
+
+.catalog-choose__map-cards {
+  position: relative;
+  z-index: 2;
+  top: 50%;
+}
+
+.catalog-choose__map-cards .map-card {
+  position: absolute;
+  right: 24px;
+  transform: translateY(-50%);
+  padding: 20px;
+}
+
+.catalog-choose__map-cards .map-card .choose-btn {
+  display: flex;
+  position: absolute;
+  bottom: 105px;
+  left: -15px;
+  background: #fff;
+  border: none;
+  padding: 10px 39px 10px 32px;
+}
+
+.catalog-choose__map-cards .map-card .choose-btn:disabled {
+  background: #E4E4E4;
+  color: #B3B3B3;
+}
+
+.catalog-choose__map-cards .map-card .choose-btn:disabled:hover {
+  background: #E4E4E4;
+  color: #B3B3B3;
+}
+
+.catalog-choose__map-cards .map-card .choose-btn.current {
+  background: #009974;
+  color: #fff;
+}
+
+.catalog-choose__map-cards .map-card .choose-btn.current .choose-btn__icon {
+  color: #fff;
+  transform: rotate(45deg);
+}
+
+.catalog-choose__map-cards .map-card .choose-btn:hover {
+  background: #009974;
+}
+
+.catalog-choose__map-cards .map-card .choose-btn span {
+  margin-right: 10px;
+}
+
+.catalog-choose__map-cards .map-card .choose-btn .choose-btn__icon {
+  position: absolute;
+  font-size: 25px;
+  top: 9px;
+  right: 17px;
+  transition: all ease .2s;
+}
+
+.catalog-choose__map-cards .map-card::before {
+  display: none;
+}
+
 .steps-planning__step--2 {
   margin-top: 70px;
 }
@@ -5880,9 +5953,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .build-list__date-label {
+  cursor: pointer;
   position: relative;
   font-weight: bold;
   color: #b3b3b3;
+}
+
+.build-list__date-label:hover {
+  color: #213A8F;
 }
 
 .build-list__date-label::after {
@@ -6753,6 +6831,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   #map {
     height: 732px;
+  }
+
+  .catalog-choose__map-cards .map-card .choose-btn {
+    font-size: 12px;
+    line-height: 18px;
+    bottom: 62px;
+    left: -10px;
+    padding: 10px 39px 10px 32px;
   }
 
   .catalog-choose__header {
