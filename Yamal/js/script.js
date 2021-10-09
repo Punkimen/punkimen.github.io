@@ -674,58 +674,224 @@ $(document).ready(function () {
         // maps sеtting
 
         const firstMap = function () {
-            let flightPathArr = [];
+            let myLatlng
+            let flightPathCoordinates = [];
+            let oldCordinates = [];
+            let flightPath;
             let map;
-            let allCordinates = [
-                [
-                    { lat: 61.36087770604348, lng: 31.326917871606124 },
-                    { lat: 66.86305851932107, lng: 70.8545548132817 },
-                ],
-                [
-                    { lat: 61.36087770604348, lng: 31.326917871606124 },
-                    { lat: 67.46201765996048, lng: 78.70893018336228 },
-                ],
-                [
-                    { lat: 61.36087770604348, lng: 31.326917871606124 },
-                    { lat: 66.55047769194653, lng: 66.59826008447075 },
-                ],
-                [
-                    { lat: 61.36087770604348, lng: 31.326917871606124 },
-                    { lat: 66.09653540676248, lng: 76.65587017293807 },
-                ],
-                [
-                    { lat: 61.36087770604348, lng: 31.326917871606124 },
-                    { lat: 65.53514113422678, lng: 72.50449449743208 },
-                ],
-                [
-                    { lat: 61.36087770604348, lng: 31.326917871606124 },
-                    { lat: 68.41641830907557, lng: 73.12853422144906 },
-                ],
-                [
-                    { lat: 61.36087770604348, lng: 31.326917871606124 },
-                    { lat: 68.41641830907557, lng: 73.12853422144906 },
-                ]
-            ]
-            let numOfWay;
-            function initialize() {
-                var startCity = new google.maps.LatLng(61.36087770604348, 31.326917871606124);
-                var myLatlng = new google.maps.LatLng(67.01156439141535, 73.95476052039851);
-                var pos1 = new google.maps.LatLng(66.86305851932107, 70.8545548132817);
-                var pos2 = new google.maps.LatLng(67.46201765996048, 78.70893018336228);
-                var pos3 = new google.maps.LatLng(66.55047769194653, 66.59826008447075);
-                var pos4 = new google.maps.LatLng(66.09653540676248, 76.65587017293807);
-                var pos5 = new google.maps.LatLng(65.53514113422678, 72.50449449743208);
-                var pos6 = new google.maps.LatLng(68.41641830907557, 73.12853422144906);
+            let markers = [];
+            let fromMarker = [];
+            let startMarkerst = [
+                {
+                    position: new google.maps.LatLng(66.86305851932107, 70.8545548132817),
+                    map: map,
+                    title: 'Яр-Сале',
+                    icon: {
+                        url: "img/icon/marker-sound.svg",
+                        scaledSize: new google.maps.Size(39.69, 39.69)
+                    },
+                },
+                {
+                    position: new google.maps.LatLng(67.46201765996048, 78.70893018336228),
+                    map: map,
+                    title: 'Тазовский',
+                    icon: {
+                        url: "img/icon/marker-sound.svg",
+                        scaledSize: new google.maps.Size(39.69, 39.69)
+                    },
+                },
+                {
+                    position: new google.maps.LatLng(66.55047769194653, 66.59826008447075),
+                    map: map,
+                    title: 'Салехард',
+                    icon: {
+                        url: "img/icon/btn-location.svg",
+                        scaledSize: new google.maps.Size(32, 32)
+                    }
+                },
+                {
+                    position: new google.maps.LatLng(66.09653540676248, 76.65587017293807),
+                    map: map,
+                    title: 'Новый Уренгой',
+                    icon: {
+                        url: "img/icon/marker-sound.svg",
+                        scaledSize: new google.maps.Size(39.69, 39.69)
+                    },
+                },
+                {
+                    position: new google.maps.LatLng(65.53514113422678, 72.50449449743208),
+                    map: map,
+                    title: 'Надым',
+                    icon: {
+                        url: "img/icon/btn-location.svg",
+                        scaledSize: new google.maps.Size(32, 32)
+                    },
+                },
+                {
+                    position: new google.maps.LatLng(68.41641830907557, 73.12853422144906),
+                    map: map,
+                    title: 'Сабетта',
+                    icon: {
+                        url: "img/icon/marker-sound.svg",
+                        scaledSize: new google.maps.Size(39.69, 39.69)
+                    },
+                },
+            ];
+            let cityMarkersFrom = [
+                {
+                    position: new google.maps.LatLng(55.7526903859156, 37.62987442234599),
+                    map: map,
+                    title: 'Москва',
+                    icon: {
+                        url: "img/icon/btn-location.svg",
+                        scaledSize: new google.maps.Size(32, 32)
+                    }
+                },
+                {
+                    position: new google.maps.LatLng(61.36087770604348, 31.326917871606124),
+                    map: map,
+                    title: 'Санкт-Петербург',
+                    icon: {
+                        url: "img/icon/btn-location.svg",
+                        scaledSize: new google.maps.Size(32, 32)
+                    }
+                },
+                {
+                    position: new google.maps.LatLng(45.03590893134328, 38.97089281611214),
+                    map: map,
+                    title: 'Краснодар',
+                    icon: {
+                        url: "img/icon/btn-location.svg",
+                        scaledSize: new google.maps.Size(32, 32)
+                    }
+                },
+            ];
+            const lineSymbol = {
+                path: "M 0,-1 0,1",
+                strokeOpacity: 1,
+                scale: 1,
+                strokeWeight: 2,
+                strokeColor: "#213A8F",
+            };
 
-                const allWays = {
-                    startCity: [61.36087770604348, 31.326917871606124],
-                    pos1: [66.86305851932107, 70.8545548132817],
-                    pos2: [67.46201765996048, 78.70893018336228],
-                    pos3: [66.09653540676248, 76.65587017293807],
-                    pos4: [61.36087770604348, 31.326917871606124],
-                    pos5: [65.53514113422678, 72.50449449743208],
-                    pos6: [68.41641830907557, 73.12853422144906],
+            // Добавляем startMarkerst маркеры в markers
+            function addMarker(position, map, title, icon) {
+                const marker = new google.maps.Marker({
+                    position,
+                    map,
+                    title,
+                    icon
+                });
+                markers.push(marker);
+            }
+            // отдельный массив для городов России
+            function addMarkerFrom(position, map, title, icon) {
+                const marker = new google.maps.Marker({
+                    position,
+                    map,
+                    title,
+                    icon,
+                });
+                fromMarker.push(marker);
+            }
+            function createStartMass() {
+                startMarkerst.forEach(el => {
+                    addMarker(el.position, el.map, el.title, el.icon)
+                })
+            }
+            createStartMass()
+            // Sets the map on all markers in the array.
+            function setMapOnAll(map) {
+                for (let i = 0; i < markers.length; i++) {
+                    markers[i].setMap(map);
                 }
+                for (let i = 0; i < fromMarker.length; i++) {
+                    fromMarker[i].setMap(map);
+                }
+            }
+
+            // Добавляем начальные infoWindow
+            function addInfoWindow(markers) {
+                markers.forEach(el => {
+
+                    const infoWindow = new google.maps.InfoWindow({
+                        content: el.title
+                    })
+                    infoWindow.close(map, el);
+                    infoWindow.open(map, el);
+                })
+            }
+
+            // createCoordinates
+            function createCoordinates(marker1, marker2) {
+                flightPathCoordinates = [];
+                flightPathCoordinates.push(marker1, marker2)
+                // let startPoint = {}
+                flightPath = new google.maps.Polyline({
+                    path: flightPathCoordinates,
+                    strokeOpacity: 0,
+                    icons: [
+                        {
+                            icon: lineSymbol,
+                            offset: "0",
+                            repeat: "6px",
+                        },
+                    ]
+                })
+                oldCordinates.push(flightPath)
+            }
+            // отфильровать массивы, чтобы получить 2 города
+            function filterMarkers(name) {
+                markers = markers.filter(el => name === el.title)
+            }
+
+            // добавить линию
+            function addLine() {
+                flightPath.setMap(map);
+            }
+            // убрать линию
+            function removeLine() {
+                oldCordinates.forEach(el => {
+                    el.setMap(null);
+                })
+            }
+            // Removes the markers from the map, but keeps them in the array.
+            function hideMarkers() {
+                for (let i = 0; i < markers.length; i++) {
+                    markers[i].setMap(null);
+                }
+                for (let i = 0; i < fromMarker.length; i++) {
+                    fromMarker[i].setMap(null);
+                }
+            }
+
+            // Shows any markers currently in the array.
+            function showMarkers() {
+                setMapOnAll(map);
+            }
+
+            // Deletes all markers in the array by removing references to them.
+            function deleteMarkers() {
+                hideMarkers();
+                markers = [];
+            }
+            // add line add remove outhers on map click
+            document.addEventListener('click', function (e) {
+                if (e.target.closest('#map')) {
+                    if ($('.enter-banner__from').eq(0).hasClass('filed')) {
+                        removeLine()
+                        setTimeout(addLine, 300)
+                    }
+
+                }
+            })
+            // add cityFrom
+            const inputsCityFrom = $('.choosen-radio-from');
+            const inputsCityTo = $('.choosen-radio-to');
+
+            function initialize() {
+                myLatlng = new google.maps.LatLng(67.01156439141535, 73.95476052039851);
+
                 var mapOptions = {
                     zoom: 5,
                     center: myLatlng,
@@ -897,175 +1063,59 @@ $(document).ready(function () {
                     ]
                 };
                 map = new google.maps.Map(document.getElementById('map'), mapOptions);
-                var marker1 = new google.maps.Marker({
-                    position: pos1,
-                    map: map,
-                    title: 'Яр-Сале',
-                    icon: {
-                        url: "img/icon/marker-sound.svg",
-                        scaledSize: new google.maps.Size(39.69, 39.69)
-                    }
 
-                });
-                var infowindow1 = new google.maps.InfoWindow({
-                    content: marker1.title
-                });
-                var marker2 = new google.maps.Marker({
-                    position: pos2,
-                    map: map,
-                    title: 'Тазовский',
-                    icon: {
-                        url: "img/icon/marker-sound.svg",
-                        scaledSize: new google.maps.Size(39.69, 39.69)
+                setMapOnAll(map)
+                addInfoWindow(markers)
+                inputsCityFrom.on('change', function () {
+                    for (let i = 0; i < fromMarker.length; i++) {
+                        fromMarker[i].setMap(null);
+                    }
+                    fromMarker = [];
+                    let i = +$(this).val();
+                    addMarkerFrom(cityMarkersFrom[i].position, cityMarkersFrom[i].map, cityMarkersFrom[i].title, cityMarkersFrom[i].icon);
+                })
+                inputsCityFrom.on('change', function () {
+                    if ($('.enter-banner__from ').hasClass('filed') && $('.enter-banner__where').hasClass('filed')) {
+                        let name = $('#city-to-value').text().trim()
+                        console.log(markers);
+                        hideMarkers()
+                        createStartMass()
+                        filterMarkers(name);
+                        createCoordinates(fromMarker[0].position, markers[0].position);
+                        removeLine()
+                        setTimeout(addLine, 100);
+                        showMarkers()
+                        addInfoWindow(markers)
+                        addInfoWindow(fromMarker)
                     }
                 });
-                var infowindow2 = new google.maps.InfoWindow({
-                    content: marker2.title
-                });
-                var marker3 = new google.maps.Marker({
-                    position: pos3,
-                    map: map,
-                    title: 'Салехард',
-                    icon: {
-                        url: "img/icon/btn-location.svg",
-                        scaledSize: new google.maps.Size(32, 32)
+                inputsCityTo.on('change', function () {
+                    if ($('.enter-banner__from').hasClass('filed') && $('.enter-banner__where').hasClass('filed')) {
+                        let name = $('#city-to-value').text().trim()
+                        console.log(markers);
+                        hideMarkers()
+                        createStartMass()
+                        filterMarkers(name);
+                        console.log(markers[0].position);
+                        createCoordinates(fromMarker[0].position, markers[0].position);
+                        removeLine()
+                        setTimeout(addLine, 100);
+                        addInfoWindow(markers)
+                        addInfoWindow(fromMarker)
+                        showMarkers()
                     }
-                });
-                var infowindow3 = new google.maps.InfoWindow({
-                    content: marker3.title
-                });
-                var marker4 = new google.maps.Marker({
-                    position: pos4,
-                    map: map,
-                    title: 'Новый Уренгой',
-                    icon: {
-                        url: "img/icon/marker-sound.svg",
-                        scaledSize: new google.maps.Size(39.69, 39.69)
-                    },
-                });
-                var infowindow4 = new google.maps.InfoWindow({
-                    content: marker4.title
-                });
-                var marker5 = new google.maps.Marker({
-                    position: pos5,
-                    map: map,
-                    title: 'Надым',
-                    icon: {
-                        url: "img/icon/btn-location.svg",
-                        scaledSize: new google.maps.Size(32, 32)
-                    },
-                });
-                var infowindow5 = new google.maps.InfoWindow({
-                    content: marker5.title
-                });
-                var marker6 = new google.maps.Marker({
-                    position: pos6,
-                    map: map,
-                    title: 'Сабетта',
-                    icon: {
-                        url: "img/icon/marker-sound.svg",
-                        scaledSize: new google.maps.Size(39.69, 39.69)
-                    },
-                });
-                var infowindow6 = new google.maps.InfoWindow({
-                    content: marker6.title
-                });
-                infowindow1.open(map, marker1);
-                infowindow2.open(map, marker2);
-                infowindow3.open(map, marker3);
-                infowindow4.open(map, marker4);
-                infowindow5.open(map, marker5);
-                infowindow6.open(map, marker6);
+                })
+                document.addEventListener('click', e => {
+                    console.log(e.target);
+                })
                 const addClassForPlace = function () {
                     $('#city-to-value').parents('.custom-select').addClass('filed')
                 }
-                marker1.addListener('click', function () {
-
-                    numOfWay = 0
-                    addClassForPlace()
-                    $('#city-to-value').text(marker1.title)
-                });
-                marker2.addListener('click', function () {
-
-                    numOfWay = 1
-                    addClassForPlace()
-                    $('#city-to-value').text(marker2.title)
-                });
-                marker3.addListener('click', function () {
-                    numOfWay = 2
-                    addClassForPlace()
-                    $('#city-to-value').text(marker3.title)
-                });
-                marker4.addListener('click', function () {
-
-                    numOfWay = 3
-                    addClassForPlace()
-                    $('#city-to-value').text(marker4.title)
-                });
-                marker5.addListener('click', function () {
-
-                    numOfWay = 4
-                    addClassForPlace()
-                    $('#city-to-value').text(marker5.title)
-                });
-                marker6.addListener('click', function () {
-
-                    numOfWay = 5
-                    addClassForPlace()
-                    $('#city-to-value').text(marker6.title)
-                });
-                const lineSymbol = {
-                    path: "M 0,-1 0,1",
-                    strokeOpacity: 1,
-                    scale: 1,
-                    strokeWeight: 2,
-                    strokeColor: "#213A8F",
-                };
-                allCordinates.forEach((el, index) => {
-                    let flightPath = new google.maps.Polyline({
-                        path: allCordinates[index],
-                        strokeOpacity: 0,
-                        icons: [
-                            {
-                                icon: lineSymbol,
-                                offset: "0",
-                                repeat: "6px",
-                            },
-                        ],
-                    });
-                    flightPathArr.push(flightPath)
-                })
+                // marker.addListener("click", (event) => {
+                //     console.log(event);
+                // });
             }
-            document.addEventListener('click', function (e) {
 
-                if (e.target.closest('#map')) {
-                    if ($('.enter-banner__from').eq(0).hasClass('filed')) {
-                        removeLine()
-                        setTimeout(addLine, 300)
-                    }
-
-                }
-            })
-            const inputsCity = $('.choosen-radio-to');
-            inputsCity.on('change', function () {
-                if ($('.enter-banner__from').eq(0).hasClass('filed')) {
-                    let i = +$(this).val();
-                    numOfWay = i
-                    removeLine()
-                    addLine()
-                } else {
-                    return
-                }
-
-            })
-            function addLine() {
-                flightPathArr[numOfWay].setMap(map);
-            }
-            function removeLine() {
-                flightPathArr.forEach(el => {
-                    el.setMap(null);
-                })
-            }
             google.maps.event.addDomListener(window, 'load', initialize);
         }
 

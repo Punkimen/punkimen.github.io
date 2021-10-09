@@ -3796,6 +3796,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   overflow: visible;
 }
 
+.custom-select.filed {
+  color: #009974;
+}
+
+.custom-select.filed .custom-select__header {
+  border-color: #009974;
+}
+
 .custom-select__header {
   background: #fff;
   padding: 9px 13px;
