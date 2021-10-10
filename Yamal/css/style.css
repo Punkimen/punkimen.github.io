@@ -1686,7 +1686,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .cjslib-day.available {
-  background: rgba(0, 153, 116, 0.3);
+  background: rgba(0, 153, 116, 0.07);
 }
 
 .cjslib-day:last-child {
@@ -3796,11 +3796,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   overflow: visible;
 }
 
-.custom-select.filed {
-  color: #009974;
-}
-
 .custom-select.filed .custom-select__header {
+  color: #009974;
   border-color: #009974;
 }
 
@@ -5070,6 +5067,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   margin-right: 24px;
 }
 
+.enter-banner__input .custom-select__header {
+  color: #b3b3b3;
+}
+
 .enter-banner__input::before {
   display: none;
   content: attr(data-title);
@@ -5086,14 +5087,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   display: block;
 }
 
-.enter-banner__input .custom-select {
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.enter-banner__input--calendar .custom-select {
+.enter-banner__input--calendar .custom-date__calendar-wrapper {
   font-size: 12px;
   line-height: 18px;
+  font-weight: bold;
+}
+
+.enter-banner__input--calendar .calendar-value__start,
+.enter-banner__input--calendar .calendar-value__finish {
   font-weight: bold;
 }
 
@@ -5101,6 +5102,22 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   font-weight: bold;
   font-size: 12px;
   line-height: 18px;
+}
+
+.enter-banner__when {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #b3b3b3;
+}
+
+.enter-banner__when.active {
+  color: #009974;
+}
+
+.enter-banner__recreation {
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .enter-banner__btn {
@@ -5315,39 +5332,20 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .gm-style .gm-style-iw-t {
-  right: auto !important;
-  left: 70px !important;
-  bottom: 8px !important;
-  transform: translate(0) !important;
+  bottom: -50px !important;
 }
 
 .gm-style .gm-style-iw-t::after {
   display: none;
 }
 
-.gm-style .gm-style-iw-c {
-  width: 100px !important;
-  background: none;
-  padding: 0;
-  box-shadow: none;
-  border-radius: none;
+.map-label {
+  position: absolute;
+  top: 45px;
+  left: 25px;
+  width: 150px !important;
+  text-align: left;
   overflow: visible;
-}
-
-.gm-style .gm-style-iw-c::after {
-  display: none;
-}
-
-.gm-style .gm-style-iw-d {
-  overflow: visible !important;
-  border: none;
-  background: none !important;
-  padding: 0 !important;
-  width: auto !important;
-}
-
-.gm-style .gm-style-iw-d div {
-  white-space: nowrap;
   font-weight: bold;
   font-size: 12px;
   line-height: 18px;

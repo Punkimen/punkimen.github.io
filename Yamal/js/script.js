@@ -607,7 +607,7 @@ $(document).ready(function () {
             function (e) {
                 const dayStart = calendar.date.getDate();
                 const mounthStart = calendar.date.getMonth();
-                $('.calendar-value__start').text(`${dayStart}.${mounthStart + 1}`);
+                $('.calendar-value__start').text(`${dayStart}.${mounthStart + 1} - `);
                 if ($('.calendar-value__finish').text() != '' && $('.calendar-value__start').text() != '') {
                     $('.enter-banner__input--calendar .custom-select').addClass('filed')
                     $('.enter-banner__input--calendar').addClass('show-title')
@@ -690,6 +690,13 @@ $(document).ready(function () {
                         url: "img/icon/marker-sound.svg",
                         scaledSize: new google.maps.Size(39.69, 39.69)
                     },
+                    label: {
+                        text: "Яр-Сале",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
+                    }
                 },
                 {
                     position: new google.maps.LatLng(67.46201765996048, 78.70893018336228),
@@ -699,6 +706,13 @@ $(document).ready(function () {
                         url: "img/icon/marker-sound.svg",
                         scaledSize: new google.maps.Size(39.69, 39.69)
                     },
+                    label: {
+                        text: "Тазовский",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
+                    }
                 },
                 {
                     position: new google.maps.LatLng(66.55047769194653, 66.59826008447075),
@@ -707,6 +721,13 @@ $(document).ready(function () {
                     icon: {
                         url: "img/icon/btn-location.svg",
                         scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Салехард",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
                     }
                 },
                 {
@@ -717,6 +738,13 @@ $(document).ready(function () {
                         url: "img/icon/marker-sound.svg",
                         scaledSize: new google.maps.Size(39.69, 39.69)
                     },
+                    label: {
+                        text: "Новый Уренгой",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
+                    }
                 },
                 {
                     position: new google.maps.LatLng(65.53514113422678, 72.50449449743208),
@@ -726,6 +754,13 @@ $(document).ready(function () {
                         url: "img/icon/btn-location.svg",
                         scaledSize: new google.maps.Size(32, 32)
                     },
+                    label: {
+                        text: "Надым",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
+                    }
                 },
                 {
                     position: new google.maps.LatLng(68.41641830907557, 73.12853422144906),
@@ -735,6 +770,13 @@ $(document).ready(function () {
                         url: "img/icon/marker-sound.svg",
                         scaledSize: new google.maps.Size(39.69, 39.69)
                     },
+                    label: {
+                        text: "Сабетта",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
+                    }
                 },
             ];
             let cityMarkersFrom = [
@@ -745,6 +787,13 @@ $(document).ready(function () {
                     icon: {
                         url: "img/icon/btn-location.svg",
                         scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Москва",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
                     }
                 },
                 {
@@ -754,6 +803,13 @@ $(document).ready(function () {
                     icon: {
                         url: "img/icon/btn-location.svg",
                         scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Санкт-Петербург",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
                     }
                 },
                 {
@@ -763,6 +819,13 @@ $(document).ready(function () {
                     icon: {
                         url: "img/icon/btn-location.svg",
                         scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Краснодар",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
                     }
                 },
             ];
@@ -775,28 +838,30 @@ $(document).ready(function () {
             };
 
             // Добавляем startMarkerst маркеры в markers
-            function addMarker(position, map, title, icon) {
-                const marker = new google.maps.Marker({
-                    position,
-                    map,
-                    title,
-                    icon
-                });
-                markers.push(marker);
-            }
-            // отдельный массив для городов России
-            function addMarkerFrom(position, map, title, icon) {
+            function addMarker(position, map, title, icon, label) {
                 const marker = new google.maps.Marker({
                     position,
                     map,
                     title,
                     icon,
+                    label,
+                });
+                markers.push(marker);
+            }
+            // отдельный массив для городов России
+            function addMarkerFrom(position, map, title, icon, label) {
+                const marker = new google.maps.Marker({
+                    position,
+                    map,
+                    title,
+                    icon,
+                    label,
                 });
                 fromMarker.push(marker);
             }
             function createStartMass() {
                 startMarkerst.forEach(el => {
-                    addMarker(el.position, el.map, el.title, el.icon)
+                    addMarker(el.position, el.map, el.title, el.icon, el.label)
                 })
             }
             createStartMass()
@@ -809,19 +874,6 @@ $(document).ready(function () {
                     fromMarker[i].setMap(map);
                 }
             }
-
-            // Добавляем начальные infoWindow
-            function addInfoWindow(markers) {
-                markers.forEach(el => {
-
-                    const infoWindow = new google.maps.InfoWindow({
-                        content: el.title
-                    })
-                    infoWindow.close(map, el);
-                    infoWindow.open(map, el);
-                })
-            }
-
             // createCoordinates
             function createCoordinates(marker1, marker2) {
                 flightPathCoordinates = [];
@@ -844,7 +896,6 @@ $(document).ready(function () {
             function filterMarkers(name) {
                 markers = markers.filter(el => name === el.title)
             }
-
             // добавить линию
             function addLine() {
                 flightPath.setMap(map);
@@ -864,31 +915,19 @@ $(document).ready(function () {
                     fromMarker[i].setMap(null);
                 }
             }
-
             // Shows any markers currently in the array.
             function showMarkers() {
                 setMapOnAll(map);
             }
-
-            // Deletes all markers in the array by removing references to them.
-            function deleteMarkers() {
-                hideMarkers();
-                markers = [];
-            }
-            // add line add remove outhers on map click
-            document.addEventListener('click', function (e) {
-                if (e.target.closest('#map')) {
-                    if ($('.enter-banner__from').eq(0).hasClass('filed')) {
-                        removeLine()
-                        setTimeout(addLine, 300)
-                    }
-
-                }
-            })
             // add cityFrom
             const inputsCityFrom = $('.choosen-radio-from');
             const inputsCityTo = $('.choosen-radio-to');
-
+            // add distance block
+            function createDistanceBlock(distance) {
+                return new google.maps.InfoWindow({
+                    content: distance
+                })
+            }
             function initialize() {
                 myLatlng = new google.maps.LatLng(67.01156439141535, 73.95476052039851);
 
@@ -1065,55 +1104,48 @@ $(document).ready(function () {
                 map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
                 setMapOnAll(map)
-                addInfoWindow(markers)
+
+                function createWayOnMap() {
+                    let name = $('#city-to-value').text().trim()
+                    hideMarkers()
+                    createStartMass()
+                    filterMarkers(name);
+                    createDistanceBlock("2165 км").open(map, markers[0])
+                    createCoordinates(fromMarker[0].position, markers[0].position);
+                    removeLine()
+                    setTimeout(addLine, 100);
+                    showMarkers()
+                }
+
                 inputsCityFrom.on('change', function () {
                     for (let i = 0; i < fromMarker.length; i++) {
                         fromMarker[i].setMap(null);
                     }
                     fromMarker = [];
                     let i = +$(this).val();
-                    addMarkerFrom(cityMarkersFrom[i].position, cityMarkersFrom[i].map, cityMarkersFrom[i].title, cityMarkersFrom[i].icon);
+                    addMarkerFrom(cityMarkersFrom[i].position, cityMarkersFrom[i].map, cityMarkersFrom[i].title, cityMarkersFrom[i].icon, cityMarkersFrom[i].label);
                 })
                 inputsCityFrom.on('change', function () {
                     if ($('.enter-banner__from ').hasClass('filed') && $('.enter-banner__where').hasClass('filed')) {
-                        let name = $('#city-to-value').text().trim()
-                        console.log(markers);
-                        hideMarkers()
-                        createStartMass()
-                        filterMarkers(name);
-                        createCoordinates(fromMarker[0].position, markers[0].position);
-                        removeLine()
-                        setTimeout(addLine, 100);
-                        showMarkers()
-                        addInfoWindow(markers)
-                        addInfoWindow(fromMarker)
+                        createWayOnMap()
                     }
                 });
                 inputsCityTo.on('change', function () {
                     if ($('.enter-banner__from').hasClass('filed') && $('.enter-banner__where').hasClass('filed')) {
-                        let name = $('#city-to-value').text().trim()
-                        console.log(markers);
-                        hideMarkers()
-                        createStartMass()
-                        filterMarkers(name);
-                        console.log(markers[0].position);
-                        createCoordinates(fromMarker[0].position, markers[0].position);
-                        removeLine()
-                        setTimeout(addLine, 100);
-                        addInfoWindow(markers)
-                        addInfoWindow(fromMarker)
-                        showMarkers()
+                        createWayOnMap()
                     }
                 })
-                document.addEventListener('click', e => {
-                    console.log(e.target);
+                markers.forEach(el => {
+                    el.addListener('click', function (e) {
+                        let val = this.title;
+                        $('#city-to-value').text(val);
+                        $('.enter-banner__where').addClass('filed')
+                        if ($('.enter-banner__from ').hasClass('filed') && $('.enter-banner__where').hasClass('filed')) {
+                            createWayOnMap()
+                        }
+
+                    })
                 })
-                const addClassForPlace = function () {
-                    $('#city-to-value').parents('.custom-select').addClass('filed')
-                }
-                // marker.addListener("click", (event) => {
-                //     console.log(event);
-                // });
             }
 
             google.maps.event.addDomListener(window, 'load', initialize);
@@ -1122,7 +1154,17 @@ $(document).ready(function () {
         firstMap()
 
         const secondMap = function () {
-            let flightPathArr1 = [];
+            const lineSymbol = {
+                path: "M 0,-1 0,1",
+                strokeOpacity: 1,
+                scale: 1,
+                strokeWeight: 2,
+                strokeColor: "#213A8F",
+            };
+            let myLatlng
+            let flightPathCoordinates = [];
+            let oldCordinates = [];
+            let flightPath;
             let map1;
             let allCordinates1 = [
                 [
@@ -1144,15 +1186,178 @@ $(document).ready(function () {
                     { lat: 66.524683202413, lng: 66.59579212514542 },
                 ],
             ];
-            let numOfWay = 0;
+            let markers = [];
+            let startMarkerst = [
+
+                {
+                    position: new google.maps.LatLng(66.54008719373186, 66.59395247904227),
+                    map: map,
+                    map: map1,
+                    title: 'Центр города',
+                    icon: {
+                        url: "img/icon/center-btn-location.svg",
+                        scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "0",
+                        className: "map-label"
+                    }
+                },
+                {
+                    position: new google.maps.LatLng(66.53256677261557, 66.61196913935893),
+                    map: map,
+                    map: map1,
+                    title: 'Хостел «Хмель и Соль»',
+                    icon: {
+                        url: "img/icon/btn-location.svg",
+                        scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Хостел «Хмель и Соль»",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
+                    }
+                },
+                {
+                    position: new google.maps.LatLng(66.52692261179189, 66.59257347430562),
+                    map: map,
+                    title: 'Хостел «Хмель и Соль»',
+                    icon: {
+                        url: "img/icon/btn-location.svg",
+                        scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Тазовский",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
+                    }
+                },
+                {
+                    position: new google.maps.LatLng(66.53797994510903, 66.59587795576483),
+                    map: map,
+                    title: 'Хостел «Хмель и Соль»',
+                    icon: {
+                        url: "img/icon/btn-location.svg",
+                        scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Салехард",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
+                    }
+                },
+                {
+                    position: new google.maps.LatLng(66.53551938734692, 66.61205704031188),
+                    map: map,
+                    title: 'Хостел «Хмель и Соль»',
+                    icon: {
+                        url: "img/icon/btn-location.svg",
+                        scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Новый Уренгой",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
+                    }
+                },
+                {
+                    position: new google.maps.LatLng(66.52640978771203, 66.60338814095442),
+                    map: map,
+                    title: 'Хостел «Хмель и Соль»',
+                    icon: {
+                        url: "img/icon/btn-location.svg",
+                        scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Надым",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
+                    }
+                },
+                {
+                    position: new google.maps.LatLng(66.524683202413, 66.59579212514542),
+                    map: map,
+                    title: 'Хостел «Хмель и Соль»',
+                    icon: {
+                        url: "img/icon/btn-location.svg",
+                        scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Сабетта",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
+                    }
+                },
+            ];
+            // createCoordinates
+            function createCoordinates(...markers) {
+                flightPathCoordinates = [];
+                console.log(markers);
+                markers.forEach(el => {
+                    flightPathCoordinates.push(el)
+                })
+                // let startPoint = {}
+                flightPath = new google.maps.Polyline({
+                    path: flightPathCoordinates,
+                    strokeOpacity: 0,
+                    icons: [
+                        {
+                            icon: lineSymbol,
+                            offset: "0",
+                            repeat: "6px",
+                        },
+                    ]
+                })
+                oldCordinates.push(flightPath)
+            }
+            // добавить линию
+            function addLine() {
+                flightPath.setMap(map1);
+            }
+            // убрать линию
+            function removeLine() {
+                oldCordinates.forEach(el => {
+                    el.setMap(null);
+                })
+            }
+            function addMarker(position, map, title, icon, label) {
+                const marker = new google.maps.Marker({
+                    position,
+                    map,
+                    title,
+                    icon,
+                    label,
+                });
+                markers.push(marker);
+            }
+            function createStartMass() {
+                startMarkerst.forEach(el => {
+                    addMarker(el.position, el.map, el.title, el.icon, el.label)
+                })
+            }
+            createStartMass()
+            function setMapOnAll(map) {
+                for (let i = 0; i < markers.length; i++) {
+                    markers[i].setMap(map);
+                }
+            }
             function initializeBuildMap() {
-                var myLatlng = new google.maps.LatLng(66.53256297859949, 66.60141403516596);
-                var pos1 = new google.maps.LatLng(66.53256677261557, 66.61196913935893);
-                var pos2 = new google.maps.LatLng(66.52692261179189, 66.59257347430562);
-                var pos3 = new google.maps.LatLng(66.53797994510903, 66.59587795576483);
-                var pos4 = new google.maps.LatLng(66.53551938734692, 66.61205704031188);
-                var pos5 = new google.maps.LatLng(66.52640978771203, 66.60338814095442);
-                var pos6 = new google.maps.LatLng(66.524683202413, 66.59579212514542);
+                myLatlng = new google.maps.LatLng(66.53256297859949, 66.60141403516596);
 
                 var mapOptions = {
                     zoom: 14,
@@ -1325,124 +1530,43 @@ $(document).ready(function () {
                     ]
                 };
                 map1 = new google.maps.Map(document.getElementById('build-way__map'), mapOptions);
-                var marker1 = new google.maps.Marker({
-                    position: pos1,
-                    map: map1,
-                    title: 'Хостел «Хмель и Соль»',
-                    icon: {
-                        url: "img/icon/btn-location.svg",
-                        scaledSize: new google.maps.Size(32, 32)
-                    }
+                setMapOnAll(map1)
 
-                });
-                var infowindow1 = new google.maps.InfoWindow({
-                    content: marker1.title
-                });
-                var marker2 = new google.maps.Marker({
-                    position: pos2,
-                    map: map1,
-                    title: 'Тазовский',
-                    icon: {
-                        url: "img/icon/btn-location.svg",
-                        scaledSize: new google.maps.Size(32, 32)
-                    }
-                });
-                var infowindow2 = new google.maps.InfoWindow({
-                    content: marker2.title
-                });
-                var marker3 = new google.maps.Marker({
-                    position: pos3,
-                    map: map1,
-                    title: 'Хостел «Хмель и Соль»',
-                    icon: {
-                        url: "img/icon/btn-location.svg",
-                        scaledSize: new google.maps.Size(32, 32)
-                    }
-                });
-                var infowindow3 = new google.maps.InfoWindow({
-                    content: marker3.title
-                });
-                var marker4 = new google.maps.Marker({
-                    position: pos4,
-                    map: map1,
-                    title: 'Хостел «Хмель и Соль»',
-                    icon: {
-                        url: "img/icon/btn-location.svg",
-                        scaledSize: new google.maps.Size(32, 32)
-                    }
-                });
-                var infowindow4 = new google.maps.InfoWindow({
-                    content: marker4.title
-                });
-                var marker5 = new google.maps.Marker({
-                    position: pos5,
-                    map: map1,
-                    title: 'Хостел «Хмель и Соль»',
-                    icon: {
-                        url: "img/icon/btn-location.svg",
-                        scaledSize: new google.maps.Size(32, 32)
-                    }
-                });
-                var infowindow5 = new google.maps.InfoWindow({
-                    content: marker5.title
-                });
-                var marker6 = new google.maps.Marker({
-                    position: pos6,
-                    map: map1,
-                    title: 'Хостел «Хмель и Соль»',
-                    icon: {
-                        url: "img/icon/btn-location.svg",
-                        scaledSize: new google.maps.Size(32, 32)
-                    }
-                });
-                var infowindow6 = new google.maps.InfoWindow({
-                    content: marker6.title
-                });
-                infowindow1.open(map1, marker1);
-                infowindow2.open(map1, marker2);
-                infowindow3.open(map1, marker3);
-                infowindow4.open(map1, marker4);
-                infowindow5.open(map1, marker5);
-                infowindow6.open(map1, marker6);
 
-                const lineSymbol = {
-                    path: "M 0,-1 0,1",
-                    strokeOpacity: 1,
-                    scale: 1,
-                    strokeWeight: 2,
-                    strokeColor: "#213A8F",
-                };
-                allCordinates1.forEach((el, index) => {
-                    let flightPath = new google.maps.Polyline({
-                        path: allCordinates1[index],
-                        strokeOpacity: 0,
-                        icons: [
-                            {
-                                icon: lineSymbol,
-                                offset: "0",
-                                repeat: "6px",
-                            },
-                        ],
-                    });
-                    flightPathArr1.push(flightPath)
-                })
-            }
-            function addLine() {
-                flightPathArr1[numOfWay].setMap(map1);
             }
             document.addEventListener('click', e => {
                 if (e.target.closest('.build-list__date-label')) {
-                    let date = e.target.closest('.build-list__date-label').querySelector('span').textContent;
-                    $('.current-date-way').text(date)
+                    $('.current-date-way').text(e.target.closest('.build-list__date-label').textContent)
+                    switch (e.target.closest('.build-list__date-label').getAttribute('data-num')) {
+                        case '1':
+                            createCoordinates(markers[1].position, markers[2].position, markers[3].position)
+                            break
+                        case '2':
+                            createCoordinates(markers[2].position, markers[1].position, markers[3].position)
+                            break
+                        case '3':
+                            createCoordinates(markers[1].position, markers[4].position, markers[2].position)
+                            break
+                        case '4':
+                            createCoordinates(markers[1].position, markers[2].position, markers[4].position)
+                            break
+                        case '5':
+                            createCoordinates(markers[2].position, markers[4].position, markers[3].position)
+                            break
+                        case '6':
+                            createCoordinates(markers[2].position, markers[4].position, markers[3].position)
+                            break
+                        case '6':
+                            createCoordinates(markers[1].position, markers[4].position, markers[3].position)
+                            break
+                    }
+
                     removeLine()
-                    addLine()
+                    setTimeout(addLine, 200)
+                    // addLine()
                 }
             })
-            function removeLine() {
-                flightPathArr1.forEach(el => {
-                    el.setMap(null);
-                })
-            }
+
             google.maps.event.addDomListener(window, 'load', initializeBuildMap);
         }
         secondMap()
@@ -1636,11 +1760,15 @@ $(document).ready(function () {
                     icon: {
                         url: "img/icon/btn-location.svg",
                         scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Хостел «Хмель и Соль»",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
                     }
 
-                });
-                var infowindow1 = new google.maps.InfoWindow({
-                    content: marker1.title
                 });
                 var marker2 = new google.maps.Marker({
                     position: pos2,
@@ -1649,34 +1777,46 @@ $(document).ready(function () {
                     icon: {
                         url: "img/icon/btn-location.svg",
                         scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Тазовский",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
                     }
-                });
-                var infowindow2 = new google.maps.InfoWindow({
-                    content: marker2.title
                 });
                 var marker3 = new google.maps.Marker({
                     position: pos3,
                     map: map,
-                    title: 'Хостел «Хмель и Соль»',
+                    title: 'Хостел «Ямбург»',
                     icon: {
                         url: "img/icon/btn-location.svg",
                         scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Хостел «Ямбург»",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
                     }
-                });
-                var infowindow3 = new google.maps.InfoWindow({
-                    content: marker3.title
                 });
                 var marker4 = new google.maps.Marker({
                     position: pos4,
                     map: map,
-                    title: 'Хостел «Хмель и Соль»',
+                    title: 'Хостел «У Урсулы»',
                     icon: {
                         url: "img/icon/btn-location.svg",
                         scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Хостел «У Урсулы»",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
                     }
-                });
-                var infowindow4 = new google.maps.InfoWindow({
-                    content: marker4.title
                 });
                 var marker5 = new google.maps.Marker({
                     position: pos5,
@@ -1685,29 +1825,31 @@ $(document).ready(function () {
                     icon: {
                         url: "img/icon/btn-location.svg",
                         scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Хостел «Хмель и Соль»",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
                     }
-                });
-                var infowindow5 = new google.maps.InfoWindow({
-                    content: marker5.title
                 });
                 var marker6 = new google.maps.Marker({
                     position: pos6,
                     map: map,
-                    title: 'Хостел «Хмель и Соль»',
+                    title: 'Отель «Сибирь»',
                     icon: {
                         url: "img/icon/btn-location.svg",
                         scaledSize: new google.maps.Size(32, 32)
+                    },
+                    label: {
+                        text: "Отель «Сибирь»",
+                        color: "#213A8F",
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        className: "map-label"
                     }
                 });
-                var infowindow6 = new google.maps.InfoWindow({
-                    content: marker6.title
-                });
-                infowindow1.open(map, marker1);
-                infowindow2.open(map, marker2);
-                infowindow3.open(map, marker3);
-                infowindow4.open(map, marker4);
-                infowindow5.open(map, marker5);
-                infowindow6.open(map, marker6);
 
                 function generateCard(title) {
                     const mapContainer = document.querySelector('.catalog-choose__map-cards');
@@ -1715,24 +1857,24 @@ $(document).ready(function () {
                     const cardElem = document.createElement('div');
                     cardElem.className = 'catalog__wrapper-item card-item photo hovered map-card';
                     cardElem.innerHTML = `
-                <a href="">
-                    <div class="card-item__img">
-                        <img src="img/cards/card-restor_1.png" alt="Отель «Ямбург»">
-                    </div>
-                    <div class="card-item__footer">
-                        <div class="card-item__name">${title}</div>
-                        <div class="descr-block__text">
-                            10:00 - 22:00 для регистрации
+                    <a href="">
+                        <div class="card-item__img">
+                            <img src="img/cards/card-restor_1.png" alt="Отель «Ямбург»">
                         </div>
-                    </div>
-                </a>
-                <button type="button" data-type="only" class="choose-btn btn btn-transparent map-choose">
-                    <span class="choose-btn__status">Выбрать</span>
-                    <div class="choose-btn__icon">
-                        +
-                    </div>
-                </button>
-                `
+                        <div class="card-item__footer">
+                            <div class="card-item__name">${title}</div>
+                            <div class="descr-block__text">
+                                10:00 - 22:00 для регистрации
+                            </div>
+                        </div>
+                    </a>
+                    <button type="button" data-type="only" class="choose-btn btn btn-transparent map-choose">
+                        <span class="choose-btn__status">Выбрать</span>
+                        <div class="choose-btn__icon">
+                            +
+                        </div>
+                    </button>
+                    `
                     mapContainer.append(cardElem)
                 }
                 function removeCard() {
@@ -1741,13 +1883,12 @@ $(document).ready(function () {
                 }
                 document.addEventListener('click', function (e) {
                     if (e.target.closest('.map-choose')) {
-                        if (e.target.classList.contains('current')) {
-                            e.target.classList.remove('current');
+                        if (e.target.closest('.map-choose').classList.contains('current')) {
+                            e.target.closest('.map-choose').classList.remove('current');
                         } else {
-                            e.target.classList.add('current');
+                            e.target.closest('.map-choose').classList.add('current');
                         }
                     }
-
                 })
                 marker1.addListener('click', function () {
                     generateCard(this.title)
@@ -1821,25 +1962,29 @@ $(document).ready(function () {
             }
         })
         $('#repeat-step-btn').on('click', function () {
-            stepCount = 0;
-            $steps.removeClass('show')
-            $steps.eq(stepCount).addClass('show');
-            $('#planning-form .custom-select__header').removeClass('disabled')
-            $(this).removeClass('show');
-            $('#next-step-btn').addClass('show'); $('.enter-banner__form').removeClass('only-btn');
-            $('.choosen-radio').prop('checked', false);
-            selectInputs.removeClass('filed')
-            $('.enter-banner__input').removeClass('show-title')
-            $('#city-from-value').text($('#city-from-value').attr('data-title'))
-            $('#city-to-value').text($('#city-to-value').attr('data-title'))
-            $('#calendar-value').html(`<span class="calendar-value__start">Когда</span> -
-            <span class="calendar-value__finish"></span>`)
-            $('#type-of-recreation').text($('#type-of-recreation').attr('data-title'))
+            // stepCount = 0;
+            // $steps.removeClass('show')
+            // $steps.eq(stepCount).addClass('show');
+            // $('#planning-form .custom-select__header').removeClass('disabled')
+            // $(this).removeClass('show');
+            // $('#next-step-btn').addClass('show'); $('.enter-banner__form').removeClass('only-btn');
+            // $('.choosen-radio').prop('checked', false);
+            // selectInputs.removeClass('filed')
+            // $('.enter-banner__input').removeClass('show-title')
+            // $('#city-from-value').text($('#city-from-value').attr('data-title'))
+            // $('#city-to-value').text($('#city-to-value').attr('data-title'))
+            // $('#calendar-value').html(`<span class="calendar-value__start">Когда</span>
+            // <span class="calendar-value__finish"></span>`)
+            // $('#type-of-recreation').text($('#type-of-recreation').attr('data-title'))
+            location.reload();
         })
         $('.btn-next').on('click', function () {
-            if (stepCount < $steps.length - 1) {
-                nextStep()
-            }
+            if (stepCount == 1 && !$('.choose-btn').hasClass('current')) {
+                return false;
+            } else
+                if (stepCount < $steps.length - 1) {
+                    nextStep()
+                }
         });
         $('.btn-back').on('click', function () {
             if (stepCount > 0) {
@@ -1873,6 +2018,8 @@ $(document).ready(function () {
                 $('.catalog-choose__catalog').show()
                 $('.catalog-choose__map').hide()
             } else if ($(this).attr('data-value') === 'map-search') {
+                $('.choose-btn[data-type="only"]').removeClass('current')
+                $('.choose-btn[data-type="only"]').prop('disabled', false);
                 $('.catalog-choose__catalog').hide()
                 $('.catalog-choose__map').show()
             }
@@ -2076,7 +2223,7 @@ $(document).ready(function () {
                 let dateElem = document.createElement('div');
                 dateElem.classList.add('build-list__date');
                 dateElem.innerHTML = `
-                <div class="build-list__date-label">
+                <div class="build-list__date-label" data-num=${countId}>
                     <span>${date}.${mounth}.${year}</span>
                 </div>
                 <div id="dragulaId-${countId}" class="build-list__date-inner container"></div>
@@ -2092,7 +2239,7 @@ $(document).ready(function () {
                 renderElementsPlan(dateInnerBlocks[0])
                 let arrayForDrag = []
                 dateInnerBlocks.forEach(el => arrayForDrag.push(el))
-                dragulaInit(arrayForDrag)
+                SortableInit(dateInnerBlocks)
                 defauldBuildList.style.display = 'none';
             } else {
                 dateList.textContent = '';
@@ -2128,75 +2275,30 @@ $(document).ready(function () {
                 document.querySelector('.build-plan__add-inner--second').classList.add('show')
             }
             if (e.target.closest('.pay-btn.no-pay')) {
-                let id = e.target.getAttribute('data-id');
-                if (id === '03') {
-                    $('#new-pay').addClass('show')
-                } else if (id === '05') {
-                    $('#history-pay').addClass('show')
-                }
+                $('#new-pay').addClass('show')
+            }
+            if (e.target.closest('.pay-btn.payed')) {
+                $('#history-pay').addClass('show')
             }
         })
         $('.js-buy-btn').on('click', function () { $('#new-pay').addClass('show') })
-        function dragulaInit(elements) {
-            dragula(elements, {
 
-                // or 'horizontal'
-                direction: 'vertical',
+        new Sortable(drag_1, {
+            animation: 150,
+            ghostClass: 'blue-background-class'
+        });
+        function SortableInit(elements) {
+            elements.forEach(el => {
+                new Sortable(el, {
+                    animation: 150,
+                    handle: '.drag',
+                    group: 'shared',
+                    filter: '.no-drag'
+                });
+            })
 
-                // determine whether to copy elements rather than moving
-                // if a method is passed, it'll be called whenever an element starts being dragged in order to decide whether it should follow copy behavior or not. 
-                copy: false,
-
-                // determine whether to sort elements in copy-source containers.
-                copySortSource: false,
-
-                // spilling will put the element back where it was dragged from, if this is true
-                revertOnSpill: false,
-
-                // spilling will `.remove` the element, if this is true
-                removeOnSpill: false,
-
-                // set the element that gets mirror elements appended
-                mirrorContainer: document.body,
-
-                // allows users to select input text
-                ignoreInputTextSelection: true,
-
-                // allows users to select the amount of movement on the X axis before it is considered a drag instead of a click   
-                slideFactorX: 0,
-
-                // allows users to select the amount of movement on the Y axis before it is considered a drag instead of a click      
-                slideFactorY: 0,
-
-                // only elements in drake.containers will be taken into account
-                isContainer: function (el) {
-                    return false;
-                },
-
-                // elements are always draggable by default
-                moves: function (el, source, handle, sibling) {
-                    return true;
-                },
-
-                // elements can be dropped in any of the `containers` by default
-                accepts: function (el, target, source, sibling) {
-                    const allElemContainer = document.querySelectorAll('.build-list__date');
-                    allElemContainer.forEach(el => {
-                        el.classList.add('active');
-                        if (el.querySelector('.build-list__date-inner').innerHTML == '') {
-                            el.classList.remove('active');
-                        }
-                    })
-                    return true;
-                },
-
-                // don't prevent any drags from initiating by default
-                invalid: function (el, handle) {
-                    return el.closest('.no-drag');
-                }
-
-            });
         }
+
     })()
 });
 
