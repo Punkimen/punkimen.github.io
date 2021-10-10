@@ -414,9 +414,22 @@ li {
 }
 
 .costum-input input.costum-calendar {
+  font-weight: 500 !important;
   font-size: 14px;
   line-height: 20px;
-  color: #b3b3b3;
+  color: #000;
+}
+
+.costum-input input.costum-calendar::-moz-placeholder {
+  color: #b3b3b3 !important;
+}
+
+.costum-input input.costum-calendar:-ms-input-placeholder {
+  color: #b3b3b3 !important;
+}
+
+.costum-input input.costum-calendar::placeholder {
+  color: #b3b3b3 !important;
 }
 
 .costum-input input:hover {
@@ -6231,11 +6244,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   left: 20px;
   z-index: 3001;
   display: none;
-  font-family: arial;
   font-size: 14px;
   line-height: 20px;
   box-shadow: 0px 7px 50px -7px rgba(0, 0, 0, 0.4);
   border-radius: 7px;
+  font-weight: 500;
 }
 
 .daterangepicker:before {
@@ -6420,7 +6433,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   height: 30px !important;
   background-color: #fff;
   border-color: transparent;
-  color: #999;
+  color: #d8d8d8;
 }
 
 .daterangepicker td.in-range {
