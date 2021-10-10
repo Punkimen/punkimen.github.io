@@ -18,7 +18,6 @@
 </head>
 
 <body>
-    use
     <header class="header">
     <div class="container header__container">
         <div class="header__wrapper">
@@ -579,48 +578,10 @@
                                 </div>
                             </div>
                             <div class="enter-banner__input enter-banner__input--calendar" data-title="Когда">
-                                <div class="enter-banner__when custom-select" data-error='Заполните поле'>
-                                    <div class="custom-select__header">
-                                        <div class="custom-select__arrow">
-                                            <img src="img/icon/calendar-icon.svg" alt="calendar">
-                                        </div>
-                                        <div id="calendar-value" class="custom-select__current-elem" data-title="Когда">
-                                            <span class="calendar-value__start">Когда</span>
-                                            <span class="calendar-value__finish"></span>
-                                        </div>
-                                    </div>
-                                    <div class="custom-select__body custom-date__calendar">
-                                        <div class="custom-date__calendar-wrapper">
-                                            <div id="calendarContainer"></div>
-                                            <div id="calendarContainer-2"></div>
-                                        </div>
-                                        <div class="custom-date__calendar-description calendar-description">
-                                            <div class="calendar-description__item">
-                                                <div class="calendar-description__block">
-                                                    <div class="calendar-description__block-example today">
-                                                        <span>4</span>
-                                                    </div>
-                                                </div>
-                                                <div class="calendar-description__text">- Сегодня</div>
-                                            </div>
-                                            <div class="calendar-description__item">
-                                                <div class="calendar-description__block ">
-                                                    <div class="calendar-description__block-example current">
-                                                        <span>20</span>
-                                                    </div>
-                                                </div>
-                                                <div class="calendar-description__text">- Выбрано/Наведение</div>
-                                            </div>
-                                            <div class="calendar-description__item">
-                                                <div class="calendar-description__block">
-                                                    <div class="calendar-description__block-example range">
-                                                        <span>21</span>
-                                                    </div>
-                                                </div>
-                                                <div class="calendar-description__text">- Диапазон</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="costum-input custom-select" data-error='Заполните поле'>
+                                    <input type="text" class="costum-calendar" name="daterange" placeholder="Когда"
+                                        required value="" />
+                                    <img class="costum-input__icon" src="img/icon/calendar-icon.svg" alt="calendar">
                                 </div>
                             </div>
                             <div class="enter-banner__input" data-title="Вид отдыха">
@@ -2762,6 +2723,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 

@@ -604,125 +604,43 @@ $(document).ready(function () {
     })();
     // calendar
     (function () {
-        let rangeDateForTrip = ['Октябрь', 'Ноябрь', 24, 21]
-        const addDiaposonClassForCalendar = (arr) => {
-            let mounthFrom = arr[0];
-            let mounthTo = arr[1];
-            let idFrom = arr[2];
-            let idTo = arr[3];
-            console.log(mounthFrom, mounthTo);
-            let startIdFrom = 'calendarContainer-day-'
-            let startIdTo = 'calendarContainer-2-day-'
-            if ($('#calendarContainer-month').text() === mounthFrom) {
-                for (let i = idFrom; i < 36; i++) {
-                    $(`#${startIdFrom}${i}`).addClass('available')
-                }
-            } else if ($('#calendarContainer-month').text() === mounthTo) {
-                for (let i = 1; i < idTo; i++) {
-                    $(`#${startIdFrom}${i}`).addClass('available')
-                }
-            }
-            if ($('#calendarContainer-2-month').text() === mounthTo) {
-                for (let i = 1; i < idTo; i++) {
-                    $(`#${startIdTo}${i}`).addClass('available')
-                }
-            } else if ($('#calendarContainer-2-month').text() === mounthFrom) {
-                for (let i = idFrom; i < 36; i++) {
-                    $(`#${startIdTo}${i}`).addClass('available')
-                }
-            }
-        }
-        const $calendarInput = $('.enter-banner__input--calendar .custom-select__header');
-        $calendarInput.on('click', function () {
-            addDiaposonClassForCalendar(rangeDateForTrip)
-        })
-        var calendar = new Calendar(
-            "calendarContainer", // id of html container for calendar
-            "small", // size of calendar, can be small | medium | large
-            [
-                "Monday", // left most day of calendar labels
-                1 // maximum length of the calendar labels
-            ],
-            [
-                "#FFFFFF", // primary color
-                "#FFFFFF", // primary dark color
-                "#009974", // text color
-                "#FFFFFF" // text dark color
-            ],
-            {
-                months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-                indicator: false,
-            },
-        );
-        calendar.setOnClickListener('days-blocks',
-            // Called when a day block is clicked
-            function (e) {
-                const dayStart = calendar.date.getDate();
-                const mounthStart = calendar.date.getMonth();
-                $('.calendar-value__start').text(`${dayStart}.${mounthStart + 1} - `);
-                if ($('.calendar-value__finish').text() != '' && $('.calendar-value__start').text() != '') {
-                    $('.enter-banner__input--calendar .custom-select').addClass('filed')
-                    $('.enter-banner__input--calendar').addClass('show-title')
-                    $('.custom-date__calendar').slideUp()
-                }
-            }
-        );
-        let calendarTo = new Calendar(
-            "calendarContainer-2", // id of html container for calendar
-            "small", // size of calendar, can be small | medium | large
-            [
-                "Monday", // left most day of calendar labels
-                1 // maximum length of the calendar labels
-            ],
-            [
-                "#FFFFFF", // primary color
-                "#FFFFFF", // primary dark color
-                "#009974", // text color
-                "#FFFFFF" // text dark color
-            ],
-            {
-                months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-                indicator: false,
-            },
-        );
+        $(function () {
+            console.log(daterangepicker.locale);
+            $('input[name="daterange"]').daterangepicker({
+                opens: 'right',
+                autoUpdateInput: false,
+                // showWeekNumbers: false,
+                // showISOWeekNumbers: false,
+                autoApply: true,
+                locale: {
+                    format: 'DD.M',
+                    cancelLabel: 'Clear',
+                    daysOfWeek: false,
+                    "monthNames": [
+                        "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+                    ],
+                    "daysOfWeek": [
+                    ],
+                },
 
-        calendar.setOnClickListener('month-slider',
-            // Called when the month left arrow is clicked
-            function () {
-                addDiaposonClassForCalendar(rangeDateForTrip)
             },
-            // Called when the month right arrow is clicked
-            function () {
-                addDiaposonClassForCalendar(rangeDateForTrip)
-            }
-        );
-        calendarTo.setOnClickListener('month-slider',
-            // Called when the month left arrow is clicked
-            function () {
-                addDiaposonClassForCalendar(rangeDateForTrip)
-            },
-            // Called when the month right arrow is clicked
-            function () {
-                addDiaposonClassForCalendar(rangeDateForTrip)
-            }
-        );
-        calendarTo.setOnClickListener('days-blocks',
-            // Called when a day block is clicked
-            function () {
-                const dayStart = calendarTo.date.getDate();
-                const mounthStart = calendarTo.date.getMonth();
-                $('.calendar-value__finish').text(`${dayStart}.${mounthStart + 1}`);
-                if ($('.calendar-value__finish').text() != '' && $('.calendar-value__start').text() != '') {
-                    $('.enter-banner__input--calendar .custom-select').addClass('filed')
-                    $('.enter-banner__input--calendar').addClass('show-title')
-                    $('.custom-date__calendar').slideUp()
-                }
-            }
-        );
-        $('#calendarContainer-month').after($('#calendarContainer-year'));
-        $('#calendarContainer-2-month').after($('#calendarContainer-2-year'));
-        $('.cjslib-month div').html(`<img src="img/icon/calendar-arrow-left.svg">`);
+                function (start, end, label) {
+                    $('input[name="daterange"]').addClass('filed')
+                });
+        });
+        $('input[name="daterange"]').on('apply.daterangepicker', function (ev, picker) {
+            $(this).val(picker.startDate.format('DD.M') + ' - ' + picker.endDate.format('DD.M'));
+            $(this).parent().addClass('filed')
+            $(this).parent().removeClass('error')
+            $(this).parents('.enter-banner__input').addClass('show-title')
+            console.log();
+        });
+
+        $('input[name="daterange"]').on('cancel.daterangepicker', function (ev, picker) {
+            $(this).val('');
+        });
     })();
+
     // google map init and stylized 
     // steps planning way  
     (function () {
@@ -1455,7 +1373,6 @@ $(document).ready(function () {
             // createCoordinates
             function createCoordinates(...markers) {
                 flightPathCoordinates = [];
-                console.log(markers);
                 markers.forEach(el => {
                     flightPathCoordinates.push(el)
                 })
@@ -2096,6 +2013,7 @@ $(document).ready(function () {
             let fieldForm = true;
             selectInputs.each((index, el) => {
                 if (!el.classList.contains('filed')) {
+                    console.log(el);
                     el.classList.add('error')
                     fieldForm = false
                 } else {
@@ -2108,6 +2026,7 @@ $(document).ready(function () {
                 $(this).removeClass('show');
                 $('#repeat-step-btn').addClass('show');
                 $('#planning-form .custom-select__header').addClass('disabled')
+                $('#planning-form .costum-calendar').prop('disabled', true)
                 values.forEach(el => {
                     localStorage.setItem(el.getAttribute('data-title'), el.textContent)
                 })
@@ -2476,7 +2395,6 @@ $(document).ready(function () {
             } else {
                 btn.style.display = 'none'
             }
-            console.log(items.length);
         }
         showhideBtn(catalogCardItems, showMoreBtn);
 
@@ -2543,6 +2461,9 @@ $(document).ready(function () {
     })();
     // formValidate 
     (function () {
+        jQuery.extend(jQuery.validator.messages, {
+            required: "Заполните поле",
+        });
         $('.input-phone').mask('+7 000 000 00 00');
         $('#fixed-pay__form').validate();
         $('#sms-send').validate();
