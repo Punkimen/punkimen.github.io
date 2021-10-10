@@ -427,7 +427,7 @@
                     <form id="planning-form" action="#">
                         <div class="enter-banner__inputs">
                             <div class="enter-banner__input" data-title="Откуда">
-                                <div class="enter-banner__from custom-select">
+                                <div class="enter-banner__from custom-select" data-error='Заполните поле'>
                                     <div class="custom-select__header">
                                         <div class="custom-select__arrow">
                                             <img src="img/icon/send.svg" alt="">
@@ -506,7 +506,7 @@
                                 </div>
                             </div>
                             <div class="enter-banner__input" data-title="Куда">
-                                <div class="enter-banner__where custom-select">
+                                <div class="enter-banner__where custom-select" data-error='Заполните поле'>
                                     <div class="custom-select__header">
                                         <div class="custom-select__arrow">
                                             <img src="img/icon/received.svg" alt="">
@@ -579,7 +579,7 @@
                                 </div>
                             </div>
                             <div class="enter-banner__input enter-banner__input--calendar" data-title="Когда">
-                                <div class="enter-banner__when custom-select">
+                                <div class="enter-banner__when custom-select" data-error='Заполните поле'>
                                     <div class="custom-select__header">
                                         <div class="custom-select__arrow">
                                             <img src="img/icon/calendar-icon.svg" alt="calendar">
@@ -624,7 +624,7 @@
                                 </div>
                             </div>
                             <div class="enter-banner__input" data-title="Вид отдыха">
-                                <div class="enter-banner__recreation custom-select">
+                                <div class="enter-banner__recreation custom-select" data-error='Заполните поле'>
                                     <div class="custom-select__header">
                                         <div class="custom-select__arrow">
                                             <img src="img/icon/airplane-icon.svg" alt="">
@@ -680,7 +680,7 @@
                     <img src="img/icon/map-description.svg" alt="">
                     <span>Выберете точку на карте или впишите в графу «Куда» </span>
                 </div>
-                <div class="custom-map__text custom-map__north-light">
+                <div id="add-light-map" class="custom-map__text custom-map__north-light">
                     <img src="img/icon/map-north-light.svg" alt="">
                     <span>Северное сияние</span>
                 </div>
@@ -745,7 +745,8 @@
                                         </div>
                                     </div>
                                 </a>
-                                <button type="button" data-type="only" class="choose-btn btn btn-transparent">
+                                <button type="button" data-type="only"
+                                    class="choose-btn btn btn-transparent choose-btn--hostel">
                                     <span class="choose-btn__status">Выбрать</span>
                                     <div class="choose-btn__icon">
                                         +
@@ -764,7 +765,8 @@
                                         </div>
                                     </div>
                                 </a>
-                                <button type="button" data-type="only" class="choose-btn btn btn-transparent">
+                                <button type="button" data-type="only"
+                                    class="choose-btn btn btn-transparent choose-btn--hostel ">
                                     <span class="choose-btn__status">Выбрать</span>
                                     <div class="choose-btn__icon">
                                         +
@@ -783,7 +785,8 @@
                                         </div>
                                     </div>
                                 </a>
-                                <button type="button" data-type="only" class="choose-btn btn btn-transparent">
+                                <button type="button" data-type="only"
+                                    class="choose-btn btn btn-transparent choose-btn--hostel ">
                                     <span class="choose-btn__status">Выбрать</span>
                                     <div class="choose-btn__icon">
                                         +
@@ -802,7 +805,8 @@
                                         </div>
                                     </div>
                                 </a>
-                                <button data-type="only" type="button" class="choose-btn btn btn-transparent">
+                                <button data-type="only" type="button"
+                                    class="choose-btn btn btn-transparent choose-btn--hostel">
                                     <span class="choose-btn__status">Выбрать</span>
                                     <div class="choose-btn__icon">
                                         +
@@ -821,7 +825,8 @@
                                         </div>
                                     </div>
                                 </a>
-                                <button data-type="only" type="button" class="choose-btn btn btn-transparent">
+                                <button data-type="only" type="button"
+                                    class="choose-btn btn btn-transparent choose-btn--hostel">
                                     <span class="choose-btn__status">Выбрать</span>
                                     <div class="choose-btn__icon">
                                         +
@@ -840,7 +845,128 @@
                                         </div>
                                     </div>
                                 </a>
-                                <button data-type="only" type="button" class="choose-btn btn btn-transparent">
+                                <button data-type="only" type="button"
+                                    class="choose-btn btn btn-transparent choose-btn--hostel">
+                                    <span class="choose-btn__status">Выбрать</span>
+                                    <div class="choose-btn__icon">
+                                        +
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="catalog__wrapper-item card-item photo">
+                                <a href="">
+                                    <div class="card-item__img">
+                                        <img src="img/cards/card-restor_1.png" alt="Отель «Ямбург»">
+                                    </div>
+                                    <div class="card-item__footer">
+                                        <div class="card-item__name">Отель «Ямбург»</div>
+                                        <div class="descr-block__text">
+                                            10:00 - 22:00 для регистрации
+                                        </div>
+                                    </div>
+                                </a>
+                                <button type="button" data-type="only"
+                                    class="choose-btn btn btn-transparent choose-btn--hostel ">
+                                    <span class="choose-btn__status">Выбрать</span>
+                                    <div class="choose-btn__icon">
+                                        +
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="catalog__wrapper-item card-item photo">
+                                <a href="">
+                                    <div class="card-item__img">
+                                        <img src="img/cards/card-restor_1.png" alt="Отель «Ямбург»">
+                                    </div>
+                                    <div class="card-item__footer">
+                                        <div class="card-item__name">Отель «Ямбург»</div>
+                                        <div class="descr-block__text">
+                                            10:00 - 22:00 для регистрации
+                                        </div>
+                                    </div>
+                                </a>
+                                <button type="button" data-type="only"
+                                    class="choose-btn btn btn-transparent choose-btn--hostel ">
+                                    <span class="choose-btn__status">Выбрать</span>
+                                    <div class="choose-btn__icon">
+                                        +
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="catalog__wrapper-item card-item photo">
+                                <a href="">
+                                    <div class="card-item__img">
+                                        <img src="img/cards/card-restor_1.png" alt="Отель «Ямбург»">
+                                    </div>
+                                    <div class="card-item__footer">
+                                        <div class="card-item__name">Отель «Ямбург»</div>
+                                        <div class="descr-block__text">
+                                            10:00 - 22:00 для регистрации
+                                        </div>
+                                    </div>
+                                </a>
+                                <button type="button" data-type="only"
+                                    class="choose-btn btn btn-transparent choose-btn--hostel ">
+                                    <span class="choose-btn__status">Выбрать</span>
+                                    <div class="choose-btn__icon">
+                                        +
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="catalog__wrapper-item card-item photo">
+                                <a href="">
+                                    <div class="card-item__img">
+                                        <img src="img/cards/card-restor_1.png" alt="Отель «Ямбург»">
+                                    </div>
+                                    <div class="card-item__footer">
+                                        <div class="card-item__name">Отель «Ямбург»</div>
+                                        <div class="descr-block__text">
+                                            10:00 - 22:00 для регистрации
+                                        </div>
+                                    </div>
+                                </a>
+                                <button data-type="only" type="button"
+                                    class="choose-btn btn btn-transparent choose-btn--hostel">
+                                    <span class="choose-btn__status">Выбрать</span>
+                                    <div class="choose-btn__icon">
+                                        +
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="catalog__wrapper-item card-item photo">
+                                <a href="">
+                                    <div class="card-item__img">
+                                        <img src="img/cards/card-restor_1.png" alt="Отель «Ямбург»">
+                                    </div>
+                                    <div class="card-item__footer">
+                                        <div class="card-item__name">Отель «Ямбург»</div>
+                                        <div class="descr-block__text">
+                                            10:00 - 22:00 для регистрации
+                                        </div>
+                                    </div>
+                                </a>
+                                <button data-type="only" type="button"
+                                    class="choose-btn btn btn-transparent choose-btn--hostel">
+                                    <span class="choose-btn__status">Выбрать</span>
+                                    <div class="choose-btn__icon">
+                                        +
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="catalog__wrapper-item card-item photo">
+                                <a href="">
+                                    <div class="card-item__img">
+                                        <img src="img/cards/card-restor_1.png" alt="Отель «Ямбург»">
+                                    </div>
+                                    <div class="card-item__footer">
+                                        <div class="card-item__name">Отель «Ямбург»</div>
+                                        <div class="descr-block__text">
+                                            10:00 - 22:00 для регистрации
+                                        </div>
+                                    </div>
+                                </a>
+                                <button data-type="only" type="button"
+                                    class="choose-btn btn btn-transparent choose-btn--hostel">
                                     <span class="choose-btn__status">Выбрать</span>
                                     <div class="choose-btn__icon">
                                         +
@@ -848,6 +974,7 @@
                                 </button>
                             </div>
                         </div>
+                        <button class="catalog-choose__show-more btn btn-green">Показать еще</button>
                     </div>
                 </div>
                 <div class="catalog-choose__map">
@@ -978,7 +1105,7 @@
                         </svg>
                     </button>
                 </div>
-                <div class="catalog-choose__catalog">
+                <div class="catalog-choose__catalog choose-entertainments__catalog">
                     <div class="catalog__container container">
                         <div class="catalog__wrapper">
                             <div class="catalog__wrapper-item card-item photo">
@@ -993,7 +1120,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <button type="button" class="choose-btn btn btn-transparent">
+                                <button type="button" class="choose-btn choose-btn--etertainment btn btn-transparent">
                                     <span class="choose-btn__status">Выбрать</span>
                                     <div class="choose-btn__icon">
                                         +
@@ -1012,7 +1139,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <button type="button" class="choose-btn btn btn-transparent">
+                                <button type="button" class="choose-btn choose-btn--etertainment btn btn-transparent">
                                     <span class="choose-btn__status">Выбрать</span>
                                     <div class="choose-btn__icon">
                                         +
@@ -1031,7 +1158,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <button type="button" class="choose-btn btn btn-transparent">
+                                <button type="button" class="choose-btn choose-btn--etertainment btn btn-transparent">
                                     <span class="choose-btn__status">Выбрать</span>
                                     <div class="choose-btn__icon">
                                         +
@@ -1050,7 +1177,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <button type="button" class="choose-btn btn btn-transparent">
+                                <button type="button" class="choose-btn choose-btn--etertainment btn btn-transparent">
                                     <span class="choose-btn__status">Выбрать</span>
                                     <div class="choose-btn__icon">
                                         +
@@ -1069,7 +1196,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <button type="button" class="choose-btn btn btn-transparent">
+                                <button type="button" class="choose-btn choose-btn--etertainment btn btn-transparent">
                                     <span class="choose-btn__status">Выбрать</span>
                                     <div class="choose-btn__icon">
                                         +
@@ -1088,7 +1215,64 @@
                                         </div>
                                     </div>
                                 </a>
-                                <button type="button" class="choose-btn btn btn-transparent">
+                                <button type="button" class="choose-btn choose-btn--etertainment btn btn-transparent">
+                                    <span class="choose-btn__status">Выбрать</span>
+                                    <div class="choose-btn__icon">
+                                        +
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="catalog__wrapper-item card-item photo">
+                                <a href="">
+                                    <div class="card-item__img">
+                                        <img src="img/cards/card-restor_1.png" alt="Отель «Ямбург»">
+                                    </div>
+                                    <div class="card-item__footer">
+                                        <div class="card-item__name">Отель «Ямбург»</div>
+                                        <div class="descr-block__text">
+                                            10:00 - 22:00 для регистрации
+                                        </div>
+                                    </div>
+                                </a>
+                                <button type="button" class="choose-btn choose-btn--etertainment btn btn-transparent">
+                                    <span class="choose-btn__status">Выбрать</span>
+                                    <div class="choose-btn__icon">
+                                        +
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="catalog__wrapper-item card-item photo">
+                                <a href="">
+                                    <div class="card-item__img">
+                                        <img src="img/cards/card-restor_1.png" alt="Отель «Ямбург»">
+                                    </div>
+                                    <div class="card-item__footer">
+                                        <div class="card-item__name">Отель «Ямбург»</div>
+                                        <div class="descr-block__text">
+                                            10:00 - 22:00 для регистрации
+                                        </div>
+                                    </div>
+                                </a>
+                                <button type="button" class="choose-btn choose-btn--etertainment btn btn-transparent">
+                                    <span class="choose-btn__status">Выбрать</span>
+                                    <div class="choose-btn__icon">
+                                        +
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="catalog__wrapper-item card-item photo">
+                                <a href="">
+                                    <div class="card-item__img">
+                                        <img src="img/cards/card-restor_1.png" alt="Отель «Ямбург»">
+                                    </div>
+                                    <div class="card-item__footer">
+                                        <div class="card-item__name">Отель «Ямбург»</div>
+                                        <div class="descr-block__text">
+                                            10:00 - 22:00 для регистрации
+                                        </div>
+                                    </div>
+                                </a>
+                                <button type="button" class="choose-btn choose-btn--etertainment btn btn-transparent">
                                     <span class="choose-btn__status">Выбрать</span>
                                     <div class="choose-btn__icon">
                                         +
@@ -1096,6 +1280,7 @@
                                 </button>
                             </div>
                         </div>
+                        <button class="choose-entertainments__show-more btn btn-green">Показать еще</button>
                     </div>
                 </div>
             </div>
@@ -1201,10 +1386,12 @@
                         <button id="download-way-btn" type="button" class="build-way__btn btn btn-transparent-green">
                             <span>Скачать PDF</span>
                         </button>
-                        <button id="get-sms-way" type="button" class="build-way__btn btn btn-transparent-green">
+                        <button id="get-sms-way" type="button" class="build-way__btn btn btn-transparent-green"
+                            data-popup="#phone-for-sms">
                             <span>Оправить ссылку по СМС</span>
                         </button>
-                        <button id="add-way-acc" type="button" class="build-way__btn btn btn-green">
+                        <button id="add-way-acc" type="button" class="build-way__btn btn btn-green"
+                            data-popup="#add-acc">
                             <span>Добавить в ЛК</span>
                         </button>
                     </div>
@@ -2266,30 +2453,31 @@
             </div>
         </div>
         <div class="fixed-pay__plan-form">
-            <form class="fixed-pay__form" action="#">
+            <form id="fixed-pay__form" class="fixed-pay__form" action="#">
                 <div class="fixed-pay__form-inputs">
                     <div class="costum-input__inner">
                         <div class="costum-input__label">Имя</div>
                         <div class="costum-input">
-                            <input type="name" name="name" placeholder="Имя"></input>
+                            <input type="name" name="name" placeholder="Имя" required></input>
                             <div class="costum-input__icon">
                                 <img src="img/icon/input-user.svg" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="costum-input__inner">
-                        <div class="costum-input__label">Телефон</div>
+                        <div class="costum-input__label">Почта</div>
                         <div class="costum-input">
-                            <input type="email" name="phone" placeholder="ex@mail.com"></input>
+                            <input type="email" name="email" placeholder="ex@mail.com" required></input>
                             <div class="costum-input__icon">
                                 <img src="img/icon/input-email.svg" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="costum-input__inner">
-                        <div class="costum-input__label">Телефон</div>
+                        <div class="costum-input__label">Почта</div>
                         <div class="costum-input">
-                            <input type="tel" name="phone" placeholder="+7 000 000 00 00"></input>
+                            <input type="tel" name="phone" class="input-phone" placeholder="+7 000 000 00 00"
+                                required></input>
                             <div class="costum-input__icon">
                                 <img src="img/icon/call.svg" alt="">
                             </div>
@@ -2300,20 +2488,21 @@
                     <div class="fixed-pay__form-checkbox">
                         <label class="control control-radio costum-radio">
                             Даю согласие на <a href="#" class="underline color-green">обработку персональных данных</a>
-                            <input class="choosen-radio" value="agree" type="checkbox" checked name="1" />
+                            <input class="choosen-radio" name="personal-date" value="agree" type="checkbox" required
+                                checked name="1" />
                             <div class="control_indicator"></div>
                         </label>
                     </div>
                     <div class="fixed-pay__form-checkbox">
                         <label class="control control-radio costum-radio">
                             Хочу получать маркетенговые предложения от сервиса
-                            <input class="choosen-radio" value="want" type="checkbox" name="1" />
+                            <input class="choosen-radio" name="proposal" value="want" type="checkbox" name="1" />
                             <div class="control_indicator"></div>
                         </label>
                     </div>
                 </div>
                 <div class="fixed-filter__btns">
-                    <button type="button" class="fixed-pay__btn buy-btn btn btn-green"
+                    <button id="fixed-pay__submit" type="submit" class="fixed-pay__btn buy-btn btn btn-green"
                         data-popup="#sucsess-pay">Оплатить</button>
                 </div>
             </form>
@@ -2467,7 +2656,8 @@
                 <button type="button" class="popup__btn-sms btn btn-green js-close"
                     data-popup="#phone-for-sms">Отправить ссылку по
                     СМС</button>
-                <button type="button" class="popup__btn-delete js-close btn btn-transparent-green">
+                <button id="add-acc-btn" type="button" class="popup__btn-delete  js-close btn btn-transparent-green"
+                    data-popup="#add-acc">
                     Добавить в ЛК
                 </button>
             </div>
@@ -2484,7 +2674,8 @@
                     <div class="popup__input-inner">
                         <div class="popup__input-label">Телефон</div>
                         <div class="costum-input">
-                            <input type="tel" name="phone" placeholder="+7 000 000 00 00"></input>
+                            <input type="tel" name="phone" class="input-phone" placeholder="+7 000 000 00 00"
+                                required></input>
                             <div class="costum-input__icon">
                                 <img src="img/icon/call.svg" alt="">
                             </div>
@@ -2495,7 +2686,7 @@
                     </div>
                 </div>
                 <div class="popup__btns">
-                    <button class="popup__btn-enter btn btn-green">Отправить</button>
+                    <button type="submit" class="popup__btn-enter btn btn-green">Отправить</button>
                 </div>
             </form>
         </div>
@@ -2551,25 +2742,27 @@
         <img src="img/icon/filter-close.svg" alt="">
     </button>
 </div>
+<div id="add-acc" class="notification">
+    <div class="notification__label">Маршрут добавлен в ЛК</div>
+    <button class="fixed-filter__close js-close  btn">
+        <img src="img/icon/filter-close.svg" alt="">
+    </button>
+</div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"
-        integrity="sha512-Yk47FuYNtuINE1w+t/KT4BQ7JaycTCcrvlSvdK/jry6Kcxqg5vN7/svVWCxZykVzzJHaxXk5T9jnFemZHSYgnw=="
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-    <script src="https://cdn.rawgit.com/nizarmah/calendar-javascript-lib/master/calendarorganizer.min.js"></script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAn4lOodBWISBVdVsAchtPd8eRRPgycYco&language=ru">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js"
-        integrity="sha512-NgXVRE+Mxxf647SqmbB9wPS5SEpWiLFp5G7ItUNFi+GVUyQeP+7w4vnKtc2O/Dm74TpTFKXNjakd40pfSKNulg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"
-        integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"
+    integrity="sha512-Yk47FuYNtuINE1w+t/KT4BQ7JaycTCcrvlSvdK/jry6Kcxqg5vN7/svVWCxZykVzzJHaxXk5T9jnFemZHSYgnw=="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+<script src="https://cdn.rawgit.com/nizarmah/calendar-javascript-lib/master/calendarorganizer.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAn4lOodBWISBVdVsAchtPd8eRRPgycYco&language=ru">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"
+    integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>

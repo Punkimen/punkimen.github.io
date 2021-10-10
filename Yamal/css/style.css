@@ -400,6 +400,8 @@ li {
   outline: none;
   font-size: 14px;
   line-height: 20px;
+  display: block;
+  width: 100%;
 }
 
 .costum-input input:hover {
@@ -410,10 +412,20 @@ li {
   border-color: #009974;
 }
 
+.costum-input input.error {
+  border-color: #a71681;
+}
+
 .costum-input__icon {
   top: 13px;
   left: 14px;
   position: absolute;
+}
+
+label.error {
+  display: block;
+  font-size: 10px;
+  color: #a71681;
 }
 
 [data-aos][data-aos][data-aos-duration="50"],
@@ -3829,6 +3841,20 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   border-color: #009974;
 }
 
+.custom-select.error::after {
+  content: attr(data-error);
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  font-size: 10px;
+  color: #a71681;
+}
+
+.custom-select.error .custom-select__header {
+  border-color: #a71681;
+}
+
 .custom-select__header {
   background: #fff;
   padding: 9px 13px;
@@ -5183,7 +5209,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .calendar-description {
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
 }
 
@@ -5434,7 +5460,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   font-size: 12px;
   line-height: 18px;
   color: #213A8F;
-  text-shadow: 0px 1px 0 white, 0px -1px 0 white, 1px 0px 0 white, -1px 0px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 2px 2px 1px black;
+  text-shadow: 0px 1px 0 white, 0px -1px 0 white, 1px 0px 0 white, -1px 0px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 0px 2px 0 white, 0px -2px 0 white, 2px 0px 0 white, -2px 0px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px 2px 0 white, -2px -2px 0 white;
 }
 
 .gm-ui-hover-effect {
@@ -5508,6 +5534,16 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   display: none;
 }
 
+#add-light-map {
+  cursor: pointer;
+  transition: all ease .2s;
+}
+
+#add-light-map:hover {
+  background: #009974;
+  color: #fff;
+}
+
 .steps-planning__step--2 {
   margin-top: 70px;
 }
@@ -5555,6 +5591,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .catalog-choose__hendler {
   display: flex;
   align-items: center;
+}
+
+.catalog-choose__show-more {
+  display: none;
+  margin: 0 auto;
 }
 
 .catalog-choose__btn {
@@ -5688,6 +5729,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   height: 720px;
 }
 
+.choose-entertainments__show-more {
+  margin: 0 auto;
+  display: none;
+}
+
 .steps-planning__step--4 {
   margin-top: 70px;
 }
@@ -5718,6 +5764,26 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   align-items: center;
   justify-content: center;
   padding: 8px 16px 7px 27px;
+}
+
+.build-way__btn.disabled {
+  background: #E4E4E4;
+  color: #fff;
+  border-color: #E4E4E4;
+}
+
+.build-way__btn.disabled:hover {
+  background: #E4E4E4;
+  color: #fff;
+  border-color: #E4E4E4;
+}
+
+.build-way__btn.disabled:hover svg {
+  stroke: #fff;
+}
+
+.build-way__btn.disabled svg {
+  stroke: #fff;
 }
 
 .build-way__btn:not(:last-child) {
@@ -5767,6 +5833,26 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   max-width: 388px;
   width: 100%;
   min-width: 350px;
+}
+
+.price-block__btn.disabled {
+  background: #E4E4E4;
+  color: #fff;
+  border-color: #E4E4E4;
+}
+
+.price-block__btn.disabled:hover {
+  background: #E4E4E4;
+  color: #fff;
+  border-color: #E4E4E4;
+}
+
+.price-block__btn.disabled:hover svg {
+  stroke: #fff;
+}
+
+.price-block__btn.disabled svg {
+  stroke: #fff;
 }
 
 .build-plan {
@@ -7552,6 +7638,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     text-align: right;
   }
 
+  .custom-select.error::after {
+    bottom: -3px;
+    left: 15px;
+  }
+
   .bread-crumbs .container {
     padding: 0 10px;
   }
@@ -7752,7 +7843,16 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .custom-date__calendar-wrapper > div:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+  }
+
+  .calendar-description {
+    display: block;
+  }
+
+  .calendar-description__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
   .popup__btns .btn:not(:last-child) {
