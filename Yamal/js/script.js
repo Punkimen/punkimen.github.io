@@ -321,12 +321,14 @@ $(document).ready(function () {
         })
         $('.js-open-filter').on('click', function () {
             $('.fixed-filter').addClass('show')
-            $('.fixed-pay').addClass('show')
         });
         $('.fixed-filter__close').on('click', function () {
             $('.fixed-filter').removeClass('show')
             $('.fixed-pay').removeClass('show')
         })
+        $('.js-open-pay').on('click', function () {
+            $('.fixed-pay').addClass('show')
+        });
     })();
     // catalog
     (function () {
@@ -2100,8 +2102,8 @@ $(document).ready(function () {
             },
             {
                 'id': '02',
-                'img': 'img/plan-photo.png',
-                'name': 'Отель «Сибирь»',
+                'img': 'img/plan-photo-0.png',
+                'name': 'Музей Арктики',
                 'text': '10:00 - 22:00 для регистрации',
                 "transformStatus": 'drag',
                 'btnStatus': 'drag',
@@ -2110,8 +2112,8 @@ $(document).ready(function () {
             },
             {
                 'id': '03',
-                'img': 'img/plan-photo.png',
-                'name': 'Отель «Сибирь»',
+                'img': 'img/plan-photo-1.png',
+                'name': 'Тур «За грибами»',
                 'text': '10:00 - 22:00 для регистрации',
                 "transformStatus": 'drag',
                 'btnStatus': 'drag',
@@ -2120,7 +2122,7 @@ $(document).ready(function () {
             },
             {
                 'id': '04',
-                'img': 'img/plan-photo.png',
+                'img': 'img/plan-photo-2.png',
                 'name': 'Отель «Сибирь»',
                 'text': '10:00 - 22:00 для регистрации',
                 "transformStatus": 'drag',
@@ -2130,8 +2132,8 @@ $(document).ready(function () {
             },
             {
                 'id': '05',
-                'img': 'img/plan-photo.png',
-                'name': 'Отель «Сибирь»',
+                'img': 'img/plan-photo-3.png',
+                'name': 'Хостел «Хмель и Соль»',
                 'text': '10:00 - 22:00 для регистрации',
                 "transformStatus": 'drag',
                 'btnStatus': 'drag',
@@ -2195,10 +2197,10 @@ $(document).ready(function () {
                     <div class="build-plan__add-elem " id="build-plan__add-elem-${id}">
                     <div class="build-plan__add-inner build-plan__add-inner--first show">
                         <div class="build-plan__add-btns">
-                            <button id="option-where" type="button"
-                                    class="build-plan__add-btn btn btn-green">Где
+                            <button  type="button"
+                                    class="build-plan__add-btn btn btn-green ">Где
                                     поесть</button>
-                            <button id="option-what" type="button" class="build-plan__add-btn btn btn-green">Чем
+                            <button  type="button" class="build-plan__add-btn btn btn-green">Чем
                                     заняться</button>
                         </div>
                     </div>
@@ -2271,8 +2273,13 @@ $(document).ready(function () {
                 document.querySelector(`#build-plan__add-elem-${id}`).classList.add('show')
             }
             if (e.target.closest('.build-plan__add-btn')) {
-                document.querySelector('.build-plan__add-inner--first').classList.remove('show')
-                document.querySelector('.build-plan__add-inner--second').classList.add('show')
+                console.log('w');
+                document.querySelectorAll('.build-plan__add-inner--first').forEach(el => {
+                    el.classList.remove('show')
+                })
+                document.querySelectorAll('.build-plan__add-inner--second').forEach(el => {
+                    el.classList.add('show')
+                })
             }
             if (e.target.closest('.pay-btn.no-pay')) {
                 $('#new-pay').addClass('show')
