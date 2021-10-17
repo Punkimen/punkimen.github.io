@@ -5542,10 +5542,20 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .popup__way-generate-link {
+  position: relative;
   margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  max-width: 344px;
+  margin: 0 auto 20px;
+}
+
+.popup__way-generate-link .btn-copy {
+  position: absolute;
+  top: 0;
+  right: -20px;
 }
 
 .popup__way-link {
@@ -5553,6 +5563,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   line-height: 20px;
   margin-right: 10px;
   color: #009974;
+  text-align: center;
 }
 
 .notification {
@@ -7423,6 +7434,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   background: #E6E6E6;
   border-radius: 12px;
   position: relative;
+}
+
+.create-elem__add-photos.hide {
+  display: none;
 }
 
 .create-elem__add-photos .custom-file {

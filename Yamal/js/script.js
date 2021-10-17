@@ -2539,6 +2539,7 @@ $(document).ready(function () {
         $('#reg-partner').validate();
         $('#pas-reset').validate();
         $('#change-data-form').validate();
+        $('#create-elem').validate();
         $('.enter-next-btn').on('click', function (e) {
             e.preventDefault();
             if ($('#enter-phone').valid()) {
@@ -2622,6 +2623,12 @@ $(document).ready(function () {
             $('.cabinet-rewiews__left').show()
             $('#back-reviews').hide()
             $('.cabinet-rewiews__review').hide()
+        });
+        $('#publish-elem').on('click', function (e) {
+            e.preventDefault()
+            if ($('#create-elem').valid()) {
+                window.location.href = 'sucsess-create-elem.html';
+            }
         })
         $('.choosen-radio').on('click', function () {
             if ($(this).parents('.custom-select')) {
