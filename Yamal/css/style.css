@@ -3040,6 +3040,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .quiz-routes__progress {
   display: flex;
   position: relative;
+  justify-content: space-between;
 }
 
 .quiz-routes__progress::before {
@@ -3393,6 +3394,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .playbill-events__inner {
   border-radius: 12px;
   position: relative;
+}
+
+.playbill-events__inner-empty {
+  min-height: 213px;
 }
 
 .playbill-events__calendar {
@@ -7047,15 +7052,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .cabinet-numbers__item {
   position: relative;
-  display: flex;
+  display: block;
   font-size: 14px;
   line-height: 20px;
   background: #E6E6E6;
   border: 1px solid rgba(0, 0, 0, 0.07);
   box-sizing: border-box;
   border-radius: 7px;
-  padding: 10px 14px 10px 14px;
-  white-space: nowrap;
+  padding: 10px 35px 10px 14px;
   overflow: hidden;
 }
 
@@ -7074,10 +7078,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .cabinet-numbers__num {
   margin-right: 5px;
+  display: inline-block;
 }
 
 .cabinet-numbers__name {
   color: #009974;
+  display: inline-block;
 }
 
 .cabinet-history .mCustomScrollbar.mCS_no_scrollbar {

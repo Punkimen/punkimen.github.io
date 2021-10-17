@@ -358,6 +358,9 @@ $(document).ready(function () {
                         closeModal()
                         $('#preloader').removeClass('show')
                         $('.recomended-route').show()
+                        $([document.documentElement, document.body]).animate({
+                            scrollTop: $(".recomended-route").offset().top
+                        }, 1000);
                     }, 3000)
                 }
 
