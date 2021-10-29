@@ -4,7 +4,7 @@
         let markers = [];
         let startMarkerst = mapsData.startBorderMarker
         let startMarkerstZones = mapsData.markerZonesDot
-        let borderZoneCoord = mapsData.borderZonesMarker
+
         function addMarker(position, map, title, icon, label) {
             const marker = new google.maps.Marker({
                 position,
@@ -19,6 +19,7 @@
             startMarkerst.forEach(el => {
                 addMarker(el.position, el.map, el.title, el.icon, el.label)
             })
+
             startMarkerstZones.forEach(el => {
                 addMarker(el.position, el.map, '', el.icon, '')
             })
@@ -31,7 +32,6 @@
         }
         function borderZoneMap() {
             var myLatlng = new google.maps.LatLng(68.17668157414661, 68.66484615800437);
-            console.log(borderZoneCoord);
 
             var mapOptions = {
                 zoom: 5,
@@ -204,17 +204,74 @@
                 ]
             };
             const borderZones = new google.maps.Polygon({
-                paths: mapsData.borderZonesMarker,
+                paths: mapsData.borderZonesCoord,
                 strokeColor: "#009974",
                 strokeOpacity: 0.8,
-                strokeWeight: 3,
+                strokeWeight: 1,
+                fillColor: "#009974",
+                fillOpacity: 0.35,
+            });
+            const borderZones2 = new google.maps.Polygon({
+                paths: mapsData.borderZonesCoord2,
+                strokeColor: "#009974",
+                strokeOpacity: 0.8,
+                strokeWeight: 1,
+                fillColor: "#009974",
+                fillOpacity: 0.35,
+            });
+            const borderZones3 = new google.maps.Polygon({
+                paths: mapsData.borderZonesCoord3,
+                strokeColor: "#009974",
+                strokeOpacity: 0.8,
+                strokeWeight: 1,
+                fillColor: "#009974",
+                fillOpacity: 0.35,
+            });
+            const borderZones4 = new google.maps.Polygon({
+                paths: mapsData.borderZonesCoord4,
+                strokeColor: "#009974",
+                strokeOpacity: 0.8,
+                strokeWeight: 1,
+                fillColor: "#009974",
+                fillOpacity: 0.35,
+            });
+            const borderZones5 = new google.maps.Polygon({
+                paths: mapsData.borderZonesCoord5,
+                strokeColor: "#009974",
+                strokeOpacity: 0.8,
+                strokeWeight: 1,
+                fillColor: "#009974",
+                fillOpacity: 0.35,
+            });
+            const borderZones6 = new google.maps.Polygon({
+                paths: mapsData.borderZonesCoord6,
+                strokeColor: "#009974",
+                strokeOpacity: 0.8,
+                strokeWeight: 1,
+                fillColor: "#009974",
+                fillOpacity: 0.35,
+            });
+            const borderZones7 = new google.maps.Polygon({
+                paths: mapsData.borderZonesCoord7,
+                strokeColor: "#009974",
+                strokeOpacity: 0.8,
+                strokeWeight: 1,
                 fillColor: "#009974",
                 fillOpacity: 0.35,
             });
             map = new google.maps.Map(document.getElementById('map-zones'), mapOptions);
             setMapOnAll(map)
             borderZones.setMap(map);
+            borderZones2.setMap(map);
+            borderZones3.setMap(map);
+            borderZones4.setMap(map);
+            borderZones5.setMap(map);
+            borderZones6.setMap(map);
+            borderZones7.setMap(map);
         }
+
+
+        // borderZones.setMap(map);
         google.maps.event.addDomListener(window, 'load', borderZoneMap);
     }
     zonesMap()
