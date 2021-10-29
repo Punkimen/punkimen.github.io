@@ -2,7 +2,7 @@
     const auroraMap = function () {
         let map;
         let markers = [];
-        let startMarkerst = mapsData.startMarkerFirst
+        let startMarkerst = mapsAuroraData.startMarkerFirst
         function addMarker(position, map, title, icon, label) {
             const marker = new google.maps.Marker({
                 position,

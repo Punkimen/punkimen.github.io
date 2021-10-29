@@ -2,8 +2,8 @@
     const zonesMap = function () {
         let map;
         let markers = [];
-        let startMarkerst = mapsData.startBorderMarker
-        let startMarkerstZones = mapsData.markerZonesDot
+        let startMarkerst = mapsBorderZonesData.startBorderMarker
+        let startMarkerstZones = mapsBorderZonesData.markerZonesDot
 
         function addMarker(position, map, title, icon, label) {
             const marker = new google.maps.Marker({
@@ -204,7 +204,7 @@
                 ]
             };
             const borderZones = new google.maps.Polygon({
-                paths: mapsData.borderZonesCoord,
+                paths: mapsBorderZonesData.borderZonesCoord,
                 strokeColor: "#009974",
                 strokeOpacity: 0.8,
                 strokeWeight: 1,
@@ -212,7 +212,7 @@
                 fillOpacity: 0.35,
             });
             const borderZones2 = new google.maps.Polygon({
-                paths: mapsData.borderZonesCoord2,
+                paths: mapsBorderZonesData.borderZonesCoord2,
                 strokeColor: "#009974",
                 strokeOpacity: 0.8,
                 strokeWeight: 1,
@@ -220,7 +220,7 @@
                 fillOpacity: 0.35,
             });
             const borderZones3 = new google.maps.Polygon({
-                paths: mapsData.borderZonesCoord3,
+                paths: mapsBorderZonesData.borderZonesCoord3,
                 strokeColor: "#009974",
                 strokeOpacity: 0.8,
                 strokeWeight: 1,
@@ -228,7 +228,7 @@
                 fillOpacity: 0.35,
             });
             const borderZones4 = new google.maps.Polygon({
-                paths: mapsData.borderZonesCoord4,
+                paths: mapsBorderZonesData.borderZonesCoord4,
                 strokeColor: "#009974",
                 strokeOpacity: 0.8,
                 strokeWeight: 1,
@@ -236,7 +236,7 @@
                 fillOpacity: 0.35,
             });
             const borderZones5 = new google.maps.Polygon({
-                paths: mapsData.borderZonesCoord5,
+                paths: mapsBorderZonesData.borderZonesCoord5,
                 strokeColor: "#009974",
                 strokeOpacity: 0.8,
                 strokeWeight: 1,
@@ -244,7 +244,7 @@
                 fillOpacity: 0.35,
             });
             const borderZones6 = new google.maps.Polygon({
-                paths: mapsData.borderZonesCoord6,
+                paths: mapsBorderZonesData.borderZonesCoord6,
                 strokeColor: "#009974",
                 strokeOpacity: 0.8,
                 strokeWeight: 1,
@@ -252,7 +252,7 @@
                 fillOpacity: 0.35,
             });
             const borderZones7 = new google.maps.Polygon({
-                paths: mapsData.borderZonesCoord7,
+                paths: mapsBorderZonesData.borderZonesCoord7,
                 strokeColor: "#009974",
                 strokeOpacity: 0.8,
                 strokeWeight: 1,
@@ -278,9 +278,9 @@
     const ootpMap = function () {
         let map;
         let markers = [];
-        let startMarkerst = mapsData.startBorderMarker
-        let startMarkerstZones = mapsData.ootpZonesMarker
-        let borderZoneCoord = mapsData.ootpZones
+        let startMarkerst = mapsBorderZonesData.startBorderMarker
+        let startMarkerstZones = mapsBorderZonesData.ootpZonesMarker
+        let borderZoneCoord = mapsBorderZonesData.ootpZones
         function addMarker(position, map, title, icon, label) {
             const marker = new google.maps.Marker({
                 position,
@@ -480,7 +480,7 @@
                 ]
             };
             const ootpZones = new google.maps.Polygon({
-                paths: mapsData.ootpZonesPark,
+                paths: mapsBorderZonesData.ootpZonesPark,
                 strokeColor: "#009974",
                 strokeOpacity: 0.8,
                 strokeWeight: 1,
@@ -488,7 +488,7 @@
                 fillOpacity: 0.35,
             });
             const ootpZones2 = new google.maps.Polygon({
-                paths: mapsData.ootpZonesNature,
+                paths: mapsBorderZonesData.ootpZonesNature,
                 strokeColor: "#009974",
                 strokeOpacity: 0.8,
                 strokeWeight: 1,
