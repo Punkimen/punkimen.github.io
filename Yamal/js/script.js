@@ -127,6 +127,25 @@ $(document).ready(function () {
                 }
             }
         })
+        const tourSlider = new Swiper('.tour__slider', {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            createElements: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            breakpoints: {
+                767: {
+                    slidesPerView: 4,
+                }
+            }
+        })
+        $('.tour-arrow__next').on('click', () => {
+            tourSlider.slideNext();
+        })
+        $('.tour-arrow__prev').on('click', () => {
+            tourSlider.slidePrev();
+        })
         $('.calendar-arrow__next').on('click', () => {
             swiperCalendar.slideNext();
         })
