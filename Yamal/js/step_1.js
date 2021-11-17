@@ -426,6 +426,11 @@ const firstMap = function () {
             if ($('.enter-banner__from').hasClass('filed') && $('.enter-banner__where').hasClass('filed')) {
                 createWayOnMap()
             }
+            let id = $(this).attr('data-id')
+            let val = $(this).val()
+
+            showAboutCity(id)
+            aboutCity(val)
         })
         markers.forEach(el => {
             el.addListener('click', function (e) {
