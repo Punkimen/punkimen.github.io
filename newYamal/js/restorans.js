@@ -115,3 +115,9 @@ const cardMap = function () {
 }
 cardMap()
 
+$('.show-route-js').on('click', function () {
+  $('.route-menu').toggleClass('show')
+})
+$('.route-menu__hidden-btn').on('click', function () {
+  $('.route-menu').removeClass('show')
+})

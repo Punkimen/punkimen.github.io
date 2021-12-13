@@ -3400,6 +3400,7 @@ h2.section-title {
 }
 
 .card-page {
+  overflow: hidden;
   padding: 45px 0 0px;
 }
 
@@ -3455,6 +3456,62 @@ h2.section-title {
 .card-elem__item .costumn-select__head {
   display: inline-block;
   max-width: auto;
+}
+
+.route__btn {
+  max-width: 202px;
+  width: 100%;
+  padding: 19px 10px 17px 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  border-radius: 58.5px;
+}
+
+.route-menu {
+  padding: 25px 25px 25px 70px;
+  background: #fff;
+  border-radius: 18px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 300%;
+  z-index: 10;
+  width: 1000%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all linear 0.8s;
+}
+
+.route-menu.show {
+  left: 67%;
+}
+
+.route-menu__title {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 61px;
+}
+
+.route-menu__list {
+  font-weight: bold;
+  font-size: 21.6812px;
+  line-height: 57px;
+}
+
+.route-menu__hidden-btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: #3461D9;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
 }
 
 .card-gallery__wrapper {
@@ -4738,6 +4795,12 @@ body.dark .card-map__routes-icon svg {
     margin-left: -20px;
   }
 
+  .route__btn {
+    max-width: none;
+    width: auto;
+    padding: 8px 24px 6px 29px;
+  }
+
   .footer__left {
     margin-right: 31px;
   }
@@ -5766,6 +5829,19 @@ body.dark .card-map__routes-icon svg {
 
   .card-elem__item:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  .route__btn {
+    font-size: 12px;
+    line-height: 16px;
+    max-width: none;
+    width: auto;
+    padding: 4px 15px 4px 22px;
+  }
+
+  .route-menu__list {
+    font-size: 16px;
+    line-height: 30px;
   }
 
   .card-gallery__wrapper {
@@ -6798,7 +6874,7 @@ body.dark .card-map__routes-icon svg {
     left: 0;
     top: 0;
     bottom: 0;
-    margin-left: -12px;
+    margin-left: 0px;
   }
 
   .card-elem__info .costumn-select__icon {
@@ -6817,6 +6893,36 @@ body.dark .card-map__routes-icon svg {
 
   .card-elem__item:not(:last-child) {
     margin-bottom: 10px;
+  }
+
+  .route__btn {
+    position: relative;
+    margin-left: -8px;
+  }
+
+  .route-menu {
+    padding: 25px 25px 25px 30px;
+    left: 50%;
+  }
+
+  .route-menu.show {
+    left: 50%;
+  }
+
+  .route-menu__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .route-menu__list {
+    font-size: 12px;
+    line-height: 25px;
+  }
+
+  .route-menu__hidden-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
   }
 
   .card-gallery__info {
@@ -6960,7 +7066,7 @@ body.dark .card-map__routes-icon svg {
   }
 
   .card-elem__info .costumn-select__head {
-    padding: 4px 15px 4px 36px;
+    padding: 4px 15px 4px 20px;
   }
 }
 
