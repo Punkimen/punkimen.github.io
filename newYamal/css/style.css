@@ -3746,7 +3746,7 @@ h2.section-title {
 
 .header-menu {
   background: #f2f2f2;
-  padding-top: 50px;
+  padding-top: 120px;
   padding-bottom: 50px;
   position: fixed;
   top: 0;
@@ -5636,6 +5636,10 @@ body.dark .widgets-block::before {
   .footer-link {
     padding: 11px 19px 8px 19px;
     font-size: 12px;
+  }
+
+  .header-menu {
+    padding-top: 68px;
   }
 
   .header-menu {
