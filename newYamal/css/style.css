@@ -3126,6 +3126,7 @@ h2.section-title {
 }
 
 .pagination__arrow svg {
+  fill: #0E53AA;
   display: block;
   width: 30px;
   height: 10px;
@@ -3175,6 +3176,7 @@ h2.section-title {
 }
 
 .costumn-select__icon svg {
+  fill: #0E53AA;
   display: block;
   width: 38px;
   height: 38px;
@@ -3195,6 +3197,7 @@ h2.section-title {
 }
 
 .costumn-select__arrow svg {
+  fill: #0E53AA;
   display: block;
   width: 14px;
   height: 14px;
@@ -3213,7 +3216,7 @@ h2.section-title {
   display: none;
   position: absolute;
   left: 0;
-  top: calc(100% - 10px);
+  top: 100%;
   background-color: rgba(255, 255, 255, 0.3);
   box-shadow: inset 0px 4px 38px 2px rgba(255, 255, 255, 0.25);
   -webkit-backdrop-filter: blur(5px);
@@ -3352,6 +3355,7 @@ h2.section-title {
   width: 15px;
   height: 15px;
   margin-right: 5px;
+  fill: #0E53AA;
 }
 
 .restoran__average-check span {
@@ -3612,6 +3616,7 @@ h2.section-title {
   display: block;
   width: 39px;
   height: 39px;
+  fill: #0E53AA;
 }
 
 .review-item__name {
@@ -3790,6 +3795,7 @@ h2.section-title {
 
 body.dark {
   background: #1E1E1E;
+  color: #fff;
 }
 
 body.dark .section-title {
@@ -4047,6 +4053,192 @@ body.dark .ready-tours__random {
 
 body.dark .widgets-block::before {
   background: #121212;
+}
+
+body.dark .event-catalog__filter {
+  background: #1E1E1E;
+}
+
+body.dark .handle-banner__title {
+  color: #fff;
+}
+
+body.dark .bread-crumbs__list {
+  color: #fff;
+}
+
+body.dark .btn {
+  border: 1px solid #41EA6D;
+  background: #41EA6D;
+  color: #161616;
+  border-radius: 25px;
+}
+
+body.dark .btn svg {
+  stroke: #161616;
+}
+
+body.dark .btn-transparent {
+  font-weight: 700;
+  font-family: "Gilroy", sans-serif;
+  display: block;
+  cursor: pointer;
+  border: 1px solid #41EA6D;
+  background: #161616;
+  color: #41EA6D;
+  transition: all ease 0.2s;
+  border-radius: 25px;
+}
+
+body.dark .btn-transparent svg {
+  stroke: #41EA6D;
+}
+
+body.dark .btn-transparent:hover {
+  background: #41EA6D;
+  color: #161616;
+}
+
+body.dark .btn-transparent:hover svg {
+  stroke: #161616;
+}
+
+body.dark .card-choose__btn {
+  background: #161616;
+  color: #fff;
+}
+
+body.dark .event-catalog {
+  background: #161616;
+}
+
+body.dark .header__wrapper {
+  background: #161616;
+  color: #fff;
+}
+
+body.dark .header__logo svg {
+  fill: #fff;
+}
+
+body.dark .header__location svg,
+body.dark .header__visually svg {
+  stroke: #fff;
+}
+
+body.dark .header .burger__icon span {
+  background: #fff;
+}
+
+body.dark .header__change-theme {
+  border-color: #fff;
+  color: #fff;
+}
+
+body.dark .header__change-theme:hover {
+  border-color: #41EA6D;
+  background: #41EA6D;
+  color: #161616;
+}
+
+body.dark .header__change-theme.active {
+  border-color: #41EA6D;
+  background: #41EA6D;
+  color: #161616;
+}
+
+body.dark .blue-anim span {
+  color: #161616;
+}
+
+body.dark .blue-anim .bg-elem {
+  background: #41EA6D;
+}
+
+body.dark .event-card {
+  background: #161616;
+}
+
+body.dark .event-card__date {
+  color: #f2f2f2;
+  opacity: 0.7;
+}
+
+body.dark .season-event__arrow svg {
+  fill: #fff;
+}
+
+body.dark .costumn-select__head,
+body.dark .costumn-select__icon,
+body.dark .costumn-select__arrow {
+  background: #161616;
+  border-color: #1E1E1E;
+}
+
+body.dark .costumn-select__head svg,
+body.dark .costumn-select__icon svg,
+body.dark .costumn-select__arrow svg {
+  fill: #41EA6D;
+}
+
+body.dark .costumn-select__body {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+body.dark .hotel-choose__btns .category__btns {
+  background: #1E1E1E;
+  border-color: #1E1E1E;
+}
+
+body.dark .hotel-choose__catalog {
+  background: #161616;
+}
+
+body.dark .card-hotel:hover {
+  background: #1E1E1E;
+}
+
+body.dark .hotel-choose.restorans-choose .hotel-choose__filter {
+  background: #1E1E1E;
+  border-color: #1E1E1E;
+}
+
+body.dark .restoran__average-check {
+  background: #1E1E1E;
+  color: #fff;
+}
+
+body.dark .restoran__average-check svg {
+  fill: #41EA6D;
+}
+
+body.dark .card-gallery__info {
+  background: #121212;
+}
+
+body.dark .reviews__attention {
+  background: #161616;
+  color: #fff;
+}
+
+body.dark .review-item__icon {
+  background: #1e1e1e;
+}
+
+body.dark .review-item__icon svg {
+  fill: #41EA6D;
+}
+
+body.dark .review-item {
+  background: #161616;
+}
+
+body.dark .review-item::before {
+  background: #161616;
+}
+
+body.dark .review-item__arrow svg {
+  fill: #fff;
 }
 
 @media (min-width: 564px) {
@@ -6302,6 +6494,7 @@ body.dark .widgets-block::before {
   }
 
   .hotel-choose .hotel-choose__filter.showSearch .costumn-select__icon svg {
+    fill: #0E53AA;
     width: 24px;
     height: 24px;
   }
