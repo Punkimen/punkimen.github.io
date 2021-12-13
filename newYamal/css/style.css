@@ -6564,7 +6564,7 @@ body.dark .card-map__routes-icon svg {
   }
 
   .hotel-choose {
-    padding-bottom: 20px;
+    padding-bottom: 97px;
   }
 
   .hotel-choose__catalog {
@@ -6589,7 +6589,7 @@ body.dark .card-map__routes-icon svg {
     background: #fff;
     border-radius: 12px;
     transform: translateY(30%);
-    margin-bottom: 80px;
+    margin-bottom: 16px;
   }
 
   .hotel-choose .hotel-choose__filter.showSearch .hotel-choose__btns.visible {
