@@ -1184,6 +1184,7 @@ h2.section-title {
   background: #FFFFFF;
   border-radius: 12px;
   line-height: 1;
+  color: #222;
 }
 
 .ready-tours__banners-text_1 {
@@ -2296,7 +2297,7 @@ h2.section-title {
 
 .handle-banner__left {
   padding-top: 35px;
-  margin-right: 15px;
+  margin-right: 34px;
 }
 
 .handle-banner__title {
@@ -2374,6 +2375,39 @@ h2.section-title {
 .bread-crumbs__elem:not(:last-child)::after {
   content: "→";
   margin: 0 11px 0 11px;
+}
+
+.handle-banner--leave_2 .handle-banner__cards {
+  position: relative;
+  max-width: 100%;
+  margin-right: 0;
+}
+
+.handle-banner--leave_2 .handle-banner__card {
+  width: 100%;
+  left: auto;
+}
+
+.handle-banner--leave_2 .card-1 {
+  width: 37.5%;
+  right: auto;
+  left: 0;
+}
+
+.handle-banner--leave_2 .card-2 {
+  right: 45%;
+  width: 43%;
+}
+
+.handle-banner--leave_2 .card-3 {
+  right: 20%;
+  width: 48%;
+}
+
+.handle-banner--leave_2 .card-4 {
+  right: 0px;
+  left: auto;
+  width: 53%;
 }
 
 .event-catalog {
@@ -3045,6 +3079,7 @@ h2.section-title {
   position: relative;
   display: flex;
   justify-content: space-between;
+  z-index: 10;
 }
 
 .hotel-choose__btn {
@@ -4370,6 +4405,29 @@ body.dark .card-map__routes-icon svg {
     left: 45px;
   }
 
+  .handle-banner--leave_2 .card-1 {
+    width: 37.5%;
+    right: auto;
+  }
+
+  .handle-banner--leave_2 .card-2 {
+    left: auto;
+    right: 45%;
+    width: 43%;
+  }
+
+  .handle-banner--leave_2 .card-3 {
+    left: auto;
+    right: 20%;
+    width: 48%;
+  }
+
+  .handle-banner--leave_2 .card-4 {
+    right: 0px;
+    left: auto;
+    width: 53%;
+  }
+
   .hotel-choose__btn {
     font-size: 16px;
     line-height: 20px;
@@ -4574,6 +4632,23 @@ body.dark .card-map__routes-icon svg {
   .handle-banner__btn {
     font-size: 11px;
     line-height: 14px;
+  }
+
+  .handle-banner--leave_2 .card-1 {
+    width: 50%;
+  }
+
+  .handle-banner--leave_2 .card-2 {
+    right: 40%;
+    width: 55%;
+  }
+
+  .handle-banner--leave_2 .card-3 {
+    width: 60%;
+  }
+
+  .handle-banner--leave_2 .card-4 {
+    width: 65%;
   }
 
   .hotel-choose__btn {
@@ -5445,6 +5520,32 @@ body.dark .card-map__routes-icon svg {
 
   .bread-crumbs__elem:not(:last-child)::after {
     margin-left: 6px;
+  }
+
+  .handle-banner--leave_2 .handle-banner__wrapper {
+    justify-content: flex-start;
+  }
+
+  .handle-banner--leave_2 .handle-banner__cards {
+    max-width: 600px;
+  }
+
+  .handle-banner--leave_2 .card-1 {
+    width: 100%;
+  }
+
+  .handle-banner--leave_2 .card-2 {
+    width: 100%;
+    right: 30%;
+  }
+
+  .handle-banner--leave_2 .card-3 {
+    width: 100%;
+    right: 15%;
+  }
+
+  .handle-banner--leave_2 .card-4 {
+    width: 100%;
   }
 
   .event-catalog {
@@ -6488,10 +6589,10 @@ body.dark .card-map__routes-icon svg {
     background: #fff;
     border-radius: 12px;
     transform: translateY(30%);
-    margin-bottom: 20px;
+    margin-bottom: 80px;
   }
 
-  .hotel-choose .hotel-choose__filter.showSearch .hotel-choose__btns {
+  .hotel-choose .hotel-choose__filter.showSearch .hotel-choose__btns.visible {
     display: flex;
     transform: translateY(50%);
   }
@@ -6518,6 +6619,7 @@ body.dark .card-map__routes-icon svg {
   }
 
   .hotel-choose .hotel-choose__filter.showSearch .costumn-select__arrow {
+    display: none;
     border: none;
     width: auto;
     height: auto;
@@ -6995,6 +7097,10 @@ body.dark .card-map__routes-icon svg {
     display: none;
   }
 
+  .handle-banner {
+    padding-bottom: 30px;
+  }
+
   .handle-banner__wrapper {
     display: block;
   }
@@ -7017,14 +7123,16 @@ body.dark .card-map__routes-icon svg {
     width: auto;
   }
 
+  .hotel-choose__variants {
+    padding-bottom: 50px;
+  }
+
   .hotel-choose .hotel-choose__filter.showSearch .hotel-choose__variants {
     grid-template-columns: 33% 33% 33%;
     grid-gap: 5px;
   }
 
   .hotel-choose .hotel-choose__filter.showSearch .costumn-select__head--hidden {
-    max-width: 80px;
-    width: 100%;
     overflow: hidden;
   }
 
@@ -7037,7 +7145,6 @@ body.dark .card-map__routes-icon svg {
   }
 
   .costumn-select__body {
-    width: auto;
     right: auto;
   }
 
@@ -7074,9 +7181,5 @@ body.dark .card-map__routes-icon svg {
 
   .travel__title {
     font-size: 40px;
-  }
-
-  .hotel-choose .hotel-choose__filter.showSearch .hotel-choose__variants {
-    grid-template-columns: auto auto auto;
   }
 }

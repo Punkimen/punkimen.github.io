@@ -81,14 +81,26 @@ $('#show-var').on('click', function () {
   let dataDo = $(this).attr('data-do')
   if (dataDo === 'show') {
     if (windowWidth < 768) { $('.hotel-choose__catalog').show() }
-
-    $(this).parents('.hotel-choose__filter').addClass('showSearch')
+    $(this).parents('.hotel-choose__filter').find('.hotel-choose__btns').addClass('visible')
+    // $(this).parents('.hotel-choose__filter').addClass('showSearch')
     $(this).text('Изменить поиск').attr('data-do', 'change')
   } else if (dataDo === 'change') {
 
     if (windowWidth < 768) { $('.hotel-choose__catalog').hide() }
-    $(this).parents('.hotel-choose__filter').removeClass('showSearch')
+    $(this).parents('.hotel-choose__filter').find('.hotel-choose__btns').removeClass('visible')
     $(this).text('Посмотреть варианты').attr('data-do', 'show')
   }
 })
 
+function filterStyler() {
+  const windowWidth = $(window).width();
+  if (windowWidth < 414) { $('.hotel-choose__filter').removeClass('showSearch') }
+  if (windowWidth > 768) {
+    $('.hotel-choose__catalog').show();
+  }
+}
+filterStyler()
+
+$(window).on('resize', function () {
+  filterStyler()
+})

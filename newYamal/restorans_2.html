@@ -59,7 +59,7 @@
 
   </div>
 </header>
-        <div class="handle-banner handle-banner--leave">
+        <div class="handle-banner handle-banner--leave_2">
   <div class="container">
     <div class="handle-banner__wrapper">
       <div class="handle-banner__left">
@@ -69,12 +69,12 @@
               <a href="/" class="bread-crumbs__link bread-crumbs__link--arrow">Главная</a>
             </li>
             <li class="bread-crumbs__elem">
-              <a href="#" class="bread-crumbs__link">Где жить</a>
+              <a href="#" class="bread-crumbs__link">Где поесть</a>
             </li>
           </ul>
         </div>
         <div class="handle-banner__title">
-          Где жить
+          Где поесть
         </div>
       </div>
       <div class="handle-banner__cards">
@@ -94,26 +94,12 @@
           <img src="img/handle-banner/card_4.png" alt="">
         </div>
       </div>
-      <div class="handle-banner__btns">
-        <a href="what-do.html" type="button" class="handle-banner__btn btn-transparent">
-          <!-- <svg class="">
-            <use xlink:href="./img/icons/icons.svg#arrow-right"></use>
-          </svg> -->
-          <span>← Назад</span>
-        </a>
-        <a href="restorans.html" type="button" class="handle-banner__btn btn">
-          <span>Далее →</span>
-          <!-- <svg class="">
-            <use xlink:href="./img/icons/icons.svg#arrow-right"></use>
-          </svg> -->
-        </a>
-      </div>
     </div>
   </div>
 </div>
-        <section class="hotel-choose">
+        <section class="hotel-choose restorans-choose">
   <div class="container">
-    <div class="hotel-choose__filter showSearch">
+    <div class="hotel-choose__filter">
       <div class="hotel-choose__variants">
         <div class="hotel-choose__select costumn-select">
           <div class="costumn-select__head costumn-select__head--hidden">
@@ -122,7 +108,7 @@
                 <use xlink:href="./img/icons/icons.svg#select-map"></use>
               </svg>
             </div>
-            <span class="costumn-select__val">Куда вы хотитет поехать?</span>
+            <span class="costumn-select__val">Населенный пункт</span>
             <div class="costumn-select__arrow">
               <svg class="">
                 <use xlink:href="./img/icons/icons.svg#select-arrow"></use>
@@ -162,30 +148,14 @@
             </ul>
           </div>
         </div>
-        <div class="hotel-choose__select costumn-select costumn-calendar">
-          <div class="costumn-select__head">
-            <div class="costumn-select__icon">
-              <svg class="">
-                <use xlink:href="./img/icons/icons.svg#select-calendar"></use>
-              </svg>
-            </div>
-            <input type="text" class="costum-calendar" name="daterange" autocomplete="off" placeholder="Заезд – Отъезд"
-              required value="" />
-            <div class="costumn-select__arrow">
-              <svg class="">
-                <use xlink:href="./img/icons/icons.svg#select-arrow"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
         <div class="hotel-choose__select costumn-select">
           <div class="costumn-select__head">
             <div class="costumn-select__icon">
               <svg class="">
-                <use xlink:href="./img/icons/icons.svg#select-user"></use>
+                <use xlink:href="./img/icons/icons.svg#select-food"></use>
               </svg>
             </div>
-            <span class="costumn-select__val">Сколько человек?</span>
+            <span class="costumn-select__val">Тип ресторана</span>
             <div class="costumn-select__arrow">
               <svg class="">
                 <use xlink:href="./img/icons/icons.svg#select-arrow"></use>
@@ -196,29 +166,62 @@
             <ul class="costumn-select__list">
               <li class="costumn-select__elem">
                 <label class="control control-radio costum-radio">
-                  1
-                  <input class="choosen-radio" value="1" type="radio" name="1" />
+                  Европейский
+                  <input class="choosen-radio" value="Европейский" type="radio" name="restoran-type" />
                   <div class="control_indicator"></div>
                 </label>
               </li>
               <li class="costumn-select__elem">
                 <label class="control control-radio costum-radio">
-                  2
-                  <input class="choosen-radio" value="2" type="radio" name="1" />
+                  Японский
+                  <input class="choosen-radio" value="Японский" type="radio" name="restoran-type" />
                   <div class="control_indicator"></div>
                 </label>
               </li>
               <li class="costumn-select__elem">
                 <label class="control control-radio costum-radio">
-                  3
-                  <input class="choosen-radio" value="3" type="radio" name="1" />
+                  Кавказкий
+                  <input class="choosen-radio" value="Кавказкий" type="radio" name="restoran-type" />
+                  <div class="control_indicator"></div>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="hotel-choose__select costumn-select">
+          <div class="costumn-select__head">
+            <div class="costumn-select__icon">
+              <svg class="">
+                <use xlink:href="./img/icons/icons.svg#select-fish"></use>
+              </svg>
+            </div>
+            <span class="costumn-select__val">Кухня</span>
+            <div class="costumn-select__arrow">
+              <svg class="">
+                <use xlink:href="./img/icons/icons.svg#select-arrow"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="costumn-select__body">
+            <ul class="costumn-select__list">
+              <li class="costumn-select__elem">
+                <label class="control control-radio costum-radio">
+                  Кавказкая
+                  <input class="choosen-radio" value="Кавказкая" type="radio" name="kithen" />
                   <div class="control_indicator"></div>
                 </label>
               </li>
               <li class="costumn-select__elem">
                 <label class="control control-radio costum-radio">
-                  4
-                  <input class="choosen-radio" value="4" type="radio" name="1" />
+                  Японская
+                  <input class="choosen-radio" value="Японская" type="radio" name="kithen" />
+                  <div class="control_indicator"></div>
+                </label>
+              </li>
+              <li class="costumn-select__elem">
+                <label class="control control-radio costum-radio">
+                  Русская
+                  <input class="choosen-radio" value="Русская" type="radio" name="kithen" />
                   <div class="control_indicator"></div>
                 </label>
               </li>
@@ -227,224 +230,274 @@
         </div>
         <div id="show-var" class="hotel-choose__btn btn" data-do="show">Посмотреть варианты</div>
       </div>
-      <div class="hotel-choose__btns">
-        <div class="category__btns">
-          <div class="category-selector"></div>
-          <a href="#" class="event-catalog__btn active category-btn">Все</a>
-          <a href="#" class="event-catalog__btn category-btn">Гостиницы</a>
-          <a href="#" class="event-catalog__btn category-btn">Отели</a>
-          <a href="#" class="event-catalog__btn category-btn">Хостелы</a>
-          <a href="#" class="event-catalog__btn category-btn">Апартаменты</a>
-        </div>
-      </div>
     </div>
   </div>
   <div class="hotel-choose__catalog">
     <div class="hotel-choose__wrapper">
       <div class="container">
         <div class="hotel-choose__hotels">
-          <a href="#" class="hotel-choose__hotel card-hotel">
+          <a href="card-page.html" class="hotel-choose__hotel card-hotel">
             <div class="card-hotel__body">
               <div class="card-hotel__photo">
                 <img src="img/hotels/photo_1.jpg" alt="">
               </div>
               <div class="card-hotel__info">
-                <div class="card-hotel__stars" data-stars="3"></div>
+                <div class="restoran__average-check">
+                  <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#check-ticket"></use>
+                  </svg>
+                  <span>от 500₽</span>
+                </div>
                 <div class="card-hotel__btn card-choose__btn btn-reset">
                   Выбрать
                 </div>
               </div>
             </div>
             <div class="card-hotel__footer">
-              <div class="card-hotel__name">Гостиница «Арктика»</div>
-              <div class="card-hotel__category">гостиницы</div>
+              <div class="card-hotel__name">Ресторан «Ямбург»</div>
+              <div class="card-hotel__category">европейская кухня</div>
             </div>
           </a>
-          <a href="#" class="hotel-choose__hotel card-hotel">
+          <a href="card-page.html" class="hotel-choose__hotel card-hotel">
             <div class="card-hotel__body">
               <div class="card-hotel__photo">
                 <img src="img/hotels/photo_2.jpg" alt="">
               </div>
               <div class="card-hotel__info">
-                <div class="card-hotel__stars" data-stars="0"></div>
+                <div class="restoran__average-check">
+                  <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#check-ticket"></use>
+                  </svg>
+                  <span>от 500₽</span>
+                </div>
                 <div class="card-hotel__btn card-choose__btn btn-reset">
                   Выбрать
                 </div>
               </div>
             </div>
             <div class="card-hotel__footer">
-              <div class="card-hotel__name">Хостел «Хостелы Рус»</div>
-              <div class="card-hotel__category">хостелы</div>
+              <div class="card-hotel__name">Ресторан «Ямбург»</div>
+              <div class="card-hotel__category">европейская кухня</div>
             </div>
           </a>
-          <a href="#" class="hotel-choose__hotel card-hotel">
+          <a href="card-page.html" class="hotel-choose__hotel card-hotel">
             <div class="card-hotel__body">
               <div class="card-hotel__photo">
                 <img src="img/hotels/photo_3.jpg" alt="">
               </div>
               <div class="card-hotel__info">
-                <div class="card-hotel__stars" data-stars="4"></div>
+                <div class="restoran__average-check">
+                  <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#check-ticket"></use>
+                  </svg>
+                  <span>от 500₽</span>
+                </div>
                 <div class="card-hotel__btn card-choose__btn btn-reset">
                   Выбрать
                 </div>
               </div>
             </div>
             <div class="card-hotel__footer">
-              <div class="card-hotel__name">Гостиница «Юрибей»</div>
-              <div class="card-hotel__category">гостиницы</div>
+              <div class="card-hotel__name">Ресторан «Ямбург»</div>
+              <div class="card-hotel__category">европейская кухня</div>
             </div>
           </a>
-          <a href="#" class="hotel-choose__hotel card-hotel">
+          <a href="card-page.html" class="hotel-choose__hotel card-hotel">
             <div class="card-hotel__body">
               <div class="card-hotel__photo">
                 <img src="img/hotels/photo_4.jpg" alt="">
               </div>
               <div class="card-hotel__info">
-                <div class="card-hotel__stars" data-stars="3"></div>
+                <div class="restoran__average-check">
+                  <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#check-ticket"></use>
+                  </svg>
+                  <span>от 500₽</span>
+                </div>
                 <div class="card-hotel__btn card-choose__btn btn-reset">
                   Выбрать
                 </div>
               </div>
             </div>
             <div class="card-hotel__footer">
-              <div class="card-hotel__name">Гостиница «Россия»</div>
-              <div class="card-hotel__category">гостиницы</div>
+              <div class="card-hotel__name">Ресторан «Ямбург»</div>
+              <div class="card-hotel__category">европейская кухня</div>
             </div>
           </a>
-          <a href="#" class="hotel-choose__hotel card-hotel">
+          <a href="card-page.html" class="hotel-choose__hotel card-hotel">
             <div class="card-hotel__body">
               <div class="card-hotel__photo">
                 <img src="img/hotels/photo_1.jpg" alt="">
               </div>
               <div class="card-hotel__info">
-                <div class="card-hotel__stars" data-stars="3"></div>
+                <div class="restoran__average-check">
+                  <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#check-ticket"></use>
+                  </svg>
+                  <span>от 500₽</span>
+                </div>
                 <div class="card-hotel__btn card-choose__btn btn-reset">
                   Выбрать
                 </div>
               </div>
             </div>
             <div class="card-hotel__footer">
-              <div class="card-hotel__name">Гостиница «Арктика»</div>
-              <div class="card-hotel__category">гостиницы</div>
+              <div class="card-hotel__name">Ресторан «Ямбург»</div>
+              <div class="card-hotel__category">европейская кухня</div>
             </div>
           </a>
-          <a href="#" class="hotel-choose__hotel card-hotel">
+          <a href="card-page.html" class="hotel-choose__hotel card-hotel">
             <div class="card-hotel__body">
               <div class="card-hotel__photo">
                 <img src="img/hotels/photo_2.jpg" alt="">
               </div>
               <div class="card-hotel__info">
-                <div class="card-hotel__stars" data-stars="0"></div>
+                <div class="restoran__average-check">
+                  <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#check-ticket"></use>
+                  </svg>
+                  <span>от 500₽</span>
+                </div>
                 <div class="card-hotel__btn card-choose__btn btn-reset">
                   Выбрать
                 </div>
               </div>
             </div>
             <div class="card-hotel__footer">
-              <div class="card-hotel__name">Хостел «Хостелы Рус»</div>
-              <div class="card-hotel__category">хостелы</div>
+              <div class="card-hotel__name">Ресторан «Ямбург»</div>
+              <div class="card-hotel__category">европейская кухня</div>
             </div>
           </a>
-          <a href="#" class="hotel-choose__hotel card-hotel">
+          <a href="card-page.html" class="hotel-choose__hotel card-hotel">
             <div class="card-hotel__body">
               <div class="card-hotel__photo">
                 <img src="img/hotels/photo_3.jpg" alt="">
               </div>
               <div class="card-hotel__info">
-                <div class="card-hotel__stars" data-stars="4"></div>
+                <div class="restoran__average-check">
+                  <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#check-ticket"></use>
+                  </svg>
+                  <span>от 500₽</span>
+                </div>
                 <div class="card-hotel__btn card-choose__btn btn-reset">
                   Выбрать
                 </div>
               </div>
             </div>
             <div class="card-hotel__footer">
-              <div class="card-hotel__name">Гостиница «Юрибей»</div>
-              <div class="card-hotel__category">гостиницы</div>
+              <div class="card-hotel__name">Ресторан «Ямбург»</div>
+              <div class="card-hotel__category">европейская кухня</div>
             </div>
           </a>
-          <a href="#" class="hotel-choose__hotel card-hotel">
+          <a href="card-page.html" class="hotel-choose__hotel card-hotel">
             <div class="card-hotel__body">
               <div class="card-hotel__photo">
                 <img src="img/hotels/photo_4.jpg" alt="">
               </div>
               <div class="card-hotel__info">
-                <div class="card-hotel__stars" data-stars="3"></div>
+                <div class="restoran__average-check">
+                  <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#check-ticket"></use>
+                  </svg>
+                  <span>от 500₽</span>
+                </div>
                 <div class="card-hotel__btn card-choose__btn btn-reset">
                   Выбрать
                 </div>
               </div>
             </div>
             <div class="card-hotel__footer">
-              <div class="card-hotel__name">Гостиница «Россия»</div>
-              <div class="card-hotel__category">гостиницы</div>
+              <div class="card-hotel__name">Ресторан «Ямбург»</div>
+              <div class="card-hotel__category">европейская кухня</div>
             </div>
           </a>
-          <a href="#" class="hotel-choose__hotel card-hotel">
+          <a href="card-page.html" class="hotel-choose__hotel card-hotel">
             <div class="card-hotel__body">
               <div class="card-hotel__photo">
                 <img src="img/hotels/photo_1.jpg" alt="">
               </div>
               <div class="card-hotel__info">
-                <div class="card-hotel__stars" data-stars="3"></div>
+                <div class="restoran__average-check">
+                  <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#check-ticket"></use>
+                  </svg>
+                  <span>от 500₽</span>
+                </div>
                 <div class="card-hotel__btn card-choose__btn btn-reset">
                   Выбрать
                 </div>
               </div>
             </div>
             <div class="card-hotel__footer">
-              <div class="card-hotel__name">Гостиница «Арктика»</div>
-              <div class="card-hotel__category">гостиницы</div>
+              <div class="card-hotel__name">Ресторан «Ямбург»</div>
+              <div class="card-hotel__category">европейская кухня</div>
             </div>
           </a>
-          <a href="#" class="hotel-choose__hotel card-hotel">
+          <a href="card-page.html" class="hotel-choose__hotel card-hotel">
             <div class="card-hotel__body">
               <div class="card-hotel__photo">
                 <img src="img/hotels/photo_2.jpg" alt="">
               </div>
               <div class="card-hotel__info">
-                <div class="card-hotel__stars" data-stars="0"></div>
+                <div class="restoran__average-check">
+                  <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#check-ticket"></use>
+                  </svg>
+                  <span>от 500₽</span>
+                </div>
                 <div class="card-hotel__btn card-choose__btn btn-reset">
                   Выбрать
                 </div>
               </div>
             </div>
             <div class="card-hotel__footer">
-              <div class="card-hotel__name">Хостел «Хостелы Рус»</div>
-              <div class="card-hotel__category">хостелы</div>
+              <div class="card-hotel__name">Ресторан «Ямбург»</div>
+              <div class="card-hotel__category">европейская кухня</div>
             </div>
           </a>
-          <a href="#" class="hotel-choose__hotel card-hotel">
+          <a href="card-page.html" class="hotel-choose__hotel card-hotel">
             <div class="card-hotel__body">
               <div class="card-hotel__photo">
                 <img src="img/hotels/photo_3.jpg" alt="">
               </div>
               <div class="card-hotel__info">
-                <div class="card-hotel__stars" data-stars="4"></div>
+                <div class="restoran__average-check">
+                  <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#check-ticket"></use>
+                  </svg>
+                  <span>от 500₽</span>
+                </div>
                 <div class="card-hotel__btn card-choose__btn btn-reset">
                   Выбрать
                 </div>
               </div>
             </div>
             <div class="card-hotel__footer">
-              <div class="card-hotel__name">Гостиница «Юрибей»</div>
-              <div class="card-hotel__category">гостиницы</div>
+              <div class="card-hotel__name">Ресторан «Ямбург»</div>
+              <div class="card-hotel__category">европейская кухня</div>
             </div>
           </a>
-          <a href="#" class="hotel-choose__hotel card-hotel">
+          <a href="card-page.html" class="hotel-choose__hotel card-hotel">
             <div class="card-hotel__body">
               <div class="card-hotel__photo">
                 <img src="img/hotels/photo_4.jpg" alt="">
               </div>
               <div class="card-hotel__info">
-                <div class="card-hotel__stars" data-stars="3"></div>
+                <div class="restoran__average-check">
+                  <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#check-ticket"></use>
+                  </svg>
+                  <span>от 500₽</span>
+                </div>
                 <div class="card-hotel__btn card-choose__btn btn-reset">
                   Выбрать
                 </div>
               </div>
             </div>
             <div class="card-hotel__footer">
-              <div class="card-hotel__name">Гостиница «Россия»</div>
-              <div class="card-hotel__category">гостиницы</div>
+              <div class="card-hotel__name">Ресторан «Ямбург»</div>
+              <div class="card-hotel__category">европейская кухня</div>
             </div>
           </a>
         </div>
