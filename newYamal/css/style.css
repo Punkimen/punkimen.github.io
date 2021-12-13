@@ -3523,6 +3523,7 @@ h2.section-title {
   display: block;
   width: 14px;
   height: 14px;
+  fill: #0E53AA;
 }
 
 .card-map__map {
@@ -4239,6 +4240,19 @@ body.dark .review-item::before {
 
 body.dark .review-item__arrow svg {
   fill: #fff;
+}
+
+body.dark .card-map__adress,
+body.dark .card-map__routes,
+body.dark .card-map__routes-icon {
+  background: #161616;
+  border-color: #1E1E1E;
+}
+
+body.dark .card-map__adress svg,
+body.dark .card-map__routes svg,
+body.dark .card-map__routes-icon svg {
+  fill: #41EA6D;
 }
 
 @media (min-width: 564px) {
