@@ -6691,6 +6691,9 @@ body.dark .card-map__routes-icon svg {
   .hotel-choose.restorans-choose .hotel-choose__filter {
     background: none;
     border: none;
+  }
+
+  .hotel-choose.restorans-choose .hotel-choose__filter.showSearch {
     margin-bottom: 50px;
   }
 
