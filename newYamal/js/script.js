@@ -57,34 +57,11 @@ $('.burger').on('click', function (e) {
     $('.header-menu').toggleClass('active');
 });
 
+$('.card-choose__btn').on('click', function (e) {
+    e.preventDefault()
+    $(this).toggleClass('current')
+})
 
-// animation
-function mainScreenBgAnimation() {
-    let count = 0
-    let bgItems = document.querySelectorAll('.main-screen__bg-item')
-    bgItems.forEach(el => {
-        let index = el.getAttribute('data-index')
-        el.style.zIndex = index
-    })
-    bgItems[count].classList.add('active')
-    let animTimer = window.setInterval(function () {
-        let maxCount = bgItems.length
-        if (++count == maxCount) {
-            count = 0
-            bgItems.forEach(el => {
-                el.classList.remove('active')
-            })
-            bgItems[count].classList.add('active')
-        } else {
-            bgItems.forEach(el => {
-                el.classList.remove('active')
-            })
-            bgItems[count].classList.add('active')
-        }
-    }, 5000)
-}
-
-mainScreenBgAnimation()
 
 $('.btn-change-theme').on('click', function () {
     $('.btn-change-theme').removeClass('active')
@@ -94,4 +71,64 @@ $('.btn-change-theme').on('click', function () {
     } else {
         $('body').removeClass('dark')
     }
+});
+
+
+
+// calendar
+(function () {
+    $(function () {
+        $('input[name="daterange"]').daterangepicker({
+            opens: 'right',
+            autoUpdateInput: false,
+            // showWeekNumbers: false,
+            // showISOWeekNumbers: false,
+            autoApply: true,
+            locale: {
+                format: 'DD.MM.YY',
+                cancelLabel: 'Clear',
+                daysOfWeek: false,
+                "monthNames": [
+                    "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+                ],
+                "daysOfWeek": [
+                ],
+            },
+
+        },
+            function (start, end, label) {
+                $('input[name="daterange"]').addClass('filed')
+            });
+    });
+    $('input[name="daterange"]').on('apply.daterangepicker', function (ev, picker) {
+        $(this).val(picker.startDate.format('DD.MM.YY') + ' - ' + picker.endDate.format('DD.MM.YY'));
+        $(this).parents('.costumn-calendar').addClass('filed')
+        $(this).parent().removeClass('error')
+        $(this).parents('.enter-banner__input').addClass('show-title')
+    });
+
+    $('input[name="daterange"]').on('cancel.daterangepicker', function (ev, picker) {
+        $(this).val('');
+    });
+})();
+
+
+// costumn-select
+
+$('.costumn-select .choosen-radio').on('change', function () {
+    let val = $(this).val()
+    $(this).parents('.costumn-select').find('.costumn-select__val').text(val);
+    $(this).parents('.costumn-select').addClass('filed');
+    $(this).parents('.costumn-select').find('.costumn-select__body').slideUp();
+    $(this).parents('.costumn-select').removeClass('active')
 })
+$('.costumn-select .costumn-select__head').on('click', function () {
+    if (!$(this).parents('.costumn-select').hasClass('costumn-calendar')) {
+        $(this).next().slideToggle();
+        $(this).parents('.costumn-select').toggleClass('active')
+    }
+})
+
+
+
+// bannerCard anomation

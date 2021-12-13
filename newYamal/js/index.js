@@ -252,3 +252,31 @@ $('.widgets-block__lang').on('click', function () {
     $(this).addClass('active')
 })
 
+// animation
+function mainScreenBgAnimation() {
+    let count = 0
+    let bgItems = document.querySelectorAll('.main-screen__bg-item')
+    bgItems.forEach(el => {
+        let index = el.getAttribute('data-index')
+        el.style.zIndex = index
+    })
+    bgItems[count].classList.add('active')
+    let animTimer = window.setInterval(function () {
+        let maxCount = bgItems.length
+        if (++count == maxCount) {
+            count = 0
+            bgItems.forEach(el => {
+                el.classList.remove('active')
+            })
+            bgItems[count].classList.add('active')
+        } else {
+            bgItems.forEach(el => {
+                el.classList.remove('active')
+            })
+            bgItems[count].classList.add('active')
+        }
+    }, 5000)
+}
+
+mainScreenBgAnimation();
+
