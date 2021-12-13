@@ -84,11 +84,13 @@ $('#show-var').on('click', function () {
     $(this).parents('.hotel-choose__filter').find('.hotel-choose__btns').addClass('visible')
     // $(this).parents('.hotel-choose__filter').addClass('showSearch')
     $(this).text('Изменить поиск').attr('data-do', 'change')
+    animTabsInit()
   } else if (dataDo === 'change') {
 
     if (windowWidth < 768) { $('.hotel-choose__catalog').hide() }
     $(this).parents('.hotel-choose__filter').find('.hotel-choose__btns').removeClass('visible')
     $(this).text('Посмотреть варианты').attr('data-do', 'show')
+    animTabsInit()
   }
 })
 
