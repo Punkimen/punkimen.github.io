@@ -13,10 +13,10 @@ const reviewsSlider = new Swiper('.reviews__slider', {
 const windowWidth = $(window).width()
 
 $('.review-item__arrow--prev').on('click', function () {
-  reviewsSlider.slideNext()
+  reviewsSlider.slidePrev()
 })
 $('.review-item__arrow--next').on('click', function () {
-  reviewsSlider.slidePrev()
+  reviewsSlider.slideNext()
 })
 
 let widht = $(window).width()
