@@ -99,9 +99,18 @@ $('.btn-change-theme').on('click', function () {
     $(this).addClass('active')
     if ($(this).attr('id') === 'dark-btn-theme') {
         $('body').addClass('dark')
+
+        if($('.pattern-bg').length>0){
+            $('.pattern-bg img').attr('src', 'img/bg-circle_dark.svg')
+        }
     } else {
         $('body').removeClass('dark')
+        if($('.pattern-bg').length>0){
+            $('.pattern-bg img').attr('src', 'img/bg-circle.svg')
+        }
     }
+
+
 });
 
 $('.phone-input').mask('+7(000)000-00-00');

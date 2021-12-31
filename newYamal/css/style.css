@@ -5421,6 +5421,11 @@ label.error {
   transform: translate(-50%, 80%);
 }
 
+.questions .container {
+  position: relative;
+  z-index: 2;
+}
+
 .questions__title {
   max-width: 431px;
   width: 100%;
