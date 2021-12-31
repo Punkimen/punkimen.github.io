@@ -61,11 +61,17 @@ function animTabsInit() {
 
     $(".category__btns").on("click", "a", function (e) {
         e.preventDefault();
-        $('.category__btns a').removeClass("active");
+        console.log(this);
+      
+        $(this).siblings().removeClass("active");
         $(this).addClass('active');
         var activeWidth = $(this).innerWidth();
         var itemPos = $(this).position();
-        $(".category-selector").css({
+        // $(".category-selector").css({
+        //     "left": itemPos.left + "px",
+        //     "width": activeWidth + "px"
+        // }); 
+         $(this).parents('.category__btns').find('.category-selector').css({
             "left": itemPos.left + "px",
             "width": activeWidth + "px"
         });
