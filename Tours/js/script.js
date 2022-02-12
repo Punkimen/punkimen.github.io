@@ -1,0 +1,101 @@
+"use strict";
+
+// costum-select
+(function () {
+  $('.custom-select__header').on('click', function () {
+    $(this).parents('.custom-select').toggleClass('open')
+    $(this).next().slideToggle()
+  })
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.custom-select')) {
+      $('.custom-select__body').slideUp();
+      $('.custom-select').removeClass('open')
+    }
+  })
+
+  $('.custom-select__radio').on('click', function () {
+    let value = $(this).val()
+    $(this).parents('.custom-select__item').addClass('current').siblings().removeClass('current')
+    $(this).parents('.custom-select').find('.custom-select__val').text(value)
+    $(this).parents('.custom-select').addClass('filed').removeClass('open')
+    $(this).parents('.custom-select__body').slideToggle()
+    // $(this).parents()
+  })
+})();
+
+// header
+(function () {
+  $('.burger__icon').on('click', function () {
+    $(this).toggleClass('active');
+    $('.mob-menu').slideToggle();
+  });
+
+  const mobmenuAddedNav = () => {
+    const windowWidth = $(window).width();
+    if (windowWidth <= 992) {
+      $('.mob-menu__content').prepend($('.header__nav'))
+      $('.mob-menu__content').append($('.header__lang'))
+      $('.mob-menu__top').prepend($('.switch-theme'))
+    } else {
+      $('.header__logo').after($('.header__nav'))
+    }
+  }
+  const mobmenuAddedOther = () => {
+    const windowWidth = $(window).width();
+    if (windowWidth <= 768) {
+      $('.mob-menu__content').append($('.header__lang'))
+      $('.mob-menu__top').prepend($('.switch-theme'))
+    } else {
+      $('.header__profile').after($('.header__lang'))
+      $('.header__profile').before($('.switch-theme'))
+    }
+  }
+  mobmenuAddedNav()
+  mobmenuAddedOther()
+  $(window).on('resize', function () {
+    mobmenuAddedNav();
+    mobmenuAddedOther();
+  })
+
+})();
+
+// animation
+(function () {
+  let bgItems = document.querySelectorAll('.hero__bg-item')
+  function mainScreenBgAnimation() {
+    let count = 0
+
+    bgItems.forEach(el => {
+      let index = el.getAttribute('data-index')
+      el.style.zIndex = index
+    })
+    bgItems[count].classList.add('active')
+
+    const heroBtns = document.querySelector('.hero__btns')
+
+    heroBtns.addEventListener('mousemove', function (e) {
+      const imgIndex = e.target.getAttribute('data-bg');
+      if (imgIndex == 1) {
+        bgItems.forEach(el => {
+          el.classList.remove('active')
+        })
+        bgItems[imgIndex].classList.add('active')
+      } else if (imgIndex == 2) {
+        bgItems.forEach(el => {
+          el.classList.remove('active')
+        })
+        bgItems[imgIndex].classList.add('active')
+      }
+    })
+    heroBtns.addEventListener('mouseleave', function () {
+      bgItems.forEach(el => {
+        el.classList.remove('active')
+      })
+      bgItems[0].classList.add('active')
+    })
+  }
+  if (bgItems.length) {
+    mainScreenBgAnimation();
+  }
+})();
