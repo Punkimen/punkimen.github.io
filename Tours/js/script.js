@@ -1,26 +1,8 @@
 "use strict";
-
-// costum-select
+// change theme 
 (function () {
-  $('.custom-select__header').on('click', function () {
-    $(this).parents('.custom-select').toggleClass('open')
-    $(this).next().slideToggle()
-  })
-
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.custom-select')) {
-      $('.custom-select__body').slideUp();
-      $('.custom-select').removeClass('open')
-    }
-  })
-
-  $('.custom-select__radio').on('click', function () {
-    let value = $(this).val()
-    $(this).parents('.custom-select__item').addClass('current').siblings().removeClass('current')
-    $(this).parents('.custom-select').find('.custom-select__val').text(value)
-    $(this).parents('.custom-select').addClass('filed').removeClass('open')
-    $(this).parents('.custom-select__body').slideToggle()
-    // $(this).parents()
+  $('#change-theme').on('change', function () {
+    $('body').toggleClass('dark')
   })
 })();
 
@@ -29,6 +11,7 @@
   $('.burger__icon').on('click', function () {
     $(this).toggleClass('active');
     $('.mob-menu').slideToggle();
+    $('body').toggleClass('overlay')
   });
 
   const mobmenuAddedNav = () => {
@@ -59,6 +42,30 @@
   })
 
 })();
+// costum-select
+(function () {
+  $('.custom-select__header').on('click', function () {
+    $(this).parents('.custom-select').toggleClass('open')
+    $(this).next().slideToggle()
+  })
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.custom-select')) {
+      $('.custom-select__body').slideUp();
+      $('.custom-select').removeClass('open')
+    }
+  })
+
+  $('.custom-select__radio').on('click', function () {
+    let value = $(this).val()
+    $(this).parents('.custom-select__item').addClass('current').siblings().removeClass('current')
+    $(this).parents('.custom-select').find('.custom-select__val').text(value)
+    $(this).parents('.custom-select').addClass('filed').removeClass('open')
+    $(this).parents('.custom-select__body').slideToggle()
+    // $(this).parents()
+  })
+})();
+
 
 // animation
 (function () {
@@ -98,4 +105,20 @@
   if (bgItems.length) {
     mainScreenBgAnimation();
   }
+})();
+
+
+// 100vh height
+(function () {
+  const setHeight = (el) => {
+    const paddingHeader = parseFloat($('.header').css('paddingTop')) + parseFloat($('.header').css('paddingBottom'))
+    const headerHeight = $('.header').height() + paddingHeader
+    $(el).css({
+      'height': `calc(100vh - ${headerHeight}px)`
+    })
+  }
+  setHeight('.100vh')
+  $(window).on('resize', function () {
+    setHeight('.100vh')
+  })
 })();
