@@ -54,12 +54,24 @@
             <div class="flipswitch-switch"></div>
           </label>
         </div>
-        <button type="button" class="header__profile btn-reset">
-          <svg class="">
-            <use xlink:href="./img/icons/icons.svg#user"></use>
-          </svg>
-          <span>Профиль</span>
-        </button>
+        <div class="profile">
+          <button type="button" class="header__profile btn-reset">
+            <svg class="">
+              <use xlink:href="./img/icons/icons.svg#user"></use>
+            </svg>
+            <span>Профиль</span>
+          </button>
+          <div class="profile-menu">
+            <ul class="profile-menu__btns">
+              <li class="profile-menu__elem">
+                <a href="#" class="profile-menu__btn btn">Войти</a>
+              </li>
+              <li class="profile-menu__elem">
+                <a href="#" class="profile-menu__btn btn">Регистрация</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="header__lang select-lang">
           <div class="custom-select">
             <div class="custom-select__header">
@@ -101,7 +113,6 @@
 </header>
 <div class="mob-menu">
   <div class="mob-menu__bg">
-    <!-- <img src="img/main/bg_1.jpg" alt="bg"> -->
   </div>
   <div class="container mob-menu__container">
     <div class="mob-menu__top"></div>

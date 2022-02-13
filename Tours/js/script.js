@@ -13,6 +13,15 @@
     $('.mob-menu').slideToggle();
     $('body').toggleClass('overlay')
   });
+  $('.header__profile').on('click', function () {
+    $('.profile-menu').slideToggle()
+  })
+
+  document.addEventListener('click', function (e) {
+    if ((!e.target.closest('.header__profile')) && (!e.target.closest('.profile-menu')) || (e.target.closest('.profile-menu__btn'))) {
+      $('.profile-menu').slideUp();
+    }
+  })
 
   const mobmenuAddedNav = () => {
     const windowWidth = $(window).width();
@@ -30,8 +39,8 @@
       $('.mob-menu__content').append($('.header__lang'))
       $('.mob-menu__top').prepend($('.switch-theme'))
     } else {
-      $('.header__profile').after($('.header__lang'))
-      $('.header__profile').before($('.switch-theme'))
+      $('.profile').after($('.header__lang'))
+      $('.profile').before($('.switch-theme'))
     }
   }
   mobmenuAddedNav()
