@@ -122,3 +122,19 @@
     setHeight('.100vh')
   })
 })();
+
+// video-popup
+
+$(document).ready(function () {
+  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
+});
+
+$('.mfp-close').innerText = ``
