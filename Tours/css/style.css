@@ -753,7 +753,7 @@ body.dark .select_arrow svg {
     margin-right: 15px;
   }
 
-  .header__profile {
+  .profile {
     margin-right: 10px;
   }
 
@@ -849,10 +849,6 @@ body.dark .select_arrow svg {
     max-width: 39px;
   }
 
-  .header__profile {
-    margin-right: 25px;
-  }
-
   .header__profile span {
     display: none;
   }
@@ -880,6 +876,10 @@ body.dark .select_arrow svg {
   .header__lang .custom-select__body {
     background: none;
     box-shadow: none;
+  }
+
+  .profile {
+    margin-right: 0;
   }
 
   .switch-theme {
