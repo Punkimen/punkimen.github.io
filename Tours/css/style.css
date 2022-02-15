@@ -1550,10 +1550,23 @@ body.dark .burger__icon span {
 
 body.dark .custom-select__body {
   background: #545454;
+  color: #fff;
 }
 
 body.dark .select_arrow svg {
   stroke: #fff;
+}
+
+body.dark .form-select .custom-select__header {
+  border: 1px solid #545454;
+  background: #545454;
+  color: #fff;
+}
+
+body.dark .input-date input {
+  border: 1px solid #545454;
+  background: #545454;
+  color: #fff;
 }
 
 .mfp-fade.mfp-bg {
