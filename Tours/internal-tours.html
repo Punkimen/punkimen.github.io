@@ -12,6 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
         integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -336,9 +338,88 @@
               </div>
             </div>
             <div class="find-tour__select input-date" data-text="Заполните поле">
-              <input required name="date-birth" type="text" autocomplete="off" placeholder="Начало тура">
+              <input id="calendar-date" required name="date" type="text" autocomplete="off" placeholder="Начало тура">
               <div class="input-date__icon">
                 <img src="img/icon/calendar.svg" alt="calendar">
+              </div>
+              <div class="input-date__calendar calendar">
+                <div class="calendar__header">
+                  <div class="calendar__selects">
+                    <div id="months" class="custom-select custom-select__calendar">
+                      <div class="custom-select__header">
+                        <span class="custom-select__val">
+                          Январь
+                        </span>
+                        <div class="select_arrow">
+                          <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#arrow"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="custom-select__body">
+                        <!-- <div class="custom-select__item">
+                          <span class="custom-select__choose">
+                            Январь
+                          </span>
+                          <input class="custom-select__radio" checked value="Январь" name="month" type="radio">
+                        </div>
+                        <div class="custom-select__item">
+                          <span class="custom-select__choose">
+                            Январь
+                          </span>
+                          <input class="custom-select__radio" value="Январь" name="month" type="radio">
+                        </div>
+                        <div class="custom-select__item">
+                          <span class="custom-select__choose">
+                            Трансфер
+                          </span>
+                          <input class="custom-select__radio" value="Трансфер" name="transfer" type="radio">
+                        </div> -->
+                      </div>
+                    </div>
+                    <div id="year" class="custom-select custom-select__calendar">
+                      <div class="custom-select__header">
+
+                        <span class="custom-select__val">
+                          2022
+                        </span>
+                        <div class="select_arrow">
+                          <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#arrow"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="custom-select__body">
+                        <!-- <div class="custom-select__item">
+                          <span class="custom-select__choose">
+                            2022
+                          </span>
+                          <input class="custom-select__radio" checked value="2022" name="year" type="radio">
+                        </div>
+                        <div class="custom-select__item">
+                          <span class="custom-select__choose">
+                            2022
+                          </span>
+                          <input class="custom-select__radio" value="2022" name="year" type="radio">
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar__weeks calendar-grid">
+                    <div class="calendar-grid__item">Пн</div>
+                    <div class="calendar-grid__item">Вт</div>
+                    <div class="calendar-grid__item">Ср</div>
+                    <div class="calendar-grid__item">Чт</div>
+                    <div class="calendar-grid__item">Пт</div>
+                    <div class="calendar-grid__item">Сб</div>
+                    <div class="calendar-grid__item">Вс</div>
+                  </div>
+                </div>
+                <div class="calendar__body">
+                  <div class="calendar-grid calendar__days">
+
+                  </div>
+                </div>
               </div>
             </div>
             <div class="find-tour__select ">
@@ -793,11 +874,13 @@
 
   </div>
 </section>
-        <!-- <a class="squirrel__btn btn-reset popup-youtube" href="http://www.youtube.com/watch?v=5qap5aO4i9A">
-            <img src="img/squirrel.svg" alt="squirrel about">
-            <span class="squirrel__btn-sky">Узнать о нас</span>
-        </a> -->
+        <a class="about-btn btn-reset popup-youtube" href="http://www.youtube.com/watch?v=5qap5aO4i9A">
+            <span class="">Узнать о нас</span>
+        </a>
     </main>
+    <!-- <a class="squirrel__btn popup-youtube" href="http://www.youtube.com/watch?v=5qap5aO4i9A">
+        <span class="squirrel__btn-sky">Узнать о нас</span>
+    </a> -->
     <footer class="footer">
   <div class="container">
     <div class="footer__wrapper">
@@ -917,6 +1000,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
         integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"
+        integrity="sha512-Yk47FuYNtuINE1w+t/KT4BQ7JaycTCcrvlSvdK/jry6Kcxqg5vN7/svVWCxZykVzzJHaxXk5T9jnFemZHSYgnw=="
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
