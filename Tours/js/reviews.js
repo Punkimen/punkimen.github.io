@@ -1,17 +1,34 @@
 const swiperReviews = new Swiper('.reviews__slider', {
   loop: false,
-  spaceBetween: 30,
-  slidesPerView: 2,
+  spaceBetween: 15,
+  slidesPerView: 1,
   autoHeigh: true,
+  breakpoints: {
+
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    }
+  }
 });
 const swiperVideo = new Swiper('.reviews-videos__slider', {
   loop: false,
-  spaceBetween: 30,
-  slidesPerView: 3,
+  spaceBetween: 15,
+  slidesPerView: 1,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  }
 });
 
-let count = 1;
-let countMax = $('.reviews-slide').length - 1;
+let count = swiperReviews.activeIndex + 1;
+let countMax = $('.reviews-slide').length;
 function sliderCountSet(count) {
   $('#start-slide').text(count)
   $('#end-slide').text(countMax)

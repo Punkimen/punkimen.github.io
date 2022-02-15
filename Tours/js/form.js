@@ -84,13 +84,15 @@
     const allFileds = document.querySelectorAll('.find-tour__select');
     const windowWidth = $(window).width();
     if (windowWidth <= 992) {
-      allFileds.forEach(el => {
+      allFileds.forEach((el, index) => {
+        el.style.order = index;
         $('.find-tour__row_top').append(el)
         $('.find-tour__checkbox').after($('.find-tour__btn'))
       })
     } else {
       allFileds.forEach((el, index) => {
         if (index > 4) {
+          el.style.order = 0;
           $('.find-tour__row_bottom').append(el)
           $('.find-tour__row_bottom').append($('.find-tour__btn'))
         }
@@ -99,4 +101,7 @@
     }
   }
   selectsPosition()
+  $(window).on('resize', function () {
+    selectsPosition()
+  })
 })();
