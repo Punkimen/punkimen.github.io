@@ -17,10 +17,62 @@
   });
   $('.input-date input').on('apply.daterangepicker', function (ev, picker) {
     $(this).val(picker.startDate.format('MM/DD/YYYY'));
+    $(this).parents('.find-tour__select').addClass('filed')
+    $(this).parents('.find-tour__select').removeClass('error')
+
   });
   $('.input-date input').on('cancel.daterangepicker', function (ev, picker) {
     $(this).val('');
   });
+
+  const setValue = () => {
+    const nightCount = $('#nights-count').text()
+    const adultCount = $('#adult-count').text()
+    const childCount = $('#child-count').text()
+    $('#nights').text(nightCount)
+    $('#adults').text(adultCount)
+    $('#child').text(childCount)
+  }
+
+  $('.plus-btn').on('click', function () {
+    let countVal = parseInt($(this).parent().find('.custom-select__handle-val').text())
+    countVal++
+    if (countVal > 0) {
+      $(this).parents('.custom-select').addClass('filed');
+      $(this).parents('.custom-select').removeClass('error')
+    }
+    $(this).parent().find('.custom-select__handle-val').text(countVal)
+    setValue()
+  })
+  $('.minus-btn').on('click', function () {
+    let countVal = parseInt($(this).parent().find('.custom-select__handle-val').text())
+    if (countVal > 0) {
+      $(this).parents('.custom-select').addClass('filed')
+      $(this).parents('.custom-select').removeClass('error')
+      countVal--
+    }
+    $(this).parent().find('.custom-select__handle-val').text(countVal)
+    setValue()
+  })
 })();
 
-
+const formValidate = () => {
+  const inputsFileds = $('#find-tour .custom-select')
+  const inputDate = $('#find-tour .input-date')
+  inputsFileds.each((index, el) => {
+    if (!el.classList.contains('filed')) {
+      console.log(el);
+      el.classList.add('error')
+      fieldForm = false
+    } else {
+      el.classList.remove('error')
+      fieldForm = true
+    }
+  })
+  if (!inputDate.hasClass('filed')) {
+    inputDate.addClass('error')
+  }
+}
+$('#serch-btn').on('click', function () {
+  formValidate()
+})

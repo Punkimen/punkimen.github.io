@@ -2,861 +2,850 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start</title>
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-    integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+        integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="container">
-      <div class="header__wrapper">
-        <a href="index.html" class="header__logo">
-          <picture>
-            <source srcset="img/logo_mob.svg" media="(max-width: 768px)">
-            <source srcset="img/logo.svg">
-            <img srcset="img/logo.svg" alt="logo">
-          </picture>
-        </a>
-        <nav class="header__nav">
-          <ul class="header__list">
-            <li class="header__elem">
-              <a href="#" class="header__link">Туры в Кыргызстан</a>
-            </li>
-            <li class="header__elem">
-              <a href="#" class="header__link">Паломнический тур в Мекку</a>
-            </li>
-            <li class="header__elem">
-              <a href="#" class="header__link">Партнёрам </a>
-            </li>
-            <li class="header__elem">
-              <a href="#" class="header__link">Проверить статус заявки</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__right">
-          <div class="flipswitch switch-theme">
-            <input required required type="checkbox" checked id="change-theme" class="flipswitch-cb" name="flipswitch">
-            <label for="change-theme" class="flipswitch-label">
-              <div class="flipswitch-inner"></div>
-              <div class="flipswitch-switch"></div>
-            </label>
+    <header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <a href="/" class="header__logo">
+        <picture>
+          <source srcset="img/logo_mob.svg" media="(max-width: 768px)">
+          <source srcset="img/logo.svg">
+          <img srcset="img/logo.svg" alt="logo">
+        </picture>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__elem">
+            <a href="#" class="header__link">Туры в Кыргызстан</a>
+          </li>
+          <li class="header__elem">
+            <a href="#" class="header__link">Паломнический тур в Мекку</a>
+          </li>
+          <li class="header__elem">
+            <a href="#" class="header__link">Партнёрам </a>
+          </li>
+          <li class="header__elem">
+            <a href="#" class="header__link">Проверить статус заявки</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <div class="flipswitch switch-theme">
+          <input required required type="checkbox" checked id="change-theme" class="flipswitch-cb" name="flipswitch">
+          <label for="change-theme" class="flipswitch-label">
+            <div class="flipswitch-inner"></div>
+            <div class="flipswitch-switch"></div>
+          </label>
+        </div>
+        <div class="profile">
+          <button type="button" class="header__profile btn-reset">
+            <svg class="">
+              <use xlink:href="./img/icons/icons.svg#user"></use>
+            </svg>
+            <span>Профиль</span>
+          </button>
+          <div class="profile-menu">
+            <ul class="profile-menu__btns">
+              <li class="profile-menu__elem">
+                <a href="#" class="profile-menu__btn btn">Войти</a>
+              </li>
+              <li class="profile-menu__elem">
+                <a href="#" class="profile-menu__btn btn">Регистрация</a>
+              </li>
+            </ul>
           </div>
-          <div class="profile">
-            <button type="button" class="header__profile btn-reset">
-              <svg class="">
-                <use xlink:href="./img/icons/icons.svg#user"></use>
-              </svg>
-              <span>Профиль</span>
-            </button>
-            <div class="profile-menu">
-              <ul class="profile-menu__btns">
-                <li class="profile-menu__elem">
-                  <a href="#" class="profile-menu__btn btn">Войти</a>
-                </li>
-                <li class="profile-menu__elem">
-                  <a href="#" class="profile-menu__btn btn">Регистрация</a>
-                </li>
-              </ul>
+        </div>
+        <div class="header__lang select-lang">
+          <div class="custom-select">
+            <div class="custom-select__header">
+              <span class="custom-select__val">
+                RU
+              </span>
+              <div class="select_arrow">
+                <svg class="">
+                  <use xlink:href="./img/icons/icons.svg#arrow"></use>
+                </svg>
+              </div>
             </div>
-          </div>
-          <div class="header__lang select-lang">
-            <div class="custom-select">
-              <div class="custom-select__header">
-                <span class="custom-select__val">
+            <div class="custom-select__body">
+              <div class="custom-select__item">
+                <span class="custom-select__choose">
                   RU
                 </span>
-                <div class="select_arrow">
-                  <svg class="">
-                    <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                  </svg>
-                </div>
+                <input class="custom-select__radio" checked value="RU" name="language" type="radio">
               </div>
-              <div class="custom-select__body">
-                <div class="custom-select__item">
-                  <span class="custom-select__choose">
-                    RU
-                  </span>
-                  <input class="custom-select__radio" checked value="RU" name="language" type="radio">
-                </div>
-                <div class="custom-select__item">
-                  <span class="custom-select__choose">
-                    EN
-                  </span>
-                  <input class="custom-select__radio" value="EN" name="language" type="radio">
-                </div>
+              <div class="custom-select__item">
+                <span class="custom-select__choose">
+                  EN
+                </span>
+                <input class="custom-select__radio" value="EN" name="language" type="radio">
               </div>
-            </div>
-          </div>
-          <div class="header__burger">
-            <div class="burger__icon icon-menu">
-              <span></span>
-              <span></span>
-              <span></span>
             </div>
           </div>
         </div>
+        <div class="header__burger">
+          <div class="burger__icon icon-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
-    </div>
-  </header>
-  <div class="mob-menu">
-    <div class="mob-menu__bg">
-    </div>
-    <div class="container mob-menu__container">
-      <div class="mob-menu__top"></div>
-      <div class="mob-menu__content"></div>
     </div>
   </div>
-  <main class="main-page">
-    <section class="find full-section 100vh" style="background-image:url(img/pilgrimage/bg_1.jpg)">
-      <div class="container">
-        <div class="full-section__wrapper">
-          <form id="find-tour" class="find-tour" action="#">
-            <h3 class="find-tour__title section-title">Найти тур мечты</h3>
-            <div class="find-tour__wrapper">
-              <div class="find-tour__row find-tour__row_top">
-                <div class="find-tour__select">
-                  <div class="custom-select form-select">
-                    <div class="custom-select__header">
-                      <span class="custom-select__val">
-                        Страна отправления
-                      </span>
-                      <div class="select_arrow">
-                        <svg class="">
-                          <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="custom-select__body">
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Кыргызстан
-                        </span>
-                        <input class="custom-select__radio" checked value="Кыргызстан" name="departure" type="radio">
-                      </div>
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Кыргызстан
-                        </span>
-                        <input class="custom-select__radio" value="Кыргызстан" name="departure" type="radio">
-                      </div>
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Кыргызстан
-                        </span>
-                        <input class="custom-select__radio" value="Кыргызстан" name="departure" type="radio">
-                      </div>
-                    </div>
+</header>
+<div class="mob-menu">
+  <div class="mob-menu__bg">
+  </div>
+  <div class="container mob-menu__container">
+    <div class="mob-menu__top"></div>
+    <div class="mob-menu__content"></div>
+  </div>
+</div>
+    <main class="main-page">
+        <section class="find full-section 100vh" style="background-image:url(img/pilgrimage/bg_1.jpg)">
+  <div class="container">
+    <div class="full-section__wrapper">
+      <form id="find-tour" class="find-tour" action="#">
+        <h3 class="find-tour__title section-title">Найти тур мечты</h3>
+        <div class="find-tour__wrapper">
+          <div class="find-tour__row find-tour__row_top">
+            <div class="find-tour__select">
+              <div class="custom-select form-select" data-text="Заполните поле">
+                <div class="custom-select__header">
+                  <span class="custom-select__val">
+                    Страна отправления
+                  </span>
+                  <div class="select_arrow">
+                    <svg class="">
+                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
+                    </svg>
                   </div>
                 </div>
-                <div class="find-tour__select">
-                  <div class="custom-select form-select">
-                    <div class="custom-select__header">
-                      <span class="custom-select__val">
-                        Город
-                      </span>
-                      <div class="select_arrow">
-                        <svg class="">
-                          <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="custom-select__body">
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Бишкек
-                        </span>
-                        <input class="custom-select__radio" checked value="Бишкек" name="city_from" type="radio">
-                      </div>
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Бишкек
-                        </span>
-                        <input class="custom-select__radio" value="Бишкек" name="city_from" type="radio">
-                      </div>
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Бишкек
-                        </span>
-                        <input class="custom-select__radio" value="Бишкек" name="city_from" type="radio">
-                      </div>
-                    </div>
+                <div class="custom-select__body">
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Кыргызстан
+                    </span>
+                    <input class="custom-select__radio" checked value="Кыргызстан" name="departure" type="radio">
                   </div>
-                </div>
-                <div class="find-tour__select">
-                  <div class="custom-select form-select">
-                    <div class="custom-select__header">
-                      <span class="custom-select__val">
-                        Страна
-                      </span>
-                      <div class="select_arrow">
-                        <svg class="">
-                          <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="custom-select__body">
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Кыргызстан
-                        </span>
-                        <input class="custom-select__radio" checked value="Кыргызстан" name="country-to" type="radio">
-                      </div>
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Кыргызстан
-                        </span>
-                        <input class="custom-select__radio" value="Кыргызстан" name="country-to" type="radio">
-                      </div>
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Кыргызстан
-                        </span>
-                        <input class="custom-select__radio" value="Кыргызстан" name="country-to" type="radio">
-                      </div>
-                    </div>
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Кыргызстан
+                    </span>
+                    <input class="custom-select__radio" value="Кыргызстан" name="departure" type="radio">
                   </div>
-                </div>
-                <div class="find-tour__select">
-                  <div class="custom-select form-select">
-                    <div class="custom-select__header">
-                      <span class="custom-select__val">
-                        Город прибытия
-                      </span>
-                      <div class="select_arrow">
-                        <svg class="">
-                          <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="custom-select__body">
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Бишкек
-                        </span>
-                        <input class="custom-select__radio" checked value="Бишкек" name="city-to" type="radio">
-                      </div>
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Бишкек
-                        </span>
-                        <input class="custom-select__radio" value="Бишкек" name="city-to" type="radio">
-                      </div>
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Бишкек
-                        </span>
-                        <input class="custom-select__radio" value="Бишкек" name="city-to" type="radio">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="find-tour__select">
-                  <div class="custom-select form-select">
-                    <div class="custom-select__header">
-                      <span class="custom-select__val">
-                        Отель
-                      </span>
-                      <div class="select_arrow">
-                        <svg class="">
-                          <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="custom-select__body">
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Отель
-                        </span>
-                        <input class="custom-select__radio" checked value="Отель" name="hotel" type="radio">
-                      </div>
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Отель
-                        </span>
-                        <input class="custom-select__radio" value="Отель" name="hotel" type="radio">
-                      </div>
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Отель
-                        </span>
-                        <input class="custom-select__radio" value="Отель" name="hotel" type="radio">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="find-tour__row find-tour__row_bottom">
-                <div class="find-tour__select">
-                  <div class="custom-select form-select">
-                    <div class="custom-select__header">
-                      <span class="custom-select__val">
-                        Трансфер
-                      </span>
-                      <div class="select_arrow">
-                        <svg class="">
-                          <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="custom-select__body">
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Трансфер
-                        </span>
-                        <input class="custom-select__radio" checked value="Трансфер" name="transfer" type="radio">
-                      </div>
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Трансфер
-                        </span>
-                        <input class="custom-select__radio" value="Трансфер" name="transfer" type="radio">
-                      </div>
-                      <div class="custom-select__item">
-                        <span class="custom-select__choose">
-                          Трансфер
-                        </span>
-                        <input class="custom-select__radio" value="Трансфер" name="transfer" type="radio">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="find-tour__select input-date">
-                  <input required name="date-birth" type="text" autocomplete="off" placeholder="Начало тура">
-                  <div class="input-date__icon">
-                    <img src="img/icon/calendar.svg" alt="calendar">
-                  </div>
-                </div>
-                <div class="find-tour__select">
-                  <div class="custom-select form-select">
-                    <div class="custom-select__header">
-                      <span id="nights-count" class="custom-select__val">
-                        Ночей
-                      </span>
-                      <div class="select_arrow">
-                        <svg class="">
-                          <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="custom-select__body">
-                      <div class="custom-select__row">
-                        <div class="custom-select__handle">
-                          <div class="custom-select__handle-btn plus-btn">
-                            <span></span>
-                          </div>
-                          <div class="custom-select__handle-val">1</div>
-                          <div class="custom-select__handle-btn minus-btn">
-                            <span></span>
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="find-tour__select">
-                  <div class="custom-select form-select">
-                    <div class="custom-select__header">
-                      <span class="custom-select__val">
-                        <div class="custom-select__filed">
-                          <div class="custom-select__item-val">Взрослых <span id="adults">1</span> </div>
-                          <div class="custom-select__item-val">детей <span id="child">0</span></div>
-                        </div>
-                      </span>
-                      <div class="select_arrow">
-                        <svg class="">
-                          <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="custom-select__body">
-                      <div class="custom-select__row">
-                        <div class="custom-select__label">Взрослые</div>
-                        <div class="custom-select__handle">
-                          <div class="custom-select__handle-btn plus-btn">
-                            <span></span>
-                          </div>
-                          <div class="custom-select__handle-val">1</div>
-                          <div class="custom-select__handle-btn minus-btn">
-                            <span></span>
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="custom-select__row">
-                        <div class="custom-select__label">Дети</div>
-                        <div class="custom-select__handle">
-                          <div class="custom-select__handle-btn plus-btn">
-                            <span></span>
-                          </div>
-                          <div class="custom-select__handle-val">1</div>
-                          <div class="custom-select__handle-btn minus-btn">
-                            <span></span>
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button type="button" class="find-tour__btn btn">Найти тур</button>
-              </div>
-              <div class="find-tour__checkbox">
-                <label class="control control-group__item control-checkbox">
-                  <div class="contol-group__text">
-                    Нужен гид
-                  </div>
-                  <input required type="checkbox" name="updates" />
-                  <div class="control_indicator"></div>
-                </label>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="partners">
-        <div class="container">
-          <div class="partners__wrapper">
-            <div class="partners__item">
-              <img src="img/partners/logo_1.svg" alt="Kompas">
-            </div>
-            <div class="partners__item">
-              <img src="img/partners/logo_2.svg" alt="Voyager">
-            </div>
-            <div class="partners__item">
-              <img src="img/partners/logo_3.svg" alt="Touristalia">
-            </div>
-            <div class="partners__item">
-              <img src="img/partners/logo_4.svg" alt="Pegas">
-            </div>
-            <div class="partners__item">
-              <img src="img/partners/logo_5.svg" alt="CIP">
-            </div>
-            <div class="partners__item">
-              <img src="img/partners/logo_6.svg" alt="Best Service">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="text-section full-section" style="background-image:url(img/pilgrimage/bg_2.jpg)">
-      <div class="container">
-        <div class="text-section__content">
-          <h2 class="text-section__title section-title">11 лет на турестическом рынке</h2>
-          <div class="text-section__text">
-            <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и уточнения
-              позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько
-              очевидна,
-              что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени
-              обуславливает создание направлений прогрессивного развития. </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="text-section full-section" style="background-image:url(img/pilgrimage/bg_3.jpg)">
-      <div class="container">
-        <div class="text-section__content text-section__content_right">
-          <h2 class="text-section__title section-title">Почему выбирают нас</h2>
-          <div class="text-section__text">
-            <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и уточнения
-              позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько
-              очевидна,
-              что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени
-              обуславливает создание направлений прогрессивного развития. </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="reviews full-section" style="background-image:url(img/pilgrimage/bg_4.jpg)">
-      <div class="container">
-        <div class="full-section__wrapper">
-          <div class="reviews__content">
-            <h3 class="section-title reviews__title">Отзывы</h3>
-            <div class="reviews__slider swiper">
-              <div class="swiper-wrapper">
-                <div class="reviews-slide swiper-slide">
-                  <div class="reviews-slide__header">
-                    <div class="reviews-slide__name">Петр</div>
-                    <div class="reviews-slide__date">февраль, 2021</div>
-                  </div>
-                  <div class="reviews-slide__body">
-                    <div class="reviews-slide__text">
-                      <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и
-                        уточнения позиций, занимаемых участниками в отношении поставленных задач. Значимость этих
-                        проблем
-                        настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности
-                        в
-                        значительной степени обуславливает создание направлений прогрессивного развития. </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="reviews-slide swiper-slide">
-                  <div class="reviews-slide__header">
-                    <div class="reviews-slide__name">Петр</div>
-                    <div class="reviews-slide__date">февраль, 2021</div>
-                  </div>
-                  <div class="reviews-slide__body">
-                    <div class="reviews-slide__text">
-                      <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и
-                        уточнения позиций, занимаемых участниками в отношении поставленных задач. Значимость этих
-                        проблем
-                        настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности
-                        в
-                        значительной степени обуславливает создание направлений прогрессивного развития. </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="reviews-slide swiper-slide">
-                  <div class="reviews-slide__header">
-                    <div class="reviews-slide__name">Петр</div>
-                    <div class="reviews-slide__date">февраль, 2021</div>
-                  </div>
-                  <div class="reviews-slide__body">
-                    <div class="reviews-slide__text">
-                      <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и
-                        уточнения позиций, занимаемых участниками в отношении поставленных задач. Значимость этих
-                        проблем
-                        настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности
-                        в
-                        значительной степени обуславливает создание направлений прогрессивного развития. </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="reviews-slide swiper-slide">
-                  <div class="reviews-slide__header">
-                    <div class="reviews-slide__name">Петр</div>
-                    <div class="reviews-slide__date">февраль, 2021</div>
-                  </div>
-                  <div class="reviews-slide__body">
-                    <div class="reviews-slide__text">
-                      <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и
-                        уточнения позиций, занимаемых участниками в отношении поставленных задач. Значимость этих
-                        проблем
-                        настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности
-                        в
-                        значительной степени обуславливает создание направлений прогрессивного развития. </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="reviews-slide swiper-slide">
-                  <div class="reviews-slide__header">
-                    <div class="reviews-slide__name">Петр</div>
-                    <div class="reviews-slide__date">февраль, 2021</div>
-                  </div>
-                  <div class="reviews-slide__body">
-                    <div class="reviews-slide__text">
-                      <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и
-                        уточнения позиций, занимаемых участниками в отношении поставленных задач. Значимость этих
-                        проблем
-                        настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности
-                        в
-                        значительной степени обуславливает создание направлений прогрессивного развития. </p>
-                    </div>
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Кыргызстан
+                    </span>
+                    <input class="custom-select__radio" value="Кыргызстан" name="departure" type="radio">
                   </div>
                 </div>
               </div>
             </div>
-            <div class="sliders__handle">
-              <button id="reviews-slider__prev" type="button" class="reviews-slider__btn btn-reset">
-                <svg class="">
-                  <use xlink:href="./img/icons/icons.svg#arrow-slide"></use>
-                </svg>
-              </button>
-              <div class="reviews-slider__count">
-                <span id="start-slide" class="reviews-slider__count-item">1</span>
-                <span id="end-slide" class="reviews-slider__count-item">5</span>
+            <div class="find-tour__select">
+              <div class="custom-select form-select" data-text="Заполните поле">
+                <div class="custom-select__header">
+                  <span class="custom-select__val">
+                    Город
+                  </span>
+                  <div class="select_arrow">
+                    <svg class="">
+                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="custom-select__body">
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Бишкек
+                    </span>
+                    <input class="custom-select__radio" checked value="Бишкек" name="city_from" type="radio">
+                  </div>
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Бишкек
+                    </span>
+                    <input class="custom-select__radio" value="Бишкек" name="city_from" type="radio">
+                  </div>
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Бишкек
+                    </span>
+                    <input class="custom-select__radio" value="Бишкек" name="city_from" type="radio">
+                  </div>
+                </div>
               </div>
-              <button id="reviews-slider__next" type="button" class="reviews-slider__btn btn-reset">
-                <svg class="">
-                  <use xlink:href="./img/icons/icons.svg#arrow-slide"></use>
-                </svg>
-              </button>
             </div>
-            <div class="reviews-videos">
-              <div class="reviews-videos__slider swiper">
-                <div class="swiper-wrapper">
-                  <div class="reviews-videos__video swiper-slide">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A"
-                      title="YouTube video player" frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="find-tour__select">
+              <div class="custom-select form-select" data-text="Заполните поле">
+                <div class="custom-select__header">
+                  <span class="custom-select__val">
+                    Страна
+                  </span>
+                  <div class="select_arrow">
+                    <svg class="">
+                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
+                    </svg>
                   </div>
-                  <div class="reviews-videos__video swiper-slide">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A"
-                      title="YouTube video player" frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+                </div>
+                <div class="custom-select__body">
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Кыргызстан
+                    </span>
+                    <input class="custom-select__radio" checked value="Кыргызстан" name="country-to" type="radio">
                   </div>
-                  <div class="reviews-videos__video swiper-slide">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A"
-                      title="YouTube video player" frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Кыргызстан
+                    </span>
+                    <input class="custom-select__radio" value="Кыргызстан" name="country-to" type="radio">
                   </div>
-                  <div class="reviews-videos__video swiper-slide">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A"
-                      title="YouTube video player" frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Кыргызстан
+                    </span>
+                    <input class="custom-select__radio" value="Кыргызстан" name="country-to" type="radio">
                   </div>
-                  <div class="reviews-videos__video swiper-slide">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A"
-                      title="YouTube video player" frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="find-tour__select">
+              <div class="custom-select form-select" data-text="Заполните поле">
+                <div class="custom-select__header">
+                  <span class="custom-select__val">
+                    Город прибытия
+                  </span>
+                  <div class="select_arrow">
+                    <svg class="">
+                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="custom-select__body">
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Бишкек
+                    </span>
+                    <input class="custom-select__radio" checked value="Бишкек" name="city-to" type="radio">
+                  </div>
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Бишкек
+                    </span>
+                    <input class="custom-select__radio" value="Бишкек" name="city-to" type="radio">
+                  </div>
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Бишкек
+                    </span>
+                    <input class="custom-select__radio" value="Бишкек" name="city-to" type="radio">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="find-tour__select">
+              <div class="custom-select form-select form-select_hotel" data-text="Заполните поле">
+                <div class="custom-select__header">
+                  <span class="custom-select__val">
+                    Отель
+                  </span>
+                  <div class="select_arrow">
+                    <svg class="">
+                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="custom-select__body">
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Отель
+                    </span>
+                    <input class="custom-select__radio" checked value="Отель" name="hotel" type="radio">
+                  </div>
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Отель
+                    </span>
+                    <input class="custom-select__radio" value="Отель" name="hotel" type="radio">
+                  </div>
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Отель
+                    </span>
+                    <input class="custom-select__radio" value="Отель" name="hotel" type="radio">
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="find-tour__row find-tour__row_bottom">
+            <div class="find-tour__select">
+              <div class="custom-select form-select" data-text="Заполните поле">
+                <div class="custom-select__header">
+                  <span class="custom-select__val">
+                    Трансфер
+                  </span>
+                  <div class="select_arrow">
+                    <svg class="">
+                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="custom-select__body">
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Трансфер
+                    </span>
+                    <input class="custom-select__radio" checked value="Трансфер" name="transfer" type="radio">
+                  </div>
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Трансфер
+                    </span>
+                    <input class="custom-select__radio" value="Трансфер" name="transfer" type="radio">
+                  </div>
+                  <div class="custom-select__item">
+                    <span class="custom-select__choose">
+                      Трансфер
+                    </span>
+                    <input class="custom-select__radio" value="Трансфер" name="transfer" type="radio">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="find-tour__select input-date" data-text="Заполните поле">
+              <input required name="date-birth" type="text" autocomplete="off" placeholder="Начало тура">
+              <div class="input-date__icon">
+                <img src="img/icon/calendar.svg" alt="calendar">
+              </div>
+            </div>
+            <div class="find-tour__select ">
+              <div class="custom-select form-select" data-text="Заполните поле">
+                <div class="custom-select__header">
+                  <span id="nights" class="custom-select__val">
+                    Ночей
+                  </span>
+                  <div class="select_arrow">
+                    <svg class="">
+                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="custom-select__body">
+                  <div class="custom-select__row">
+                    <div class="custom-select__handle">
+                      <div class="custom-select__handle-btn minus-btn">
+                        <span></span>
+                      </div>
+                      <div id="nights-count" class="custom-select__handle-val">0</div>
+                      <div class="custom-select__handle-btn plus-btn">
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="find-tour__select ">
+              <div class="custom-select form-select filed" data-text="Заполните поле">
+                <div class="custom-select__header">
+                  <span class="custom-select__val">
+                    <div class="custom-select__filed">
+                      <div class="custom-select__item-val">Взрослых <span id="adults">1</span> </div>
+                      <div class="custom-select__item-val">детей <span id="child">0</span></div>
+                    </div>
+                  </span>
+                  <div class="select_arrow">
+                    <svg class="">
+                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="custom-select__body">
+                  <div class="custom-select__row">
+                    <div class="custom-select__label">Взрослые</div>
+                    <div class="custom-select__handle">
+                      <div class="custom-select__handle-btn minus-btn">
+                        <span></span>
+                      </div>
+                      <div id="adult-count" class="custom-select__handle-val">1</div>
+                      <div class="custom-select__handle-btn plus-btn">
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="custom-select__row">
+                    <div class="custom-select__label">Дети</div>
+                    <div class="custom-select__handle">
+                      <div class="custom-select__handle-btn minus-btn">
+                        <span></span>
+                      </div>
+                      <div id="child-count" class="custom-select__handle-val">1</div>
+                      <div class="custom-select__handle-btn plus-btn">
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button id="serch-btn" type="button" class="find-tour__btn btn">Найти тур</button>
+          </div>
+          <div class="find-tour__checkbox">
+            <label class="control control-group__item control-checkbox">
+              <div class="contol-group__text">
+                Нужен гид
+              </div>
+              <input required type="checkbox" name="updates" />
+              <div class="control_indicator"></div>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="partners">
+    <div class="container">
+      <div class="partners__wrapper">
+        <div class="partners__item">
+          <img src="img/partners/logo_1.svg" alt="Kompas">
+        </div>
+        <div class="partners__item">
+          <img src="img/partners/logo_2.svg" alt="Voyager">
+        </div>
+        <div class="partners__item">
+          <img src="img/partners/logo_3.svg" alt="Touristalia">
+        </div>
+        <div class="partners__item">
+          <img src="img/partners/logo_4.svg" alt="Pegas">
+        </div>
+        <div class="partners__item">
+          <img src="img/partners/logo_5.svg" alt="CIP">
+        </div>
+        <div class="partners__item">
+          <img src="img/partners/logo_6.svg" alt="Best Service">
         </div>
       </div>
-    </section>
-    <section class="gids full-section" style="background-image:url(img/pilgrimage/bg_5.jpg)">
-      <div class="container">
-        <div class="full-section__wrapper">
-          <div class="full-section__content">
-            <h3 class="section-title gids__title">Наши гиды</h3>
-            <div class="gids__wrapper">
-              <div class="gids-item">
-                <div class="gids-item__header">
-                  <div class="gids-item__name">Елена</div>
-                  <div class="gids-item__rating">
-                    <div class="gids-item__rating-label">Рейтинг</div>
-                    <div class="gids-item__rating-val"><span class="rating-score">10</span>
-                      <span>10</span></div>
-                  </div>
-                </div>
-                <div class="gids-item__body">
-                  <img src="img/gids/gid.jpg" alt="gid">
-                </div>
-                <div class="gids-item__footer">
-                  <a class="gids-item__btn btn-blue popup-youtube" href="http://www.youtube.com/watch?v=5qap5aO4i9A">
-                    Смотреть ролик
-                  </a>
+    </div>
+  </div>
+</section>
+<!-- <section class="text-section full-section" style="background-image:url(img/pilgrimage/bg_2.jpg)">
+  <div class="container">
+    <div class="text-section__content">
+      <h2 class="text-section__title section-title">11 лет на турестическом рынке</h2>
+      <div class="text-section__text">
+        <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и уточнения
+          позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна,
+          что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени
+          обуславливает создание направлений прогрессивного развития. </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="text-section full-section" style="background-image:url(img/pilgrimage/bg_3.jpg)">
+  <div class="container">
+    <div class="text-section__content text-section__content_right">
+      <h2 class="text-section__title section-title">Почему выбирают нас</h2>
+      <div class="text-section__text">
+        <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и уточнения
+          позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна,
+          что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени
+          обуславливает создание направлений прогрессивного развития. </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="reviews full-section" style="background-image:url(img/pilgrimage/bg_4.jpg)">
+  <div class="container">
+    <div class="full-section__wrapper">
+      <div class="reviews__content">
+        <h3 class="section-title reviews__title">Отзывы</h3>
+        <div class="reviews__slider swiper">
+          <div class="swiper-wrapper">
+            <div class="reviews-slide swiper-slide">
+              <div class="reviews-slide__header">
+                <div class="reviews-slide__name">Петр</div>
+                <div class="reviews-slide__date">февраль, 2021</div>
+              </div>
+              <div class="reviews-slide__body">
+                <div class="reviews-slide__text">
+                  <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и
+                    уточнения позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем
+                    настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности в
+                    значительной степени обуславливает создание направлений прогрессивного развития. </p>
                 </div>
               </div>
-              <div class="gids-item">
-                <div class="gids-item__header">
-                  <div class="gids-item__name">Елена</div>
-                  <div class="gids-item__rating">
-                    <div class="gids-item__rating-label">Рейтинг</div>
-                    <div class="gids-item__rating-val"><span class="rating-score">10</span>
-                      <span>10</span></div>
-                  </div>
-                </div>
-                <div class="gids-item__body">
-                  <img src="img/gids/gid.jpg" alt="gid">
-                </div>
-                <div class="gids-item__footer">
-                  <a class="gids-item__btn btn-blue popup-youtube" href="http://www.youtube.com/watch?v=5qap5aO4i9A">
-                    Смотреть ролик
-                  </a>
+            </div>
+            <div class="reviews-slide swiper-slide">
+              <div class="reviews-slide__header">
+                <div class="reviews-slide__name">Петр</div>
+                <div class="reviews-slide__date">февраль, 2021</div>
+              </div>
+              <div class="reviews-slide__body">
+                <div class="reviews-slide__text">
+                  <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и
+                    уточнения позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем
+                    настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности в
+                    значительной степени обуславливает создание направлений прогрессивного развития. </p>
                 </div>
               </div>
-              <div class="gids-item">
-                <div class="gids-item__header">
-                  <div class="gids-item__name">Елена</div>
-                  <div class="gids-item__rating">
-                    <div class="gids-item__rating-label">Рейтинг</div>
-                    <div class="gids-item__rating-val"><span class="rating-score">10</span>
-                      <span>10</span></div>
+            </div>
+            <div class="reviews-slide swiper-slide">
+              <div class="reviews-slide__header">
+                <div class="reviews-slide__name">Петр</div>
+                <div class="reviews-slide__date">февраль, 2021</div>
+              </div>
+              <div class="reviews-slide__body">
+                <div class="reviews-slide__text">
+                  <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и
+                    уточнения позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем
+                    настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности в
+                    значительной степени обуславливает создание направлений прогрессивного развития. </p>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-slide swiper-slide">
+              <div class="reviews-slide__header">
+                <div class="reviews-slide__name">Петр</div>
+                <div class="reviews-slide__date">февраль, 2021</div>
+              </div>
+              <div class="reviews-slide__body">
+                <div class="reviews-slide__text">
+                  <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и
+                    уточнения позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем
+                    настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности в
+                    значительной степени обуславливает создание направлений прогрессивного развития. </p>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-slide swiper-slide">
+              <div class="reviews-slide__header">
+                <div class="reviews-slide__name">Петр</div>
+                <div class="reviews-slide__date">февраль, 2021</div>
+              </div>
+              <div class="reviews-slide__body">
+                <div class="reviews-slide__text">
+                  <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и
+                    уточнения позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем
+                    настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности в
+                    значительной степени обуславливает создание направлений прогрессивного развития. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sliders__handle">
+          <button id="reviews-slider__prev" type="button" class="reviews-slider__btn btn-reset">
+            <svg class="">
+              <use xlink:href="./img/icons/icons.svg#arrow-slide"></use>
+            </svg>
+          </button>
+          <div class="reviews-slider__count">
+            <span id="start-slide" class="reviews-slider__count-item">1</span>
+            <span id="end-slide" class="reviews-slider__count-item">5</span>
+          </div>
+          <button id="reviews-slider__next" type="button" class="reviews-slider__btn btn-reset">
+            <svg class="">
+              <use xlink:href="./img/icons/icons.svg#arrow-slide"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="reviews-videos">
+          <div class="reviews-videos__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="reviews-videos__video swiper-slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="reviews-videos__video swiper-slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="reviews-videos__video swiper-slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="reviews-videos__video swiper-slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="reviews-videos__video swiper-slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="gids full-section" style="background-image:url(img/pilgrimage/bg_5.jpg)">
+  <div class="container">
+    <div class="full-section__wrapper">
+      <div class="full-section__content">
+        <h3 class="section-title gids__title">Наши гиды</h3>
+        <div class="gids__wrapper">
+          <div class="gids-item">
+            <div class="gids-item__header">
+              <div class="gids-item__name">Елена</div>
+              <div class="gids-item__rating">
+                <div class="gids-item__rating-label">Рейтинг</div>
+                <div class="gids-item__rating-val"><span class="rating-score">10</span>
+                  <span>10</span></div>
+              </div>
+            </div>
+            <div class="gids-item__body">
+              <img src="img/gids/gid.jpg" alt="gid">
+            </div>
+            <div class="gids-item__footer">
+              <a class="gids-item__btn btn-blue popup-youtube" href="http://www.youtube.com/watch?v=5qap5aO4i9A">
+                Смотреть ролик
+              </a>
+            </div>
+          </div>
+          <div class="gids-item">
+            <div class="gids-item__header">
+              <div class="gids-item__name">Елена</div>
+              <div class="gids-item__rating">
+                <div class="gids-item__rating-label">Рейтинг</div>
+                <div class="gids-item__rating-val"><span class="rating-score">10</span>
+                  <span>10</span></div>
+              </div>
+            </div>
+            <div class="gids-item__body">
+              <img src="img/gids/gid.jpg" alt="gid">
+            </div>
+            <div class="gids-item__footer">
+              <a class="gids-item__btn btn-blue popup-youtube" href="http://www.youtube.com/watch?v=5qap5aO4i9A">
+                Смотреть ролик
+              </a>
+            </div>
+          </div>
+          <div class="gids-item">
+            <div class="gids-item__header">
+              <div class="gids-item__name">Елена</div>
+              <div class="gids-item__rating">
+                <div class="gids-item__rating-label">Рейтинг</div>
+                <div class="gids-item__rating-val"><span class="rating-score">10</span>
+                  <span>10</span></div>
 
-                  </div>
-                </div>
-                <div class="gids-item__body">
-                  <img src="img/gids/gid.jpg" alt="gid">
-                </div>
-                <div class="gids-item__footer">
-                  <a class="gids-item__btn btn-blue popup-youtube" href="http://www.youtube.com/watch?v=5qap5aO4i9A">
-                    Смотреть ролик
-                  </a>
-                </div>
               </div>
+            </div>
+            <div class="gids-item__body">
+              <img src="img/gids/gid.jpg" alt="gid">
+            </div>
+            <div class="gids-item__footer">
+              <a class="gids-item__btn btn-blue popup-youtube" href="http://www.youtube.com/watch?v=5qap5aO4i9A">
+                Смотреть ролик
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="statistic full-section" style="background-image:url(img/pilgrimage/bg_6.jpg)">
-      <div class="container">
-        <div class="full-section__wrapper">
-          <div class="statistic__content">
-            <h3 class="section-title statistic__title">Цифры говорят сами за себя!</h3>
-            <div class="statistic__body">
-              <div class="statistic-item">
-                <div class="statistic-item__icon">
-                  <img src="img/icon/stat_1.svg" alt="clients">
-                </div>
-                <div class="statistic-item__label">Клиентов</div>
-                <div class="statistic-item__val">11т</div>
-              </div>
-              <div class="statistic-item">
-                <div class="statistic-item__icon">
-                  <img src="img/icon/stat_2.svg" alt="tours">
-                </div>
-                <div class="statistic-item__label">Туров</div>
-                <div class="statistic-item__val">15т</div>
-              </div>
-              <div class="statistic-item">
-                <div class="statistic-item__icon">
-                  <img src="img/icon/stat_3.svg" alt="reviews">
-                </div>
-                <div class="statistic-item__label">Отзывов</div>
-                <div class="statistic-item__val">1т</div>
-              </div>
+    </div>
+  </div>
+</section>
+<section class="statistic full-section" style="background-image:url(img/pilgrimage/bg_6.jpg)">
+  <div class="container">
+    <div class="full-section__wrapper">
+      <div class="statistic__content">
+        <h3 class="section-title statistic__title">Цифры говорят сами за себя!</h3>
+        <div class="statistic__body">
+          <div class="statistic-item">
+            <div class="statistic-item__icon">
+              <img src="img/icon/stat_1.svg" alt="clients">
             </div>
+            <div class="statistic-item__label">Клиентов</div>
+            <div class="statistic-item__val">11т</div>
+          </div>
+          <div class="statistic-item">
+            <div class="statistic-item__icon">
+              <img src="img/icon/stat_2.svg" alt="tours">
+            </div>
+            <div class="statistic-item__label">Туров</div>
+            <div class="statistic-item__val">15т</div>
+          </div>
+          <div class="statistic-item">
+            <div class="statistic-item__icon">
+              <img src="img/icon/stat_3.svg" alt="reviews">
+            </div>
+            <div class="statistic-item__label">Отзывов</div>
+            <div class="statistic-item__val">1т</div>
           </div>
         </div>
       </div>
-      <div class="prefooter-light">
+    </div>
+  </div>
+  <div class="prefooter-light">
 
-      </div>
-    </section>
-    <!-- <a class="squirrel__btn btn-reset popup-youtube" href="http://www.youtube.com/watch?v=5qap5aO4i9A">
+  </div>
+</section> -->
+        <!-- <a class="squirrel__btn btn-reset popup-youtube" href="http://www.youtube.com/watch?v=5qap5aO4i9A">
             <img src="img/squirrel.svg" alt="squirrel about">
             <span class="squirrel__btn-sky">Узнать о нас</span>
         </a> -->
-  </main>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__wrapper">
-        <div class="footer-col footer-logo">
-          <img src="img/logo_footer.svg" alt="logo">
-        </div>
-        <div class="footer-col">
-          <div class="footer__label">Компания</div>
-          <nav class="footer__nav">
-            <ul class="footer__list">
-              <li class="footer__elem">
-                <a href="#" class="footer__link">О нас</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Партнерская программа</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Билеты</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Трансфер</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Корзина</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="footer-col">
-          <div class="footer__label">Клиентам</div>
-          <nav class="footer__nav">
-            <ul class="footer__list">
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Отели</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Виза</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Туры с перелетами</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Туры без перелеов</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Горящие туры</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="footer-col">
-          <div class="footer__label">Популярные страны</div>
-          <nav class="footer__nav">
-            <ul class="footer__list">
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Туры в Турцию</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Туры в Египет</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Туры в Тайланд</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Туры в Индию</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Туры по Вьетнам</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="footer-col">
-          <div class="footer__label">О компании</div>
-          <nav class="footer__nav">
-            <ul class="footer__list">
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Корпоративное сотрудничество</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Акции</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Агенствам</a>
-              </li>
-              <li class="footer__elem">
-                <a href="#" class="footer__link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer-col footer-logo">
+        <img src="img/logo_footer.svg" alt="logo">
       </div>
-      <div class="footer__bottom">
-        <div class="footer__copy">All rights reserved © 2013 - 2021</div>
-        <div class="footer-socials">
-          <a href="#" class="footer-socials__link">
-            <img src="img/icon/fb.svg" alt="facebook">
-          </a>
-          <a href="#" class="footer-socials__link">
-            <img src="img/icon/inst.svg" alt="instagramm">
-          </a>
-          <a href="#" class="footer-socials__link">
-            <img src="img/icon/pinterest.svg" alt="pinterest">
-          </a>
-          <a href="#" class="footer-socials__link">
-            <img src="img/icon/twitter.svg" alt="twitter">
-          </a>
-          <a href="#" class="footer-socials__link">
-            <img src="img/icon/youtube.svg" alt="youtube">
-          </a>
-        </div>
+      <div class="footer-col">
+        <div class="footer__label">Компания</div>
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__elem">
+              <a href="#" class="footer__link">О нас</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Партнерская программа</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Билеты</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Трансфер</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Корзина</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <div class="footer__label">Клиентам</div>
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Отели</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Виза</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Туры с перелетами</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Туры без перелеов</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Горящие туры</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <div class="footer__label">Популярные страны</div>
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Туры в Турцию</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Туры в Египет</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Туры в Тайланд</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Туры в Индию</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Туры по Вьетнам</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <div class="footer__label">О компании</div>
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Корпоративное сотрудничество</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Акции</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Агенствам</a>
+            </li>
+            <li class="footer__elem">
+              <a href="#" class="footer__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
-    integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/reviews.js"></script>
+    <div class="footer__bottom">
+      <div class="footer__copy">All rights reserved © 2013 - 2021</div>
+      <div class="footer-socials">
+        <a href="#" class="footer-socials__link">
+          <img src="img/icon/fb.svg" alt="facebook">
+        </a>
+        <a href="#" class="footer-socials__link">
+          <img src="img/icon/inst.svg" alt="instagramm">
+        </a>
+        <a href="#" class="footer-socials__link">
+          <img src="img/icon/pinterest.svg" alt="pinterest">
+        </a>
+        <a href="#" class="footer-socials__link">
+          <img src="img/icon/twitter.svg" alt="twitter">
+        </a>
+        <a href="#" class="footer-socials__link">
+          <img src="img/icon/youtube.svg" alt="youtube">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+        integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/reviews.js"></script>
 </body>
 
 </html>

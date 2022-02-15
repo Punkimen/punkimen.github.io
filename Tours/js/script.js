@@ -70,6 +70,7 @@
     $(this).parents('.custom-select__item').addClass('current').siblings().removeClass('current')
     $(this).parents('.custom-select').find('.custom-select__val').text(value)
     $(this).parents('.custom-select').addClass('filed').removeClass('open')
+    $(this).parents('.custom-select').addClass('filed').removeClass('error')
     $(this).parents('.custom-select__body').slideToggle()
     // $(this).parents()
   })

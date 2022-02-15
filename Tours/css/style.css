@@ -151,9 +151,9 @@ h3.section-title {
 }
 
 .btn-reset {
+  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   display: block;
-  cursor: pointer;
   border: none;
   outline: none;
   background: none;
@@ -278,6 +278,21 @@ input::placeholder {
 .custom-select {
   position: relative;
   width: 100%;
+}
+
+.custom-select.error::after {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -17px;
+  white-space: nowrap;
+  font-size: 10px;
+  color: red;
+}
+
+.custom-select.error .custom-select__header {
+  border: 1px solid red;
 }
 
 .custom-select.open .custom-select__header {
@@ -800,7 +815,7 @@ input::placeholder {
 }
 
 .daterangepicker .drp-calendar.left {
-  padding: 20px 30px;
+  padding: 20px 20px;
   max-width: 100%;
   width: 100%;
 }
@@ -911,6 +926,7 @@ input::placeholder {
 }
 
 .find-tour__btn {
+  cursor: pointer;
   font-size: 21px;
   padding: 12px 12px 11px 12px;
   color: #fff;
@@ -933,8 +949,13 @@ input::placeholder {
   color: #000;
 }
 
+.form-select_hotel .custom-select__body {
+  width: 200%;
+}
+
 .form-select .custom-select__header {
   overflow: hidden;
+  border: 1px solid #fff;
   padding: 15px 35px 15px 20px;
   color: #858585;
   background: #FFFFFF;
@@ -1039,6 +1060,25 @@ input::placeholder {
 
 .input-date {
   position: relative;
+}
+
+.input-date.error {
+  position: relative;
+}
+
+.input-date.error::after {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -17px;
+  white-space: nowrap;
+  font-size: 10px;
+  color: red;
+}
+
+.input-date.error input {
+  border: 1px solid red;
 }
 
 .input-date input {
@@ -1594,6 +1634,10 @@ body.dark .select_arrow svg {
   .switch-theme {
     font-size: 14px;
   }
+
+  .form-select_hotel .custom-select__body {
+    width: 100%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1615,6 +1659,11 @@ body.dark .select_arrow svg {
 
   .header__burger {
     display: block;
+  }
+
+  .find-tour__row_top {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .mfp-iframe-holder .mfp-content {
