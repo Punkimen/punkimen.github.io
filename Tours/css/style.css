@@ -877,14 +877,11 @@ input::placeholder {
   padding-bottom: 140px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
 }
 
 .full-section {
   height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .full-section .container {
@@ -954,7 +951,7 @@ input::placeholder {
 }
 
 .form-select_hotel .custom-select__body {
-  width: 200%;
+  width: 200% !important;
 }
 
 .form-select .custom-select__header {
@@ -971,13 +968,17 @@ input::placeholder {
 }
 
 .form-select .custom-select__body {
+  min-width: 100%;
+  width: auto;
   top: calc(100% + 10px);
   padding: 15px 0 15px;
   border-radius: 5px;
+  right: auto;
 }
 
 .form-select .custom-select__item {
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 .form-select .custom-select__item:hover {
@@ -1144,7 +1145,7 @@ input::placeholder {
 
 .text-section__text {
   font-size: 21px;
-  line-height: 1.5em;
+  line-height: 1.8em;
   max-width: 844px;
   width: 100%;
 }
@@ -1185,6 +1186,9 @@ input::placeholder {
   min-height: 1000px;
   color: #fff;
   padding: 102px 0 102px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 .reviews__content {
@@ -1276,6 +1280,9 @@ input::placeholder {
   position: relative;
   padding: 100px 0 100px;
   min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 .statistic__content {
@@ -1402,7 +1409,10 @@ input::placeholder {
 .gids {
   color: #fff;
   padding: 102px 0 102px;
-  min-height: 680px;
+  min-height: 750px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 .gids__title {
@@ -1472,8 +1482,8 @@ input::placeholder {
 .gids-item__body img {
   -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
+  -o-object-position: right;
+  object-position: right;
   width: 100%;
   height: 297px;
 }
@@ -1678,7 +1688,7 @@ body.dark .input-date input {
   }
 
   .form-select_hotel .custom-select__body {
-    width: 100%;
+    width: 100% !important;
   }
 
   .footer__wrapper {
@@ -1888,6 +1898,7 @@ body.dark .input-date input {
 
   .reviews {
     min-height: 850px;
+    padding: 50px 0 50px;
   }
 
   .reviews__title {
@@ -1922,6 +1933,10 @@ body.dark .input-date input {
     justify-content: center;
   }
 
+  .statistic {
+    padding: 50px 0 100px;
+  }
+
   .statistic__title {
     margin-bottom: 30px;
   }
@@ -1947,6 +1962,7 @@ body.dark .input-date input {
   }
 
   .gids {
+    background-position: bottom right;
     padding: 50px 0 50px;
   }
 
@@ -2049,6 +2065,7 @@ body.dark .input-date input {
 
   .reviews {
     min-height: 680px;
+    background-position: 35%;
   }
 
   .reviews-slide {
@@ -2062,6 +2079,10 @@ body.dark .input-date input {
 
   .reviews-videos__video iframe {
     height: 200px;
+  }
+
+  .statistic {
+    background-position: 55%;
   }
 
   .statistic__title.section-title {
@@ -2138,7 +2159,7 @@ body.dark .input-date input {
 @media (max-width: 412px) {
   .find {
     height: 100vh;
-    min-height: 670px;
+    min-height: 740px;
   }
 
   .footer-col_company {
@@ -2151,6 +2172,25 @@ body.dark .input-date input {
 
   .footer-col:last-child {
     max-width: 40%;
+  }
+}
+
+@media (max-width: 370px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .form-select .custom-select__header {
+    padding-left: 10px;
+  }
+
+  .form-select .custom-select__item {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .form-select .select_arrow {
+    right: 10px;
   }
 }
 
