@@ -55,24 +55,48 @@
     setValue()
   })
 })();
-
-const formValidate = () => {
-  const inputsFileds = $('#find-tour .custom-select')
-  const inputDate = $('#find-tour .input-date')
-  inputsFileds.each((index, el) => {
-    if (!el.classList.contains('filed')) {
-      console.log(el);
-      el.classList.add('error')
-      fieldForm = false
-    } else {
-      el.classList.remove('error')
-      fieldForm = true
+// form validate
+(function () {
+  const formValidate = () => {
+    const inputsFileds = $('#find-tour .custom-select')
+    const inputDate = $('#find-tour .input-date')
+    inputsFileds.each((index, el) => {
+      if (!el.classList.contains('filed')) {
+        console.log(el);
+        el.classList.add('error')
+        fieldForm = false
+      } else {
+        el.classList.remove('error')
+        fieldForm = true
+      }
+    })
+    if (!inputDate.hasClass('filed')) {
+      inputDate.addClass('error')
     }
-  })
-  if (!inputDate.hasClass('filed')) {
-    inputDate.addClass('error')
   }
-}
-$('#serch-btn').on('click', function () {
-  formValidate()
-})
+  $('#serch-btn').on('click', function () {
+    formValidate()
+  })
+})();
+
+(function () {
+  const selectsPosition = () => {
+    const allFileds = document.querySelectorAll('.find-tour__select');
+    const windowWidth = $(window).width();
+    if (windowWidth <= 992) {
+      allFileds.forEach(el => {
+        $('.find-tour__row_top').append(el)
+        $('.find-tour__checkbox').after($('.find-tour__btn'))
+      })
+    } else {
+      allFileds.forEach((el, index) => {
+        if (index > 4) {
+          $('.find-tour__row_bottom').append(el)
+          $('.find-tour__row_bottom').append($('.find-tour__btn'))
+        }
+        // console.log(index);
+      })
+    }
+  }
+  selectsPosition()
+})();

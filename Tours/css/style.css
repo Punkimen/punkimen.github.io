@@ -1114,16 +1114,23 @@ input::placeholder {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.text-section__content {
+.text-section__wrapper {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
-.text-section__content_right {
+.text-section__wrapper_right {
   text-align: right;
   align-items: flex-end;
+}
+
+.text-section__content {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .text-section__title {
@@ -1264,6 +1271,7 @@ input::placeholder {
 }
 
 .statistic__title {
+  color: #fff;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -1662,8 +1670,14 @@ body.dark .select_arrow svg {
   }
 
   .find-tour__row_top {
+    margin: -7.5px -5px;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .find-tour__select {
+    flex-grow: 1;
+    margin: 7.5px 5px;
   }
 
   .mfp-iframe-holder .mfp-content {
