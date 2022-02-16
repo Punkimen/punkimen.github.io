@@ -1786,6 +1786,10 @@ body.dark .input-date input {
 }
 
 @media (max-width: 992px) {
+  .container {
+    padding: 0 30px;
+  }
+
   .header__nav {
     font-size: 18px;
     margin: 0 0 50px 0;
@@ -1881,10 +1885,6 @@ body.dark .input-date input {
 
   h3.section-title {
     font-size: 35px;
-  }
-
-  .container {
-    padding: 0 30px;
   }
 
   .header {
@@ -2279,6 +2279,10 @@ body.dark .input-date input {
 @media (max-width: 370px) {
   .container {
     padding: 0 15px;
+  }
+
+  .about-btn {
+    transform: translate(-70%, -50%);
   }
 
   .form-select .custom-select__header {
