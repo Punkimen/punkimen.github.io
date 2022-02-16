@@ -1806,6 +1806,16 @@ body.dark .input-date input {
     display: block;
   }
 
+  .input-date__calendar {
+    left: auto;
+    right: 0;
+    max-width: 300px;
+  }
+
+  .calendar {
+    padding: 20px 15px;
+  }
+
   .find-tour__row_top {
     margin: -7.5px -5px;
     display: flex;
@@ -2114,6 +2124,18 @@ body.dark .input-date input {
     margin-bottom: 15px;
   }
 
+  .input-date__calendar {
+    left: 0;
+    right: auto;
+    max-width: 300px;
+    width: 100%;
+    min-width: 250px;
+  }
+
+  .calendar {
+    font-size: 11px;
+  }
+
   .find {
     min-height: 600px;
   }
@@ -2131,6 +2153,7 @@ body.dark .input-date input {
   .input-date.find-tour__select {
     flex-grow: 0;
     width: 61%;
+    min-width: 220px;
   }
 
   .text-section__title {
