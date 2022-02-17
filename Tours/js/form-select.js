@@ -29,7 +29,11 @@ $('.select2-selection__arrow').html(`
     $(this).removeClass('error')
     $(this).next().removeClass('error')
   })
+  selectsElems.each((index, el) => {
+    console.log(el);
 
+    el.nextElementSibling.setAttribute('data-error', el.getAttribute('data-error'))
+  })
   const formValidate = (form) => {
     const inputsFileds = $('#find-tour .custom-select')
     const inputDate = $('#find-tour .input-date')
