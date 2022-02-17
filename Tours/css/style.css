@@ -1726,6 +1726,7 @@ body.dark .input-date input {
 }
 
 .select2-container {
+  width: 100% !important;
   height: 100%;
   border-radius: 5px;
 }
