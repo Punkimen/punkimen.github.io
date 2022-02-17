@@ -18,6 +18,9 @@
         integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+        integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -128,11 +131,17 @@
   <div class="container">
     <div class="full-section__wrapper">
       <form id="find-tour" class="find-tour" action="#">
-        <h3 class="find-tour__title section-title">Найти тур мечты</h3>
+        <h3 class="find-tour__title section-title">Найти Паломнический тур</h3>
         <div class="find-tour__wrapper">
           <div class="find-tour__row find-tour__row_top">
             <div class="find-tour__select">
-              <div class="custom-select form-select" data-text="Заполните поле">
+              <select class="form-control" data-placeholder="Страна отправления" required data-error="Заполните поле">
+                <option></option>
+                <option>Кыргызстан</option>
+                <option>Кыргызстан</option>
+                <option>Кыргызстан</option>
+              </select>
+              <!-- <div class="custom-select form-select" data-text="Заполните поле">
                 <div class="custom-select__header">
                   <span class="custom-select__val">
                     Страна отправления
@@ -163,179 +172,49 @@
                     <input class="custom-select__radio" value="Кыргызстан" name="departure" type="radio">
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="find-tour__select">
-              <div class="custom-select form-select" data-text="Заполните поле">
-                <div class="custom-select__header">
-                  <span class="custom-select__val">
-                    Город
-                  </span>
-                  <div class="select_arrow">
-                    <svg class="">
-                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="custom-select__body">
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Бишкек
-                    </span>
-                    <input class="custom-select__radio" checked value="Бишкек" name="city_from" type="radio">
-                  </div>
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Бишкек
-                    </span>
-                    <input class="custom-select__radio" value="Бишкек" name="city_from" type="radio">
-                  </div>
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Бишкек
-                    </span>
-                    <input class="custom-select__radio" value="Бишкек" name="city_from" type="radio">
-                  </div>
-                </div>
-              </div>
+              <select class="form-control" data-placeholder="Город" required data-error="Заполните поле">
+                <option></option>
+                <option>Бишкек</option>
+                <option>Бишкек</option>
+                <option>Бишкек</option>
+              </select>
             </div>
             <div class="find-tour__select">
-              <div class="custom-select form-select" data-text="Заполните поле">
-                <div class="custom-select__header">
-                  <span class="custom-select__val">
-                    Страна
-                  </span>
-                  <div class="select_arrow">
-                    <svg class="">
-                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="custom-select__body">
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Кыргызстан
-                    </span>
-                    <input class="custom-select__radio" checked value="Кыргызстан" name="country-to" type="radio">
-                  </div>
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Кыргызстан
-                    </span>
-                    <input class="custom-select__radio" value="Кыргызстан" name="country-to" type="radio">
-                  </div>
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Кыргызстан
-                    </span>
-                    <input class="custom-select__radio" value="Кыргызстан" name="country-to" type="radio">
-                  </div>
-                </div>
-              </div>
+              <select class="form-control" data-placeholder="Страна" required data-error="Заполните поле">
+                <option></option>
+                <option>Кыргызстан</option>
+                <option>Кыргызстан</option>
+                <option>Кыргызстан</option>
+              </select>
+            </div>
+            <div class="find-tour__select find-tour__select_from">
+              <select class="form-control" data-placeholder="Город пребытия" required data-error="Заполните поле">
+                <option></option>
+                <option>Кыргызстан</option>
+                <option>Кыргызстан</option>
+                <option>Кыргызстан</option>
+              </select>
             </div>
             <div class="find-tour__select">
-              <div class="custom-select form-select" data-text="Заполните поле">
-                <div class="custom-select__header">
-                  <span class="custom-select__val">
-                    Город прибытия
-                  </span>
-                  <div class="select_arrow">
-                    <svg class="">
-                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="custom-select__body">
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Бишкек
-                    </span>
-                    <input class="custom-select__radio" checked value="Бишкек" name="city-to" type="radio">
-                  </div>
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Бишкек
-                    </span>
-                    <input class="custom-select__radio" value="Бишкек" name="city-to" type="radio">
-                  </div>
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Бишкек
-                    </span>
-                    <input class="custom-select__radio" value="Бишкек" name="city-to" type="radio">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="find-tour__select">
-              <div class="custom-select form-select form-select_hotel" data-text="Заполните поле">
-                <div class="custom-select__header">
-                  <span class="custom-select__val">
-                    Отель
-                  </span>
-                  <div class="select_arrow">
-                    <svg class="">
-                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="custom-select__body">
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Отель
-                    </span>
-                    <input class="custom-select__radio" checked value="Отель" name="hotel" type="radio">
-                  </div>
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Отель
-                    </span>
-                    <input class="custom-select__radio" value="Отель" name="hotel" type="radio">
-                  </div>
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Отель
-                    </span>
-                    <input class="custom-select__radio" value="Отель" name="hotel" type="radio">
-                  </div>
-                </div>
-              </div>
+              <select class="form-control" data-placeholder="Отель" required data-error="Заполните поле">
+                <option></option>
+                <option>Отель</option>
+                <option>Отель</option>
+                <option>Отель</option>
+              </select>
             </div>
           </div>
           <div class="find-tour__row find-tour__row_bottom">
             <div class="find-tour__select">
-              <div class="custom-select form-select" data-text="Заполните поле">
-                <div class="custom-select__header">
-                  <span class="custom-select__val">
-                    Трансфер
-                  </span>
-                  <div class="select_arrow">
-                    <svg class="">
-                      <use xlink:href="./img/icons/icons.svg#arrow"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="custom-select__body">
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Трансфер
-                    </span>
-                    <input class="custom-select__radio" checked value="Трансфер" name="transfer" type="radio">
-                  </div>
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Трансфер
-                    </span>
-                    <input class="custom-select__radio" value="Трансфер" name="transfer" type="radio">
-                  </div>
-                  <div class="custom-select__item">
-                    <span class="custom-select__choose">
-                      Трансфер
-                    </span>
-                    <input class="custom-select__radio" value="Трансфер" name="transfer" type="radio">
-                  </div>
-                </div>
-              </div>
+              <select class="form-control" data-placeholder="Трансфер" required data-error="Заполните поле">
+                <option></option>
+                <option>Трансфер</option>
+                <option>Трансфер</option>
+                <option>Трансфер</option>
+              </select>
             </div>
             <div class="find-tour__select input-date" data-text="Заполните поле">
               <input id="calendar-date" required name="date" type="text" autocomplete="off" placeholder="Начало тура">
@@ -422,12 +301,13 @@
                 </div>
               </div>
             </div>
-            <div class="find-tour__select ">
+            <div class="find-tour__select find-tour__select_nights">
               <div class="custom-select form-select" data-text="Заполните поле">
                 <div class="custom-select__header">
-                  <span id="nights" class="custom-select__val">
+                  <input id="nights" type="text" placeholder="Ночей" class="custom-select__val" readonly>
+                  <!-- <span id="nights" class="custom-select__val">
                     Ночей
-                  </span>
+                  </span> -->
                   <div class="select_arrow">
                     <svg class="">
                       <use xlink:href="./img/icons/icons.svg#arrow"></use>
@@ -450,13 +330,13 @@
                 </div>
               </div>
             </div>
-            <div class="find-tour__select ">
+            <div class="find-tour__select find-tour__select_persons">
               <div class="custom-select form-select filed" data-text="Заполните поле">
                 <div class="custom-select__header">
                   <span class="custom-select__val">
                     <div class="custom-select__filed">
-                      <div class="custom-select__item-val">Взрослых <span id="adults">1</span> </div>
-                      <div class="custom-select__item-val">детей <span id="child">0</span></div>
+                      <input id="persons" type="text" placeholder="Взрослых / детей" class="custom-select__val"
+                        readonly>
                     </div>
                   </span>
                   <div class="select_arrow">
@@ -1006,10 +886,14 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+        integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/form.js"></script>
     <script src="js/reviews.js"></script>
     <script src="js/gids.js"></script>
+    <script src="js/form-select.js"></script>
     <script src="js/script.js"></script>
 </body>
 

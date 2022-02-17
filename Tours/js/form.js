@@ -1,36 +1,11 @@
 (function () {
-  // $('.input-date input').daterangepicker({
-  //   startDate: 0,
-  //   singleDatePicker: true,
-  //   showDropdowns: true,
-  //   autoUpdateInput: false,
-  //   minYear: parseInt(moment().format('YYYY'), 10) - 1,
-  //   maxYear: parseInt(moment().format('YYYY'), 10) + 10,
-  //   autoApply: true,
-  //   locale: {
-  //     daysOfWeek: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
-  //     monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-  //     format: 'DD.MM.YYYY',
-  //     cancelLabel: 'Clear',
-  //   },
-  // });
-  // $('.input-date input').on('apply.daterangepicker', function (ev, picker) {
-  //   $(this).val(picker.startDate.format('MM/DD/YYYY'));
-  //   $(this).parents('.find-tour__select').addClass('filed')
-  //   $(this).parents('.find-tour__select').removeClass('error')
-
-  // });
-  // $('.input-date input').on('cancel.daterangepicker', function (ev, picker) {
-  //   $(this).val('');
-  // });
 
   const setValue = () => {
     const nightCount = $('#nights-count').text()
     const adultCount = $('#adult-count').text()
     const childCount = $('#child-count').text()
-    $('#nights').text(nightCount)
-    $('#adults').text(adultCount)
-    $('#child').text(childCount)
+    $('#nights').val(nightCount)
+    $('#persons').val(`Взрослых ${adultCount} / детей ${childCount}`)
   }
 
   $('.plus-btn').on('click', function () {
@@ -54,29 +29,7 @@
     setValue()
   })
 })();
-// form validate
-(function () {
-  const formValidate = () => {
-    const inputsFileds = $('#find-tour .custom-select')
-    const inputDate = $('#find-tour .input-date')
-    inputsFileds.each((index, el) => {
-      if (!el.classList.contains('filed') && !el.classList.contains('custom-select__calendar')) {
-        console.log(el);
-        el.classList.add('error')
-        fieldForm = false
-      } else {
-        el.classList.remove('error')
-        fieldForm = true
-      }
-    })
-    if (!inputDate.hasClass('filed')) {
-      inputDate.addClass('error')
-    }
-  }
-  $('#serch-btn').on('click', function () {
-    formValidate()
-  })
-})();
+
 
 (function () {
   const selectsPosition = () => {
