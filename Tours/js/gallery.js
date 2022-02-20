@@ -39,24 +39,31 @@ $(document).ready(function () {
   const videos = [{
     id: 0,
     src: './img/gallery/video/1.mp4',
+    srcPhoto: 'img/gallery/photo/1.jpeg'
   }, {
     id: 0,
     src: './img/gallery/video/2.mp4',
+    srcPhoto: 'img/gallery/photo/2.jpeg'
   }, {
     id: 0,
     src: './img/gallery/video/3.mp4',
+    srcPhoto: 'img/gallery/photo/3.png'
   }, {
     id: 0,
     src: './img/gallery/video/4.mp4',
+    srcPhoto: 'img/gallery/photo/4.jpeg'
   }, {
     id: 0,
     src: './img/gallery/video/5.mp4',
+    srcPhoto: 'img/gallery/photo/5.jpg'
   }, {
     id: 0,
     src: './img/gallery/video/6.mp4',
+    srcPhoto: 'img/gallery/photo/6.jpg'
   }, {
     id: 0,
     src: './img/gallery/video/7.mp4',
+    srcPhoto: 'img/gallery/photo/7.jpeg'
   },
 
   ]
@@ -89,7 +96,7 @@ $(document).ready(function () {
         block.classList.add('gallery-tabs__photo')
         block.innerHTML = `
         <a href="${el.src}" class="video">
-          <video src="${el.src}" controls></video>
+          <img src="${el.srcPhoto}">
         </a>
         `
         let inner = $('#gallery-video .gallery-video__wrapper')

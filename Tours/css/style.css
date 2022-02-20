@@ -1657,6 +1657,24 @@ input.custom-select__val {
   height: 100%;
 }
 
+.gallery-tabs__photo a.video {
+  position: relative;
+}
+
+.gallery-tabs__photo a.video::after {
+  content: url(../img/icon/play.svg);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ease 0.2s;
+}
+
+.gallery-tabs__photo a:hover::after {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
 .gallery-tabs__photo img {
   display: block;
   -o-object-fit: cover;
@@ -2546,6 +2564,10 @@ body.dark .input-date input {
 
   .gallery-tabs__photo {
     width: 31.3%;
+  }
+
+  .mfp-gallery .mfp-iframe-holder .mfp-content {
+    width: 100%;
   }
 
   .gallery-benefits__text {
