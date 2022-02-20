@@ -1467,10 +1467,6 @@ input.custom-select__val {
   margin-right: 4.5%;
 }
 
-.gallery-statistic__item:last-child {
-  width: 100%;
-}
-
 .gallery-statistic__value {
   font-weight: bold;
   font-size: 51px;
@@ -2505,6 +2501,10 @@ body.dark .input-date input {
 
   .gallery-statistic__item:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  .gallery-statistic__item:last-child {
+    width: 100%;
   }
 
   .gallery-statistic__value {
