@@ -48,7 +48,6 @@
           $('.find-tour__row_bottom').append(el)
           $('.find-tour__row_bottom').append($('.find-tour__btn'))
         }
-        // console.log(index);
       })
     }
   }
@@ -168,8 +167,7 @@
   }
   Calendar.prototype.getDateVal = function (d, m, y) {
     const input = document.querySelector('#calendar-date')
-    console.log(d, m, y);
-    console.log(input.value);
+
     d = d < 10 ? '0' + d : d;
     m = m < 10 ? '0' + m : m;
     $('#calendar-date').val(`${d}.${m}.${y}`)
@@ -199,7 +197,7 @@
   document.querySelector('.calendar__days').addEventListener('click', function (e) {
     if (e.target.classList.contains('normal')) {
       let day = e.target.innerText
-      // console.log(day);
+
       calendar.nowDay = day
       calendar.getDateVal(calendar.nowDay, calendar.nowMonth, calendar.nowYear);
       $('.input-date__calendar').slideUp()

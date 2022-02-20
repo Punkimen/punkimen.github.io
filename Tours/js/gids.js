@@ -18,37 +18,29 @@
     }
   });
 
-  let count = swiperGids.activeIndex + 1;
+
   let countMax = $('.gids-item').length;
   function sliderCountSet(count) {
     $('#start-slide-gids').text(count)
     $('#end-slide-gids').text(countMax)
   }
-  sliderCountSet()
-  function sliderCountPlus() {
-    if (count < countMax) {
-      count++
-      sliderCountSet(count)
-    }
-  }
-  function sliderCountMinus() {
-    if (count > 1) {
-      count--
-      sliderCountSet(count)
-    }
+
+  const changePagination = (slider) => {
+    sliderCountSet(slider.activeIndex + 1)
   }
 
   $('#gids-slider__prev').on('click', function () {
     swiperGids.slidePrev()
-    sliderCountMinus()
+    changePagination(swiperGids)
+
   })
   $('#gids-slider__next').on('click', function () {
     swiperGids.slideNext()
-    sliderCountPlus()
+    changePagination(swiperGids)
   })
 
   swiperGids.on('slideChange', function () {
-    sliderCountSet(swiperGids.activeIndex + 1)
+    changePagination(swiperGids)
   });
 })();
 

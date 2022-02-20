@@ -30,8 +30,6 @@ $('.select2-selection__arrow').html(`
     $(this).next().removeClass('error')
   })
   selectsElems.each((index, el) => {
-    console.log(el);
-
     el.nextElementSibling.setAttribute('data-error', el.getAttribute('data-error'))
   })
   const formValidate = (form) => {

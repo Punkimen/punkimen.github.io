@@ -1348,8 +1348,17 @@ input.custom-select__val {
   transform: rotate(180deg);
 }
 
+.reviews-videos__video {
+  background: #000;
+}
+
 .reviews-videos__video iframe {
   width: 100%;
+}
+
+.reviews-videos__video video {
+  width: 100%;
+  height: 315px;
 }
 
 .statistic {
@@ -1431,6 +1440,297 @@ input.custom-select__val {
   height: 180px;
 }
 
+.gallery {
+  padding: 130px 0 130px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.gallery__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-statistic {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.gallery-statistic__item {
+  text-align: center;
+}
+
+.gallery-statistic__item:not(:last-child) {
+  margin-right: 4.5%;
+}
+
+.gallery-statistic__item:last-child {
+  width: 100%;
+}
+
+.gallery-statistic__value {
+  font-weight: bold;
+  font-size: 51px;
+  line-height: 1.2em;
+}
+
+.gallery-banner {
+  position: relative;
+  padding: 71px 0 70px;
+  margin-bottom: 60px;
+}
+
+.gallery-banner__title {
+  text-align: center;
+  font-size: 267px;
+  line-height: 1;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.gallery-banner__count {
+  position: absolute;
+  font-size: 117px;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gallery-banner__icons-left {
+  width: 42%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.gallery-banner__fly-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gallery-banner__fly-photo img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-banner__fly-photo.fly-icon_1 {
+  top: 72px;
+}
+
+.gallery-banner__fly-photo.fly-icon_2 {
+  left: 29%;
+  top: 29%;
+}
+
+.gallery-banner__fly-photo.fly-icon_3 {
+  left: auto;
+  right: 25%;
+}
+
+.gallery-banner__fly-photo.fly-icon_4 {
+  width: 80px;
+  height: 80px;
+  top: auto;
+  bottom: 0;
+  left: 35%;
+}
+
+.gallery-banner__fly-photo.fly-icon_5 {
+  width: 120px;
+  left: auto;
+  right: 25%;
+  top: 48%;
+  height: 120px;
+}
+
+.gallery-banner__fly-photo.fly-icon_6 {
+  left: auto;
+  right: 0;
+  top: 46%;
+  width: 80px;
+  height: 80px;
+}
+
+.gallery-banner__fly-photo.fly-icon_7 {
+  top: 72px;
+}
+
+.gallery-banner__fly-photo.fly-icon_8 {
+  left: 29%;
+  top: 29%;
+}
+
+.gallery-banner__fly-photo.fly-icon_9 {
+  left: auto;
+  right: 25%;
+}
+
+.gallery-banner__fly-photo.fly-icon_10 {
+  width: 80px;
+  height: 80px;
+  top: auto;
+  bottom: 0;
+  left: 35%;
+}
+
+.gallery-banner__fly-photo.fly-icon_11 {
+  width: 120px;
+  left: auto;
+  right: 25%;
+  top: 48%;
+  height: 120px;
+}
+
+.gallery-banner__fly-photo.fly-icon_12 {
+  left: auto;
+  right: 0;
+  top: 46%;
+  width: 80px;
+  height: 80px;
+}
+
+.gallery-banner__icons-right {
+  width: 42%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.gallery-tabs {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.gallery-tabs__tab {
+  background: linear-gradient(180deg, #8D8D8D 0%, rgba(0, 138, 198, 0) 188.14%, #FFFFFF 188.14%);
+  color: #fff;
+  border-radius: 20px;
+  min-width: 131px;
+  text-align: center;
+  padding: 12.5px 15px;
+  transition: all ease 0.2s;
+}
+
+.gallery-tabs__tab:hover {
+  background: linear-gradient(180deg, #008AC6 0%, rgba(0, 138, 198, 0) 188.14%, #FFFFFF 188.14%);
+}
+
+.gallery-tabs__tab.active {
+  background: linear-gradient(180deg, #008AC6 0%, rgba(0, 138, 198, 0) 188.14%, #FFFFFF 188.14%);
+}
+
+.gallery-tabs__tab:not(:last-child) {
+  margin-right: 30px;
+}
+
+.gallery-tabs__wrapper {
+  margin: -1%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-tabs__photo {
+  width: 14.66%;
+  height: 155px;
+  margin: 1%;
+}
+
+.gallery-tabs__photo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-tabs__photo img {
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-tabs__photo video {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-tabs__pagination .next-btn {
+  transform: rotate(180deg);
+}
+
+.mfp-gallery .mfp-iframe-holder .mfp-content {
+  width: 50%;
+}
+
+.gallery-video__wrapper {
+  margin: -1%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1%;
+}
+
+.gallery-benefits__item {
+  min-height: 133px;
+  padding: 20px 60px 30px 20px;
+  position: relative;
+  margin: 1%;
+  background: linear-gradient(180deg, #008AC6 0%, rgba(0, 138, 198, 0) 340.21%, #FFFFFF 340.21%);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+  overflow: hidden;
+  width: 31.3%;
+}
+
+.gallery-benefits__text {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 1.2em;
+}
+
+.gallery-benefits__count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 41px;
+  height: 41px;
+  background: #FFFFFF;
+  border-radius: 10px 0px 0px 0px;
+  font-weight: bold;
+  font-size: 21px;
+  color: #008AC6;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#gallery-video {
+  display: none;
+}
+
 .footer {
   background: #023A75;
   padding: 50px 0 56px;
@@ -1504,9 +1804,12 @@ input.custom-select__val {
 }
 
 .gids-item {
+  height: auto;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .gids-item:not(:last-child) {
@@ -1518,6 +1821,7 @@ input.custom-select__val {
   align-items: center;
   justify-content: space-between;
   padding: 30px 30px 30px;
+  flex-grow: 1;
 }
 
 .gids-item__name {
@@ -1556,10 +1860,10 @@ input.custom-select__val {
 }
 
 .gids-item__body img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: right;
-  object-position: right;
+  -o-object-fit: 100%;
+  object-fit: 100%;
+  -o-object-position: 10% 5%;
+  object-position: 10% 5%;
   width: 100%;
   height: 297px;
 }
@@ -1846,6 +2150,44 @@ body.dark .input-date input {
     width: 100% !important;
   }
 
+  .gallery-banner__title {
+    font-size: 215px;
+  }
+
+  .gallery-banner__count {
+    font-size: 100px;
+  }
+
+  .gallery-banner__fly-photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_4 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_5 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_6 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_10 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_11 {
+    width: 100px;
+    height: 100px;
+  }
+
   .footer__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1859,6 +2201,10 @@ body.dark .input-date input {
 
   .gids-item:not(:last-child) {
     margin-right: 15px;
+  }
+
+  .gids-item__header {
+    padding: 20px 15px;
   }
 }
 
@@ -1925,6 +2271,18 @@ body.dark .input-date input {
 
   .find-tour__select_nights {
     order: 5 !important;
+  }
+
+  .gallery-banner__title {
+    font-size: 155px;
+  }
+
+  .gallery-tabs__photo {
+    width: 23%;
+  }
+
+  .gallery-benefits__item {
+    width: 48%;
   }
 
   .gids__handle {
@@ -2110,6 +2468,90 @@ body.dark .input-date input {
     padding: 40px 20px;
   }
 
+  .gallery {
+    padding: 60px 0 60px;
+  }
+
+  .gallery__title {
+    margin-bottom: 30px;
+  }
+
+  .gallery-statistic {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .gallery-statistic__item:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .gallery-statistic__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .gallery-statistic__value {
+    font-size: 30px;
+  }
+
+  .gallery-banner {
+    padding: 35px 0 50px;
+  }
+
+  .gallery-banner__title {
+    font-size: 77px;
+  }
+
+  .gallery-banner__count {
+    font-size: 47px;
+  }
+
+  .gallery-banner__fly-photo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_1 {
+    top: 10%;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_4 {
+    width: 34px;
+    height: 34px;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_5 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_6 {
+    width: 34px;
+    height: 34px;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_10 {
+    width: 34px;
+    height: 34px;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_11 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_12 {
+    width: 34px;
+    height: 34px;
+  }
+
+  .gallery-tabs__photo {
+    width: 31.3%;
+  }
+
+  .gallery-benefits__text {
+    font-size: 17px;
+  }
+
   .footer {
     padding: 35px 0 35px;
   }
@@ -2259,6 +2701,10 @@ body.dark .input-date input {
     height: 200px;
   }
 
+  .reviews-videos__video video {
+    height: 200px;
+  }
+
   .statistic {
     background-position: 55%;
   }
@@ -2293,6 +2739,102 @@ body.dark .input-date input {
 
   .statistic-item__val {
     font-size: 24px;
+  }
+
+  .gallery-statistic__value {
+    font-size: 20px;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_1 {
+    top: 0;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_2 {
+    left: 50%;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_3 {
+    right: 0;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_4 {
+    left: 10%;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_5 {
+    top: auto;
+    bottom: 0;
+    right: 10%;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_6 {
+    right: auto;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_7 {
+    top: 0;
+    left: auto;
+    right: 0;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_8 {
+    width: 50px;
+    height: 50px;
+    top: auto;
+    bottom: 0;
+    left: 0;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_9 {
+    right: auto;
+    left: 0;
+    top: 0;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_10 {
+    bottom: auto;
+    left: auto;
+    top: 44%;
+    right: -6%;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_11 {
+    width: 42px;
+    height: 42px;
+    left: 18%;
+    top: 36%;
+  }
+
+  .gallery-banner__fly-photo.fly-icon_12 {
+    top: auto;
+    bottom: 0;
+  }
+
+  .gallery-tabs__wrapper {
+    margin: -2%;
+  }
+
+  .gallery-tabs__photo {
+    width: 46%;
+    height: 87px;
+    margin: 2%;
+  }
+
+  .gallery-benefits {
+    margin: 0;
+  }
+
+  .gallery-benefits__item {
+    width: 100%;
+    margin: 0;
+  }
+
+  .gallery-benefits__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .gallery-benefits__text {
+    font-size: 14px;
   }
 
   .footer {
@@ -2331,6 +2873,15 @@ body.dark .input-date input {
 
   .gids__title.section {
     font-size: 20px;
+  }
+
+  .gids-item__header {
+    flex-grow: 0;
+    display: block;
+  }
+
+  .gids-item__name {
+    margin-bottom: 10px;
   }
 }
 
@@ -2373,6 +2924,10 @@ body.dark .input-date input {
 
   .form-select .select_arrow {
     right: 10px;
+  }
+
+  .gallery-banner__title {
+    font-size: 60px;
   }
 }
 
