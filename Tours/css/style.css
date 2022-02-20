@@ -1860,8 +1860,8 @@ input.custom-select__val {
 }
 
 .gids-item__body img {
-  -o-object-fit: 100%;
-  object-fit: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
   -o-object-position: 10% 5%;
   object-position: 10% 5%;
   width: 100%;
