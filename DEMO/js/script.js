@@ -1,5 +1,18 @@
 "use strict";
 
+const startDemo = () => {
+  const demo = document.querySelector('.demo')
+  const hero = document.querySelector('.hero')
+
+  demo.style.display = 'none'
+  hero.classList.add('show')
+}
+
+document.querySelector('#start-demo').addEventListener('click', function () {
+  setInterval(startDemo, 5000)
+})
+
+
 const paginationChange = () => {
   const previewsElements = document.querySelectorAll('.preview-item')
   previewsElements.forEach(el => {

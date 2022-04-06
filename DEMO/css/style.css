@@ -188,8 +188,13 @@ li {
 }
 
 .hero {
+  display: none;
   height: 100vh;
   min-height: 300px;
+}
+
+.hero.show {
+  display: block;
 }
 
 .demo-slider {
