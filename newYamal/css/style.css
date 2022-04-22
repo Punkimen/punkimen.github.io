@@ -1427,7 +1427,7 @@ label.error {
   padding: 15px;
   min-height: 310px;
   background-position: center;
-  background-image: url(../img/ready-tours/random-tour--big.jpg);
+  background-image: url();
 }
 
 .ready-tours__slider {
@@ -1538,6 +1538,7 @@ label.error {
   align-items: center;
   justify-content: center;
   background: #fff;
+  z-index: 3;
 }
 
 .ready-tours__random-rotate svg {
@@ -1547,7 +1548,6 @@ label.error {
 }
 
 .ready-tours__random-photo {
-  background-image: url(../img/ready-tours/random-tour.jpg);
   padding: 10px 20px 80px 20px;
   height: 100%;
   border-radius: 205px;
@@ -1559,11 +1559,26 @@ label.error {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+
+.ready-tours__random-photo img {
+  display: block;
+  width: 105%;
+  height: 105%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .ready-tours__random-content {
+  pointer-events: none;
   color: #fff;
   text-align: center;
+  position: relative;
+  z-index: 3;
 }
 
 .ready-tours__random-label {
