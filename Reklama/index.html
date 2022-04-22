@@ -11,6 +11,7 @@
     name="description">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/rekmair.webflow.css" rel="stylesheet" type="text/css">
@@ -308,7 +309,7 @@
     <h3 class="sub-white animated vanishIn">МЫ ЗНАЕМ ЧТО МЫ ДЕЛАЕМ</h3>
     <p style="text-align: center;"><a class="contact animated vanishIn" href="#">обсудить проект в WhastsApp сейчас </a>
     </p>
-    <div class="hero"> <img class="arrow" data-ix="new-interaction" height="25" src="images/arrow.png" width="25"></div>
+    <!-- <div class="hero"> <img class="arrow" data-ix="new-interaction" height="25" src="images/arrow.png" width="25"></div> -->
 
     <div class="box">
       <h3 class="title">Коммуникационное агенство «Рекламир»</h3>
@@ -327,7 +328,23 @@
 
 
   <div>
-
+    <div class="attention">
+      <div class="container">
+        <h2 class="attention__title" data-aos="fade-down" data-aos-easing="ease-out-cubic">
+          <span class="blue">Привлекайте внимание </span>клиентов яркой рекламой<span class="blue">.</span>
+        </h2>
+        <div class="attention-quote">
+          <div class="attention-quote__text" data-aos="fade-down" data-aos-easing="ease-out-cubic">Делать деньги без
+            рекламы может только монетный двор.</div>
+          <div class="attention-quote__author" data-aos="fade-down" data-aos-easing="ease-out-cubic">Томас Бабингтон
+            Маколей</div>
+        </div>
+        <p style="text-align: center;">
+          <a class="contact animated vanishIn" href="#">обсудить проект в WhastsApp сейчас
+          </a>
+        </p>
+      </div>
+    </div>
     <div class="w-row">
       <div class="_1 box-service w-col w-col-6 w-col-stack">
         <a class="link-box w-inline-block" href="outdoor.html">
@@ -419,6 +436,74 @@
       </div>
     </div>
   </div>
+  <section class="colors">
+    <div class="container">
+      <div class="colors__wrapper">
+        <div class="colors__left">
+          <h2 class="colors__title">
+            Если вы можете представить, мы можем это сделать
+            <span class="animate-cursor">|</span>
+          </h2>
+        </div>
+        <div class="colors__img">
+          <img src="images/cmyk_print.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="task">
+    <div class="container">
+      <div class="task__wrapper">
+        <div class="task__header">
+          <h2 class="task__title">Каждой задаче - своя реклама</h2>
+          <a href="#" class="task__btn">
+            отправить заявку
+          </a>
+        </div>
+        <div class="task-statistic task-row">
+          <div class="task-statistic__item task-col">
+            <div class="stat-block">
+              <div class="stat-block__val">297</div>
+              <div class="stat-block__text">вывесок смонтировано</div>
+            </div>
+          </div>
+          <div class="task-statistic__item task-col">
+            <div class="stat-block">
+              <div class="stat-block__val">3,5 дня</div>
+              <div class="stat-block__text">среднее изготовление вывески</div>
+            </div>
+          </div>
+          <div class="task-statistic__item task-col">
+            <div class="stat-block">
+              <div class="stat-block__val">3,5 дня</div>
+              <div class="stat-block__text">среднее изготовление вывески</div>
+            </div>
+          </div>
+        </div>
+        <div class="task-contacts task-row">
+          <div class="task-contacts__item task-col">
+            <div class="task-contacts__label">эл.почта для проектов</div>
+            <div class="task-contacts__text">info@mail.ru</div>
+          </div>
+          <div class="task-contacts__item task-col">
+            <div class="task-contacts__label">телефон</div>
+            <div class="task-contacts__text" style="white-space: nowrap">+7(999)-999-99-99
+              <span class="small-text">по всем вопросам</span>
+            </div>
+          </div>
+          <div class="task-contacts__item task-col">
+            <div class="task-contacts__label">адрес</div>
+            <div class="task-contacts__text task-contacts__text_uppercase">
+              Москва
+              <span class="small-text">какой-то адрес</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="box clients w-hidden-small w-hidden-tiny"><img class="client-logo" src="images/Logo_Clients_1.svg"
       width="90"><img class="client-logo" src="images/Logo_Clients_2.svg" width="90"><img class="client-logo"
       src="images/Logo_Clients_3.svg" width="90"><img class="client-logo" src="images/Logo_Clients_4.svg"
@@ -440,9 +525,11 @@
       <div>©&nbsp;2002 - 2019 Коммуникационное агентство «Рекламир».</div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
-
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="js/aos.js" type="text/javascript"></script>
   <script src="js/js.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
