@@ -64,24 +64,24 @@ function scrollInit() {
 }
 scrollInit()
 
-$('.parallax').on('mousemove', function (e) {
-    var w = $(window).width();
-    var h = $(window).height();
-    var offsetX = 1 - e.pageX / w;
-    var offsetY = 1 - e.pageY / h;
+// $('.parallax').on('mousemove', function (e) {
+//     var w = $(window).width();
+//     var h = $(window).height();
+//     var offsetX = 1 - e.pageX / w;
+//     var offsetY = 1 - e.pageY / h;
 
 
 
 
-    var offset = 25;
+//     var offset = 25;
 
-    var translate = "translate3d(" + Math.round(offsetX * offset) + "px," + Math.round(offsetY * offset) + "px, 0px)";
+//     var translate = "translate3d(" + Math.round(offsetX * offset) + "px," + Math.round(offsetY * offset) + "px, 0px)";
 
-    $(this).css({
-        'transform': `matrix(1, 0, 0, 1, ${Math.round(offsetX * offset)}, ${Math.round(offsetX * offset)})`,
-    });
+//     $(this).css({
+//         'transform': `matrix(1, 0, 0, 1, ${Math.round(offsetX * offset)}, ${Math.round(offsetX * offset)})`,
+//     });
 
-});
+// });
 // $('.ready-tours__banners-wrapper').on('mousemove', function (e) {
 //     var w = $(window).width();
 //     var h = $(window).height();
@@ -103,9 +103,11 @@ $('.parallax').on('mousemove', function (e) {
 $('.ready-tours__random-rotate').on('click', function () {
     $('.ready-tours__tours').toggleClass('rotate')
     if ($('.ready-tours__tours').hasClass('rotate')) {
-        $('#random-tour__img').attr('src', '../img/ready-tours/random-tour--big.jpg')
+        console.log($('#random-tour__img'));
+
+        $('#random-tour__img').attr('src', './img/ready-tours/random-tour--big.jpg')
     } else {
-        $('#random-tour__img').attr('src', '../img/ready-tours/random-tour.jpg')
+        $('#random-tour__img').attr('src', './img/ready-tours/random-tour.jpg')
     }
 });
 
@@ -302,4 +304,81 @@ function mainScreenBgAnimation() {
 }
 
 mainScreenBgAnimation();
+
+$('.tilt-js').tilt({
+    maxTilt: 15,
+    perspective: 1000,
+    easing: "cubic-bezier(.03,.98,.52,.99)",
+    scale: 1,
+    speed: 400,
+    transition: true,
+})
+$('.tilt-js__inner').tilt({
+    maxTilt: 20,
+    perspective: 600,
+    easing: "cubic-bezier(.03,.98,.52,.99)",
+    scale: 1,
+    speed: 200,
+    transition: true,
+})
+
+
+const scene_1 = document.querySelector('#scene_1')
+const scene_2 = document.querySelector('#scene_2')
+const scene_3 = document.querySelector('#scene_3')
+
+let parallax = new Parallax(scene_1, {
+    relativeInput: true
+})
+let parallax2 = new Parallax(scene_2, {
+    relativeInput: true
+})
+let parallax3 = new Parallax(scene_3, {
+    relativeInput: true
+})
+
+
+
+// $('.parallax').tilt({
+//     maxTilt: 35,
+//     perspective: 500,
+//     easing: "cubic-bezier(.03,.98,.52,.99)",
+//     scale: 1,
+//     speed: 400,
+//     transition: true,
+// })
+// let lastX = 0
+// let lastY = 0
+
+// let moveX = 0
+// let moveY = 0
+// let moveCof = 0.25
+// $('.parallax').on('mousemove', function (e) {
+
+//     let target = this.getBoundingClientRect();
+//     let x = e.clientX - target.left;
+//     let y = e.clientY - target.top;
+
+//     if (x > lastX) {
+//         moveX += moveCof
+//     } else if (x < lastX) {
+//         moveX -= moveCof
+//     }
+//     if (y > lastY) {
+//         moveY += moveCof
+//     } else if (y < lastY) {
+//         moveY -= moveCof
+//     }
+//     console.log(`translateX(${moveX}px, ${moveY}px)`);
+
+//     lastX = x;
+//     lastY = y;
+
+//     $(this).css({
+//         // 'transform': `translate(${moveX}px, ${moveY}px)`,
+//         'margin-top': `${moveY}px`,
+//         'margin-left': `${moveX}px`
+//     })
+// })
+
 
