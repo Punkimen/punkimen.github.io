@@ -46,3 +46,9 @@ $(document).ready(function () {
     toggleMenu()
   })
 })
+
+$('.widjets-btn').on('click', function (e) {
+  $(this).toggleClass('active')
+  $('.widjets__menu').toggleClass('active')
+  $('.widjets__menu').slideToggle(300)
+})

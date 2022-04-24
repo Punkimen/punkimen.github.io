@@ -279,8 +279,6 @@ body.overlay {
   padding: 50px 0;
   min-height: 100vh;
   background-image: url(../images/background-texture-dark.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: 0 0;
 }
 
@@ -368,7 +366,7 @@ body.overlay {
 }
 
 .colors__img img {
-  min-width: 950px;
+  /* min-width: 950px; */
 }
 
 /* colors end */
@@ -488,7 +486,179 @@ body.overlay {
 }
 
 /* task end */
+.overlay {
+  padding: 80px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
+.overlay .white {
+  margin-top: 0;
+}
+
+.overlay .contact {
+  margin-bottom: 0;
+}
+
+.fullscreen-bg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* widjets */
+
+.widjets {
+  position: fixed;
+  bottom: 50px;
+  right: 65px;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.widjets__menu {
+  display: none;
+}
+
+.widjets__menu.active {
+  opacity: 1;
+}
+
+.widjets__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.widjets__elem {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.widjets__elem:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.widjets__link {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.widjets__link-text {
+  position: absolute;
+  transform: translateY(calc(50% + 2px));
+  right: calc(100% + 15px);
+  padding: 7px 9px;
+  font-size: 13px;
+  line-height: 1;
+  border-radius: 3px;
+  background: #292929;
+  color: #fff;
+  opacity: 0;
+}
+
+
+
+.widjets__link-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  border-width: 10px;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  border-left-color: #292929;
+}
+
+.widjets__link:hover .widjets__link-text {
+  opacity: 0.85;
+}
+
+.widjets__link:hover {}
+
+.widjets-btn {
+  position: relative;
+  border: none;
+  border-radius: 50%;
+  background: #8932f7;
+  width: 60px;
+  height: 60px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s
+}
+
+@media(min-width: 768px) {
+  .widjets-btn:hover {
+    transform: scale(1.2)
+  }
+}
+
+.widjets-btn.active {
+  background: #fff;
+}
+
+.widjets-btn.active .icon-open {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.widjets-btn.active .icon-close {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.icon-open {
+  transition: all 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* opacity: 1; */
+}
+
+.icon-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s;
+  /* opacity: 0; */
+
+}
+
+/* widjets end */
 @media(max-width: 1450px) {
 
   .menu-contacts {
@@ -504,7 +674,7 @@ body.overlay {
   }
 
   .colors__img img {
-    min-width: 600px;
+    /* min-width: 600px; */
   }
 
   .task__btn {
@@ -613,6 +783,11 @@ body.overlay {
   .task__title {
     font-size: 50px;
   }
+
+  .widjets {
+    bottom: 10px;
+    right: 10px;
+  }
 }
 
 @media(max-width:767px) {
@@ -650,7 +825,7 @@ body.overlay {
   }
 
   .colors__img img {
-    min-width: 450px;
+    /* min-width: 450px; */
   }
 
   .task-row {
@@ -720,6 +895,10 @@ body.overlay {
   .task__btn {
     margin: 0 auto;
   }
+
+  .overlay .white {
+    font-size: 40px;
+  }
 }
 
 @media(max-width:440px) {
@@ -733,6 +912,14 @@ body.overlay {
 
   .task__title {
     font-size: 32px;
+  }
+
+  .overlay .white {
+    font-size: 32px;
+  }
+
+  .sub-white {
+    font-size: 24px;
   }
 }
 
