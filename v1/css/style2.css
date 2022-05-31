@@ -210,6 +210,74 @@ li {
   margin: 0 auto;
 }
 
+input,
+textarea {
+  display: block;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  outline: none;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+button.orange-btn,
+a.orange-btn {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 13px 20px 13px;
+  background: #FFAF23;
+  border-radius: 10px;
+  transition: all ease 0.3s;
+  border: 1px solid #FFAF23;
+  color: #fff;
+}
+
+button.orange-btn:hover,
+a.orange-btn:hover {
+  background: #fff;
+  color: #FFAF23;
+}
+
+button.white-btn,
+a.white-btn {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 13px 20px 13px;
+  background: #fff;
+  border-radius: 10px;
+  transition: all ease 0.3s;
+  border: 1px solid #FFAF23;
+  color: #FFAF23;
+}
+
+button.white-btn:hover,
+a.white-btn:hover {
+  background: #FFAF23;
+  color: #fff;
+}
+
+.main-link {
+  color: #00798C;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
 .calc {
   padding: 35px 0;
 }
@@ -738,20 +806,20 @@ li {
   font-size: 30px;
   line-height: 1.2;
   text-align: center;
-  margin: 15px 0 15px;
+  margin: 25px 0 29px;
   padding: 0 15px;
 }
 
 .trademark-calc__list {
   min-width: 700px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .trademark-calc__elem {
-  font-size: 12px;
+  font-size: 14px;
   border: 1px solid #E7E7E7;
-  padding: 10px 5px 10px 5px;
+  padding: 17px 17px 17px 10px;
   transition: all ease 0.2s;
 }
 

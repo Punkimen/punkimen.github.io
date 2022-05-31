@@ -278,193 +278,213 @@ a.white-btn:hover {
   outline: none;
 }
 
-.patenting {
-  margin-bottom: 40px;
-}
-
-.patenting__wrapper {
+.trademark-catalog__wrapper {
   display: flex;
-  position: relative;
+  align-items: flex-start;
 }
 
-.patenting-item {
+.trademark-catalog__filter {
+  flex: 0 0 269px;
+  max-width: 269px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
+  margin-right: 44px;
 }
 
-.patenting-item:first-child .patenting-item__line {
-  position: absolute;
-  top: -50px;
-  bottom: 0;
-  left: 0;
-  width: 200%;
-}
-
-.patenting-item:first-child .patenting-item__line img {
+.trademark-catalog__filter .control {
   display: block;
+  padding-left: 25px;
+}
+
+.trademark-catalog__filter .control:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.trademark-catalog__filter .contol-group__text {
+  font-size: 14px;
+}
+
+.trademark-catalog__filter .control .control_indicator {
+  width: 16px;
+  height: 16px;
+  top: 2px;
+}
+
+.trademark-catalog__filter .control .control_indicator::after {
+  width: 11px;
+  height: 11px;
+}
+
+.trademark-catalog__body {
   width: 100%;
-  height: auto;
 }
 
-.patenting-item:last-child .patenting-item__line {
-  position: absolute;
-  top: -50px;
-  bottom: 0;
-  right: 0;
-  width: 200%;
+.trademark-filter__label {
+  padding-top: 10px;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 30px;
 }
 
-.patenting-item:last-child .patenting-item__line img {
-  display: block;
-  width: 100%;
-  height: auto;
+.trademark-filter__aside {
+  background: #F5F5F5;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.patenting-item:not(:last-child) {
-  margin-right: 20px;
+.trademark-filter__item {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff;
+  padding: 12px 15px;
+  border-bottom: 1px solid #E0E0E0;
 }
 
-.patenting-item::before {
-  content: attr(data-num);
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: 700;
-  font-size: 300px;
-  line-height: 0.7;
-  text-align: center;
-  color: rgba(224, 224, 224, 0.53);
+.trademark-filter__item_unbordered {
+  border: none;
 }
 
-.patenting-item__line {
-  min-width: 695px;
+.trademark-filter__item[open] {
+  background: #F5F5F5;
 }
 
-.patenting-item__inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 225px;
-  z-index: 2;
-}
-
-.patenting-item__head {
+.trademark-filter__item[open] .trademark-filter__head {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding-bottom: 12px;
   border-bottom: 1px solid #E0E0E0;
-  margin-bottom: 34px;
+  margin-bottom: 12px;
 }
 
-.patenting-item__label {
-  text-align: center;
-  font-weight: 700;
+.trademark-filter__item[open] .trademark-filter__head svg {
+  transform: rotate(180deg);
+  stroke: #00798C;
+}
+
+.trademark-filter__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.trademark-filter__head svg {
+  stroke: #000;
+  transition: all ease 0.2s;
+}
+
+.trademark-filter__body input:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.trademark-filter__choose-btn {
   font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  min-height: 38px;
-  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.trademark-filter__choose-btn span {
+  margin-right: 10px;
+}
+
+.trademark-filter__choose-btn svg {
+  stroke: #000;
+  transition: all ease 0.2s;
+}
+
+.trademark-filter__choose-btn.active {
   color: #00798C;
 }
 
-.patenting-item__content {
-  max-height: 150px;
-  flex-grow: 1;
-  margin-bottom: 175px;
-  overflow: auto;
+.trademark-filter__choose-btn.active svg {
+  transform: rotate(180deg);
+  stroke: #00798C;
 }
 
-.patenting-item__list {
-  font-size: 14px;
-  line-height: 1.2;
+.trademark-filter__footer {
+  padding: 18px 15px;
 }
 
-.patenting-item__elem {
-  position: relative;
-  padding-left: 8px;
-}
-
-.patenting-item__elem:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.patenting-item__elem::before {
-  content: "";
+.trademark-filter__btn {
   background: #00798C;
-  border-radius: 50%;
-  display: block;
-  width: 4px;
-  height: 4px;
-  position: absolute;
-  top: 7px;
-  left: 0;
-}
-
-.patenting-item__btn {
-  max-width: 223px;
-  width: 100%;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.patenting-item__btn .orange-btn {
-  width: 100%;
-  position: relative;
-  text-align: left;
-  padding-left: 44px;
-  color: #1D1D1B;
-}
-
-.patenting-item__btn .orange-btn:hover {
+  border-radius: 10px;
   color: #fff;
-  background-color: #FFAF23;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.patenting-item__btn .orange-btn::before {
-  content: url(../img/check.png);
+.trademark-filter__btn:hover {
+  background: #015d6b;
+}
+
+.trademark-filter__classes {
+  display: none;
+  max-height: 377px;
+  overflow: auto;
+  position: relative;
+  z-index: 2;
+  margin-right: -2px;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.trademark-filter__classes.show {
+  display: block;
+}
+
+.trademark-filter__links {
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 15px;
+}
+
+.trademark-filter__links-elem:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.trademark-filter__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-right: 15px;
+  transition: all 0.2s ease;
+}
+
+.trademark-filter__link:hover {
+  color: #00798C;
+}
+
+.trademark-filter__link::after {
+  content: ">";
   position: absolute;
   top: 50%;
+  right: 0;
   transform: translateY(-50%);
-  left: 15px;
 }
 
-.conslutation {
-  background: #EFEDF1;
-  border: 8px solid #00798C;
-  box-sizing: border-box;
-  border-radius: 80px;
+.trademark-classes__item {
+  padding: 12px 15px;
+  max-height: 75px;
+  overflow: hidden;
 }
 
-.conslutation__wrapper {
-  padding: 48px 20px 34px;
+.trademark-classes__item:not(:last-child) {
+  border-bottom: 1px solid #E0E0E0;
 }
 
-.conslutation__title {
-  text-align: center;
-  margin-bottom: 11px;
-  font-size: 30px;
-  line-height: 1.2;
-}
-
-.conslutation__text {
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.2;
-  margin-bottom: 38px;
-}
-
-.conslutation-form {
-  max-width: 795px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.conslutation-form input,
-.conslutation-form textarea {
+input,
+textarea {
   display: block;
   width: 100%;
   background: #fff;
@@ -475,215 +495,112 @@ a.white-btn:hover {
   padding: 10px 20px;
 }
 
-.conslutation-form textarea {
-  resize: none;
-  min-height: 94px;
+.btn-reset {
+  display: block;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
 }
 
-.conslutation-form__wrapper {
+.trademark-catalog__sort {
   display: flex;
-  margin-bottom: 25px;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.conslutation-form__left {
-  max-width: 210px;
-  width: 100%;
+.trademark-catalog__sort-label {
+  white-space: nowrap;
+  font-size: 16px;
   margin-right: 20px;
 }
 
-.conslutation-form__field:not(:last-child) {
-  margin-bottom: 18px;
+.trademark-catalog__sort-select {
+  min-width: 150px;
 }
 
-.conslutation-form__right {
+.trademark-item {
+  padding: 25px 0px 25px 15px;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.trademark-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.trademark-item__header {
+  font-size: 16px;
+}
+
+.trademark-item__row {
+  display: flex;
+  align-items: center;
+}
+
+.trademark-item__col {
+  padding: 10px;
   width: 100%;
 }
 
-.conslutation-form__textarea {
-  margin-bottom: 20px;
-}
-
-.conslutation-form__phone {
-  padding-top: 5px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 23px;
-}
-
-.conslutation-form__btn {
-  max-width: 211px;
-  width: 100%;
-  margin: 0 auto 12px;
-}
-
-.conslutation-form__agree {
-  text-align: center;
-  font-size: 14px;
-}
-
-.conslutation-form__agree .agree-link {
-  color: #00798C;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-h2 {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 35px;
-  margin: 40px 0px 40px 0;
-  color: #1D1D1B;
-  text-align: center;
-}
-
-.text-blue {
-  color: #00798C;
-}
-
-p {
-  display: block;
-  font-size: 18px;
-}
-
-p:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.text-limited__content.show {
-  height: auto;
-}
-
-.show-more__btn--mobile {
+.trademark-item__mob-label {
   display: none;
 }
 
-@media (max-width: 1200px) {
-  .patenting__wrapper {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
+.trademark-item__name {
+  text-decoration: underline;
+}
+
+.trademark-item__name img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.trademark-item__price {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.trademark-item__body {
+  font-size: 18px;
+}
+
+@media (max-width: 992px) {
+  .trademark-item__header {
+    display: none;
+  }
+
+  .trademark-item__row {
+    display: block;
+  }
+
+  .trademark-item__col {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .patenting-item {
-    padding-bottom: 120px;
-  }
-
-  .patenting-item:first-child .patenting-item__line {
-    width: 140%;
-    top: 38%;
-    bottom: auto;
-    left: auto;
-    transform: rotate(90deg);
-  }
-
-  .patenting-item:last-child .patenting-item__line {
-    width: 140%;
-    bottom: 70%;
-    right: auto;
-    transform: translateX(-50%) rotate(90deg);
-    left: 50%;
-    top: auto;
-  }
-
-  .patenting-item:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 95px;
-  }
-
-  .patenting-item__inner {
-    max-width: 245px;
-  }
-
-  .patenting-item__content {
-    margin-bottom: 0;
-  }
-
-  .patenting-item__elem {
-    padding-left: 15px;
-  }
-
-  .patenting-item__btn {
-    max-width: 243px;
-    width: 100%;
-    transform: translateX(43%);
+  .trademark-item__mob-label {
+    margin-right: 15px;
+    display: block;
   }
 }
 
 @media (max-width: 767px) {
-  .patenting-item__btn {
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 568px) {
-  .patenting-item {
-    padding-bottom: 94px;
-  }
-
-  .patenting-item:last-child {
-    padding-bottom: 156px;
-  }
-
-  .patenting-item:not(:last-child) {
-    margin-bottom: 86px;
-  }
-
-  .patenting-item__inner {
-    max-width: 220px;
-  }
-
-  .patenting-item__head {
-    margin-bottom: 15px;
-  }
-
-  .patenting-item__elem {
-    padding-left: 10px;
-  }
-
-  .patenting-item__elem:not(:last-child) {
-    margin-bottom: 5px;
-  }
-
-  .conslutation__title {
-    font-size: 24px;
-  }
-
-  .conslutation-form__wrapper {
+  .trademark-catalog__wrapper {
     display: block;
   }
 
-  .conslutation-form__left {
+  .trademark-catalog__filter {
     max-width: 100%;
     margin-right: 0;
-    margin-bottom: 18px;
+    margin-bottom: 40px;
   }
 
-  .conslutation-form__phone {
-    text-align: center;
-    display: block;
-  }
-
-  .text-limited__content {
-    height: 320px;
-    overflow: hidden;
-    margin-bottom: 20px;
-  }
-
-  .show-more__btn--mobile {
-    display: block;
-  }
-}
-
-@media (max-width: 340px) {
-  .patenting-item:not(:last-child) {
-    margin-bottom: 39px;
-  }
-
-  .patenting-item__line {
-    min-width: 620px;
+  .trademark-item {
+    padding: 15px 10px 15px 10px;
   }
 }
