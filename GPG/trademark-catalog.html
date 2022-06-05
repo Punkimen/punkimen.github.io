@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/trademark-catalog.css">
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <div class="middlecontent">
+            <div class="breadcrumb">
+                <a href="http:\\gpg.widevision.tech">Главная</a>
+                <span class="arrow4  arrow-bar is-right"></span>Каталог товарных знаков</div>
+            <h1 class="section-title">Каталог товарных знаков</h1>
+            <div class="trademark-catalog">
+                <div class="trademark-catalog__wrapper">
+                    <div class="trademark-catalog__filter">
+                        <div class="trademark-filter__label">Фильтр</div>
+                        <form action="" class="trademark-filter__form">
+                            <div class="trademark-filter__aside">
+                                <details class="trademark-filter__item" open>
+                                    <summary class="trademark-filter__head">
+                                        <span>Вид товарного знака</span>
+                                        <svg width="15" height="8" viewBox="0 0 15 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 1L7.5 7L0.999999 1" stroke="inherit" />
+                                        </svg>
+
+                                    </summary>
+                                    <div class="trademark-filter__body">
+                                        <label class="control control-radio ">
+                                            <div class="contol-group__text">Cловесный</div>
+                                            <input type="radio" name="trademark-type" checked value="">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                        <label class="control control-radio ">
+                                            <div class="contol-group__text">Изобразительный</div>
+                                            <input type="radio" name="trademark-type" value="">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                        <label class="control control-radio ">
+                                            <div class="contol-group__text">Комбинированный</div>
+                                            <input type="radio" name="trademark-type" value="">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                    </div>
+                                </details>
+                                <details class="trademark-filter__item">
+                                    <summary class="trademark-filter__head">
+                                        <span>Номер свидетельства</span>
+                                        <svg width="15" height="8" viewBox="0 0 15 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 1L7.5 7L0.999999 1" stroke="inherit" />
+                                        </svg>
+                                    </summary>
+                                    <div class="trademark-filter__body">
+                                        <input type="text" placeholder="Введите номер" name="trademark-num">
+                                    </div>
+                                </details>
+                                <details class="trademark-filter__item">
+                                    <summary class="trademark-filter__head">
+                                        <span>Год приоритета</span>
+                                        <svg width="15" height="8" viewBox="0 0 15 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 1L7.5 7L0.999999 1" stroke="inherit" />
+                                        </svg>
+                                    </summary>
+                                    <div class="trademark-filter__body">
+                                        <input type="text" placeholder="Введите год" name="trademark-year">
+                                    </div>
+                                </details>
+                                <details class="trademark-filter__item">
+                                    <summary class="trademark-filter__head">
+                                        <span>Цена</span>
+                                        <svg width="15" height="8" viewBox="0 0 15 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 1L7.5 7L0.999999 1" stroke="inherit" />
+                                        </svg>
+                                    </summary>
+                                    <div class="trademark-filter__body">
+                                        <input type="text" placeholder="До 1 000 000 р" name="trademark-price">
+                                    </div>
+                                </details>
+                                <details class="trademark-filter__item trademark-filter__item_unbordered">
+                                    <summary class="trademark-filter__head">
+                                        <span>Указать класс МКТУ</span>
+                                        <svg width="15" height="8" viewBox="0 0 15 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 1L7.5 7L0.999999 1" stroke="inherit" />
+                                        </svg>
+                                    </summary>
+                                    <div class="trademark-filter__body">
+                                        <input type="text" placeholder="Укажите класс 1- 45" name="trademark-class">
+                                        <button type="button" class="trademark-filter__choose-btn btn-reset">
+                                            <span>Подобрать класс</span>
+                                            <svg width="15" height="8" viewBox="0 0 15 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14 1L7.5 7L0.999999 1" stroke="inherit" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </details>
+                                <div class="trademark-filter__footer">
+                                    <button class="trademark-filter__btn btn-blue">Начать поиск</button>
+                                </div>
+                            </div>
+                            <div class="trademark-filter__classes">
+                                <div class="trademark-classes__item">
+                                    <label class="control control-radio ">
+                                        <div class="contol-group__text">1. Химические продукты, предназначенные для
+                                            использования в ...</div>
+                                        <input type="checkbox" name="trademark-classes" checked value="">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="trademark-classes__item">
+                                    <label class="control control-radio ">
+                                        <div class="contol-group__text">2. Краски, олифы, лаки; защитные средства,
+                                            предохраняющие металлы ...</div>
+                                        <input type="checkbox" name="trademark-classes" value="">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="trademark-classes__item">
+                                    <label class="control control-radio ">
+                                        <div class="contol-group__text">3. Препараты для отбеливания и прочие вещества
+                                            для стирки; препараты ...</div>
+                                        <input type="checkbox" name="trademark-classes" value="">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="trademark-classes__item">
+                                    <label class="control control-radio ">
+                                        <div class="contol-group__text">4. Технические масла и смазки; смазочные
+                                            материалы; составы для ...</div>
+                                        <input type="checkbox" name="trademark-classes" value="">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="trademark-classes__item">
+                                    <label class="control control-radio ">
+                                        <div class="contol-group__text">5. Фармацевтические и ветеринарные препараты;
+                                            гигиенические ...</div>
+                                        <input type="checkbox" name="trademark-classes" value="">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="trademark-classes__item">
+                                    <label class="control control-radio ">
+                                        <div class="contol-group__text">1. Химические продукты, предназначенные для
+                                            использования в ...</div>
+                                        <input type="checkbox" name="trademark-classes" value="">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="trademark-classes__item">
+                                    <label class="control control-radio ">
+                                        <div class="contol-group__text">2. Краски, олифы, лаки; защитные средства,
+                                            предохраняющие металлы ...</div>
+                                        <input type="checkbox" name="trademark-classes" value="">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="trademark-classes__item">
+                                    <label class="control control-radio ">
+                                        <div class="contol-group__text">3. Препараты для отбеливания и прочие вещества
+                                            для стирки; препараты ...</div>
+                                        <input type="checkbox" name="trademark-classes" value="">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="trademark-classes__item">
+                                    <label class="control control-radio ">
+                                        <div class="contol-group__text">4. Технические масла и смазки; смазочные
+                                            материалы; составы для ...</div>
+                                        <input type="checkbox" name="trademark-classes" value="">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="trademark-classes__item">
+                                    <label class="control control-radio ">
+                                        <div class="contol-group__text">5. Фармацевтические и ветеринарные препараты;
+                                            гигиенические ...</div>
+                                        <input type="checkbox" name="trademark-classes" value="">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                        <ul class="trademark-filter__links">
+                            <li class="trademark-filter__links-elem">
+                                <a href="#" class="trademark-filter__link">Каталог товарных знаков</a>
+                            </li>
+                            <li class="trademark-filter__links-elem">
+                                <a href="#" class="trademark-filter__link">Купить товарный знак</a>
+                            </li>
+                            <li class="trademark-filter__links-elem">
+                                <a href="#" class="trademark-filter__link">Продать товарный знак</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="trademark-catalog__body">
+                        <div class="trademark-catalog__sort">
+                            <div class="trademark-catalog__sort-label">Сортировать по</div>
+                            <details class="trademark-catalog__sort-select custom-select" id="trademark-sort" value="1">
+                                <summary class="custom-select__header">
+                                    <span class="sort-select__val">По цене</span>
+                                </summary>
+                                <ul class="custom-select__body">
+                                    <li class="custom-select__option" value="1" selected="select">По цене</li>
+                                    <li class="custom-select__option" value="2">По Дате</li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="trademark-catalog__items">
+                            <div class="trademark-catalog__item trademark-item">
+                                <div class="trademark-item__header">
+                                    <div class="trademark-item__row">
+                                        <div class="trademark-item__col">
+                                            <a href="#" class="trademark-item__name">MAGNUM</a>
+                                        </div>
+                                        <div class="trademark-item__col">
+                                            <span class="">Приоритет</span>
+                                        </div>
+                                        <div class="trademark-item__col">
+                                            <span class="">Свидетельство</span>
+                                        </div>
+                                        <div class="trademark-item__col">
+                                            <span class="">Классы</span>
+                                        </div>
+                                        <div class="trademark-item__col">
+                                            <span class="">Цена</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="trademark-item__body">
+                                    <div class="trademark-item__row">
+                                        <div class="trademark-item__col" data-label="">
+                                            <a href="#"
+                                                class="trademark-item__mob-label trademark-item__name">MAGNUM</a>
+                                            <a href="#" class="trademark-item__name">
+                                                <img src="img/magnum.png" alt="magnum">
+                                            </a>
+                                        </div>
+                                        <div class="trademark-item__col" data-label="">
+                                            <div class="trademark-item__mob-label">Приоритет</div>
+                                            <span class="trademark-item__priority">2021</span>
+                                        </div>
+                                        <div class="trademark-item__col" data-label="">
+                                            <div class="trademark-item__mob-label">Свидетельство</div>
+                                            <span class="trademark-item__certificate">№234535</span>
+                                        </div>
+                                        <div class="trademark-item__col" data-label="">
+                                            <div class="trademark-item__mob-label">Классы</div>
+                                            <span class="trademark-item__classes">9, 11, 21</span>
+                                        </div>
+                                        <div class="trademark-item__col" data-label="">
+                                            <div class="trademark-item__mob-label">Цена</div>
+                                            <span class="trademark-item__price">6 000 000 р
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trademark-catalog__item trademark-item">
+                                <div class="trademark-item__header">
+                                    <div class="trademark-item__row">
+                                        <div class="trademark-item__col">
+                                            <a href="#" class="trademark-item__name">MAGNUM</a>
+                                        </div>
+                                        <div class="trademark-item__col">
+                                            <span class="">Приоритет</span>
+                                        </div>
+                                        <div class="trademark-item__col">
+                                            <span class="">Свидетельство</span>
+                                        </div>
+                                        <div class="trademark-item__col">
+                                            <span class="">Классы</span>
+                                        </div>
+                                        <div class="trademark-item__col">
+                                            <span class="">Цена</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="trademark-item__body">
+                                    <div class="trademark-item__row">
+                                        <div class="trademark-item__col" data-label="">
+                                            <a href="#"
+                                                class="trademark-item__mob-label trademark-item__name">MAGNUM</a>
+                                            <a href="#" class="trademark-item__name">
+                                                <img src="img/magnum.png" alt="magnum">
+                                            </a>
+                                        </div>
+                                        <div class="trademark-item__col" data-label="">
+                                            <div class="trademark-item__mob-label">Приоритет</div>
+                                            <span class="trademark-item__priority">2021</span>
+                                        </div>
+                                        <div class="trademark-item__col" data-label="">
+                                            <div class="trademark-item__mob-label">Свидетельство</div>
+                                            <span class="trademark-item__certificate">№234535</span>
+                                        </div>
+                                        <div class="trademark-item__col" data-label="">
+                                            <div class="trademark-item__mob-label">Классы</div>
+                                            <span class="trademark-item__classes">9, 11, 21</span>
+                                        </div>
+                                        <div class="trademark-item__col" data-label="">
+                                            <div class="trademark-item__mob-label">Цена</div>
+                                            <span class="trademark-item__price">6 000 000 р
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trademark-catalog__item trademark-item">
+                                <div class="trademark-item__header">
+                                    <div class="trademark-item__row">
+                                        <div class="trademark-item__col">
+                                            <a href="#" class="trademark-item__name">MAGNUM</a>
+                                        </div>
+                                        <div class="trademark-item__col">
+                                            <span class="">Приоритет</span>
+                                        </div>
+                                        <div class="trademark-item__col">
+                                            <span class="">Свидетельство</span>
+                                        </div>
+                                        <div class="trademark-item__col">
+                                            <span class="">Классы</span>
+                                        </div>
+                                        <div class="trademark-item__col">
+                                            <span class="">Цена</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="trademark-item__body">
+                                    <div class="trademark-item__row">
+                                        <div class="trademark-item__col" data-label="">
+                                            <a href="#"
+                                                class="trademark-item__mob-label trademark-item__name">MAGNUM</a>
+                                            <a href="#" class="trademark-item__name">
+                                                <img src="img/magnum.png" alt="magnum">
+                                            </a>
+                                        </div>
+                                        <div class="trademark-item__col" data-label="">
+                                            <div class="trademark-item__mob-label">Приоритет</div>
+                                            <span class="trademark-item__priority">2021</span>
+                                        </div>
+                                        <div class="trademark-item__col" data-label="">
+                                            <div class="trademark-item__mob-label">Свидетельство</div>
+                                            <span class="trademark-item__certificate">№234535</span>
+                                        </div>
+                                        <div class="trademark-item__col" data-label="">
+                                            <div class="trademark-item__mob-label">Классы</div>
+                                            <span class="trademark-item__classes">9, 11, 21</span>
+                                        </div>
+                                        <div class="trademark-item__col" data-label="">
+                                            <div class="trademark-item__mob-label">Цена</div>
+                                            <span class="trademark-item__price">6 000 000 р
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

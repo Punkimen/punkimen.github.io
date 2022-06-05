@@ -1,0 +1,689 @@
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Black.woff") format("woff"), url("../fonts/SFProDisplay-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Bold.woff") format("woff"), url("../fonts/SFProDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Heavy.woff") format("woff"), url("../fonts/SFProDisplay-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Medium.woff") format("woff"), url("../fonts/SFProDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Light.woff") format("woff"), url("../fonts/SFProDisplay-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Regular.woff") format("woff"), url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Semibold.woff") format("woff"), url("../fonts/SFProDisplay-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Thin.woff") format("woff"), url("../fonts/SFProDisplay-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Ultralight.woff") format("woff"), url("../fonts/SFProDisplay-Ultralight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2em;
+  color: #000;
+  overflow-x: hidden;
+}
+
+body.overlay {
+  height: 100vh;
+  overflow: hidden;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.headertitle {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.2;
+  text-align: center;
+  color: #1D1D1B;
+}
+
+.blue-btn {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 13px 20px 13px;
+  background: #00798C;
+  border-radius: 5px;
+  transition: all ease 0.3s;
+  border: 1px solid #00798C;
+  color: #fff;
+}
+
+.blue-btn:hover {
+  background: #02535f;
+}
+
+.orange-btn {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 13px 20px 13px;
+  background: #FFAF23;
+  border-radius: 5px;
+  transition: all ease 0.3s;
+  border: 1px solid #FFAF23;
+  color: #fff;
+}
+
+.orange-btn:hover {
+  background: #fff;
+  color: #FFAF23;
+}
+
+.white-btn {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 13px 20px 13px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all ease 0.3s;
+  border: 1px solid #FFAF23;
+  color: #FFAF23;
+}
+
+.white-btn:hover {
+  background: #FFAF23;
+  color: #fff;
+}
+
+.show-more__btn {
+  display: block;
+  white-space: nowrap;
+  font-size: 18px;
+  max-width: 181px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  outline: none;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+button.orange-btn,
+a.orange-btn {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 13px 20px 13px;
+  background: #FFAF23;
+  border-radius: 10px;
+  transition: all ease 0.3s;
+  border: 1px solid #FFAF23;
+  color: #fff;
+}
+
+button.orange-btn:hover,
+a.orange-btn:hover {
+  background: #fff;
+  color: #FFAF23;
+}
+
+button.white-btn,
+a.white-btn {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 13px 20px 13px;
+  background: #fff;
+  border-radius: 10px;
+  transition: all ease 0.3s;
+  border: 1px solid #FFAF23;
+  color: #FFAF23;
+}
+
+button.white-btn:hover,
+a.white-btn:hover {
+  background: #FFAF23;
+  color: #fff;
+}
+
+.main-link {
+  color: #00798C;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.patenting {
+  margin-bottom: 40px;
+}
+
+.patenting__wrapper {
+  display: flex;
+  position: relative;
+}
+
+.patenting-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.patenting-item:first-child .patenting-item__line {
+  position: absolute;
+  top: -50px;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+}
+
+.patenting-item:first-child .patenting-item__line img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.patenting-item:last-child .patenting-item__line {
+  position: absolute;
+  top: -50px;
+  bottom: 0;
+  right: 0;
+  width: 200%;
+}
+
+.patenting-item:last-child .patenting-item__line img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.patenting-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.patenting-item::before {
+  content: attr(data-num);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 300px;
+  line-height: 0.7;
+  text-align: center;
+  color: rgba(224, 224, 224, 0.53);
+}
+
+.patenting-item__line {
+  min-width: 695px;
+}
+
+.patenting-item__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 225px;
+  z-index: 2;
+}
+
+.patenting-item__head {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #E0E0E0;
+  margin-bottom: 34px;
+}
+
+.patenting-item__label {
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  min-height: 38px;
+  height: 100%;
+  color: #00798C;
+}
+
+.patenting-item__content {
+  max-height: 150px;
+  flex-grow: 1;
+  margin-bottom: 175px;
+  overflow: auto;
+}
+
+.patenting-item__list {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.patenting-item__elem {
+  position: relative;
+  padding-left: 8px;
+}
+
+.patenting-item__elem:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.patenting-item__elem::before {
+  content: "";
+  background: #00798C;
+  border-radius: 50%;
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+
+.patenting-item__btn {
+  max-width: 223px;
+  width: 100%;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.patenting-item__btn .orange-btn {
+  width: 100%;
+  position: relative;
+  text-align: left;
+  padding-left: 44px;
+  color: #1D1D1B;
+}
+
+.patenting-item__btn .orange-btn:hover {
+  color: #fff;
+  background-color: #FFAF23;
+}
+
+.patenting-item__btn .orange-btn::before {
+  content: url(../img/check.png);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+
+.conslutation {
+  background: #EFEDF1;
+  border: 8px solid #00798C;
+  box-sizing: border-box;
+  border-radius: 80px;
+}
+
+.conslutation__wrapper {
+  padding: 48px 20px 34px;
+}
+
+.conslutation__title {
+  text-align: center;
+  margin-bottom: 11px;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.conslutation__text {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 38px;
+}
+
+.conslutation-form {
+  max-width: 795px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.conslutation-form input,
+.conslutation-form textarea {
+  display: block;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  outline: none;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.conslutation-form textarea {
+  resize: none;
+  min-height: 94px;
+}
+
+.conslutation-form__wrapper {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.conslutation-form__left {
+  max-width: 210px;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.conslutation-form__field:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.conslutation-form__right {
+  width: 100%;
+}
+
+.conslutation-form__textarea {
+  margin-bottom: 20px;
+}
+
+.conslutation-form__phone {
+  padding-top: 5px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.conslutation-form__btn {
+  max-width: 211px;
+  width: 100%;
+  margin: 0 auto 12px;
+}
+
+.conslutation-form__agree {
+  text-align: center;
+  font-size: 14px;
+}
+
+.conslutation-form__agree .agree-link {
+  color: #00798C;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+h2 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 35px;
+  margin: 40px 0px 40px 0;
+  color: #1D1D1B;
+  text-align: center;
+}
+
+.text-blue {
+  color: #00798C;
+}
+
+p {
+  display: block;
+  font-size: 18px;
+}
+
+p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.text-limited__content.show {
+  height: auto;
+}
+
+.show-more__btn--mobile {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .patenting__wrapper {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .patenting-item {
+    padding-bottom: 120px;
+  }
+
+  .patenting-item:first-child .patenting-item__line {
+    width: 140%;
+    top: 38%;
+    bottom: auto;
+    left: auto;
+    transform: rotate(90deg);
+  }
+
+  .patenting-item:last-child .patenting-item__line {
+    width: 140%;
+    bottom: 70%;
+    right: auto;
+    transform: translateX(-50%) rotate(90deg);
+    left: 50%;
+    top: auto;
+  }
+
+  .patenting-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 95px;
+  }
+
+  .patenting-item__inner {
+    max-width: 245px;
+  }
+
+  .patenting-item__content {
+    margin-bottom: 0;
+  }
+
+  .patenting-item__elem {
+    padding-left: 15px;
+  }
+
+  .patenting-item__btn {
+    max-width: 243px;
+    width: 100%;
+    transform: translateX(43%);
+  }
+}
+
+@media (max-width: 767px) {
+  .patenting-item__btn {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 568px) {
+  .patenting-item {
+    padding-bottom: 94px;
+  }
+
+  .patenting-item:last-child {
+    padding-bottom: 156px;
+  }
+
+  .patenting-item:not(:last-child) {
+    margin-bottom: 86px;
+  }
+
+  .patenting-item__inner {
+    max-width: 220px;
+  }
+
+  .patenting-item__head {
+    margin-bottom: 15px;
+  }
+
+  .patenting-item__elem {
+    padding-left: 10px;
+  }
+
+  .patenting-item__elem:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .conslutation__title {
+    font-size: 24px;
+  }
+
+  .conslutation-form__wrapper {
+    display: block;
+  }
+
+  .conslutation-form__left {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+
+  .conslutation-form__phone {
+    text-align: center;
+    display: block;
+  }
+
+  .text-limited__content {
+    height: 320px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .show-more__btn--mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 340px) {
+  .patenting-item:not(:last-child) {
+    margin-bottom: 39px;
+  }
+
+  .patenting-item__line {
+    min-width: 620px;
+  }
+}

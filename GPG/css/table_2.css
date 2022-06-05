@@ -1,0 +1,344 @@
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Black.woff") format("woff"), url("../fonts/SFProDisplay-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Bold.woff") format("woff"), url("../fonts/SFProDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Heavy.woff") format("woff"), url("../fonts/SFProDisplay-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Medium.woff") format("woff"), url("../fonts/SFProDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Light.woff") format("woff"), url("../fonts/SFProDisplay-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Regular.woff") format("woff"), url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Semibold.woff") format("woff"), url("../fonts/SFProDisplay-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Thin.woff") format("woff"), url("../fonts/SFProDisplay-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Ultralight.woff") format("woff"), url("../fonts/SFProDisplay-Ultralight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2em;
+  color: #000;
+  overflow-x: hidden;
+}
+
+body.overlay {
+  height: 100vh;
+  overflow: hidden;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.headertitle {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.2;
+  text-align: center;
+  color: #1D1D1B;
+}
+
+.blue-btn {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 13px 20px 13px;
+  background: #00798C;
+  border-radius: 5px;
+  transition: all ease 0.3s;
+  border: 1px solid #00798C;
+  color: #fff;
+}
+
+.blue-btn:hover {
+  background: #02535f;
+}
+
+.orange-btn {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 13px 20px 13px;
+  background: #FFAF23;
+  border-radius: 5px;
+  transition: all ease 0.3s;
+  border: 1px solid #FFAF23;
+  color: #fff;
+}
+
+.orange-btn:hover {
+  background: #fff;
+  color: #FFAF23;
+}
+
+.white-btn {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 13px 20px 13px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all ease 0.3s;
+  border: 1px solid #FFAF23;
+  color: #FFAF23;
+}
+
+.white-btn:hover {
+  background: #FFAF23;
+  color: #fff;
+}
+
+.show-more__btn {
+  display: block;
+  white-space: nowrap;
+  font-size: 18px;
+  max-width: 181px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  outline: none;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+button.orange-btn,
+a.orange-btn {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 13px 20px 13px;
+  background: #FFAF23;
+  border-radius: 10px;
+  transition: all ease 0.3s;
+  border: 1px solid #FFAF23;
+  color: #fff;
+}
+
+button.orange-btn:hover,
+a.orange-btn:hover {
+  background: #fff;
+  color: #FFAF23;
+}
+
+button.white-btn,
+a.white-btn {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 13px 20px 13px;
+  background: #fff;
+  border-radius: 10px;
+  transition: all ease 0.3s;
+  border: 1px solid #FFAF23;
+  color: #FFAF23;
+}
+
+button.white-btn:hover,
+a.white-btn:hover {
+  background: #FFAF23;
+  color: #fff;
+}
+
+.main-link {
+  color: #00798C;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.scroll-table {
+  overflow: auto;
+}
+
+.custom-table {
+  width: 100%;
+}
+
+.custom-table tbody {
+  width: 100%;
+}
+
+.custom-table th {
+  background: #00798C;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  padding: 11px 40px;
+}
+
+.custom-table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.custom-table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.custom-table tr:nth-child(even) {
+  background: #F5F5F5;
+}
+
+.custom-table tr td {
+  padding: 22px 39px;
+  border: solid 1px #E4E4E4;
+}
+
+.custom-table tr td.nowrap {
+  white-space: nowrap;
+}
+
+.custom-table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.custom-table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  .custom-table {
+    font-size: 12px;
+  }
+
+  .custom-table th {
+    font-size: 14px;
+    padding: 11px 15px;
+  }
+
+  .custom-table tr td {
+    padding: 20px 15px;
+  }
+}
