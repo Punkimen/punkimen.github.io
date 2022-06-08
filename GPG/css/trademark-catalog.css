@@ -511,6 +511,15 @@ textarea {
   min-width: 150px;
 }
 
+.trademark-catalog__item {
+  display: block;
+  transition: all ease 0.2s;
+}
+
+.trademark-catalog__item:hover {
+  background: linear-gradient(203.17deg, #EBEAF2 0%, #F9FAFB 22.5%, #FFFFFF 47.82%, #FFFFFF 66.39%, #F4F7F8 72.58%, #DEE7EA 108.02%);
+}
+
 .trademark-item {
   padding: 25px 0px 25px 15px;
   width: 100%;
