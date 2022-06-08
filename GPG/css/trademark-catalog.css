@@ -383,24 +383,16 @@ a.white-btn:hover {
   font-size: 16px;
   display: flex;
   align-items: center;
+  color: #00798C;
 }
 
 .trademark-filter__choose-btn span {
   margin-right: 10px;
+  text-decoration: underline;
 }
 
-.trademark-filter__choose-btn svg {
-  stroke: #000;
-  transition: all ease 0.2s;
-}
-
-.trademark-filter__choose-btn.active {
-  color: #00798C;
-}
-
-.trademark-filter__choose-btn.active svg {
-  transform: rotate(180deg);
-  stroke: #00798C;
+.trademark-filter__choose-btn::after {
+  content: ">";
 }
 
 .trademark-filter__footer {
