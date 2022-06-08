@@ -407,3 +407,5 @@ $(function () {
     $.magnificPopup.close();
   });
 });
+
+Scrollbar.initAll();
