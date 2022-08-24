@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/5.0.1/smooth-scrollbar.css"
+        integrity="sha512-QyDQGQiuKrcAtAIPIaO+IBZNkmb/+U5dyMY2Qe64mhjKiF74QWuDhjrqgkbacfQqqFB2+fwWnan5TQHlb0mfUg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -71,44 +74,103 @@
                                         </div>
                                         <div class="description__input inputs-inner">
                                             <div class="inputs-inner__label">Time on work</div>
-                                            <div class="input-block input-block_select">
-                                                <select name="year">
-                                                    <option disabled selected hidden>Year</option>
-                                                    <option value="2021">2021</option>
-                                                    <option value="2020">2020</option>
-                                                </select>
-                                                <div class="select-arrow">
-                                                    <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M1.23907 1.29574L0 2.59149L4.5 7.29574L9 12L13.5 7.29574L18 2.59149L16.7609 1.29574L15.5218 0L12.2609 3.40885L9 6.81773L5.73907 3.40885L2.47817 0L1.23907 1.29574Z"
-                                                            fill="#A0A0A0" />
-                                                    </svg>
+                                            <div class="input-block input-block_select z-10">
+                                                <div class="custom-select">
+                                                    <div class="custom-select__header">
+                                                        <input class="custom-select__input" type="text" name="work-year"
+                                                            hidden>
+                                                        <div class="custom-select__val">Year</div>
+                                                        <div class="select-arrow">
+                                                            <svg width="18" height="12" viewBox="0 0 18 12"
+                                                                fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M1.23907 1.29574L0 2.59149L4.5 7.29574L9 12L13.5 7.29574L18 2.59149L16.7609 1.29574L15.5218 0L12.2609 3.40885L9 6.81773L5.73907 3.40885L2.47817 0L1.23907 1.29574Z"
+                                                                    fill="inherit" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-select__body">
+                                                        <div class="year-select custom-scroll">
+                                                            <div class="year-select__item custom-select__item">
+                                                                1 year
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                2 year
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                3 year
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                4 year
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                5 year
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                6 year
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                7 year
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="input-block input-block_select">
-                                                <select name="month">
-                                                    <option disabled selected hidden>Month</option>
-                                                    <option value="1">January</option>
-                                                    <option value="2">February</option>
-                                                    <option value="3">March</option>
-                                                    <option value="4">April</option>
-                                                    <option value="5">May</option>
-                                                    <option value="6">June</option>
-                                                    <option value="7">July</option>
-                                                    <option value="8">August</option>
-                                                    <option value="9">September</option>
-                                                    <option value="10">October</option>
-                                                    <option value="11">November</option>
-                                                    <option value="12">December </option>
-                                                </select>
-                                                <div class="select-arrow">
-                                                    <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M1.23907 1.29574L0 2.59149L4.5 7.29574L9 12L13.5 7.29574L18 2.59149L16.7609 1.29574L15.5218 0L12.2609 3.40885L9 6.81773L5.73907 3.40885L2.47817 0L1.23907 1.29574Z"
-                                                            fill="#A0A0A0" />
-                                                    </svg>
+                                                <div class="custom-select">
+                                                    <div class="custom-select__header">
+                                                        <input class="custom-select__input" type="text"
+                                                            name="work-month" hidden>
+                                                        <div class="custom-select__val">Month</div>
+                                                        <div class="select-arrow">
+                                                            <svg width="18" height="12" viewBox="0 0 18 12"
+                                                                fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M1.23907 1.29574L0 2.59149L4.5 7.29574L9 12L13.5 7.29574L18 2.59149L16.7609 1.29574L15.5218 0L12.2609 3.40885L9 6.81773L5.73907 3.40885L2.47817 0L1.23907 1.29574Z"
+                                                                    fill="inherit" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-select__body">
+                                                        <div class="year-select custom-scroll">
+                                                            <div class="year-select__item custom-select__item">
+                                                                January
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                February
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                March
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                April
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                May
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                June
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                July
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                August
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                September
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                October
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                November
+                                                            </div>
+                                                            <div class="year-select__item custom-select__item">
+                                                                December
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -177,10 +239,8 @@
   </div>
 </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.customSelect/0.5.1/jquery.customSelect.min.js"
-        integrity="sha512-WpFVhFeqHbNBgujXno1v93SK6a5etexlLYUxpKgFmvrbK/dr1e8TKCu++PT1xw/xoYhXAWsS0bkbBFDqINxpcQ=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/5.0.1/smooth-scrollbar.js"
+        integrity="sha512-fNprFnoeUomE0+m0nYtgoIrlUm81yW4dtuBVhMluVYlbpYEGMfEbUJJN4muTYiltfmDyWkQ5TpmwmIhdFK7qEA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
 </body>

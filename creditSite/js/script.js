@@ -34,3 +34,47 @@ window.addEventListener("resize", function () {
   }
 });
 
+const scrollElements = document.querySelectorAll('.custom-scroll')
+if (scrollElements.length > 0) {
+  scrollElements.forEach(el => {
+    Scrollbar.init(el, {});
+  })
+}
+// custom-select
+
+const closeSelect = (el) => {
+  el.classList.remove('show')
+}
+const selectOption = (option, select) => {
+  option.classList.add('active')
+  select.classList.add('selected')
+  closeSelect(select)
+  const val = option.textContent
+  select.querySelector('.custom-select__val').textContent = val
+  select.querySelector('.custom-select__input').setAttribute('value', val.replace(/ /g, ''))
+}
+
+const selects = document.querySelectorAll('.custom-select')
+selects.forEach(el => {
+  el.querySelector('.custom-select__header').addEventListener('click', (e) => {
+    const thisSelect = e.target.closest('.custom-select')
+    if (!thisSelect.classList.contains('show')) {
+      thisSelect.classList.add('show')
+    } else {
+      thisSelect.classList.remove('show')
+    }
+    const thisOptions = thisSelect.querySelectorAll('.custom-select__item')
+    thisOptions.forEach(el => {
+      el.addEventListener('click', (e) => {
+        thisOptions.forEach(el => { el.classList.remove('active') })
+        selectOption(el, thisSelect)
+      })
+    })
+  })
+})
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.custom-select')) {
+    selects.forEach(select => closeSelect(select))
+  }
+})
