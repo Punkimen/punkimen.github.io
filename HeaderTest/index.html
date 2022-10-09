@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="page-content">
+        <header class="header">
+  <div class="container">
+    <div class="header__top">
+      <div class="header__wrapper">
+        <a href="/" class="header__logo">
+          <img src="img/logo.svg" alt="Магазин инструмента">
+        </a>
+        <div class="header__handle">
+          <div class="header__nav">
+            <div class="header__icons">
+              <button class="location-icon btn-reset" data-popup="#location">
+                <svg class="" width="16" height="16">
+                  <use xlink:href="./img/icons/icons.svg#location"></use>
+                </svg>
+              </button>
+
+            </div>
+            <ul class="header__nav-menu">
+              <li class="header__nav-elem">
+                <a href="" class="header__nav-link">Каталог инструментов</a>
+              </li>
+              <li class="header__nav-elem">
+                <a href="" class="header__nav-link">Все для сада</a>
+              </li>
+              <li class="header__nav-elem">
+                <a href="" class="header__nav-link">Ручной интрумент</a>
+              </li>
+              <li class="header__nav-elem">
+                <a href="" class="header__nav-link">Электрика</a>
+              </li>
+              <li class="header__nav-elem">
+                <a href="" class="header__nav-link">Доставка</a>
+              </li>
+              <li class="header__nav-elem">
+                <a href="" class="header__nav-link">Оплата</a>
+              </li>
+              <li class="header__nav-elem">
+                <a href="" class="header__nav-link">О нас</a>
+              </li>
+            </ul>
+            <div class="header__reg-btns">
+              <button class="header__reg-btn btn-reset">Вход</button>
+              <button class="header__reg-btn btn-reset">Регистрация</button>
+              <button class="user-icon btn-reset">
+                <svg class="" width="16" height="16">
+                  <use xlink:href="./img/icons/icons.svg#user"></use>
+                </svg>
+              </button>
+              <div class="header__burger burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <div class="header__content">
+            <a href="/" class="header__banner">
+              <!-- <img src="img/sale_22.png" alt="sale"> -->
+            </a>
+            <div class="header__baskets baskets">
+              <ul class="baskets__list">
+                <li class="baskets__elem">
+                  <a href="#" class="basket__link" data-popup="#cart">
+                    <div class="basket__link-icon">
+                      <svg class="" width="18" height="19">
+                        <use xlink:href="./img/icons/icons.svg#basket"></use>
+                      </svg>
+                    </div>
+                    <div class="basket__link-mob"></div>
+                    <span class="underline">
+                      <span class="count-inner">
+                        <span id="goods-count" class="count">3</span></span> шт. / <span id="summ">17
+                        250</span> р.</span>
+                  </a>
+                </li>
+                <li class="baskets__elem">
+                  <a href="#" class="basket__link">
+                    <div class="basket__link-icon">
+                      <svg class="" width="14" height="14">
+                        <use xlink:href="./img/icons/icons.svg#star"></use>
+                      </svg>
+                    </div>
+                    <div class="basket__link-mob"></div>
+                    <span class="underline">Избранное (<span class="count-inner"><span id="favorite-count"
+                          class="count">7</span></span>)</span>
+                  </a>
+                </li>
+                <li class="baskets__elem">
+                  <a href="#" class="basket__link">
+                    <div class="basket__link-icon">
+                      <svg class="" width="18" height="16">
+                        <use xlink:href="./img/icons/icons.svg#libra"></use>
+                      </svg>
+                    </div>
+                    <div class="basket__link-mob"></div>
+                    <span class="underline">К сравнению (
+                      <span class="count-inner"><span id="compare-count" class="count">5</span></span>)</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__goods swiper">
+              <div class="swiper-wrapper">
+                <!-- <div class="header__goods-item swiper-slide">
+                  <img src="img/goods/goods_1.png" alt="goods_1">
+                </div>
+                <div class="header__goods-item swiper-slide">
+                  <img src="img/goods/goods_2.png" alt="goods_2">
+                </div>
+                <div class="header__goods-item swiper-slide">
+                  <img src="img/goods/goods_3.png" alt="goods_3">
+                </div> -->
+              </div>
+            </div>
+            <div class="header__info info">
+              <div class="info-time">
+                <div class="info-time__label">Время работы:</div>
+                <div class="info-time__val">10:00 — 19:00</div>
+              </div>
+              <a href="tel:84957212525" class="info-phone">8 495 721-25-25</a>
+              <div class="info-city">
+                <div class="info-city__selected">Москва</div>
+                <div class="info-city__change" data-popup="#location">сменить</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu">
+      <div class="header-menu__search">
+        <button id="search-btn" class="header-menu__search-btn">
+          <svg class="" width="19" height="19">
+            <use xlink:href="./img/icons/icons.svg#lupe"></use>
+          </svg>
+        </button>
+        <input type="text" class="header-menu__search-input" placeholder="Поиск...">
+      </div>
+      <div class="header-menu__category">
+        <ul class="header-menu__category-list">
+          <li class="header-menu__category-elem">
+            <a href="/">Перфораторы</a>
+          </li>
+          <li class="header-menu__category-elem">
+            <a href="/">Дрели</a>
+          </li>
+          <li class="header-menu__category-elem">
+            <a href="/">Шлифмашины</a>
+          </li>
+          <li class="header-menu__category-elem">
+            <a href="/">Пистолеты</a>
+          </li>
+          <li class="header-menu__category-elem">
+            <a href="/">Электропилы</a>
+          </li>
+          <li class="header-menu__category-elem">
+            <a href="/">Наборы инструментов</a>
+          </li>
+          <li class="header-menu__category-elem">
+            <a href="/">Акксесуары</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header-menu__sale">
+        <a href="#" class="header-menu__sale-link">Распродажа</a>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <div class="mobile-menu__wrapper">
+      <div class="mobile-menu__top"></div>
+      <div class="mobile-menu__footer">
+        <div class="info-time">
+          <div class="info-time__label">Время работы:</div>
+          <div class="info-time__val">10:00 — 19:00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<a href="tel:84957212525" class="fixed-phone">
+  <img src="img/phone.svg" alt="">
+</a>
+    </div>
+    <div class="popups">
+  <div class="popups__inner">
+    <div id="cart" class="popup">
+      <div class="popup__header">
+        Корзина
+      </div>
+      <div class="popup__body">
+        <div class="cart-catalog">
+          <!-- <div class="cart-card">
+            <div class="cart-card__img">
+              <img src="img/goods/goods_1.png" alt="goods_1">
+            </div>
+            <div class="cart-card__content">
+              <div class="cart-card__name">Товар 1</div>
+              <div class="cart-card__price">10 000р</div>
+            </div>
+            <button class="cart-card__delete btn">Удалить</button>
+          </div>
+          <div class="cart-card">
+            <div class="cart-card__img">
+              <img src="img/goods/goods_2.png" alt="goods_2">
+            </div>
+            <div class="cart-card__content">
+              <div class="cart-card__name">Товар 1</div>
+              <div class="cart-card__price">10 000р</div>
+            </div>
+            <button class="cart-card__delete btn">Удалить</button>
+          </div>
+          <div class="cart-card">
+            <div class="cart-card__img">
+              <img src="img/goods/goods_3.png" alt="goods_3">
+            </div>
+            <div class="cart-card__content">
+              <div class="cart-card__name">Товар 1</div>
+              <div class="cart-card__price">10 000р</div>
+            </div>
+            <button class="cart-card__delete btn">Удалить</button>
+          </div> -->
+        </div>
+      </div>
+      <div class="popup__close js-close-popup">
+        <svg class="" width="22" height="22">
+          <use xlink:href="./img/icons/icons.svg#x"></use>
+        </svg>
+      </div>
+    </div>
+    <div id="location" class="popup">
+      <div class="popup__header">
+        Выберите город
+      </div>
+      <div class="popup__body">
+        <ul class="location-catalog">
+          <li class="location-catalog__elem">
+            <a class="location-catalog__link active" href="#">Москва</a>
+          </li>
+          <li class="location-catalog__elem">
+            <a class="location-catalog__link" href="#">Санкт-Петербург</a>
+          </li>
+          <li class="location-catalog__elem">
+            <a class="location-catalog__link" href="#">Краснодар</a>
+          </li>
+        </ul>
+      </div>
+      <div class="popup__close js-close-popup">
+        <svg class="" width="22" height="22">
+          <use xlink:href="./img/icons/icons.svg#x"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js">
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
