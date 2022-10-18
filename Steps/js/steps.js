@@ -15,18 +15,59 @@ const snapPhoto = (webcam, canvas) => {
   webcam.snap();
   $(canvas).addClass('show')
 }
+
+const webcamStartFirst = () => {
+  const webcamElement = document.querySelector('#webcam');
+  const canvasElement = document.querySelector('#canvas');
+  const snap = document.querySelector('#step_2-photo-do')
+  const webcam = new Webcam(webcamElement, 'user', canvasElement);
+  webcam.start()
+    .then(result => {
+      console.log("webcam started");
+      document.querySelector('#step_2-photo-do').disabled = false;
+    })
+    .catch(err => {
+      console.log(err);
+      webcam.start()
+    });
+  snap.addEventListener('click', function () {
+    snapPhoto(webcam, '#canvas')
+    webcamStartSecond()
+    nextStep(3);
+    $('#step_3-photo-do').prop('disabled', false)
+  })
+};
+
+// step 4
+const video = document.querySelector('#webcam_2')
+const canvas = document.querySelector('#canvas_2')
+const btn = document.querySelector('#step_3-photo-do')
+
+const parts = [];
+let mediaRecorder
+const btnAnim = (btn, count) => {
+  setTimeout(function () {
+    btn.textContent = count
+    count--
+    if (count >= 0) {
+      btnAnim(btn, count)
+    } else {
+      btn.textContent = "Thank you"
+      btn.disabled = true
+      return false
+    }
+  }, 1000)
+}
 const saveVideo = () => {
 
   let constraintObj = {
     audio: false,
     video: {
-      // deviceId: "1210c042b56832690a491358b8849d46924cd75cd6028b4069ea136b20c9cb3a",
       facingMode: "user",
       width: { min: 640, ideal: 1280, max: 1920 },
       height: { min: 480, ideal: 720, max: 1080 }
     }
   };
-  let diveceObj = {}
   if (navigator.mediaDevices === undefined) {
     navigator.mediaDevices = {};
     navigator.mediaDevices.getUserMedia = function (constraintObj) {
@@ -42,15 +83,8 @@ const saveVideo = () => {
     navigator.mediaDevices.enumerateDevices()
       .then(devices => {
         devices.forEach(device => {
-          console.log(device.label, device.deviceId);
-          if (device.label.includes("OBS")) {
-            return false;
-          } else {
-            console.log(device.deviceId);
-
-            diveceObj.deviceId = device.deviceId;
-            return device.deviceId;
-          }
+          console.log(device.kind.toUpperCase(), device.label);
+          //, device.deviceId
         })
       })
       .catch(err => {
@@ -62,6 +96,12 @@ const saveVideo = () => {
       .then(res => res.blob())
       .then(file => {
         let tempUrl = URL.createObjectURL(file);
+        // const aTag = document.createElement('a')
+        // aTag.href = tempUrl
+        // aTag.innerText = "wzsczx"
+        // aTag.download = url.replace(/^.*[\\\/]/, "")
+        // document.querySelector('body').appendChild(aTag)
+        // aTag.click()
 
         const videosFiles = document.querySelector('#id_video')
         let container = new DataTransfer();
@@ -69,25 +109,14 @@ const saveVideo = () => {
         container.items.add(video);
         videosFiles.files = container.files;
         URL.revokeObjectURL(tempUrl)
-
+        // aTag.remove()
       }).catch((err) => {
         console.log(err);
       })
   }
-  const videoConstraints = {};
-  if (diveceObj.deviceId == null || diveceObj.deviceId == undefined) {
-    videoConstraints.facingMode = 'environment';
-  } else {
-    videoConstraints.deviceId = { exact: diveceObj.deviceId };
-  }
-  const constraints = {
-    video: videoConstraints,
-    audio: false
-  };
-  navigator.mediaDevices.getUserMedia(constraints)
-    .then(function (mediaStreamObj) {
-      console.log(constraintObj);
 
+  navigator.mediaDevices.getUserMedia(constraintObj)
+    .then(function (mediaStreamObj) {
       //connect the media stream to the first video element
       let video = document.querySelector('#webcam_2');
       if ("srcObject" in video) {
@@ -134,49 +163,12 @@ const saveVideo = () => {
     });
 
 }
-const webcamStartFirst = () => {
-  const webcamElement = document.querySelector('#webcam');
-  const canvasElement = document.querySelector('#canvas');
-  const snap = document.querySelector('#step_2-photo-do')
-  const webcam = new Webcam(webcamElement, 'user', canvasElement);
-  webcam.start()
-    .then(result => {
-      console.log("webcam started");
-      document.querySelector('#step_2-photo-do').disabled = false;
-    })
-    .catch(err => {
-      console.log(err);
-      webcam.start()
-    });
-  snap.addEventListener('click', function () {
-    snapPhoto(webcam, '#canvas')
-    saveVideo()
-    $('#step_3-photo-do').prop('disabled', false)
-    nextStep(3);
-  })
-};
 
-// step 4
-const video = document.querySelector('#webcam_2')
-const canvas = document.querySelector('#canvas_2')
-const btn = document.querySelector('#step_3-photo-do')
 
-const parts = [];
-let mediaRecorder
-const btnAnim = (btn, count) => {
-  setTimeout(function () {
-    btn.textContent = count
-    count--
-    if (count >= 0) {
-      btnAnim(btn, count)
-    } else {
-      btn.textContent = "Thank you"
-      btn.disabled = true
-      return false
-    }
-  }, 1000)
-}
-
+document.addEventListener('DOMContentLoaded', () => {
+  saveVideo()
+  $('#step_3-photo-do').prop('disabled', false)
+})
 
 // step 4
 
