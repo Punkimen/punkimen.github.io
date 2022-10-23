@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/custom-select@1.1.15/build/custom-select.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="page-container__content">
+            <div class="page-container__head">
+                <h1 class="title">Preferences</h1>
+                <div class="text">
+                    <p>On this page you can configure the main system parameters available for customization</p>
+                </div>
+            </div>
+            <form id="form" action="#" class="form">
+                <div class="form__row form-item">
+                    <div class="form-item__label">Company Title</div>
+                    <div class="form-item__field">
+                        <input type="text" value="Star and Moon" name="company-name" />
+                    </div>
+                </div>
+                <div class="form__row form-item">
+                    <div class="form-item__label">First Day</div>
+                    <div class="form-item__field">
+                        <select name="first-day" id="">
+                            <option value="monday">Monday</option>
+                            <option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option>
+                            <option value="thursday">Thursday</option>
+                            <option value="friday">Friday</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__row form-item">
+                    <div class="form-item__label">Container Width</div>
+                    <div class="form-item__field">
+                        <select name="container-width" id="">
+                            <option value="fixed">Fixed</option>
+                            <option value="undfixed">Undfixed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__row form-item">
+                    <div class="form-item__label">Homepage</div>
+                    <div class="form-item__field">
+                        <select name="homepage" id="">
+                            <option value="Starred Projects">Starred Projects</option>
+                            <option value="Starred Projects 2">Starred Projects 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__row form-item">
+                    <div class="form-item__label">Indent Size</div>
+                    <div class="form-item__field">
+                        <input type="text" name="indent_size" placeholder="Default">
+                    </div>
+                </div>
+                <div class="form__row form-item">
+                    <div class="form-item__label">Personal Code</div>
+                    <div class="form-item__field form-item__field--flex">
+                        <input type="text" name="code_1" class="form-item__field-code" value="1645">
+                        <span>-</span>
+                        <input type="text" name="code_2" class="form-item__field-code" value="1566">
+                        <span>-</span>
+                        <input type="text" name="code_3" class="form-item__field-code" value="1249">
+                    </div>
+                </div>
+                <div class="form__row form-item form-item--top">
+                    <div class="form-item__label">Theme</div>
+                    <div class="form-item__field form-item__field--radio">
+                        <label class="control control-radio">
+                            <input type="radio" name="theme" value="light">
+                            <div class="control__text">Light</div>
+                            <div class="control_indicator"></div>
+                        </label>
+                        <label class="control control-radio">
+                            <input type="radio" name="theme" value="dark">
+                            <div class="control__text">Dark</div>
+                            <div class="control_indicator"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__btns">
+                    <button id="save" type="submit" class="form__btns-btn btn">Apply and Save</button>
+                    <button type="button" class="form__btns-btn btn-transparent">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div class="page-container__footer">
+            <img src="img/footer_bg.png" alt="">
+            2020-2022
+            <a href="#">Terms of Service</a>
+            and
+            <a href="#">Conditions</a> </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/custom-select@1.1.15/build/custom-select.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
