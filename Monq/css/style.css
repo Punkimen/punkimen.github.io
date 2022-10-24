@@ -425,6 +425,7 @@ button {
 .form-item {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .form-item--top {
@@ -437,6 +438,7 @@ button {
 }
 
 .form-item__field {
+  position: relative;
   max-width: 196px;
   width: 100%;
 }
@@ -448,6 +450,16 @@ button {
 
 .form-item__field--flex span {
   margin: 0 8px;
+}
+
+.form-item__info {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  margin: 0;
+  font-size: 11px;
+  line-height: 13px;
+  color: #887C7C;
 }
 
 .form-item__field--radio .control {
