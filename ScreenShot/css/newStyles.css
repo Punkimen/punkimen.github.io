@@ -425,9 +425,11 @@
 .onoffswitch {
   position: relative;
   width: 50px;
+  height: 26px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  overflow: hidden;
 }
 
 .onoffswitch-checkbox {
@@ -437,9 +439,8 @@
 }
 
 .onoffswitch-label {
-  height: 26px;
+  height: 100%;
   display: block;
-  overflow: hidden;
   cursor: pointer;
   border: 1px solid #828282;
   border-radius: 20px;
@@ -457,12 +458,8 @@
   display: block;
   float: left;
   width: 50%;
-  height: 26px;
+  height: 30px;
   padding: 0;
-  line-height: 30px;
-  font-size: 14px;
-  color: white;
-  font-family: Trebuchet, Arial, sans-serif;
   font-weight: bold;
   box-sizing: border-box;
 }
