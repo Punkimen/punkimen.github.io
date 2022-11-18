@@ -437,6 +437,7 @@
   cursor: pointer;
   border: 1px solid #999999;
   border-radius: 20px;
+  height: 28px;
 }
 
 .flipswitch-inner {
@@ -448,10 +449,10 @@
 .flipswitch-inner:before,
 .flipswitch-inner:after {
   float: left;
-  width: 50%;
-  height: 26px;
+  width: calc(50% + 5px);
+  height: 30px;
   padding: 0;
-  line-height: 26px;
+  line-height: 30px;
   font-size: 8px;
   color: white;
   font-family: Trebuchet, Arial, sans-serif;
@@ -776,6 +777,15 @@
   .feedback__form-submit {
     max-width: 100%;
     width: 100%;
+  }
+
+  .feedback .js-validate-error-label,
+  .feedback .select-error {
+    transform: translate(0, 0);
+    right: auto;
+    left: 0;
+    width: auto;
+    text-align: left;
   }
 
   .privacy {
