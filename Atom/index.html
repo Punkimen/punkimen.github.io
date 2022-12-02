@@ -15,41 +15,54 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.min.css">
+    <link rel="stylesheet" href="css/lightgallery.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header class="header py-sm-5 py-3 px-sm-5">
+    <header class="header py-sm-5 py-3 px-sm-5 visible">
   <div class="container ">
-    <div class="d-flex align-items-center justify-content-between navbar navbar-expand-lg">
-      <a href="#" class="logo me-3">
+    <div
+      class="d-flex align-items-center justify-content-between navbar navbar-expand-lg flex-nowrap align-items-center">
+      <a href="#" class="header__logo me-3">
         <img src="img/logo.svg" class="w-100 d-block" alt="Атом сервис">
       </a>
-      <nav class="header__nav d-xl-block d-none">
-        <ul class="header__list fw-semibold d-flex">
-          <li class="me-4">
-            <a href="" class="text-nowrap">О компании</a>
+      <nav class="header__nav d-xl-block">
+        <ul class="header__list fw-semibold d-xl-flex d-block">
+          <li class="me-xl-4 me-0 mb-xl-0 mb-4 ">
+            <a scroll-href="#company" class="text-nowrap">О компании</a>
           </li>
-          <li class="me-4">
-            <a href="" class="text-nowrap">Услуги</a>
+          <li class="me-xl-4 me-0 mb-xl-0 mb-4 ">
+            <a scroll-href="#services" class="text-nowrap">Услуги</a>
           </li>
-          <li class="me-4">
-            <a href="" class="text-nowrap">Партнеры</a>
+          <li class="me-xl-4 me-0 mb-xl-0 mb-4 ">
+            <a scroll-href="#partners" class="text-nowrap">Партнеры</a>
           </li>
-          <li class="me-4">
-            <a href="" class="text-nowrap">Наши проекты</a>
+          <li class="me-xl-4 me-0 mb-xl-0 mb-4 ">
+            <a scroll-href="#projects" class="text-nowrap">Наши проекты</a>
           </li>
-          <li class="me-4">
-            <a href="" class="text-nowrap">Лицензии и сертификаты</a>
+          <li class="me-xl-4 me-0 mb-xl-0 mb-4 ">
+            <a scroll-href="#license" class="text-nowrap">Лицензии и сертификаты</a>
           </li>
           <li class="">
-            <a href="" class="text-nowrap">Контакты</a>
+            <a scroll-href="#contacts" class="text-nowrap">Контакты</a>
           </li>
         </ul>
       </nav>
+      <div class="header__burger ">
+        <div class="burger__icon icon-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
   </div>
 </header>
+<div class="header-mobile px-sm-5 pb-5">
+  <div class="container"></div>
+</div>
     <section class="hero bg-primary py-sm-5 py-3  px-sm-5">
         <div class="container">
             <div class="d-flex flex-column md-5 justify-content-between position-relative">
@@ -63,20 +76,25 @@
             </div>
         </div>
     </section>
-    <section class="about py-sm-5 py-3">
+    <section id="company" class="about py-sm-5 py-3">
         <div class="container">
             <div class="about__wrapper d-md-flex  justify-content-between">
                 <div class="wrapper__left col me-md-5 mb-md-0 mb-5">
                     <div class="section-title mb-md-5 mb-3"><span>Коротко об АТОМСЕРВИС:</span></div>
                     <ul class="text-primary main-list">
-                        <li class="main-list__elem">30 лет опыта и постоянного развития;</li>
-                        <li class="main-list__elem">Федеральная компания с офисами
+                        <li class="main-list__elem" data-aos="fade-down" data-aos-offset="100">30 лет опыта и
+                            постоянного развития;</li>
+                        <li class="main-list__elem" data-aos="fade-down" data-aos-offset="100">Федеральная компания с
+                            офисами
                             в Москве и Новосибирске;</li>
-                        <li class="main-list__elem">Собственный штат квалифицированных
+                        <li class="main-list__elem" data-aos="fade-down" data-aos-offset="100">Собственный штат
+                            квалифицированных
                             инженеров по медицинской технике;</li>
-                        <li class="main-list__elem">Собственные программные продукты
+                        <li class="main-list__elem" data-aos="fade-down" data-aos-offset="100">Собственные программные
+                            продукты
                             и ремонта;</li>
-                        <li class="main-list__elem">Эксклюзивный набор компетенций
+                        <li class="main-list__elem" data-aos="fade-down" data-aos-offset="100">Эксклюзивный набор
+                            компетенций
                             в сфере сервиса и ремонта медицинской
                             техники: от рентгеновских аппаратов
                             до гамма-терапии и линейных ускорителей.</li>
@@ -85,30 +103,34 @@
                 <div class="wrapper__right col">
                     <div class="section-title mb-md-5 mb-3"><span>Развитие компании:</span></div>
                     <ul class="date-list">
-                        <li class="date-list__elem pb-4" data-date="1991">создание инженерами, <span
-                                class="text-primary">ООО
+                        <li class="date-list__elem pb-4" data-aos="fade-down" data-aos-offset="100" data-date="1991">
+                            создание инженерами, <span class="text-primary">ООО
                                 «АТОМСЕРВИС»</span> вышедшими из
                             СМУ-8
                             «Промэлектромонтаж» Министерства среднего машиностроения СССР.</li>
-                        <li class="date-list__elem pb-4" data-date="1993">получение первой лицензии на обслуживание
+                        <li class="date-list__elem pb-4" data-aos="fade-down" data-aos-offset="100" data-date="1993">
+                            получение первой лицензии на обслуживание
                             медицинской
                             аппаратуры с
                             радиационными источниками.</li>
-                        <li class="date-list__elem pb-4" data-date="1998">вступление в <span
-                                class="text-primary">Ассоциацию
+                        <li class="date-list__elem pb-4" data-aos="fade-down" data-aos-offset="100" data-date="1998">
+                            вступление в <span class="text-primary">Ассоциацию
                                 медицинских
                                 физиков России.</span></li>
-                        <li class="date-list__elem pb-4" data-date="2013">получение лицензии на техническое обслуживание
+                        <li class="date-list__elem pb-4" data-aos="fade-down" data-aos-offset="100" data-date="2013">
+                            получение лицензии на техническое обслуживание
                             медицинской техники.
                         </li>
-                        <li class="date-list__elem pb-4" data-date="2019">получение лицензии на размещение и
+                        <li class="date-list__elem pb-4" data-aos="fade-down" data-aos-offset="100" data-date="2019">
+                            получение лицензии на размещение и
                             обслуживание источников ионизирующего
                             излучения.</li>
-                        <li class="date-list__elem pb-4" data-date="2019">получение статуса сервисного партнера
+                        <li class="date-list__elem pb-4" data-aos="fade-down" data-aos-offset="100" data-date="2019">
+                            получение статуса сервисного партнера
                             <span class="text-primary">Varian Medical Systems</span> и <span class="text-primary">Best
                                 Theratronics</span> и в России.</li>
-                        <li class="date-list__elem" data-date="2021">получение статуса сервисного партнера <span
-                                class="text-primary">Canon
+                        <li class="date-list__elem" data-aos="fade-down" data-aos-duration="200" data-aos-offset="400"
+                            data-date="2021">получение статуса сервисного партнера <span class="text-primary">Canon
                                 (Toshiba), Siemens,
                                 General Electric</span> и иных производителей медицинского оборудования.</li>
                     </ul>
@@ -116,32 +138,36 @@
             </div>
         </div>
     </section>
-    <section class="services py-sm-5 py-3 bg-light">
+    <section id="services" class="services py-sm-5 py-3 bg-light">
         <div class="container">
             <div class="services__title section-title mb-md-5 mb-3"><span>Услуги АТОМСЕРВИС:</span></div>
             <div class="services__wrapper mt-5 mt-md-0 fw-bold text-primary">
-                <div class="services-item" data-num="1"><span>Техническое обслуживание и ремонт медицинской техники
+                <div class="services-item" data-aos="fade-right" data-num="1"><span>Техническое обслуживание и ремонт
+                        медицинской техники
                         лучевой
                         диагностики
                         и лучевой терапии (медицинские ускорители и гамма-терапевтические аппараты), а также иных
                         видов
                         медицинской техники.</span></div>
-                <div class="services-item" data-num="2"><span>Перезарядка закрытых радионуклидных источников,
+                <div class="services-item" data-aos="fade-left" data-num="2"><span>Перезарядка закрытых радионуклидных
+                        источников,
                         организация
                         транспортировки и утилизации отработавших ЗРНИ, демонтаж и вывод из эксплуатации
                         гамматерапевтических аппаратов.</span></div>
-                <div class="services-item" data-num="3"><span>Модернизация медицинской техники и
+                <div class="services-item" data-aos="fade-right" data-num="3"><span>Модернизация медицинской техники и
                         обновление программного обеспечения,
                         поставка и настройка дополнительных
                         опций.</span></div>
-                <div class="services-item" data-num="4"><span>Поставка, монтаж и ввод в эксплуатацию
+                <div class="services-item" data-aos="fade-left" data-num="4"><span>Поставка, монтаж и ввод в
+                        эксплуатацию
                         медицинской техники и комплектующих,
                         программного обеспечения.</span></div>
 
-                <div class="services-item" data-num="5"><span>Контроль технического состояния медицинс-
+                <div class="services-item" data-aos="fade-right" data-num="5"><span>Контроль технического состояния
+                        медицинс-
                         кой техники, проведение дозиметрических
                         исследований.</span></div>
-                <div class=" services-item" data-num="6"><span>Услуги по организации радиационной
+                <div class=" services-item" data-aos="fade-left" data-num="6"><span>Услуги по организации радиационной
                         безопасности, в том числе проектирование
                         каньонов для размещения медицинской
                         техники.</span></div>
@@ -261,7 +287,7 @@
             </div>
         </div>
     </section>
-    <section class="partners py-sm-5 py-3 bg-primary">
+    <section id="partners" class="partners py-sm-5 py-3 bg-primary">
         <div class="container">
             <div class="partners__title section-title bg-white text-primary fw-bold mb-5">
                 <span>Наши сервисные партнеры:</span>
@@ -289,7 +315,7 @@
             </button>
         </div>
     </section>
-    <section class="project py-sm-5 py-3">
+    <section id="projects" class="project py-sm-5 py-3">
         <div class="container">
             <div class="project__title section-title">
                 <span>Проекты, которыми мы гордимся:</span>
@@ -368,27 +394,30 @@
                 отзывы Заказчиков по итогам исполнения контрактов</div>
         </div>
     </section>
-    <section class="certificates py-sm-5 py-3">
+    <section id="license" class="certificates py-sm-5 py-3">
         <div class="container">
             <div class="certificates__title section-title mb-md-5 mb-3">
                 <span>Наши лицензии и сертификаты:</span>
             </div>
         </div>
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col certificates__item" data-bs-toggle="modal" data-bs-target="#cert_1">
+            <div id="sertivicates-gallery" class="row justify-content-center">
+                <a href="img/certificates/cert_1.png" class="col certificates__item" data-bs-toggle="modal"
+                    data-bs-target="#cert_1">
                     <img class="d-block w-100 h-auto" src="img/certificates/cert_1.png" alt="Сертификат">
-                </div>
-                <div class="col certificates__item" data-bs-toggle="modal" data-bs-target="#cert_2">
+                </a>
+                <a href="img/certificates/cert_2.png" class="col certificates__item" data-bs-toggle="modal"
+                    data-bs-target="#cert_2">
                     <img class="d-block w-100 h-auto" src="img/certificates/cert_2.png" alt="Сертификат">
-                </div>
-                <div class="col certificates__item" data-bs-toggle="modal" data-bs-target="#cert_3">
+                </a>
+                <a href="img/certificates/cert_3.png" class="col certificates__item" data-bs-toggle="modal"
+                    data-bs-target="#cert_3">
                     <img class="d-block w-100 h-auto" src="img/certificates/cert_3.png" alt="Сертификат">
-                </div>
+                </a>
             </div>
         </div>
     </section>
-    <section class="contacts py-sm-5 py-3">
+    <section id="contacts" class="contacts py-sm-5 py-3">
         <div class="container">
             <div class="contacts__title section-title mb-md-5 mb-3">Контакты:</div>
             <div class="contacts__wrapper d-md-flex justify-content-between">
@@ -456,31 +485,28 @@
     </section>
     <footer class="footer bg-primary py-sm-5 py-3">
         <div class="container">
-            <div class="footer__wrapper d-sm-flex justify-content-between">
+            <div class="footer__wrapper d-sm-flex justify-content-between align-items-center">
                 <a href="/" class="footer__logo logo me-sm-5 me-0 mb-sm-0 mb-4 d-block">
                     <img src="img/footer_logo.svg" alt="Logo">
                 </a>
                 <ul class="footer__links">
                     <li class="footer__links-elem mb-4">
-                        <a href="#" class="text-white fw-semibold">Услуги</a>
+                        <a scroll-href="#services" class="text-white fw-semibold">Услуги</a>
                     </li>
                     <li class="footer__links-elem mb-4">
-                        <a href="#" class="text-white fw-semibold">О компании</a>
+                        <a scroll-href="#company" class="text-white fw-semibold">О компании</a>
                     </li>
                     <li class="footer__links-elem mb-4">
-                        <a href="#" class="text-white fw-semibold">Партнеры</a>
+                        <a scroll-href="#partners" class="text-white fw-semibold">Партнеры</a>
                     </li>
                     <li class="footer__links-elem mb-4">
-                        <a href="#" class="text-white fw-semibold">Контакты</a>
+                        <a scroll-href="#contacts" class="text-white fw-semibold">Контакты</a>
                     </li>
                     <li class="footer__links-elem mb-4">
-                        <a href="#" class="text-white fw-semibold">Обратная связь</a>
+                        <a scroll-href="#projects" class="text-white fw-semibold">Наши проекты</a>
                     </li>
                     <li class="footer__links-elem mb-4">
-                        <a href="#" class="text-white fw-semibold">Наши проекты</a>
-                    </li>
-                    <li class="footer__links-elem mb-4">
-                        <a href="#" class="text-white fw-semibold">Лицензии и сертификаты</a>
+                        <a scroll-href="#license" class="text-white fw-semibold">Лицензии и сертификаты</a>
                     </li>
                 </ul>
             </div>
@@ -512,50 +538,14 @@
             </div>
         </div>
     </div>
-    <div class=" modal fade" id="cert_1">
-        <div class="modal-dialog modal-fullscreen-md-down">
-            <div class="modal-content">
-                <div class="modal-header">
 
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img class="d-block w-100 h-auto" src="img/certificates/cert_1.png" alt="Сертификат">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class=" modal fade" id="cert_2">
-        <div class="modal-dialog modal-fullscreen-md-down">
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img class="d-block w-100 h-auto" src="img/certificates/cert_2.png" alt="Сертификат">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class=" modal fade" id="cert_3">
-        <div class="modal-dialog modal-fullscreen-md-down">
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img class="d-block w-100 h-auto" src="img/certificates/cert_3.png" alt="Сертификат">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/aos.min.js"></script>
+    <script src="js/lightgallery.min.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
     <script src="js/script.js"></script>
 </body>
 
