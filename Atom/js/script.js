@@ -1,58 +1,86 @@
 "use strict";
+
 // Подключения слайдера
-const swiper = new Swiper(".swiper", {
-	slidesPerView: 1,
-	loop: true,
-	SpaceBetween: 35,
-	autoHeight: true,
-	autoplay: {
-		delay: 2500,
-	},
-	// If we need pagination
-	pagination: {
-		el: ".swiper-pagination",
-		clickable: true,
-	},
-
-	// Navigation arrows
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
-
-	// And if we need scrollbar
-	scrollbar: {
-		el: ".swiper-scrollbar",
-	},
-
-	breakpoints: {
-		// when window width is >= 320px
+{
+	const breakpointsPartners = {
 		440: {
 			slidesPerView: 2,
 			spaceBetween: 20,
 			autoplay: {
 				delay: 2500,
+				disableOnInteraction: false,
 			},
 		},
-		// when window width is >= 480px
+		// when window width is >= 990px
 		990: {
 			slidesPerView: 3,
 			spaceBetween: 30,
 			autoplay: {
 				delay: 2500,
+				disableOnInteraction: false,
 			},
 		},
-		// when window width is >= 640px
+		// when window width is >= 1200px
 		1200: {
 			slidesPerView: 4,
 			spaceBetween: 40,
 			autoplay: {
 				delay: 2500,
+				disableOnInteraction: false,
 			},
 		},
-	},
-});
-
+	};
+	const breakpointsSertificate = {
+		// when window width is >= 990px
+		568: {
+			slidesPerView: 2,
+			spaceBetween: 10,
+		},
+		// when window width is >= 1200px
+		1200: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+	};
+	const option_1 = {
+		slidesPerView: 1,
+		loop: true,
+		SpaceBetween: 35,
+		autoHeight: true,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		// If we need pagination
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	};
+	const option_2 = {
+		slidesPerView: 1,
+		loop: false,
+		SpaceBetween: 35,
+		// autoHeight: true,
+		// autoplay: {
+		// 	delay: 2500,
+		// 	disableOnInteraction: false,
+		// },
+		// If we need pagination
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	};
+	const swiper = new Swiper(".partners__slider", {
+		...option_1,
+		breakpoints: breakpointsPartners,
+	});
+	const sliderSertificate = new Swiper(".sertivicates__slider", {
+		...option_2,
+		breakpoints: breakpointsSertificate,
+	});
+}
 // Бургер меню
 
 const headerMobile = document.querySelector(".header-mobile");
@@ -61,10 +89,10 @@ const headerLogo = document.querySelector(".header__logo");
 const burgerBtn = document.querySelector(".burger__icon");
 
 const toogleClass = (el, className) => {
-	console.log(el.classList.toggle(className));
+	el.classList.toggle(className);
 };
 const removeClass = (el, className) => {
-	console.log(el.classList.remove(className));
+	el.classList.remove(className);
 };
 const adaptiveMenu = () => {
 	const windowWidth = window.innerWidth;
@@ -83,8 +111,9 @@ burgerBtn.addEventListener("click", (e) => {
 });
 
 // Якорные ссылки
+
 const smoothLinks = document.querySelectorAll("[scroll-href]");
-console.log(smoothLinks);
+
 for (let smoothLink of smoothLinks) {
 	smoothLink.addEventListener("click", function (e) {
 		e.preventDefault();
@@ -101,3 +130,11 @@ for (let smoothLink of smoothLinks) {
 // Галерея сертификатов
 
 lightGallery(document.getElementById("sertivicates-gallery"));
+
+const scrollTopBtn = document.querySelector(".top-scroll");
+const scrollBtnDisplay = function () {
+	document.documentElement.scrollTop > window.innerHeight
+		? scrollTopBtn.classList.add("show")
+		: scrollTopBtn.classList.remove("show");
+};
+window.addEventListener("scroll", (e) => scrollBtnDisplay());

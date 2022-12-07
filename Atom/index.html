@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <header class="header py-sm-5 py-3 px-sm-5 visible">
+    <header id="header" class="header py-sm-5 py-3 px-sm-5 visible">
   <div class="container ">
     <div
       class="d-flex align-items-center justify-content-between navbar navbar-expand-lg flex-nowrap align-items-center">
@@ -317,18 +317,18 @@
             </div>
             <div class="swiper partners__slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide partners-slide">
+                    <a href="#1" class="swiper-slide partners-slide">
                         <img src="img/partners/partner_1.png" alt="varian">
-                    </div>
-                    <div class="swiper-slide partners-slide">
+                    </a>
+                    <a href="#2" class="swiper-slide partners-slide">
                         <img src="img/partners/partner_2.png" alt="canon">
-                    </div>
-                    <div class="swiper-slide partners-slide">
+                    </a>
+                    <a href="#3" class="swiper-slide partners-slide">
                         <img src="img/partners/partner_3.png" alt="healthcare">
-                    </div>
-                    <div class="swiper-slide partners-slide">
+                    </a>
+                    <a href="#4" class="swiper-slide partners-slide">
                         <img src="img/partners/partner_4.png" alt="brainlab">
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -424,19 +424,22 @@
             </div>
         </div>
         <div class="container">
-            <div id="sertivicates-gallery" class="row justify-content-center">
-                <a href="img/certificates/cert_1.png" class="col certificates__item" data-bs-toggle="modal"
-                    data-bs-target="#cert_1">
-                    <img class="d-block w-100 h-auto" src="img/certificates/cert_1.png" alt="Сертификат">
-                </a>
-                <a href="img/certificates/cert_2.png" class="col certificates__item" data-bs-toggle="modal"
-                    data-bs-target="#cert_2">
-                    <img class="d-block w-100 h-auto" src="img/certificates/cert_2.png" alt="Сертификат">
-                </a>
-                <a href="img/certificates/cert_3.png" class="col certificates__item" data-bs-toggle="modal"
-                    data-bs-target="#cert_3">
-                    <img class="d-block w-100 h-auto" src="img/certificates/cert_3.png" alt="Сертификат">
-                </a>
+            <div class="swiper sertivicates__slider">
+                <div id="sertivicates-gallery" class="swiper-wrapper pb-5">
+                    <a href="img/certificates/cert_1.png" class="certificates__item swiper-slide" data-bs-toggle="modal"
+                        data-bs-target="#cert_1">
+                        <img class="d-block w-100 h-auto" src="img/certificates/cert_1.png" alt="Сертификат">
+                    </a>
+                    <a href="img/certificates/cert_2.png" class="certificates__item swiper-slide" data-bs-toggle="modal"
+                        data-bs-target="#cert_2">
+                        <img class="d-block w-100 h-auto" src="img/certificates/cert_2.png" alt="Сертификат">
+                    </a>
+                    <a href="img/certificates/cert_3.png" class="certificates__item swiper-slide" data-bs-toggle="modal"
+                        data-bs-target="#cert_3">
+                        <img class="d-block w-100 h-auto" src="img/certificates/cert_3.png" alt="Сертификат">
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -474,28 +477,11 @@
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="map_1" role="tabpanel" aria-labelledby="map_1-tab"
-                            tabindex="0">
-                            <div style="position:relative;overflow:hidden;"><a
-                                    href="https://yandex.ru/maps/10752/sergiev-posad/?utm_medium=mapframe&utm_source=maps"
-                                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Сергиев Посад</a><a
-                                    href="https://yandex.ru/maps/10752/sergiev-posad/house/ulitsa_pushkina_91/Z0EYdg9gTEMDQFtsfX54eXRmZg==/?from=mapframe&ll=38.080564%2C56.298852&utm_medium=mapframe&utm_source=maps&z=17.1"
-                                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Пушкина, 91 —
-                                    Яндекс Карты</a>
-                                <iframe src="https://yandex.ru/map-widget/v1/-/CCUjeBGdSA" width="560" height="400"
-                                    frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-                            </div>
+                        <div class="tab-pane fade show active contacts__map-item" id="map_1" role="tabpanel"
+                            aria-labelledby="map_1-tab" tabindex="0">
                         </div>
-                        <div class="tab-pane fade" id="map_2" role="tabpanel" aria-labelledby="map_2-tab" tabindex="0">
-                            <div style="position:relative;overflow:hidden;"><a
-                                    href="https://yandex.ru/maps/65/novosibirsk/?utm_medium=mapframe&utm_source=maps"
-                                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Новосибирск</a><a
-                                    href="https://yandex.ru/maps/65/novosibirsk/house/ulitsa_nekrasova_80/bEsYfwRkQEQOQFtvfXx1d35lYA==/?ll=82.934920%2C55.046264&utm_medium=mapframe&utm_source=maps&z=17.1"
-                                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Некрасова, 80 —
-                                    Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUjeBryGC"
-                                    width="560" height="400" frameborder="1" allowfullscreen="true"
-                                    style="position:relative;"></iframe>
-                            </div>
+                        <div class="tab-pane fade contacts__map-item" id="map_2" role="tabpanel"
+                            aria-labelledby="map_2-tab" tabindex="0">
                         </div>
                         <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                             aria-labelledby="pills-contact-tab" tabindex="0">...</div>
@@ -561,7 +547,14 @@
             </div>
         </div>
     </div>
-
+    <a scroll-href="#header" class="top-scroll">
+        <svg x="0px" y="0px" viewBox="0 0 330 330" fill="inherit" stroke="#333">
+            <path id="XMLID_224_"
+                d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+	l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+	C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z" />
+        </svg>
+    </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
@@ -569,6 +562,8 @@
     <script src="js/aos.min.js"></script>
     <script src="js/lightgallery.min.js"></script>
     <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/maps.js"></script>
     <script src="js/script.js"></script>
 </body>
 

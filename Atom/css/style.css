@@ -564,6 +564,11 @@ li {
   min-width: 200px;
 }
 
+.sertivicates__slider .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--bs-blue);
+}
+
 .contacts__info-label {
   font-size: 20px;
 }
@@ -582,7 +587,7 @@ li {
   margin-top: -85px;
 }
 
-.contacts__map iframe {
+.contacts__map-item {
   width: 100%;
   height: 330px;
 }
@@ -629,6 +634,37 @@ li {
   width: 100%;
   -moz-columns: 3;
   columns: 3;
+}
+
+.top-scroll {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: -1px -1px 8px 4px rgba(0, 0, 0, 0.43);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.2s;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.top-scroll:hover {
+  box-shadow: -1px -1px 10px 6px rgba(0, 0, 0, 0.43);
+}
+
+.top-scroll.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.top-scroll svg {
+  fill: var(--bs-blue);
 }
 
 @media (max-width: 1200px) {
