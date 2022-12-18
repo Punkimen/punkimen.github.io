@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="page" style="max-width: 1920px; margin:0 auto;
+    width: 100%;">
+        <header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <a href="#" class="header__logo logo">
+        <img src="img/logo.png" alt="colonizer">
+      </a>
+      <nav class="header__nav">
+        <a scroll-href="#about" class="header__link">About</a>
+        <a scroll-href="#rewards" class="header__link">Rewards</a>
+        <a scroll-href="#tokenomics" class="header__link">Tokenomics</a>
+        <a scroll-href="#roadmap" class="header__link">Roadmap</a>
+        <a scroll-href="#team" class="header__link">Team</a>
+      </nav>
+      <div class="header__handle">
+        <a href="#" class="header__btn">Buy now</a>
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <div class="mobile-menu__container container"></div>
+  </div>
+</header>
+        <section class="hero">
+  <div class="container">
+    <div class="hero__logo">
+      <img src="img/hero_logo.png" alt="Logo">
+    </div>
+  </div>
+</section>
+        <section id="about" class="about">
+  <div class="about__elipse">
+    <img src="img/elipse_1.png" alt="">
+  </div>
+  <div class="section__header about__header">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+    </div>
+  </div>
+  <div class="about__planet">
+    <img src="img/planet.png" alt="">
+  </div>
+  <div class="container">
+    <div class="about__text">Santa Musk is a Meme Coin with very strong community. Hold SAMU tokens on your wallet and
+      get rewards of each buy/sell transaction. Also we puts a portion of it’s taxes directly into a rewards wallet, to
+      be distributed amongst all holders on Christmas day
+      (December 25th 2021)</div>
+    <div class="about__video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+        <section id="rewards" class="rewards">
+  <div class="rewards__header section__header">
+    <div class="container">
+      <h2 class="section-title">Rewards</h2>
+    </div>
+  </div>
+  <div class="rewards__inner">
+    <div class="rewards__planet">
+      <img src="img/planet_2.png" alt="">
+    </div>
+    <div class="rewards__container container">
+      <div class="rewards__content ">
+        <div class="rewards__content-blur back-layer"></div>
+        <div class="rewards__icon">
+          <img src="img/icon/timer.svg" alt="timer">
+        </div>
+        <div class="rewards__timer">
+          <div class="rewards__timer-block">
+            <div class="rewards__value">1</div>
+            <div class="rewards__label">days</div>
+          </div>
+          <div class="rewards__timer-block">
+            <div class="rewards__value">00</div>
+            <div class="rewards__label">hours</div>
+          </div>
+          <div class="rewards__timer-block">
+            <div class="rewards__value">00</div>
+            <div class="rewards__label">minutes</div>
+          </div>
+          <div class="rewards__timer-block">
+            <div class="rewards__value">00</div>
+            <div class="rewards__label">seconds</div>
+          </div>
+        </div>
+        <div class="rewards__porgress">
+          <div class="rewards__porgress-line">
+            <div class="rewards__porgress-load"></div>
+          </div>
+          <div class="rewards__porgress-persent">35%</div>
+        </div>
+      </div>
+      <div class="rewards__wrapper">
+        <div class="rewards__item">
+          <div class="rewards__item-count">542</div>
+          <div class="rewards__item-descr">BNB on reward pool</div>
+        </div>
+        <div class="rewards__item">
+          <div class="rewards__item-count">542</div>
+          <div class="rewards__item-descr">Your SAMU holdings</div>
+        </div>
+        <div class="rewards__item">
+          <div class="rewards__item-count">542</div>
+          <div class="rewards__item-descr">Your current reward</div>
+        </div>
+      </div>
+      <a href="#" class="rewards__btn btn">connect wallet</a>
+    </div>
+  </div>
+</section>
+        <section class="swap">
+  <div class="swap__header section__header">
+    <div class="container">
+      <h2 class="section-title">Swap</h2>
+    </div>
+  </div>
+  <div class="racket">
+    <img src="img/racket.png" alt="">
+  </div>
+  <div class="about__elipse">
+    <img src="img/elipse_2.png" alt="">
+  </div>
+  <div class="container">
+    <div class="swap-form">
+      <div class="swap-form__blur back-layer"></div>
+      <form action="">
+        <div class="swap-form__item">
+          <label class="swap-form__label">from</label>
+          <div class="swap-form__values">
+            <div class="swap-form__currency">
+              <div id="from-token" class="select" data-modal="#modal-token">
+                <div class="select__value">choose a token</div>
+                <div class="select__arrow">
+                  <img src="img/icon/arrow.svg" alt="arrow" />
+                </div>
+              </div>
+            </div>
+            <input class="swap-form__input" type="text" name="currency-summ" placeholder="0.0">
+          </div>
+        </div>
+        <div class="swap-form__item">
+          <label class="swap-form__label">in</label>
+          <div class="swap-form__values">
+            <div class="swap-form__currency">
+              <div id="in-token" class="select" data-modal="#modal-token">
+                <div class="select__value">choose a token</div>
+                <div class="select__arrow">
+                  <img src="img/icon/arrow.svg" alt="arrow" />
+                </div>
+              </div>
+            </div>
+            <input class="swap-form__input" type="text" name="result-summ" placeholder="0.0">
+          </div>
+        </div>
+        <a href="#" class="swap-form__btn btn">connect wallet</a>
+      </form>
+    </div>
+  </div>
+</section>
+        <section id="roadmap" class="roadmap">
+  <div class="roadmap__header section__header">
+    <div class="container">
+      <h2 class="section-title">Roadmap</h2>
+    </div>
+  </div>
+  <div class="roadmap__elipse">
+    <img src="img/elipse_1.png" alt="">
+  </div>
+  <div class="container">
+    <div class="roadmap__wrapper">
+      <div class="roadmap__item back-layer" data-step=".01">
+        <div class=""></div>
+        <div class="roadmap__item-label">Step</div>
+        <ul class="roadmap__item-list">
+          <li class="roadmap__item-elem">Create Santa Musk Website & Social Media</li>
+          <li class="roadmap__item-elem">Create SAMU token contract</li>
+          <li class="roadmap__item-elem">Pass KYC + Audit</li>
+          <li class="roadmap__item-elem">Phase 1 of Marketing</li>
+        </ul>
+      </div>
+      <div class="roadmap__item back-layer" data-step=".02">
+
+        <div class="roadmap__item-label">Step</div>
+        <ul class="roadmap__item-list">
+          <li class="roadmap__item-elem">Building the Community</li>
+          <li class="roadmap__item-elem">Fairlaunch on Pinksale</li>
+          <li class="roadmap__item-elem">Launch on Pancakeswap and lock Liquidity</li>
+          <li class="roadmap__item-elem">Phase 2 of Marketing</li>
+        </ul>
+      </div>
+      <div class="roadmap__item back-layer" data-step=".03">
+
+        <div class="roadmap__item-label">Step</div>
+        <ul class="roadmap__item-list">
+          <li class="roadmap__item-elem">Building the Community</li>
+          <li class="roadmap__item-elem">Fairlaunch on Pinksale</li>
+          <li class="roadmap__item-elem">Launch on Pancakeswap and lock Liquidity</li>
+          <li class="roadmap__item-elem">Phase 2 of Marketing</li>
+        </ul>
+      </div>
+      <div class="roadmap__item back-layer" data-step=".04">
+
+        <div class="roadmap__item-label">Step</div>
+        <ul class="roadmap__item-list">
+          <li class="roadmap__item-elem">Building the Community</li>
+          <li class="roadmap__item-elem">Fairlaunch on Pinksale</li>
+          <li class="roadmap__item-elem">Launch on Pancakeswap and lock Liquidity</li>
+          <li class="roadmap__item-elem">Phase 2 of Marketing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+        <section id="tokenomics" class="tokenomics">
+  <div class="tokenomics__header section__header">
+    <div class="container">
+      <h2 class="section-title">tokenomics</h2>
+    </div>
+  </div>
+  <div class="tokenomics__elipse">
+    <img src="img/elipse_1.png" alt="">
+  </div>
+  <div class="container">
+    <div class="tokenomics__number">
+      <div class="tokenomics__input input-block">
+        <input id="token" type="text" value="0xdb305f8b9B45c92a8e71637e4E8C7dcfF8054e1b" readonly>
+      </div>
+      <button id="copy-token" class="tokenomics__btn">
+        <span>Copy contract</span>
+        <svg width="29" height="34" class="">
+          <use xlink:href="./img/icons/icons.svg#copy"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="tokenomics__ufo">
+      <img src="img/ufo.png" alt="ufo">
+    </div>
+    <div class="tokenomics__stat">
+      <div class="tokenomics__stat-item">
+        <div class="tokenomics__stat-progress">
+          <span class="tokenomics__stat-line" style="height: 80%"></span>
+          <span class="tokenomics__stat-count">80%</span>
+        </div>
+        <div class="tokenomics__stat-label">Team</div>
+      </div>
+      <div class="tokenomics__stat-item">
+        <div class="tokenomics__stat-progress">
+          <span class="tokenomics__stat-line" style="height: 60%"></span>
+          <span class="tokenomics__stat-count">60%</span>
+        </div>
+        <div class="tokenomics__stat-label">Influencers</div>
+      </div>
+      <div class="tokenomics__stat-item">
+        <div class="tokenomics__stat-progress">
+          <span class="tokenomics__stat-line" style="height: 75%"></span>
+          <span class="tokenomics__stat-count">75%</span>
+        </div>
+        <div class="tokenomics__stat-label">CEX listings</div>
+      </div>
+      <div class="tokenomics__stat-item">
+        <div class="tokenomics__stat-progress">
+          <span class="tokenomics__stat-line" style="height: 30%"></span>
+          <span class="tokenomics__stat-count">30%</span>
+        </div>
+        <div class="tokenomics__stat-label">Airdrop</div>
+      </div>
+      <div class="tokenomics__stat-item">
+        <div class="tokenomics__stat-progress">
+          <span class="tokenomics__stat-line" style="height: 70%"></span>
+          <span class="tokenomics__stat-count">70%</span>
+        </div>
+        <div class="tokenomics__stat-label">Liquidity</div>
+      </div>
+      <div class="tokenomics__stat-item">
+        <div class="tokenomics__stat-progress">
+          <span class="tokenomics__stat-line" style="height: 20%"></span>
+          <span class="tokenomics__stat-count">20%</span>
+        </div>
+        <div class="tokenomics__stat-label">Presale</div>
+      </div>
+    </div>
+  </div>
+</section>
+        <section id="team" class="team">
+  <div class="section__header team__header">
+    <div class="container">
+      <h2 class="section-title">Team</h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="team__slider swiper">
+      <div class="swiper-wrapper team__wrapper">
+        <div class="swiper-slide">
+          <div class="team__item teamplate">
+            <div class="teamplate__photo">
+              <img src="img/teamplate_1.jpg" alt="teamplate">
+            </div>
+            <div class="teamplate__descr">
+              <div class="teamplate__name">Robert</div>
+              <div class="teamplate__work-type">CEO</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="team__item teamplate">
+            <div class="teamplate__photo">
+              <img src="img/teamplate_1.jpg" alt="teamplate">
+            </div>
+            <div class="teamplate__descr">
+              <div class="teamplate__name">Harry</div>
+              <div class="teamplate__work-type">Software Tester</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="team__item teamplate">
+            <div class="teamplate__photo">
+              <img src="img/teamplate_1.jpg" alt="teamplate">
+            </div>
+            <div class="teamplate__descr">
+              <div class="teamplate__name">George</div>
+              <div class="teamplate__work-type">Programmer</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="team__item teamplate">
+            <div class="teamplate__photo">
+              <img src="img/teamplate_1.jpg" alt="teamplate">
+            </div>
+            <div class="teamplate__descr">
+              <div class="teamplate__name">Jacob</div>
+              <div class="teamplate__work-type">Developer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+        <footer class="footer">
+  <div class="meteor">
+    <img src="img/meteor.png" alt="meteor">
+  </div>
+  <div class="container">
+    <ul class="footer__social">
+      <li class="footer__social-elem">
+        <a href="mailto:mail@example.com" target="_blank" class="footer__social-link">
+          <svg width="67" height="53" class="">
+            <use xlink:href="./img/icons/icons.svg#mail"></use>
+          </svg>
+          <span>mail@example.com</span>
+        </a>
+      </li>
+      <li class="footer__social-elem">
+
+        <a href="https://telegram.me/telegram" target="_blank" class="footer__social-link">
+          <svg width="66" height="61" class="">
+            <use xlink:href="./img/icons/icons.svg#telegram"></use>
+          </svg>
+          <span>@Telegram</span>
+        </a>
+      </li>
+      <li class="footer__social-elem">
+        <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+          <svg width="72" height="60" class="">
+            <use xlink:href="./img/icons/icons.svg#twitter"></use>
+          </svg>
+          <span>https://twitter.com/</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+        <div id="modal-copyed" class="notification">
+  <div class="notification__icon">
+    <img src="img/icon/check.svg" alt="checked">
+  </div>
+  <div class="notification__text">Copied!</div>
+</div>
+<div class="popups">
+  <div class="popups__inner">
+    <div id="modal-token" class="popup back-layer">
+      <div class="popup__content">
+        <div class="popup__back js-close-popup">
+          Choose a token
+        </div>
+        <div class="search popup__search">
+          <div class="input-block">
+            <input type="text" placeholder="Search by name or paste address">
+          </div>
+          <button class="search__btn">
+            <img src="img/icon/lupe.svg" alt="lupe">
+          </button>
+        </div>
+        <div class="popup__list scroll-block">
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+          <li class="popup__elem select-option">
+            <img class="select-option__icon" src="img/icon/token_1.png" alt="BNB">
+            <span class="select-option__value">BNB</span>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
