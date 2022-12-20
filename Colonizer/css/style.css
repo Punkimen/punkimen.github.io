@@ -185,6 +185,7 @@ li {
 }
 
 .page {
+  overflow-x: hidden;
   max-width: 1920px;
   margin: 0 auto;
   width: 100%;
@@ -1002,7 +1003,7 @@ li {
 }
 
 .team__header {
-  margin-bottom: 200px;
+  margin-bottom: 180px;
 }
 
 .team__slider {
@@ -1012,6 +1013,7 @@ li {
 }
 
 .team__item {
+  padding-top: 20px;
   text-align: center;
 }
 
@@ -1425,7 +1427,7 @@ li {
     display: block;
   }
 
-  .hero {
+  .hero__bg {
     background-position: center;
   }
 
@@ -1599,7 +1601,7 @@ li {
   }
 
   .team__header {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .teamplate__photo {
@@ -1637,7 +1639,7 @@ li {
     font-size: 15px;
   }
 
-  .hero {
+  .hero__bg {
     min-height: 430px;
     padding: 0;
     background-position: top 0 right 15%;
@@ -1821,7 +1823,7 @@ li {
   }
 
   .team__header {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 
   .footer {
@@ -1840,7 +1842,7 @@ li {
     left: 15px;
   }
 
-  .hero {
+  .hero__bg {
     background-position: top 0 right 13%;
   }
 
