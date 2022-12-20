@@ -8,12 +8,30 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-    <div class="page" style="max-width: 1920px; margin:0 auto;
-    width: 100%;">
+    <style>
+        /* .hero-slide__bg {
+            height: 100%;
+            background-position: center;
+            background-image: url(../img/stars_bg.png);
+            background-size: cover;
+            background-repeat: repeat-y;
+        } */
+    </style>
+    <div class="page" style="position: relative">
+        <div class="bg""></div>
+        <!-- <div class=" app">
+            <div data-scene data-speed="0.2">rolly.js</div>
+            <div data-scene>provides…</div>
+            <div>some delicious…</div>
+            <div data-scene data-speed="1.4">very delicious…</div>
+            <div data-scene data-speed="1.6">parallax effects ❤️</div>
+        </div> -->
         <header class="header">
   <div class="container">
     <div class="header__wrapper">
@@ -41,9 +59,10 @@
     <div class="mobile-menu__container container"></div>
   </div>
 </header>
-        <section class="hero">
+        <section class="hero ">
+  <div class="hero__bg"></div>
   <div class="container">
-    <div class="hero__logo">
+    <div class="hero__logo js-tilt" data-aos="flip-left" data-aos-offset="100" data-aos-duration="1000">
       <img src="img/hero_logo.png" alt="Logo">
     </div>
   </div>
@@ -54,14 +73,15 @@
   </div>
   <div class="section__header about__header">
     <div class="container">
-      <h2 class="section-title">About</h2>
+      <h2 class="section-title" data-aos="fade-up">About</h2>
     </div>
   </div>
-  <div class="about__planet">
+  <div class="about__planet js-tilt" data-aos="fade-up-left" data-aos-offset="100" data-aos-duration="1000">
     <img src="img/planet.png" alt="">
   </div>
   <div class="container">
-    <div class="about__text">Santa Musk is a Meme Coin with very strong community. Hold SAMU tokens on your wallet and
+    <div class="about__text" data-aos="fade-down">Santa Musk is a Meme Coin with very strong community. Hold SAMU tokens
+      on your wallet and
       get rewards of each buy/sell transaction. Also we puts a portion of it’s taxes directly into a rewards wallet, to
       be distributed amongst all holders on Christmas day
       (December 25th 2021)</div>
@@ -72,14 +92,14 @@
     </div>
   </div>
 </section>
-        <section id="rewards" class="rewards">
+        <section id="rewards" class="rewards" data-scene data-speed="1.2">
   <div class="rewards__header section__header">
     <div class="container">
-      <h2 class="section-title">Rewards</h2>
+      <h2 class="section-title" data-aos="fade-up">Rewards</h2>
     </div>
   </div>
   <div class="rewards__inner">
-    <div class="rewards__planet">
+    <div class="rewards__planet js-tilt" data-aos="fade-right" data-aos-offset="100" data-aos-duration="1000">
       <img src="img/planet_2.png" alt="">
     </div>
     <div class="rewards__container container">
@@ -114,15 +134,15 @@
         </div>
       </div>
       <div class="rewards__wrapper">
-        <div class="rewards__item">
+        <div class="rewards__item" data-aos="fade-down" data-aos-duration="500">
           <div class="rewards__item-count">542</div>
           <div class="rewards__item-descr">BNB on reward pool</div>
         </div>
-        <div class="rewards__item">
+        <div class="rewards__item" data-aos="fade-down" data-aos-duration="1000">
           <div class="rewards__item-count">542</div>
           <div class="rewards__item-descr">Your SAMU holdings</div>
         </div>
-        <div class="rewards__item">
+        <div class="rewards__item" data-aos="fade-down" data-aos-duration="1500">
           <div class="rewards__item-count">542</div>
           <div class="rewards__item-descr">Your current reward</div>
         </div>
@@ -131,13 +151,13 @@
     </div>
   </div>
 </section>
-        <section class="swap">
+        <section class="swap" data-scene data-speed="1.2">
   <div class="swap__header section__header">
     <div class="container">
-      <h2 class="section-title">Swap</h2>
+      <h2 class="section-title" data-aos="fade-up">Swap</h2>
     </div>
   </div>
-  <div class="racket">
+  <div class="racket js-tilt" data-aos="fade-up-left">
     <img src="img/racket.png" alt="">
   </div>
   <div class="about__elipse">
@@ -180,10 +200,10 @@
     </div>
   </div>
 </section>
-        <section id="roadmap" class="roadmap">
+        <section id="roadmap" class="roadmap" data-scene data-speed="1.2">
   <div class="roadmap__header section__header">
     <div class="container">
-      <h2 class="section-title">Roadmap</h2>
+      <h2 class="section-title" data-aos="fade-up">Roadmap</h2>
     </div>
   </div>
   <div class="roadmap__elipse">
@@ -191,7 +211,7 @@
   </div>
   <div class="container">
     <div class="roadmap__wrapper">
-      <div class="roadmap__item back-layer" data-step=".01">
+      <div class="roadmap__item js-tilt back-layer" data-aos="flip-left" data-aos-duration="500" data-step=".01">
         <div class=""></div>
         <div class="roadmap__item-label">Step</div>
         <ul class="roadmap__item-list">
@@ -201,7 +221,7 @@
           <li class="roadmap__item-elem">Phase 1 of Marketing</li>
         </ul>
       </div>
-      <div class="roadmap__item back-layer" data-step=".02">
+      <div class="roadmap__item js-tilt back-layer" data-aos="flip-left" data-aos-duration="1000" data-step=".02">
 
         <div class="roadmap__item-label">Step</div>
         <ul class="roadmap__item-list">
@@ -211,7 +231,7 @@
           <li class="roadmap__item-elem">Phase 2 of Marketing</li>
         </ul>
       </div>
-      <div class="roadmap__item back-layer" data-step=".03">
+      <div class="roadmap__item js-tilt back-layer" data-aos="flip-left" data-aos-duration="1500" data-step=".03">
 
         <div class="roadmap__item-label">Step</div>
         <ul class="roadmap__item-list">
@@ -221,7 +241,7 @@
           <li class="roadmap__item-elem">Phase 2 of Marketing</li>
         </ul>
       </div>
-      <div class="roadmap__item back-layer" data-step=".04">
+      <div class="roadmap__item js-tilt back-layer" data-aos="flip-left" data-aos-duration="2000" data-step=".04">
 
         <div class="roadmap__item-label">Step</div>
         <ul class="roadmap__item-list">
@@ -234,10 +254,10 @@
     </div>
   </div>
 </section>
-        <section id="tokenomics" class="tokenomics">
+        <section id="tokenomics" class="tokenomics" data-scene data-speed="1.2">
   <div class="tokenomics__header section__header">
     <div class="container">
-      <h2 class="section-title">tokenomics</h2>
+      <h2 class="section-title" data-aos="fade-up">tokenomics</h2>
     </div>
   </div>
   <div class="tokenomics__elipse">
@@ -255,7 +275,7 @@
         </svg>
       </button>
     </div>
-    <div class="tokenomics__ufo">
+    <div class="tokenomics__ufo js-tilt" data-aos="zoom-in-up" data-aos-offset="100" data-aos-duration="2000">
       <img src="img/ufo.png" alt="ufo">
     </div>
     <div class="tokenomics__stat">
@@ -304,18 +324,18 @@
     </div>
   </div>
 </section>
-        <section id="team" class="team">
+        <section id="team" class="team" data-scene data-speed="1.2">
   <div class="section__header team__header">
     <div class="container">
-      <h2 class="section-title">Team</h2>
+      <h2 class="section-title" data-aos="fade-up">Team</h2>
     </div>
   </div>
   <div class="container">
     <div class="team__slider swiper">
       <div class="swiper-wrapper team__wrapper">
         <div class="swiper-slide">
-          <div class="team__item teamplate">
-            <div class="teamplate__photo">
+          <div class="team__item teamplate" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="500">
+            <div class="teamplate__photo js-tilt">
               <img src="img/teamplate_1.jpg" alt="teamplate">
             </div>
             <div class="teamplate__descr">
@@ -325,8 +345,8 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="team__item teamplate">
-            <div class="teamplate__photo">
+          <div class="team__item teamplate" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="1000">
+            <div class="teamplate__photo js-tilt">
               <img src="img/teamplate_1.jpg" alt="teamplate">
             </div>
             <div class="teamplate__descr">
@@ -336,8 +356,8 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="team__item teamplate">
-            <div class="teamplate__photo">
+          <div class="team__item teamplate" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="1500">
+            <div class="teamplate__photo js-tilt">
               <img src="img/teamplate_1.jpg" alt="teamplate">
             </div>
             <div class="teamplate__descr">
@@ -347,8 +367,8 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="team__item teamplate">
-            <div class="teamplate__photo">
+          <div class="team__item teamplate" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="2000">
+            <div class="teamplate__photo js-tilt">
               <img src="img/teamplate_1.jpg" alt="teamplate">
             </div>
             <div class="teamplate__descr">
@@ -362,8 +382,8 @@
     </div>
   </div>
 </section>
-        <footer class="footer">
-  <div class="meteor">
+        <footer class="footer" data-scene data-speed="1.2">
+  <div class="meteor" data-aos="fade-up-right" data-aos-duration="2000">
     <img src="img/meteor.png" alt="meteor">
   </div>
   <div class="container">
@@ -560,8 +580,13 @@
   </div>
 </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/bgscroll.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 
 </html>

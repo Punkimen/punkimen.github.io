@@ -60,9 +60,6 @@ body {
   line-height: 1.9;
   background: var(--color-dark);
   overflow-x: hidden !important;
-  background-image: url(../img/stars_bg.png);
-  background-size: cover;
-  background-repeat: repeat-y;
 }
 
 body.overlay {
@@ -174,6 +171,23 @@ li {
 
 .input-block input::placeholder {
   color: #fff;
+}
+
+.bg {
+  background-image: url(../img/stars_bg.png);
+  background-size: cover;
+  background-repeat: repeat-y;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.page {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .header {
@@ -305,16 +319,26 @@ li {
 }
 
 .hero {
+  position: relative;
   padding: 130px 0;
-  background: url(../img/hero_bg.png);
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../img/hero_bg.png), #111;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 }
 
 .hero__logo {
   max-width: 497px;
   width: 50%;
+  position: relative;
 }
 
 .hero__logo img {
@@ -1050,6 +1074,11 @@ li {
   position: relative;
 }
 
+.footer__social {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
 .footer__social-elem:not(:last-child) {
   margin-bottom: 50px;
 }
@@ -1394,6 +1423,10 @@ li {
 
   .burger {
     display: block;
+  }
+
+  .hero {
+    background-position: center;
   }
 
   .about {
