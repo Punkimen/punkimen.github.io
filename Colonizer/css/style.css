@@ -322,14 +322,6 @@ li {
 .hero {
   position: relative;
   padding: 130px 0;
-}
-
-.hero__bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background: url(../img/hero_bg.png), #111;
   background-repeat: no-repeat;
   background-size: cover;
@@ -538,7 +530,7 @@ li {
   left: 0;
   bottom: 0;
   background: #fff;
-  filter: blur(4.5px);
+  filter: blur(3px);
 }
 
 .rewards__porgress-load {
@@ -549,7 +541,7 @@ li {
   left: 0;
   bottom: 0;
   background: linear-gradient(90deg, #5CCAF0 0.89%, #BA60FE 31.88%);
-  filter: blur(4.5px);
+  filter: blur(3px);
 }
 
 .rewards__porgress-persent {
@@ -776,7 +768,6 @@ li {
 
 .roadmap__item {
   position: relative;
-  border: 7px solid #FFFFFF;
   max-width: 350px;
   width: 100%;
   padding: 0 5px 40px 0;
@@ -805,6 +796,17 @@ li {
 .roadmap__item::before {
   top: 15px;
   left: 20px;
+}
+
+.roadmap__item-blur {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 7px solid #FFFFFF;
+  filter: blur(4px);
+  background: transparent;
 }
 
 .roadmap__item-label {
@@ -1208,9 +1210,9 @@ li {
 }
 
 .popup {
+  position: relative;
   max-width: 570px;
   width: 100%;
-  border: 7px solid #fff;
   padding: 50px 20px 50px 40px;
   margin: 0 auto;
   display: none;
@@ -1218,6 +1220,17 @@ li {
 
 .popup.show {
   display: block;
+}
+
+.popup__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 7px solid #FFFFFF;
+  filter: blur(4px);
+  background: transparent;
 }
 
 .popup__content {
@@ -1427,7 +1440,7 @@ li {
     display: block;
   }
 
-  .hero__bg {
+  .hero {
     background-position: center;
   }
 
@@ -1537,6 +1550,7 @@ li {
 
   .rewards__content-blur {
     border: 3px solid #FFFFFF;
+    filter: blur(3px);
   }
 
   .rewards__value {
@@ -1567,10 +1581,6 @@ li {
   .roadmap__wrapper {
     gap: 40px 25px;
     padding-right: 0;
-  }
-
-  .roadmap__item {
-    border: 3px solid #FFFFFF;
   }
 
   .roadmap__item::after {
@@ -1639,10 +1649,12 @@ li {
     font-size: 15px;
   }
 
-  .hero__bg {
+  .hero {
     min-height: 430px;
     padding: 0;
+    padding: 0;
     background-position: top 0 right 15%;
+    background-size: 250%;
   }
 
   .hero__logo {
@@ -1729,6 +1741,7 @@ li {
 
   .swap-form__blur {
     border: 3px solid #FFFFFF;
+    filter: blur(3px);
   }
 
   .swap-form__item {
@@ -1776,6 +1789,11 @@ li {
 
   .roadmap__item:not(:last-child) {
     margin: 0 auto 30px;
+  }
+
+  .roadmap__item-blur {
+    border: 3px solid #FFFFFF;
+    filter: blur(3px);
   }
 
   .tokenomics__header {
@@ -1834,6 +1852,10 @@ li {
   .popup {
     padding: 50px 15px 50px 15px;
   }
+
+  .popup__layer {
+    border: 3px solid #fff;
+  }
 }
 
 @media (max-width: 412px) {
@@ -1842,7 +1864,8 @@ li {
     left: 15px;
   }
 
-  .hero__bg {
+  .hero {
+    min-height: 330px;
     background-position: top 0 right 13%;
   }
 
