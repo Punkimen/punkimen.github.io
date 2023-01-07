@@ -569,6 +569,10 @@ li {
   background: var(--bs-blue);
 }
 
+.additional__wrapper {
+  padding-left: 80px;
+}
+
 .contacts__info-label {
   font-size: 20px;
 }
@@ -733,6 +737,10 @@ li {
 
   .project__img {
     margin: 0 auto 40px;
+  }
+
+  .additional__wrapper {
+    padding-left: 0;
   }
 }
 
