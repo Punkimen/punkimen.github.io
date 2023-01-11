@@ -10,7 +10,7 @@ import {observerScroll} from "./components/animateToScroll.js";
 import {growElem} from "./components/dropDown.js";
 import {toogleClass} from "./components/toogleClass.js";
 import {setMenu, toogleMenu, burger} from "./components/mobMenu.js";
-import {scrollToElem} from "./components/scrollTo.js";
+
 document.addEventListener(
 	"DOMContentLoaded",
 	function () {
