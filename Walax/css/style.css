@@ -544,6 +544,8 @@ li {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .acces-buy__wrapper {
@@ -963,6 +965,7 @@ li {
   max-width: 220px;
   width: 100%;
   padding: 7px 20px;
+  border: none;
 }
 
 .sale-table__btn img {
@@ -973,6 +976,7 @@ li {
 .sale-table__col_bts {
   display: flex;
   justify-content: space-between;
+  margin-top: 40px;
 }
 
 .section__decor {
@@ -1011,6 +1015,8 @@ li {
   border: 1px solid #B1FA16;
   border-radius: 33px;
   padding: 20px 20px 30px 20px;
+  max-width: 340px;
+  width: 100%;
 }
 
 .roadmap-item:not(:last-child) {
@@ -1044,7 +1050,7 @@ li {
 }
 
 .roadmap-item__elem:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .roadmap-item__elem::before {
