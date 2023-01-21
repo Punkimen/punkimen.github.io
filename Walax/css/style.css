@@ -57,10 +57,6 @@ body.overlay {
   overflow-x: hidden;
 }
 
-.main {
-  overflow: hidden;
-}
-
 ul,
 li {
   list-style: none;
@@ -83,6 +79,16 @@ li {
 .main-text {
   font-size: 20px;
   line-height: 24px;
+}
+
+.btn-reset {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .btn {
@@ -169,6 +175,34 @@ li {
   display: none;
 }
 
+.notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #000;
+  border-radius: 20px;
+  padding: 5px 15px 6px;
+  font-size: 16px;
+  line-height: 1.2;
+  display: flex;
+  z-index: 9;
+  color: var(--color-dark);
+  pointer-events: none;
+  opacity: 0;
+  transition: all ease 0.3s;
+  border: 1px solid #B1FA16;
+  display: flex;
+  align-items: center;
+}
+
+.notification.show {
+  opacity: 1;
+}
+
+.notification__icon {
+  margin-right: 10px;
+}
+
 .header {
   padding: 60px 0 55px;
   position: relative;
@@ -176,7 +210,7 @@ li {
 
 .header__decor {
   position: absolute;
-  top: 0;
+  top: 50px;
   left: 0;
   transform: translate(-50%, -25%);
   z-index: -1;
@@ -331,12 +365,12 @@ li {
 
 .mobile-menu.open::after {
   content: "";
-  position: absolute;
+  position: fixed;
   background: rgba(0, 0, 0, 0.192);
-  left: -15px;
-  top: 0;
+  left: 0;
+  top: 123px;
   height: 100vh;
-  width: calc(100% + 30px);
+  width: 100vw;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   z-index: -1;
@@ -430,6 +464,7 @@ li {
   overflow: hidden;
   border: 1px solid #B1FA16;
   transotion: all ease 0.2s;
+  padding: 0 10px;
 }
 
 .socials-items__item img {
@@ -769,13 +804,15 @@ li {
 
 .privat-sale {
   padding: 80px 0 80px;
+  background: #000;
+  position: relative;
 }
 
 .privat-sale__title {
-  font-size: 68px;
+  font-size: 43px;
   line-height: 1.5;
   font-weight: 600;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .privat-sale__dashboard {
@@ -862,15 +899,15 @@ li {
   r: 140;
   cx: 145;
   cy: 145;
-  transform: rotate(0deg);
+  transform: rotate(270deg);
   transform-origin: 50% 50%;
   transition: stroke-dashoffset 0.4s;
   stroke-dasharray: 880;
-  stroke-dashoffset: 220;
+  stroke-dashoffset: -220;
 }
 
 .sale-table__item:not(:last-child) {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .sale-table__row {
@@ -902,6 +939,10 @@ li {
 .sale-table__btn {
   display: flex;
   align-items: center;
+  justify-content: center;
+  max-width: 220px;
+  width: 100%;
+  padding: 7px 20px;
 }
 
 .sale-table__btn img {
@@ -912,6 +953,198 @@ li {
 .sale-table__col_bts {
   display: flex;
   justify-content: space-between;
+}
+
+.section__decor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -25%);
+  z-index: -1;
+}
+
+.roadmap {
+  padding: 50px 0 150px;
+  position: relative;
+  background: #000;
+}
+
+.roadmap__title {
+  font-size: 43px;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.roadmap__wrapper {
+  display: flex;
+  max-width: 1265px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+
+.roadmap-item {
+  position: relative;
+  border: 1px solid #B1FA16;
+  border-radius: 33px;
+  padding: 20px 20px 30px 20px;
+}
+
+.roadmap-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.roadmap-item::before {
+  content: attr(data-count);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 32px;
+  border-radius: 33px;
+  border: 2px solid #B1FA16;
+  padding: 5px 10px;
+  max-width: 90px;
+  width: 100%;
+  text-align: center;
+}
+
+.roadmap-item__title {
+  text-align: center;
+  padding: 0 90px;
+  margin-bottom: 30px;
+}
+
+.roadmap-item__elem {
+  padding-left: 40px;
+  position: relative;
+  font-size: 16px;
+}
+
+.roadmap-item__elem:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.roadmap-item__elem::before {
+  content: url(../img/icons/check-icon_2.svg);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 22px;
+  height: 22px;
+}
+
+.roadmap-item__elem_uncheck::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #B1FA16;
+}
+
+.tokenomics {
+  padding: 50px 0 150px;
+  position: relative;
+  background: #000;
+}
+
+.tokenomics__title {
+  font-size: 43px;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.tokenomics__wrapper {
+  max-width: 1340px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.tokenomics__graph {
+  margin-right: 20px;
+}
+
+.tokenomics__tocken {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.tokenomics__tocken-label {
+  margin-right: 10px;
+}
+
+.tokenomics__tocken-value {
+  margin-right: 10px;
+  word-wrap: break-word;
+}
+
+.tokenomics__tocken-copy {
+  display: inline;
+}
+
+.tokenomics__tocken-copy svg {
+  fill: #fff;
+}
+
+.tokenomics__tocken-copy:hover svg {
+  fill: #B1FA16;
+}
+
+.tokenomics__handle {
+  max-width: 440px;
+  width: 100%;
+}
+
+.tokenomics__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 34px;
+  font-size: 16px;
+}
+
+.tokenomics__row:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.tokenomics__row_total {
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.tokenomics__row_total::after {
+  content: url(../img/icons/check-icon_2.svg);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tokenomics__row-label {
+  margin-right: 10px;
+}
+
+.tokenomics-stat {
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+  border: 1px solid transparent;
+}
+
+.tokenomics-stat:hover {
+  border: 1px solid #B1FA16;
+  box-shadow: -9px 8px 15px rgba(177, 250, 22, 0.2);
+}
+
+.tokenomics-stat.current {
+  border: 1px solid #B1FA16;
+  box-shadow: -9px 8px 15px rgba(177, 250, 22, 0.2);
 }
 
 .footer {
@@ -984,6 +1217,12 @@ li {
 
   .privat-sale__table {
     max-width: 100%;
+  }
+
+  .section__decor {
+    top: auto;
+    bottom: 0;
+    transform: translate(50%, 25%);
   }
 
   .footer__socials-item:not(:last-child) {
@@ -1105,8 +1344,49 @@ li {
   }
 
   .privat-sale__title {
-    font-size: 45px;
-    margin-bottom: 60px;
+    font-size: 43px;
+    margin-bottom: 40px;
+  }
+
+  .roadmap__title {
+    font-size: 43px;
+    margin-bottom: 40px;
+  }
+
+  .roadmap__wrapper {
+    display: block;
+  }
+
+  .roadmap-item {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .roadmap-item:not(:last-child) {
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+
+  .tokenomics__title {
+    font-size: 43px;
+    margin-bottom: 40px;
+  }
+
+  .tokenomics__wrapper {
+    display: block;
+  }
+
+  .tokenomics__graph {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .tokenomics__loader-circle {
+    margin: 0 auto;
+  }
+
+  .tokenomics__handle {
+    margin: 0 auto;
   }
 
   .footer {
@@ -1298,6 +1578,23 @@ li {
     align-items: center;
     justify-content: space-between;
   }
+
+  .roadmap-item__title {
+    padding: 0 30px 0 90px;
+  }
+
+  .tokenomics__tocken {
+    display: block;
+  }
+
+  .tokenomics__tocken-label {
+    margin-right: 0;
+    margin-bottom: 19px;
+  }
+
+  .tokenomics__tocken-value {
+    display: inline;
+  }
 }
 
 @media (max-width: 568px) {
@@ -1389,6 +1686,16 @@ li {
 
   .sale-table__col_bts {
     display: block;
+  }
+
+  .roadmap__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .tokenomics__title {
+    font-size: 36px;
+    margin-bottom: 40px;
   }
 
   .footer__nav {
