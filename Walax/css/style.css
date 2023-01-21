@@ -484,6 +484,26 @@ li {
   margin-right: 40px;
 }
 
+.video {
+  padding: 100px 0 100px;
+}
+
+.video-block {
+  max-width: 1085px;
+  width: 57vw;
+  height: 33vw;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 320px;
+  border: 1px solid #B1FA16;
+}
+
+.video-block iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .access {
   padding: 115px 0 90px;
 }
@@ -1207,6 +1227,12 @@ li {
     padding: 3px 15px;
   }
 
+  .video-block {
+    width: 100%;
+    height: 57vw;
+    min-height: 220px;
+  }
+
   .privat-sale__dashboard {
     display: block;
   }
@@ -1450,6 +1476,10 @@ li {
 
   .socials-items__item:not(:last-child) {
     margin-right: 0;
+  }
+
+  .video {
+    padding: 50px 0 50px;
   }
 
   .access {
