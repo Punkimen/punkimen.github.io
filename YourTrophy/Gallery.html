@@ -12,6 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link href="
+    https://cdn.jsdelivr.net/npm/custom-select@1.1.15/build/custom-select.min.css
+    " rel="stylesheet">
+    </link>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,22 +31,22 @@
                         <nav class="header__nav">
                             <ul class="header__list">
                                 <li class="header__elem">
-                                    <a href="./" class="header__link ">Главная</a>
+                                    <a href="./" class="header__link current">Главная</a>
                                 </li>
                                 <li class="header__elem">
-                                    <a href="" class="header__link">Катер/оборудование</a>
+                                    <a scroll-href="#equipment" class="header__link">Катер/оборудование</a>
                                 </li>
                                 <li class="header__elem">
                                     <a href="./Fishing.html" class="header__link">Рыбалка</a>
                                 </li>
                                 <li class="header__elem">
-                                    <a href="./Gallery.html" class="header__link current">Галерея</a>
+                                    <a href="./Gallery.html" class="header__link">Галерея</a>
                                 </li>
                                 <li class="header__elem">
-                                    <a href="" class="header__link">Видео</a>
+                                    <a scroll-href="#video" class="header__link">Видео</a>
                                 </li>
                                 <li class="header__elem">
-                                    <a href="" class="header__link">Контакты</a>
+                                    <a scroll-href="#contacts" class="header__link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
@@ -60,7 +64,11 @@
                 </div>
             </header>
             <div class="mobile-menu">
-                <div class="mobile-menu__container container"></div>
+                <div class="mobile-menu__container container">
+                    <button class="mobile-menu__btn btn">
+                        Забронировать тур
+                    </button>
+                </div>
             </div>
 
             <main class="main">
@@ -76,55 +84,55 @@
     </div>
     <div class="gallery__wrapper">
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
       <a data-src="img/fishing/photo_1.png" class="gallery__item" data-fancybox="gallery">
-        <img src="img/fishing/photo_1.png" alt="">
+        <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png" alt="">
       </a>
     </div>
   </div>
@@ -136,7 +144,7 @@
     <footer class="footer">
   <div class="container">
     <a href="" class="footer__logo">
-      <img src="img/logo.svg" alt="logo, your trophy">
+      <img src="img/logo.svg" class="lazy" data-src="img/logo.svg" alt="logo, your trophy">
     </a>
     <div class="footer__text">
       <p>© 2023</p>
@@ -147,6 +155,12 @@
 </footer>
 
     </div>
+    <script src="
+https://cdn.jsdelivr.net/npm/custom-select@1.1.15/build/custom-select.min.js
+"></script>
+<script src="./js/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/lightgallery.js"></script>

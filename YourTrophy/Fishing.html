@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link href="
+    https://cdn.jsdelivr.net/npm/custom-select@1.1.15/build/custom-select.min.css
+    " rel="stylesheet">
+    </link>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -26,27 +30,27 @@
                         <nav class="header__nav">
                             <ul class="header__list">
                                 <li class="header__elem">
-                                    <a href="./" class="header__link ">Главная</a>
+                                    <a href="./" class="header__link current">Главная</a>
                                 </li>
                                 <li class="header__elem">
-                                    <a href="" class="header__link">Катер/оборудование</a>
+                                    <a scroll-href="#equipment" class="header__link">Катер/оборудование</a>
                                 </li>
                                 <li class="header__elem">
-                                    <a href="./Fishing.html" class="header__link current">Рыбалка</a>
+                                    <a href="./Fishing.html" class="header__link">Рыбалка</a>
                                 </li>
                                 <li class="header__elem">
                                     <a href="./Gallery.html" class="header__link">Галерея</a>
                                 </li>
                                 <li class="header__elem">
-                                    <a href="" class="header__link">Видео</a>
+                                    <a scroll-href="#video" class="header__link">Видео</a>
                                 </li>
                                 <li class="header__elem">
-                                    <a href="" class="header__link">Контакты</a>
+                                    <a scroll-href="#contacts" class="header__link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
                         <div class="header__handle">
-                            <button class="header__btn btn btn_white">
+                            <button class="header__btn btn btn_white" data-popup="#order">
                                 Забронировать тур
                             </button>
                             <div class="header__burger burger">
@@ -59,7 +63,11 @@
                 </div>
             </header>
             <div class="mobile-menu">
-                <div class="mobile-menu__container container"></div>
+                <div class="mobile-menu__container container">
+                    <button class="mobile-menu__btn btn" data-popup="#gift_sert">
+                        Забронировать тур
+                    </button>
+                </div>
             </div>
 
             <main class="main">
@@ -71,7 +79,7 @@
           <use xlink:href="./img/icons/icons.svg#arrow-back"></use>
         </svg>
       </a>
-      <h1 class="fishing__title section-title">Рыбалка</h1>
+      <h1 class="fishing__title section-title" >Рыбалка</h1>
     </div>
   </div>
   <div class="fishing-block">
@@ -81,7 +89,8 @@
           <div class="about__gallery-wrapper">
             <div class="about__gallery-slide">
               <div class="about__gallery-photo">
-                <img src="img/fishing/photo_1.png" alt="рыбалка, Финский залив">
+                <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png"
+                  alt="рыбалка, Финский залив">
               </div>
               <div class="about__gallery-descr">
                 Рыбалка на Финском заливе
@@ -89,7 +98,8 @@
             </div>
             <div class="about__gallery-slide">
               <div class="about__gallery-photo">
-                <img src="img/fishing/photo_2.png" alt="Выездная рыбалка">
+                <img src="img/fishing/photo_2.png" class="lazy" data-src="img/fishing/photo_2.png"
+                  alt="Выездная рыбалка">
               </div>
               <div class="about__gallery-descr">
                 Выездная рыбалка
@@ -97,7 +107,7 @@
             </div>
             <div class="about__gallery-slide">
               <div class="about__gallery-photo">
-                <img src="img/fishing/photo_3.png" alt="Обучение">
+                <img src="img/fishing/photo_3.png" class="lazy" data-src="img/fishing/photo_3.png" alt="Обучение">
               </div>
               <div class="about__gallery-descr">
                 Обучение
@@ -115,8 +125,8 @@
   <div class="container">
     <div class="fishing-type__wrapper">
       <div class="fishing-type__content">
-        <h2 class="fishing-type__title">Рыбалка на Финском заливе</h2>
-        <div class="fishing-type__text">
+        <h2 class="fishing-type__title" data-aos="fade-up">Рыбалка на Финском заливе</h2>
+        <div class="fishing-type__text" data-aos="zoom-in">
           <p>Мой домашний водоём — это Финский залив в черте города, на котором я организовываю рыбалки уже более 5 лет.
             За этот срок я очень хорошо изучил данную локацию, манеру поведения рыбы в определённое время года, что
             позволяет без труда найти объект ловли и поймать его.</p>
@@ -130,23 +140,26 @@
             <li>- Есть возможность встретить клиента в точке города, куда можно подойти и зашвартоваться на катере.</li>
           </ul>
         </div>
-        <button class="fishing-type__btn btn btn_transparent btn_arrow">
+        <!-- <a href="./Fishing.html" class="fishing-type__btn btn btn_transparent btn_arrow">
           <span>подробнее</span>
           <svg class="" height="36">
             <use xlink:href="./img/icons/icons.svg#arrow"></use>
           </svg>
-        </button>
+        </a> -->
       </div>
       <div class="fishing-type__photos swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide fishing-type__photo">
-            <img src="img/fishing/photo_1.png" alt="Рабалка на финском заливе">
+            <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png"
+              alt="Рабалка на финском заливе">
           </div>
           <div class="swiper-slide fishing-type__photo">
-            <img src="img/fishing/photo_1.png" alt="Рабалка на финском заливе">
+            <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png"
+              alt="Рабалка на финском заливе">
           </div>
           <div class="swiper-slide fishing-type__photo">
-            <img src="img/fishing/photo_1.png" alt="Рабалка на финском заливе">
+            <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png"
+              alt="Рабалка на финском заливе">
           </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -166,7 +179,7 @@
       <div class="fishing-type__price-text">
         Стоимость рыболовного тура продолжительностью 8 часов составляет <b>35 000 т.р.</b>
       </div>
-      <button class="fishing-type__price-book btn btn_arrow">
+      <button class="fishing-type__price-book btn btn_arrow" data-popup="#order">
         <span>ЗАБРОНИРОВАТЬ</span>
         <svg class="" height="36">
           <use xlink:href="./img/icons/icons.svg#arrow"></use>
@@ -192,23 +205,26 @@
             столь красивых местах, пикник на одном из островов с возможностью приготовить наивкуснейшую уху из
             свежепойманной рыбки, приятное общение, рыбацкие байки -что еще нужно для лучшего отдыха.</p>
         </div>
-        <button class="fishing-type__btn btn btn_transparent btn_arrow">
+        <!-- <button class="fishing-type__btn btn btn_transparent btn_arrow">
           <span>подробнее</span>
           <svg class="" height="36">
             <use xlink:href="./img/icons/icons.svg#arrow"></use>
           </svg>
-        </button>
+        </button> -->
       </div>
       <div class="fishing-type__photos swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide fishing-type__photo">
-            <img src="img/fishing/photo_1.png" alt="Рабалка на финском заливе">
+            <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png"
+              alt="Рабалка на финском заливе">
           </div>
           <div class="swiper-slide fishing-type__photo">
-            <img src="img/fishing/photo_1.png" alt="Рабалка на финском заливе">
+            <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png"
+              alt="Рабалка на финском заливе">
           </div>
           <div class="swiper-slide fishing-type__photo">
-            <img src="img/fishing/photo_1.png" alt="Рабалка на финском заливе">
+            <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png"
+              alt="Рабалка на финском заливе">
           </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -228,7 +244,7 @@
       <div class="fishing-type__price-text">
         Стоимость выездного тура по договорённости.
       </div>
-      <button class="fishing-type__price-book btn btn_arrow">
+      <button class="fishing-type__price-book btn btn_arrow" data-popup="#order">
         <span>ЗАБРОНИРОВАТЬ</span>
         <svg class="" height="36">
           <use xlink:href="./img/icons/icons.svg#arrow"></use>
@@ -241,7 +257,7 @@
                 <section class="gift">
   <div class="container">
     <div class="gift__banner">
-      <button class="gift__btn btn btn_transparent">
+      <button class="gift__btn btn btn_transparent" data-popup="#gift_sert">
         подари рыбалку мечты
       </button>
       <div class="gift__arrows">
@@ -256,12 +272,14 @@
         </span>
       </div>
     </div>
-    <div class="gift__sertificates sertificate">
+    <div class="gift__sertificates sertificates" data-popup="#gift_sert">
       <div class="sertificate">
-        <img src="img/sertificate.svg" alt="Подарочный сертификат на рыбалку">
+        <img src="img/sertificate.svg" class="lazy" data-src="img/sertificate.svg"
+          alt="Подарочный сертификат на рыбалку">
       </div>
       <div class="sertificate sertificate_2">
-        <img src="img/sertificate.svg" alt="Подарочный сертификат на рыбалку">
+        <img src="img/sertificate.svg" class="lazy" data-src="img/sertificate.svg"
+          alt="Подарочный сертификат на рыбалку">
       </div>
     </div>
   </div>
@@ -278,23 +296,26 @@
             персональное обучение.
             Стоимость обучения обговаривается.</p>
         </div>
-        <button class="fishing-type__btn btn btn_transparent btn_arrow">
+        <!-- <button class="fishing-type__btn btn btn_transparent btn_arrow">
           <span>подробнее</span>
           <svg class="" height="36">
             <use xlink:href="./img/icons/icons.svg#arrow"></use>
           </svg>
-        </button>
+        </button> -->
       </div>
       <div class="fishing-type__photos swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide fishing-type__photo">
-            <img src="img/fishing/photo_1.png" alt="Рабалка на финском заливе">
+            <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png"
+              alt="Рабалка на финском заливе">
           </div>
           <div class="swiper-slide fishing-type__photo">
-            <img src="img/fishing/photo_1.png" alt="Рабалка на финском заливе">
+            <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png"
+              alt="Рабалка на финском заливе">
           </div>
           <div class="swiper-slide fishing-type__photo">
-            <img src="img/fishing/photo_1.png" alt="Рабалка на финском заливе">
+            <img src="img/fishing/photo_1.png" class="lazy" data-src="img/fishing/photo_1.png"
+              alt="Рабалка на финском заливе">
           </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -303,18 +324,18 @@
             <use xlink:href="./img/icons/icons.svg#arrow-back"></use>
           </svg>
         </div>
-        <div class="swiper-button-next fishing-type__arrow fishing-type__arrow_next">
+        <!-- <div class="swiper-button-next fishing-type__arrow fishing-type__arrow_next">
           <svg width="28" height="36" class="">
             <use xlink:href="./img/icons/icons.svg#arrow-back"></use>
           </svg>
-        </div>
+        </div> -->
       </div>
     </div>
     <footer class="fishing-type__price">
       <div class="fishing-type__price-text">
         Стоимость рыболовного тура продолжительностью 8 часов составляет <b>35 000 т.р.</b>
       </div>
-      <button class="fishing-type__price-book btn btn_arrow">
+      <button class="fishing-type__price-book btn btn_arrow" data-popup="#order">
         <span>ЗАБРОНИРОВАТЬ</span>
         <svg class="" height="36">
           <use xlink:href="./img/icons/icons.svg#arrow"></use>
@@ -324,10 +345,10 @@
   </div>
 </section>
 
-                <section class="contacts">
+                <section id="contacts" class="contacts">
   <div class="container">
     <div class="contacts__wrapper">
-      <div class="contacts__form contacts-form">
+      <div class="contacts__form contacts-form" data-aos="fade-right">
         <form class="contacts-form__form" action="">
           <h3 class="contacts-form__title section-title">Заявка</h3>
           <div class="contacts-form__input input-block">
@@ -343,7 +364,7 @@
             <select name="place" class="input-block__inp">
               <option value="Финском заливе">Рыбалка на Финском заливе</option>
               <option value="Выездная рыбалка">Выездная рыбалка</option>
-              <option value="обучение">обучение</option>
+              <option value="Обучение">Обучение</option>
             </select>
           </div>
           <button class="contacts-form__btn btn btn_arrow">
@@ -383,12 +404,15 @@
             </svg>
           </a>
         </div>
-        <div class="contacts__sertificates sertificate">
+        <div class="contacts__sertificates sertificates" data-aos="flip-up" data-aos-duration="1000"
+          data-popup="#gift_sert">
           <div class="sertificate">
-            <img src="img/sertificate.svg" alt="Подарочный сертификат на рыбалку">
+            <img src="img/sertificate.svg" class="lazy" data-src="img/sertificate.svg"
+              alt="Подарочный сертификат на рыбалку">
           </div>
           <div class="sertificate sertificate_2">
-            <img src="img/sertificate.svg" alt="Подарочный сертификат на рыбалку">
+            <img src="img/sertificate.svg" class="lazy" data-src="img/sertificate.svg"
+              alt="Подарочный сертификат на рыбалку">
           </div>
         </div>
       </div>
@@ -402,7 +426,7 @@
     <footer class="footer">
   <div class="container">
     <a href="" class="footer__logo">
-      <img src="img/logo.svg" alt="logo, your trophy">
+      <img src="img/logo.svg" class="lazy" data-src="img/logo.svg" alt="logo, your trophy">
     </a>
     <div class="footer__text">
       <p>© 2023</p>
@@ -413,6 +437,87 @@
 </footer>
 
     </div>
+    <script src="
+https://cdn.jsdelivr.net/npm/custom-select@1.1.15/build/custom-select.min.js
+"></script>
+<script src="./js/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+
+    <div class="popups">
+  <div class="popups__inner">
+    <div class="js-close-popup popup__close">
+      <img src="img/icons/close.png" alt="Закрыть">
+    </div>
+    <div id="order" class="popup">
+      <div class="popup__body">
+        <h3 class="popup__title section-title">Заявка</h3>
+        <form id="order_form" class="popup__form" action="">
+          <div class="popup__input input-block">
+            <input name="name" type="text" class="input-block__inp" placeholder="Ваше имя">
+          </div>
+          <div class="popup__input input-block">
+            <input name="phone" type="text" class="input-block__inp" placeholder="Номер телефона">
+          </div>
+          <div class="popup__input input-block">
+            <input name="date" type="text" class="input-block__inp" placeholder="Желаемые даты тура">
+          </div>
+          <div class="popup__input input-block">
+            <select name="place" class="input-block__inp">
+              <option value="Финском заливе">Рыбалка на Финском заливе</option>
+              <option value="Выездная рыбалка">Выездная рыбалка</option>
+              <option value="Обучение">Обучение</option>
+            </select>
+          </div>
+          <button class="popup__btn btn btn_arrow">
+            <span>отправить</span>
+            <svg class="" height="36">
+              <use xlink:href="./img/icons/icons.svg#arrow"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div id="gift_sert" class="popup popup-sert">
+
+      <div class="popup__body">
+        <div class="popup-sert__wrapper">
+          <div class="popup-sert__img">
+            <img src="img/sert_bg.png" alt="">
+          </div>
+          <div class="popup-sert__content">
+            <h3 class="popup__title section-title">Подарочный сертификат</h3>
+            <form id="order_form" class="popup-sert__form" action="">
+              <div class="popup__input input-block">
+                <input name="name" type="text" class="input-block__inp" placeholder="Ваше имя">
+              </div>
+              <div class="popup__input input-block">
+                <input name="phone" type="text" class="input-block__inp" placeholder="Номер телефона">
+              </div>
+              <div class="popup__input input-block">
+                <input name="date" type="text" class="input-block__inp" placeholder="Желаемые даты тура">
+              </div>
+              <div class="popup__input input-block">
+                <select name="place" class="input-block__inp">
+                  <option value="Финском заливе">Рыбалка на Финском заливе</option>
+                  <option value="Выездная рыбалка">Выездная рыбалка</option>
+                  <option value="Обучение">Обучение</option>
+                </select>
+              </div>
+              <button class="popup__btn btn btn_arrow">
+                <span>отправить</span>
+                <svg class="" height="36">
+                  <use xlink:href="./img/icons/icons.svg#arrow"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/fishing.js"></script>
