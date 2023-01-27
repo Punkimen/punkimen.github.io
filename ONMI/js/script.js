@@ -12,10 +12,16 @@ window.onload = function () {
 	}, 500);
 	const initPage = () => {
 		const animEls = document.querySelectorAll(".animate");
+		const delayElem = document.querySelectorAll("[data-delay]");
+		const durationElem = document.querySelectorAll("[data-duration]");
+
+		for (let elm of delayElem) {
+			setStyle(elm, elm.dataset);
+		}
+		for (let elm of durationElem) {
+			setStyle(elm, elm.dataset);
+		}
 		for (let elm of animEls) {
-			if (elm.dataset.delay || elm.dataset.duration) {
-				setStyle(elm, elm.dataset);
-			}
 			observerScroll.observe(elm);
 		}
 		scrollInit;
