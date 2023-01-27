@@ -583,8 +583,8 @@ h3.section-title {
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: 0;
-  height: 6vw;
+  bottom: -15px;
+  height: 100px;
   background: #fff;
   filter: blur(24px);
   z-index: 3;
@@ -1742,6 +1742,7 @@ h3.section-title {
   .hero-content::after {
     transform: translateY(37%);
     height: 100px;
+    bottom: 0;
   }
 
   .hero-content__descr {
