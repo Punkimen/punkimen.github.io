@@ -690,7 +690,7 @@ h3.section-title {
 }
 
 .about {
-  padding: 200px 0 100px;
+  padding: 50px 0 100px;
 }
 
 .about__title {
@@ -1582,6 +1582,10 @@ h3.section-title {
     font-size: 60px;
   }
 
+  .about {
+    padding-top: 100px;
+  }
+
   .about__gallery {
     padding: 65px 25px 0px;
   }
@@ -1765,6 +1769,10 @@ h3.section-title {
     transform: translateY(100%);
     z-index: 4;
     font-size: 20px;
+  }
+
+  .about {
+    padding-top: 200px;
   }
 
   .about__gallery {
@@ -2120,11 +2128,15 @@ h3.section-title {
     font-size: 16px;
   }
 
+  .burger {
+    top: 25px;
+  }
+
   .hero-content {
     background-image: url(../img/hero_img.png);
     background-size: cover;
     background-position: center center;
-    height: 310px;
+    height: 350px;
   }
 
   .hero-content .container {
@@ -2279,5 +2291,11 @@ h3.section-title {
 
   .popup-sert .popup__title {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 412px) {
+  .hero-content {
+    height: 310px;
   }
 }
