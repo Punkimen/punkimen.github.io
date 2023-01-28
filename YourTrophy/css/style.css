@@ -62,7 +62,7 @@ body.overlay::after {
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 9;
+  z-index: 19;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
@@ -539,7 +539,7 @@ h3.section-title {
   right: 0;
   height: 100vh;
   transition: all ease 0.3s;
-  z-index: 10;
+  z-index: 20;
   overflow: auto;
   transform: translateX(100%);
 }
@@ -690,7 +690,7 @@ h3.section-title {
 }
 
 .about {
-  padding: 50px 0 100px;
+  padding: 100px 0 100px;
 }
 
 .about__title {
@@ -1530,7 +1530,7 @@ h3.section-title {
     top: 0;
     left: 0;
     bottom: 0;
-    max-width: 500px;
+    max-width: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1539,7 +1539,8 @@ h3.section-title {
   }
 
   .hero-content__btn {
-    bottom: -50px;
+    margin: 0 auto;
+    bottom: 0;
   }
 
   .hero-content__img {
