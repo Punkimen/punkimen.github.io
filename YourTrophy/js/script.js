@@ -74,7 +74,9 @@ window.document.addEventListener("DOMContentLoaded", function () {
 					block: "start",
 				});
 			} else {
-				window.history.back();
+				// window.history.back();
+				const url = `${document.location.origin}/${id}`;
+				window.location.href = url;
 			}
 		});
 	}
@@ -118,5 +120,23 @@ window.document.addEventListener("DOMContentLoaded", function () {
 		if (e.target.className === "popups__inner") {
 			closePopup();
 		}
+	});
+
+	// mask
+	const phoneInp = document.querySelectorAll(`[name="phone"]`);
+	const dateInp = document.querySelectorAll(`[name="date"]`);
+
+	phoneInp.forEach((el) => {
+		const phoneMask = IMask(el, {
+			mask: "+{7}(000)000-00-00",
+		});
+	});
+	dateInp.forEach((el) => {
+		const dateMask = IMask(el, {
+			mask: Date,
+			min: new Date(2023, 0, 1),
+			max: new Date(2025, 0, 1),
+			// lazy: false,
+		});
 	});
 });

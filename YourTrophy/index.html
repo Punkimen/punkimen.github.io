@@ -76,27 +76,27 @@
   <div class="container">
     <div class="hero-content__wrapper">
       <div class="hero-content__descr">
-        <h1 class="hero-content__title" data-aos="fade-up">РЫБАЛКА МЕЧТЫ</h1>
-        <button class="hero-content__btn btn btn_arrow" data-aos="zoom-in" data-popup="#gift_sert">
-          <span>подарочный сертификат</span>
-          <svg width="86" height="36" class="">
-            <use xlink:href="./img/icons/icons.svg#arrow"></use>
-          </svg>
-        </button>
+        <div class="hero-content__inner">
+          <div>
+            <h1 class="hero-content__title hero-content__title_main" data-aos="fade-up">РЫБАЛКА МЕЧТЫ</h1>
+            <h1 class="hero-content__title hero-content__title_smaller" data-aos="fade-up">РЫБАЛКА С ГИДОМ</h1>
+          </div>
+          <div class="hero-content__text">
+            <p>Use your favourite decentralized apps & find new ones, without leaving your wallet. Use your favourite
+              decentralized apps & find new ones, without leaving your wallet.</p>
+          </div>
+          <button class="hero-content__btn btn btn_arrow" data-aos="zoom-in" data-popup="#gift_sert">
+            <span>подарочный сертификат</span>
+            <svg width="86" height="36" class="">
+              <use xlink:href="./img/icons/icons.svg#arrow"></use>
+            </svg>
+          </button>
+        </div>
       </div>
       <div class="hero-content__img">
         <img src="img/hero_img.png" class="lazy" data-src="img/hero_img.png" alt="Рыбалка, большая рыба">
       </div>
     </div>
-    <marquee scrollamount="15" loop="-1" class="hero-content__run-line" scrolldelay="0" direction="right ">
-      <div class="hero-content__run-content">
-        <span>Рыбалка на Финском заливе</span>
-        <span>Выездная рыбалка</span>
-        <span>Обучение</span>
-        <span>Сертификат</span>
-
-      </div>
-    </marquee>
   </div>
 
             </section>
@@ -351,10 +351,10 @@
         <form class="contacts-form__form" action="">
           <h3 class="contacts-form__title section-title">Заявка</h3>
           <div class="contacts-form__input input-block">
-            <input name="name" type="text" class="input-block__inp" placeholder="Ваше имя">
+            <input name="name" type="text" class="input-block__inp" placeholder="Ваше имя" required>
           </div>
           <div class="contacts-form__input input-block">
-            <input name="phone" type="text" class="input-block__inp" placeholder="Номер телефона">
+            <input name="phone" type="text" class="input-block__inp" placeholder="Номер телефона" value="+7" required>
           </div>
           <div class="contacts-form__input input-block">
             <input name="date" type="text" class="input-block__inp" placeholder="Желаемые даты тура">
@@ -376,13 +376,23 @@
       </div>
       <div class="contacts__info">
         <h2 class="contacts__title section-title">контакты</h2>
+        <div class="contacts__row">
+          <a href="tel:89657724933" class="contacts__row-link">
+            +7 (965) 772-49-33
+          </a>
+        </div>
+        <div class="contacts__row">
+          <a href="mailto:antonio.avdeev@gmail.com" class="contacts__row-link">
+            antonio.avdeev@gmail.com
+          </a>
+        </div>
         <div class="contacts__socials">
           <a href="https://instagram.com/antonio_avdeev?igshid=MWI4MTIyMDE=" target="_blank" class="contacts__social">
             <svg width="29" height="29">
               <use xlink:href="./img/icons/icons.svg#inst"></use>
             </svg>
           </a>
-          <a href="tel:879657724933" class="contacts__social">
+          <a href="tel:89657724933" class="contacts__social">
             <svg width="28" height="28">
               <use xlink:href="./img/icons/icons.svg#phone"></use>
             </svg>
@@ -451,10 +461,10 @@
         <h3 class="popup__title section-title">Заявка</h3>
         <form id="order_form" class="popup__form" action="">
           <div class="popup__input input-block">
-            <input name="name" type="text" class="input-block__inp" placeholder="Ваше имя">
+            <input name="name" type="text" class="input-block__inp" placeholder="Ваше имя" required>
           </div>
           <div class="popup__input input-block">
-            <input name="phone" type="text" class="input-block__inp" placeholder="Номер телефона">
+            <input name="phone" type="text" value="+7" class="input-block__inp" placeholder="Номер телефона" required>
           </div>
           <div class="popup__input input-block">
             <input name="date" type="text" class="input-block__inp" placeholder="Желаемые даты тура">
@@ -486,10 +496,11 @@
             <h3 class="popup__title section-title">Подарочный сертификат</h3>
             <form id="order_form" class="popup-sert__form" action="">
               <div class="popup__input input-block">
-                <input name="name" type="text" class="input-block__inp" placeholder="Ваше имя">
+                <input name="name" type="text" class="input-block__inp" placeholder="Ваше имя" required>
               </div>
               <div class="popup__input input-block">
-                <input name="phone" type="text" class="input-block__inp" placeholder="Номер телефона">
+                <input name="phone" value="+7" type="text" class="input-block__inp" placeholder="Номер телефона"
+                  required>
               </div>
               <div class="popup__input input-block">
                 <input name="date" type="text" class="input-block__inp" placeholder="Желаемые даты тура">
@@ -520,6 +531,7 @@
 https://cdn.jsdelivr.net/npm/custom-select@1.1.15/build/custom-select.min.js
 "></script>
 <script src="./js/aos.js"></script>
+<script src="https://unpkg.com/imask"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
