@@ -1358,6 +1358,81 @@ h3.section-title {
   text-decoration: underline;
 }
 
+.fixed-block {
+  position: fixed;
+  bottom: 10px;
+  z-index: 15;
+  pointer-events: none;
+  max-width: 1920px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 15px;
+}
+
+.fixed-block__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fixed-block__btn {
+  width: 4.17vw;
+  height: 4.17vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  cursor: pointer;
+  background: rgba(191, 246, 241, 0.6352941176);
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.6), 0px 10px 30px rgba(0, 0, 0, 0.08);
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+  border-radius: 50%;
+  padding: 0.78vw;
+  transition: all ease 0.5s;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.fixed-block__btn svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  transition: all ease 0.2s;
+}
+
+.fixed-block__btn:hover {
+  background: var(--color-main);
+}
+
+.fixed-block__btn:hover svg {
+  stroke: #fff;
+}
+
+.fixed-block__btn_top {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fixed-block__btn_top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fixed-block__btn_top svg {
+  stroke: #00E9BF;
+}
+
+.fixed-block__btn_phone svg {
+  fill: #00E9BF;
+}
+
+.fixed-block__btn_phone:hover svg {
+  fill: #fff;
+}
+
 .popups {
   display: none;
   position: fixed;
@@ -2085,6 +2160,10 @@ h3.section-title {
   .footer__text {
     font-size: 18px;
     line-height: 1.2;
+  }
+
+  .fixed-block__btn {
+    padding: 5px;
   }
 
   .popup__title {

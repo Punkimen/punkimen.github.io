@@ -139,4 +139,19 @@ window.document.addEventListener("DOMContentLoaded", function () {
 			// lazy: false,
 		});
 	});
+
+	const scrollTopBtn = document.querySelector(".top-scroll");
+	const scrollBtnDisplay = function () {
+		document.documentElement.scrollTop > window.innerHeight
+			? scrollTopBtn.classList.add("show")
+			: scrollTopBtn.classList.remove("show");
+	};
+	scrollTopBtn.addEventListener("click", (e) => {
+		e.preventDefault();
+		window.scrollTo({top: 0, behavior: "smooth"});
+	});
+	window.addEventListener("scroll", (e) => {
+		e.preventDefault();
+		scrollBtnDisplay();
+	});
 });
