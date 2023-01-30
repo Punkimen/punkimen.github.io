@@ -65,7 +65,7 @@ li {
 }
 
 .container {
-  padding: 0 40px 0 51px;
+  padding: 0 2.08vw 0 2.66vw;
   width: 100vw;
   margin: 0 auto;
   height: 100%;
@@ -140,6 +140,7 @@ li {
 
 .animate {
   transition: all ease 0.3s;
+  transition: font-size 0s;
 }
 
 .animate[data-effect=fade-top].element-show {
@@ -168,6 +169,22 @@ li {
 
 .animate[data-effect=swing-right].element-show {
   animation: swing-right 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+
+.animate[data-effect=rotate-x] {
+  display: block;
+  opacity: 0.4;
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateY(100%) rotateX(-80deg);
+  line-height: 1;
+  transition: opacity 0s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.animate[data-effect=rotate-x].element-show {
+  transform: none;
+  opacity: 1;
+  transition-duration: 2s;
 }
 
 .animate[data-effect=line] {
@@ -254,6 +271,17 @@ li {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes rotate-x {
+  0% {
+    transform: translateY(100%) rotateX(-80deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
   }
 }
 
@@ -471,7 +499,7 @@ li {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -484,6 +512,18 @@ li {
   z-index: 2;
   color: #ECECEC;
   text-transform: uppercase;
+  transition: opacity 0.1s;
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.header.element-show {
+  opacity: 1;
+}
+
+.header.hide {
+  transform: translateY(-100%);
+  transition: transform 0.8s cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 .header__wrapper {
@@ -493,17 +533,24 @@ li {
 }
 
 .header__left {
-  margin-right: 20px;
+  margin-right: 1.04vw;
   display: flex;
   align-items: flex-start;
 }
 
 .header__logo {
   margin-right: 3.7vw;
+  width: 5.21vw;
+}
+
+.header__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .header__text {
-  letter-spacing: 0.04rem;
+  letter-spacing: 0.04em;
 }
 
 .header__nav {
@@ -529,7 +576,7 @@ li {
 .header__link::after {
   content: "";
   left: 50%;
-  bottom: -3px;
+  bottom: -0.16vw;
   width: 100%;
   height: 1px;
   content: "";
@@ -593,14 +640,19 @@ li {
   position: relative;
   white-space: nowrap;
   font-size: 12.1vw;
-  letter-spacing: -0.5rem;
+  letter-spacing: -0.4vw;
   font-weight: 400;
+  line-height: 1;
 }
 
 .hero__title > span {
   background: linear-gradient(150deg, rgb(212, 201, 193) 0%, rgb(65, 67, 69) 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
+  position: relative;
+  left: -0.04em;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .fixed-btns {
@@ -638,14 +690,16 @@ li {
 .description-reality {
   position: relative;
   margin-top: -100vh;
+  padding-bottom: 100vh;
 }
 
 .description-reality__content {
   width: 100%;
   z-index: 2;
   height: 100vh;
-  position: relative;
+  position: sticky;
   z-index: 5;
+  top: 0;
 }
 
 .description-reality__inner {
@@ -685,8 +739,10 @@ li {
 }
 
 .adventure {
-  padding: 150px 0 150px;
+  padding: 7.81vw 0 7.81vw;
   position: relative;
+  margin-top: -100vh;
+  z-index: 5;
 }
 
 .adventure__content {
@@ -703,7 +759,7 @@ li {
   background: linear-gradient(150deg, rgb(212, 201, 193) 0%, rgb(65, 67, 69) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
 }
 
@@ -725,11 +781,10 @@ li {
 
 .adventure__text {
   text-transform: uppercase;
-  max-width: 200px;
-  right: -10px;
-  bottom: -72px;
+  max-width: 10.42vw;
+  right: -0.52vw;
+  bottom: -3.75vw;
   position: absolute;
-  font-size: 20px;
   line-height: 1.6;
 }
 
@@ -738,7 +793,7 @@ li {
 }
 
 .adventure__slider-phone {
-  max-width: 610px;
+  max-width: 31.77vw;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -748,15 +803,22 @@ li {
 }
 
 .adventure__phone-img {
+  width: 31.77vw;
   position: relative;
   z-index: 2;
 }
 
+.adventure__phone-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .adventure__phone {
-  max-width: 330px;
+  max-width: 17.19vw;
   width: 100%;
   position: absolute;
-  top: 17px;
+  top: 0.89vw;
   left: 50%;
   transform: translateX(-70%);
 }
@@ -790,7 +852,7 @@ li {
 
 .cards-slider__slide {
   background: #121214;
-  border-radius: 52px;
+  border-radius: 2.71vw;
   max-width: 20.21vw;
   width: 100%;
   min-height: 14.64vw;
@@ -827,11 +889,16 @@ li {
   border: 0.05vw solid #FFFFFF;
   background: none;
   opacity: 1;
-  border-radius: 38px;
+  border-radius: 1.98vw;
   max-width: 6.61vw;
   width: 100%;
   height: 3.91vw;
   z-index: 3;
+}
+
+.cards-slider__btn img {
+  width: 1.56vw;
+  height: 0.99vw;
 }
 
 .cards-slider__btn:hover {
@@ -840,7 +907,7 @@ li {
 }
 
 .cards-slider__btn_next {
-  transform: translateX(calc(100% + 10px));
+  transform: translateX(calc(100% + 0.52vw));
 }
 
 .cards-slider__btn_next img {
@@ -922,6 +989,6 @@ li {
     right: -1vw;
     font-size: 1vw;
     max-width: 11vw;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.04em;
   }
 }

@@ -17,9 +17,9 @@
 </head>
 
 <body>
-    <div data-scroll-container>
-        <div class="main-screen" data-scroll-section>
-            <header class="header animate">
+
+    <div class="main-screen">
+        <header class="header animate">
   <div class="container">
     <div class="header__wrapper">
       <div class="header__left">
@@ -80,53 +80,50 @@
   </div>
 </header>
 
-            <section class="hero">
+        <section class="hero">
   <div class="container">
     <div class="hero__wrapper">
-      <h1 class="hero__title animate" data-effect="line" data-duration="15" data-delay="15">
-        <span data-duration="2">Play with the world</span>
+      <h1 class="hero__title animate" data-effect="rotate-x">
+        Play with the world
       </h1>
     </div>
   </div>
 </section>
 
-        </div>
-        <section class="description-reality" data-scroll-section>
-  <div id="innerBg">
-    <div class="description-reality__content" data-scroll-target="#innerBg" data-scroll data-scroll-sticky
-      data-scroll-call="smoothShow">
-      <div class="container">
-        <div class="description-reality__inner">
-          <div class="description-reality__text">
-            <p class="text-animate">
-              By the middle of the century, 68% of the world's population will live in cities. The general obsession of
-              technology companies towards fully immersive metaverses seems premature to us.<p>
-                Our mission is to create a <span class="bordered-text">reality 2.0</span> layer over real cities, an
-                AR-universe that will expand
-                the boundaries
-                of reality and make it more functional and impressive.</p>
-              <p>©2022</p>
-            </p>
-          </div>
+    </div>
+    <section class="description-reality">
+  <div class="description-reality__content">
+    <div class="container">
+      <div class="description-reality__inner">
+        <div class="description-reality__text">
+          <p class="text-animate">
+            By the middle of the century, 68% of the world's population will live in cities. The general obsession of
+            technology companies towards fully immersive metaverses seems premature to us.<p>
+              Our mission is to create a <span class="bordered-text">reality 2.0</span> layer over real cities, an
+              AR-universe that will expand
+              the boundaries
+              of reality and make it more functional and impressive.</p>
+            <p>©2022</p>
+          </p>
         </div>
       </div>
     </div>
-    <div class="description-reality__gradient" data-scroll>
-      <img src="./img/reality_bg.png" alt="bg-gradient">
-    </div>
+  </div>
+  <div class="description-reality__gradient">
+    <img src="./img/reality_bg.png" alt="bg-gradient">
   </div>
 </section>
 
-        <section class="adventure" data-scroll-section>
+    <section class="adventure">
   <div class="container">
     <div class="adventure__content">
-      <h2 class="adventure__title animate animate-text" data-scroll data-scroll-speed="-1">
+      <h2 class="adventure__title parallax-elem" data-rellax-speed="-2" data-rellax-percentage="0.5">
         <div class="adventure__title-row adventure__title-row_1">START</div>
         <div class="adventure__title-row adventure__title-row_2">YOUR</div>
         <div class="adventure__title-row adventure__title-row_3">ADVENTURE</div>
       </h2>
 
-      <div class=" adventure__text" data-scroll data-scroll-speed="2">
+      <div class=" adventure__text parallax-elem" data-rellax-speed="2" data-rellax-percentage="0.5">
         Take four simple steps and start exploring the ONMI world
       </div>
     </div>
@@ -177,22 +174,23 @@
   </div>
 </section>
 
-    </div>
+
     <div class="fixed-btns">
         <div class="container">
             <div class="fixed-btns__wrapper">
                 <div class="fixed-btns__left">
-                    <a href="#" data-effect="fade-down" data-delay="1.2" class="fixed-btns__app btn btn_white animate">
+                    <a href="#" data-effect="fade-down" data-duration="1" data-delay="0.2"
+                        class="fixed-btns__app btn btn_white animate">
                         <span>App Store</span>
                     </a>
-                    <a href="#" data-effect="fade-down" data-duration="1.2" data-delay="1.2"
+                    <a href="#" data-effect="fade-down" data-duration="1.2" data-delay="0.2"
                         class="fixed-btns__app btn btn_white animate">
                         <span>Google Play</span>
                     </a>
                 </div>
                 <div class="fixed-btns__right">
-                    <a href="#" class="btn animate" data-effect="fade-down" data-duration="0.9" data-delay="1.4" style="position:relative;bottom: 9px;
-                    left: 6px;"><span>Book WL</span></a>
+                    <a href="#" class="btn animate" data-effect="fade-down" data-duration="0.9"
+                        data-delay="0.5"><span>Book WL</span></a>
                 </div>
             </div>
         </div>
@@ -206,7 +204,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/script.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+        integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.min.js" type="module"></script>
 </body>
 
 </html>
