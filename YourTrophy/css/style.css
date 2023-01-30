@@ -617,10 +617,11 @@ h3.section-title {
 }
 
 .hero-content__text {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: 1.04vw;
   max-width: 23.44vw;
   width: 100%;
+  font-style: italic;
 }
 
 .hero-content__btn {
@@ -1616,6 +1617,10 @@ h3.section-title {
     justify-content: center;
   }
 
+  .hero-content__text {
+    font-size: 16px;
+  }
+
   .hero-content__btn {
     font-size: 1.04vw;
   }
@@ -1803,7 +1808,6 @@ h3.section-title {
   }
 
   .hero-content__text {
-    font-size: 1.5vw;
     max-width: 27.44vw;
   }
 
