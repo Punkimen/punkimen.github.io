@@ -9,7 +9,7 @@ window.onload = function () {
 		use_native: true,
 	});
 	AOS.init({
-		offset: 20,
+		offset: 0,
 	});
 	lazyLoadInstance.update();
 };

@@ -181,6 +181,10 @@ li {
   transition: opacity 0s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+.animate[data-effect=rotate-x] span {
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
 .animate[data-effect=rotate-x].element-show {
   transform: none;
   opacity: 1;
