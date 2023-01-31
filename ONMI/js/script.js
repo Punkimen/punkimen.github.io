@@ -33,12 +33,17 @@ window.onload = function () {
 				slidesPerView: "auto",
 				spaceBetween: 10,
 				grabCursor: true,
-				speed: 1000,
+				speed: 600,
 				effect: "creative",
+				parallax: true,
+
 				creativeEffect: {
+					limitProgress: 2,
 					prev: {
 						shadow: true,
 						translate: [0, 0, -400],
+						scale: [0],
+						opacity: 0,
 					},
 					next: {
 						translate: ["calc(100% + 10px)", 0, 0],
@@ -50,9 +55,23 @@ window.onload = function () {
 					prevEl: ".swiper-button-prev",
 				},
 			};
-			const slide_1 = sliderInit(".adventure__phone");
-			const slide_2 = sliderInit(".cards-slider__slider", cardSliderOptions);
-			slide_2.controller.control = slide_1;
+			const slider_1 = sliderInit(".adventure__phone");
+			const slider_2 = sliderInit(".cards-slider__slider", cardSliderOptions);
+			slider_2.controller.control = slider_1;
+			console.log(slider_2);
+			const sliderPrety = () => {
+				const arrSliders = slider_2.slides;
+				const lastEl = arrSliders[arrSliders.length - 1];
+				if (slider_2.activeIndex === arrSliders.length - 1) {
+					lastEl.style.right = "4vw";
+				} else {
+					lastEl.style.right = "0vw";
+				}
+			};
+
+			slider_2.on("slideChange", function () {
+				sliderPrety();
+			});
 		}
 
 		const text = document.querySelectorAll(".animate-letters");

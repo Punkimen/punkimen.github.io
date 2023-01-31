@@ -1554,7 +1554,8 @@ h3.section-title {
   margin-right: 10px;
 }
 
-[data-popup] {
+[data-popup],
+[data-fancybox=gallery] {
   cursor: pointer;
 }
 

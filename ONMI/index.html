@@ -26,19 +26,10 @@
         <a href="#" class="header__logo animate" data-effect="line">
           <img src="img/logo.svg" alt="logo" data-delay=".1">
         </a>
-        <div class="header__text">
-          <p class="animate" data-effect="line">
-            <span data-delay=".2">The first Reality 2.0 game in
-              which you pick up</span>
-          </p>
-          <p class="animate" data-effect="line" data-delay="1">
-            <span data-delay=".4">tokens and hunt for
-              high-priced NFTs</span>
-          </p>
-          <p class="animate" data-effect="line">
-            <span data-delay=".6">anywhere on Earth</span>
-          </p>
-        </div>
+        <a href="#" class="header__lang animate" data-effect="line">
+          <span data-delay="0.2">E</span>
+          <span data-delay="0.3">N</span>
+        </a>
       </div>
       <nav class="header__nav">
         <ul class="header__list">
@@ -48,7 +39,8 @@
             </a>
           </li>
           <li class="header__list-elem">
-            <a href="#" class="header__link animate header__link_narrow" data-effect="line">
+            <a href="#" class="header__link animate header__link_narrow" data-effect="line" style="position: relative;
+            left: 1.05vw;">
               <span data-delay="0.4">
                 White Paper
               </span>
@@ -71,8 +63,8 @@
           <span data-delay="1">Roadmap</span>
         </a>
         <div class="header__dropdow dropdown animate" data-effect="line">
-          <div class="dropdown__header">
-            <span data-delay="1.2">More</span>
+          <div class="dropdown__header" data-delay="1.2">
+            <span>More</span>
           </div>
         </div>
       </div>
@@ -83,8 +75,21 @@
         <section class="hero">
   <div class="container">
     <div class="hero__wrapper">
-      <div class="hero__title animate" data-effect="rotate-x">
+      <h1 class="hero__title animate title-animate">
         <span>Play with the world</span>
+      </h1>
+      <div class="hero__text">
+        <p class="animate" data-effect="line">
+          <span data-delay=".2">The first Reality 2.0 game in
+            which you pick up</span>
+        </p>
+        <p class="animate" data-effect="line" data-delay="1">
+          <span data-delay=".4">tokens and hunt for
+            high-priced NFTs</span>
+        </p>
+        <p class="animate" data-effect="line">
+          <span data-delay=".6">anywhere on Earth</span>
+        </p>
       </div>
     </div>
   </div>
@@ -117,13 +122,19 @@
     <section class="adventure">
   <div class="container">
     <div class="adventure__content">
-      <h2 class="adventure__title parallax-elem" data-rellax-speed="-4" data-rellax-percentage="0.5">
-        <div class="adventure__title-row adventure__title-row_1">START</div>
-        <div class="adventure__title-row adventure__title-row_2">YOUR</div>
-        <div class="adventure__title-row adventure__title-row_3">ADVENTURE</div>
+      <h2 class="adventure__title parallax-elem" data-rellax-speed="-1" data-rellax-percentage="0.5">
+        <div class="adventure__title-row adventure__title-row_1 animate title-animate" data-delay="">
+          <span>START</span>
+        </div>
+        <div class="adventure__title-row adventure__title-row_2 animate title-animate" data-delay="0.2">
+          <span>YOUR</span>
+        </div>
+        <div class="adventure__title-row adventure__title-row_3 animate title-animate" data-delay="0.3">
+          <span>ADVENTURE</span>
+        </div>
       </h2>
 
-      <div class=" adventure__text parallax-elem" data-rellax-speed="2" data-rellax-percentage="0.5">
+      <div class=" adventure__text parallax-elem" data-rellax-speed="0" data-rellax-percentage="0.5">
         Take four simple steps and start exploring the ONMI world
       </div>
     </div>
@@ -179,18 +190,18 @@
         <div class="container">
             <div class="fixed-btns__wrapper">
                 <div class="fixed-btns__left">
-                    <a href="#" data-effect="fade-down" data-duration="1" data-delay="0.2"
-                        class="fixed-btns__app btn btn_white animate">
-                        <span>App Store</span>
+                    <a href="#" data-effect="opacity" data-duration="2" data-delay="0.2"
+                        class="fixed-btns__app btn btn_app animate">
+                        <img src="img/googlePlay.svg" alt="Google Play">
                     </a>
-                    <a href="#" data-effect="fade-down" data-duration="1.2" data-delay="0.2"
-                        class="fixed-btns__app btn btn_white animate">
-                        <span>Google Play</span>
+                    <a href="#" data-effect="opacity" data-duration="2.2" data-delay="0.2"
+                        class="fixed-btns__app btn btn_app animate">
+                        <img src="img/AppStore.svg" alt="App Store">
                     </a>
                 </div>
                 <div class="fixed-btns__right">
-                    <a href="#" class="btn animate" data-effect="fade-down" data-duration="0.9"
-                        data-delay="0.5"><span>Book WL</span></a>
+                    <a href="#" class="btn animate" data-effect="opacity" data-duration="2" data-delay="0.4"><span>Book
+                            WL</span></a>
                 </div>
             </div>
         </div>
