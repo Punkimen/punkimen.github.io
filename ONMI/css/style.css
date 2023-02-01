@@ -65,12 +65,12 @@
   position: relative;
 }
 
-.animate[data-effect=line] > * {
+.animate[data-effect=line]>* {
   position: relative;
   display: block;
 }
 
-.animate[data-effect=line].element-show > * {
+.animate[data-effect=line].element-show>* {
   animation: line-top 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -520,6 +520,10 @@ li {
   box-shadow: inset 0px 0px 20px -1px rgba(0, 0, 0, 0.75);
 }
 
+.btn_app img {
+  transition: all ease .2s;
+}
+
 .btn_app:hover img {
   transform: scale(0.9);
 }
@@ -688,7 +692,7 @@ li {
   margin-bottom: 2.92vw;
 }
 
-.hero__title > span {
+.hero__title>span {
   background: linear-gradient(150deg, rgb(212, 201, 193) 0%, rgb(65, 67, 69) 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -1019,7 +1023,9 @@ li {
 }
 
 @keyframes preloader-bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(0);
   }
 
