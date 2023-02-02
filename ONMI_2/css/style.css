@@ -130,6 +130,16 @@
   animation: line-top 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
+@keyframes slide-top {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
 .letter {
   opacity: 0;
 }
@@ -140,7 +150,7 @@
 
 .title-line {
   display: block;
-  transition: transform ease-in-out 1s;
+  transition: transform cubic-bezier(0.23, 0.32, 1) 1s;
   height: -moz-fit-content;
   height: fit-content;
   overflow: hidden;
@@ -154,13 +164,12 @@
 
 .title-line .word {
   position: relative;
-  opacity: 0;
   transition: opacity ease-in 1.7s;
 }
 
 .title-line .word.showWord {
   transform-origin: center;
-  animation: spanUp 1s cubic-bezier(0.16, 0.01, 0.77, 1) forwards;
+  animation: spanUp 1s cubic-bezier(0.56, 0.15, 0.41, 0.87) forwards;
 }
 
 @keyframes spanUp {
