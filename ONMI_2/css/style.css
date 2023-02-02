@@ -30,10 +30,19 @@
 
 .animate[data-effect=fade-down-2] {
   opacity: 0;
+  transition: opacity ease-in-out 0.2s;
 }
 
 .animate[data-effect=fade-down-2].element-show {
   animation: fade-down-2 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.animate[data-effect=fade-down-3] {
+  opacity: 0;
+}
+
+.animate[data-effect=fade-down-3].element-show {
+  animation: fade-down-3 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .animate[data-effect=fade-in] {
@@ -192,6 +201,17 @@
   0% {
     transform: translateY(50px) rotate(3deg);
     opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-down-3 {
+  0% {
+    transform: translateY(100%) rotate(0deg);
   }
 
   100% {
