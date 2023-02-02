@@ -60,6 +60,19 @@
   animation: swing-right 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
+.animate[data-effect=fade-rotate] {
+  display: block;
+  opacity: 0;
+  transform: translateY(40px) rotateX(-45deg);
+  transition: opacity 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-delay: 0.2s;
+}
+
+.animate[data-effect=fade-rotate].element-show {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+
 .animate[data-effect=rotate-x] {
   display: block;
   opacity: 0;
@@ -127,30 +140,45 @@
 
 .title-line {
   display: block;
-  transition: transform ease-in 1s;
+  transition: transform ease-in-out 1s;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  height: fit-content;
+  transform-origin: top left;
+  transform: rotate(5deg);
 }
 
 .title-line.animated {
   transform: none;
+  transform: rotate(0deg);
 }
 
 .title-line * {
   display: inline-block;
-  opacity: 1;
   transition: all ease 1s;
 }
 
 .title-line .word {
   position: relative;
-}
-
-.title-line .letter {
   opacity: 0;
 }
 
-.title-line .letter.showLetter {
+.title-line .word.showWord {
   transform-origin: center;
-  animation: fade-down-2 0.8s ease-in-out both;
+  animation: spanUp 1s cubic-bezier(0.16, 0.01, 0.77, 1) forwards;
+}
+
+@keyframes spanUp {
+  0% {
+    transform: translateY(50%) skewX(-25deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px) skewX(0deg);
+    opacity: 1;
+  }
 }
 
 @keyframes fade-down-2 {
@@ -738,13 +766,10 @@ li {
   font-weight: 400;
   overflow: visible;
   margin-bottom: 2.92vw;
-}
-
-.hero__title > span {
-  position: relative;
   left: -0.067em;
   width: -moz-fit-content;
   width: fit-content;
+  position: relative;
 }
 
 .hero__text {
