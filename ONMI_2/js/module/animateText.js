@@ -13,9 +13,6 @@ export const animateWord = (el) => {
 export const animateLetters = (el) => {
 	const letters = el.querySelectorAll(".letter");
 	letters.forEach((letter, ind) => {
-		console.log(ind);
-		letter.classList.add("showLetter");
-		letter.style.animationDelay = `${ind * 100}ms`;
-		// setTimeout(() => letter.classList.add("showLetter"), ind * 100);
+		setTimeout(() => letter.classList.add("showLetter"), ind * 100);
 	});
 };

@@ -63,7 +63,7 @@ window.onload = function () {
 				const arrSliders = slider_2.slides;
 				const lastEl = arrSliders[arrSliders.length - 1];
 				if (slider_2.activeIndex === arrSliders.length - 1) {
-					lastEl.style.right = "9.7vw";
+					lastEl.style.right = "10vw";
 					lastEl.style.transotionDuration = "600ms";
 				} else {
 					lastEl.style.right = "0vw";
@@ -83,11 +83,6 @@ window.onload = function () {
 
 		const textWord = document.querySelectorAll(".animate-text");
 		textWord.forEach((el) => {
-			splitText(el);
-		});
-
-		const titles = document.querySelectorAll(".title-line");
-		titles.forEach((el) => {
 			splitText(el);
 		});
 		sectionHeightInit();

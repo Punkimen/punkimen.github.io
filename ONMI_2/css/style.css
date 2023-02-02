@@ -12,36 +12,15 @@
 }
 
 .animate[data-effect=opacity].element-show {
-  animation: opacity-in 0.6s ease-in-out both;
+  animation: opacity-in 0.6s cubic-bezier(0.64, 0.46, 0.45, 0.25) both;
 }
 
 .animate[data-effect=forwad-slide].element-show {
   animation: forwad-slide 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.animate[data-effect=fade-down] {
-  opacity: 0;
-  transform: rotate(3deg);
-}
-
 .animate[data-effect=fade-down].element-show {
   animation: fade-down 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-.animate[data-effect=fade-down-2] {
-  opacity: 0;
-}
-
-.animate[data-effect=fade-down-2].element-show {
-  animation: fade-down-2 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-.animate[data-effect=fade-in] {
-  opacity: 0;
-}
-
-.animate[data-effect=fade-in].element-show {
-  animation: fade-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .animate[data-effect=bounce-top].element-show {
@@ -96,6 +75,38 @@
   animation: line-top 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+.title-animate {
+  display: block;
+  line-height: 1;
+  transform-origin: top;
+  transition: opacity 0s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all ease 1.2s;
+  opacity: 0;
+  transform-origin: top;
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(82deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(100%) translateZ(0px) skewX(10deg) skewY(0deg);
+  opacity: 0;
+}
+
+.title-animate.element-show {
+  transform-origin: top;
+  transform: none;
+  opacity: 1;
+}
+
+@keyframes test {
+  0% {
+    transform-origin: top;
+    transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(82deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(80%) translateZ(0px) skewX(10deg) skewY(0deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform-origin: top;
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .animate-text {
   opacity: 1;
   display: block;
@@ -123,46 +134,6 @@
 
 .letter.showLetter {
   animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-.title-line {
-  display: block;
-  transition: transform ease-in 1s;
-}
-
-.title-line.animated {
-  transform: none;
-}
-
-.title-line * {
-  display: inline-block;
-  opacity: 1;
-  transition: all ease 1s;
-}
-
-.title-line .word {
-  position: relative;
-}
-
-.title-line .letter {
-  opacity: 0;
-}
-
-.title-line .letter.showLetter {
-  transform-origin: center;
-  animation: fade-down-2 0.8s ease-in-out both;
-}
-
-@keyframes fade-down-2 {
-  0% {
-    transform: translateY(50px) rotate(3deg);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0px) rotate(0deg);
-    opacity: 1;
-  }
 }
 
 @keyframes tracking-in-expand-fwd-bottom {
@@ -579,6 +550,10 @@ li {
   display: inline-block;
 }
 
+.animate-letters * {
+  display: inline-block;
+}
+
 .main-screen {
   position: relative;
   min-height: 100vh;
@@ -741,6 +716,9 @@ li {
 }
 
 .hero__title > span {
+  background: linear-gradient(150deg, rgb(212, 201, 193) 0%, rgb(65, 67, 69) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
   position: relative;
   left: -0.067em;
   width: -moz-fit-content;
@@ -861,7 +839,13 @@ li {
   text-transform: uppercase;
 }
 
-.adventure__title > * {
+.adventure__title span {
+  background: linear-gradient(150deg, rgb(212, 201, 193) 0%, rgb(65, 67, 69) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.adventure__title * {
   min-width: 100%;
 }
 
