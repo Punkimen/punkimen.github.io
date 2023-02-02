@@ -109,6 +109,10 @@
   animation: line-top 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+[data-effect=slide-top].element-show {
+  animation: slide-top 0.8s cubic-bezier(0.52, 0.01, 0.39, 0.78) both;
+}
+
 .animate-text {
   opacity: 1;
   display: block;
@@ -132,11 +136,11 @@
 
 @keyframes slide-top {
   0% {
-    transform: translateY(0%);
+    transform: translateY(100%);
   }
 
   100% {
-    transform: translateY(-100%);
+    transform: translateY(0);
   }
 }
 
