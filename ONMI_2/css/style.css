@@ -853,9 +853,6 @@ li {
   position: relative;
   margin-left: -5px;
   padding-right: 5px;
-  background: linear-gradient(150deg, rgb(212, 201, 193) 0%, rgb(65, 67, 69) 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
 }
 
 .hero__text {
