@@ -75,8 +75,8 @@
         <section class="hero">
   <div class="container">
     <div class="hero__wrapper">
-      <h1 class="hero__title animate" data-delay="1.6" data-duration="2" data-effect="slide-top" /**/
-        style="perspective: 600px;"> <span class="animate flip" data-effect="flipInX">Play with the world</span>
+      <h1 class="hero__title animate" data-delay="1.6" data-duration="2" data-effect="slide-top">
+        <span class="animate " data-effect='flip'>Play with the world</span>
       </h1>
       <div class="hero__text animate" data-delay="2.4" data-duration="3" data-effect="fade-down-3">
         <p class="animate" data-effect="line">
@@ -122,20 +122,20 @@
     <section class="adventure">
   <div class="container">
     <div class="adventure__content">
-      <h2 class="adventure__title parallax-elem " data-rellax-speed="-1" data-rellax-percentage="0.5">
-        <div class="adventure__title-row adventure__title-row_1">
-          <span class="animate" data-effect="fade-rotate">START</span>
+      <h2 class="adventure__title">
+        <div class="adventure__title-row adventure__title-row_1 ">
+          <span class="animate flip">START</span>
         </div>
-        <div class="adventure__title-row adventure__title-row_2">
-          <span class="animate" data-effect="fade-rotate">YOUR</span>
+        <div class="adventure__title-row adventure__title-row_2 ">
+          <span class="animate flip">YOUR</span>
         </div>
-        <div class="adventure__title-row adventure__title-row_3 ">
-          <span class="animate" data-effect="fade-rotate">ADVENTURE</span>
+        <div class="adventure__title-row adventure__title-row_3">
+          <span class="animate flip">ADVENTURE</span>
         </div>
       </h2>
 
       <div class=" adventure__text parallax-elem " data-rellax-speed="2" data-rellax-percentage="0.5">
-        <div class="animate" data-effect="fade-down-2" data-duration="1.6">
+        <div class="animate" data-effect="fade-down-2" data-duration="1.5" data-delay="0.2">
           Take four simple steps and start exploring the ONMI world
         </div>
       </div>
@@ -143,13 +143,14 @@
   </div>
   <div class="adventure__slider">
     <div class="adventure__slider-phone">
-      <div class="adventure__phone-img  animate" data-effect="fade-in" data-duration="0.8">
+      <div class="adventure__phone-img  animate" data-effect="fade-in" data-delay="0.3">
         <img src="./img/phone_hand.png" alt="Телефон в руке" />
       </div>
-      <div class="adventure__phone swiper animate" data-effect="opacity" data-duration="1">
+      <div class="adventure__phone swiper animate" data-effect="opacity" data-delay="0.3">
         <div class="swiper-wrapper">
           <div class="adventure__phone-slide swiper-slide">
-            <img src="./img/slider_phone/screen_1.png" class="animate" data-effect="on-screen" alt="s-type slide">
+            <img src="./img/slider_phone/screen_1.png" class="animate" data-effect="opacity" data-delay="0.4"
+              alt="s-type slide">
           </div>
           <div class="adventure__phone-slide swiper-slide">
             <img src="./img/slider_phone/screen_2.jpg" alt="s-type slide">
@@ -157,10 +158,16 @@
           <div class="adventure__phone-slide swiper-slide">
             <img src="./img/slider_phone/screen_1.png" alt="s-type slide">
           </div>
+          <div class="adventure__phone-slide swiper-slide">
+            <img src="./img/slider_phone/screen_1.png" alt="s-type slide">
+          </div>
+          <div class="adventure__phone-slide swiper-slide">
+            <img src="./img/slider_phone/screen_2.jpg" alt="s-type slide">
+          </div>
         </div>
       </div>
     </div>
-    <div class="adventure__slider-cards cards-slider animate" data-effect="opacity" data-duration="1">
+    <div class="adventure__slider-cards cards-slider animate" data-effect="opacity" data-delay="0.2" data-duration="1">
       <div class="cards-slider__slider swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide cards-slider__slide">
@@ -175,12 +182,20 @@
             <div class="cards-slider__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
             <div class="cards-slider__num">03</div>
           </div>
+          <div class="swiper-slide cards-slider__slide">
+            <div class="cards-slider__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            <div class="cards-slider__num">04</div>
+          </div>
+          <div class="swiper-slide cards-slider__slide">
+            <div class="cards-slider__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            <div class="cards-slider__num">05</div>
+          </div>
         </div>
-        <div class="cards-slider__btn swiper-button-prev animate" data-effect="opacity" data-duration="0.6">
+        <div class="cards-slider__btn swiper-button-prev animate" data-effect="opacity" data-delay="0.2">
           <img src="img/icons/arrow_slider.svg" alt="arrow prev">
         </div>
         <div class="cards-slider__btn cards-slider__btn_next swiper-button-next animate" data-effect="opacity"
-          data-duration="0.8">
+          data-delay="0.3">
           <img src="img/icons/arrow_slider.svg" alt="arrow next">
         </div>
       </div>
@@ -199,7 +214,7 @@
                     </a>
                     <a href="#" data-effect="opacity" data-duration="1.2" data-delay="2.7"
                         class="fixed-btns__app btn btn_app animate">
-                        <img src="img/AppStore.svg" alt="App Store">
+                        <img class="AppStore" src="img/AppStore.svg" alt="App Store">
                     </a>
                 </div>
                 <div class="fixed-btns__right">
@@ -209,7 +224,6 @@
             </div>
         </div>
     </div>
-    
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
