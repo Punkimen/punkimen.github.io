@@ -118,8 +118,19 @@
   animation: line-top 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-[data-effect=slide-top].element-show {
-  animation: slide-top 0.8s cubic-bezier(0.69, 0, 0.29, 1) both;
+[data-effect=slide-top-absolute].element-show {
+  animation: slide-top-absolute 0.8s cubic-bezier(0.69, 0, 0.29, 1) both;
+}
+
+@keyframes slide-top-absolute {
+  0% {
+    top: calc(50% - 7.5vw);
+  }
+
+  100% {
+    top: 0;
+    position: relative;
+  }
 }
 
 .animate-text {
@@ -724,7 +735,7 @@ li {
 }
 
 .header__logo {
-  margin-right: 3.7vw;
+  margin-right: 2.1vw;
   width: 5.21vw;
 }
 
@@ -812,7 +823,7 @@ li {
 .hero {
   height: 100vh;
   position: relative;
-  padding: 4.3vw 0 10vw;
+  padding: 4.3vw 0 4.3vw;
 }
 
 .hero__wrapper {
@@ -834,6 +845,17 @@ li {
   width: fit-content;
   position: relative;
   perspective: 600px;
+  position: absolute;
+  top: calc(50% - 7.5vw);
+}
+
+.hero__title > span {
+  position: relative;
+  margin-left: -5px;
+  padding-right: 5px;
+  background: linear-gradient(150deg, rgb(212, 201, 193) 0%, rgb(65, 67, 69) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 .hero__text {
