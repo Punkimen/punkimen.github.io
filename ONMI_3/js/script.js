@@ -8,11 +8,11 @@ import {parallaxInit} from "./module/parallax.js";
 import {setHeader} from "./module/setHeader.js";
 
 window.onload = function () {
-	// document.body.classList.add("loaded_hiding");
-	// window.setTimeout(function () {
-	// 	document.body.classList.add("loaded");
-	// 	document.body.classList.remove("loaded_hiding");
-	// }, 0);
+	document.body.classList.add("loaded_hiding");
+	window.setTimeout(function () {
+		document.body.classList.add("loaded");
+		document.body.classList.remove("loaded_hiding");
+	}, 0);
 	const initPage = () => {
 		const animEls = document.querySelectorAll(".animate");
 		const delayElem = document.querySelectorAll("[data-delay]");
@@ -83,6 +83,11 @@ window.onload = function () {
 
 		const textWord = document.querySelectorAll(".animate-text");
 		textWord.forEach((el) => {
+			splitText(el);
+		});
+
+		const titles = document.querySelectorAll(".title-line");
+		titles.forEach((el) => {
 			splitText(el);
 		});
 		sectionHeightInit();
