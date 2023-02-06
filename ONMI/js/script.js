@@ -5,14 +5,9 @@ import {splitText} from "./module/splitText.js";
 import {setStyle} from "./module/setStyle.js";
 import {sectionHeightInit} from "./module/sectionHeightInit.js";
 import {parallaxInit} from "./module/parallax.js";
-import {setHeader} from "./module/setHeader.js";
+import {calcScore} from "./module/calcScore.js";
 
 window.onload = function () {
-	document.body.classList.add("loaded_hiding");
-	window.setTimeout(function () {
-		document.body.classList.add("loaded");
-		document.body.classList.remove("loaded_hiding");
-	}, 0);
 	const initPage = () => {
 		const animEls = document.querySelectorAll(".animate");
 		const delayElem = document.querySelectorAll("[data-delay]");
@@ -70,10 +65,48 @@ window.onload = function () {
 					lastEl.style.transotionDuration = "600ms";
 				}
 			};
-
 			slider_2.on("slideChange", function () {
 				sliderPrety();
 			});
+
+			// OMI slider
+
+			const omiSliderOption = {
+				slidesPerView: 5,
+				centeredSlides: true,
+				loop: true,
+				allowTouchMove: false,
+
+				navigation: {
+					nextEl: ".create-omi__btn_next",
+					prevEl: ".create-omi__btn",
+				},
+			};
+			const omiSlider = sliderInit(".create-omi__slider", omiSliderOption);
+			const omiOpacitySlides = () => {
+				const arrSliders = omiSlider.slides;
+				const activeIndex = omiSlider.activeIndex;
+				const activeSlide = arrSliders[activeIndex];
+				activeSlide.style.opacity = 1;
+				const siblingsSlides = (count) => {
+					let arr = [];
+					arr.push(arrSliders[activeIndex - count]);
+					arr.push(arrSliders[activeIndex + count]);
+					return arr;
+				};
+				const first = siblingsSlides(1);
+				const second = siblingsSlides(2);
+				first.forEach((el) => {
+					el.style.opacity = 0.3;
+				});
+				second.forEach((el) => {
+					el.style.opacity = 0.15;
+				});
+			};
+			omiSlider.on("slideChange", function () {
+				omiOpacitySlides();
+			});
+			omiOpacitySlides();
 		}
 
 		const text = document.querySelectorAll(".animate-letters");
@@ -92,22 +125,16 @@ window.onload = function () {
 		});
 		sectionHeightInit();
 		parallaxInit();
+
+		// score
+		const handle = document.querySelector(".omi-card__handle");
+		handle.addEventListener("click", (e) => {
+			const target = e.target;
+			if (target.classList.contains("omi-card__point-btn")) {
+				console.log(target);
+				calcScore();
+			}
+		});
 	};
 	initPage();
-	let lastScrollTop = 0;
-	window.addEventListener(
-		"scroll",
-		function () {
-			let st = window.pageYOffset || document.documentElement.scrollTop;
-			if (st > lastScrollTop && lastScrollTop > window.innerHeight) {
-				// downscroll code
-				setHeader(true);
-			} else if (st < lastScrollTop) {
-				// upscroll code
-				setHeader(false);
-			}
-			lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-		},
-		false
-	);
 };
