@@ -256,7 +256,7 @@
         </div>
         <div class="create-omi__card omi-card omi-card_points animate" data-effect="fade-down" data-delay="0.2">
           <div id="unallocated-points" class="omi-card__unallocated-points">
-            <span class="unallocated-points__value">+2,1</span>
+            <span id="score" class="unallocated-points__value">+2,1</span>
           </div>
           <h4 class="omi-card__title">Upgrade OMI points</h4>
           <div class="omi-card__text">
@@ -271,9 +271,9 @@
                 <div class="omi-card__label-text">Power</div>
               </div>
               <div class="omi-card__point">
-                <div class="omi-card__point-btn">-</div>
-                <div class="omi-card__point-value">12.0</div>
-                <div class="omi-card__point-btn">+</div>
+                <div class="omi-card__point-btn btn-minus" data-stat="power">-</div>
+                <div id="power" class="omi-card__point-value">12.0</div>
+                <div class="omi-card__point-btn btn-plus" data-stat="power">+</div>
               </div>
             </div>
             <div class="omi-card__row">
@@ -284,9 +284,9 @@
                 <div class="omi-card__label-text">Energy</div>
               </div>
               <div class="omi-card__point">
-                <div class="omi-card__point-btn">-</div>
-                <div class="omi-card__point-value">12.0</div>
-                <div class="omi-card__point-btn">+</div>
+                <div class="omi-card__point-btn btn-minus" data-stat="energy">-</div>
+                <div id="energy" class="omi-card__point-value">12.0</div>
+                <div class="omi-card__point-btn btn-plus" data-stat="energy">+</div>
               </div>
             </div>
             <div class="omi-card__row">
@@ -297,13 +297,13 @@
                 <div class="omi-card__label-text">Luck</div>
               </div>
               <div class="omi-card__point">
-                <div class="omi-card__point-btn">-</div>
-                <div class="omi-card__point-value">12.0</div>
-                <div class="omi-card__point-btn">+</div>
+                <div class="omi-card__point-btn btn-minus" data-stat="luck">-</div>
+                <div id="luck" class="omi-card__point-value">12.0</div>
+                <div class="omi-card__point-btn btn-plus" data-stat="luck">+</div>
               </div>
             </div>
             <div class="omi-card__total">
-              <div class="omi-card__total-value">$56</div>
+              <div id="summ" class="omi-card__total-value">$56</div>
               <div class="omi-card__total-descr">Your Daily Earn</div>
             </div>
           </div>
@@ -345,7 +345,7 @@
         integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="js/script.min.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
 </body>
 
 </html>

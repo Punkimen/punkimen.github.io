@@ -1334,6 +1334,7 @@ li {
   line-height: 1em;
   font-weight: 200;
   margin: 0 0.89vw;
+  min-width: 3.65vw;
 }
 
 .omi-card__total {

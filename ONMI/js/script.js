@@ -7,6 +7,7 @@ import {sectionHeightInit} from "./module/sectionHeightInit.js";
 import {parallaxInit} from "./module/parallax.js";
 // import {calcScore} from "./module/calcScore.js";
 import {scalingPositive} from "./module/GSAPAnim.js";
+import {CalcStats} from "./module/calcScore.js";
 
 window.onload = function () {
 	const initPage = () => {
@@ -131,19 +132,28 @@ window.onload = function () {
 		const handle = document.querySelector(".omi-card__handle");
 		const pointsAnim = document.querySelector("#unallocated-points");
 		let count = 1;
+
+		const stats = new CalcStats(12.0, 10.0, 23.4, 2.1, 2.1, 56);
+		stats.render();
+		console.log(stats.setStat());
+
 		handle.addEventListener("click", async (e) => {
 			const target = e.target;
-			if (target.classList.contains("omi-card__point-btn")) {
+			const btn = target.closest(".omi-card__point-btn");
+
+			if (btn) {
 				const animBlock = document.createElement("span");
 				animBlock.className = "scalingBlock";
 				animBlock.setAttribute("data-id", count);
 				pointsAnim.append(animBlock);
-				console.log(target);
-				target.classList.add("disabled");
 				await scalingPositive(".scalingBlock");
-				await target.classList.remove("disabled");
 				animBlock.remove();
-				// await count++;
+				const statName = btn.getAttribute("data-stat");
+				if (target.classList.contains("btn-plus")) {
+					stats.statPlus(statName);
+				} else if (target.classList.contains("btn-minus")) {
+					stats.statMinus(statName);
+				}
 			}
 		});
 	};
