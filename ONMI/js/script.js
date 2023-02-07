@@ -5,7 +5,8 @@ import {splitText} from "./module/splitText.js";
 import {setStyle} from "./module/setStyle.js";
 import {sectionHeightInit} from "./module/sectionHeightInit.js";
 import {parallaxInit} from "./module/parallax.js";
-import {calcScore} from "./module/calcScore.js";
+// import {calcScore} from "./module/calcScore.js";
+import {scalingPositive} from "./module/GSAPAnim.js";
 
 window.onload = function () {
 	const initPage = () => {
@@ -128,11 +129,13 @@ window.onload = function () {
 
 		// score
 		const handle = document.querySelector(".omi-card__handle");
-		handle.addEventListener("click", (e) => {
+		handle.addEventListener("click", async (e) => {
 			const target = e.target;
 			if (target.classList.contains("omi-card__point-btn")) {
 				console.log(target);
-				calcScore();
+				target.classList.add("disabled");
+				await scalingPositive("#unallocated-points");
+				await target.classList.remove("disabled");
 			}
 		});
 	};
