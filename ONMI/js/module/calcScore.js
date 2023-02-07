@@ -59,7 +59,7 @@ export class CalcStats {
 		if (this.score.toFixed(1) < this.staticScore) {
 			this.stats[stat] -= 0.1;
 			this.score += 0.1;
-			this.summ += 0.1;
+			this.summ -= 0.1;
 			this.render();
 		}
 	}
