@@ -129,13 +129,21 @@ window.onload = function () {
 
 		// score
 		const handle = document.querySelector(".omi-card__handle");
+		const pointsAnim = document.querySelector("#unallocated-points");
+		let count = 1;
 		handle.addEventListener("click", async (e) => {
 			const target = e.target;
 			if (target.classList.contains("omi-card__point-btn")) {
+				const animBlock = document.createElement("span");
+				animBlock.className = "scalingBlock";
+				animBlock.setAttribute("data-id", count);
+				pointsAnim.append(animBlock);
 				console.log(target);
 				target.classList.add("disabled");
-				await scalingPositive("#unallocated-points");
+				await scalingPositive(".scalingBlock");
 				await target.classList.remove("disabled");
+				animBlock.remove();
+				// await count++;
 			}
 		});
 	};
