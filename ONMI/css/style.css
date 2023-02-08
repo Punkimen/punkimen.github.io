@@ -1575,6 +1575,128 @@ li {
   box-shadow: inset 0px 0px 6px 2px #FF5454;
 }
 
+.descover {
+  padding: 4.48vw 0;
+}
+
+.descover__descr {
+  width: 53.85vw;
+  margin: 0 auto 1.04vw;
+  position: relative;
+}
+
+.descover__title-row_1 {
+  padding-left: 0.89vw;
+}
+
+.descover__title-row_2 {
+  padding-left: 8.75vw;
+}
+
+.descover__title-row_3 {
+  text-align: right;
+}
+
+.descover__title-row_4 {
+  padding-left: 7.29vw;
+}
+
+.descover__text {
+  width: 13.2vw;
+  position: absolute;
+  bottom: 3.33vw;
+  right: -2.86vw;
+}
+
+.descover__map {
+  position: relative;
+  margin-bottom: 4.27vw;
+}
+
+.descover__map-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.descover__journey-title {
+  text-align: center;
+  font-size: 3.65vw;
+  margin-bottom: 7.4vw;
+}
+
+.descover__journey-title span {
+  display: block;
+}
+
+.descover__journey-cards {
+  width: 65vw;
+  margin: 0 auto;
+  display: flex;
+}
+
+.descover__map-point {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+}
+
+.descover__map-point_1 {
+  bottom: 17.19vw;
+  left: 53.65vw;
+}
+
+.descover__map-point_1 .map-point__circle {
+  width: 3.54vw;
+  height: 3.54vw;
+}
+
+.descover__map-point_2 {
+  top: 19.9vw;
+  left: 44.58vw;
+}
+
+.descover__map-point_2 .map-point__circle {
+  width: 2.45vw;
+  height: 2.45vw;
+}
+
+.descover__map-point_3 {
+  top: 16.3vw;
+  left: 53.13vw;
+}
+
+.descover__map-point_3 .map-point__circle {
+  width: 1.15vw;
+  height: 1.15vw;
+}
+
+.journey-card {
+  width: 100%;
+  background: #0F1015;
+  border-radius: 3.49vw;
+  padding: 5.21vw 4.69vw 2.6vw 4.27vw;
+  min-height: 43.44vw;
+}
+
+.journey-card:not(:last-child) {
+  margin-right: 0.68vw;
+}
+
+.journey-card__title {
+  font-size: 2.29vw;
+  letter-spacing: 0.01em;
+  line-height: 1.25em;
+  margin-bottom: 2.5vw;
+}
+
+.journey-card__text {
+  font-size: 1.09vw;
+  line-height: 1.3em;
+  color: #DEDEDE;
+  letter-spacing: 0.015em;
+}
+
 @media (min-width: 1921px) {
   .main__text {
     font-size: 1vw;
