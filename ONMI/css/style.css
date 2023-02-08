@@ -1444,6 +1444,12 @@ li {
   top: -3.13vw;
 }
 
+.find-map__phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .find-map__descr {
   display: flex;
   align-items: flex-start;
