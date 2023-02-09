@@ -1,25 +1,13 @@
-@font-face {
-  font-family: "SfPro";
-  font-display: swap;
-  src: url("../fonts/SfPro-bold.woff") format("woff"), url("../fonts/SfPro-bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
+[data-effect=fade-down] {
+  display: block;
 }
 
-@font-face {
-  font-family: "SfPro";
-  font-display: swap;
-  src: url("../fonts/SfPro-medium.woff") format("woff"), url("../fonts/SfPro-medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
+[data-effect=line] {
+  display: block;
 }
 
-@font-face {
-  font-family: "SfPro";
-  font-display: swap;
-  src: url("../fonts/SfPro.woff") format("woff"), url("../fonts/SfPro.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
+.flip {
+  display: block;
 }
 
 :root {
@@ -81,11 +69,6 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.main-screen {
-  position: relative;
-  z-index: 7;
 }
 
 .container {
@@ -455,12 +438,15 @@ li {
 
 .description-reality__content {
   width: 100%;
-  z-index: 2;
-  position: absolute;
-  z-index: 5;
-  left: 0;
+  position: fixed;
   top: 0;
-  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity ease 0.3s;
 }
 
 .description-reality__inner {
@@ -487,7 +473,7 @@ li {
   margin-bottom: 1.71vw;
 }
 
-.description-reality__gradient img {
+.description-reality img {
   display: block;
   width: 100%;
   height: auto;
@@ -503,8 +489,6 @@ li {
 .adventure {
   padding: 7.81vw 0 7.81vw;
   position: relative;
-  background: #000;
-  z-index: 5;
 }
 
 .adventure__content {
@@ -1288,6 +1272,36 @@ li {
 }
 
 .pvp__screen-OMI img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.collection {
+  padding: 10vw 0 10vw;
+}
+
+.collection__top {
+  position: relative;
+}
+
+.collection__title {
+  font-weight: bold;
+  font-size: 14.74vw;
+  position: relative;
+  left: 17.92vw;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.collection__pose {
+  width: 45.5vw;
+  position: absolute;
+  left: 23.44vw;
+  top: -13.54vw;
+}
+
+.collection__pose img {
   display: block;
   width: 100%;
   height: auto;

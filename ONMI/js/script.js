@@ -1,11 +1,18 @@
 "use strict";
 import { sliderInit } from "./module/sliderInit.js";
-import { observerScroll } from "./module/scrollTrigerAnimation.js";
 import { splitText } from "./module/splitText.js";
 import { setStyle } from "./module/setStyle.js";
-// import { sectionHeightInit } from "./module/sectionHeightInit.js";
+import { sectionHeightInit } from "./module/sectionHeightInit.js";
 
-import { fadeDown,fadeIn,flipAnim,lineShow,opacityIn,scalingPositive,transformTop } from "./module/GSAPAnim.js";
+import {
+	fadeDown,
+	fadeIn,
+	flipAnim,
+	lineShow,
+	opacityIn,
+	scalingPositive,
+	transformTop,
+} from "./module/GSAPAnim.js";
 import { CalcStats } from "./module/calcScore.js";
 
 window.onload = function () {
@@ -54,7 +61,6 @@ window.onload = function () {
 			const slider_1 = sliderInit(".adventure__phone");
 			const slider_2 = sliderInit(".cards-slider__slider",cardSliderOptions);
 			slider_2.controller.control = slider_1;
-			console.log(slider_2);
 			const sliderPrety = () => {
 				const arrSliders = slider_2.slides;
 				const lastEl = arrSliders[arrSliders.length - 1];
@@ -124,7 +130,7 @@ window.onload = function () {
 		titles.forEach((el) => {
 			splitText(el);
 		});
-		// sectionHeightInit();
+		sectionHeightInit();
 		// parallaxInit();
 
 		// score
@@ -155,40 +161,132 @@ window.onload = function () {
 			}
 		});
 
+		// gsap
 		gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
 
 		if (ScrollTrigger.isTouch !== 1) {
 			ScrollSmoother.create({
-				smooth: 1.5,
+				smooth: 1.3,
 				effects: true,
-				smoothTouch: 0.1,
-			})
+				smoothTouch: 0.3,
+			});
 		}
 
-		const lineElems = document.querySelectorAll('[data-effect="line"]')
-		const opacityElems = document.querySelectorAll('[data-effect="opacity"]')
+		const lineElems = document.querySelectorAll('[data-effect="line"]');
+		const opacityElems = document.querySelectorAll('[data-effect="opacity"]');
 		lineElems.forEach((el) => {
-			lineShow(el)
-		})
+			lineShow(el);
+		});
 		opacityElems.forEach((el) => {
-			opacityIn(el)
-		})
+			opacityIn(el);
+		});
 
-		const heroTitle = document.querySelector('.hero__title')
-		transformTop(heroTitle)
-		const fadesOpecityElems = document.querySelectorAll('[data-effect="fade-down"]')
-		const fadeInElems = document.querySelectorAll('[data-effect="fade-in"]')
-		fadesOpecityElems.forEach(el => {
-			fadeDown(el)
-		})
-		fadeInElems.forEach(el => {
-			fadeIn(el)
-		})
-		const flipElems = document.querySelectorAll('.flip')
-		flipElems.forEach(el => {
-			flipAnim(el)
-		})
-		gsap.fromTo(".pvp__title",{ scale: 1.7 },
+		const mapPointsFindCircles = document.querySelectorAll(
+			".find-map__point .map-point__circle"
+		);
+		const mapPointsFindText = document.querySelectorAll(
+			".find-map__point .map-point__text"
+		);
+		mapPointsFindCircles.forEach((el) => {
+			const delay = el.getAttribute("data-delay")
+				? el.getAttribute("data-delay")
+				: 0;
+			const duration = el.getAttribute("data-duration")
+				? el.getAttribute("data-duration")
+				: 1.2;
+			gsap.fromTo(
+				el,
+				{
+					opacity: 0,
+				},
+				{
+					opacity: 1,
+					delay: delay,
+					duration: duration,
+					ease: "power1.inOut",
+					scrollTrigger: {
+						trigger: ".find-map",
+						start: "top center",
+					},
+				}
+			);
+		});
+		mapPointsFindText.forEach((el) => {
+			const delay = el.getAttribute("data-delay")
+				? el.getAttribute("data-delay")
+				: 0;
+			const duration = el.getAttribute("data-duration")
+				? el.getAttribute("data-duration")
+				: 1.2;
+			gsap.fromTo(
+				el,
+				{
+					opacity: 0,
+					y: "80%",
+				},
+				{
+					y: 0,
+					opacity: 1,
+					delay: delay,
+					duration: duration,
+					ease: "power1.inOut",
+					scrollTrigger: {
+						trigger: ".find-map",
+						start: "top center",
+					},
+				}
+			);
+		});
+
+		const mapPointsDescover = document.querySelectorAll(
+			".descover__map .map-point__circle"
+		);
+
+		mapPointsDescover.forEach((el) => {
+			const delay = el.getAttribute("data-delay")
+				? el.getAttribute("data-delay")
+				: 0;
+			const duration = el.getAttribute("data-duration")
+				? el.getAttribute("data-duration")
+				: 1.2;
+			gsap.fromTo(
+				el,
+				{
+					opacity: 0,
+				},
+				{
+					opacity: 1,
+					delay: delay,
+					duration: duration,
+					ease: "power1.inOut",
+					scrollTrigger: {
+						trigger: ".descover__map",
+						start: "top top",
+					},
+				}
+			);
+		});
+
+
+		const heroTitle = document.querySelector(".hero__title");
+		transformTop(heroTitle);
+		const fadesOpecityElems = document.querySelectorAll(
+			'[data-effect="fade-down"]'
+		);
+		const fadeInElems = document.querySelectorAll('[data-effect="fade-in"]');
+		fadesOpecityElems.forEach((el) => {
+			fadeDown(el);
+		});
+		fadeInElems.forEach((el) => {
+			fadeIn(el);
+		});
+		const flipElems = document.querySelectorAll(".flip");
+		flipElems.forEach((el) => {
+			flipAnim(el);
+		});
+		gsap.fromTo(
+			".pvp__title",
+			{ scale: 1.7 },
 			{
 				scale: 1,
 				scrollTrigger: {
@@ -196,16 +294,18 @@ window.onload = function () {
 					start: "top center",
 					end: "center+=100px center",
 					scrub: true,
-					markers: true,
 				},
-				// ease: "none",
-			});
-		const pvpShowElems = document.querySelectorAll('.pvp-show')
-		pvpShowElems.forEach(el => {
-			gsap.fromTo(el,{
-				opacity: 0,
-				y: '10%'
-			},
+				ease: "none",
+			}
+		);
+		const pvpShowElems = document.querySelectorAll(".pvp-show");
+		pvpShowElems.forEach((el) => {
+			gsap.fromTo(
+				el,
+				{
+					opacity: 0,
+					y: "10%",
+				},
 				{
 					opacity: 1,
 					y: 0,
@@ -214,10 +314,24 @@ window.onload = function () {
 						start: "20%",
 						end: "center",
 						scrub: true,
-					}
-				})
-		})
+					},
+				}
+			);
+		});
 
+		const pinEl = document.querySelector(".description-reality__content");
+
+		const showEl = (el,isShow) => {
+			isShow ? (el.style.opacity = 1) : (el.style.opacity = 0);
+		};
+		const st = ScrollTrigger.create({
+			trigger: ".description-reality",
+			pinned: true,
+			start: "top top",
+			end: "bottom bottom",
+			marker: true,
+			onToggle: (self) => showEl(pinEl,self.isActive),
+		});
 	};
 	initPage();
 };
