@@ -284,6 +284,22 @@ window.onload = function () {
 		flipElems.forEach((el) => {
 			flipAnim(el);
 		});
+
+
+		const pinEl = document.querySelector(".description-reality__content");
+
+		const showEl = (el,isShow) => {
+			isShow ? (el.style.opacity = 1) : (el.style.opacity = 0);
+		};
+		const st = ScrollTrigger.create({
+			trigger: ".description-reality",
+			pinned: true,
+			start: "top top",
+			end: "bottom bottom",
+			marker: true,
+			onToggle: (self) => showEl(pinEl,self.isActive),
+		});
+
 		gsap.fromTo(
 			".pvp__title",
 			{ scale: 1.7 },
@@ -319,19 +335,27 @@ window.onload = function () {
 			);
 		});
 
-		const pinEl = document.querySelector(".description-reality__content");
+		gsap.fromTo('.pvp',{ opacity: 1 },{
+			opacity: 0,
+			ease: 'none',
+			scrollTrigger: {
+				trigger: '.pvp',
+				start: 'center',
+				end: '+=80%',
+				scrub: true
+			},
+		})
 
-		const showEl = (el,isShow) => {
-			isShow ? (el.style.opacity = 1) : (el.style.opacity = 0);
-		};
-		const st = ScrollTrigger.create({
-			trigger: ".description-reality",
-			pinned: true,
-			start: "top top",
-			end: "bottom bottom",
-			marker: true,
-			onToggle: (self) => showEl(pinEl,self.isActive),
-		});
+		gsap.fromTo('.collection__title',{ x: "50%" },{
+			x: '-100%',
+			scrollTrigger: {
+				trigger: '.collection',
+				start: 'top bottom',
+				end: 'bottom',
+				scrub: true
+			},
+		})
+
 	};
 	initPage();
 };
