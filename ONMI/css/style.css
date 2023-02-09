@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "SfPro";
+  font-display: swap;
+  src: url("../fonts/SfPro-bold.woff") format("woff"), url("../fonts/SfPro-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SfPro";
+  font-display: swap;
+  src: url("../fonts/SfPro-medium.woff") format("woff"), url("../fonts/SfPro-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SfPro";
+  font-display: swap;
+  src: url("../fonts/SfPro.woff") format("woff"), url("../fonts/SfPro.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
 .animate {
   transition: all ease 0.3s;
   transition: font-size 0s;
@@ -598,7 +622,7 @@ body {
   font-family: "Manrope", sans-serif;
   background: #000;
   color: #fff;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.04vw;
   line-height: 1.2;
   overflow-x: hidden;
@@ -1720,17 +1744,80 @@ li {
 .journey-card__text {
   font-size: 1.09vw;
   line-height: 1.3em;
+  font-weight: 400;
   color: #DEDEDE;
   letter-spacing: 0.015em;
 }
 
 .pvp {
-  padding: 5vw 0 5vw;
+  padding: 33.3vw 0 5vw;
+}
+
+.pvp__descr {
+  position: relative;
 }
 
 .pvp__title {
   text-align: center;
   font-size: 52.6vw;
+  scale: 1.5;
+  line-height: 1em;
+  letter-spacing: -0.026em;
+}
+
+.pvp__text {
+  position: absolute;
+  right: 3.23vw;
+  bottom: 5.99vw;
+  line-height: 1.7em;
+  width: 15.63vw;
+  z-index: 2;
+}
+
+.pvp__screen {
+  position: relative;
+  width: 55.16vw;
+  margin: -22vw auto 0;
+}
+
+.pvp__screen-text {
+  position: absolute;
+  left: 1.98vw;
+  bottom: 9.9vw;
+  width: 14.43vw;
+  padding: 1.88vw 2.08vw 2.24vw 2.4vw;
+  background: #121214;
+  border: 1px solid #292929;
+  border-radius: 2.03vw;
+  font-size: 0.78vw;
+  line-height: 1.4em;
+  z-index: 2;
+}
+
+.pvp__screen-phone {
+  position: relative;
+  left: 0.52vw;
+  width: 19.11vw;
+  margin: 0 auto;
+}
+
+.pvp__screen-phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pvp__screen-OMI {
+  width: 67.4vw;
+  position: absolute;
+  bottom: -25.57vw;
+  right: -17.4vw;
+}
+
+.pvp__screen-OMI img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 1921px) {

@@ -135,7 +135,6 @@ window.onload = function () {
 
 		const stats = new CalcStats(12.0, 10.0, 23.4, 2.1, 2.1, 56);
 		stats.render();
-		console.log(stats.setStat());
 
 		handle.addEventListener("click", async (e) => {
 			const target = e.target;
@@ -155,6 +154,20 @@ window.onload = function () {
 					stats.statMinus(statName);
 				}
 			}
+		});
+		gsap.registerPlugin(ScrollTrigger);
+
+		gsap.to(".pvp__title", {
+			scrollTrigger: {
+				trigger: ".pvp__title",
+				scrub: true,
+				start: "top center",
+				end: "center center",
+				// markers: true,
+			},
+			// ease: "none",
+			scale: 1,
+			// duration: 5,
 		});
 	};
 	initPage();
