@@ -21,7 +21,7 @@ export const lineShow = el => {
 		duration: duration,
 		ease: "power1.inOut",
 		scrollTrigger: {
-			trigger: el
+			trigger: el,
 		}
 	})
 }
@@ -37,7 +37,7 @@ export const opacityIn = el => {
 		duration: duration,
 		ease: "power1.inOut",
 		scrollTrigger: {
-			trigger: el
+			trigger: el,
 		}
 	})
 }
@@ -52,7 +52,7 @@ export const transformTop = el => {
 		duration: duration,
 		ease: "power1.inOut",
 		scrollTrigger: {
-			trigger: el
+			trigger: el,
 		}
 	})
 
@@ -70,7 +70,7 @@ export const fadeDown = el => {
 		duration: duration,
 		ease: "power1.inOut",
 		scrollTrigger: {
-			trigger: el
+			trigger: el,
 		}
 	})
 
@@ -88,7 +88,7 @@ export const fadeIn = el => {
 		duration: duration,
 		ease: "power1.inOut",
 		scrollTrigger: {
-			trigger: el
+			trigger: el,
 		}
 	})
 

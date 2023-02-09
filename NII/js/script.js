@@ -1,6 +1,5 @@
 "use strict";
 import { sliderInit } from "./module/sliderInit.js";
-import { observerScroll } from "./module/scrollTrigerAnimation.js";
 import { splitText } from "./module/splitText.js";
 import { setStyle } from "./module/setStyle.js";
 import { sectionHeightInit } from "./module/sectionHeightInit.js";

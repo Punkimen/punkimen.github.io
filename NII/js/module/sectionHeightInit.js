@@ -6,7 +6,6 @@ let heightSection = sectionTop.clientHeight;
 const heightBg = bg.clientHeight;
 
 heightSection = heightSection < 300 ? 300 : sectionTop.clientHeight
-console.log(heightSection)
 bg.style.paddingTop = `${heightSection / 4}px`;
 // bg.style.paddingBottom = `${heightBg / 4}px`;
 bg.style.marginTop = `-${heightSection / 2.5}px`;
