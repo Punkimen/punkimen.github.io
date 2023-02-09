@@ -1,13 +1,12 @@
 "use strict";
-import {sliderInit} from "./module/sliderInit.js";
-import {observerScroll} from "./module/scrollTrigerAnimation.js";
-import {splitText} from "./module/splitText.js";
-import {setStyle} from "./module/setStyle.js";
-import {sectionHeightInit} from "./module/sectionHeightInit.js";
-import {parallaxInit} from "./module/parallax.js";
-// import {calcScore} from "./module/calcScore.js";
-import {scalingPositive} from "./module/GSAPAnim.js";
-import {CalcStats} from "./module/calcScore.js";
+import { sliderInit } from "./module/sliderInit.js";
+import { observerScroll } from "./module/scrollTrigerAnimation.js";
+import { splitText } from "./module/splitText.js";
+import { setStyle } from "./module/setStyle.js";
+// import { sectionHeightInit } from "./module/sectionHeightInit.js";
+
+import { fadeDown,fadeIn,flipAnim,lineShow,opacityIn,scalingPositive,transformTop } from "./module/GSAPAnim.js";
+import { CalcStats } from "./module/calcScore.js";
 
 window.onload = function () {
 	const initPage = () => {
@@ -16,14 +15,14 @@ window.onload = function () {
 		const durationElem = document.querySelectorAll("[data-duration]");
 
 		for (let elm of delayElem) {
-			setStyle(elm, elm.dataset);
+			setStyle(elm,elm.dataset);
 		}
 		for (let elm of durationElem) {
-			setStyle(elm, elm.dataset);
+			setStyle(elm,elm.dataset);
 		}
-		for (let elm of animEls) {
-			observerScroll.observe(elm);
-		}
+		// for (let elm of animEls) {
+		// 	observerScroll.observe(elm);
+		// }
 
 		{
 			const cardSliderOptions = {
@@ -38,12 +37,12 @@ window.onload = function () {
 					limitProgress: 2,
 					prev: {
 						shadow: true,
-						translate: [0, 0, -400],
+						translate: [0,0,-400],
 						scale: [0],
 						opacity: 0,
 					},
 					next: {
-						translate: ["calc(100% + 10px)", 0, 0],
+						translate: ["calc(100% + 10px)",0,0],
 					},
 				},
 
@@ -53,7 +52,7 @@ window.onload = function () {
 				},
 			};
 			const slider_1 = sliderInit(".adventure__phone");
-			const slider_2 = sliderInit(".cards-slider__slider", cardSliderOptions);
+			const slider_2 = sliderInit(".cards-slider__slider",cardSliderOptions);
 			slider_2.controller.control = slider_1;
 			console.log(slider_2);
 			const sliderPrety = () => {
@@ -67,7 +66,7 @@ window.onload = function () {
 					lastEl.style.transotionDuration = "600ms";
 				}
 			};
-			slider_2.on("slideChange", function () {
+			slider_2.on("slideChange",function () {
 				sliderPrety();
 			});
 
@@ -84,7 +83,7 @@ window.onload = function () {
 					prevEl: ".create-omi__btn",
 				},
 			};
-			const omiSlider = sliderInit(".create-omi__slider", omiSliderOption);
+			const omiSlider = sliderInit(".create-omi__slider",omiSliderOption);
 			const omiOpacitySlides = () => {
 				const arrSliders = omiSlider.slides;
 				const activeIndex = omiSlider.activeIndex;
@@ -105,7 +104,7 @@ window.onload = function () {
 					el.style.opacity = 0.15;
 				});
 			};
-			omiSlider.on("slideChange", function () {
+			omiSlider.on("slideChange",function () {
 				omiOpacitySlides();
 			});
 			omiOpacitySlides();
@@ -125,25 +124,25 @@ window.onload = function () {
 		titles.forEach((el) => {
 			splitText(el);
 		});
-		sectionHeightInit();
-		parallaxInit();
+		// sectionHeightInit();
+		// parallaxInit();
 
 		// score
 		const handle = document.querySelector(".omi-card__handle");
 		const pointsAnim = document.querySelector("#unallocated-points");
 		let count = 1;
 
-		const stats = new CalcStats(12.0, 10.0, 23.4, 2.1, 2.1, 56);
+		const stats = new CalcStats(12.0,10.0,23.4,2.1,2.1,56);
 		stats.render();
 
-		handle.addEventListener("click", async (e) => {
+		handle.addEventListener("click",async (e) => {
 			const target = e.target;
 			const btn = target.closest(".omi-card__point-btn");
 
 			if (btn) {
 				const animBlock = document.createElement("span");
 				animBlock.className = "scalingBlock";
-				animBlock.setAttribute("data-id", count);
+				animBlock.setAttribute("data-id",count);
 				pointsAnim.append(animBlock);
 				await scalingPositive(".scalingBlock");
 				animBlock.remove();
@@ -155,20 +154,70 @@ window.onload = function () {
 				}
 			}
 		});
-		gsap.registerPlugin(ScrollTrigger);
 
-		gsap.to(".pvp__title", {
-			scrollTrigger: {
-				trigger: ".pvp__title",
-				scrub: true,
-				start: "top center",
-				end: "center center",
-				// markers: true,
+		gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
+
+		if (ScrollTrigger.isTouch !== 1) {
+			ScrollSmoother.create({
+				smooth: 1.5,
+				effects: true,
+				smoothTouch: 0.1,
+			})
+		}
+
+		const lineElems = document.querySelectorAll('[data-effect="line"]')
+		const opacityElems = document.querySelectorAll('[data-effect="opacity"]')
+		lineElems.forEach((el) => {
+			lineShow(el)
+		})
+		opacityElems.forEach((el) => {
+			opacityIn(el)
+		})
+
+		const heroTitle = document.querySelector('.hero__title')
+		transformTop(heroTitle)
+		const fadesOpecityElems = document.querySelectorAll('[data-effect="fade-down"]')
+		const fadeInElems = document.querySelectorAll('[data-effect="fade-in"]')
+		fadesOpecityElems.forEach(el => {
+			fadeDown(el)
+		})
+		fadeInElems.forEach(el => {
+			fadeIn(el)
+		})
+		const flipElems = document.querySelectorAll('.flip')
+		flipElems.forEach(el => {
+			flipAnim(el)
+		})
+		gsap.fromTo(".pvp__title",{ scale: 1.7 },
+			{
+				scale: 1,
+				scrollTrigger: {
+					trigger: ".pvp",
+					start: "top center",
+					end: "center+=100px center",
+					scrub: true,
+					markers: true,
+				},
+				// ease: "none",
+			});
+		const pvpShowElems = document.querySelectorAll('.pvp-show')
+		pvpShowElems.forEach(el => {
+			gsap.fromTo(el,{
+				opacity: 0,
+				y: '10%'
 			},
-			// ease: "none",
-			scale: 1,
-			// duration: 5,
-		});
+				{
+					opacity: 1,
+					y: 0,
+					scrollTrigger: {
+						trigger: ".pvp",
+						start: "20%",
+						end: "center",
+						scrub: true,
+					}
+				})
+		})
+
 	};
 	initPage();
 };

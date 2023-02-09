@@ -1,12 +1,12 @@
-export const calcAnim = () => {
-	const stats = {
-		power: 12.0,
-		energy: 10.0,
-		luck: 23.4,
+// export const calcAnim = () => {
+// 	const stats = {
+// 		power: 12.0,
+// 		energy: 10.0,
+// 		luck: 23.4,
 
-		renderStat: (stat) => {},
-	};
-};
+// 		renderStat: (stat) => { },
+// 	};
+// };
 const powerEl = document.querySelector("#power");
 const energyEl = document.querySelector("#energy");
 const luckEl = document.querySelector("#luck");
