@@ -1,632 +1,568 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&d?family=Lato:wght@700&isplay=swap"
+    <title>ONMI</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="site-container">
-        <header class="header">
-    <div class="container header-container">
-        <div class="header__wrapper">
-            <a href="#" class="header-logo">
-                <img src="img/logo.png" alt="">
+    <header class="header animate">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__left">
+        <a href="#" class="header__logo">
+          <img src="img/logo.svg" alt="logo" data-effect="line" data-delay="2">
+        </a>
+        <a href="#" class="header__lang">
+          <span data-effect="line" data-delay="2.2">E</span>
+          <span data-effect="line" data-delay="2.3">N</span>
+        </a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__list-elem">
+            <a href="#" class="header__link">
+              <span data-effect="line" data-delay="2.2">gallery</span>
             </a>
-            <div class="header-content">
-                <div class="header-top">
-                    <div class="header-top__text">
-                        <span>НИИ клинической онкологии им. Н.Н. Трапезникова</span>
-                        отделение лекарственных методов лечения (химиотерапевтическое) №17
-                    </div>
-                    <button class="header-top__btn btn btn-blue">Записаться на прием</button>
-                    <button class="mobile-btn btn">
-                        <svg class="mobile-btn__call">
-                            <use xlink:href="./img/icons/icons.svg#Call"></use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="header-bottom">
-                    <nav class="header-menu">
-                        <ul class="header-menu__list">
-                            <li class="header-menu__elem">
-                                <a href="#" class="header-menu__link">Главная</a>
-                            </li>
-                            <li class="header-menu__elem">
-                                <a href="#" class="header-menu__link">Пациентам</a>
-                            </li>
-                            <li class="header-menu__elem">
-                                <a href="#" class="header-menu__link">Специалистам</a>
-                            </li>
-                            <li class="header-menu__elem">
-                                <a href="#" class="header-menu__link">Про отделение</a>
-                            </li>
-                            <li class="header-menu__elem">
-                                <a href="#" class="header-menu__link">Контакты</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="header-phone">
-                <div class="header-phone__label">
-                    <span>МЕНЮ</span>
-                    <span style="display: none;">Закрыть</span>
-                </div>
-                <div class="header__burger">
-                    <div class="burger__icon icon-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="header-mobile">
-            <nav class="header-mobile__menu">
-                <ul class="header-mobile__list">
-                    <li class="header-mobile__elem">
-                        <a href="#" class="header-mobile__link">Главная</a>
-                    </li>
-                    <li class="header-mobile__elem header-mobile__elem">
-                        <a href="#" class="header-mobile__link header-mobile__link--more">Пациентам</a>
-                        <ul class="header-mobile__sublist">
-                            <li class="sublist-elem"><a href="">Диагностика и лечение</a></li>
-                            <li class="sublist-elem"><a href="">Лечение рака легкого</a></li>
-                            <li class="sublist-elem">
-                                <a class="sublist-elem--more" href="">Этапы диагностики и лечения</a>
-                                <ul class="sublist-elem__sublist">
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Оформление амбулаторной карты</a>
-                                    </li>
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Форма 057-У</a>
-                                    </li>
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Амбулаторный прием</a>
-                                    </li>
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Разработка индивидуального плана лечения</a>
-                                    </li>
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Мультидисциплинарный консилиум</a>
-                                    </li>
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Выбор персинализированного лечения</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sublist-elem">
-                                <a class="sublist-elem--more" href="">Виды лечения</a>
-                                <ul class="sublist-elem__sublist">
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Химиотерапия</a>
-                                    </li>
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Иммунотерапия</a>
-                                    </li>
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Хирургическое лечение</a>
-                                    </li>
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Таргетная терапия</a>
-                                    </li>
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Лучевая терапия</a>
-                                    </li>
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Клинические исследования</a>
-                                    </li>
-                                    <li class="sublist-elem__sublist-elem">
-                                        <a href="">Госпитализация в отделение</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="header-mobile__elem">
-                        <a href="#" class="header-mobile__link header-mobile__link--more">Специалистам</a>
-                        <ul class="header-mobile__sublist">
-                            <li class="sublist-elem"><a href="">Клинические исследования</a></li>
-                            <li class="sublist-elem"><a href="">Школы для специалистов</a></li>
-                        </ul>
-                    </li>
-                    <li class="header-mobile__elem">
-                        <a href="#" class="header-mobile__link header-mobile__link--more">Про отделение</a>
-                        <ul class="header-mobile__sublist">
-                            <li class="sublist-elem"><a href="">Наша команда</a></li>
-                            <li class="sublist-elem"><a href="">О нас</a></li>
-                            <li class="sublist-elem"><a href="">СМИ о нас</a></li>
-                            <li class="sublist-elem"><a href="">Отзывы</a></li>
-                            <li class="sublist-elem"><a href="">НООП/МОСОП</a></li>
-                        </ul>
-                    </li>
-                    <li class="header-mobile__elem">
-                        <a href="#" class="header-mobile__link">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header-mobile__footer">
-                НИИ клинической онкологии им. Н.Н. Трапезникова
-                отделение лекарственных методов лечения (химиотерапевтическое) №17
-            </div>
-            <a href="" class="header-mobile__call">
-                <svg class="">
-                    <use xlink:href="./img/icons/icons.svg#Call"></use>
-                </svg>
+          </li>
+          <li class="header__list-elem">
+            <a href="#" class="header__link header__link_narrow" style="position: relative;
+            left: 1.05vw;">
+              <span data-delay="2.4" data-effect="line">
+                White Paper
+              </span>
             </a>
+          </li>
+          <li class="header__list-elem">
+            <a href="#" class="header__link">
+              <span data-effect="line" data-delay="2.6">How to play</span>
+            </a>
+          </li>
+          <li class="header__list-elem">
+            <a href="#" class="header__link">
+              <span data-effect="line" data-delay="2.8">About</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <a href="#" class="header__link header__link_roadmap">
+          <span data-effect="line" data-delay="2.9">Roadmap</span>
+        </a>
+        <div class="header__dropdow dropdown animate">
+          <div class="dropdown__header">
+            <span data-effect="line" data-delay="3">More</span>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </header>
-        <main class="main">
-            <section class="about">
-    <div class="container about-container">
-        <h1 class="hidden">Нмиц онкологии</h1>
-        <h2 class="about-title">
-            Кто мы и о проекте
-        </h2>
-        <div class="about__content">
-            <div class="about__content-text about__content-text--left">
-                <p class="about-paragraph about-paragraph--600">Этот сайт подготовлен коллективом врачей
-                    17 химиотерапевтического отделения
-                    при центре онкологии имени Н.Н. Блохина.</p>
-                <p class="about-paragraph">На протяжении 70 лет НМИЦ онкологии имени Н.Н. Блохина принимает пациентов
-                    <span class="about-paragraph__color">со всей России с раком лёгкого.</span></p>
+
+    <div class="description-reality__content">
+        <div class="container">
+            <div class="description-reality__inner">
+                <div class="description-reality__text">
+                    <p class="text-animate">
+                        By the middle of the century, 68% of the world's population will live in cities. The general
+                        obsession of
+                        technology companies towards fully immersive metaverses seems premature to us.<p>
+                            Our mission is to create a <span class="bordered-text">reality 2.0</span> layer over real
+                            cities, an
+                            AR-universe that will expand
+                            the boundaries
+                            of reality and make it more functional and impressive.</p>
+                        <p>©2022</p>
+                    </p>
+                </div>
             </div>
-            <div class="about__content-text about__content-text--right">
-                <p class="about-paragraph about-paragraph--width">Мы внедряем инновационные методы терапии и лечения.
-                    Мы гордимся тем,
-                    что нам <span class="about-paragraph__color">удалось увеличить выживаемость</span> наших пациентов
-                    и улучшить качество жизни.</p>
-                <p class="about-paragraph">На этом сайте мы собрали и систематизировали всю информацию о раке лёгкого.
-                    И рассказали, <span class="about-paragraph__color">как можно к нам попасть по ОМС.</span></p>
+        </div>
+    </div>
+    <div id="smooth-wrapper" class="smooth-wrapper">
+        <div id="smooth-content" class="smooth-content">
+            <div class="main-screen">
+                <section class="hero">
+  <div class="container">
+    <div class="hero__wrapper">
+      <h1 class="hero__title animate" data-delay="2" data-duration="2" data-effect="slide-top-absolute">
+        <span class="animate width" data-effect="opacity" data-duration="1">Play</span>
+        <span class="animate" data-effect="opacity" data-delay="1.4" data-duration="1.1">with</span>
+        <span class="animate" data-effect="opacity" data-delay="1.5" data-duration="1.1">the</span>
+        <span class="animate" data-effect="opacity" data-delay="1.6" data-duration="1.1">world</span>
+      </h1>
+      <div class="hero__text animate" data-delay="2.6" data-duration="3" data-effect="fade-down">
+        <p>
+          <span data-effect="line" data-delay="2.6">The first Reality 2.0 game in
+            which you pick up</span>
+        </p>
+        <p>
+          <span data-effect="line" data-delay="2.9">tokens and hunt for
+            high-priced NFTs</span>
+        </p>
+        <p>
+          <span data-effect="line" data-delay="3.1">anywhere on Earth</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
             </div>
-        </div>
-        <button class="about-btn btn btn-yellow">Обратиться к нам</button>
-    </div>
+            <section class="description-reality">
+  <div class="description-reality__gradient" data-speed="2">
+    <img src="./img/reality_bg.png" alt="bg-gradient">
+  </div>
 </section>
-            <section class="enter">
-    <div class="container enter-container">
-        <h3 class="enter-title">
-            Как быстро и <span class="color-blue">по ОМС</span> попасть в НМИЦ онкологии им. Н.Н. Блохина?
-        </h3>
-        <div class="enter-description">
-            Вам потребуется пройти <span class="color-blue">4 простых шага:</span>
-        </div>
-        <div class="enter__steps">
-            <div class="enter__steps-item enter-step">
-                <div class="enter-step__title">
-                    <div class="enter-step__title-num">1</div>
-                    <div class="enter-step__title-text">
-                        Записаться к нам на
-                        первичную консультацию
-                    </div>
-                </div>
-                <div class="enter-step__content">
-                    <span class="color-blue">Позвонить</span> по номеру <a class="enter-step__link"
-                        href="tel:84993242424">
-                        8 (499) 324-24-24
-                    </a>
-                    или <a class="enter-step__link" href="#">заполнить форму обратной связи</a> и вам ответит врач
-                    нашего отделения
-                </div>
-            </div>
-            <div class="enter__steps-item enter-step">
-                <div class="enter-step__title">
-                    <div class="enter-step__title-num">2</div>
-                    <div class="enter-step__title-text">
-                        В выбранную дату прийти в центр
-                        и иметь при себе
-                    </div>
-                </div>
-                <div class="enter-step__content">
-                    <ul class="enter-step__list">
-                        <li class="enter-step__elem">
-                            <span class="color-blue">полис <span class="uppercase">ОМС</span></span>
-                        </li>
-                        <li class="enter-step__elem">паспорт</li>
-                        <li class="enter-step__elem">всю текущую информацию по болезни</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="enter__steps-item enter-step">
-                <div class="enter-step__title">
-                    <div class="enter-step__title-num">3</div>
-                    <div class="enter-step__title-text">
-                        На консультации
-                    </div>
-                </div>
-                <div class="enter-step__content">
-                    Узнать про все методы диагностики и лечения, а также получить <span class="color-blue"> помощь в
-                        подготовке необходимого пакета документов для лечения по омс в нашем отделении</span>
 
+            <section class="adventure">
+  <div class="container">
+    <div class="adventure__content">
+      <h2 class="main__title adventure__title">
+        <div class="adventure__title-row adventure__title-row_1 ">
+          <span class="animate flip">START</span>
+        </div>
+        <div class="adventure__title-row adventure__title-row_2 ">
+          <span class="animate flip">YOUR</span>
+        </div>
+        <div class="adventure__title-row adventure__title-row_3">
+          <span class="animate flip">ADVENTURE</span>
+        </div>
+      </h2>
+
+      <div class="main__text  adventure__text" data-speed="1.2">
+        <div class="animate" data-effect="fade-down" data-duration="1.5" data-delay="0.1">
+          <p>Take four simple steps and start exploring the ONMI world</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="adventure__slider">
+    <div class="adventure__slider-phone">
+      <div class="adventure__phone-img  animate" data-effect="fade-in" data-duration="2">
+        <img src="./img/phone_hand.png" alt="Телефон в руке" />
+      </div>
+      <div class="adventure__phone swiper animate" data-effect="opacity">
+        <div class="swiper-wrapper">
+          <div class="adventure__phone-slide swiper-slide">
+            <img src="./img/slider_phone/screen_1.png" class="animate" data-effect="opacity" alt="s-type slide">
+          </div>
+          <div class="adventure__phone-slide swiper-slide">
+            <img src="./img/slider_phone/screen_2.jpg" alt="s-type slide">
+          </div>
+          <div class="adventure__phone-slide swiper-slide">
+            <img src="./img/slider_phone/screen_1.png" alt="s-type slide">
+          </div>
+          <div class="adventure__phone-slide swiper-slide">
+            <img src="./img/slider_phone/screen_1.png" alt="s-type slide">
+          </div>
+          <div class="adventure__phone-slide swiper-slide">
+            <img src="./img/slider_phone/screen_2.jpg" alt="s-type slide">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="adventure__slider-cards cards-slider animate" data-effect="opacity" data-duration="1">
+      <div class="cards-slider__slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide cards-slider__slide">
+            <div class="cards-slider__descr">Choose an OMI character</div>
+            <div class="cards-slider__num">01</div>
+          </div>
+          <div class="swiper-slide cards-slider__slide">
+            <div class="cards-slider__descr">Walk around, collect mysteries and get tokens</div>
+            <div class="cards-slider__num">02</div>
+          </div>
+          <div class="swiper-slide cards-slider__slide">
+            <div class="cards-slider__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            <div class="cards-slider__num">03</div>
+          </div>
+          <div class="swiper-slide cards-slider__slide">
+            <div class="cards-slider__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            <div class="cards-slider__num">04</div>
+          </div>
+          <div class="swiper-slide cards-slider__slide">
+            <div class="cards-slider__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            <div class="cards-slider__num">05</div>
+          </div>
+        </div>
+        <div class="cards-slider__btn swiper-btn swiper-button-prev animate" data-effect="opacity">
+          <img src="img/icons/arrow_slider.svg" alt="arrow prev">
+        </div>
+        <div class="cards-slider__btn swiper-btn  swiper-button-next animate" data-effect="opacity" data-delay="0.1">
+          <img src="img/icons/arrow_slider.svg" alt="arrow next">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+            <section class="create-omi">
+  <div class="container">
+    <div class="create-omi__descr">
+      <h2 class="main__title create-omi__title">
+        <div class="create-omi__title-row create-omi__title-row_1 ">
+          <span class="animate flip">CREATE
+          </span>
+        </div>
+        <div class="create-omi__title-row create-omi__title-row_2 ">
+          <span class="animate flip">YOUR</span>
+        </div>
+        <div class="create-omi__title-row create-omi__title-row_3">
+          <span class="animate flip">UNIQUE OMI</span>
+        </div>
+      </h2>
+
+      <div class="main__text create-omi__text" data-speed="1.1">
+        <div class="animate" data-effect="fade-down" data-duration="1.5" data-delay="0.2">
+          <p>OMI - YOUR INCARNATION WITHIN THE OMNI WORLD CUSTOMIZE, UPGRADE, CREATE A RARE NFT, SELL, RENT OR KEEP</p>
+        </div>
+      </div>
+    </div>
+    <div class="create-omi__slider swiper" data-effect="fade-in">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide create-omi__slide">
+          <img src="img/OMI/var_1.png" style="width: 12.29vw;" alt="OMI variable 1">
+        </div>
+        <div class="swiper-slide create-omi__slide">
+          <img src="img/OMI/var_2.png" style="width: 13.65vw" alt="OMI variable 2">
+        </div>
+        <div class="swiper-slide create-omi__slide">
+          <img src="img/OMI/var_3.png" style="width: 10.89vw" alt="OMI variable 3">
+        </div>
+      </div>
+      <div class="create-omi__btn swiper-btn swiper-button-prev animate" data-effect="opacity" data-delay="0.1">
+        <img src="img/icons/arrow_slider.svg" alt="arrow prev">
+      </div>
+      <div class="create-omi__btn create-omi__btn_next swiper-btn swiper-button-next animate" data-effect="opacity"
+        data-delay="0.2">
+        <img src="img/icons/arrow_slider.svg" alt="arrow next">
+      </div>
+    </div>
+    <div class="create-omi__cards">
+      <div class="create-omi__wrapper">
+        <div class="create-omi__card omi-card omi-card_custom animate" data-effect="fade-in">
+          <h4 class="omi-card__title">Customize OMI look</h4>
+          <div class="omi-card__text">
+            <p>ORBS — are secret AR-objects in which rewards are hidden</p>
+          </div>
+        </div>
+        <div class="create-omi__card omi-card omi-card_points animate" data-effect="fade-in" data-delay="0.2">
+          <div id="unallocated-points" class="omi-card__unallocated-points">
+            <span id="score" class="unallocated-points__value">+2,1</span>
+          </div>
+          <h4 class="omi-card__title">Upgrade OMI points</h4>
+          <div class="omi-card__text">
+            <p>ORBS — are secret AR-objects in which rewards are hidden</p>
+          </div>
+          <div class="omi-card__handle">
+            <div class="omi-card__row">
+              <div class="omi-card__label">
+                <div class="omi-card__label-icon">
+                  <img src="img/icons/power.svg" alt="Power">
                 </div>
+                <div class="omi-card__label-text">Power</div>
+              </div>
+              <div class="omi-card__point">
+                <div class="omi-card__point-btn btn-minus" data-stat="power">-</div>
+                <div id="power" class="omi-card__point-value testingId">12.0</div>
+                <div class="omi-card__point-btn btn-plus" data-stat="power">+</div>
+              </div>
             </div>
-            <div class="enter__steps-item enter-step">
-                <div class="enter-step__title">
-                    <div class="enter-step__title-num">4</div>
-                    <div class="enter-step__title-text">
-                        После консультации
-                    </div>
+            <div class="omi-card__row">
+              <div class="omi-card__label">
+                <div class="omi-card__label-icon">
+                  <img src="img/icons/energy.svg" alt="Energy">
                 </div>
-                <div class="enter-step__content">
-                    Собрать все необходимые документы и <span class="color-blue">приступить к лечению</span>
-                </div>
+                <div class="omi-card__label-text">Energy</div>
+              </div>
+              <div class="omi-card__point">
+                <div class="omi-card__point-btn btn-minus" data-stat="energy">-</div>
+                <div id="energy" class="omi-card__point-value">12.0</div>
+                <div class="omi-card__point-btn btn-plus" data-stat="energy">+</div>
+              </div>
             </div>
+            <div class="omi-card__row">
+              <div class="omi-card__label">
+                <div class="omi-card__label-icon">
+                  <img src="img/icons/luck.svg" alt="Luck">
+                </div>
+                <div class="omi-card__label-text">Luck</div>
+              </div>
+              <div class="omi-card__point">
+                <div class="omi-card__point-btn btn-minus" data-stat="luck">-</div>
+                <div id="luck" class="omi-card__point-value">12.0</div>
+                <div class="omi-card__point-btn btn-plus" data-stat="luck">+</div>
+              </div>
+            </div>
+            <div class="omi-card__total">
+              <div id="summ" class="omi-card__total-value">$56</div>
+              <div class="omi-card__total-descr">Your Daily Earn</div>
+            </div>
+          </div>
+        </div>
+        <div class="create-omi__card omi-card omi-card_rarity animate" data-effect="fade-in" data-delay="0.4">
+          <h4 class="omi-card__title">Unlock a new OMI rarity</h4>
+          <div class="omi-card__text">
+            <p>ORBS — are secret AR-objects in which rewards are hidden</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+            <section class="find">
+  <div class="container">
+    <div class="find__descr">
+      <h2 class="find__title main__title">
+        <div class="find__title-row find__title-row_1 ">
+          <span class="animate flip">FIND ORBS</span>
+        </div>
+        <div class="find__title-row find__title-row_2 ">
+          <span class="animate flip">ALL OVER</span>
+        </div>
+        <div class="find__title-row find__title-row_3">
+          <span class="animate flip">THE</span>
+        </div>
+        <div class="find__title-row find__title-row_4">
+          <span class="animate flip">WORLD</span>
+        </div>
+      </h2>
+      <div class="main__text find__text" data-speed="1.2">
+        <div class="animate" data-effect="fade-down" data-duration="1.5">
+          <p>ORBS — are secret </p>
+          <p>AR-objects in which rewards are hidden</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="find-map">
+    <div class="container">
+      <div class="find-map__phone">
+        <img src="img/phoneScreen.png" class="animate" data-effect="opacity" alt="phone">
+        <div class="find-map__descr" data-effect="opacity" data-delay="0.2" data-speed="1.1">
+          <div class="find-map__descr-icon">
+            <img src="img/icons/energy.svg" alt="energy">
+          </div>
+          <div class="find-map__descr-text">
+            <p>The amount of energy datnes how many orbs you can catch</p>
+          </div>
+        </div>
+      </div>
+      <div class="find-map__point map-point map-point_1">
+        <div data-effect="opacity" class="map-point__circle animate map-point__circle_cyan">
+
+        </div>
+        <div class="map-point__text animate" data-effect="fade-down" data-delay="0.2">
+          <div class="map-point__name">cyan orb</div>
+          <div class="map-point__descr">
+            include coins
+          </div>
+        </div>
+      </div>
+      <div class="find-map__point map-point map-point_2">
+        <div data-effect="opacity" class="map-point__circle animate map-point__circle_purple" data-delay="0.4">
+
+        </div>
+        <div class="map-point__text animate" data-effect="fade-down" data-delay="0.6">
+          <div class="map-point__name">purple orb</div>
+          <div class="map-point__descr">
+            include coins or items
+          </div>
+        </div>
+      </div>
+      <div class="find-map__point map-point map-point_3">
+        <div data-effect="opacity" class="map-point__circle animate map-point__circle_cyan map-point__circle_medium"
+          data-delay="0.5">
+
+        </div>
+        <div class="map-point__text animate" data-effect="fade-down" data-delay="0.7">
+          <div class="map-point__name">cyan orb</div>
+          <div class="map-point__descr">
+            include coins
+          </div>
+        </div>
+      </div>
+      <div class="find-map__point map-point map-point_4">
+        <div data-effect="opacity" class="map-point__circle animate map-point__circle_red" data-delay="0.6">
+
+        </div>
+        <div class="map-point__text animate" data-effect="fade-down" data-delay="0.8">
+          <div class="map-point__name">red orb</div>
+          <div class="map-point__descr">may includes rare NFTs</div>
+        </div>
+      </div>
+      <div class="find-map__point map-point map-point_5">
+        <div data-effect="opacity" class="map-point__circle animate map-point__circle_red" data-delay="0.8">
+
+        </div>
+      </div>
+      <div class="find-map__point map-point map-point_6">
+        <div data-effect="opacity" class="map-point__circle animate map-point__circle_small map-point__circle_purple"
+          data-delay="0.9">
+
+        </div>
+      </div>
+      <div class="find-map__point map-point map-point_7">
+        <div data-effect="opacity" class="map-point__circle animate map-point__circle_small map-point__circle_red"
+          data-delay="1">
+
+        </div>
+      </div>
+      <div class="find-map__point map-point map-point_8">
+        <div data-effect="opacity" class="map-point__circle animate map-point__circle_small map-point__circle_red"
+          data-delay="1.2">
+
+        </div>
+      </div>
+      <div class="find-map__point map-point map-point_9">
+        <div data-effect="opacity" class="map-point__circle animate map-point__circle_middle map-point__circle_purple"
+          data-delay="1.4">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+            <section class="descover">
+  <div class="container">
+    <div class="descover__descr">
+      <h2 class="descover__title main__title">
+        <div class="descover__title-row descover__title-row_1">
+          <span class="animate flip">Discover</span>
+        </div>
+        <div class="descover__title-row descover__title-row_2">
+          <span class="animate flip">cities</span>
+        </div>
+        <div class="descover__title-row descover__title-row_3">
+          <span class="animate flip">in a new</span>
+        </div>
+        <div class="descover__title-row descover__title-row_4">
+          <span class="animate flip">way</span>
+        </div>
+      </h2>
+      <div class="descover__text main__text" data-speed="1.2">Activate
+        the route of the most interesting places: find out
+        about the city
+        and earn</div>
+    </div>
+  </div>
+  <div class="descover__map">
+    <div class="descover__map-point map-point descover__map-point_1">
+      <div class="map-point__circle map-point__circle_cyan animate" data-effect="fade-down" data-delay="0.4">
+
+      </div>
+    </div>
+    <div class="descover__map-point map-point descover__map-point_2">
+      <div class="map-point__circle map-point__circle_cyan animate" data-effect="fade-down" data-delay="0.6">
+
+      </div>
+    </div>
+    <div class="descover__map-point map-point descover__map-point_3">
+      <div class="map-point__circle map-point__circle_red animate" data-effect="fade-down" data-delay="0.8">
+
+      </div>
+    </div>
+    <img src="img/city_map.png" alt="Карта города" class="descover__map-img animate" data-effect="opacity">
+  </div>
+  <div class="descover__journey">
+    <div class="container">
+      <h4 class="descover__journey-title">
+        <div class="descover__journey-title__row">
+          <span class="animate" data-effect="line" data-duration="1">ONMI.</span>
+        </div>
+        <div class="descover__journey-title__row">
+          <span class="animate" data-effect="line" data-duration="1" data-delay="0.2">Always a journey.</span>
+        </div>
+      </h4>
+      <div class="descover__journey-cards">
+        <div class="journey-card animate" data-effect="fade-in">
+          <h5 class="journey-card__title">ONMI explored cities and created routes with gameplay.</h5>
+          <div class="journey-card__text">
+            <p>Over time you will have access to several categories of routes: gastronomic, musical, art, architectures
+              and secret places.</p>
+          </div>
+        </div>
+        <div class="journey-card animate" data-effect="fade-in" data-delay="0.2">
+          <h5 class="journey-card__title">Get to know the city and live its life as an individual.</h5>
+          <div class="journey-card__text">
+            <p>In the next version of Routes, you will be treated to routes from musical artists, filmmakers,
+              architects, designers, and athletes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+            <section id="pvpTrigger" class="pvp">
+  <div class="cotnainer">
+    <div class="pvp__wrapper">
+      <div class="pvp__descr">
+        <h2 class="pvp__title">PVP</h2>
+        <div class="pvp__text main__text" data-effect="fade-down" data-speed="1.2">Create your own special look and
+          compare it with others by
+          nominating OMI for
+          a Fashion
+          Battle.
+        </div>
+      </div>
+      <div class="pvp__screen">
+        <div class="pvp__screen-text pvp-show">Pick your favorite fashionista and get reward points.
+        </div>
+        <div class="pvp__screen-phone pvp-show">
+          <img src="img/pvp_phone.png" alt="pvp screen on phone">
+        </div>
+        <div class="pvp__screen-OMI pvp-show">
+          <img src="img/pvp_pose.png" alt="OMI pvp user">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="end"></div>
+
         </div>
     </div>
-</section>
-            <section class="form">
-    <div class="container form-container">
-        <div class="form__description">
-            <div class="form__description-text">Немногие знают, что к нам можно попасть по ОМС и наблюдаться в
-                федеральном учреждении.</div>
-            <div class="form__description-info">Если у вас есть вопросы, связанные с выбором терапии, диагностики,
-                или вы хотите попасть к нам по ОМС, то заполните заявку, описав свой диагноз и вопрос, и мы свяжемся
-                с вами</div>
-            <div class="form__description-phone form-phone">
-                <div class="form-phone__icon">
-                    <img src="img/icons/Call.png" alt="">
-                </div>
-                <div class="form-phone__content">
-                    <div class="form-phone__label">Или позвоните нам</div>
-                    <a href="tel:84993242424" class="form-phone__link">8 (499) 324-24-24</a>
-                    <div class="form-phone__info">
-                        <span>единая справочная служба</span>
-                        будни с 8:30 до 17:15
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="form__question">
-            <form id="validForm" action="" class="question-form">
-                <div class="question-form__inp form-inp">
-                    <label for="phone" class="question-form__label form-label">телефон<span>*</span></label>
-                    <input id="phone" name="phone" type="text" autocomplete="off" class="input-phone" required>
-                </div>
-                <div class="question-form__inp form-inp">
-                    <label for="name" class="question-form__label form-label">ИМЯ</label>
-                    <input id="name" name="name" type="text" autocomplete="off">
-                </div>
-                <div class="question-form__inp form-inp">
-                    <label for="diagnosis" class="question-form__label form-label">диагноз</label>
-                    <input id="diagnosis" name="diagnosis" type="text" autocomplete="off">
-                </div>
-                <div class="question-form__textarea form-inp">
-                    <label for="question"
-                        class="question-form__label form-label question-form__label--small">вопрос</label>
-                    <textarea id="question" name="question">Могу ли я попасть к вам на обследование и дальнейшее лечение, если я из других
-                    </textarea>
-                </div>
-                <button class="question-form__btn btn btn-yellow">Отправить вопрос</button>
-            </form>
-        </div>
-    </div>
-</section>
-            <section class="info">
-    <div class="container info-container">
-        <div class="info-block info-block--flex">
-            <div class="info-block__content">
-                <div class="info-block__title">Какие виды лечения показаны при моей стадии?</div>
-                <div class="info-block__text">Подготовили материалы по лечению
-                    и диагностике для каждого типа рака легкого</div>
-                <a href="" class="info-block__link">Читать далее
-                    <svg class="link-arrow">
-                        <use xlink:href="./img/icons/icons.svg#link-arrow"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="info-block__img">
-                <img src="./img/info_1.jpg" alt="">
-            </div>
-        </div>
-        <div class="info-row">
-            <div class="info-block">
-                <div class="info-block__content">
-                    <div class="info-block__head">
-                        <img src="./img/icons/seatch-doc.png" alt="">
-                        <div class="info-block__title">Терапия рака легкого</div>
-                    </div>
-                    <div class="info-block__text">Узнайте о видах терапии для каждого типа заболевания</div>
-                    <a href="" class="info-block__link">Узнать
-                        <svg class="link-arrow">
-                            <use xlink:href="./img/icons/icons.svg#link-arrow"></use>
-                        </svg>
+
+    <div class="fixed-btns">
+        <div class="container">
+            <div class="fixed-btns__wrapper">
+                <div class="fixed-btns__left">
+                    <a href="#" data-effect="opacity" data-duration="1" data-delay="2.6"
+                        class="fixed-btns__app btn btn_app animate">
+                        <img src="img/googlePlay.svg" alt="Google Play">
+                    </a>
+                    <a href="#" data-effect="opacity" data-duration="1.2" data-delay="2.7"
+                        class="fixed-btns__app btn btn_app animate">
+                        <img class="AppStore" src="img/AppStore.svg" alt="App Store">
                     </a>
                 </div>
-            </div>
-            <div class="info-block">
-                <div class="info-block__content">
-                    <div class="info-block__head">
-                        <img src="./img/icons/case.png" alt="">
-                        <div class="info-block__title">Информация
-                            для специалистов</div>
-                    </div>
-                    <div class="info-block__text">Давайте знакомиться! Рассказываем о врачах отделения</div>
-                    <a href="" class="info-block__link">Узнать
-                        <svg class="link-arrow">
-                            <use xlink:href="./img/icons/icons.svg#link-arrow"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="info-block info-block--flex">
-            <div class="info-block__img">
-                <img src="./img/info_2.jpg" alt="">
-            </div>
-            <div class="info-block__content info-block__content--tiser">
-                <div class="info-block__tiser">
-                    Новостной тизер
-                </div>
-                <a href="" class="info-block__link">Читать далее
-                    <svg class="link-arrow">
-                        <use xlink:href="./img/icons/icons.svg#link-arrow"></use>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-            <section class="reviews">
-    <div class="container reviews-container">
-        <div class="reviews-block">
-            <div class="reviews-title">Наши пациенты:
-                против болезни — за жизнь!
-                <svg class="svg-quotes">
-                    <use xlink:href="./img/icons/icons.svg#quotes"></use>
-                </svg>
-            </div>
-            <div class="reviews-slider">
-                <div class="reviews-slider__item reviews-slide">
-                    <div class="reviews-slide__head">
-                        <div class="reviews-slide__photo">
-                            <img src="img/photo.png" alt="">
-                        </div>
-                        <div class="reviews-slide__descr">
-                            <div class="reviews-slide__name">Максим Нагорный</div>
-                            <div class="reviews-slide__age">37 лет</div>
-                        </div>
-                    </div>
-                    <div class="reviews-slide__text">Главное, что я понял, такое заболевание даётся не «за что-то»,
-                        а «для чего-то», чтобы человек понял, что надо изменить в себе, в своём отношении к людям,
-                        к окружающей жизни</div>
-                    <button class="reviews-slide__btn btn btn-blue">Читать историю</button>
-                </div>
-                <div class="reviews-slider__item reviews-slide">
-                    <div class="reviews-slide__head">
-                        <div class="reviews-slide__photo">
-                            <img src="img/photo.png" alt="">
-                        </div>
-                        <div class="reviews-slide__descr">
-                            <div class="reviews-slide__name">Максим Нагорный</div>
-                            <div class="reviews-slide__age">37 лет</div>
-                        </div>
-                    </div>
-                    <div class="reviews-slide__text">Главное, что я понял, такое заболевание даётся не «за что-то»,
-                        а «для чего-то», чтобы человек понял, что надо изменить в себе, в своём отношении к людям,
-                        к окружающей жизни</div>
-                    <button class="reviews-slide__btn btn btn-blue">Читать историю</button>
-                </div>
-                <div class="reviews-slider__item reviews-slide">
-                    <div class="reviews-slide__head">
-                        <div class="reviews-slide__photo">
-                            <img src="img/photo.png" alt="">
-                        </div>
-                        <div class="reviews-slide__descr">
-                            <div class="reviews-slide__name">Максим Нагорный</div>
-                            <div class="reviews-slide__age">37 лет</div>
-                        </div>
-                    </div>
-                    <div class="reviews-slide__text">Главное, что я понял, такое заболевание даётся не «за что-то»,
-                        а «для чего-то», чтобы человек понял, что надо изменить в себе, в своём отношении к людям,
-                        к окружающей жизни</div>
-                    <button class="reviews-slide__btn btn btn-blue">Читать историю</button>
+                <div class="fixed-btns__right">
+                    <a href="#" class="btn animate" data-effect="opacity" data-duration="1" data-delay="2.9"><span>Book
+                            WL</span></a>
                 </div>
             </div>
         </div>
     </div>
-    <a href="" class="connect-block">
-        <img class="call-small" src="img/icons/Call.png" alt="">
-        <div class="connect-text">
-            связаться с нами
-            <svg class="connect-arrow">
-                <use xlink:href="./img/icons/icons.svg#link-arrow"></use>
-            </svg>
-        </div>
-    </a>
-</section>
-            <section class="team">
-    <div class="container team-container">
-        <div class="team__wrapper">
-            <div class="team__all">
-                <div class="team__all-title">Наша команда</div>
-                <div class="team__all-scroll">
-                    <div class="team__all-doc team-doc">
-                        <div class="team-doc__photo">
-                            <img src="img/doc_1.png" alt="">
-                        </div>
-                        <div class="team-doc__descr">
-                            <div class="team-doc__name">Лактионов Константин Константинович</div>
-                            <div class="team-doc__prof">заведующий отделением, профессор, д.м.н.</div>
-                        </div>
-                    </div>
-                    <div class="team__all-doc team-doc">
-                        <div class="team-doc__photo">
-                            <img src="img/doc_2.png" alt="">
-                        </div>
-                        <div class="team-doc__descr">
-                            <div class="team-doc__name">Бредер Валерий Владимирович</div>
-                            <div class="team-doc__prof">онколог, химиотерапевт, ведущий научный сотрудник, д.м.н.</div>
-                        </div>
-                    </div>
-                    <div class="team__all-doc team-doc">
-                        <div class="team-doc__photo">
-                            <img src="img/doc_3.png" alt="">
-                        </div>
-                        <div class="team-doc__descr">
-                            <div class="team-doc__name">Реутова Елена Валерьевна</div>
-                            <div class="team-doc__prof">онколог, химиотерапевт, старший научный сотрудник, к.м.н.</div>
-                        </div>
-                    </div>
-                    <div class="team__all-doc team-doc">
-                        <div class="team-doc__photo">
-                            <img src="img/doc_1.png" alt="">
-                        </div>
-                        <div class="team-doc__descr">
-                            <div class="team-doc__name">Юдин Денис Иванович</div>
-                            <div class="team-doc__prof">онколог, старшиий научный сотрудник, к.м.н.</div>
-                        </div>
-                    </div>
-                    <div class="team__all-doc team-doc">
-                        <div class="team-doc__photo">
-                            <img src="img/doc_4.png" alt="">
-                        </div>
-                        <div class="team-doc__descr">
-                            <div class="team-doc__name">Лактионов Константин Павлович</div>
-                            <div class="team-doc__prof">профессор, ведущий научный сотрудник, д.м.н.</div>
-                        </div>
-                    </div>
-                    <div class="team__all-doc team-doc">
-                        <div class="team-doc__photo">
-                            <img src="img/doc_1.png" alt="">
-                        </div>
-                        <div class="team-doc__descr">
-                            <div class="team-doc__name">Лактионов Константин Константинович</div>
-                            <div class="team-doc__prof">заведующий отделением, профессор, д.м.н.</div>
-                        </div>
-                    </div>
-                    <div class="team__all-doc team-doc">
-                        <div class="team-doc__photo">
-                            <img src="img/doc_2.png" alt="">
-                        </div>
-                        <div class="team-doc__descr">
-                            <div class="team-doc__name">Бредер Валерий Владимирович</div>
-                            <div class="team-doc__prof">онколог, химиотерапевт, ведущий научный сотрудник, д.м.н.</div>
-                        </div>
-                    </div>
-                    <div class="team__all-doc team-doc">
-                        <div class="team-doc__photo">
-                            <img src="img/doc_3.png" alt="">
-                        </div>
-                        <div class="team-doc__descr">
-                            <div class="team-doc__name">Реутова Елена Валерьевна</div>
-                            <div class="team-doc__prof">онколог, химиотерапевт, старший научный сотрудник, к.м.н.</div>
-                        </div>
-                    </div>
-                    <div class="team__all-doc team-doc">
-                        <div class="team-doc__photo">
-                            <img src="img/doc_1.png" alt="">
-                        </div>
-                        <div class="team-doc__descr">
-                            <div class="team-doc__name">Юдин Денис Иванович</div>
-                            <div class="team-doc__prof">онколог, старшиий научный сотрудник, к.м.н.</div>
-                        </div>
-                    </div>
-                    <div class="team__all-doc team-doc">
-                        <div class="team-doc__photo">
-                            <img src="img/doc_4.png" alt="">
-                        </div>
-                        <div class="team-doc__descr">
-                            <div class="team-doc__name">Лактионов Константин Павлович</div>
-                            <div class="team-doc__prof">профессор, ведущий научный сотрудник, д.м.н.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="team__biography">
-                <div class="team__biography-circle">
-                    <img src="img/Ellipse.png" alt="">
-                </div>
-                <div class="team__biography-link">
-                    <a href="">
-                        Биография
-                        <svg class="bio-arrow">
-                            <use xlink:href="./img/icons/icons.svg#Arrow"></use>
-                        </svg>
-                    </a>
-                </div>
-                <div class="team__biography-img">
-                    <img src="img/team.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        </main>
-        <footer class="footer">
-    <div class="container footer-container">
-        <div class="footer__wrapper">
-            <div class="footer-info">
-                <div class="footer-title">НИИ клинической онкологии им. Н.Н. Трапезникова</div>
-                <div class="footer-info__text">ФГБУ «Национальный медицинский исследовательский центр онкологии им. Н.Н.
-                    Блохина» Минздрава России – крупнейшая онкологическая клиника России и Европы, одна из самых крупных
-                    онкологических клиник в мире, имеющая в своем арсенале новейшее оборудование и все передовые
-                    методики диагностики и лечения рака.</div>
-            </div>
-            <div class="footer-contacts">
-                <div class="footer-title">КОНТАКТЫ</div>
-                <div class="footer-contacts__item footer-contacts--adress">
-                    <span class="footer-contacts__icon">
-                        <img src="img/icons/Location.svg" alt="">
-                    </span>
-                    <div class="footer-contacts__text"> Адрес: 115478, г. Москва, Каширское шоссе д. 23</div>
-                </div>
-                <div class="footer-contacts__item footer-contacts--phone">
-                    <span class="footer-contacts__icon">
-                        <img src="img/icons/Call.svg" alt="">
-                    </span>
-                    <div class="footer-contacts__phone">
-                        <a href="tel:84993242424" class="footer-contacts__link">8 (499) 324-24-24</a>
-                        <div class="footer-contacts__descr">
-                            единая справочная служба
-                            <span>будни с 8:30 до 17:15</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-contacts__item footer-contacts--email">
-                    <span class="footer-contacts__icon">
-                        <img src="img/icons/Message.svg" alt="">
-                    </span>
-                    <a href="#" class="footer-contacts__link footer-contacts__link--email">info@immunooncology.ru</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer__sites">
-            <a href="www.ronc.ru" class="footer__sites-link">www.ronc.ru</a>
-            <a href="www.immunooncology.ru" class="footer__sites-link">www.immunooncology.ru</a>
-            <a href="www.onconext.ru" class="footer__sites-link">www.onconext.ru</a>
-        </div>
-        <div class="footer__links">
-            <a href="" class="footer__links-link">Пользовательское соглашение</a>
-            <a href="" class="footer__links-link">Политика конфиденциальности</a>
-        </div>
-        <div class="footer__copy">
-            Copyright © 2021 АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ "НАЦИОНАЛЬНОЕ ОБЩЕСТВО ОНКО-ПУЛЬМОНОЛОГОВ"
-        </div>
-    </div>
-</footer>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"
-    integrity="sha512-Yk47FuYNtuINE1w+t/KT4BQ7JaycTCcrvlSvdK/jry6Kcxqg5vN7/svVWCxZykVzzJHaxXk5T9jnFemZHSYgnw=="
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
-<script src="js/jquery.mask.min.js"></script>
-<script src="js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/libs/gsap.min.js"></script>
+    <script src="./js/libs/ScrollSmoother.min.js"></script>
+    <script src="./js/libs/ScrollTrigger.min.js"></script>
+
+    <script src="js/script.js" type="module" defer></script>
 </body>
 
 </html>
