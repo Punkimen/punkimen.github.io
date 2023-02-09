@@ -439,6 +439,7 @@ li {
   z-index: 1;
   opacity: 0;
   pointer-events: none;
+  transition: opacity ease 0.3s;
 }
 
 .description-reality__inner {

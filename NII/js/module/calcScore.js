@@ -31,7 +31,6 @@ export class CalcStats {
 		this.summ = totalSumm;
 	}
 	render() {
-		console.log(this.score);
 		powerEl.textContent = this.stats.power.toFixed(1);
 		energyEl.textContent = this.stats.energy.toFixed(1);
 		luckEl.textContent = this.stats.luck.toFixed(1);
