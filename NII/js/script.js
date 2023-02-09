@@ -3,7 +3,7 @@ import { sliderInit } from "./module/sliderInit.js";
 import { observerScroll } from "./module/scrollTrigerAnimation.js";
 import { splitText } from "./module/splitText.js";
 import { setStyle } from "./module/setStyle.js";
-// import { sectionHeightInit } from "./module/sectionHeightInit.js";
+import { sectionHeightInit } from "./module/sectionHeightInit.js";
 
 import { fadeDown,fadeIn,flipAnim,lineShow,opacityIn,scalingPositive,transformTop } from "./module/GSAPAnim.js";
 import { CalcStats } from "./module/calcScore.js";
@@ -124,7 +124,7 @@ window.onload = function () {
 		titles.forEach((el) => {
 			splitText(el);
 		});
-		// sectionHeightInit();
+		sectionHeightInit();
 		// parallaxInit();
 
 		// score
@@ -219,24 +219,19 @@ window.onload = function () {
 		})
 
 		const pinEl = document.querySelector('.description-reality__content')
+		const triggerEl = document.querySelector(".description-reality")
+		console.log(triggerEl.clientHeight)
 		// gsap.set(pinEl,{ xPercent: -50,yPercent: -50 })
-		gsap.fromTo(pinEl,{ opacity: 0 },{
-			opacity: 1,
-			scrollTrigger: {
-				trigger: ".description-reality",
-				start: "20% top",
-				end: "80% bottom",
-				grab: true,
-			}
-		})
 		const showEl = (el,isShow) => {
+			console.log(isShow)
 			isShow ? el.style.opacity = 1 : el.style.opacity = 0
 		}
 		const st = ScrollTrigger.create({
 			trigger: ".description-reality",
 			pinned: true,
 			start: "top top",
-			end: "bottom bottom",
+			end: "80% bottom",
+			marker: true,
 			onToggle: self => showEl(pinEl,self.isActive),
 		});
 	};

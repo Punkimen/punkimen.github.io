@@ -1,6 +1,10 @@
-export const sectionHeightInit = () => {};
-const section = document.querySelector(".adventure");
-const bg = document.querySelector(".description-reality__gradient");
-const height = bg.clientHeight;
-bg.style.paddingBottom = `${height / 4}px`;
-section.style.marginTop = `-${height / 1.7}px`;
+export const sectionHeightInit = () => { };
+const sectionTop = document.querySelector(".hero");
+const sectionBottom = document.querySelector(".adventure");
+const bg = document.querySelector(".description-reality");
+const heightSection = sectionTop.clientHeight;
+const heightBg = bg.clientHeight;
+bg.style.paddingTop = `${heightSection / 2}px`;
+// bg.style.paddingBottom = `${heightBg / 4}px`;
+bg.style.marginTop = `-${heightBg / 2.5}px`;
+sectionBottom.style.marginTop = `-${heightBg / 5}px`;
