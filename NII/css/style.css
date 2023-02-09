@@ -1,3 +1,15 @@
+[data-effect=fade-down] {
+  display: block;
+}
+
+[data-effect=line] {
+  display: block;
+}
+
+.flip {
+  display: block;
+}
+
 :root {
   --color-main: #0003FF;
 }
@@ -57,11 +69,6 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.main-screen {
-  position: relative;
-  z-index: 7;
 }
 
 .container {

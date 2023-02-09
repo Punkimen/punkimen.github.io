@@ -9,4 +9,4 @@ heightSection = heightSection < 300 ? 300 : sectionTop.clientHeight
 bg.style.paddingTop = `${heightSection / 4}px`;
 // bg.style.paddingBottom = `${heightBg / 4}px`;
 bg.style.marginTop = `-${heightSection / 2.5}px`;
-sectionBottom.style.marginTop = `-${heightBg / 6}px`;
+sectionBottom.style.marginTop = `-${heightBg / 10}px`;

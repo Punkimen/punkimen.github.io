@@ -185,7 +185,7 @@ window.onload = function () {
 			".find-map__point .map-point__circle"
 		);
 		const mapPointsFindText = document.querySelectorAll(
-			".find-map__point .map-point__circle"
+			".find-map__point .map-point__text"
 		);
 		mapPointsFindCircles.forEach((el) => {
 			const delay = el.getAttribute("data-delay")
@@ -222,10 +222,10 @@ window.onload = function () {
 				el,
 				{
 					opacity: 0,
-					z: "-80%",
+					y: "80%",
 				},
 				{
-					z: 0,
+					y: 0,
 					opacity: 1,
 					delay: delay,
 					duration: duration,
@@ -328,7 +328,7 @@ window.onload = function () {
 			trigger: ".description-reality",
 			pinned: true,
 			start: "top top",
-			end: "60% bottom",
+			end: "bottom bottom",
 			marker: true,
 			onToggle: (self) => showEl(pinEl,self.isActive),
 		});
