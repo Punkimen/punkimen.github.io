@@ -140,7 +140,7 @@ li {
 
 .main__title {
   line-height: 0.85;
-  font-size: 6.4vw;
+  font-size: 8.4vw;
   letter-spacing: -0.01em;
   text-transform: uppercase;
 }
@@ -482,16 +482,16 @@ li {
 }
 
 .adventure__content {
-  width: 40vw;
+  width: 43vw;
   margin: 0 auto;
   position: relative;
   margin-bottom: 8.3vw;
 }
 
 .adventure__title {
-  line-height: 0.85;
-  font-size: 6.4vw;
-  letter-spacing: -0.01em;
+  line-height: 0.82;
+  font-size: 8.4vw;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
 }
 
@@ -505,11 +505,11 @@ li {
 }
 
 .adventure__title-row_1 {
-  padding-left: 4.2vw;
+  padding-left: 5.7vw;
 }
 
 .adventure__title-row_2 {
-  padding-left: 11.6vw;
+  padding-left: 14.2vw;
   transition-delay: 0.2s;
 }
 
@@ -519,7 +519,7 @@ li {
 
 .adventure__text {
   max-width: 12.5vw;
-  right: -2.97vw;
+  right: -11.5vw;
   bottom: -2.03vw;
   position: absolute;
 }
@@ -630,7 +630,7 @@ li {
 }
 
 .create-omi__descr {
-  width: 55vw;
+  width: 62vw;
   margin: 0 auto;
   position: relative;
 }
@@ -649,18 +649,18 @@ li {
 }
 
 .create-omi__title-row_2 {
-  padding-left: 16.14vw;
+  padding-left: 20.14vw;
 }
 
 .create-omi__title-row_3 {
-  padding-left: 13vw;
+  padding-left: 15vw;
 }
 
 .create-omi__text {
-  width: 16.25vw;
+  width: 15.25vw;
   position: absolute;
-  bottom: -4.9vw;
-  right: -0.63vw;
+  bottom: -2.3vw;
+  right: -2.3vw;
 }
 
 .create-omi__slider {
@@ -691,7 +691,7 @@ li {
 }
 
 .create-omi__cards {
-  width: 61.19vw;
+  width: 81vw;
   margin: 0 auto;
 }
 
@@ -708,7 +708,7 @@ li {
 }
 
 .omi-card {
-  padding: 3vw 1.8vw 3vw 1.8vw;
+  padding: 4.2vw 3.2vw 3vw 3.6vw;
   border-radius: 3.49vw;
   position: relative;
   width: 100%;
@@ -742,12 +742,13 @@ li {
 }
 
 .omi-card__text {
-  font-size: 0.94vw;
+  font-weight: 400;
+  font-size: 0.85vw;
   line-height: 1.5em;
   text-align: center;
   mix-blend-mode: normal;
   opacity: 0.37;
-  margin: 0 auto 2vw;
+  margin: 0 auto 5vw;
 }
 
 .omi-card__handle {
@@ -755,7 +756,7 @@ li {
 }
 
 .omi-card__row {
-  padding: 1.2vw 0px 1.2vw 0.42vw;
+  padding: 1.2vw 0px 1.7vw 0vw;
   border-top: 1px solid #323233;
   display: flex;
   align-items: flex-start;
@@ -808,7 +809,7 @@ li {
 }
 
 .omi-card__point-value {
-  font-size: 1.35vw;
+  font-size: 1.9vw;
   line-height: 1em;
   font-weight: 200;
   margin: 0 0.89vw;
@@ -823,7 +824,7 @@ li {
 
 .omi-card__total-value {
   font-weight: 300;
-  font-size: 2.76vw;
+  font-size: 3.76vw;
   line-height: 1em;
   position: relative;
   left: 0.47vw;
@@ -833,20 +834,19 @@ li {
 .omi-card__total-descr {
   width: 5.21vw;
   text-transform: uppercase;
-  font-size: 0.73vw;
-  padding-top: 0.42vw;
+  font-size: 0.9vw;
 }
 
 .omi-card__unallocated-points {
   position: absolute;
   top: 0;
   right: 0;
-  width: 3.65vw;
-  height: 3.65vw;
+  width: 4.8vw;
+  height: 4.8vw;
   font-weight: 600;
-  font-size: 1.2vw;
+  font-size: 1.6vw;
   background: #8A1010;
-  transform: translate(25%, -25%);
+  transform: translate(10%, -20%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -877,7 +877,7 @@ li {
 
 .find__descr {
   position: relative;
-  width: 45.51vw;
+  width: 66.51vw;
   margin: 0 auto;
 }
 
@@ -885,11 +885,15 @@ li {
   letter-spacing: -0.03em;
   position: relative;
   left: 1.04vw;
-  margin-bottom: 12.7vw;
+  margin-bottom: 22.7vw;
 }
 
 .find__title-row {
   perspective: 600px;
+}
+
+.find__title-row_1 {
+  padding-left: 7vw;
 }
 
 .find__title-row_2 {
@@ -897,18 +901,18 @@ li {
 }
 
 .find__title-row_3 {
-  padding-left: 10.77vw;
+  padding-left: 21.77vw;
 }
 
 .find__title-row_4 {
-  padding-left: 4.5vw;
+  padding-left: 13.5vw;
 }
 
 .find__text {
   width: 14.9vw;
   position: absolute;
-  top: 14.9vw;
-  right: -7.86vw;
+  top: 18vw;
+  right: 4.8vw;
 }
 
 .find-map {
@@ -1058,13 +1062,17 @@ li {
 }
 
 .descover {
-  padding: 4.48vw 0 5vw;
+  padding: 0vw 0 5vw;
 }
 
 .descover__descr {
-  width: 40.85vw;
+  width: 54vw;
   margin: 0 auto 1.04vw;
   position: relative;
+}
+
+.descover__title {
+  letter-spacing: -0.03em;
 }
 
 .descover__title-row {
@@ -1072,11 +1080,11 @@ li {
 }
 
 .descover__title-row_1 {
-  padding-left: 0.89vw;
+  padding-left: 4.2vw;
 }
 
 .descover__title-row_2 {
-  padding-left: 6.75vw;
+  padding-left: 11.75vw;
 }
 
 .descover__title-row_3 {
@@ -1085,19 +1093,19 @@ li {
 }
 
 .descover__title-row_4 {
-  padding-left: 5.29vw;
+  padding-left: 10.29vw;
 }
 
 .descover__text {
   width: 13.2vw;
   position: absolute;
   bottom: 3.33vw;
-  right: -3.86vw;
+  right: -2.86vw;
 }
 
 .descover__map {
   position: relative;
-  margin-bottom: 4.27vw;
+  margin-bottom: 12.27vw;
 }
 
 .descover__map-img {
@@ -1109,7 +1117,7 @@ li {
 .descover__journey-title {
   text-align: center;
   font-size: 3.65vw;
-  margin-bottom: 6.6vw;
+  margin-bottom: 5.6vw;
   line-height: 1.3em;
   font-weight: 500;
   letter-spacing: -0.01em;
@@ -1129,7 +1137,7 @@ li {
 }
 
 .descover__journey-cards {
-  width: 65vw;
+  width: 54vw;
   margin: 0 auto;
   display: flex;
 }
@@ -1173,8 +1181,8 @@ li {
   width: 100%;
   background: #0F1015;
   border-radius: 3.49vw;
-  padding: 5.21vw 4.69vw 2.6vw 4.27vw;
-  min-height: 43.44vw;
+  padding: 4vw 4.5vw 2.6vw 4vw;
+  min-height: 35.44vw;
 }
 
 .journey-card:not(:last-child) {
@@ -1182,18 +1190,18 @@ li {
 }
 
 .journey-card__title {
-  font-size: 2.29vw;
+  font-size: 1.82vw;
   letter-spacing: 0.01em;
   line-height: 1.25em;
-  margin-bottom: 2.5vw;
+  margin-bottom: 1.5vw;
 }
 
 .journey-card__text {
-  font-size: 1.09vw;
-  line-height: 1.3em;
+  font-size: 0.94vw;
+  line-height: 1.5em;
   font-weight: 400;
   color: #DEDEDE;
-  letter-spacing: 0.015em;
+  letter-spacing: 0.01em;
 }
 
 .pvp {
@@ -1327,6 +1335,36 @@ li {
 
 .collection__text p:not(:last-child) {
   margin-bottom: 1.98vw;
+}
+
+.market {
+  padding: 10vw 0 10vw;
+}
+
+.market__wrapper {
+  position: relative;
+  left: 1.2vw;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.market__title {
+  letter-spacing: -0.04em;
+}
+
+.market__title-row_2 {
+  padding-left: 14.74vw;
+}
+
+.market__title-row_3 {
+  padding-left: 25.52vw;
+}
+
+.market__text {
+  position: absolute;
+  bottom: -8vw;
+  right: 5.73vw;
+  width: 16.67vw;
 }
 
 @media (min-width: 1921px) {

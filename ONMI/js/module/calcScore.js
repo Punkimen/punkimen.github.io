@@ -35,7 +35,7 @@ export class CalcStats {
 		energyEl.textContent = this.stats.energy.toFixed(1);
 		luckEl.textContent = this.stats.luck.toFixed(1);
 		scoreEl.textContent =
-			this.score.toFixed(1) == 0.0 ? 0 : this.score.toFixed(1);
+			this.score.toFixed(1) == 0.0 ? 0 : `+${this.score.toFixed(1)}`;
 		summEl.textContent = `$${this.summ.toFixed(0)}`;
 	}
 	setStat() {
