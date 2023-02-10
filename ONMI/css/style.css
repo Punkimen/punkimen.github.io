@@ -140,7 +140,7 @@ li {
 
 .main__title {
   line-height: 0.85;
-  font-size: 9.2vw;
+  font-size: 6.4vw;
   letter-spacing: -0.01em;
   text-transform: uppercase;
 }
@@ -482,16 +482,15 @@ li {
 }
 
 .adventure__content {
-  max-width: 58vw;
-  width: 100%;
+  width: 40vw;
   margin: 0 auto;
   position: relative;
-  margin-bottom: 13.3vw;
+  margin-bottom: 8.3vw;
 }
 
 .adventure__title {
   line-height: 0.85;
-  font-size: 9.2vw;
+  font-size: 6.4vw;
   letter-spacing: -0.01em;
   text-transform: uppercase;
 }
@@ -506,11 +505,11 @@ li {
 }
 
 .adventure__title-row_1 {
-  padding-left: 6.2vw;
+  padding-left: 4.2vw;
 }
 
 .adventure__title-row_2 {
-  padding-left: 15.9vw;
+  padding-left: 11.6vw;
   transition-delay: 0.2s;
 }
 
@@ -631,14 +630,14 @@ li {
 }
 
 .create-omi__descr {
-  width: 67.92vw;
+  width: 55vw;
   margin: 0 auto;
   position: relative;
 }
 
 .create-omi__title {
   letter-spacing: -0.025em;
-  margin-bottom: 16.4vw;
+  margin-bottom: 12.4vw;
 }
 
 .create-omi__title-row {
@@ -650,11 +649,11 @@ li {
 }
 
 .create-omi__title-row_2 {
-  padding-left: 22.14vw;
+  padding-left: 16.14vw;
 }
 
 .create-omi__title-row_3 {
-  padding-left: 16.15vw;
+  padding-left: 13vw;
 }
 
 .create-omi__text {
@@ -692,7 +691,7 @@ li {
 }
 
 .create-omi__cards {
-  width: 87.19vw;
+  width: 61.19vw;
   margin: 0 auto;
 }
 
@@ -709,9 +708,10 @@ li {
 }
 
 .omi-card {
-  padding: 4.38vw 2.6vw 4.08vw 2.6vw;
+  padding: 3vw 1.8vw 3vw 1.8vw;
   border-radius: 3.49vw;
   position: relative;
+  width: 100%;
 }
 
 .omi-card_custom {
@@ -736,7 +736,7 @@ li {
 
 .omi-card__title {
   font-weight: 600;
-  font-size: 1.61vw;
+  font-size: 1.4vw;
   text-align: center;
   margin-bottom: 1.04vw;
 }
@@ -747,17 +747,15 @@ li {
   text-align: center;
   mix-blend-mode: normal;
   opacity: 0.37;
-  width: 20.36vw;
-  margin: 0 auto 5.47vw;
+  margin: 0 auto 2vw;
 }
 
 .omi-card__handle {
-  width: 21.61vw;
   margin: 0 auto;
 }
 
 .omi-card__row {
-  padding: 1.2vw 0px 1.98vw 0.42vw;
+  padding: 1.2vw 0px 1.2vw 0.42vw;
   border-top: 1px solid #323233;
   display: flex;
   align-items: flex-start;
@@ -788,6 +786,7 @@ li {
 }
 
 .omi-card__point {
+  text-align: center;
   display: flex;
   align-items: center;
 }
@@ -809,11 +808,11 @@ li {
 }
 
 .omi-card__point-value {
-  font-size: 1.93vw;
+  font-size: 1.35vw;
   line-height: 1em;
   font-weight: 200;
   margin: 0 0.89vw;
-  min-width: 3.65vw;
+  min-width: 2.6vw;
 }
 
 .omi-card__total {
@@ -824,30 +823,30 @@ li {
 
 .omi-card__total-value {
   font-weight: 300;
-  font-size: 3.96vw;
+  font-size: 2.76vw;
   line-height: 1em;
   position: relative;
   left: 0.47vw;
-  margin-right: 1.56vw;
+  margin-right: 0.78vw;
 }
 
 .omi-card__total-descr {
   width: 5.21vw;
   text-transform: uppercase;
-  font-size: 0.83vw;
+  font-size: 0.73vw;
   padding-top: 0.42vw;
 }
 
 .omi-card__unallocated-points {
   position: absolute;
-  top: 1.56vw;
-  right: 2.08vw;
-  width: 5.21vw;
-  height: 5.21vw;
+  top: 0;
+  right: 0;
+  width: 3.65vw;
+  height: 3.65vw;
   font-weight: 600;
-  font-size: 1.61vw;
+  font-size: 1.2vw;
   background: #8A1010;
-  transform: translate(50%, -50%);
+  transform: translate(25%, -25%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -878,7 +877,7 @@ li {
 
 .find__descr {
   position: relative;
-  width: 66.51vw;
+  width: 45.51vw;
   margin: 0 auto;
 }
 
@@ -886,7 +885,7 @@ li {
   letter-spacing: -0.03em;
   position: relative;
   left: 1.04vw;
-  margin-bottom: 18.7vw;
+  margin-bottom: 12.7vw;
 }
 
 .find__title-row {
@@ -898,11 +897,11 @@ li {
 }
 
 .find__title-row_3 {
-  padding-left: 16.77vw;
+  padding-left: 10.77vw;
 }
 
 .find__title-row_4 {
-  padding-left: 7.92vw;
+  padding-left: 4.5vw;
 }
 
 .find__text {
@@ -1063,7 +1062,7 @@ li {
 }
 
 .descover__descr {
-  width: 53.85vw;
+  width: 40.85vw;
   margin: 0 auto 1.04vw;
   position: relative;
 }
@@ -1077,22 +1076,23 @@ li {
 }
 
 .descover__title-row_2 {
-  padding-left: 8.75vw;
+  padding-left: 6.75vw;
 }
 
 .descover__title-row_3 {
   text-align: right;
+  padding-right: 2vw;
 }
 
 .descover__title-row_4 {
-  padding-left: 7.29vw;
+  padding-left: 5.29vw;
 }
 
 .descover__text {
   width: 13.2vw;
   position: absolute;
   bottom: 3.33vw;
-  right: -2.86vw;
+  right: -3.86vw;
 }
 
 .descover__map {

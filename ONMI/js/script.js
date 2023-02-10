@@ -346,10 +346,10 @@ window.onload = function () {
 			},
 		})
 
-		gsap.fromTo('.collection__title',{ x: "50%" },{
-			x: '-100%',
+		gsap.fromTo('.collection__title',{ x: "18%" },{
+			x: '-40%',
 			scrollTrigger: {
-				trigger: '.collection',
+				trigger: '.collection__title',
 				start: 'top bottom',
 				end: 'bottom',
 				scrub: true
