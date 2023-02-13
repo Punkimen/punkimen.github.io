@@ -315,6 +315,8 @@ window.onload = function () {
 				ease: "none",
 			}
 		);
+
+
 		const pvpShowElems = document.querySelectorAll(".pvp-show");
 		pvpShowElems.forEach((el) => {
 			gsap.fromTo(
@@ -358,6 +360,24 @@ window.onload = function () {
 		})
 
 		Marquee3k.init()
+
+		// hunger games
+
+		gsap.fromTo(
+			".hunger-games__title",
+			{ scale: 1.7 },
+			{
+				scale: 1,
+				scrollTrigger: {
+					trigger: ".hunger-games",
+					start: "top bottom",
+					end: "15% center",
+					scrub: true,
+				},
+				ease: "none",
+			}
+		);
+
 
 		let mapPoints = gsap.utils.toArray(".hunger-games__map-point");
 		mapPoints.forEach(el => {
