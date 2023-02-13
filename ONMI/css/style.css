@@ -1345,7 +1345,7 @@ li {
   position: relative;
   left: 1.2vw;
   width: 70vw;
-  margin: 0 auto;
+  margin: 0 auto 18.75vw;
 }
 
 .market__title {
@@ -1365,6 +1365,42 @@ li {
   bottom: -8vw;
   right: 5.73vw;
   width: 16.67vw;
+}
+
+.market-catalog__row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.market-catalog__row-item {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.market-catalog__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 13.85vw;
+  height: 15.78vw;
+  border: 0.5px solid #282B36;
+  padding: 1.77vw;
+}
+
+.market-catalog__item img {
+  display: block;
+  width: 11.3vw;
+  height: auto;
+}
+
+.market-catalog__item_text {
+  align-items: flex-start;
+  justify-content: start;
+  white-space: normal;
+  font-size: 0.83vw;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  background: #1A1A20;
 }
 
 @media (min-width: 1921px) {
