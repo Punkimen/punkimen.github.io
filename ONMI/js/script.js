@@ -10,6 +10,7 @@ import {
 	flipAnim,
 	lineShow,
 	opacityIn,
+	pointShow,
 	scalingPositive,
 	transformTop,
 } from "./module/GSAPAnim.js";
@@ -356,20 +357,12 @@ window.onload = function () {
 			},
 		})
 
-		console.log(Marquee3k);
 		Marquee3k.init()
-		// var reeller = new Reeller({
-		// 	container: '.my-reel',
-		// 	wrapper: '.my-reel-wrap',
-		// 	itemSelector: '.my-reel-item',
-		// 	speed: 10,
-		// });
 
-		// const marquee = Marquee.init({
-		// 	selector: '.marquee', // default: .marquee
-		// 	gsap: TimelineLite // required! you must specify which GSAP you're using
-		// });
-
+		let mapPoints = gsap.utils.toArray(".hunger-games__map-point");
+		mapPoints.forEach(el => {
+			pointShow(el,'.hunger-games__map')
+		})
 	};
 	initPage();
 };

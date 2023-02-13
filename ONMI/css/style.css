@@ -1403,6 +1403,161 @@ li {
   background: #1A1A20;
 }
 
+.hunger-games {
+  padding: 10vw 0 10vw;
+}
+
+.hunger-games__wrapper {
+  position: relative;
+  margin-bottom: 14vw;
+}
+
+.hunger-games__title {
+  font-size: 23.18vw;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 0.8em;
+  letter-spacing: -0.01em;
+  perspective: 600;
+}
+
+.hunger-games__pose {
+  position: absolute;
+  top: 0;
+  left: 23.5vw;
+}
+
+.hunger-games__content {
+  text-transform: uppercase;
+  width: 19.27vw;
+  margin: 0 auto;
+  position: relative;
+  left: 9.64vw;
+}
+
+.hunger-games__content_down {
+  text-transform: uppercase;
+  width: 23.07vw;
+  margin: 0 auto;
+  position: relative;
+  left: 11.64vw;
+}
+
+.hunger-games__subtitle {
+  font-size: 1.88vw;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+
+.hunger-games__subtitle:not(:last-child) {
+  margin-bottom: 3.39vw;
+}
+
+.hunger-games__subtitle span {
+  display: block;
+}
+
+.hunger-games__subtitle span:not(:last-child) {
+  margin-bottom: 2.45vw;
+}
+
+.hunger-games__subtitle span:last-child {
+  width: 22.66vw;
+}
+
+.hunger-games__text {
+  font-size: 0.83vw;
+  line-height: 2;
+  width: 16.93vw;
+}
+
+.hunger-games__text p {
+  display: block;
+}
+
+.hunger-games__text p:not(:last-child) {
+  margin-bottom: 1.46vw;
+}
+
+.hunger-games__map {
+  position: relative;
+  margin: 5.31vw auto 4.8vw;
+  width: 76vw;
+}
+
+.hunger-games__map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.world__map-point {
+  position: absolute;
+}
+
+.world__map-point_1 {
+  top: 227px;
+  left: 156px;
+}
+
+.world__map-point_2 {
+  top: 300px;
+  left: 248px;
+}
+
+.world__map-point_3 {
+  top: 389px;
+  left: 265px;
+}
+
+.world__map-point_4 {
+  top: 250px;
+  left: 404px;
+}
+
+.world__map-point_5 {
+  bottom: 206px;
+  left: 459px;
+}
+
+.world__map-point_6 {
+  top: 236px;
+  left: 670px;
+}
+
+.world__map-point_7 {
+  top: 272px;
+  left: 686px;
+}
+
+.world__map-point_8 {
+  top: 634px;
+  right: 673px;
+}
+
+.world__map-point_9 {
+  top: 389px;
+  right: 539px;
+}
+
+.world__map-point_10 {
+  top: 531px;
+  right: 294px;
+}
+
+.world__map-point_11 {
+  top: 329px;
+  right: 210px;
+}
+
+.world__map-circle {
+  width: 0.89vw;
+  height: 0.89vw;
+  border-radius: 50%;
+  background: radial-gradient(108.5% 108.5% at 50% 50%, #303951 0%, #4EEDD9 100%);
+  box-shadow: inset 0px 0px 6px 2px #8CFBA5;
+}
+
 @media (min-width: 1921px) {
   .main__text {
     font-size: 1vw;

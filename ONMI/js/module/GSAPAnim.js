@@ -112,3 +112,24 @@ export const flipAnim = el => {
 		y: 0
 	})
 }
+
+export const pointShow = (el,trigger) => {
+	const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
+	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1
+	gsap.fromTo(el,{
+		opacity: 0,
+		y: '180%',
+		scale: 0.1
+	},{
+		y: 0,
+		scale: 1,
+		opacity: 1,
+		delay: delay,
+		duration: duration,
+		ease: "power1.inOut",
+		scrollTrigger: {
+			trigger: trigger,
+		}
+	})
+
+}
