@@ -344,7 +344,7 @@ window.onload = function () {
 			scrollTrigger: {
 				trigger: '.pvp',
 				start: 'center',
-				end: '+=80%',
+				end: 'bottom middle',
 				scrub: true
 			},
 		})

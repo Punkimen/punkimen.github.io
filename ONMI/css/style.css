@@ -78,6 +78,10 @@ li {
   height: 100%;
 }
 
+.blue-text {
+  color: var(--color-main);
+}
+
 .btn {
   font-family: inherit;
   cursor: pointer;
@@ -1425,7 +1429,7 @@ li {
   position: absolute;
   top: 0;
   left: 23.5vw;
-  width: 49.84vw;
+  width: 59vw;
 }
 
 .hunger-games__pose img {
@@ -1563,6 +1567,231 @@ li {
   border-radius: 50%;
   background: radial-gradient(108.5% 108.5% at 50% 50%, #303951 0%, #4EEDD9 100%);
   box-shadow: inset 0px 0px 6px 2px #8CFBA5;
+}
+
+.step__container {
+  padding: 0 3.13vw;
+}
+
+.step__wrapper {
+  padding-top: 2.4vw;
+  border-top: 1px solid #979797;
+  display: flex;
+  margin-bottom: 21.88vw;
+}
+
+.step__descr {
+  text-transform: uppercase;
+}
+
+.step__title {
+  width: 24.48vw;
+  font-size: 4.17vw;
+  line-height: 1em;
+  font-weight: 600;
+  margin-bottom: 1.56vw;
+}
+
+.step__text {
+  width: 18.49vw;
+  color: #5F5F5F;
+  font-size: 0.73vw;
+  line-height: 1.8em;
+}
+
+.step__list {
+  -moz-columns: 2;
+  columns: 2;
+  text-transform: uppercase;
+  padding-right: 1.82vw;
+  font-size: 0.83vw;
+  line-height: 1.68em;
+}
+
+.step__list-elem {
+  position: relative;
+  width: 13.54vw;
+  min-height: 5.73vw;
+  margin-bottom: 4.58vw;
+}
+
+.step__list-elem::before {
+  content: attr(data-count);
+  border: 2px solid #555555;
+  color: #555555;
+  font-weight: 700;
+  font-size: 0.63vw;
+  line-height: 1.3em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 1.2vw;
+  height: 1.2vw;
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.be-part {
+  padding-bottom: 9.27vw;
+  border-bottom: 1px solid #979797;
+  margin-bottom: 2.45vw9 0.27vw;
+}
+
+.be-part__content {
+  position: relative;
+  margin-bottom: 3.54vw;
+}
+
+.be-part__title-row {
+  display: block;
+  perspective: 600px;
+}
+
+.be-part__title-row_2 {
+  padding-left: 10.26vw;
+}
+
+.be-part__title-row_4 {
+  padding-left: 23.54vw;
+}
+
+.be-part__title-row_5 {
+  text-align: right;
+}
+
+.be-part__pose {
+  position: absolute;
+  top: -9.27vw;
+  left: 9.27vw;
+}
+
+.be-part__pose img {
+  display: block;
+  width: 81.41vw;
+  height: auto;
+}
+
+.circles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: 0;
+  padding-right: 13.18vw;
+}
+
+.circle {
+  position: relative;
+}
+
+.circle img {
+  display: block;
+  width: 2.4vw;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.circle::after {
+  content: url(../img/icons/circle-triangle.svg);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.26vw;
+}
+
+.circle_1 {
+  transform: rotate();
+}
+
+.circle_2 {
+  transform: rotate(-90deg);
+}
+
+.circle_3 {
+  transform: rotate();
+}
+
+.circle_4 {
+  transform: rotate(130deg);
+}
+
+.circles__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.circles__wrapper .circle:not(:last-child) {
+  margin-right: 0.26vw;
+}
+
+.individual__title {
+  color: #DEDEDE;
+  text-transform: uppercase;
+  font-size: 1.2vw;
+  line-height: 1.3em;
+  font-weight: bold;
+}
+
+.individual-chose {
+  display: flex;
+}
+
+.individual-chose__item {
+  max-width: 15.63vw;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.individual-chose__item:not(:last-child) {
+  margin-right: 9.11vw;
+}
+
+.individual-chose__label {
+  font-size: 1.56vw;
+  margin-bottom: 1.3vw;
+}
+
+.individual-chose__text {
+  line-height: 1.7em;
+  max-width: 15vw;
+}
+
+.individual-chose__list {
+  line-height: 1.7em;
+}
+
+.individual-chose__list-elem {
+  position: relative;
+}
+
+.individual-chose__list-elem:not(:last-child) {
+  margin-bottom: 1.82vw;
+}
+
+.individual-chose__list-elem::before {
+  content: attr(data-count);
+  border: 2px solid #555555;
+  color: #555555;
+  font-weight: 700;
+  font-size: 0.63vw;
+  line-height: 1.3em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0.26vw;
+  left: -2.08vw;
+  width: 1.2vw;
+  height: 1.2vw;
 }
 
 @media (min-width: 1921px) {
