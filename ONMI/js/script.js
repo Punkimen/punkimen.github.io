@@ -396,6 +396,11 @@ window.onload = function () {
 			leftToRight(el)
 		})
 
+		let securityLines = gsap.utils.toArray(".security__row-line");
+		securityLines.forEach(el => {
+			leftToRight(el)
+		})
+
 		gsap.fromTo(
 			".roadmap__title",
 			{ scale: 1.7 },
