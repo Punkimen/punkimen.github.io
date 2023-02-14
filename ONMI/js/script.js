@@ -391,6 +391,10 @@ window.onload = function () {
 		leftToRight(missionLineHorizontal,'.mission')
 		topToBottom(missionLineDiagonal,'.mission')
 
+		let roadmapLines = gsap.utils.toArray(".roadmap-item__line");
+		roadmapLines.forEach(el => {
+			leftToRight(el)
+		})
 	};
 	initPage();
 };
