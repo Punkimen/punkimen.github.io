@@ -151,6 +151,14 @@ li {
   font-size: 8.4vw;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  background: #D4C9C1;
+  background: linear-gradient(119.82deg, #D4C9C1 36.35%, #414345 90.11%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main__title * {
+  background: inherit;
 }
 
 .main__title > * {
@@ -212,6 +220,17 @@ li {
 .flip {
   transform-origin: top center;
   display: block;
+}
+
+.gradient-text {
+  background: #D4C9C1;
+  background: linear-gradient(119.82deg, #D4C9C1 36.35%, #414345 90.11%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text * {
+  background: inherit;
 }
 
 .main-screen {
@@ -490,7 +509,7 @@ li {
 }
 
 .adventure__content {
-  width: 43vw;
+  width: 46vw;
   margin: 0 auto;
   position: relative;
   margin-bottom: 8.3vw;
@@ -1867,6 +1886,7 @@ li {
   position: relative;
   letter-spacing: -0.04em;
   left: -0.78vw;
+  width: calc(100% + 1.56vw);
 }
 
 .roadmap-item {

@@ -395,6 +395,22 @@ window.onload = function () {
 		roadmapLines.forEach(el => {
 			leftToRight(el)
 		})
+
+		gsap.fromTo(
+			".roadmap__title",
+			{ scale: 1.7 },
+			{
+				scale: 1,
+				scrollTrigger: {
+					trigger: ".roadmap",
+					start: "top bottom",
+					end: "15% center",
+					scrub: true,
+				},
+				ease: "none",
+			}
+		);
+
 	};
 	initPage();
 };
