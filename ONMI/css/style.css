@@ -1574,7 +1574,7 @@ li {
 }
 
 .step__wrapper {
-  padding-top: 2.4vw;
+  padding-top: 4.2vw;
   border-top: 1px solid #979797;
   display: flex;
   margin-bottom: 21.88vw;
@@ -1610,7 +1610,7 @@ li {
 
 .step__list-elem {
   position: relative;
-  width: 13.54vw;
+  width: 14.5vw;
   min-height: 5.73vw;
   margin-bottom: 4.58vw;
 }
@@ -1628,7 +1628,7 @@ li {
   justify-content: center;
   position: absolute;
   top: 0;
-  left: -50%;
+  left: -2.6vw;
   width: 1.2vw;
   height: 1.2vw;
 }
@@ -1641,7 +1641,7 @@ li {
 .be-part {
   padding-bottom: 9.27vw;
   border-bottom: 1px solid #979797;
-  margin-bottom: 2.45vw9 0.27vw;
+  margin-bottom: 3.6vw;
 }
 
 .be-part__content {
@@ -1735,7 +1735,7 @@ li {
 .individual__title {
   color: #DEDEDE;
   text-transform: uppercase;
-  font-size: 1.2vw;
+  font-size: 1.72vw;
   line-height: 1.3em;
   font-weight: bold;
 }
