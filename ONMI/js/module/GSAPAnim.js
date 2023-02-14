@@ -112,7 +112,6 @@ export const flipAnim = el => {
 		y: 0
 	})
 }
-
 export const pointShow = (el,trigger) => {
 	const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
 	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1
@@ -132,4 +131,37 @@ export const pointShow = (el,trigger) => {
 		}
 	})
 
+}
+export const leftToRight = (el,trigger) => {
+	const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
+	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1
+
+	gsap.fromTo(el,{
+		opacity: 0,
+		x: '-100%',
+	},{
+		x: 0,
+		opacity: 1,
+		delay: delay,
+		duration: duration,
+		ease: "power1.inOut",
+		scrollTrigger: {
+			trigger: trigger ? trigger : el,
+		}
+	})
+}
+export const topToBottom = (el,trigger) => {
+	const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
+	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1
+
+	gsap.to(el,{
+		y: 0,
+		opacity: 1,
+		delay: delay,
+		duration: duration,
+		ease: "power1.inOut",
+		scrollTrigger: {
+			trigger: trigger ? trigger : el,
+		}
+	})
 }

@@ -1569,6 +1569,10 @@ li {
   box-shadow: inset 0px 0px 6px 2px #8CFBA5;
 }
 
+.step {
+  padding-bottom: 41.67vw;
+}
+
 .step__container {
   padding: 0 3.13vw;
 }
@@ -1639,14 +1643,14 @@ li {
 }
 
 .be-part {
-  padding-bottom: 9.27vw;
+  padding-bottom: 3vw;
   border-bottom: 1px solid #979797;
   margin-bottom: 3.6vw;
 }
 
 .be-part__content {
   position: relative;
-  margin-bottom: 3.54vw;
+  margin-bottom: 11.27vw;
 }
 
 .be-part__title-row {
@@ -1655,11 +1659,11 @@ li {
 }
 
 .be-part__title-row_2 {
-  padding-left: 10.26vw;
+  padding-left: 24.26vw;
 }
 
 .be-part__title-row_4 {
-  padding-left: 23.54vw;
+  padding-left: 34.54vw;
 }
 
 .be-part__title-row_5 {
@@ -1669,7 +1673,8 @@ li {
 .be-part__pose {
   position: absolute;
   top: -9.27vw;
-  left: 9.27vw;
+  left: 2vw;
+  pointer-events: none;
 }
 
 .be-part__pose img {
@@ -1693,7 +1698,7 @@ li {
 
 .circle img {
   display: block;
-  width: 2.4vw;
+  width: 2.9vw;
   height: auto;
   position: relative;
   z-index: 2;
@@ -1707,16 +1712,8 @@ li {
   bottom: 0.26vw;
 }
 
-.circle_1 {
-  transform: rotate();
-}
-
 .circle_2 {
   transform: rotate(-90deg);
-}
-
-.circle_3 {
-  transform: rotate();
 }
 
 .circle_4 {
@@ -1757,11 +1754,16 @@ li {
 .individual-chose__label {
   font-size: 1.56vw;
   margin-bottom: 1.3vw;
+  overflow: hidden;
 }
 
 .individual-chose__text {
   line-height: 1.7em;
   max-width: 15vw;
+}
+
+.individual-chose__text .word {
+  overflow: hidden;
 }
 
 .individual-chose__list {
@@ -1770,6 +1772,10 @@ li {
 
 .individual-chose__list-elem {
   position: relative;
+}
+
+.individual-chose__list-elem .word {
+  overflow: hidden;
 }
 
 .individual-chose__list-elem:not(:last-child) {
@@ -1792,6 +1798,61 @@ li {
   left: -2.08vw;
   width: 1.2vw;
   height: 1.2vw;
+}
+
+.mission__container {
+  padding: 0 3.13vw;
+}
+
+.mission__wrapper {
+  position: relative;
+  padding-top: 2.19vw;
+}
+
+.mission__line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #D4C9C1;
+}
+
+.mission__line_diagonally {
+  width: 113%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50vw) rotate(-28deg);
+}
+
+.mission__title {
+  text-transform: uppercase;
+  font-size: 4.17vw;
+  line-height: 1em;
+  letter-spacing: -0.01em;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.mission__title-arrow {
+  font-weight: 300;
+  margin-left: 3.91vw;
+  width: 3.13vw;
+}
+
+.mission__title-arrow img {
+  transform: rotate(180deg);
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mission__text {
+  width: 45.31vw;
+  text-transform: uppercase;
+  font-size: 1.25vw;
+  line-height: 1.8;
 }
 
 @media (min-width: 1921px) {

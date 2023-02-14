@@ -8,10 +8,12 @@ import {
 	fadeDown,
 	fadeIn,
 	flipAnim,
+	leftToRight,
 	lineShow,
 	opacityIn,
 	pointShow,
 	scalingPositive,
+	topToBottom,
 	transformTop,
 } from "./module/GSAPAnim.js";
 import { CalcStats } from "./module/calcScore.js";
@@ -383,6 +385,12 @@ window.onload = function () {
 		mapPoints.forEach(el => {
 			pointShow(el,'.hunger-games__map')
 		})
+
+		const missionLineHorizontal = document.querySelector('.mission__line')
+		const missionLineDiagonal = document.querySelector('.mission__line_diagonally')
+		leftToRight(missionLineHorizontal,'.mission')
+		topToBottom(missionLineDiagonal,'.mission')
+
 	};
 	initPage();
 };
