@@ -7,6 +7,7 @@ import { sectionHeightInit } from "./module/sectionHeightInit.js";
 import {
 	fadeDown,
 	fadeIn,
+	fadeUp,
 	flipAnim,
 	hideElem,
 	leftToRight,
@@ -14,6 +15,7 @@ import {
 	opacityIn,
 	pointShow,
 	rightToLeft,
+	scaling,
 	scalingPositive,
 	showElem,
 	topToBottom,
@@ -391,8 +393,25 @@ window.onload = function () {
 
 		const missionLineHorizontal = document.querySelector('.mission__line')
 		const missionLineDiagonal = document.querySelector('.mission__line_diagonally')
-		leftToRight(missionLineHorizontal,'.mission')
-		topToBottom(missionLineDiagonal,'.mission')
+
+		gsap.fromTo(missionLineHorizontal,
+			{ width: "0px" },{
+			width: '100%',
+			ease: "power1.inOut",
+			scrollTrigger: {
+				trigger: '.mission',
+			}
+		})
+		gsap.fromTo(missionLineDiagonal,
+			{ width: "0px" },{
+			width: '113%',
+			ease: "power1.inOut",
+			scrollTrigger: {
+				trigger: '.mission',
+			}
+		})
+		// leftToRight(missionLineHorizontal,'.mission')
+		// topToBottom(missionLineDiagonal,'.mission')
 
 		let roadmapLines = gsap.utils.toArray(".roadmap-item__line");
 		roadmapLines.forEach(el => {
@@ -456,12 +475,43 @@ window.onload = function () {
 			securityLines.forEach(el => {
 				rightToLeft(el)
 			})
-			leftToRight('.vacancy__header-line')
+			const vacanciLine = document.querySelector('.vacancy__header-line')
+			leftToRight(vacanciLine)
 
 		}
 		// tabs
 
+		// questions 
 
+		const quests = document.querySelectorAll(".question-item")
+		quests.forEach(el => {
+			el.addEventListener('click',e => {
+				e.preventDefault()
+				const head = e.target.closest('.question-item__header')
+				if (head) {
+					el.classList.toggle('open')
+				}
+			})
+		})
+
+
+		let questionLines = gsap.utils.toArray(".question-item__line");
+		questionLines.forEach(el => {
+			leftToRight(el)
+		})
+		let drawLines = gsap.utils.toArray('[data-effect="draw-line"]');
+		drawLines.forEach(el => {
+			leftToRight(el)
+		})
+		const fadeUpElems = document.querySelectorAll('[data-effect="fade-up"]');
+		fadeUpElems.forEach(el => {
+			fadeUp(el)
+		})
+
+		const scalingsElems = document.querySelectorAll('[data-effect="scaling"]');
+		scalingsElems.forEach(el => {
+			scaling(el)
+		})
 	};
 	initPage();
 };

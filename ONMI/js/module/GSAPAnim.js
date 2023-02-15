@@ -183,7 +183,6 @@ export const topToBottom = (el,trigger) => {
 		}
 	})
 }
-
 export const showElem = el => {
 	gsap.fromTo(el,{
 		y: -200,
@@ -196,7 +195,6 @@ export const showElem = el => {
 		duration: 1,
 	})
 }
-
 export const hideElem = el => {
 	gsap.fromTo(el,{
 		y: 0,
@@ -207,5 +205,41 @@ export const hideElem = el => {
 		x: 200,
 		opacity: 0,
 		duration: 1,
+	})
+}
+export const fadeUp = el => {
+	const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
+	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 2
+	gsap.fromTo(el,{
+		opacity: 0,
+		skewY: 3,
+		y: "-30%"
+	},{
+		opacity: 1,
+		skewY: 0,
+		y: "0",
+		delay: delay,
+		duration: duration,
+		ease: "power1.inOut",
+		scrollTrigger: {
+			trigger: el,
+		}
+	})
+}
+export const scaling = el => {
+	const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
+	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1.3
+	gsap.fromTo(el,{
+		scale: .3,
+		opacity: 1,
+	},{
+		opacity: 1,
+		scale: 1,
+		delay: delay,
+		duration: duration,
+		ease: "power1.inOut",
+		scrollTrigger: {
+			trigger: el,
+		}
 	})
 }
