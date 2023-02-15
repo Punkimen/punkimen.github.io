@@ -403,7 +403,10 @@ window.onload = function () {
 		securityLines.forEach(el => {
 			leftToRight(el)
 		})
-
+		let teamLines = gsap.utils.toArray(".team__row-line");
+		teamLines.forEach(el => {
+			leftToRight(el)
+		})
 		gsap.fromTo(
 			".roadmap__title",
 			{ scale: 1.7 },
@@ -453,7 +456,7 @@ window.onload = function () {
 			securityLines.forEach(el => {
 				rightToLeft(el)
 			})
-			rightToLeft('.vacancy__header-line')
+			leftToRight('.vacancy__header-line')
 
 		}
 		// tabs

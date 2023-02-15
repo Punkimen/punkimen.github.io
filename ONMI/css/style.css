@@ -2096,18 +2096,18 @@ li {
 }
 
 .vacancy {
-  padding: 65px 0 50px;
+  padding: 3.39vw 0 2.6vw;
 }
 
 .vacancy__header {
   position: relative;
-  padding-bottom: 76px;
+  padding-bottom: 3.96vw;
 }
 
 .vacancy__title {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 90px;
+  font-size: 4.69vw;
   letter-spacing: -0.03em;
   overflow: hidden;
 }
@@ -2122,13 +2122,13 @@ li {
 }
 
 .vacancy__wrapper {
-  padding-top: 80px;
+  padding-top: 4.17vw;
 }
 
 .vacancy__tabs-list {
   text-transform: uppercase;
-  margin-bottom: 80px;
-  margin-bottom: 135px;
+  margin-bottom: 4.17vw;
+  margin-bottom: 7.03vw;
 }
 
 .vacancy__tabs-elem {
@@ -2136,14 +2136,14 @@ li {
 }
 
 .vacancy__tabs-elem:not(:last-child) {
-  margin-bottom: 5px;
+  margin-bottom: 0.26vw;
 }
 
 .vacancy__tabs-tab {
   text-transform: uppercase;
   transition: color ease-in-out 0.2s;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 1.3vw;
 }
 
 .vacancy__tabs-tab:hover {
@@ -2185,19 +2185,19 @@ li {
 }
 
 .vacancy-item:not(:last-child) {
-  margin-bottom: 107px;
+  margin-bottom: 5.57vw;
 }
 
 .vacancy-item__header {
   position: relative;
-  padding-bottom: 20px;
-  margin-bottom: 59px;
+  padding-bottom: 1.04vw;
+  margin-bottom: 3.07vw;
 }
 
 .vacancy-item__name {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 1.46vw;
 }
 
 .vacancy-item__line {
@@ -2210,14 +2210,14 @@ li {
 }
 
 .vacancy-item__descr {
-  max-width: 420px;
+  max-width: 21.88vw;
   width: 100%;
-  font-size: 18px;
+  font-size: 0.94vw;
   line-height: 1.9em;
 }
 
 .vacancy-item__descr p:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 1.56vw;
 }
 
 @media (min-width: 1921px) {
