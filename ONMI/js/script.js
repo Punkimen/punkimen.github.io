@@ -13,6 +13,7 @@ import {
 	lineShow,
 	opacityIn,
 	pointShow,
+	rightToLeft,
 	scalingPositive,
 	showElem,
 	topToBottom,
@@ -447,6 +448,13 @@ window.onload = function () {
 
 				})
 			})
+
+			let securityLines = gsap.utils.toArray(".vacancy__header-line");
+			securityLines.forEach(el => {
+				rightToLeft(el)
+			})
+			rightToLeft('.vacancy__header-line')
+
 		}
 		// tabs
 
