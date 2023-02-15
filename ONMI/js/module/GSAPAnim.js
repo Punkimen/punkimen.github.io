@@ -150,6 +150,24 @@ export const leftToRight = (el,trigger) => {
 		}
 	})
 }
+export const rightToLeft = (el,trigger) => {
+	const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
+	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1
+
+	gsap.fromTo(el,{
+		opacity: 0,
+		x: '100%',
+	},{
+		x: 0,
+		opacity: 1,
+		delay: delay,
+		duration: duration,
+		ease: "power1.inOut",
+		scrollTrigger: {
+			trigger: trigger ? trigger : el,
+		}
+	})
+}
 export const topToBottom = (el,trigger) => {
 	const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
 	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1
@@ -163,5 +181,31 @@ export const topToBottom = (el,trigger) => {
 		scrollTrigger: {
 			trigger: trigger ? trigger : el,
 		}
+	})
+}
+
+export const showElem = el => {
+	gsap.fromTo(el,{
+		y: -200,
+		x: 200,
+		opacity: 0,
+	},{
+		y: 0,
+		x: 0,
+		opacity: 1,
+		duration: 1,
+	})
+}
+
+export const hideElem = el => {
+	gsap.fromTo(el,{
+		y: 0,
+		x: 0,
+		opacity: 1,
+	},{
+		y: 200,
+		x: 200,
+		opacity: 0,
+		duration: 1,
 	})
 }

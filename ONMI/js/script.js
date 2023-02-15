@@ -8,11 +8,13 @@ import {
 	fadeDown,
 	fadeIn,
 	flipAnim,
+	hideElem,
 	leftToRight,
 	lineShow,
 	opacityIn,
 	pointShow,
 	scalingPositive,
+	showElem,
 	topToBottom,
 	transformTop,
 } from "./module/GSAPAnim.js";
@@ -415,6 +417,39 @@ window.onload = function () {
 				ease: "none",
 			}
 		);
+
+		// tabs
+		{
+			const tabsBtn = document.querySelectorAll('.vacancy__tabs-tab')
+			const tabsBody = document.querySelectorAll('.vacancy__tabs-body')
+
+			const removeCurrentTab = () => {
+				tabsBtn.forEach(el => el.classList.remove('current'))
+			}
+			const removeShowBody = () => {
+				tabsBody.forEach(el => el.classList.remove('show'))
+			}
+
+			tabsBtn.forEach((el,index) => {
+				el.addEventListener('click',e => {
+					e.preventDefault();
+					if (el.closest('.current')) {
+						return
+					}
+					removeCurrentTab()
+					el.classList.add('current')
+					const activeEl = document.querySelector('.vacancy__tabs-body.show')
+					const newActiveEl = tabsBody[index]
+					hideElem(activeEl)
+					removeShowBody()
+					newActiveEl.classList.add('show')
+					showElem(newActiveEl)
+
+				})
+			})
+		}
+		// tabs
+
 
 	};
 	initPage();
