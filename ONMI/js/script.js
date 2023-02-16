@@ -87,7 +87,7 @@ window.onload = function () {
 			// OMI slider
 
 			const omiSliderOption = {
-				slidesPerView: 5,
+				slidesPerView: "auto",
 				centeredSlides: true,
 				loop: true,
 				allowTouchMove: false,
@@ -98,30 +98,6 @@ window.onload = function () {
 				},
 			};
 			const omiSlider = sliderInit(".create-omi__slider",omiSliderOption);
-			const omiOpacitySlides = () => {
-				const arrSliders = omiSlider.slides;
-				const activeIndex = omiSlider.activeIndex;
-				const activeSlide = arrSliders[activeIndex];
-				activeSlide.style.opacity = 1;
-				const siblingsSlides = (count) => {
-					let arr = [];
-					arr.push(arrSliders[activeIndex - count]);
-					arr.push(arrSliders[activeIndex + count]);
-					return arr;
-				};
-				const first = siblingsSlides(1);
-				const second = siblingsSlides(2);
-				first.forEach((el) => {
-					el.style.opacity = 0.3;
-				});
-				second.forEach((el) => {
-					el.style.opacity = 0.15;
-				});
-			};
-			omiSlider.on("slideChange",function () {
-				omiOpacitySlides();
-			});
-			omiOpacitySlides();
 		}
 
 		const text = document.querySelectorAll(".animate-letters");
@@ -512,6 +488,44 @@ window.onload = function () {
 		scalingsElems.forEach(el => {
 			scaling(el)
 		})
+
+		const platformBtns = document.querySelector('.platform__btns');
+		const scalingBtnPositive = (el) => {
+			el.style.height = `32.97vw`
+			el.style.width = `120%`
+			el.style.borderRadius = '15.10vw'
+		}
+		const scalingBtnNegative = (el) => {
+			el.style.height = `21.98vw`
+			el.style.width = `80%`
+		}
+
+		const setNormalSize = el => {
+			el.style.width = "100%"
+			el.style.height = "27.50vw"
+		}
+		const leveSizeBtns = () => {
+			setNormalSize(btnApplePlay)
+			setNormalSize(btnGooglePlay)
+		}
+		const hoverGoogleBtn = () => {
+			scalingBtnPositive(btnGooglePlay)
+			scalingBtnNegative(btnApplePlay)
+		}
+		const hoverAppleBtn = () => {
+			scalingBtnPositive(btnApplePlay)
+			scalingBtnNegative(btnGooglePlay)
+		}
+
+
+		const btnGooglePlay = document.querySelector('.platform__btn_google')
+		const btnApplePlay = document.querySelector('.platform__btn_apple')
+		btnApplePlay.addEventListener('mouseenter',hoverAppleBtn)
+		btnGooglePlay.addEventListener('mouseenter',hoverGoogleBtn)
+		btnApplePlay.addEventListener('mouseleave',leveSizeBtns)
+		btnGooglePlay.addEventListener('mouseleave',leveSizeBtns)
+
+
 	};
 	initPage();
 };

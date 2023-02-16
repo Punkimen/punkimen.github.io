@@ -156,7 +156,7 @@ li {
 
 .main__title {
   line-height: 0.85;
-  font-size: 8.4vw;
+  font-size: 7.29vw;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   background: #D4C9C1;
@@ -175,7 +175,7 @@ li {
 
 .main__text {
   text-transform: uppercase;
-  font-size: 0.94vw;
+  font-size: 0.83vw;
   line-height: 1.6;
 }
 
@@ -526,14 +526,16 @@ li {
 }
 
 .adventure__content {
-  width: 46vw;
+  position: relative;
+  left: 2.6vw;
+  width: 41vw;
   margin: 0 auto;
   position: relative;
   margin-bottom: 8.3vw;
 }
 
 .adventure__title {
-  line-height: 0.82;
+  line-height: 0.86;
   font-size: 8.4vw;
   letter-spacing: -0.03em;
   text-transform: uppercase;
@@ -549,11 +551,11 @@ li {
 }
 
 .adventure__title-row_1 {
-  padding-left: 5.7vw;
+  padding-left: 5vw;
 }
 
 .adventure__title-row_2 {
-  padding-left: 14.2vw;
+  padding-left: 12.5vw;
   transition-delay: 0.2s;
 }
 
@@ -563,7 +565,7 @@ li {
 
 .adventure__text {
   max-width: 12.5vw;
-  right: -11.5vw;
+  right: -8.8vw;
   bottom: -2.03vw;
   position: absolute;
 }
@@ -674,14 +676,14 @@ li {
 }
 
 .create-omi__descr {
-  width: 62vw;
+  width: 59vw;
   margin: 0 auto;
   position: relative;
 }
 
 .create-omi__title {
   letter-spacing: -0.025em;
-  margin-bottom: 12.4vw;
+  margin-bottom: 17.4vw;
 }
 
 .create-omi__title-row {
@@ -689,7 +691,7 @@ li {
 }
 
 .create-omi__title-row_1 {
-  padding-left: 2.71vw;
+  padding-left: 4.71vw;
 }
 
 .create-omi__title-row_2 {
@@ -704,35 +706,48 @@ li {
   width: 15.25vw;
   position: absolute;
   bottom: -2.3vw;
-  right: -2.3vw;
+  right: -3.9vw;
 }
 
 .create-omi__slider {
-  padding-bottom: 8.2vw;
+  padding-bottom: 9.5vw;
   margin-bottom: 9.69vw;
 }
 
 .create-omi__slide {
   transition: opacity ease 0.8s;
+  width: 14vw;
+  opacity: 0.7;
+  margin: 0 1.67vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.create-omi__slide.swiper-slide-active {
+  opacity: 1;
 }
 
 .create-omi__slide img {
+  width: 14vw;
   margin: 0 auto;
   display: block;
   height: auto;
-  width: 100%;
 }
 
 .create-omi__btn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   position: absolute;
   top: auto;
   bottom: 0;
-  left: calc(50% - 4.55vw);
+  left: calc(50% - 3.5vw);
   transform: translateX(-50%);
 }
 
 .create-omi__btn_next {
-  left: calc(50% + 2.45vw);
+  left: calc(50% + 3.5vw);
 }
 
 .create-omi__cards {
@@ -943,14 +958,15 @@ li {
 
 .find__title-row_2 {
   text-align: right;
+  padding-right: 6.67vw;
 }
 
 .find__title-row_3 {
-  padding-left: 21.77vw;
+  padding-left: 20vw;
 }
 
 .find__title-row_4 {
-  padding-left: 13.5vw;
+  padding-left: 13vw;
 }
 
 .find__text {
@@ -1111,7 +1127,7 @@ li {
 }
 
 .descover__descr {
-  width: 54vw;
+  width: 48vw;
   margin: 0 auto 1.04vw;
   position: relative;
 }
@@ -1142,10 +1158,10 @@ li {
 }
 
 .descover__text {
-  width: 13.2vw;
+  width: 11.6vw;
   position: absolute;
   bottom: 3.33vw;
-  right: -2.86vw;
+  right: -4.2vw;
 }
 
 .descover__map {
@@ -1161,7 +1177,7 @@ li {
 
 .descover__journey-title {
   text-align: center;
-  font-size: 3.65vw;
+  font-size: 3.13vw;
   margin-bottom: 5.6vw;
   line-height: 1.3em;
   font-weight: 500;
@@ -1235,7 +1251,7 @@ li {
 }
 
 .journey-card__title {
-  font-size: 1.82vw;
+  font-size: 1.56vw;
   letter-spacing: 0.01em;
   line-height: 1.25em;
   margin-bottom: 1.5vw;
@@ -1263,15 +1279,6 @@ li {
   scale: 2;
   line-height: 1em;
   letter-spacing: -0.026em;
-}
-
-.pvp__text {
-  position: absolute;
-  right: 3.23vw;
-  bottom: 5.99vw;
-  line-height: 1.7em;
-  width: 15.63vw;
-  z-index: 2;
 }
 
 .pvp__screen {
@@ -1389,7 +1396,7 @@ li {
 .market__wrapper {
   position: relative;
   left: 1.2vw;
-  width: 70vw;
+  width: 64vw;
   margin: 0 auto 18.75vw;
 }
 
@@ -1398,18 +1405,18 @@ li {
 }
 
 .market__title-row_2 {
-  padding-left: 14.74vw;
+  padding-left: 12.74vw;
 }
 
 .market__title-row_3 {
-  padding-left: 25.52vw;
+  padding-left: 22.52vw;
 }
 
 .market__text {
   position: absolute;
   bottom: -8vw;
   right: 5.73vw;
-  width: 16.67vw;
+  width: 14vw;
 }
 
 .market-catalog__row {
@@ -1501,6 +1508,13 @@ li {
   font-weight: 600;
 }
 
+.hunger-games__subtitle_small {
+  font-size: 1.56vw;
+  line-height: 1.44em;
+  font-weight: 500;
+  width: 20vw;
+}
+
 .hunger-games__subtitle:not(:last-child) {
   margin-bottom: 3.39vw;
 }
@@ -1510,11 +1524,11 @@ li {
 }
 
 .hunger-games__subtitle span:not(:last-child) {
-  margin-bottom: 2.45vw;
+  margin-bottom: 2vw;
 }
 
 .hunger-games__subtitle span:last-child {
-  width: 22.66vw;
+  width: 18.5vw;
 }
 
 .hunger-games__text {
@@ -1627,7 +1641,7 @@ li {
 
 .step__title {
   width: 24.48vw;
-  font-size: 4.17vw;
+  font-size: 3.13vw;
   line-height: 1em;
   font-weight: 600;
   margin-bottom: 1.56vw;
@@ -1688,6 +1702,10 @@ li {
 .be-part__content {
   position: relative;
   margin-bottom: 11.27vw;
+}
+
+.be-part__title {
+  font-size: 9.27vw;
 }
 
 .be-part__title-row {
@@ -1769,7 +1787,7 @@ li {
 .individual__title {
   color: #DEDEDE;
   text-transform: uppercase;
-  font-size: 1.72vw;
+  font-size: 1.46vw;
   line-height: 1.3em;
   font-weight: bold;
 }
@@ -1789,12 +1807,13 @@ li {
 }
 
 .individual-chose__label {
-  font-size: 1.56vw;
+  font-size: 1.35vw;
   margin-bottom: 1.3vw;
   overflow: hidden;
 }
 
 .individual-chose__text {
+  font-size: 0.94vw;
   line-height: 1.7em;
   max-width: 15vw;
 }
@@ -1804,6 +1823,7 @@ li {
 }
 
 .individual-chose__list {
+  font-size: 0.94vw;
   line-height: 1.7em;
 }
 
@@ -1816,7 +1836,7 @@ li {
 }
 
 .individual-chose__list-elem:not(:last-child) {
-  margin-bottom: 1.82vw;
+  margin-bottom: 1.3vw;
 }
 
 .individual-chose__list-elem::before {
@@ -1966,6 +1986,11 @@ li {
   display: block;
 }
 
+.roadmap-item__descr-label_big {
+  font-weight: bold;
+  margin-bottom: 1.04vw;
+}
+
 .security {
   background: #BABABA;
   border-radius: 3.28vw;
@@ -1975,10 +2000,10 @@ li {
 }
 
 .security__title {
-  font-size: 4.69vw;
+  font-size: 3.13vw;
   font-weight: 600;
   letter-spacing: -0.03em;
-  margin-bottom: 8.96vw;
+  margin-bottom: 10.96vw;
 }
 
 .security__row {
@@ -2027,8 +2052,8 @@ li {
 .team__title {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 4.69vw;
-  margin-bottom: 4.17vw;
+  font-size: 3.13vw;
+  margin-bottom: 2.5vw;
   overflow: hidden;
 }
 
@@ -2116,7 +2141,7 @@ li {
 .vacancy__title {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 4.69vw;
+  font-size: 3.13vw;
   letter-spacing: -0.03em;
   overflow: hidden;
 }
@@ -2318,7 +2343,7 @@ li {
 }
 
 .platform__content {
-  max-width: 72.19vw;
+  max-width: 58.19vw;
   width: 100%;
   margin: 0 auto 9.38vw;
   position: relative;
@@ -2329,7 +2354,7 @@ li {
 }
 
 .platform__title-row_2 {
-  padding-left: 18.28vw;
+  padding-left: 15.28vw;
 }
 
 .platform__text {
@@ -2337,12 +2362,14 @@ li {
   width: 100%;
   position: absolute;
   bottom: -2.08vw;
-  right: 11.98vw;
+  right: -3.65vw;
 }
 
 .platform__btns {
   display: flex;
+  align-items: center;
   padding: 0 0.26vw;
+  min-height: 32.97vw;
 }
 
 .platform__btn {
@@ -2354,11 +2381,7 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition-duration: 0.3s;
-}
-
-.platform__btn:hover {
-  background: var(--color-main);
+  transition: all ease 0.5s;
 }
 
 .platform__btn-text {
@@ -2398,7 +2421,7 @@ li {
 
 .keep__header {
   position: relative;
-  padding-bottom: 3.96vw;
+  padding-bottom: 2.96vw;
 }
 
 .keep__line {
@@ -2414,7 +2437,7 @@ li {
   text-transform: uppercase;
   overflow: hidden;
   font-weight: 600;
-  font-size: 4.69vw;
+  font-size: 3.13vw;
   letter-spacing: -0.03em;
 }
 
