@@ -24,8 +24,33 @@ import {
 import { CalcStats } from "./module/calcScore.js";
 
 window.onload = function () {
+
 	const initPage = () => {
-		const animEls = document.querySelectorAll(".animate");
+
+		const isFirst = sessionStorage.getItem("isFirstLoad")
+		const offHeroAnimation = function () {
+			const headerElems = document.querySelectorAll('.header [data-effect]')
+			const heroElems = document.querySelectorAll('.hero [data-effect]')
+			const btnsElems = document.querySelectorAll('.fixed-btns__app')
+			headerElems.forEach(el => {
+				el.dataset.effect = ''
+			})
+			heroElems.forEach(el => {
+				el.dataset.effect = ''
+			})
+			btnsElems.forEach((el,idx) => {
+				el.dataset.delay = 0.1 * idx
+			})
+		}
+		if (!isFirst) {
+			sessionStorage.setItem("isFirstLoad",true);
+		} else {
+			offHeroAnimation()
+			console.log('second');
+		}
+
+
+
 		const delayElem = document.querySelectorAll("[data-delay]");
 		const durationElem = document.querySelectorAll("[data-duration]");
 
@@ -35,9 +60,6 @@ window.onload = function () {
 		for (let elm of durationElem) {
 			setStyle(elm,elm.dataset);
 		}
-		// for (let elm of animEls) {
-		// 	observerScroll.observe(elm);
-		// }
 
 		{
 			const cardSliderOptions = {
@@ -252,8 +274,10 @@ window.onload = function () {
 		});
 
 
-		const heroTitle = document.querySelector(".hero__title");
-		transformTop(heroTitle);
+		const heroTitle = document.querySelector("[data-effect='slide-top-absolute']");
+		if (heroTitle) {
+			transformTop(heroTitle);
+		}
 		const fadesOpecityElems = document.querySelectorAll(
 			'[data-effect="fade-down"]'
 		);
@@ -528,4 +552,5 @@ window.onload = function () {
 
 	};
 	initPage();
+
 };
