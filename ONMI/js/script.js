@@ -108,24 +108,6 @@ window.onload = function () {
 				sliderPrety();
 			});
 
-			// OMI slider
-
-			const omiSliderOption = {
-				slidesPerView: "auto",
-				centeredSlides: true,
-				loop: true,
-				allowTouchMove: false,
-				autoplay: true,
-				speed: 1500,
-				autoplay: {
-					delay: 1000,
-				},
-				navigation: {
-					nextEl: ".create-omi__btn_next",
-					prevEl: ".create-omi__btn",
-				},
-			};
-			const omiSlider = sliderInit(".create-omi__slider",omiSliderOption);
 		}
 
 		const text = document.querySelectorAll(".animate-letters");
@@ -329,38 +311,16 @@ window.onload = function () {
 			}
 		);
 
-
-		const pvpShowElems = document.querySelectorAll(".pvp-show");
-		pvpShowElems.forEach((el) => {
-			gsap.fromTo(
-				el,
-				{
-					opacity: 0,
-					y: "10%",
-				},
-				{
-					opacity: 1,
-					y: 0,
-					scrollTrigger: {
-						trigger: ".pvp",
-						start: "20%",
-						end: "center",
-						scrub: true,
-					},
-				}
-			);
-		});
-
-		gsap.fromTo('.pvp',{ opacity: 1 },{
-			opacity: 0,
-			ease: 'none',
-			scrollTrigger: {
-				trigger: '.pvp',
-				start: 'center',
-				end: 'bottom middle',
-				scrub: true
-			},
-		})
+		// gsap.fromTo('.pvp',{ opacity: 1 },{
+		// 	opacity: 0,
+		// 	ease: 'none',
+		// 	scrollTrigger: {
+		// 		trigger: '.pvp',
+		// 		start: 'center',
+		// 		end: 'bottom middle',
+		// 		scrub: true
+		// 	},
+		// })
 
 		gsap.fromTo('.collection__title',{ x: "18%" },{
 			x: '-20%',

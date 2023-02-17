@@ -78,7 +78,6 @@ export const fadeIn = el => {
 	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1
 	gsap.fromTo(el,{
 		opacity: 0,
-		z: '-80%'
 	},{
 		z: 0,
 		opacity: 1,
@@ -181,8 +180,8 @@ export const topToBottom = (el,trigger) => {
 }
 export const showElem = el => {
 	gsap.fromTo(el,{
-		y: -200,
-		x: 200,
+		// y: -200,
+		// x: 200,
 		opacity: 0,
 	},{
 		y: 0,

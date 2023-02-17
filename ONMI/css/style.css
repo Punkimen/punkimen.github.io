@@ -207,6 +207,16 @@ li {
   transform: rotate(180deg);
 }
 
+.main__text,
+.pvp__title,
+.animate,
+[data-effect=line],
+[data-effect=fade-in],
+[data-effect=fade-down],
+[data-effect=opacity] {
+  will-change: transform;
+}
+
 .header__logo,
 .header__lang,
 .header__link,
@@ -705,13 +715,15 @@ li {
   right: -3.9vw;
 }
 
-.create-omi__slider {
-  padding-bottom: 9.5vw;
-  margin-bottom: 9.69vw;
-  transition: all ease-in-out 1s;
+.create-omi__marquue {
+  margin-bottom: 20vw;
 }
 
-.create-omi__slide {
+.create-omi__wrapper {
+  display: flex;
+}
+
+.create-omi__item {
   transition: opacity ease 0.8s;
   width: 14vw;
   opacity: 1;
@@ -719,15 +731,10 @@ li {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  transition: all ease-in-out 1s;
 }
 
-.create-omi__slide.swiper-slide-active {
-  opacity: 1;
-}
-
-.create-omi__slide img {
-  width: 14vw;
+.create-omi__item img {
+  width: 100%;
   margin: 0 auto;
   display: block;
   height: auto;
@@ -1957,7 +1964,7 @@ li {
 }
 
 .token__circle-shadow {
-  box-shadow: 0px 0px 2.6vw 1.56vw rgba(255, 255, 255, 0.75) inset;
+  box-shadow: inset 0px 0px 40px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 125px 20px rgba(255, 255, 255, 0.5);
   width: 36.98vw;
   height: 36.98vw;
   border-radius: 50%;
@@ -2010,6 +2017,7 @@ li {
 
 .svg-circle circle {
   transition: all ease-in-out 1.2s;
+  stroke-width: 0.1vw;
 }
 
 .svg-circle_1 {
@@ -2049,8 +2057,8 @@ li {
   margin-bottom: 0.78vw;
   text-transform: uppercase;
   position: relative;
-  letter-spacing: -0.04em;
-  left: -0.78vw;
+  letter-spacing: -0.012em;
+  left: -1.46vw;
   width: calc(100% + 1.56vw);
 }
 
