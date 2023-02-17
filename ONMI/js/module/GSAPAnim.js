@@ -60,7 +60,7 @@ export const fadeDown = el => {
 	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1.2
 	gsap.fromTo(el,{
 		opacity: 0,
-		y: '100%'
+		y: 150
 	},{
 		y: 0,
 		opacity: 1,
