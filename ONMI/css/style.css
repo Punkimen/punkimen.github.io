@@ -1855,7 +1855,7 @@ li {
 }
 
 .mission {
-  margin-bottom: 41.67vw;
+  margin-bottom: 25vw;
 }
 
 .mission__wrapper {
@@ -1921,6 +1921,119 @@ li {
   text-transform: uppercase;
   font-size: 1.25vw;
   line-height: 1.8;
+}
+
+.token {
+  padding: 100px 0 700px;
+}
+
+.token__circle {
+  position: relative;
+  width: 40.47vw;
+  height: 40.47vw;
+  border-radius: 50%;
+  margin: 0 auto 286px;
+}
+
+.token__circle-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.token__circle-text {
+  text-transform: uppercase;
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+.token__circle-name {
+  text-transform: uppercase;
+  font-size: 120px;
+  letter-spacing: -0.01em;
+  line-height: 1.1em;
+}
+
+.token__circle-shadow {
+  box-shadow: 0px 0px 50px 30px rgba(255, 255, 255, 0.75) inset;
+  width: 36.98vw;
+  height: 36.98vw;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.token__wrapper {
+  display: flex;
+}
+
+.token__card {
+  width: 100%;
+  background: #161616;
+  border-radius: 54px;
+  padding: 75px 80px 80px 80px;
+}
+
+.token__card:not(:last-child) {
+  margin-right: 20px;
+}
+
+.token__card-label {
+  font-size: 31px;
+  margin-bottom: 40px;
+}
+
+.token__card-text {
+  font-size: 17px;
+  line-height: 1.4em;
+  letter-spacing: 0.03em;
+  max-width: 370px;
+  width: 100%;
+}
+
+.svg-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.svg-circle circle {
+  transition: all ease-in-out 1.2s;
+}
+
+.svg-circle_1 {
+  stroke: rgba(255, 255, 255, 0.25);
+}
+
+.svg-circle_1 circle {
+  stroke-dasharray: 320%;
+  stroke-dashoffset: 320%;
+}
+
+.svg-circle_2 {
+  stroke: rgba(255, 255, 255, 0.25);
+}
+
+.svg-circle_2 circle {
+  stroke-dasharray: 250%;
+  stroke-dashoffset: 250%;
+}
+
+.svg-circle_3 {
+  stroke: rgba(255, 255, 255, 0.5);
+}
+
+.svg-circle_3 circle {
+  stroke-dasharray: 220%;
+  stroke-dashoffset: 220%;
 }
 
 .roadmap {

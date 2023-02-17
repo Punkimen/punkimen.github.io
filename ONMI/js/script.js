@@ -5,6 +5,7 @@ import { setStyle } from "./module/setStyle.js";
 import { sectionHeightInit } from "./module/sectionHeightInit.js";
 
 import {
+	circleDraw,
 	fadeDown,
 	fadeIn,
 	fadeUp,
@@ -563,6 +564,11 @@ window.onload = function () {
 		btnApplePlay.addEventListener('mouseleave',leveSizeBtns)
 		btnGooglePlay.addEventListener('mouseleave',leveSizeBtns)
 
+		const circles = document.querySelectorAll('.svg-circle circle')
+		const circleTrigger = document.querySelector('.token')
+		circles.forEach(el => {
+			circleDraw(el,circleTrigger)
+		})
 
 	};
 	initPage();

@@ -237,3 +237,16 @@ export const scaling = el => {
 		}
 	})
 }
+export const circleDraw = (el,tirgger) => {
+	const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
+	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1.2
+
+	gsap.to(el,{
+		strokeDashoffset: '0',
+		delay: delay,
+		duration: duration,
+		scrollTrigger: {
+			trigger: tirgger ? tirgger : el
+		}
+	})
+}
