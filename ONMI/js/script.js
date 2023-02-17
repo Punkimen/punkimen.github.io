@@ -81,7 +81,7 @@ window.onload = function () {
 						opacity: 0,
 					},
 					next: {
-						translate: ["calc(100% + 10px)",0,0],
+						translate: ["calc(100% + 0.52vw)",0,0],
 					},
 				},
 
@@ -322,7 +322,7 @@ window.onload = function () {
 				scrollTrigger: {
 					trigger: ".pvp",
 					start: "top center",
-					end: "center+=100px center",
+					end: "center+=5.21vw center",
 					scrub: true,
 				},
 				ease: "none",

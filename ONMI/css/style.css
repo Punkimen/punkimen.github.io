@@ -414,8 +414,8 @@ li {
 
 .hero__title span {
   position: relative;
-  margin-left: -5px;
-  padding-right: 5px;
+  margin-left: -0.26vw;
+  padding-right: 0.26vw;
 }
 
 .hero__text {
@@ -1924,7 +1924,7 @@ li {
 }
 
 .token {
-  padding: 100px 0 700px;
+  padding: 5.21vw 0 36.46vw;
 }
 
 .token__circle {
@@ -1932,7 +1932,7 @@ li {
   width: 40.47vw;
   height: 40.47vw;
   border-radius: 50%;
-  margin: 0 auto 286px;
+  margin: 0 auto 14.9vw;
 }
 
 .token__circle-content {
@@ -1945,19 +1945,19 @@ li {
 
 .token__circle-text {
   text-transform: uppercase;
-  font-size: 21px;
-  margin-bottom: 15px;
+  font-size: 1.09vw;
+  margin-bottom: 0.78vw;
 }
 
 .token__circle-name {
   text-transform: uppercase;
-  font-size: 120px;
+  font-size: 6.25vw;
   letter-spacing: -0.01em;
   line-height: 1.1em;
 }
 
 .token__circle-shadow {
-  box-shadow: 0px 0px 50px 30px rgba(255, 255, 255, 0.75) inset;
+  box-shadow: 0px 0px 2.6vw 1.56vw rgba(255, 255, 255, 0.75) inset;
   width: 36.98vw;
   height: 36.98vw;
   border-radius: 50%;
@@ -1975,24 +1975,27 @@ li {
 .token__card {
   width: 100%;
   background: #161616;
-  border-radius: 54px;
-  padding: 75px 80px 80px 80px;
+  border-radius: 2.81vw;
+  padding: 3.91vw 4.17vw 4.17vw 4.17vw;
+  height: 25.42vw;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 
 .token__card:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 1.04vw;
 }
 
 .token__card-label {
-  font-size: 31px;
-  margin-bottom: 40px;
+  font-size: 1.61vw;
+  margin-bottom: 2.08vw;
 }
 
 .token__card-text {
-  font-size: 17px;
+  font-size: 0.89vw;
   line-height: 1.4em;
   letter-spacing: 0.03em;
-  max-width: 370px;
+  max-width: 19.27vw;
   width: 100%;
 }
 
