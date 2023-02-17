@@ -22,6 +22,7 @@ import {
 	transformTop,
 } from "./module/GSAPAnim.js";
 import { CalcStats } from "./module/calcScore.js";
+import { random } from "./module/random.js";
 
 window.onload = function () {
 
@@ -113,7 +114,11 @@ window.onload = function () {
 				centeredSlides: true,
 				loop: true,
 				allowTouchMove: false,
-
+				autoplay: true,
+				speed: 1500,
+				autoplay: {
+					delay: 1000,
+				},
 				navigation: {
 					nextEl: ".create-omi__btn_next",
 					prevEl: ".create-omi__btn",
@@ -357,7 +362,7 @@ window.onload = function () {
 		})
 
 		gsap.fromTo('.collection__title',{ x: "18%" },{
-			x: '-40%',
+			x: '-20%',
 			scrollTrigger: {
 				trigger: '.collection__title',
 				start: 'top bottom',
@@ -388,11 +393,23 @@ window.onload = function () {
 
 		let mapPoints = gsap.utils.toArray(".hunger-games__map-point");
 		mapPoints.forEach(el => {
+			el.dataset.delay = random(0,1).toFixed(2)
 			pointShow(el,'.hunger-games__map')
 		})
 
 		const missionLineHorizontal = document.querySelector('.mission__line')
-		const missionLineDiagonal = document.querySelector('.mission__line_diagonally')
+		// const missionLineDiagonal = document.querySelector('.mission__line_diagonally')
+
+
+		var svgLine = document.querySelector('.mission__line_diagonally line');
+
+		gsap.to(svgLine,{
+			strokeDashoffset: '400%',
+			duration: 1.2,
+			scrollTrigger: {
+				trigger: svgLine
+			}
+		})
 
 		gsap.fromTo(missionLineHorizontal,
 			{ width: "0px" },{
@@ -402,14 +419,14 @@ window.onload = function () {
 				trigger: '.mission',
 			}
 		})
-		gsap.fromTo(missionLineDiagonal,
-			{ width: "0px" },{
-			width: '113%',
-			ease: "power1.inOut",
-			scrollTrigger: {
-				trigger: '.mission',
-			}
-		})
+		// gsap.fromTo(missionLineDiagonal,
+		// 	{ width: "0px" },{
+		// 	width: '113%',
+		// 	ease: "power1.inOut",
+		// 	scrollTrigger: {
+		// 		trigger: '.mission',
+		// 	}
+		// })
 		// leftToRight(missionLineHorizontal,'.mission')
 		// topToBottom(missionLineDiagonal,'.mission')
 
@@ -515,18 +532,15 @@ window.onload = function () {
 
 		const platformBtns = document.querySelector('.platform__btns');
 		const scalingBtnPositive = (el) => {
-			el.style.height = `32.97vw`
 			el.style.width = `120%`
 			el.style.borderRadius = '15.10vw'
 		}
 		const scalingBtnNegative = (el) => {
-			el.style.height = `21.98vw`
 			el.style.width = `80%`
 		}
 
 		const setNormalSize = el => {
 			el.style.width = "100%"
-			el.style.height = "27.50vw"
 		}
 		const leveSizeBtns = () => {
 			setNormalSize(btnApplePlay)

@@ -8,8 +8,6 @@ export const scalingPositive = async (selector) => {
 		duration: 0.2,
 	});
 };
-
-
 export const lineShow = el => {
 	const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
 	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1.2
@@ -137,11 +135,9 @@ export const leftToRight = (el,trigger) => {
 	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1
 
 	gsap.fromTo(el,{
-		opacity: 0,
 		x: '-100%',
 	},{
 		x: 0,
-		opacity: 1,
 		delay: delay,
 		duration: duration,
 		ease: "power1.inOut",
@@ -201,8 +197,6 @@ export const hideElem = el => {
 		x: 0,
 		opacity: 1,
 	},{
-		y: 200,
-		x: 200,
 		opacity: 0,
 		duration: 1,
 	})
