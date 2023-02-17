@@ -2025,6 +2025,7 @@ li {
 }
 
 .svg-circle_1 circle {
+  r: calc(50% - 0.1vw);
   stroke-dasharray: 320%;
   stroke-dashoffset: 320%;
 }
