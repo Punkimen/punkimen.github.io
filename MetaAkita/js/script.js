@@ -100,6 +100,24 @@ document.addEventListener("DOMContentLoaded",function () {
   };
   joinChange()
 
+  const smoothLinks = document.querySelectorAll("[scroll-href]");
+
+  for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener("click",function (e) {
+      e.preventDefault();
+      removeClass(mobileMenu,"open");
+      removeClass(burger,"active");
+      removeClass(body,"overlay");
+      const id = smoothLink.getAttribute("scroll-href");
+
+      document.querySelector(id).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+
+
   window.addEventListener("resize",(e) => {
     headerMobileBuild();
     joinChange()
