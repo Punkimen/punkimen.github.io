@@ -130,20 +130,19 @@ export const pointShow = (el,trigger) => {
 
 }
 export const leftToRight = (el,trigger) => {
-	const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-	const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1
-
-	gsap.fromTo(el,{
-		x: '-100%',
-	},{
-		x: 0,
-		delay: delay,
-		duration: duration,
-		ease: "power1.inOut",
-		scrollTrigger: {
-			trigger: trigger ? trigger : el,
-		}
-	})
+	if (el) {
+		gsap.fromTo(el,{
+			width: 0,
+		},{
+			width: "100%",
+			delay: 0,
+			duration: 1,
+			ease: "power1.inOut",
+			scrollTrigger: {
+				trigger: trigger ? trigger : el,
+			}
+		})
+	}
 }
 export const rightToLeft = (el,trigger) => {
 	const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
@@ -244,7 +243,9 @@ export const circleDraw = (el,tirgger) => {
 		strokeDashoffset: '0',
 		delay: delay,
 		duration: duration,
+		ease: "power1.inOut",
 		scrollTrigger: {
+			start: "top bottom",
 			trigger: tirgger ? tirgger : el
 		}
 	})

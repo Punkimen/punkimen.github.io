@@ -25,34 +25,9 @@ import {
 import { CalcStats } from "./module/calcScore.js";
 import { random } from "./module/random.js";
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded",() => {
 
 	const initPage = () => {
-
-		const isFirst = sessionStorage.getItem("isFirstLoad")
-		const offHeroAnimation = function () {
-			const headerElems = document.querySelectorAll('.header [data-effect]')
-			const heroElems = document.querySelectorAll('.hero [data-effect]')
-			const btnsElems = document.querySelectorAll('.fixed-btns__app')
-			headerElems.forEach(el => {
-				el.dataset.effect = ''
-			})
-			heroElems.forEach(el => {
-				el.dataset.effect = ''
-			})
-			btnsElems.forEach((el,idx) => {
-				el.dataset.delay = 0.1 * idx
-			})
-		}
-		if (!isFirst) {
-			sessionStorage.setItem("isFirstLoad",true);
-		} else {
-			offHeroAnimation()
-			console.log('second');
-		}
-
-
-
 		const delayElem = document.querySelectorAll("[data-delay]");
 		const durationElem = document.querySelectorAll("[data-duration]");
 
@@ -97,7 +72,7 @@ window.onload = function () {
 				const arrSliders = slider_2.slides;
 				const lastEl = arrSliders[arrSliders.length - 1];
 				if (slider_2.activeIndex === arrSliders.length - 1) {
-					lastEl.style.right = "9.7vw";
+					lastEl.style.right = "8.80vw";
 					lastEl.style.transotionDuration = "600ms";
 				} else {
 					lastEl.style.right = "0vw";
@@ -326,8 +301,8 @@ window.onload = function () {
 			x: '-20%',
 			scrollTrigger: {
 				trigger: '.collection__title',
-				start: 'top bottom',
-				end: 'bottom',
+				start: 'top-=50% bottom',
+				end: 'bottom top',
 				scrub: true
 			},
 		})
@@ -359,7 +334,6 @@ window.onload = function () {
 		})
 
 		const missionLineHorizontal = document.querySelector('.mission__line')
-		// const missionLineDiagonal = document.querySelector('.mission__line_diagonally')
 
 
 		var svgLine = document.querySelector('.mission__line_diagonally line');
@@ -371,6 +345,8 @@ window.onload = function () {
 				trigger: svgLine
 			}
 		})
+
+
 
 		gsap.fromTo(missionLineHorizontal,
 			{ width: "0px" },{
@@ -395,7 +371,10 @@ window.onload = function () {
 		roadmapLines.forEach(el => {
 			leftToRight(el)
 		})
-
+		let lines = gsap.utils.toArray(".line");
+		lines.forEach(el => {
+			leftToRight(el)
+		})
 		let securityLines = gsap.utils.toArray(".security__row-line");
 		securityLines.forEach(el => {
 			leftToRight(el)
@@ -532,5 +511,5 @@ window.onload = function () {
 
 	};
 	initPage();
+})
 
-};

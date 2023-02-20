@@ -155,10 +155,17 @@ li {
   font-size: 7.29vw;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  background: #D4C9C1;
-  background: linear-gradient(119.82deg, #D4C9C1 36.35%, #414345 90.11%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #D4C9C1;
+}
+
+@supports (--css: variables) {
+  .main__title {
+    background: #D4C9C1;
+    background: linear-gradient(119.82deg, #D4C9C1 36.35%, #414345 90.11%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 }
 
 .main__title * {
@@ -237,14 +244,21 @@ li {
 }
 
 .gradient-text {
-  background: #D4C9C1;
-  background: linear-gradient(119.82deg, #D4C9C1 36.35%, #414345 90.11%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #D4C9C1;
 }
 
-.gradient-text * {
-  background: inherit;
+@supports (--css: variables) {
+  .gradient-text {
+    background: #D4C9C1;
+    background: linear-gradient(119.82deg, #D4C9C1 36.35%, #414345 90.11%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .gradient-text * {
+    background: inherit;
+  }
 }
 
 .main-link {
@@ -253,6 +267,23 @@ li {
 
 .main-link:hover {
   color: var(--color-main);
+}
+
+.line {
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background: #979797;
+  position: absolute;
+  left: 0;
+}
+
+.line_top {
+  top: 0;
+}
+
+.line_bottom {
+  bottom: 0;
 }
 
 .main-screen {
@@ -376,6 +407,7 @@ li {
 
 .dropdown__header {
   position: relative;
+  cursor: pointer;
 }
 
 .dropdown__header span {
@@ -486,7 +518,6 @@ li {
   z-index: 1;
   opacity: 0;
   pointer-events: none;
-  transition: opacity ease 0.3s;
 }
 
 .description-reality__inner {
@@ -510,6 +541,7 @@ li {
 }
 
 .description-reality__text p:not(:last-child) {
+  font-size: 0.94vw;
   margin-bottom: 1.71vw;
 }
 
@@ -533,7 +565,6 @@ li {
 
 .adventure__content {
   position: relative;
-  left: 2.6vw;
   width: 41vw;
   margin: 0 auto;
   position: relative;
@@ -565,6 +596,7 @@ li {
 }
 
 .adventure__title-row_3 {
+  text-align: center;
   transition-delay: 0.4s;
 }
 
@@ -674,7 +706,13 @@ li {
   top: auto;
   left: 0;
   bottom: 2.34vw;
-  opacity: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.cards-slider__btn.swiper-button-disabled {
+  opacity: 0.5 !important;
 }
 
 .create-omi {
@@ -781,7 +819,6 @@ li {
 
 .omi-card_custom {
   background-color: #0D1314;
-  background-image: url(../img/OMI/card_1_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
@@ -793,7 +830,6 @@ li {
 
 .omi-card_rarity {
   background-color: #0B1017;
-  background-image: url(../img/OMI/card_2_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
@@ -878,7 +914,7 @@ li {
   line-height: 1em;
   font-weight: 200;
   margin: 0 0.89vw;
-  min-width: 2.6vw;
+  width: 3.6vw;
 }
 
 .omi-card__total {
@@ -983,7 +1019,6 @@ li {
 }
 
 .find-map {
-  background-image: url(../img/bitmap.png);
   background-size: cover;
   background-position: bottom center;
   position: relative;
@@ -1175,7 +1210,7 @@ li {
   margin-bottom: 12.27vw;
 }
 
-.descover__map-img {
+.descover__map-img img {
   display: block;
   width: 100%;
   height: auto;
@@ -1633,8 +1668,8 @@ li {
 }
 
 .step__wrapper {
+  position: relative;
   padding-top: 4.2vw;
-  border-top: 1px solid #979797;
   display: flex;
   margin-bottom: 21.88vw;
 }
@@ -1699,7 +1734,7 @@ li {
 
 .be-part {
   padding-bottom: 3vw;
-  border-bottom: 1px solid #979797;
+  position: relative;
   margin-bottom: 3.6vw;
 }
 
@@ -1734,6 +1769,7 @@ li {
   top: -9.27vw;
   left: 2vw;
   pointer-events: none;
+  z-index: 3;
 }
 
 .be-part__pose img {
@@ -1862,7 +1898,7 @@ li {
 }
 
 .mission {
-  margin-bottom: 25vw;
+  margin-bottom: 15vw;
 }
 
 .mission__wrapper {
@@ -1931,7 +1967,7 @@ li {
 }
 
 .token {
-  padding: 5.21vw 0 36.46vw;
+  padding: 15.21vw 0 36.46vw;
 }
 
 .token__circle {
@@ -2016,7 +2052,6 @@ li {
 }
 
 .svg-circle circle {
-  transition: all ease-in-out 1.2s;
   stroke-width: 0.1vw;
 }
 
@@ -2070,17 +2105,6 @@ li {
   font-size: 0.94vw;
 }
 
-.roadmap-item__line {
-  display: block;
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #979797;
-}
-
 .roadmap-item_header {
   text-transform: uppercase;
   color: var(--color-main);
@@ -2114,7 +2138,7 @@ li {
 }
 
 .roadmap-item__descr p {
-  opacity: 0.9 !important;
+  color: #ECECEC;
 }
 
 .roadmap-item__descr p:not(:last-child) {
@@ -2199,15 +2223,6 @@ li {
 .team__row {
   position: relative;
   padding: 2.71vw 0 5.63vw;
-}
-
-.team__row-line {
-  position: absolute;
-  top: 0;
-  height: 1px;
-  left: 0;
-  width: 100%;
-  background: #5F5F5F;
 }
 
 .team-item__label {
@@ -2626,6 +2641,30 @@ li {
 
 .keep__wrapper-text p:not(:last-child) {
   margin-bottom: 1.2vw;
+}
+
+.no-webp .omi-card_custom {
+  background-image: url(../img/OMI/card_1_bg.png);
+}
+
+.no-webp .omi-card_rarity {
+  background-image: url(../img/OMI/card_2_bg.png);
+}
+
+.no-webp .find-map {
+  background-image: url(../img/bitmap.png);
+}
+
+.webp .omi-card_custom {
+  background-image: url(../img/OMI/card_1_bg.webp);
+}
+
+.webp .omi-card_rarity {
+  background-image: url(../img/OMI/card_2_bg.webp);
+}
+
+.webp .find-map {
+  background-image: url(../img/bitmap.webp);
 }
 
 @media (min-width: 1921px) {
