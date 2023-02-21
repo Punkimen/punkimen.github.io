@@ -309,6 +309,17 @@ document.addEventListener("DOMContentLoaded",() => {
 
 		Marquee3k.init()
 
+		const marketCatalog = document.querySelector('.market-catalog')
+		marketCatalog.addEventListener('mouseenter',e => {
+			setTimeout(() => {
+				console.log(Marquee3k);
+				// marketCatalog.setAttribute('data-pausable',true)
+				Marquee3k.pauseAll();
+			},1000)
+		})
+		marketCatalog.addEventListener('mouseleave',e => {
+			Marquee3k.playAll();
+		})
 		// hunger games
 
 		gsap.fromTo(
@@ -330,7 +341,7 @@ document.addEventListener("DOMContentLoaded",() => {
 		let mapPoints = gsap.utils.toArray(".hunger-games__map-point");
 		mapPoints.forEach(el => {
 			el.dataset.delay = random(0,1).toFixed(2)
-			pointShow(el,'.hunger-games__map')
+			opacityIn(el,'.hunger-games__map')
 		})
 
 		const missionLineHorizontal = document.querySelector('.mission__line')
