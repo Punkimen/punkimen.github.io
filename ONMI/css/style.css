@@ -1030,9 +1030,29 @@ li {
   margin: 0 auto;
   position: relative;
   top: -2vw;
+  border-radius: 2.14vw;
+  overflow: hidden;
 }
 
 .find-map__phone img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.find-map__phone-screen {
+  position: absolute;
+  top: 0.94vw;
+  left: 1.04vw;
+  width: 90%;
+  height: 100%;
+}
+
+.find-map__phone-screen img {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: auto;
