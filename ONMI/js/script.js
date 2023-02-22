@@ -267,7 +267,6 @@ document.addEventListener("DOMContentLoaded",() => {
 			pinned: true,
 			start: "top top",
 			end: "bottom bottom",
-			marker: true,
 			onToggle: (self) => showEl(pinEl,self.isActive),
 		});
 

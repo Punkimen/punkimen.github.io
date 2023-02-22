@@ -430,11 +430,11 @@ li {
 
 .hero {
   position: relative;
+  z-index: 2;
   padding: 4.3vw 0 4.3vw;
 }
 
 .hero__wrapper {
-  min-height: 100vh;
   position: relative;
 }
 
@@ -506,6 +506,7 @@ li {
 
 .description-reality {
   position: relative;
+  min-height: 100vh;
 }
 
 .description-reality__content {
@@ -518,6 +519,7 @@ li {
   z-index: 1;
   opacity: 0;
   pointer-events: none;
+  transition: opacity ease 0.3s;
 }
 
 .description-reality__inner {
