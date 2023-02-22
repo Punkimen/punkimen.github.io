@@ -1,9 +1,8 @@
 "use strict";
-import { sliderInit } from "./module/sliderInit.js";
-import { splitText } from "./module/splitText.js";
-import { setStyle } from "./module/setStyle.js";
-import { sectionHeightInit } from "./module/sectionHeightInit.js";
-
+import { sliderInit } from "./module/sliderInit.min.js";
+import { splitText } from "./module/splitText.min.js";
+import { setStyle } from "./module/setStyle.min.js";
+import { sectionHeightInit } from "./module/sectionHeightInit.min.js";
 import {
 	circleDraw,
 	fadeDown,
@@ -14,16 +13,14 @@ import {
 	leftToRight,
 	lineShow,
 	opacityIn,
-	pointShow,
 	rightToLeft,
 	scaling,
 	scalingPositive,
 	showElem,
-	topToBottom,
 	transformTop,
-} from "./module/GSAPAnim.js";
-import { CalcStats } from "./module/calcScore.js";
-import { random } from "./module/random.js";
+} from "./module/GSAPAnim.min.js";
+import { CalcStats } from "./module/calcScore.min.js";
+import { random } from "./module/random.min.js";
 
 document.addEventListener("DOMContentLoaded",() => {
 
@@ -100,7 +97,7 @@ document.addEventListener("DOMContentLoaded",() => {
 			splitText(el);
 		});
 		sectionHeightInit();
-		// parallaxInit();
+
 
 		// score
 		const handle = document.querySelector(".omi-card__handle");
