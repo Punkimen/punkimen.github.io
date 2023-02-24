@@ -293,15 +293,15 @@ document.addEventListener("DOMContentLoaded",() => {
 		// 	},
 		// })
 
-		gsap.fromTo('.collection__title',{ x: "18%" },{
-			x: '-20%',
-			scrollTrigger: {
-				trigger: '.collection__title',
-				start: 'top-=50% bottom',
-				end: 'bottom top',
-				scrub: true
-			},
-		})
+		// gsap.fromTo('.collection__title',{ x: "18%" },{
+		// 	x: '-20%',
+		// 	scrollTrigger: {
+		// 		trigger: '.collection__title',
+		// 		start: 'top-=50% bottom',
+		// 		end: 'bottom top',
+		// 		scrub: true
+		// 	},
+		// })
 
 		Marquee3k.init()
 
