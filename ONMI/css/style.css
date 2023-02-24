@@ -136,6 +136,7 @@ li {
   display: block;
   width: 6.56vw;
   height: auto;
+  margin: 0 auto;
 }
 
 .btn_app img.AppStore {
@@ -513,6 +514,10 @@ li {
   overflow: hidden;
 }
 
+.hero__mobile-btn {
+  display: none;
+}
+
 .fixed-btns {
   position: fixed;
   bottom: 2.1vw;
@@ -812,6 +817,7 @@ li {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  min-width: 158px;
 }
 
 .create-omi__item img {
@@ -2743,8 +2749,37 @@ li {
 }
 
 @media (max-width: 1921px) {
+  body {
+    font-size: 20px;
+  }
+
   .container {
     padding: 0 25px;
+  }
+
+  .btn {
+    min-width: 140px;
+    font-size: 14px;
+    padding: 19px 19px 21px 19px;
+  }
+
+  .btn_app {
+    padding: 4px 6px 2px 2px;
+    border-radius: 10px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-conent: center;
+  }
+
+  .btn_app img {
+    max-width: 126px;
+    width: 100%;
+  }
+
+  .btn_app img.AppStore {
+    max-width: 110px;
+    width: 100%;
   }
 
   .header {
@@ -2776,6 +2811,40 @@ li {
 
   .hero__text {
     font-size: 14px;
+  }
+
+  .fixed-btns__app {
+    min-width: 150px;
+  }
+
+  .fixed-btns__app:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .description-reality__text {
+    max-width: 787px;
+    font-size: 20px;
+  }
+
+  .description-reality__text p:not(:last-child) {
+    max-width: 787px;
+    font-size: 18px;
+    margin-bottom: 33px;
+  }
+
+  .omi-card {
+    padding: 80px 3.2vw 57px 3.6vw;
+    border-radius: 67px;
+  }
+
+  .omi-card__title {
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+
+  .omi-card__text {
+    font-size: 16px;
+    margin: 0 auto 96px;
   }
 }
 
@@ -2820,11 +2889,17 @@ li {
 
   .hero {
     padding: 157px 0 82px;
+    height: 100vh;
+    min-height: 500px;
   }
 
   .hero__title {
     font-size: 12vw;
     margin-bottom: 33px;
+  }
+
+  .create-omi__item {
+    margin: 0 13px;
   }
 }
 
@@ -2845,9 +2920,37 @@ li {
     display: block;
   }
 
+  .hero__wrapper {
+    margin-bottom: 60px;
+  }
+
   .hero__text {
     font-size: 12px;
     text-align: center;
+  }
+
+  .hero__mobile-btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .fixed-btns {
+    display: none;
+  }
+
+  .description-reality__text {
+    max-width: 290px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .description-reality__text p:not(:last-child) {
+    font-size: 12px;
+  }
+
+  .bordered-text {
+    padding: 0;
+    border: none;
   }
 }
 
