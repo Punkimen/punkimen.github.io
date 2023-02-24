@@ -12,12 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="page-content">
-        <header class="header animate">
+    <header class="header animate">
   <div class="container">
     <div class="header__wrapper">
       <div class="header__left">
@@ -37,7 +36,8 @@
             </a>
           </li>
           <li class="header__list-elem">
-            <a href="#" class="header__link header__link_narrow">
+            <a href="#" class="header__link header__link_narrow" style="position: relative;
+            left: 1.05vw;">
               <span data-delay="0.4" data-effect="line">
                 White Paper
               </span>
@@ -65,42 +65,37 @@
           </div>
         </div>
       </div>
-      <div class="header__burger burger">
-        <span></span>
-        <span></span>
-      </div>
     </div>
   </div>
 </header>
-<!-- <div class="mobile-menu">
-  <div class="mobile-menu__container container"></div>
-</div> -->
 
-        <div class="description-reality__content">
-            <div class="container">
-                <div class="description-reality__inner">
-                    <div class="description-reality__text">
-                        <p class="text-animate">
-                            By the middle of the century, 68% of the world's population will live in cities. The general
-                            obsession of
-                            technology companies towards fully immersive metaverses seems premature to us.</p>
-                        <p>
-                            Our mission is to create a <span class="bordered-text">reality 2.0</span> layer over real
-                            cities, an
-                            AR-universe that will expand
-                            the boundaries
-                            of reality and make it more functional and impressive.</p>
-                        <p>©2022</p>
-                    </div>
+    <div class="description-reality__content">
+        <div class="container">
+            <div class="description-reality__inner">
+                <div class="description-reality__text">
+                    <p class="text-animate">
+                        By the middle of the century, 68% of the world's population will live in cities. The general
+                        obsession of
+                        technology companies towards fully immersive metaverses seems premature to us.</p>
+                    <p>
+                        Our mission is to create a <span class="bordered-text">reality 2.0</span> layer over real
+                        cities, an
+                        AR-universe that will expand
+                        the boundaries
+                        of reality and make it more functional and impressive.</p>
+                    <p>©2022</p>
                 </div>
             </div>
         </div>
-        <div id="smooth-wrapper" class="smooth-wrapper">
-            <div id="smooth-content" class="smooth-content">
-                <section class="hero">
+    </div>
+    <div id="smooth-wrapper" class="smooth-wrapper">
+        <div id="smooth-content" class="smooth-content">
+            <section class="hero">
   <div class="container ">
     <div class="hero__wrapper">
-      <h1 class="hero__title gradient-text animate" data-duration="1.2" data-effect="fade-down">Play with the world</h1>
+      <h1 class="hero__title gradient-text animate" data-duration="1.2" data-effect="fade-down">
+        Play with the world
+      </h1>
       <div class="hero__text animate" data-delay="0.2" data-duration="1.5" data-effect="fade-down">
         <p>
           <span data-effect="line" data-delay="0.1">The first Reality 2.0 game in
@@ -115,24 +110,14 @@
         </p>
       </div>
     </div>
-    <a href="#" class="hero__mobile-btn btn">
-      Download
-    </a>
   </div>
 </section>
 
-                <section class="description-reality">
-
-  <picture>
-    <source media="(min-width:768px)" srcset="/img/reality_bg.png">
-    <noscript data-webp><img src="./img/reality_bg_mob.png"></noscript>
-  </picture>
-
-  <!-- <noscript data-webp><img src="./img/reality_bg.png"></noscript> -->
-  <!-- <img src="./img/reality_bg2.png"> -->
+            <section class="description-reality">
+  <noscript data-webp><img src="./img/reality_bg2.png"></noscript>
 </section>
 
-                <section class="adventure">
+            <section class="adventure">
   <div class="container">
     <div class="adventure__content">
       <h2 class="main__title adventure__title">
@@ -220,7 +205,7 @@
   </div>
 </section>
 
-                <section class="create-omi">
+            <section class="create-omi">
   <div class="container">
     <div class="create-omi__descr">
       <h2 class="main__title create-omi__title">
@@ -295,7 +280,8 @@
   </div>
   <div class="container">
     <div class="create-omi__cards">
-      <div class="create-omi__cards-wrapper">
+
+      <div class="create-omi__wrapper">
         <div class="create-omi__card omi-card omi-card_custom animate" data-effect="fade-in">
           <h4 class="omi-card__title">Customize OMI look</h4>
           <div class="omi-card__text">
@@ -367,7 +353,7 @@
   </div>
 </section>
 
-                <section class="find">
+            <section class="find">
   <div class="container">
     <div class="find__descr">
       <h2 class="find__title main__title">
@@ -487,7 +473,7 @@
   </div>
 </section>
 
-                <section class="descover">
+            <section class="descover">
   <div class="container">
     <div class="descover__descr">
       <h2 class="descover__title main__title">
@@ -561,7 +547,7 @@
   </div>
 </section>
 
-                <section class="pvp" data-speed="0.7">
+            <section class="pvp" data-speed="0.7">
   <div class="cotnainer">
     <div class="pvp__wrapper">
       <div class="pvp__descr">
@@ -592,18 +578,8 @@
 
 <div id="end"></div>
 
-                <!-- <section class="collection">
-   <div class="collection__top">
-    <h2 class="collection__title gradient-text">collections</h2>
-    <div class="collection__pose" data-speed="1.1">
-      <noscript data-webp><img src="img/collection_pose.png"></noscript>
-      <img src="" alt="pose">
-    </div>
-  </div> 
-
-</section> -->
-
-                <section class="market">
+            
+            <section class="market">
   <div class="container">
     <div class="market__wrapper">
       <h2 class="market__title main__title gradient-text" data-effect="fade-in">
@@ -702,7 +678,7 @@
   </div>
 </section>
 
-                <section class="hunger-games">
+            <section class="hunger-games">
   <div class="container">
     <div class="hunger-games__wrapper">
       <h2 class="hunger-games__title gradient-text">
@@ -773,7 +749,7 @@
   </div>
 </section>
 
-                <section class="step" data-speed="1.1">
+            <section class="step" data-speed="1.1">
   <div class="container container_padding">
     <div class="step__wrapper main-wrapper">
       <div class="line line_top"></div>
@@ -905,7 +881,7 @@
   </div>
 </section>
 
-                <section class="mission">
+            <section class="mission">
   <div class="container_padding container">
     <div class="mission__wrapper main-wrapper">
       <div class="mission__line"></div>
@@ -934,7 +910,7 @@
   </div>
 </section>
 
-                <section class="token">
+            <section class="token">
   <div class="container">
     <div class="token__circle">
       <div class="token__circle-content" data-effect="opacity" data-delay="0.6">
@@ -943,13 +919,13 @@
       </div>
       <div class="token__circle-shadow" data-duration="1.4" data-effect="opacity" data-delay="0.1"></div>
       <svg class="svg-circle svg-circle_1">
-        <circle cx="50%" cy="50%" r="50%" fill=" none" data-duration="1.6" data-delay="0.4"></circle>
+        <circle cx="50%" cy="50%" r="50%" fill=" none" data-duration="1.2" data-delay="0.4"></circle>
       </svg>
       <svg class="svg-circle svg-circle_2">
-        <circle cx="50%" cy="50%" r="38%" fill=" none" data-duration="1.6" data-delay="0.6"></circle>
+        <circle cx="50%" cy="50%" r="38%" fill=" none" data-duration="1.2" data-delay="0.6"></circle>
       </svg>
       <svg class="svg-circle svg-circle_3">
-        <circle cx="50%" cy="50%" r="35%" fill=" none" data-duration="1.6" data-delay="0.7"></circle>
+        <circle cx="50%" cy="50%" r="35%" fill=" none" data-duration="1.2" data-delay="0.7"></circle>
       </svg>
     </div>
     <div class="token__wrapper">
@@ -980,7 +956,7 @@
   </div>
 </section>
 
-                <section class="roadmap" data-speed="0.8">
+            <section class="roadmap" data-speed="0.8">
   <div class="container container_padding">
     <h2 class="roadmap__title gradient-text">Roadmap</h2>
     <div class="roadmap__content">
@@ -1195,7 +1171,7 @@
   </div>
 </section>
 
-                <section class="security" data-speed="1.2">
+            <section class="security" data-speed="1.2">
   <div class="container container_padding">
     <h3 class="security__title">
       <span class="animate" data-effect="line">Security</span>
@@ -1251,7 +1227,7 @@
   </div>
 </section>
 
-                <section class="team" data-speed="0.7">
+            <section class="team" data-speed="0.7">
   <div class="container container_padding">
     <h3 class="team__title">
       <span class="animate" data-effect="line">Team</span>
@@ -1369,7 +1345,7 @@
   </div>
 </section>
 
-                <section class="vacancy">
+            <section class="vacancy">
   <div class="container container_padding">
     <div class="vacancy__header">
       <h3 class="vacancy__title">
@@ -1563,7 +1539,7 @@
   </div>
 </section>
 
-                <section class="questions">
+            <section class="questions">
   <div class="question-item">
     <div class="question-item__line" data-effect="draw-line" data-duration="1.2"></div>
     <div class="question-item__header" data-effect='fade-down'>
@@ -1642,7 +1618,7 @@
   </div>
 </section>
 
-                <section class="platform">
+            <section class="platform">
   <div class="container">
     <div class="platform__content">
       <h2 class="platform__title main__title">
@@ -1680,7 +1656,7 @@
   </div>
 </section>
 
-                <section class="keep">
+            <section class="keep">
   <div class="container container_padding">
     <div class="keep__header">
       <h3 class="keep__title">
@@ -1757,29 +1733,26 @@
   </div>
 </section>
 
-                <!-- <div class="hide" style="width: 100vw; overflow: hidden; opacity: 0;"> </div> -->
-                <section style="height: 100vh"></section>
-            </div>
+            <section style="height: 100vh"></section>
         </div>
+    </div>
 
-        <div class="fixed-btns">
-            <div class="container">
-                <div class="fixed-btns__wrapper">
-                    <div class="fixed-btns__left">
-                        <a href="#" data-effect="opacity" data-duration="1.2" data-delay="1"
-                            class="fixed-btns__app btn btn_app animate">
-                            <img src="img/googlePlay.svg" alt="Google Play">
-                        </a>
-                        <a href="#" data-effect="opacity" data-duration="1.4" data-delay="1.1"
-                            class="fixed-btns__app btn btn_app animate">
-                            <img class="AppStore" src="img/AppStore.svg" alt="App Store">
-                        </a>
-                    </div>
+    <div class="fixed-btns">
+        <div class="container">
+            <div class="fixed-btns__wrapper">
+                <div class="fixed-btns__left">
+                    <a href="#" data-effect="opacity" data-duration="1.2" data-delay="1"
+                        class="fixed-btns__app btn btn_app animate">
+                        <img src="img/googlePlay.svg" alt="Google Play">
+                    </a>
+                    <a href="#" data-effect="opacity" data-duration="1.4" data-delay="1.1"
+                        class="fixed-btns__app btn btn_app animate">
+                        <img class="AppStore" src="img/AppStore.svg" alt="App Store">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/libs/gsap.min.js"></script>
     <script src="./js/libs/ScrollSmoother.min.js"></script>
@@ -1787,7 +1760,7 @@
     <script src="./js/libs/marquee3k.min.js"></script>
     <script src="./js/libs/simple-webp.min.js"></script>
 
-    <script src="js/script.min.js" type="module" defer></script>
+    <script src="js/script.js" type="module" defer></script>
 </body>
 
 </html>
