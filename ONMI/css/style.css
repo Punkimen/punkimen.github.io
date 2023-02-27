@@ -430,11 +430,11 @@ li {
 
 .hero {
   position: relative;
+  z-index: 2;
   padding: 4.3vw 0 4.3vw;
 }
 
 .hero__wrapper {
-  min-height: 100vh;
   position: relative;
 }
 

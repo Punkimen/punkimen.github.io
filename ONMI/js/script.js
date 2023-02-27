@@ -3,7 +3,6 @@ import { sliderInit } from "./module/sliderInit.js";
 import { splitText } from "./module/splitText.js";
 import { setStyle } from "./module/setStyle.js";
 import { sectionHeightInit } from "./module/sectionHeightInit.js";
-
 import {
 	circleDraw,
 	fadeDown,
@@ -14,12 +13,10 @@ import {
 	leftToRight,
 	lineShow,
 	opacityIn,
-	pointShow,
 	rightToLeft,
 	scaling,
 	scalingPositive,
 	showElem,
-	topToBottom,
 	transformTop,
 } from "./module/GSAPAnim.js";
 import { CalcStats } from "./module/calcScore.js";
