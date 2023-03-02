@@ -2037,7 +2037,7 @@ li {
 }
 
 .token__circle-shadow {
-  box-shadow: inset 0px 0px 40px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 125px 20px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0px 0px 2.08vw 0.42vw rgba(255, 255, 255, 0.5), inset 0px 0px 6.51vw 1.04vw rgba(255, 255, 255, 0.5);
   width: 36.98vw;
   height: 36.98vw;
   border-radius: 50%;
@@ -3111,6 +3111,27 @@ li {
     line-height: 0.9em;
     left: -3.02vw;
   }
+
+  .mission__title {
+    font-size: 6.05vw;
+  }
+
+  .mission__text {
+    font-size: 2.12vw;
+  }
+
+  .token__card {
+    height: 35.58vw;
+  }
+
+  .token__card-label {
+    font-size: 2.72vw;
+  }
+
+  .token__card-text {
+    font-size: 1.61vw;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3585,6 +3606,95 @@ li {
   .individual-chose__list-elem::before {
     display: none;
   }
+
+  .mission__wrapper {
+    display: block;
+  }
+
+  .mission__line {
+    display: none;
+  }
+
+  .mission__line_diagonally {
+    display: block;
+    width: 150%;
+    top: 15vw;
+  }
+
+  .mission__title {
+    font-size: 10.42vw;
+    margin-bottom: 20.44vw;
+    width: 24vw;
+    display: block;
+    word-wrap: break-word;
+  }
+
+@supports (--css: hyphens) {
+    .mission__title {
+      -webkit-hyphens: manual;
+      hyphens: manual;
+    }
+}
+
+  .mission__title-arrow {
+    display: none;
+  }
+
+  .mission__text {
+    font-size: 2.73vw;
+  }
+
+  .token__circle {
+    width: 85.29vw;
+    height: 85.29vw;
+  }
+
+  .token__circle-text {
+    font-size: 2.73vw;
+  }
+
+  .token__circle-name {
+    font-size: 13.93vw;
+  }
+
+  .token__circle-shadow {
+    width: 60.81vw;
+    height: 60.81vw;
+  }
+
+  .token__wrapper {
+    display: block;
+  }
+
+  .token__card {
+    height: 45.96vw;
+    padding: 5.86vw 5.21vw;
+  }
+
+  .token__card:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 1.95vw;
+  }
+
+  .token__card-label {
+    font-size: 3.52vw;
+  }
+
+  .token__card-text {
+    font-size: 2.08vw;
+  }
+
+  .svg-circle_2 circle {
+    stroke-dasharray: 285%;
+    stroke-dashoffset: 285%;
+    r: 45%;
+  }
+
+  .svg-circle_3 circle {
+    r: 38%;
+    stroke-dasharray: 240%;
+    stroke-dashoffset: 240%;
+  }
 }
 
 @media (max-width: 568px) {
@@ -3994,5 +4104,60 @@ li {
 
   .individual-chose__list {
     font-size: 3.29vw;
+  }
+
+  .mission__line_diagonally {
+    top: 45vw;
+  }
+
+  .mission__title {
+    font-size: 18.78vw;
+    width: 43vw;
+    margin-bottom: 42.25vw;
+  }
+
+  .mission__text {
+    font-size: 4.93vw;
+    width: 100%;
+  }
+
+  .token__circle {
+    width: 152.76vw;
+    height: 152.76vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .token__circle-text {
+    font-size: 4.93vw;
+  }
+
+  .token__circle-name {
+    font-size: 25.12vw;
+  }
+
+  .token__circle-shadow {
+    width: 109.62vw;
+    height: 109.62vw;
+    box-shadow: none;
+  }
+
+  .token__card {
+    padding: 10.56vw 9.39vw;
+    height: 82.86vw;
+  }
+
+  .token__card:not(:last-child) {
+    margin-bottom: 3.52vw;
+  }
+
+  .token__card-label {
+    font-size: 6.34vw;
+    margin-bottom: 4.69vw;
+  }
+
+  .token__card-text {
+    font-size: 3.76vw;
   }
 }
