@@ -37,9 +37,23 @@ document.addEventListener("DOMContentLoaded",() => {
 		}
 
 		{
+
+			let numSize = "0.52vw"
+			const initNum = () => {
+				const windowWidth = window.innerWidth
+				if (windowWidth <= 568) {
+					numSize = "5.52vw"
+				} else {
+					numSize = "0.52vw"
+				}
+			}
+			window.addEventListener('resize',() => {
+				initNum()
+			})
+
 			const cardSliderOptions = {
 				slidesPerView: "auto",
-				spaceBetween: 10,
+				spaceBetween: 20,
 				grabCursor: true,
 				speed: 600,
 				effect: "creative",
@@ -54,10 +68,15 @@ document.addEventListener("DOMContentLoaded",() => {
 						opacity: 0,
 					},
 					next: {
-						translate: ["calc(100% + 0.52vw)",0,0],
+						translate: [`calc(100% + ${numSize})`,0,0],
 					},
 				},
-
+				breakpoints: {
+					568: {
+						slidesPerView: "auto",
+						spaceBetween: 10
+					}
+				},
 				navigation: {
 					nextEl: ".swiper-button-next",
 					prevEl: ".swiper-button-prev",
@@ -67,10 +86,17 @@ document.addEventListener("DOMContentLoaded",() => {
 			const slider_2 = sliderInit(".cards-slider__slider",cardSliderOptions);
 			slider_2.controller.control = slider_1;
 			const sliderPrety = () => {
+				const windowWidth = window.innerWidth
+				let rightProp = '7vw'
+				if (windowWidth > 992) {
+					rightProp = '8.8vw'
+				} else if (windowWidth < 768) {
+					rightProp = 0
+				}
 				const arrSliders = slider_2.slides;
 				const lastEl = arrSliders[arrSliders.length - 1];
 				if (slider_2.activeIndex === arrSliders.length - 1) {
-					lastEl.style.right = "8.80vw";
+					lastEl.style.right = rightProp;
 					lastEl.style.transotionDuration = "600ms";
 				} else {
 					lastEl.style.right = "0vw";

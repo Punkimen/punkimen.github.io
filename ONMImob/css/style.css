@@ -721,17 +721,9 @@ li {
 }
 
 .cards-slider__slide {
-  background: #121214;
-  border-radius: 2.71vw;
   max-width: 20.21vw;
   width: 100%;
-  min-height: 14.64vw;
-  padding: 2.5vw 3.13vw 2vw 3vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-weight: 500;
-  transition: right ease 0.5s;
+  height: 14.64vw;
 }
 
 .cards-slider__slide.swiper-slide-next .cards-slider__descr {
@@ -740,6 +732,31 @@ li {
 
 .cards-slider__slide.swiper-slide-prev .cards-slider__descr {
   color: #464646;
+}
+
+.cards-slider__phone {
+  display: none;
+}
+
+.cards-slider__phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cards-slider__block {
+  background: #121214;
+  border-radius: 2.71vw;
+  width: 100%;
+  height: 100%;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding: 2.5vw 3.13vw 2vw 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 500;
+  transition: right ease 0.5s;
 }
 
 .cards-slider__descr {
@@ -2727,6 +2744,20 @@ li {
     font-size: 0.97vw;
   }
 
+  .btn_app {
+    padding: 0.2vw 0.94vw 0.1vw 0.94vw;
+    min-height: 3.06vw;
+    min-width: 9.72vw;
+  }
+
+  .btn_app img {
+    width: 100%;
+  }
+
+  .btn_app img.AppStore {
+    width: 100%;
+  }
+
   .header {
     font-size: 0.83vw;
   }
@@ -2754,6 +2785,10 @@ li {
     min-width: 11.67vw;
     padding: 1.58vw;
     font-size: 1.17vw;
+  }
+
+  .btn_app {
+    padding: 0.58vw 0.94vw 0.58vw 0.94vw;
   }
 
   .header {
@@ -2831,8 +2866,23 @@ li {
     font-size: 1.41vw;
   }
 
+  .btn_app {
+    padding: 0.58vw 0.94vw 0.58vw 0.94vw;
+  }
+
   .main__text {
     font-size: 1.41vw;
+  }
+
+  .swiper-btn {
+    max-width: 12vw;
+    height: 7vw;
+    border-radius: 3.83vw;
+  }
+
+  .swiper-btn img {
+    width: 2.56vw;
+    height: 1.99vw;
   }
 
   .header {
@@ -2874,6 +2924,37 @@ li {
 
   .description-reality__text p:not(:last-child) {
     font-size: 1.21vw;
+  }
+
+  .adventure__slider-phone {
+    margin: 0;
+    max-width: 50vw;
+  }
+
+  .adventure__phone-img {
+    width: 50vw;
+  }
+
+  .adventure__phone {
+    max-width: 28.27vw;
+  }
+
+  .cards-slider__slider {
+    max-width: 46.37vw;
+  }
+
+  .cards-slider__slide {
+    max-width: 39.11vw;
+    height: 28.23vw;
+  }
+
+  .cards-slider__descr {
+    max-width: 22.38vw;
+    font-size: 2.02vw;
+  }
+
+  .cards-slider__num {
+    font-size: 1.81vw;
   }
 
   .create-omi__text {
@@ -3244,6 +3325,67 @@ li {
     padding: 0;
     border: none;
     border-radius: 0;
+  }
+
+  .adventure__content {
+    width: 100%;
+  }
+
+  .adventure__title {
+    margin-bottom: 4.56vw;
+  }
+
+  .adventure__text {
+    max-width: 36.5vw;
+  }
+
+  .adventure__slider-phone {
+    display: none;
+  }
+
+  .cards-slider {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+  }
+
+  .cards-slider__slider {
+    max-width: 100%;
+  }
+
+  .cards-slider__slide {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    left: -4vw;
+  }
+
+  .cards-slider__phone {
+    width: 27.47vw;
+    display: block;
+    margin-right: 4.69vw;
+  }
+
+  .cards-slider__block {
+    max-width: 50.39vw;
+    height: 36.59vw;
+    background: none;
+    border-radius: 0;
+  }
+
+  .cards-slider__descr {
+    font-size: 2.6vw;
+    max-width: 28.91vw;
+  }
+
+  .cards-slider__num {
+    font-size: 2.34vw;
+    opacity: 0.3;
+  }
+
+  .cards-slider__btn {
+    display: none;
   }
 
   .create-omi__descr {
@@ -3731,6 +3873,28 @@ li {
     font-weight: bold;
     font-size: 2.82vw;
     margin-bottom: 4vw;
+  }
+
+  .cards-slider__slider .swiper-wrapper {
+    transform: translateX(-10vw);
+  }
+
+  .cards-slider__slide {
+    left: 0;
+  }
+
+  .cards-slider__phone {
+    width: 49.53vw;
+    margin-right: 8.45vw;
+  }
+
+  .cards-slider__descr {
+    font-size: 4.69vw;
+    max-width: 52.11vw;
+  }
+
+  .cards-slider__num {
+    font-size: 4.23vw;
   }
 
   .create-omi__title {
