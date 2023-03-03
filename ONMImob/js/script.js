@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded",() => {
 			const initNum = () => {
 				const windowWidth = window.innerWidth
 				if (windowWidth <= 568) {
-					numSize = "5.52vw"
+					numSize = "11.52vw"
 				} else {
 					numSize = "0.52vw"
 				}
@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded",() => {
 			window.addEventListener('resize',() => {
 				initNum()
 			})
+			initNum()
 
 			const cardSliderOptions = {
 				slidesPerView: "auto",
