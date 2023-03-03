@@ -3773,6 +3773,7 @@ li {
 
 @supports (--css: hyphens) {
     .mission__title {
+      word-wrap: normal;
       -webkit-hyphens: manual;
       hyphens: manual;
     }
