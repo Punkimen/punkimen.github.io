@@ -3,20 +3,23 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.mobNav = exports.navInit = void 0;
+exports.mobNav = exports.navInit = exports.screenInit = void 0;
 
 var _toggleClass = require("./toggleClass.js");
 
 var screenInit = function screenInit(current, total) {
+  console.log(current);
   var currentScore = document.querySelectorAll(".current-score");
   var totalScore = document.querySelectorAll(".total-score");
   currentScore.forEach(function (score) {
-    score.innerText = current < 10 ? "0".concat(current) : current;
+    score.innerText = current < 10 ? "0".concat(current + 1) : current + 1;
   });
   totalScore.forEach(function (score) {
     score.innerText = total < 10 ? "0".concat(total) : total;
   });
 };
+
+exports.screenInit = screenInit;
 
 var navInit = function navInit() {
   // nav
@@ -27,16 +30,7 @@ var navInit = function navInit() {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         var currentIndex = sectionsArray.indexOf(entry.target);
-        screenInit(currentIndex + 1, length);
-      }
-
-      var id = entry.target.getAttribute("data-anchor");
-
-      if (entry.intersectionRatio > 0) {
-        var link = document.querySelector(".navigation a[scroll-href=\"".concat(id, "\"]"));
-        link.classList.add("current");
-      } else {
-        document.querySelector(".navigation a[scroll-href=\"".concat(id, "\"]")).classList.remove("current");
+        screenInit(currentIndex, length);
       }
     });
   }); // Track all sections that have an `id` applied

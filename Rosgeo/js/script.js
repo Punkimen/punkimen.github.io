@@ -8,7 +8,7 @@ import {
 	setCurrent,
 	showHideNav,
 } from "./module/navigation.js";
-import {mobNav, navInit} from "./module/scrollNavigation.js";
+import {mobNav, navInit, screenInit} from "./module/scrollNavigation.js";
 import {setContainerWidth} from "./module/setContainerWidth.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -67,6 +67,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			navParent.querySelector("ul").style.display = "none";
 			navParent.classList.add("navigation");
 			navParent.append(createNavigation(navigationAnchors));
+			navInit();
+			console.log(this);
 			const div = document.createElement("div");
 			div.className = "scroll-nav__top";
 			div.innerHTML = `<div class="scroll-nav__score">
@@ -77,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			setCurrent(this.index - 1);
 			showHideNav(this.index);
 			// navParent.textContent = `${createNavigation(navigationAnchors)}`;
-
+			screenInit(this.index, this.anchors.length);
 			const centeredSection =
 				document.querySelectorAll(".section_centered");
 			const rightSection = document.querySelectorAll(".section_right");
@@ -108,6 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	pageSlider.on("scroll.start", (data) => {
 		setCurrent(data.index - 1);
 		showHideNav(data.index);
+		console.log(data);
+		screenInit(data.index, pageSlider.anchors.length);
 	});
 
 	const scrollBarElems = document.querySelectorAll(".scroll-text");
