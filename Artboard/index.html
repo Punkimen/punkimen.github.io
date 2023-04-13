@@ -12,10 +12,6 @@
 			href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
 			rel="stylesheet"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-		/>
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 
@@ -25,7 +21,12 @@
 	<div class="container">
 		<div class="header__wrapper">
 			<div class="header__left">
-				<a href="/" class="header__logo" data-effect="fadeUp">
+				<a
+					href="/"
+					class="header__logo"
+					data-effect="fadeUp"
+					data-to="0"
+				>
 					<svg class="" width="60" height="60" viewBox="0 0 60 60">
 						<use xlink:href="./img/icons/icons.svg#logo"></use>
 					</svg>
@@ -38,6 +39,7 @@
 								class="header__menu-link"
 								data-effect="line"
 								data-delay="0.3"
+								data-to="#features"
 								>Особенности</a
 							>
 						</li>
@@ -47,6 +49,7 @@
 								class="header__menu-link"
 								data-effect="line"
 								data-delay="0.4"
+								data-to="#terra"
 								>Территория</a
 							>
 						</li>
@@ -56,6 +59,7 @@
 								class="header__menu-link"
 								data-effect="line"
 								data-delay="0.5"
+								data-to="#concept"
 								>О проекте</a
 							>
 						</li>
@@ -71,6 +75,7 @@
 								class="header__menu-link"
 								data-effect="line"
 								data-delay="0.7"
+								data-to="#spaces"
 								>Пространства</a
 							>
 						</li>
@@ -80,6 +85,7 @@
 								class="header__menu-link"
 								data-effect="line"
 								data-delay="0.8"
+								data-to="#contacts"
 								>Контакты</a
 							>
 						</li>
@@ -94,8 +100,9 @@
 				</a>
 				<button
 					class="header__btn btn"
-					data-effect="fadeUp"
-					data-delay="1"
+					data-effect="opacity"
+					data-delay="1.2"
+					data-popup="#order_form"
 				>
 					Заказать звонок
 				</button>
@@ -108,14 +115,9 @@
 				<main id="smooth-content" class="smooth-content">
 					<section class="hero">
 	<div class="container">
-		<h1 class="hero__title">
-			<span data-effect="fadeDown" data-duration="2">THE Birch</span>
-			<span
-				class="hero__title-decor"
-				data-effect="fadeUp"
-				data-delay="0.5"
-				data-duration="2"
-			>
+		<h1 class="hero__title" data-effect="fadeDown" data-duration="2">
+			<span>THE Birch</span>
+			<span class="hero__title-decor" data-speed="0.9">
 				<noscript data-webp>
 					<img src="img/decor.png" alt="декор" />
 				</noscript>
@@ -123,7 +125,7 @@
 		</h1>
 		<div class="main__text main__text_right main__text_sm">
 			<div class="main__text-inner hero__text">
-				<p data-effect="fadeLeft" data-delay="1">
+				<p data-effect="fadeDown" data-delay="0.8" data-duration="1.2">
 					Первая загородная площадка от лидеров event-рынка LOFT HALL.
 				</p>
 				<button
@@ -131,6 +133,7 @@
 					data-effect="opacity"
 					data-delay="1.2"
 					data-duration="1.4"
+					data-popup="#order_form"
 				>
 					Узнать подробности
 				</button>
@@ -144,8 +147,8 @@
 		<div class="main__text main__text_lg main__text_right">
 			<div
 				class="main__text-inner banner__text"
-				data-effect="fadeRight"
-				data-delay="0.2"
+				data-effect="fadeDown"
+				data-duration="1.2"
 			>
 				<p>
 					The Birch — это 7 гектар территории в самом сердце
@@ -157,7 +160,7 @@
 		<div class="banner__content" data-effect="opacity" data-duration="0.6">
 			<div
 				class="banner__content-decor"
-				data-speed="0.6"
+				data-speed="0.9"
 				data-effect="opacity"
 				data-delay="0.4"
 				data-duration="1.2"
@@ -170,8 +173,7 @@
 		<div class="main__text main__text_lg main__text_right">
 			<div
 				class="main__text-inner banner__text banner__text_bottom"
-				data-effect="fadeRight"
-				data-delay="0.2"
+				data-effect="fadeDown"
 			>
 				<p>
 					На территории расположены четыре независимых
@@ -193,7 +195,7 @@
 	/>
 </div>
 
-					<section class="features">
+					<section id="features" class="features">
 	<div class="container">
 		<h2 class="title features__title" data-effect="fadeDown">
 			Особенности локации
@@ -209,7 +211,7 @@
 			</div>
 			<div class="features-item" data-effect="opacity">
 				<div class="features-item__content">
-					<div class="features-item__text" data-effect="fadeDown">
+					<div class="features-item__text" data-effect="opacity">
 						<p>
 							Площадка находится в центре заповедного леса на 200
 							Га
@@ -227,7 +229,7 @@
 			</div>
 			<div class="features-item" data-effect="opacity">
 				<div class="features-item__content">
-					<div class="features-item__text" data-effect="fadeDown">
+					<div class="features-item__text" data-effect="opacity">
 						Дизайнерские loft-интерьеры с крафтовой мебелью
 						собственного бренда ASKETI.CA
 					</div>
@@ -235,7 +237,7 @@
 			</div>
 			<div class="features-item" data-effect="opacity">
 				<div class="features-item__content">
-					<div class="features-item__text" data-effect="fadeDown">
+					<div class="features-item__text" data-effect="opacity">
 						Мероприятия до 10000 персон в шатрах
 					</div>
 				</div>
@@ -243,14 +245,14 @@
 			<div class="features-item" data-effect="opacity">
 				<div class="features-item__img">
 					<noscript data-webp>
-						<img src="img/features/img_1.jpg" alt="img_1" />
+						<img src="img/features/img_2.jpg" alt="img_2" />
 					</noscript>
 				</div>
 				<div class="features-item__content"></div>
 			</div>
 			<div class="features-item" data-effect="opacity">
 				<div class="features-item__content">
-					<div class="features-item__text" data-effect="fadeDown">
+					<div class="features-item__text" data-effect="opacity">
 						Авторская кухня LOFT HALL с возможностью проработки меню
 						под любую концепцию
 					</div>
@@ -265,14 +267,14 @@
 			<div class="features-item" data-effect="opacity">
 				<div class="features-item__img">
 					<noscript data-webp>
-						<img src="img/features/img_1.jpg" alt="img_1" />
+						<img src="img/features/img_3.jpg" alt="img_3" />
 					</noscript>
 				</div>
 				<div class="features-item__content"></div>
 			</div>
 			<div class="features-item" data-effect="opacity">
 				<div class="features-item__content">
-					<div class="features-item__text" data-effect="fadeDown">
+					<div class="features-item__text" data-effect="opacity">
 						Профессиональное световое и звуковое оборудование от
 						нашей прокатной компании MAG
 					</div>
@@ -280,21 +282,21 @@
 			</div>
 			<div class="features-item features-item_dark" data-effect="opacity">
 				<div class="features-item__content">
-					<div class="features-item__text" data-effect="fadeDown">
+					<div class="features-item__text" data-effect="opacity">
 						Бесплатная парковка для гостей и участников мероприятий
 					</div>
 				</div>
 			</div>
 			<div class="features-item" data-effect="opacity">
 				<div class="features-item__content">
-					<div class="features-item__text" data-effect="fadeDown">
+					<div class="features-item__text" data-effect="opacity">
 						Доп. пространства для организаторов и участников ивентов
 					</div>
 				</div>
 			</div>
 			<div class="features-item" data-effect="opacity">
 				<div class="features-item__content">
-					<div class="features-item__text" data-effect="fadeDown">
+					<div class="features-item__text" data-effect="opacity">
 						Подготовлены к эксплуатации круглый год
 					</div>
 				</div>
@@ -302,14 +304,14 @@
 			<div class="features-item" data-effect="opacity">
 				<div class="features-item__img">
 					<noscript data-webp>
-						<img src="img/features/img_1.jpg" alt="img_1" />
+						<img src="img/features/img_4.jpg" alt="img_4" />
 					</noscript>
 				</div>
 				<div class="features-item__content"></div>
 			</div>
 			<div class="features-item" data-effect="opacity">
 				<div class="features-item__content">
-					<div class="features-item__text" data-effect="fadeDown">
+					<div class="features-item__text" data-effect="opacity">
 						Всё для свадьбы: «Домик невесты», остров с ротондой и
 						пирсом в центре лесного пруда
 					</div>
@@ -325,18 +327,29 @@
 					<section class="order">
 						<div class="container">
 							<div class="decor-title">
-	<h3
-		class="decor-title__title title"
-		data-effect="fadeUp"
-		data-delay="0.2"
-		data-duration="1.3"
-	>
+	<div
+		class="decor-title__border"
+		data-effect="opacity"
+		data-delay="0.6"
+	></div>
+	<h3 class="decor-title__title title" data-effect="opacity" data-delay="0.2">
 		Записаться на просмотр
 	</h3>
-	<button class="decor-title__btn btn" data-effect="opacity" data-delay="0.7">
+	<button
+		class="decor-title__btn btn"
+		data-effect="opacity"
+		data-duration="1.2"
+		data-delay="0.3"
+		data-popup="#order_form"
+	>
 		Записаться
 	</button>
-	<div class="decor-title__decor" data-effect="opacity" data-speed="1.1">
+	<div
+		class="decor-title__decor"
+		data-effect="opacity"
+		data-speed="1.1"
+		data-delay="0.5"
+	>
 		<img src="img/title_decor.png" alt="Декор" />
 	</div>
 </div>
@@ -344,7 +357,7 @@
 						</div>
 					</section>
 					<div class="margin" style="margin-bottom: 18.75vw"></div>
-					<section class="spaces">
+					<section id="spaces" class="spaces">
 	<div class="spaces__circle"></div>
 	<div class="container">
 		<div class="spaces__num" data-effect="fadeUp">4</div>
@@ -352,37 +365,59 @@
 		<div
 			class="spaces__description"
 			data-effect="fadeDown"
-			data-dalay="0.2"
+			data-delay="0.2"
 		>
 			Каждое пространство скрывает отсылки к их культурным и интерьерным
 			особенностям.
 		</div>
 		<div class="spaces__wrapper">
 			<div class="spaces-item">
-				<div class="spaces-item__img" data-effect="fadeLeftTop">
+				<div class="spaces-item__img" data-effect="opacity">
 					<img src="" alt="" />
 				</div>
 				<div class="spaces-item__content">
-					<div class="spaces-item__left" data-effect="fadeLeft">
-						<div class="spaces-item__name">North</div>
+					<div class="spaces-item__left">
+						<div class="spaces-item__name" data-effect="opacity">
+							North
+						</div>
 						<ul class="spaces-item__list">
-							<li class="spaces-item__elem">300 м²</li>
-							<li class="spaces-item__elem">Банкет: 220</li>
-							<li class="spaces-item__elem">Фуршет: 400</li>
-							<li class="spaces-item__elem">Театр: 400</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								300 м²
+							</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								Банкет: 220
+							</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								Фуршет: 400
+							</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								Театр: 400
+							</li>
 						</ul>
 					</div>
-					<div class="spaces-item__right" data-effect="fadeRight">
+					<div class="spaces-item__right">
 						<div
 							class="spaces-item__text main__text main__text_full"
 						>
-							<p>
+							<p data-effect="opacity">
 								Обладает северным характером, с толстыми
 								стенами, высокими 7-метровыми потолками и
 								скошенными фронтальными стенами, которые
 								пропускают дневной свет, подобно фьордам.
 							</p>
-							<p>
+							<p data-effect="opacity">
 								Уличная веранда, похожая на помосток из лесной
 								чащи, встречает гостей, приглашая их погрузиться
 								в атмосферу мероприятия.
@@ -392,29 +427,51 @@
 				</div>
 			</div>
 			<div class="spaces-item">
-				<div class="spaces-item__img" data-effect="fadeRightTop">
+				<div class="spaces-item__img" data-effect="opacity">
 					<img src="" alt="" />
 				</div>
 				<div class="spaces-item__content">
-					<div class="spaces-item__left" data-effect="fadeLeft">
-						<div class="spaces-item__name">South</div>
+					<div class="spaces-item__left">
+						<div class="spaces-item__name" data-effect="opacity">
+							South
+						</div>
 						<ul class="spaces-item__list">
-							<li class="spaces-item__elem">300 м²</li>
-							<li class="spaces-item__elem">Банкет: 220</li>
-							<li class="spaces-item__elem">Фуршет: 400</li>
-							<li class="spaces-item__elem">Театр: 400</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								300 м²
+							</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								Банкет: 220
+							</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								Фуршет: 400
+							</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								Театр: 400
+							</li>
 						</ul>
 					</div>
-					<div class="spaces-item__right" data-effect="fadeRight">
+					<div class="spaces-item__right">
 						<div
 							class="spaces-item__text main__text main__text_full"
 						>
-							<p>
+							<p data-effect="opacity">
 								Легкое и знойное пространство с выходом на
 								веранду, которая защищена тентовой крышей от
 								жаркого солнца.
 							</p>
-							<p>
+							<p data-effect="opacity">
 								Цилиндрическое здание, которое можно найти на
 								веранде, является архитектурной отсылкой к
 								винным погребам, представляя собой иммерсивное
@@ -425,29 +482,51 @@
 				</div>
 			</div>
 			<div class="spaces-item">
-				<div class="spaces-item__img" data-effect="fadeLeftTop">
+				<div class="spaces-item__img" data-effect="opacity">
 					<img src="" alt="" />
 				</div>
 				<div class="spaces-item__content">
-					<div class="spaces-item__left" data-effect="fadeLeft">
-						<div class="spaces-item__name">West</div>
+					<div class="spaces-item__left">
+						<div class="spaces-item__name" data-effect="opacity">
+							West
+						</div>
 						<ul class="spaces-item__list">
-							<li class="spaces-item__elem">300 м²</li>
-							<li class="spaces-item__elem">Банкет: 220</li>
-							<li class="spaces-item__elem">Фуршет: 400</li>
-							<li class="spaces-item__elem">Театр: 400</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								300 м²
+							</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								Банкет: 220
+							</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								Фуршет: 400
+							</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								Театр: 400
+							</li>
 						</ul>
 					</div>
-					<div class="spaces-item__right" data-effect="fadeRight">
+					<div class="spaces-item__right">
 						<div
 							class="spaces-item__text main__text main__text_full"
 						>
-							<p>
+							<p data-effect="opacity">
 								Правильное здание классической западной
 								архитектуры с крыльцом-верандой, которая
 								является полноценным пространством дома.
 							</p>
-							<p>
+							<p data-effect="opacity">
 								Библиотека, камин, большая софа и вязанный
 								огромный ковер практически на всю площадь пола
 								создают ощущение уюта и комфорта.
@@ -457,30 +536,52 @@
 				</div>
 			</div>
 			<div class="spaces-item">
-				<div class="spaces-item__img" data-effect="fadeRightTop">
+				<div class="spaces-item__img" data-effect="opacity">
 					<img src="" alt="" />
 				</div>
 				<div class="spaces-item__content">
-					<div class="spaces-item__left" data-effect="fadeLeft">
-						<div class="spaces-item__name">East</div>
+					<div class="spaces-item__left">
+						<div class="spaces-item__name" data-effect="opacity">
+							East
+						</div>
 						<ul class="spaces-item__list">
-							<li class="spaces-item__elem">300 м²</li>
-							<li class="spaces-item__elem">Банкет: 220</li>
-							<li class="spaces-item__elem">Фуршет: 400</li>
-							<li class="spaces-item__elem">Театр: 400</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								300 м²
+							</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								Банкет: 220
+							</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								Фуршет: 400
+							</li>
+							<li
+								class="spaces-item__elem"
+								data-effect="fadeDown"
+							>
+								Театр: 400
+							</li>
 						</ul>
 					</div>
-					<div class="spaces-item__right" data-effect="fadeRight">
+					<div class="spaces-item__right">
 						<div
 							class="spaces-item__text main__text main__text_full"
 						>
-							<p>
+							<p data-effect="opacity">
 								Терраса в восточном стиле, вдохновленная
 								японским минимализмом, с чистыми линиями и
 								простыми формами, создающими равновесие и
 								пропорции между элементами.
 							</p>
-							<p>
+							<p data-effect="opacity">
 								Отсутствие лишних деталей и декора в интерьере
 								еще больше обращает внимание на огромное
 								кострище, расположенное на уличной веранде.
@@ -496,18 +597,24 @@
 					<section class="order">
 						<div class="container">
 							<div class="decor-title">
+								<div
+									class="decor-title__border"
+									data-effect="opacity"
+									data-delay="0.6"
+								></div>
 								<h3
 									class="decor-title__title title"
-									data-effect="fadeUp"
+									data-effect="opacity"
 									data-delay="0.2"
-									data-duration="1.3"
 								>
 									Узнай свободные даты
 								</h3>
 								<button
 									class="decor-title__btn btn"
 									data-effect="opacity"
-									data-delay="0.7"
+									data-duration="1.2"
+									data-delay="0.3"
+									data-popup="#order_form"
 								>
 									Записаться
 								</button>
@@ -515,6 +622,7 @@
 									class="decor-title__decor"
 									data-effect="opacity"
 									data-speed="1.1"
+									data-delay="0.5"
 								>
 									<img
 										src="img/title_decor.png"
@@ -533,7 +641,7 @@
 	/>
 </div>
 
-					<section class="concep">
+					<section id="concept" class="concep">
 	<div class="container">
 		<h2 class="concep__title title">
 			<span data-effect="fadeDown"
@@ -569,13 +677,13 @@
 	</div>
 	<div class="container">
 		<div class="main__text main__text_xs main__text_right">
-			<div class="concep__text main__text-inner" data-effect="fadeRight">
-				<p>
+			<div class="concep__text main__text-inner">
+				<p data-effect="fadeDown">
 					LOFT HALL представляет уникальную концепцию пространства,
 					которая была создана вокруг культуры загородного досуга, с
 					сохранением удобства и привычной городской инфраструктуры.
 				</p>
-				<p>
+				<p data-effect="fadeDown">
 					Вдохновленный богатым советским наполнением, а также
 					современными тенденциями в эко-дизайне и аутентичности
 					природного ландшафта, проект обладает современным подходом к
@@ -595,7 +703,7 @@
 	/>
 </div>
 
-					<section class="terra">
+					<section id="terra" class="terra">
 	<div class="container">
 		<h2 class="terra__title title" data-effect="fadeDown">
 			Развитие территории
@@ -673,12 +781,12 @@
 				</noscript>
 			</div>
 			<div class="main__text-inner art__text">
-				<p data-effect="fadeRight">
+				<p data-effect="opacity">
 					The Birch, обладая всеми прелестями скандинавского дизайна,
 					представляет собой настоящее искусство в области архитектуры
 					и интерьера.
 				</p>
-				<p data-effect="fadeRight">
+				<p data-effect="opacity">
 					Расположенный в лесном массиве, он впечатляет своей
 					гармонией с природным окружением, благодаря правильной
 					геометрии пространств и большим панорамным окнам, которые
@@ -689,9 +797,9 @@
 					<img
 						src="img/text_icon.svg"
 						alt="logo"
-						data-effect="fadeLeft"
+						data-effect="fadeDown"
 					/>
-					<p data-effect="fadeRight">
+					<p data-effect="opacity">
 						Команда Placebo/25, известная своей успешной реновацией
 						завода «Арсенал» в Санкт-Петербурге (LOFT#7) и
 						готовящегося к запуску LOFT#8 в ДК «Серп и Молот» в
@@ -724,7 +832,7 @@
 	</div>
 </section>
 
-					<section class="contacts">
+					<section id="contacts" class="contacts">
 	<div class="container">
 		<div class="contacts__adress">
 			<div class="contacts__adress-top">
@@ -857,7 +965,7 @@
 						<div class="footer__socials">
 							<a href="" class="footer__socials-link">
 								<svg
-									class=""
+									class="tg-icon"
 									width="24"
 									height="20"
 									viewBox="0 0 24 20"
@@ -869,7 +977,7 @@
 							</a>
 							<a href="" class="footer__socials-link">
 								<svg
-									class=""
+									class="wp-icon"
 									width="24"
 									height="24"
 									viewBox="0 0 24 24"
@@ -889,12 +997,46 @@
 
 				</main>
 			</div>
+			<div class="popups">
+	<div class="popups__inner">
+		<div id="order_form" class="order-form popup">
+			<div class="popup__close js-close">
+				<svg class="" width="17" height="17" viewBox="0 0 17 17">
+					<use xlink:href="./img/icons/icons.svg#close"></use>
+				</svg>
+			</div>
+			<form action="#" class="order-form__form">
+				<h4 class="order-form__title title">
+					Остались вопросы? Свяжитесь с нами
+				</h4>
+				<div class="order-form__inputs">
+					<input
+						class="order-form__input"
+						name="name"
+						placeholder="Имя"
+					/>
+					<input
+						class="order-form__input"
+						name="phone"
+						placeholder="Телефон"
+					/>
+				</div>
+				<button class="order-form__btn btn">Отправить</button>
+				<div class="order-form__descr">
+					Нажимая на кнопку, вы даете согласие на обработку своих
+					персональных данных согласно политике конфиденциальности
+				</div>
+			</form>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	</div>
+</div>
+
+		</div>
+
 		<script src="./js/libs/gsap.min.js"></script>
 		<script src="./js/libs/ScrollSmoother.min.js"></script>
 		<script src="./js/libs/ScrollTrigger.min.js"></script>
-		<script src="./js/libs/marquee3k.min.js"></script>
+
 		<script src="./js/libs/simple-webp.min.js"></script>
 		<script
 			src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"

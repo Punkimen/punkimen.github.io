@@ -38,7 +38,7 @@ export const initMap = (id) => {
 					iconContentLayout: MyIconContentLayout,
 				},
 			);
-		console.log(myMap);
+
 		myMap.geoObjects.add(myPlacemarkWithContent);
 		myMap.behaviors.disable("scrollZoom");
 	});

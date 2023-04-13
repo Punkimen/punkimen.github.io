@@ -13,3 +13,7 @@ export const getEffect = (el) => {
 export const random = (min, max) => {
 	return Math.random() * (max - min) + min;
 };
+
+export const setDelay = (el, delay) => {
+	el.setAttribute("data-delay", +delay.toFixed(2));
+};

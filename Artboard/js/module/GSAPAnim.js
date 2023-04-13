@@ -59,7 +59,7 @@ export const fadeDown = (el) => {
 		el,
 		{
 			opacity: 0,
-			y: 150,
+			y: 50,
 		},
 		{
 			y: 0,
@@ -78,12 +78,10 @@ export const fadeUp = (el) => {
 		el,
 		{
 			opacity: 0,
-			skewY: 3,
 			y: -150,
 		},
 		{
 			opacity: 1,
-			skewY: 0,
 			y: "0",
 			delay: getDelay(el),
 			duration: getDuration(el),
