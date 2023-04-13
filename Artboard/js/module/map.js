@@ -26,7 +26,7 @@ export const initMap = (id) => {
 					// Необходимо указать данный тип макета.
 					iconLayout: "default#imageWithContent",
 					// Своё изображение иконки метки.
-					iconImageHref: "../img/icons/map_marker.svg",
+					iconImageHref: "./img/icons/map_marker.svg",
 					// Размеры метки.
 					iconImageSize: [51, 73],
 					// Смещение левого верхнего угла иконки относительно
