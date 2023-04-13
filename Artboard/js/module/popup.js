@@ -11,6 +11,6 @@ export const closePopup = () => {
 	popupsBlock.querySelectorAll(".popup").forEach((el) => {
 		removeClass(el, "show");
 	});
-	popupsBlock.style.transitionDelay = "0.6s";
+	popupsBlock.style.transitionDelay = "0.2s";
 	removeClass(popupsBlock, "show");
 };

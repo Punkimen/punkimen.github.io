@@ -283,7 +283,7 @@ li {
   color: #fff;
   font-family: var(--font-text-s);
   font-size: 0.729vw;
-  padding: 0.9vw 1.4vw 1.2vw 1.4vw;
+  padding: 0.9vw 1.4vw 0.9vw 1.4vw;
   border-radius: 1.6vw;
   border: none;
   cursor: pointer;
@@ -305,6 +305,7 @@ li {
   font-size: 0.938vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  font-weight: 300;
 }
 
 .main__text_full {
@@ -374,12 +375,12 @@ text {
   display: block;
   width: 100%;
   background: #F3EFED;
-  border-radius: 12px;
-  font-size: 20px;
+  border-radius: 0.625vw;
+  font-size: 1.042vw;
   transition: all ease 0.3s;
   border: none;
   outline: none;
-  padding: 15px 20px 15px;
+  padding: 0.781vw 1.042vw 0.781vw;
   resize: none;
 }
 
@@ -756,23 +757,23 @@ text::placeholder {
 }
 
 .order-form {
-  padding: 123px 70px 150px 70px;
-  max-width: 700px;
+  padding: 6.406vw 3.646vw 7.813vw 3.646vw;
+  max-width: 36.458vw;
   width: 100%;
   margin: 0 auto;
   background: #fff;
   border: 1px solid rgba(213, 208, 201, 0.675645);
-  border-radius: 102px;
+  border-radius: 5.313vw;
 }
 
 .order-form__title {
-  margin-bottom: 75px;
+  margin-bottom: 3.906vw;
   text-align: center;
 }
 
 .order-form__inputs {
-  margin: 0 auto 40px;
-  max-width: 417px;
+  margin: 0 auto 2.083vw;
+  max-width: 21.719vw;
   width: 100%;
 }
 
@@ -781,18 +782,18 @@ text::placeholder {
 }
 
 .order-form__input:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 0.417vw;
 }
 
 .order-form__btn {
-  min-width: 200px;
+  min-width: 10.417vw;
   display: block;
-  margin: 0 auto 35px;
+  margin: 0 auto 1.823vw;
 }
 
 .order-form__descr {
   font-family: var(--font-text-s);
-  max-width: 478px;
+  max-width: 24.896vw;
   text-align: center;
   opacity: 0.5;
   margin: 0 auto;
@@ -909,7 +910,7 @@ text::placeholder {
 }
 
 .spaces-item__text p:not(:last-child) {
-  margin-bottom: 50px;
+  margin-bottom: 2.604vw;
 }
 
 .webp .spaces {
@@ -921,24 +922,24 @@ text::placeholder {
 }
 
 .concep {
-  padding: 32px 0 0px;
+  padding: 1.667vw 0 0;
 }
 
 .concep__title {
   z-index: 2;
   position: relative;
   text-align: center;
-  max-width: 950px;
+  max-width: 49.479vw;
   width: 100%;
-  margin: 0 auto 311px;
+  margin: 0 auto 16.198vw;
 }
 
 .concep__title-decor {
   position: absolute;
   bottom: 0;
-  right: -286px;
+  right: -14.896vw;
   transform: translateY(69%);
-  max-width: 604px;
+  max-width: 31.458vw;
   width: 100%;
 }
 
@@ -952,7 +953,7 @@ text::placeholder {
   display: flex;
   white-space: nowrap;
   transform: rotate(-3deg);
-  margin-bottom: 173px;
+  margin-bottom: 9vw;
 }
 
 .concep__slider-slide {
@@ -960,7 +961,7 @@ text::placeholder {
 }
 
 .concep__slider-slide:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 0.521vw;
 }
 
 .concep__slider-slide img {
@@ -973,7 +974,7 @@ text::placeholder {
 }
 
 .concep__text {
-  max-width: 540px;
+  max-width: 28.125vw;
   line-height: 1.8;
 }
 
@@ -1013,37 +1014,52 @@ text::placeholder {
   padding-top: 15.625vw;
 }
 
+.terra__photos-photo {
+  width: 100%;
+}
+
 .terra__photos-photo_1 {
   position: relative;
   z-index: 2;
   top: 10.833vw;
+  max-width: 17.76vw;
 }
 
 .terra__photos-photo_2 {
   position: absolute;
   top: -8.33vw;
   right: 5.99vw;
+  max-width: 26.719vw;
 }
 
 .terra__photos-photo_3 {
   position: relative;
   z-index: 2;
+  max-width: 30vw;
 }
 
 .terra__photos-photo_4 {
   position: absolute;
   left: 11.354vw;
   bottom: 13.073vw;
+  max-width: 14.427vw;
 }
 
 .terra__photos-photo_5 {
+  max-width: 20.469vw;
   position: absolute;
   top: 0;
   right: -1.45vw;
 }
 
+.terra__photos-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .art {
-  padding: 6.094vw 0 110px;
+  padding: 6.094vw 0 5.729vw;
 }
 
 .art__title {
@@ -1061,7 +1077,7 @@ text::placeholder {
 
 .art__text-decor {
   position: relative;
-  top: 100px;
+  top: 5.208vw;
   text-align: right;
   padding-right: 6.771vw;
 }
@@ -1090,7 +1106,7 @@ text::placeholder {
   position: relative;
 }
 
-.art__board-img img {
+.art__board-img {
   display: block;
   width: 100%;
   height: auto;
@@ -1103,7 +1119,7 @@ text::placeholder {
 .art__board-decor_1 {
   max-width: 31.458vw;
   width: 100%;
-  top: -3.54px;
+  top: -0.184vw;
   left: 37%;
   z-index: 2;
 }
@@ -1145,7 +1161,7 @@ text::placeholder {
 .contacts__adress-cord {
   color: var(--color-grey);
   font-size: 0.833vw;
-  margin-bottom: 24px;
+  margin-bottom: 1.25vw;
 }
 
 .contacts__adress-btn {
@@ -1164,8 +1180,20 @@ text::placeholder {
   border-radius: 6.77vw 6.77vw 0 0;
 }
 
-.ymaps-2-1-79-map .ymaps-2-1-79-inner-panes {
+.ymaps-2-1-79-ground-pane {
   filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+}
+
+.ymaps-2-1-79-image-with-content {
+  left: -1.25vw;
+  top: -1.25vw;
+  width: 2.656vw;
+  height: 3.802vw;
+  background-size: 2.656vw 3.802vw;
 }
 
 .footer {
@@ -1306,6 +1334,10 @@ text::placeholder {
   opacity: 1;
 }
 
+.popups.show .popups__inner {
+  display: block;
+}
+
 .popups__inner {
   padding: 1.45vw;
   width: 100vw;
@@ -1319,12 +1351,16 @@ text::placeholder {
 
 .popup {
   position: relative;
-  animation: hideElem 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  opacity: 0;
   transition-delay: 0.4s;
+  pointer-events: none;
+  transition-delay: 0.4s;
+  transition: all ease 0.5s;
 }
 
 .popup.show {
-  animation: showElem 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .popup__close {

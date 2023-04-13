@@ -19,7 +19,7 @@ export const initMap = (id) => {
 				{
 					// hintContent: "Собственный значок метки с контентом",
 					balloonContent: "56.099677, 37.048725",
-					// iconContent: "12",
+					iconContent: "",
 				},
 				{
 					// Опции.
