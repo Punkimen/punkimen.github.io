@@ -4,6 +4,7 @@ import {initMap} from "./module/map.js";
 import {startEffectAnim} from "./module/GSAPAnim.js";
 import {random, setDelay} from "./module/helpers.js";
 import {closePopup, showPopup} from "./module/popup.js";
+import {adaptiveHeader, adaptiveTerra, toggleMenu} from "./module/adaptive.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	const initPage = () => {
@@ -28,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		const popupShowBtns = document.querySelectorAll("[data-popup]");
 		const popupHideBtns = document.querySelectorAll(".js-close");
 		//  ===== variables =================================
+
+		toggleMenu();
+		adaptiveTerra();
 
 		for (let elm of delayElem) {
 			setStyle(elm, elm.dataset);
@@ -64,10 +68,14 @@ document.addEventListener("DOMContentLoaded", () => {
 					pin: true,
 					pinSpacing: false,
 					onEnterBack() {
-						header.classList.remove("hide-menu");
+						if (window.innerWidth >= 767) {
+							header.classList.remove("hide-menu");
+						}
 					},
 					onLeave() {
-						header.classList.add("hide-menu");
+						if (window.innerWidth >= 767) {
+							header.classList.add("hide-menu");
+						}
 					},
 				},
 			},
@@ -117,10 +125,15 @@ document.addEventListener("DOMContentLoaded", () => {
 				closePopup();
 			});
 		});
+
 		initMap("map");
 	};
 	initPage();
-	window.addEventListener("resize", () => {});
+	adaptiveHeader();
+	window.addEventListener("resize", () => {
+		adaptiveHeader();
+		adaptiveTerra();
+	});
 });
 document.addEventListener("click", (e) => {
 	if (e.target.classList.contains("popups__inner")) {

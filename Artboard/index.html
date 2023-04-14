@@ -67,7 +67,7 @@
 				</nav>
 			</div>
 			<div class="header__center">
-				<nav class="header__menu">
+				<nav class="header__menu header__menu_center">
 					<ul class="header__menu-list">
 						<li class="header__menu-elem">
 							<a
@@ -106,7 +106,17 @@
 				>
 					Заказать звонок
 				</button>
+				<div class="header__burger burger">
+					<span></span>
+					<!-- <span></span> -->
+					<span></span>
+				</div>
 			</div>
+		</div>
+	</div>
+	<div class="header__mobile">
+		<div class="container">
+			<div class="header__mobile-wrapper"></div>
 		</div>
 	</div>
 </header>
@@ -158,6 +168,11 @@
 			</div>
 		</div>
 		<div class="banner__content" data-effect="opacity" data-duration="0.6">
+			<div class="banner__content-img">
+				<noscript data-webp>
+					<img src="img/fake.png" alt="fake" />
+				</noscript>
+			</div>
 			<div
 				class="banner__content-decor"
 				data-speed="0.9"
@@ -363,7 +378,7 @@
 		<div class="spaces__num" data-effect="opacity">4</div>
 		<h2 class="spaces__title title" data-effect="fadeDown">Пространства</h2>
 		<div
-			class="spaces__description"
+			class="spaces__description main__text main__text_full"
 			data-effect="fadeDown"
 			data-delay="0.2"
 		>
@@ -373,20 +388,19 @@
 		<div class="spaces__wrapper">
 			<div class="spaces-item">
 				<div class="spaces-item__img" data-effect="opacity">
-					<img src="" alt="" />
+					<noscript data-webp>
+						<img src="img/fake.png" alt="fake" />
+					</noscript>
 				</div>
 				<div class="spaces-item__content">
 					<div class="spaces-item__left">
 						<div class="spaces-item__name" data-effect="opacity">
 							North
 						</div>
+						<div class="spaces-item__size" data-effect="fadeDown">
+							300 м²
+						</div>
 						<ul class="spaces-item__list">
-							<li
-								class="spaces-item__elem"
-								data-effect="fadeDown"
-							>
-								300 м²
-							</li>
 							<li
 								class="spaces-item__elem"
 								data-effect="fadeDown"
@@ -428,20 +442,19 @@
 			</div>
 			<div class="spaces-item">
 				<div class="spaces-item__img" data-effect="opacity">
-					<img src="" alt="" />
+					<noscript data-webp>
+						<img src="img/fake.png" alt="fake" />
+					</noscript>
 				</div>
 				<div class="spaces-item__content">
 					<div class="spaces-item__left">
 						<div class="spaces-item__name" data-effect="opacity">
 							South
 						</div>
+						<div class="spaces-item__size" data-effect="fadeDown">
+							300 м²
+						</div>
 						<ul class="spaces-item__list">
-							<li
-								class="spaces-item__elem"
-								data-effect="fadeDown"
-							>
-								300 м²
-							</li>
 							<li
 								class="spaces-item__elem"
 								data-effect="fadeDown"
@@ -483,20 +496,19 @@
 			</div>
 			<div class="spaces-item">
 				<div class="spaces-item__img" data-effect="opacity">
-					<img src="" alt="" />
+					<noscript data-webp>
+						<img src="img/fake.png" alt="fake" />
+					</noscript>
 				</div>
 				<div class="spaces-item__content">
 					<div class="spaces-item__left">
 						<div class="spaces-item__name" data-effect="opacity">
 							West
 						</div>
+						<div class="spaces-item__size" data-effect="fadeDown">
+							300 м²
+						</div>
 						<ul class="spaces-item__list">
-							<li
-								class="spaces-item__elem"
-								data-effect="fadeDown"
-							>
-								300 м²
-							</li>
 							<li
 								class="spaces-item__elem"
 								data-effect="fadeDown"
@@ -537,20 +549,19 @@
 			</div>
 			<div class="spaces-item">
 				<div class="spaces-item__img" data-effect="opacity">
-					<img src="" alt="" />
+					<noscript data-webp>
+						<img src="img/fake.png" alt="fake" />
+					</noscript>
 				</div>
 				<div class="spaces-item__content">
 					<div class="spaces-item__left">
 						<div class="spaces-item__name" data-effect="opacity">
 							East
 						</div>
+						<div class="spaces-item__size" data-effect="fadeDown">
+							300 м²
+						</div>
 						<ul class="spaces-item__list">
-							<li
-								class="spaces-item__elem"
-								data-effect="fadeDown"
-							>
-								300 м²
-							</li>
 							<li
 								class="spaces-item__elem"
 								data-effect="fadeDown"
@@ -724,7 +735,7 @@
 				</div>
 			</div>
 			<div class="terra__photos">
-				<div class="terra__photos-col">
+				<div class="terra__photos-col terra__photos-col_1">
 					<div
 						class="terra__photos-photo terra__photos-photo_1"
 						data-speed="1.1"
@@ -822,13 +833,14 @@
 				<img src="img/art_board_decor_2.png" alt="decor" />
 			</noscript>
 		</div>
-		<noscript data-webp>
-			<img
-				class="art__board-img"
-				src="img/art_board.png"
-				alt="Стенгазета"
-			/>
-		</noscript>
+		<div class="art__board-board">
+			<picture>
+				<source media="(min-width:568px)" srcset="/img/art_board.png" />
+				<noscript data-webp
+					><img src="/img/art_board_mob.png"
+				/></noscript>
+			</picture>
+		</div>
 	</div>
 </section>
 
@@ -842,7 +854,10 @@
 				>
 					Московская область
 				</div>
-				<div class="contacts__adress-label" data-effect="fadeDown">
+				<div
+					class="contacts__adress-label main__text_sm"
+					data-effect="fadeDown"
+				>
 					Солнечногорский район, поселок Жуково
 				</div>
 			</div>
