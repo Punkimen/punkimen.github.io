@@ -1759,6 +1759,7 @@ text::placeholder {
 
   .spaces-item__img {
     height: 32vw;
+    margin-bottom: 4.688vw;
   }
 
   .spaces-item__content {
@@ -1927,6 +1928,10 @@ text::placeholder {
     width: 100%;
     height: auto;
   }
+
+  .footer__socials-link:not(:last-child) {
+    margin-right: 1.563vw;
+  }
 }
 
 @media (max-width: 568px) {
@@ -2083,6 +2088,7 @@ text::placeholder {
 
   .spaces-item__img {
     height: 27.113vw;
+    margin-bottom: 4.401vw;
   }
 
   .spaces-item__name {
@@ -2317,6 +2323,7 @@ text::placeholder {
 
   .spaces-item__img {
     height: 48.125vw;
+    margin-bottom: 7.813vw;
   }
 
   .spaces-item__name {
@@ -2342,6 +2349,10 @@ text::placeholder {
 
   .footer__link {
     font-size: 5vw;
+  }
+
+  .footer__socials-link:not(:last-child) {
+    margin-right: 3.75vw;
   }
 }
 
