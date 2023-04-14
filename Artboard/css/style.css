@@ -765,6 +765,7 @@ text::placeholder {
 
 .features-item__text {
   font-size: 0.938vw;
+  font-weight: 300;
   letter-spacing: 0.06vw;
   line-height: 1.4;
 }
@@ -1439,10 +1440,6 @@ text::placeholder {
   opacity: 1;
 }
 
-.popups.show .popups__inner {
-  display: flex;
-}
-
 .popups__inner {
   padding: 1.45vw;
   width: 100vw;
@@ -1451,7 +1448,7 @@ text::placeholder {
   min-width: fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  overflow: auto;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -1947,7 +1944,7 @@ text::placeholder {
   }
 
   .main__text {
-    font-size: 2.132vw;
+    font-size: 2.465vw;
   }
 
   .main__text p:not(:last-child) {
@@ -2178,7 +2175,7 @@ text::placeholder {
   }
 
   .main__text {
-    font-size: 2.67vw;
+    font-size: 3.438vw;
   }
 
   .main__text p:not(:last-child) {
