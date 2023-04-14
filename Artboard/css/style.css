@@ -917,6 +917,7 @@ text::placeholder {
   color: var(--color-second);
   background: #fff;
   border-radius: 50%;
+  line-height: 1em;
   margin: 0 auto;
   position: absolute;
   top: 0;
@@ -988,6 +989,7 @@ text::placeholder {
   margin-bottom: 2.34vw;
   color: var(--color-grey);
   font-size: 1.042vw;
+  line-height: 1;
 }
 
 .spaces-item__list {
