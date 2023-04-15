@@ -926,7 +926,7 @@ text::placeholder {
 }
 
 .spaces__num span {
-  line-height: 1em;
+  line-height: 0.8em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -997,7 +997,7 @@ text::placeholder {
   margin-bottom: 2.34vw;
   color: var(--color-grey);
   font-size: 1.042vw;
-  line-height: 1em;
+  line-height: 0.8em;
 }
 
 .spaces-item__list {
