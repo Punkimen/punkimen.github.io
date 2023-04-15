@@ -927,6 +927,10 @@ text::placeholder {
 
 .spaces__num span {
   line-height: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .spaces__title {
@@ -2338,7 +2342,7 @@ text::placeholder {
 
   .spaces-item__size {
     font-size: 3.438vw;
-    padding: 3.75vw 3.2vw 3.75vw;
+    padding: 3.75vw 3.75vw 3.2vw;
   }
 
   .spaces-item__list {
