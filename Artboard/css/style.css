@@ -1086,7 +1086,7 @@ text::placeholder {
 
 .concep__text {
   max-width: 28.125vw;
-  line-height: 1.8;
+  line-height: 1.8em;
 }
 
 .terra {
@@ -1805,7 +1805,7 @@ text::placeholder {
 
   .spaces-item__size span {
     position: relative;
-    top: 5%;
+    top: 15%;
   }
 
   .spaces-item__list {
@@ -2353,7 +2353,7 @@ text::placeholder {
 
   .spaces-item__size {
     font-size: 3.438vw;
-    padding: 3.75vw 3.75vw 3.75vw;
+    padding: 3.75vw 3.3vw 3.75vw;
   }
 
   .spaces-item__list {
