@@ -1799,8 +1799,13 @@ text::placeholder {
     font-size: 1.432vw;
     border: 1px solid var(--color-grey);
     border-radius: 100px;
-    padding: 1.563vw 1.563vw 1.2vw 1.563vw;
+    padding: 1.563vw 1.563vw 1.563vw 1.563vw;
     margin: 0;
+  }
+
+  .spaces-item__size span {
+    position: relative;
+    top: 5%;
   }
 
   .spaces-item__list {
@@ -2348,7 +2353,7 @@ text::placeholder {
 
   .spaces-item__size {
     font-size: 3.438vw;
-    padding: 3.75vw 3.75vw 3vw;
+    padding: 3.75vw 3.75vw 3.75vw;
   }
 
   .spaces-item__list {
