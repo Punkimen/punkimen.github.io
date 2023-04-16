@@ -1793,6 +1793,7 @@ text::placeholder {
 
   .spaces-item__name {
     font-size: 3.125vw;
+    margin-bottom: 0;
   }
 
   .spaces-item__size {
