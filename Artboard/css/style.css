@@ -1018,7 +1018,7 @@ text::placeholder {
 }
 
 .spaces-item__text {
-  line-height: 1.6;
+  line-height: 1.6em;
 }
 
 .spaces-item__text p:not(:last-child) {
@@ -2354,7 +2354,7 @@ text::placeholder {
 
   .spaces-item__size {
     font-size: 3.438vw;
-    padding: 3.75vw 3.3vw 3.75vw;
+    padding: 3.75vw 3.75vw 3.3vw;
   }
 
   .spaces-item__list {
