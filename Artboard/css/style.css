@@ -1795,7 +1795,6 @@ text::placeholder {
     font-size: 1.432vw;
     border: 1px solid var(--color-grey);
     border-radius: 100px;
-    padding: 1.563vw 1.563vw 1.563vw 1.563vw;
   }
 
   .spaces-item__list {
@@ -2107,7 +2106,6 @@ text::placeholder {
 
   .spaces-item__size {
     font-size: 1.937vw;
-    padding: 2.113vw 2.113vw 2vw;
   }
 
   .spaces-item__list {
@@ -2319,6 +2317,7 @@ text::placeholder {
 
   .spaces__num {
     font-size: 23.75vw;
+    line-height: 0;
     width: 38.75vw;
     height: 38.75vw;
   }
@@ -2342,7 +2341,6 @@ text::placeholder {
 
   .spaces-item__size {
     font-size: 3.438vw;
-    padding: 3.75vw 3.75vw 3.2vw;
   }
 
   .spaces-item__list {
