@@ -1809,7 +1809,7 @@ text::placeholder {
 
   .spaces-item__size span {
     position: relative;
-    transform: translateY(10%);
+    top: 0.5vw;
   }
 
   .spaces-item__list {
