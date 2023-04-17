@@ -11,9 +11,9 @@ export const initMap = (id) => {
 				},
 			),
 			// Создаём макет содержимого.
-			MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-				'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>',
-			),
+			// MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+			// 	'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>',
+			// ),
 			myPlacemarkWithContent = new ymaps.Placemark(
 				[56.099677, 37.048725],
 				{
@@ -31,11 +31,9 @@ export const initMap = (id) => {
 					iconImageSize: [51, 73],
 					// Смещение левого верхнего угла иконки относительно
 					// её "ножки" (точки привязки).
-					iconImageOffset: [-24, -24],
-					// Смещение слоя с содержимым относительно слоя с картинкой.
-					iconContentOffset: [15, 15],
+					iconImageOffset: [-26, -74],
 					// Макет содержимого.
-					iconContentLayout: MyIconContentLayout,
+					// iconContentLayout: MyIconContentLayout,
 				},
 			);
 
