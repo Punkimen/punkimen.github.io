@@ -1072,6 +1072,7 @@ text::placeholder {
 
 .concep__slider-slide {
   min-width: 48.958vw;
+  height: 30.208vw;
 }
 
 .concep__slider-slide:not(:last-child) {
