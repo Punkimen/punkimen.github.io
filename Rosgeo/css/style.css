@@ -520,6 +520,21 @@ h6.title {
 
 .scroll-nav__text {
   height: 20px;
+  display: flex;
+}
+
+.scroll-nav__text .word {
+  display: flex;
+  min-width: 5px;
+}
+
+.scroll-nav__text .word .letter.anim {
+  animation: opacityIn 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+.scroll-nav__text .word .letter.anim_1 {
+  animation-delay: 0.5s;
+  animation: opacityIn 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .scroll-nav__score {
@@ -557,7 +572,6 @@ h6.title {
   width: fit-content;
   transform: rotate(-90deg);
   line-height: 1em;
-  animation: flash 1 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
 .no-webp .banner__bg {
@@ -1151,13 +1165,35 @@ h6.title {
   margin-right: 10px;
 }
 
-@keyframes flash {
-  from, 50%, to {
+@keyframes opacityIn {
+  0% {
     opacity: 1;
   }
 
-  25%, 75% {
-    opacity: 0;
+  25% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityOut {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
