@@ -5,6 +5,7 @@ import {startEffectAnim} from "./module/GSAPAnim.js";
 import {random, setDelay} from "./module/helpers.js";
 import {closePopup, showPopup} from "./module/popup.js";
 import {adaptiveHeader, adaptiveTerra, toggleMenu} from "./module/adaptive.js";
+import {sliderInit} from "./module/sliderInit.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	const initPage = () => {
@@ -49,6 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
 				const toVal = el.getAttribute("data-to");
 				smoother.scrollTo(toVal, true);
 			});
+		});
+
+		const sliders = document.querySelectorAll(".swiper");
+		sliders?.forEach((el) => {
+			sliderInit(el);
 		});
 
 		gsap.fromTo(

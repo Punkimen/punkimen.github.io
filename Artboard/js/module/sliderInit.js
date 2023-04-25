@@ -1,6 +1,9 @@
 const initOptions = {
 	effect: "fade",
-	speed: 1000,
+	speed: 2000,
+	autoplay: {
+		delay: 3000,
+	},
 	fadeEffect: {
 		crossFade: true,
 	},
