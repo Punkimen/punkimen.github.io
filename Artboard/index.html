@@ -173,7 +173,7 @@
 					data-effect="opacity"
 					data-delay="1.2"
 					data-duration="1.4"
-					data-popup="#order_form"
+					data-to="#banner"
 				>
 					Узнать подробности
 				</button>
@@ -182,7 +182,7 @@
 	</div>
 </section>
 
-					<section class="banner">
+					<section id="banner" class="banner">
 	<div class="container">
 		<div class="main__text main__text_lg main__text_right">
 			<div
@@ -198,7 +198,7 @@
 			</div>
 		</div>
 		<div class="banner__content" data-effect="opacity" data-duration="0.6">
-			<div class="swiper banner__content-slider">
+			<div id="banner_slider" class="swiper banner__content-slider">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<div class="banner__content-img">
@@ -241,6 +241,18 @@
 						</div>
 					</div>
 				</div>
+				<button
+					id="banner_prev"
+					class="slider-btn slider-btn_prev btn-reset"
+				>
+					<img src="./img/icons/arrowSlider.svg" alt="slide prev" />
+				</button>
+				<button
+					id="banner_next"
+					class="slider-btn slider-btn_next btn-reset"
+				>
+					<img src="./img/icons/arrowSlider.svg" alt="slider next" />
+				</button>
 			</div>
 
 			<div
@@ -473,7 +485,7 @@
 		<div class="spaces__wrapper">
 			<div class="spaces-item">
 				<div class="spaces-item__img" data-effect="opacity">
-					<div class="swiper spaces-item__slider">
+					<div id="slider_1" class="swiper spaces-item__slider">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="slide__content-img">
@@ -516,6 +528,24 @@
 								</div>
 							</div>
 						</div>
+						<button
+							id="slide_1_prev"
+							class="slider-btn slider-btn_prev btn-reset"
+						>
+							<img
+								src="./img/icons/arrowSlider.svg"
+								alt="slide prev"
+							/>
+						</button>
+						<button
+							id="slide_1_next"
+							class="slider-btn slider-btn_next btn-reset"
+						>
+							<img
+								src="./img/icons/arrowSlider.svg"
+								alt="slider next"
+							/>
+						</button>
 					</div>
 				</div>
 				<div class="spaces-item__content">
@@ -576,7 +606,7 @@
 			</div>
 			<div class="spaces-item">
 				<div class="spaces-item__img" data-effect="opacity">
-					<div class="swiper spaces-item__slider">
+					<div id="slider_2" class="swiper spaces-item__slider">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="slide__content-img">
@@ -619,6 +649,24 @@
 								</div>
 							</div>
 						</div>
+						<button
+							id="slide_2_prev"
+							class="slider-btn slider-btn_prev btn-reset"
+						>
+							<img
+								src="./img/icons/arrowSlider.svg"
+								alt="slide prev"
+							/>
+						</button>
+						<button
+							id="slide_2_next"
+							class="slider-btn slider-btn_next btn-reset"
+						>
+							<img
+								src="./img/icons/arrowSlider.svg"
+								alt="slider next"
+							/>
+						</button>
 					</div>
 				</div>
 				<div class="spaces-item__content">
@@ -672,7 +720,7 @@
 			</div>
 			<div class="spaces-item">
 				<div class="spaces-item__img" data-effect="opacity">
-					<div class="swiper spaces-item__slider">
+					<div id="slider_3" class="swiper spaces-item__slider">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="slide__content-img">
@@ -715,6 +763,24 @@
 								</div>
 							</div>
 						</div>
+						<button
+							id="slide_3_prev"
+							class="slider-btn slider-btn_prev btn-reset"
+						>
+							<img
+								src="./img/icons/arrowSlider.svg"
+								alt="slide prev"
+							/>
+						</button>
+						<button
+							id="slide_3_next"
+							class="slider-btn slider-btn_next btn-reset"
+						>
+							<img
+								src="./img/icons/arrowSlider.svg"
+								alt="slider next"
+							/>
+						</button>
 					</div>
 				</div>
 				<div class="spaces-item__content">
@@ -774,7 +840,7 @@
 			</div>
 			<div class="spaces-item">
 				<div class="spaces-item__img" data-effect="opacity">
-					<div class="swiper spaces-item__slider">
+					<div id="slider_4" class="swiper spaces-item__slider">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="slide__content-img">
@@ -807,6 +873,24 @@
 								</div>
 							</div>
 						</div>
+						<button
+							id="slide_4_prev"
+							class="slider-btn slider-btn_prev btn-reset"
+						>
+							<img
+								src="./img/icons/arrowSlider.svg"
+								alt="slide prev"
+							/>
+						</button>
+						<button
+							id="slide_4_next"
+							class="slider-btn slider-btn_next btn-reset"
+						>
+							<img
+								src="./img/icons/arrowSlider.svg"
+								alt="slider next"
+							/>
+						</button>
 					</div>
 				</div>
 				<div class="spaces-item__content">
@@ -1339,6 +1423,7 @@
 			type="text/javascript"
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/imask"></script>
 		<script src="js/script.js" type="module" defer></script>
 
 		<!-- Yandex.Metrika counter -->

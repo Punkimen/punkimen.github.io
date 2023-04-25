@@ -6,6 +6,7 @@ import {random, setDelay} from "./module/helpers.js";
 import {closePopup, showPopup} from "./module/popup.js";
 import {adaptiveHeader, adaptiveTerra, toggleMenu} from "./module/adaptive.js";
 import {sliderInit} from "./module/sliderInit.js";
+import {validate} from "./module/validate.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	const initPage = () => {
@@ -52,11 +53,53 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		});
 
-		const sliders = document.querySelectorAll(".swiper");
-		sliders?.forEach((el) => {
-			sliderInit(el);
-		});
+		const sliderBtns = document.querySelectorAll(".slider-btn");
 
+		const slider_banner = sliderInit(
+			document.querySelector("#banner_slider"),
+		);
+		const slider_1 = sliderInit(document.querySelector("#slider_1"));
+		const slider_2 = sliderInit(document.querySelector("#slider_2"));
+		const slider_3 = sliderInit(document.querySelector("#slider_3"));
+		const slider_4 = sliderInit(document.querySelector("#slider_4"));
+
+		sliderBtns.forEach((btn) => {
+			btn.addEventListener("click", (e) => {
+				const id = btn.getAttribute("id");
+				switch (id) {
+					case "banner_next":
+						slider_banner.slideNext();
+						break;
+					case "banner_prev":
+						slider_banner.slidePrev();
+						break;
+					case "slide_1_next":
+						slider_1.slideNext();
+						break;
+					case "slide_1_prev":
+						slider_1.slidePrev();
+						break;
+					case "slide_2_next":
+						slider_2.slideNext();
+						break;
+					case "slide_2_prev":
+						slider_2.slidePrev();
+						break;
+					case "slide_3_next":
+						slider_3.slideNext();
+						break;
+					case "slide_3_prev":
+						slider_3.slidePrev();
+						break;
+					case "slide_4_next":
+						slider_4.slideNext();
+						break;
+					case "slide_4_prev":
+						slider_4.slidePrev();
+						break;
+				}
+			});
+		});
 		gsap.fromTo(
 			firstSection,
 			{
@@ -133,6 +176,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 
 		initMap("map");
+
+		// form
+		validate();
 	};
 	initPage();
 	adaptiveHeader();

@@ -32,7 +32,6 @@ export const toggleMenu = () => {
 
 	mobLink.forEach((el) => {
 		el.addEventListener("click", (e) => {
-			console.log(e.target);
 			removeClass(burger, "active");
 			removeClass(mobMenu, "open");
 			removeClass(document.body, "overlay");

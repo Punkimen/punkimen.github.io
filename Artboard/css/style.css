@@ -303,6 +303,13 @@ li {
   background: var(--color-main);
 }
 
+.btn-reset {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
 .main__text {
   font-size: 0.938vw;
   display: grid;
@@ -405,6 +412,33 @@ textarea::placeholder,
 select::placeholder,
 text::placeholder {
   color: #6B5252;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 1.56vw;
+  height: 1.56vw;
+}
+
+.slider-btn img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.slider-btn_prev {
+  transform: translateY(-50%) rotate(180deg);
+  left: 0.78vw;
+}
+
+.slider-btn_next {
+  right: 0.78vw;
 }
 
 [data-effect=opacity] {
@@ -692,6 +726,7 @@ text::placeholder {
 .banner__content-slider {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .banner__content-img {

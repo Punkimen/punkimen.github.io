@@ -1,14 +1,12 @@
 const initOptions = {
 	effect: "fade",
-	speed: 2000,
+	speed: 1000,
 	autoplay: {
-		delay: 3000,
+		delay: 5000,
 	},
+	loop: true,
 	fadeEffect: {
 		crossFade: true,
-	},
-	pagination: {
-		el: ".swiper-pagination",
 	},
 };
 
