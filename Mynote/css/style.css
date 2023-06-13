@@ -132,6 +132,7 @@ li {
   width: fit-content;
   overflow: hidden;
   cursor: pointer;
+  color: #000;
 }
 
 .bookmark.show {
