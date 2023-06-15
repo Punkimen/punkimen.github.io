@@ -107,6 +107,7 @@ li {
 }
 
 .header__container {
+  padding: 0 45px;
   display: flex;
   align-items: center;
   height: 100%;
@@ -300,6 +301,18 @@ li {
 
 .btn:hover {
   background: #9B9B9B;
+}
+
+.text-content {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.link {
+  color: #0645AD;
+  text-decoration: underline;
 }
 
 @media (max-width: 767px) {

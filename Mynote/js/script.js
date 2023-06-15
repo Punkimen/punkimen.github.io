@@ -4,38 +4,26 @@ const defaultData = [
     {
         id: 'about',
         title: 'About',
-        text: 'Venturing Out To Create The Healthiest Meme Economy On Binance Smart Chain, Our Team Bred Red Floki CEO. A Combination Of Bold Redness And The Greatest Of All Meme Glory, Red Floki CEO Is Aimed At The Moon.\n' +
-            'Coming Out Of The Box, Red Floki CEO Is A Reflection Token, With HOLDR Rewards And No Buy Fees, Because Our Team Wants You Aimed At The Moon As Well.',
     },
     {
         id: 'presale',
         title: 'Presale',
-        text: 'Venturing Out To Create The Healthiest Meme Economy On Binance Smart Chain, Our Team Bred Red Floki CEO. A Combination Of Bold Redness And The Greatest Of All Meme Glory, Red Floki CEO Is Aimed At The Moon.\n' +
-            'Coming Out Of The Box, Red Floki CEO Is A Reflection Token, With HOLDR Rewards And No Buy Fees, Because Our Team Wants You Aimed At The Moon As Well.',
     },
     {
         id: 'tokenomics',
         title: 'Tokenomics',
-        text: 'Venturing Out To Create The Healthiest Meme Economy On Binance Smart Chain, Our Team Bred Red Floki CEO. A Combination Of Bold Redness And The Greatest Of All Meme Glory, Red Floki CEO Is Aimed At The Moon.\n' +
-            'Coming Out Of The Box, Red Floki CEO Is A Reflection Token, With HOLDR Rewards And No Buy Fees, Because Our Team Wants You Aimed At The Moon As Well.',
     },
     {
         id: 'social',
         title: 'Social',
-        text: 'Venturing Out To Create The Healthiest Meme Economy On Binance Smart Chain, Our Team Bred Red Floki CEO. A Combination Of Bold Redness And The Greatest Of All Meme Glory, Red Floki CEO Is Aimed At The Moon.\n' +
-            'Coming Out Of The Box, Red Floki CEO Is A Reflection Token, With HOLDR Rewards And No Buy Fees, Because Our Team Wants You Aimed At The Moon As Well.',
     },
     {
         id: 'roadmap',
         title: 'Roadmap',
-        text: 'Venturing Out To Create The Healthiest Meme Economy On Binance Smart Chain, Our Team Bred Red Floki CEO. A Combination Of Bold Redness And The Greatest Of All Meme Glory, Red Floki CEO Is Aimed At The Moon.\n' +
-            'Coming Out Of The Box, Red Floki CEO Is A Reflection Token, With HOLDR Rewards And No Buy Fees, Because Our Team Wants You Aimed At The Moon As Well.',
     },
     {
         id: 'partners',
         title: 'Partners',
-        text: 'Venturing Out To Create The Healthiest Meme Economy On Binance Smart Chain, Our Team Bred Red Floki CEO. A Combination Of Bold Redness And The Greatest Of All Meme Glory, Red Floki CEO Is Aimed At The Moon.\n' +
-            'Coming Out Of The Box, Red Floki CEO Is A Reflection Token, With HOLDR Rewards And No Buy Fees, Because Our Team Wants You Aimed At The Moon As Well.',
     },
 ]
 
@@ -60,10 +48,13 @@ const createBookmark = (name) => {
 }
 const createWindow = (shortcut) => {
     const el = document.querySelector(`#${shortcut.id}`)
+    const textContent = document.querySelector(`[text-id='${shortcut.id}']`)
     if (el) return
+
     const div = document.createElement('div')
     div.className = 'window show'
     div.setAttribute('id', shortcut.id)
+
     div.innerHTML = ` <div class="window__wrapper">
             <div class="window__header">
                 <div class="window__label">
@@ -86,11 +77,11 @@ const createWindow = (shortcut) => {
                 </div>
             </div>
             <div class="window__body">
-               ${shortcut.text}
             </div>
         </div>`
     modals.appendChild(div)
-
+    const textWrapper = document.getElementById(shortcut.id).querySelector('.window__body')
+    textWrapper.prepend(textContent)
     btnsClick()
 }
 const deleteElem = (selector) => {
@@ -124,7 +115,7 @@ const btnsClick = () => {
     })
 }
 
-const bookmarksClick = ()=>{
+const bookmarksClick = () => {
     const bookmarks = document.querySelectorAll('.bookmark')
     bookmarks.forEach(el => {
         el.addEventListener('click', e => {
