@@ -158,13 +158,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // gsap
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-    if (ScrollTrigger.isTouch !== 1) {
-      ScrollSmoother.create({
-        smooth: 1.3,
-        effects: true,
-        smoothTouch: 0.3,
-      });
-    }
+    /*   if (ScrollTrigger.isTouch !== 1) {
+         ScrollSmoother.create({
+           smooth: 1.3,
+           effects: true,
+           smoothTouch: 0.3,
+         });
+       }*/
 
     const lineElems = document.querySelectorAll('[data-effect="line"]');
     const opacityElems = document.querySelectorAll('[data-effect="opacity"]');
@@ -325,23 +325,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     );
     Marquee3k.init()
-    // hunger games
-
-    gsap.fromTo(
-      ".hunger-games__title",
-      {scale: 1.7},
-      {
-        scale: 1,
-        scrollTrigger: {
-          trigger: ".hunger-games",
-          start: "top bottom",
-          end: "15% center",
-          scrub: true,
-        },
-        ease: "none",
-      }
-    );
-
 
     let mapPoints = gsap.utils.toArray(".hunger-games__map-point");
     mapPoints.forEach(el => {
