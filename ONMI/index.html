@@ -90,51 +90,58 @@
 </section>
 
       <section class="reality">
-    <div class="container">
-        <div class="reality__text">
-            <span class="color_gray">Here is an app that can become your lifestyle guide and push the boundaries of what is possible.</span>
-            Welcome to reality 2.0.
-        </div>
-        <div class="reality__screens">
-            <div class="reality__screen reality__screen_1">
-                <picture>
-                    <source media="(max-width:768px)" srcset="./img/phoneScreen_mob.png">
-                    <noscript data-webp><img src="img/phoneScreen.png" alt="screen_1"></noscript>
-                </picture>
-            </div>
-            <div class="reality__screen reality__screen_2">
-                <picture>
-                    <source media="(max-width:768px)" srcset="./img/phoneScreen_mob.png">
-                    <noscript data-webp><img src="img/phoneScreen.png" alt="screen_2"></noscript>
-                </picture>
-            </div>
-            <div class="reality__screen reality__screen_3">
-                <picture>
-                    <source media="(max-width:768px)" srcset="./img/phoneScreen_mob.png">
-                    <noscript data-webp><img src="img/phoneScreen.png" alt="screen_3"></noscript>
-                </picture>
-            </div>
-        </div>
-        <div class="reality__text reality__text_small">
-            <span class="color_gray">We've combined big city and augmented reality capabilities, the spirit of competition and distant travel.</span>
-            We
-            have added exciting game mechanics and attributes of contemporary culture
-        </div>
-        <div class="reality__decor">
-            <div class="reality__decor-line"></div>
-            <div class="reality__decor-line"></div>
-            <div class="reality__decor-line"></div>
-            <div class="reality__decor-line"></div>
-            <div class="reality__decor-circle"></div>
-        </div>
+  <div class="container">
+    <div class="reality__text" data-effect="fade-down" data-speed="1.1">
+      <span class="color_gray">Here is an app that can become your lifestyle guide and push the boundaries of what is possible.</span>
+      Welcome to reality 2.0.
     </div>
+    <div class="reality__screens">
+      <div class="reality__screen reality__screen_1" data-effect="fade-down" data-speed="1.1">
+        <picture>
+          <source media="(max-width:768px)" srcset="./img/phoneScreen_mob.png">
+          <noscript data-webp><img src="img/phoneScreen.png" alt="screen_1"></noscript>
+        </picture>
+      </div>
+      <div class="reality__screen reality__screen_2" data-effect="fade-down" data-delay="0.2" data-speed="1.1">
+        <picture>
+          <source media="(max-width:768px)" srcset="./img/phoneScreen_mob.png">
+          <noscript data-webp><img src="img/phoneScreen.png" alt="screen_2"></noscript>
+        </picture>
+      </div>
+      <div class="reality__screen reality__screen_3" data-effect="fade-down" data-delay="0.4" data-speed="1.1">
+        <picture>
+          <source media="(max-width:768px)" srcset="./img/phoneScreen_mob.png">
+          <noscript data-webp><img src="img/phoneScreen.png" alt="screen_3"></noscript>
+        </picture>
+      </div>
+    </div>
+    <div class="reality__text reality__text_small" data-effect="fade-down" data-speed="1.1">
+      <span class="color_gray">We've combined big city and augmented reality capabilities, the spirit of competition and distant travel.</span>
+      We
+      have added exciting game mechanics and attributes of contemporary culture
+    </div>
+    <div class="reality__decor" data-effect="fade-in" data-speed="1.1">
+      <div class="reality__decor-line"></div>
+      <div class="reality__decor-line"></div>
+      <div class="reality__decor-line"></div>
+      <div class="reality__decor-line"></div>
+      <div class="reality__decor-circle"></div>
+    </div>
+  </div>
 </section>
 
       <section class="adventure">
     <div class="container">
         <div class="adventure__content">
             <h2 class="main__title adventure__title">
-                Start <span class="color_gray">your&#160;adventure</span>
+                <div class="adventure__title-row">
+                    <span class="animate flip">Start</span>
+                </div>
+                <div class="adventure__title-row">
+                    <span class="color_gray animate flip">your&#160;adventure</span>
+                </div>
+
+
                 <!--  <div class="adventure__title-row adventure__title-row_1 ">
                     <span class="animate flip">START</span>
                   </div>
@@ -253,7 +260,7 @@
   <div class="container">
     <div class="cards__wrapper">
       <div class="cards__col">
-        <div class="card card_1">
+        <div data-effect="fade-in" data-duration="1.1" class="card card_1">
           <div class="card__front">
             <div class="card__title">Choose the right subculture</div>
             <div class="card__text">To determine your style of play</div>
@@ -272,8 +279,8 @@
             </div>
           </div>
         </div>
-        <div class="card card_2 ">
-          <div class="card__front card__front_bottom" >
+        <div data-effect="fade-in" data-duration="1.1" data-delay="0.2" class="card card_2 ">
+          <div class="card__front card__front_bottom">
             <div class="card__title">Raise your attributes</div>
             <div class="card__text">And turn your skill into income</div>
           </div>
@@ -293,7 +300,7 @@
         </div>
       </div>
       <div class="cards__col">
-        <div class="card card_3">
+        <div data-effect="fade-in" data-duration="1.1" data-delay="0.6" class="card card_3">
           <div class="card__front ">
             <div class="card__title">Сustomize your look</div>
             <div class="card__text">An equipped character gets more abilities</div>
@@ -312,7 +319,7 @@
             </div>
           </div>
         </div>
-        <div class="card card_4">
+        <div data-effect="fade-in" data-duration="1.1" data-delay="0.4" class="card card_4">
           <div class="card__front card__front_centered">
             <div class="card__title">Discover new places in your city</div>
           </div>
@@ -339,7 +346,12 @@
   <div class="container">
     <div class="find__descr">
       <h2 class="find__title main__title">
-        Explore <span class="color_gray">cities in a new way</span>
+        <div>
+         <span class="animate flip">Explore <span class="color_gray">cities in </span></span>
+        </div>
+        <div>
+          <span class="color_gray animate flip">a new way</span>
+        </div>
       </h2>
       <div class="main__text find__text">
         <div class="animate" data-effect="fade-down" data-duration="1.5">
@@ -373,26 +385,26 @@
         </div>-->
       </div>
       <div class="find-description find-description_1">
-        <div class="find-description__text">NFT</div>
-        <div class="find-description__arrow">
+        <div class="find-description__text" data-effect="fade-up" data-duration="0.6" y="">NFT</div>
+        <div class="find-description__arrow"  data-effect="fade-up" data-duration="0.6" y="0.2">
           <img src="./img/arrows/arrow_1.png" alt="arrow">
         </div>
       </div>
       <div class="find-description find-description_2">
-        <div class="find-description__text">Points</div>
-        <div class="find-description__arrow">
+        <div class="find-description__text" data-effect="fade-up" data-duration="0.6" y="0.2">Points</div>
+        <div class="find-description__arrow"  data-effect="fade-up" data-duration="0.6" y="0.4">
           <img src="./img/arrows/arrow_2.png" alt="arrow">
         </div>
       </div>
       <div class="find-description find-description_3">
-        <div class="find-description__text">Card</div>
-        <div class="find-description__arrow">
+        <div class="find-description__text" data-effect="fade-up" data-duration="0.6" y="0.4">Card</div>
+        <div class="find-description__arrow"  data-effect="fade-up" data-duration="0.6" y="0.6">
           <img src="./img/arrows/arrow_3.png" alt="arrow">
         </div>
       </div>
       <div class="find-description find-description_4">
-        <div class="find-description__text">Resources</div>
-        <div class="find-description__arrow">
+        <div class="find-description__text" data-effect="fade-up" data-duration="0.6" y="0.6">Resources</div>
+        <div class="find-description__arrow"  data-effect="fade-up"  data-duration="0.60.8">
           <img src="./img/arrows/arrow_4.png" alt="arrow">
         </div>
       </div>
@@ -474,13 +486,13 @@
       <section class="journey-cards">
   <div class="container">
     <div class="journey-cards__wrapper">
-      <div class="journey-card journey-card_1">
+      <div data-effect="fade-in" data-duration="1.1" class="journey-card journey-card_1">
         <div class="journey-card__content journey-card__content_end">
           <div class="journey-card__title">Orbs everywhere</div>
           <div class="journey-card__text">Find AR orbs that store different resources</div>
         </div>
       </div>
-      <div class="journey-card journey-card_2">
+      <div data-effect="fade-in" data-duration="1.1" data-delay="0.2" class="journey-card journey-card_2">
         <div class="journey-card__content journey-card__content_row">
           <div class="journey-card__col"></div>
           <div class="journey-card__col">
@@ -489,22 +501,40 @@
           </div>
         </div>
       </div>
-      <div class="journey-card journey-card_3">
+      <div data-effect="fade-in" data-duration="1.1" data-delay="0.4" class="journey-card journey-card_3">
         <div class="journey-card__content journey-card__content_centered">
           <div class="journey-card__title">Grab territory with your clan</div>
         </div>
       </div>
-      <div class="journey-card journey-card_4">
+      <div data-effect="fade-in" data-duration="1.1" data-delay="0.6" class="journey-card journey-card_4">
         <div class="journey-card__content journey-card__content_end">
           <div class="journey-card__title">Author's routes
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <h3 class="journey-cards__title main__title">
+      <div>
+        <span class="animate flip color_gray">Onmi — is always</span>
+      </div>
+      <div>
+        <span class="animate flip"> a&#160;journey</span>
+      </div>
+    </h3>
 </section>
 
+      <section class="sound">
+  <div class="sound__anim">
+    <canvas id="waves"></canvas>
+  </div>
+  <h3 class="sound__title" data-effect="fade-down">Sound design</h3>
+  <h3 class="sound__text" data-effect="fade-down">For a full immersion in reality 2.0 is also responsible for the sound
+    design, which we ask the
+    best in the business to create - now you will hear it authored by DJ Nina Kravitz.</h3>
+  <h3 class="sound__coop" data-effect="fade-down">by Nina Kraviz ©</h3>
+</section>
 
+      
       <section class="pvp">
   <div class="cotnainer">
     <div class="pvp__wrapper">
@@ -1731,6 +1761,7 @@
 <script src="./js/libs/ScrollTrigger.min.js"></script>
 <script src="./js/libs/marquee3k.min.js"></script>
 <script src="./js/libs/simple-webp.min.js"></script>
+<script src="./js/libs/sine-waves.js"></script>
 
 <script src="js/script.js" type="module" defer></script>
 </body>
