@@ -334,6 +334,11 @@ h5.main__title {
   color: var(--color-gray);
 }
 
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -1881,7 +1886,7 @@ h5.main__title {
 
 .pvp__wrapper {
   position: relative;
-  margin-bottom: 289px;
+  margin-bottom: 15.05vw;
 }
 
 .pvp__descr {
@@ -1943,11 +1948,11 @@ h5.main__title {
 }
 
 .pvp__text {
-  max-width: 568px;
+  max-width: 29.58vw;
   width: 100%;
   font-size: 2.6vw;
   letter-spacing: -0.01em;
-  margin-bottom: 130px;
+  margin-bottom: 6.77vw;
 }
 
 .pvp__phones {
@@ -1955,12 +1960,12 @@ h5.main__title {
 }
 
 .pvp-phone {
-  max-width: 294px;
+  max-width: 15.31vw;
   width: 100%;
 }
 
 .pvp-phone:not(:last-child) {
-  margin-right: 133px;
+  margin-right: 6.93vw;
 }
 
 .pvp-phone img {
@@ -1970,7 +1975,7 @@ h5.main__title {
 }
 
 .pvp-pose_1 {
-  max-width: 886px;
+  max-width: 46.15vw;
   width: 100%;
   position: absolute;
   top: 61%;
@@ -1986,9 +1991,9 @@ h5.main__title {
 
 .pvp-pose_2 {
   position: absolute;
-  top: 409px;
-  right: 667px;
-  max-width: 403px;
+  top: 21.3vw;
+  right: 34.74vw;
+  max-width: 20.99vw;
   width: 100%;
 }
 
@@ -1999,15 +2004,15 @@ h5.main__title {
 }
 
 .pvp-content {
-  padding: 113px 32px 0;
+  padding: 5.89vw 1.67vw 0;
   position: relative;
 }
 
 .pvp-content__title {
   text-align: left;
-  max-width: 541px;
+  max-width: 28.18vw;
   width: 100%;
-  margin-right: 20px;
+  margin-right: 1.04vw;
 }
 
 .pvp-content__wrapper {
@@ -2015,7 +2020,7 @@ h5.main__title {
 }
 
 .pvp-content__label {
-  margin-bottom: 32px;
+  margin-bottom: 1.67vw;
   color: var(--color-main);
   text-align: left;
   line-height: 1.5em;
@@ -2028,18 +2033,18 @@ h5.main__title {
 }
 
 .pvp-content__col {
-  max-width: 301px;
+  max-width: 15.68vw;
   width: 100%;
 }
 
 .pvp-content__col:not(:last-child) {
-  margin-right: 133px;
+  margin-right: 6.93vw;
 }
 
 .level {
   position: relative;
   overflow: hidden;
-  margin-bottom: 150px;
+  margin-bottom: 7.81vw;
 }
 
 .level__wrapper {
@@ -2050,31 +2055,31 @@ h5.main__title {
 }
 
 .level-circle {
-  flex: 0 0 951px;
+  flex: 0 0 49.53vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 951px;
-  height: 951px;
+  width: 49.53vw;
+  height: 49.53vw;
   border: 0.1vw solid rgba(255, 255, 255, 0.59);
   text-align: center;
   border-radius: 50%;
 }
 
 .level-circle__title {
-  margin-bottom: 74px;
+  margin-bottom: 3.85vw;
 }
 
 .level-circle__text {
-  max-width: 410px;
+  max-width: 21.35vw;
   width: 100%;
   margin: 0 auto;
   font-size: 1.25vw;
 }
 
 .level-circle__text p:not(:last-child) {
-  margin-bottom: 36px;
+  margin-bottom: 1.88vw;
 }
 
 .market {
@@ -2090,11 +2095,11 @@ h5.main__title {
 
 .market__title {
   letter-spacing: -0.04em;
-  margin-bottom: 66px;
+  margin-bottom: 3.44vw;
 }
 
 .market__text {
-  max-width: 448px;
+  max-width: 23.33vw;
   width: 100%;
   margin: 0 auto;
 }
@@ -2148,7 +2153,7 @@ h5.main__title {
   justify-content: center;
   width: 13.85vw;
   height: 15.78vw;
-  border: 0.5px solid #282B36;
+  border: 0.05vw solid #282B36;
   padding: 1.77vw;
 }
 
@@ -2179,18 +2184,18 @@ h5.main__title {
 
 .hunger-games__title {
   width: 100%;
-  font-size: 299px;
+  font-size: 15.57vw;
   text-transform: capitalize;
   line-height: 0.8em;
-  letter-spacing: -20px;
-  perspective: 600px;
+  letter-spacing: -1.04vw;
+  perspective: 31.25vw;
 }
 
 .hunger-games__pose {
   position: absolute;
-  top: -234px;
+  top: -12.19vw;
   left: 18vw;
-  width: 385px;
+  width: 20.05vw;
 }
 
 .hunger-games__pose img {
@@ -2255,13 +2260,13 @@ h5.main__title {
 }
 
 .hunger-games__description {
-  font-size: 24px;
-  max-width: 340px;
+  font-size: 1.25vw;
+  max-width: 32.08vw;
   width: 100%;
 }
 
 .hunger-games__description p:not(:last-child) {
-  margin-bottom: 36px;
+  margin-bottom: 1.88vw;
 }
 
 .hunger-games__map {
@@ -2344,8 +2349,8 @@ h5.main__title {
 }
 
 .hunger-progress {
-  margin: 230px 0 200px;
-  padding: 0 33px 0 33px;
+  margin: 11.98vw 0 8.59vw;
+  padding: 0 1.72vw 0 1.72vw;
 }
 
 .hunger-progress__img {
@@ -2356,7 +2361,7 @@ h5.main__title {
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 50px;
+  margin-bottom: 2.6vw;
 }
 
 .hunger-progress__text {
@@ -2367,116 +2372,43 @@ h5.main__title {
 }
 
 .hunger-progress__text p:not(:last-child) {
-  margin-bottom: 22px;
+  margin-bottom: 1.15vw;
 }
 
 .hunger-progress__text_1 {
-  max-width: 291px;
+  max-width: 15.16vw;
 }
 
 .hunger-progress__text_2 {
-  max-width: 276px;
+  max-width: 14.38vw;
 }
 
 .hunger-progress__text_3 {
-  max-width: 255px;
+  max-width: 13.28vw;
 }
 
 .hunger-progress__wrapper {
   display: grid;
-  gap: 50px;
+  gap: 2.6vw;
   grid-template-columns: 1fr 1fr;
 }
 
 .hunger-map__title {
-  max-width: 448px;
+  max-width: 23.33vw;
   width: 100%;
   text-align: left;
   line-height: 1.07em;
 }
 
 .hunger-map__text {
-  max-width: 280px;
+  max-width: 14.58vw;
   width: 100%;
   font-size: 0.83vw;
   line-height: 1.4;
 }
 
 .hunger-map__text p:not(:last-child) {
-  margin-bottom: 26px;
-}
-
-.step {
-  padding-bottom: 41.67vw;
-}
-
-.step__wrapper {
-  position: relative;
-  padding-top: 4.2vw;
-  display: flex;
-  margin-bottom: 21.88vw;
-}
-
-.step__descr {
-  text-transform: uppercase;
-}
-
-.step__descr .line {
-  display: none;
-}
-
-.step__title {
-  width: 24.48vw;
-  font-size: 3.13vw;
-  line-height: 1em;
-  font-weight: 600;
-  margin-bottom: 1.56vw;
-}
-
-.step__text {
-  width: 18.49vw;
-  color: #5F5F5F;
-  font-size: 0.73vw;
-  line-height: 1.8em;
-}
-
-.step__list {
-  -moz-columns: 2;
-  columns: 2;
-  text-transform: uppercase;
-  padding-right: 1.82vw;
-  font-size: 0.83vw;
-  line-height: 1.68em;
-}
-
-.step__list-elem {
-  position: relative;
-  width: 14.5vw;
-  min-height: 5.73vw;
-  margin-bottom: 4.58vw;
-}
-
-.step__list-elem::before {
-  content: attr(data-count);
-  border: 2px solid #555555;
-  color: #555555;
-  font-weight: 700;
-  font-size: 0.63vw;
-  line-height: 1.3em;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: -2.6vw;
-  width: 1.2vw;
-  height: 1.2vw;
-}
-
-.main-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1.35vw;
 }
 
 .be-part {
@@ -2628,7 +2560,7 @@ h5.main__title {
 
 .individual-chose__list-elem::before {
   content: attr(data-count);
-  border: 2px solid #555555;
+  border: 0.1vw solid #555555;
   color: #555555;
   font-weight: 700;
   font-size: 0.63vw;
@@ -2646,6 +2578,7 @@ h5.main__title {
 
 .mission {
   margin-bottom: 15vw;
+  padding: 30vw 0 16vw;
 }
 
 .mission__wrapper {
@@ -2691,6 +2624,7 @@ h5.main__title {
   position: relative;
   display: flex;
   align-items: center;
+  padding-left: 1.46vw;
 }
 
 .mission__title-arrow {
@@ -2707,14 +2641,85 @@ h5.main__title {
 }
 
 .mission__text {
-  width: 45.31vw;
-  text-transform: uppercase;
+  width: 35.6vw;
   font-size: 1.25vw;
   line-height: 1.8;
 }
 
+.mission__text:not(:last-child) {
+  margin-bottom: 17.5vw;
+}
+
+.mission__text_big {
+  font-size: 2.6vw;
+  width: 39.11vw;
+  line-height: 1.2em;
+  letter-spacing: -0.013em;
+  font-size: 2.6vw;
+}
+
+.mission__text_big p:not(:last-child) {
+  margin-bottom: 3.23vw;
+}
+
+.culture {
+  padding: 0 1.45vw;
+}
+
+.culture__hero {
+  position: relative;
+  margin-bottom: 17.03vw;
+}
+
+.culture__title {
+  font-size: 9.79vw;
+  line-height: 0.82;
+  letter-spacing: -0.05em;
+  text-align: center;
+}
+
+.culture__pose {
+  width: 100%;
+  max-width: 30.68vw;
+  position: absolute;
+  top: -11.41vw;
+  left: 34.74vw;
+}
+
+.culture__pose img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.culture-card {
+  border-radius: 2.6vw;
+  background: #121214;
+  padding: 3.13vw 3.13vw 3.13vw 3.13vw;
+  min-height: 27.45vw;
+}
+
+.culture-card:not(:last-child) {
+  margin-bottom: 0.36vw;
+}
+
+.culture-card__title {
+  text-align: left;
+}
+
+.culture-card__text {
+  font-size: 0.99vw;
+  max-width: 17.66vw;
+  width: 100%;
+  line-height: 1.3em;
+}
+
+.culture-card__text p:not(:last-child) {
+  margin-bottom: 2.08vw;
+}
+
 .token {
-  padding: 15.21vw 0 36.46vw;
+  padding: 15.21vw 0 1.3vw;
 }
 
 .token__circle {
@@ -2828,6 +2833,77 @@ h5.main__title {
 .svg-circle_3 circle {
   stroke-dasharray: 220%;
   stroke-dashoffset: 220%;
+}
+
+.cards-token__wrapper {
+  display: flex;
+  max-width: 52.81vw;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cards-token__col {
+  width: 100%;
+}
+
+.cards-token__col:not(:last-child) {
+  margin-right: 0.83vw;
+}
+
+.card-token {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3.85vw 2.81vw 4.11vw 2.81vw;
+  border-radius: 2.6vw;
+  background: #121214;
+}
+
+.card-token:not(:last-child) {
+  margin-bottom: 0.83vw;
+}
+
+.card-token__icon {
+  margin-bottom: 1.67vw;
+}
+
+.card-token__title {
+  text-align: left;
+  margin-bottom: 1.56vw;
+  font-weight: 600;
+  font-size: 2.08vw;
+}
+
+.card-token__text {
+  font-size: 0.94vw;
+  line-height: 1.3;
+  max-width: 18.13vw;
+  width: 100%;
+}
+
+.card-token__text p:not(:last-child) {
+  margin-bottom: 1.3vw;
+}
+
+.card-token_1 {
+  height: 42.81vw;
+}
+
+.card-token_1 .card-token__text {
+  max-width: 18.75vw;
+}
+
+.card-token_2 {
+  height: 32.86vw;
+}
+
+.card-token_3 {
+  height: 31.82vw;
+}
+
+.card-token_4 {
+  height: 43.85vw;
 }
 
 .roadmap {
@@ -3851,28 +3927,6 @@ h5.main__title {
     width: 100%;
   }
 
-  .step__text {
-    font-size: 1.41vw;
-    width: 35.49vw;
-  }
-
-  .step__list {
-    font-size: 1.41vw;
-  }
-
-  .step__list-elem {
-    width: 24vw;
-    padding-right: 3vw;
-  }
-
-  .step__list-elem::before {
-    font-size: 1.21vw;
-    width: 2.32vw;
-    height: 2.32vw;
-    line-height: 0.9em;
-    left: -3.02vw;
-  }
-
   .individual__title {
     font-size: 2.82vw;
   }
@@ -4281,44 +4335,6 @@ h5.main__title {
     width: 104.95vw;
     left: 50%;
     transform: translateX(-45%);
-  }
-
-  .step__wrapper {
-    display: block;
-  }
-
-  .step__wrapper .line {
-    display: none;
-  }
-
-  .step__descr {
-    position: relative;
-    padding-bottom: 3.91vw;
-    margin-bottom: 6.51vw;
-  }
-
-  .step__descr .line {
-    display: block;
-  }
-
-  .step__title {
-    font-size: 5.21vw;
-    width: 30vw;
-    position: relative;
-  }
-
-  .step__text {
-    font-size: 1.82vw;
-  }
-
-  .step__list {
-    font-size: 1.82vw;
-    padding-right: 0;
-  }
-
-  .step__list-elem {
-    width: 100%;
-    padding-right: 6vw;
   }
 
   .be-part__content {
@@ -4757,7 +4773,7 @@ h5.main__title {
   }
 
   .hunger-games {
-    padding-bottom: 40px;
+    padding-bottom: 2.08vw;
   }
 
   .hunger-games__wrapper {
@@ -4858,56 +4874,6 @@ h5.main__title {
   .world__map-circle {
     width: 2.11vw;
     height: 2.11vw;
-  }
-
-  .step {
-    padding-bottom: 59.67vw;
-  }
-
-  .step__wrapper {
-    margin-bottom: 52vw;
-  }
-
-  .step__descr {
-    padding-bottom: 5.91vw;
-    margin-bottom: 11.7vw;
-  }
-
-  .step__title {
-    font-size: 9.39vw;
-    width: 55vw;
-  }
-
-  .step__text {
-    font-size: 3.29vw;
-    margin-top: 19.48vw;
-    width: 84.04vw;
-  }
-
-  .step__list {
-    -moz-columns: 1;
-    columns: 1;
-    font-size: 3.29vw;
-  }
-
-  .step__list-elem {
-    padding-right: 0;
-    width: 76vw;
-  }
-
-  .step__list-elem:not(:last-child) {
-    margin-bottom: 14vw;
-  }
-
-  .step__list-elem::before {
-    position: relative;
-    right: 0;
-    top: 0;
-    left: 0;
-    width: 5.4vw;
-    height: 5.4vw;
-    font-size: 2.82vw;
-    margin-bottom: 4vw;
   }
 
   .be-part__content {
