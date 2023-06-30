@@ -58,11 +58,9 @@ export const fadeDown = el => {
   const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
   const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1.2
   gsap.fromTo(el, {
-    opacity: 0,
     y: 150
   }, {
     y: 0,
-    opacity: 1,
     delay: delay,
     duration: duration,
     ease: "power1.inOut",
@@ -70,7 +68,17 @@ export const fadeDown = el => {
       trigger: el,
     }
   })
-
+  gsap.fromTo(el, {
+    opacity: 0,
+  }, {
+    opacity: 1,
+    delay: delay !== 0 ? delay * 2.4 : 0.5,
+    duration: duration,
+    ease: "power1.inOut",
+    scrollTrigger: {
+      trigger: el,
+    }
+  })
 }
 export const fadeIn = el => {
   const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0

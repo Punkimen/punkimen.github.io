@@ -24,7 +24,7 @@ import {random} from "./module/random.js";
 import {circlesAdaptive, stepAdaptive} from "./module/adaptiveResize.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-
+  document.getElementById('vid').play();
   const initPage = () => {
     const delayElem = document.querySelectorAll("[data-delay]");
     const durationElem = document.querySelectorAll("[data-duration]");
@@ -288,10 +288,10 @@ document.addEventListener("DOMContentLoaded", () => {
       isShow ? (el.style.opacity = 1) : (el.style.opacity = 0);
     };
     const animTextChange = (text1, text2, progress) => {
-      if (progress >= 0 && progress <= 0.500) {
+      if (progress >= 0 && progress < 0.5) {
         showEl(text1, true)
         showEl(text2, false)
-      } else if (progress >= 0.400 && progress <= 1) {
+      } else if (progress > 0.5 && progress <= 1) {
         showEl(text1, false)
         showEl(text2, true)
       }
@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollTrigger: {
           trigger: ".pvp",
           start: "top center",
-          end: "center+=5.21vw center",
+          end: "center-=20% center",
           scrub: true,
         },
         ease: "none",
@@ -518,24 +518,24 @@ window.addEventListener('resize', () => {
   circlesAdaptive()
 })
 
-var waves = new SineWaves({
+const waves = new SineWaves({
   // Canvas Element
   el: document.getElementById('waves'),
 
-  // General speed of entire wave system
   speed: 5,
 
-  // How many degress should we rotate all of the waves
-  rotate: 0,
+/*  width: function() {
+    return window.innerWidth;
+  },
 
-  // Ease function from left to right
-  ease: 'Linear',
+  height: function() {
+    return window.innerHeight;
+  },*/
 
-  // Specific how much the width of the canvas the waves should be
-  // This can either be a number or a percent
-  waveWidth: '95%',
+  wavesWidth: '95%',
 
-  // An array of wave options
+  ease: 'SineInOut',
+
   waves: [
     {
       timeModifier: 1,
@@ -543,14 +543,14 @@ var waves = new SineWaves({
       amplitude: 150,
       wavelength: 200,
       segmentLength: 20,
-//       strokeStyle: 'rgba(255, 255, 255, 0.5)'
+      //       strokeStyle: 'rgba(255, 255, 255, 0.5)'
     },
     {
       timeModifier: 1,
       lineWidth: 2,
       amplitude: 150,
       wavelength: 100,
-//       strokeStyle: 'rgba(255, 255, 255, 0.3)'
+      //       strokeStyle: 'rgba(255, 255, 255, 0.3)'
     },
     {
       timeModifier: 1,
@@ -558,7 +558,7 @@ var waves = new SineWaves({
       amplitude: -150,
       wavelength: 50,
       segmentLength: 10,
-//       strokeStyle: 'rgba(255, 255, 255, 0.2)'
+      //       strokeStyle: 'rgba(255, 255, 255, 0.2)'
     },
     {
       timeModifier: 1,
@@ -566,27 +566,29 @@ var waves = new SineWaves({
       amplitude: -100,
       wavelength: 100,
       segmentLength: 10,
-//       strokeStyle: 'rgba(255, 255, 255, 0.1)'
+      //       strokeStyle: 'rgba(255, 255, 255, 0.1)'
     }
   ],
 
-  // Perform any additional initializations here
-  initialize: function () {
+  initialize: function (){
+
   },
 
-  // This function is called whenver the window is resized
-  resizeEvent: function () {
-
-    // Here is an example on how to create a gradient stroke
+  resizeEvent: function() {
     var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
-    gradient.addColorStop(0, "rgba(0, 0, 0, 0)");
-    gradient.addColorStop(0.5, "rgba(255, 255, 255, 0.5)");
-    gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+    gradient.addColorStop(0,"rgba(0, 0, 0, 0)");
+    gradient.addColorStop(0.5,"rgba(255, 255, 255, 0.5)");
+    gradient.addColorStop(1,"rgba(0, 0, 0, 0)");
 
     var index = -1;
     var length = this.waves.length;
-    while (++index < length) {
+    while(++index < length){
       this.waves[index].strokeStyle = gradient;
     }
+
+    // Clean Up
+    index = void 0;
+    length = void 0;
+    gradient = void 0;
   }
 });
