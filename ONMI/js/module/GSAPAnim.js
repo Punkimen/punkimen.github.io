@@ -10,7 +10,7 @@ export const scalingPositive = async (selector) => {
 };
 export const lineShow = el => {
   const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-  const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1.2
+  const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
   gsap.fromTo(el, {
     y: '150%'
   }, {
@@ -25,7 +25,7 @@ export const lineShow = el => {
 }
 export const opacityIn = el => {
   const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-  const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1.2
+  const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
   gsap.fromTo(el, {
     opacity: 0,
   }, {
@@ -40,7 +40,7 @@ export const opacityIn = el => {
 }
 export const transformTop = el => {
   const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-  const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1.2
+  const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
   gsap.fromTo(el, {
     y: '100%'
   }, {
@@ -56,33 +56,37 @@ export const transformTop = el => {
 }
 export const fadeDown = el => {
   const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-  const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1.2
+  const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
   gsap.fromTo(el, {
-    y: 150
+    y: "100",
   }, {
     y: 0,
     delay: delay,
     duration: duration,
-    ease: "power1.inOut",
+    ease: "power2.inOut",
     scrollTrigger: {
       trigger: el,
+      start: "top bottom"
     }
   })
   gsap.fromTo(el, {
     opacity: 0,
   }, {
     opacity: 1,
-    delay: delay !== 0 ? delay * 2.4 : 0.5,
-    duration: duration,
-    ease: "power1.inOut",
+    delay: +delay + +duration / 3,
+    duration: duration - duration / 3,
+    // delay: +delay + +duration / 1.6,
+    // duration: duration,
+    ease: "power4.in",
     scrollTrigger: {
       trigger: el,
-    }
+      start: "top bottom"
+    },
   })
 }
 export const fadeIn = el => {
   const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-  const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1
+  const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
   gsap.fromTo(el, {
     opacity: 0,
   }, {
@@ -133,7 +137,7 @@ export const leftToRight = (el, trigger) => {
 }
 export const rightToLeft = (el, trigger) => {
   const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-  const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1
+  const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
 
   gsap.fromTo(el, {
     opacity: 0,

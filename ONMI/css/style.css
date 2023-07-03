@@ -7,7 +7,6 @@
 }
 
 [data-effect=fade-down] {
-  opacity: 0;
   display: block;
 }
 
@@ -318,7 +317,7 @@ h5.main__title {
   position: absolute;
   width: 0%;
   height: 0.05vw;
-  background: #979797;
+  background: rgba(255, 255, 255, 0.3);
   position: absolute;
   left: 0;
 }
@@ -627,7 +626,7 @@ h5.main__title {
 
 .app-btn {
   border-radius: 0.36vw;
-  background: rgba(32, 32, 32, 0.71);
+  background-color: rgba(32, 32, 32, 0.71);
   -webkit-backdrop-filter: blur(0.78vw);
   backdrop-filter: blur(0.78vw);
   display: flex;
@@ -638,6 +637,11 @@ h5.main__title {
   font-size: 0.73vw;
   font-weight: 500;
   letter-spacing: -0.01em;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.app-btn:hover {
+  background-color: rgba(51, 51, 51, 0.71);
 }
 
 .app-btn:not(:last-child) {
@@ -711,7 +715,8 @@ h5.main__title {
   position: relative;
   white-space: nowrap;
   font-size: 12.5vw;
-  letter-spacing: -0.04em;
+  line-height: 1em;
+  letter-spacing: -0.041em;
   font-weight: 400;
   overflow: visible;
   margin-bottom: 2.92vw;
@@ -743,7 +748,7 @@ h5.main__title {
   color: #fff;
   max-width: 30.47vw;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 12vw;
   text-align: center;
 }
 
@@ -759,12 +764,13 @@ h5.main__title {
 .reality__screens {
   display: flex;
   justify-content: center;
-  margin: 12vw 0 11.08vw;
+  margin: 0 0 11.08vw;
 }
 
 .reality__screen {
   max-width: 15.31vw;
   width: 100%;
+  position: relative;
 }
 
 .reality__screen:not(:last-child) {
@@ -777,6 +783,10 @@ h5.main__title {
   height: auto;
 }
 
+.reality__screen_2 {
+  z-index: 5;
+}
+
 .reality__decor {
   width: 8.28vw;
   height: 8.28vw;
@@ -784,50 +794,14 @@ h5.main__title {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 1.93vw;
   position: relative;
   overflow: hidden;
 }
 
-.reality__decor-line {
-  position: absolute;
-  width: 70%;
-  height: 0.05vw;
-  background: rgba(41, 41, 41, 0.8);
-}
-
-.reality__decor-line:nth-child(1) {
-  top: 0;
-  left: 0;
-  animation: snake-top 1s linear infinite;
-}
-
-.reality__decor-line:nth-child(2) {
-  right: 0;
-  height: 70%;
-  width: 0.05vw;
-  animation: snake-right 1s linear infinite;
-}
-
-.reality__decor-line:nth-child(3) {
-  bottom: 0;
-  height: 0.05vw;
-  width: 70%;
-  animation: snake-bottom 1s linear infinite;
-}
-
-.reality__decor-line:nth-child(4) {
-  left: 0;
-  height: 70%;
-  width: 0.05vw;
-  animation: snake-left 1s linear infinite;
-}
-
-.reality__decor-circle {
-  width: 6.61vw;
-  height: 6.61vw;
-  box-shadow: inset 0px 0px 2vw 1.2vw rgba(255, 255, 255, 0.5), inset 0px 0px 2.51vw 1.04vw rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
+.reality__decor img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .fixed-btns {
@@ -865,6 +839,7 @@ h5.main__title {
 
 .description-reality {
   position: relative;
+  min-height: 100vh;
 }
 
 .description-reality__content {
@@ -877,6 +852,10 @@ h5.main__title {
   z-index: 1;
   opacity: 0;
   pointer-events: none;
+}
+
+.description-reality__content.show {
+  opacity: 1;
 }
 
 .description-reality__inner {
@@ -901,6 +880,11 @@ h5.main__title {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-height: 500px;
+}
+
+.description-reality__text.show {
+  opacity: 1;
 }
 
 .description-reality__text_row {
@@ -922,9 +906,19 @@ h5.main__title {
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: all ease-in-out 0.5s;
+  transform: translate(-50%, -25%);
+}
+
+.description-reality__text_first.show {
+  transition-delay: 0.2s;
   transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.description-reality__text_first.hide {
+  transform: translate(-50%, -25%);
   opacity: 0;
-  transition: all ease-in-out 1s;
 }
 
 .description-reality__text_second {
@@ -932,9 +926,19 @@ h5.main__title {
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: all ease-in-out 0.5s;
+  transform: translate(-50%, -25%);
+}
+
+.description-reality__text_second.show {
+  transition-delay: 0.2s;
   transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.description-reality__text_second.hide {
+  transform: translate(-50%, -25%);
   opacity: 0;
-  transition: all ease-in-out 1s;
 }
 
 .description-reality__text p:not(:last-child) {
@@ -1406,7 +1410,7 @@ h5.main__title {
 }
 
 .card {
-  background-color: #0B1017;
+  background-color: #121214;
   border-radius: 2.6vw;
   position: relative;
   width: 100%;
@@ -1418,15 +1422,42 @@ h5.main__title {
   margin-bottom: 0.94vw;
 }
 
+.card__front {
+  background-color: #121214;
+}
+
+.card__front-img {
+  position: relative;
+  transition: transform ease-in-out 0.05s;
+}
+
 .card_1 {
   height: 42.81vw;
 }
 
-.card_1 .card__front {
-  background-color: #0B1017;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center bottom;
+.card_1 .card__front-aura {
+  position: absolute;
+  top: 1.98vw;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform ease-in-out 0.05s;
+}
+
+.card_1 .card__front-img {
+  max-width: 25.52vw;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card_1 .card__front-img img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .card_2 {
@@ -1434,10 +1465,24 @@ h5.main__title {
 }
 
 .card_2 .card__front {
-  background-color: #0B1017;
   background-repeat: no-repeat;
   background-size: 60%;
-  background-position: center top;
+  background-position: center -12.03vw;
+}
+
+.card_2 .card__front .card__front-img {
+  position: absolute;
+  top: -36%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 15.31vw;
+  width: 100%;
+}
+
+.card_2 .card__front .card__front-img img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .card_3 {
@@ -1448,10 +1493,24 @@ h5.main__title {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #0B1017;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center 76%;
+  background-size: 160%;
+  background-position: center 75%;
+  overflow: hidden;
+}
+
+.card_3 .card__front .card__front-img {
+  position: absolute;
+  top: 58%;
+  left: -28%;
+  transform: translate(0%, -50%);
+  width: 41.93vw;
+}
+
+.card_3 .card__front .card__front-img img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .card_3 .card__title {
@@ -1469,7 +1528,6 @@ h5.main__title {
 }
 
 .card_4 .card__front {
-  background-color: #0B1017;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
@@ -1875,7 +1933,7 @@ h5.main__title {
 }*/
 
 .journey-cards {
-  padding: 6.41vw 0 13.83vw;
+  padding: 6.41vw 0 10vw;
 }
 
 .journey-cards__wrapper {
@@ -1914,6 +1972,21 @@ h5.main__title {
   background-position: center top;
 }
 
+.journey-card_1 .journey-card__img {
+  position: absolute;
+  top: -23%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  max-width: 12.55vw;
+  width: 100%;
+}
+
+.journey-card_1 .journey-card__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .journey-card_2 {
   max-width: 33.33vw;
   height: 29.95vw;
@@ -1925,9 +1998,9 @@ h5.main__title {
 .journey-card_2 video {
   background: transparent;
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 22.19vw;
+  left: -3.13vw;
+  bottom: -2.34vw;
+  width: 30vw;
 }
 
 .journey-card_2 .journey-card__col {
@@ -1937,6 +2010,7 @@ h5.main__title {
 
 .journey-card_2 .journey-card__col:last-child {
   position: relative;
+  top: 3.13vw;
   z-index: 2;
 }
 
@@ -2032,6 +2106,8 @@ h5.main__title {
 .sound__anim canvas {
   width: 100%;
   height: 100%;
+  margin: 0 auto;
+  display: block;
 }
 
 .sound__title {
@@ -2252,9 +2328,10 @@ h5.main__title {
   align-items: center;
   width: 49.53vw;
   height: 49.53vw;
-  border: 0.1vw solid rgba(255, 255, 255, 0.59);
+  border: 0.1vw solid rgba(255, 255, 255, 0.3);
   text-align: center;
   border-radius: 50%;
+  opacity: 0;
 }
 
 .level-circle__title {
@@ -2541,6 +2618,49 @@ h5.main__title {
 .hunger-progress {
   margin: 19vw 0 16vw;
   padding: 0 1.72vw 0 1.72vw;
+}
+
+.hunger-progress__inner {
+  position: relative;
+  padding-bottom: 54px;
+}
+
+.hunger-progress__man {
+  position: absolute;
+  top: -4px;
+  transform: translateY(-100%);
+}
+
+.hunger-progress__man_1 {
+  left: 0;
+}
+
+.hunger-progress__man_2 {
+  left: 54px;
+}
+
+.hunger-progress__man_3 {
+  left: 200px;
+}
+
+.hunger-progress__man_4 {
+  left: 360px;
+}
+
+.hunger-progress__man_5 {
+  right: 860px;
+}
+
+.hunger-progress__man_6 {
+  right: 567px;
+}
+
+.hunger-progress__man_7 {
+  right: 492px;
+}
+
+.hunger-progress__man_finish {
+  right: 391px;
 }
 
 .hunger-progress__img {
@@ -2859,6 +2979,11 @@ h5.main__title {
   margin-bottom: 3.23vw;
 }
 
+.readed-text {
+  color: #fff;
+  opacity: 0.3;
+}
+
 .culture {
   padding: 6vw 0 0vw;
 }
@@ -2891,9 +3016,14 @@ h5.main__title {
 
 .culture-card {
   border-radius: 2.6vw;
-  background: #121214;
+  background-color: #121214;
   padding: 3.13vw 3.13vw 3.13vw 3.13vw;
   min-height: 27.45vw;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.culture-card:hover {
+  background-color: #303036;
 }
 
 .culture-card:not(:last-child) {
@@ -2939,6 +3069,7 @@ h5.main__title {
   text-transform: uppercase;
   font-size: 1.09vw;
   margin-bottom: 0.78vw;
+  color: rgba(255, 255, 255, 0.44);
 }
 
 .token__circle-name {
@@ -2989,6 +3120,7 @@ h5.main__title {
   letter-spacing: 0.03em;
   max-width: 19.27vw;
   width: 100%;
+  color: var(--color-gray);
 }
 
 .svg-circle {
@@ -3010,26 +3142,14 @@ h5.main__title {
 
 .svg-circle_1 circle {
   r: calc(50% - 0.1vw);
-  stroke-dasharray: 320%;
-  stroke-dashoffset: 320%;
 }
 
 .svg-circle_2 {
   stroke: rgba(255, 255, 255, 0.25);
 }
 
-.svg-circle_2 circle {
-  stroke-dasharray: 250%;
-  stroke-dashoffset: 250%;
-}
-
 .svg-circle_3 {
   stroke: rgba(255, 255, 255, 0.5);
-}
-
-.svg-circle_3 circle {
-  stroke-dasharray: 220%;
-  stroke-dashoffset: 220%;
 }
 
 .cards-token__wrapper {
@@ -3055,6 +3175,7 @@ h5.main__title {
   padding: 3.85vw 2.81vw 4.11vw 2.81vw;
   border-radius: 2.6vw;
   background: #121214;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .card-token:not(:last-child) {
@@ -3104,7 +3225,7 @@ h5.main__title {
 }
 
 .tokenomics {
-  padding: 21.35vw 0px 25.1vw;
+  padding: 21.35vw 0px 10vw;
   position: relative;
 }
 
@@ -3145,7 +3266,7 @@ h5.main__title {
   text-align: center;
   margin-bottom: 3.78vw;
   position: relative;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
   left: -1.46vw;
   width: calc(100% + 1.56vw);
 }
@@ -3211,7 +3332,7 @@ h5.main__title {
   padding: 4.95vw 0 16.9vw;
   position: relative;
   z-index: 2;
-  margin-bottom: 18.23vw;
+  margin-bottom: 5vw;
 }
 
 .security__title {
@@ -3286,7 +3407,7 @@ h5.main__title {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 0.05vw solid rgba(255, 255, 255, 0.5);
+  border: 0.05vw solid rgba(255, 255, 255, 0.3);
 }
 
 .policy__text {
@@ -3351,7 +3472,7 @@ h5.main__title {
   left: 0;
   width: 100%;
   height: 0.05vw;
-  background: #5F5F5F;
+  background: rgba(255, 255, 255, 0.3);
   transition: all ease-in-out 1.2s;
 }
 
@@ -3578,28 +3699,12 @@ h5.main__title {
   background-image: url(../img/OMI/card_2_bg.png);
 }
 
-.no-webp .card_1 .card__front {
-  background-image: url(../img/OMI/card_2_bg.png);
-}
-
-.no-webp .card_2 .card__front {
-  background-image: url(../img/OMI/card_bg_phone.png);
-}
-
-.no-webp .card_3 .card__front {
-  background-image: url(../img/customize_bg.png);
-}
-
 .no-webp .card_4 .card__front {
   background-image: url(../img/OMI/card_bg_map.jpg);
 }
 
 .no-webp .find-map {
   background-image: url(../img/bitmap.png);
-}
-
-.no-webp .journey-card_1 {
-  background-image: url(../img/journey/journey_phone.png);
 }
 
 .no-webp .journey-card_3 {
@@ -3614,28 +3719,12 @@ h5.main__title {
   background-image: url(../img/OMI/card_2_bg.webp);
 }
 
-.webp .card_1 .card__front {
-  background-image: url(../img/OMI/card_2_bg.webp);
-}
-
-.webp .card_2 .card__front {
-  background-image: url(../img/OMI/card_bg_phone.webp);
-}
-
-.webp .card_3 .card__front {
-  background-image: url(../img/customize_bg.webp);
-}
-
 .webp .card_4 .card__front {
   background-image: url(../img/OMI/card_bg_map.webp);
 }
 
 .webp .find-map {
   background-image: url(../img/bitmap.webp);
-}
-
-.webp .journey-card_1 {
-  background-image: url(../img/journey/journey_phone.webp);
 }
 
 .webp .journey-card_3 {

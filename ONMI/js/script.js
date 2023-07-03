@@ -29,6 +29,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const delayElem = document.querySelectorAll("[data-delay]");
     const durationElem = document.querySelectorAll("[data-duration]");
 
+    const rellax = new Rellax('.rellax', {
+      center: true,
+    });
+
+    const readedText = document.querySelectorAll('.readed-text')
+    readedText.forEach(el => {
+      gsap.fromTo(el, {
+        opacity: .3
+      }, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: el,
+          start: 'top bottom',
+          end: 'center center',
+          scrub: true,
+        }
+      })
+      gsap.fromTo(el, {
+        opacity: 1
+      }, {
+        opacity: .3,
+        scrollTrigger: {
+          trigger: el,
+          start: 'center center',
+          end: 'center top',
+          scrub: true,
+        }
+      })
+    })
     for (let elm of delayElem) {
       setStyle(elm, elm.dataset);
     }
@@ -37,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     {
-
       let numSize = "0.52vw"
       const initNum = () => {
         const windowWidth = window.innerWidth
@@ -126,48 +154,71 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     sectionHeightInit();
     // parallaxInit();
-
-    // score
-    /*    const handle = document.querySelector(".omi-card__handle");
-        const pointsAnim = document.querySelector("#unallocated-points");
-        let count = 1;
-
-        const stats = new CalcStats(12.0, 10.0, 23.4, 2.1, 2.1, 56);
-        stats.render();
-
-        handle.addEventListener("click", async (e) => {
-          const target = e.target;
-          const btn = target.closest(".omi-card__point-btn");
-
-          if (btn) {
-            const animBlock = document.createElement("span");
-            animBlock.className = "scalingBlock";
-            animBlock.setAttribute("data-id", count);
-            pointsAnim.append(animBlock);
-            await scalingPositive(".scalingBlock");
-            animBlock.remove();
-            const statName = btn.getAttribute("data-stat");
-            if (target.classList.contains("btn-plus")) {
-              stats.statPlus(statName);
-            } else if (target.classList.contains("btn-minus")) {
-              stats.statMinus(statName);
-            }
-          }
-        });*/
-
     // gsap
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-    /*   if (ScrollTrigger.isTouch !== 1) {
-         ScrollSmoother.create({
-           smooth: 1.3,
-           effects: true,
-           smoothTouch: 0.3,
-         });
-       }*/
-
     const lineElems = document.querySelectorAll('[data-effect="line"]');
     const opacityElems = document.querySelectorAll('[data-effect="opacity"]');
+
+    //cards animations
+    const cardsAura = document.querySelector('.card_1 .card__front-aura')
+    const cardsNft = document.querySelector('.card_3 .card__front-img')
+    const cardsPhone = document.querySelector('.card_2 .card__front-img')
+    const cardsPhone2 = document.querySelector('.journey-card_1 .journey-card__img')
+
+    gsap.fromTo(cardsAura, {
+      scale: 1
+    }, {
+      scale: 1.4,
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: cardsAura,
+        start: "top bottom+=25%",
+        end: "center top",
+        scrub: true,
+      }
+    })
+    gsap.fromTo(cardsNft, {
+      x: '-3%'
+    }, {
+      x: '3%',
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: cardsNft,
+        start: "top bottom+=10%",
+        end: "top top-=25%",
+        scrub: true,
+      }
+    })
+    gsap.fromTo(cardsPhone, {
+      y: -100,
+    }, {
+      y: 0,
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: cardsPhone,
+        start: "center bottom",
+        end: "center top",
+        scrub: true,
+      }
+    })
+    gsap.fromTo(cardsPhone2, {
+      y: -100,
+    }, {
+      y: 0,
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: cardsPhone2,
+        start: "center bottom",
+        end: "center top",
+        scrub: true,
+      }
+    })
+
     lineElems.forEach((el) => {
       lineShow(el);
     });
@@ -283,9 +334,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const pinEl = document.querySelector(".description-reality__content");
-
+    const text1 = document.querySelector('.description-reality__text_first')
+    const text2 = document.querySelector('.description-reality__text_second')
     const showEl = (el, isShow) => {
-      isShow ? (el.style.opacity = 1) : (el.style.opacity = 0);
+      if (isShow) {
+        el.classList.add('show');
+        el.classList.remove('hide');
+      } else {
+        el.classList.add('hide');
+        el.classList.remove('show')
+      }
     };
     const animTextChange = (text1, text2, progress) => {
       if (progress >= 0 && progress < 0.5) {
@@ -296,8 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showEl(text2, true)
       }
     }
-    const text1 = document.querySelector('.description-reality__text_first')
-    const text2 = document.querySelector('.description-reality__text_second')
+
     const st = ScrollTrigger.create({
       trigger: ".description-reality",
       pinned: true,
@@ -317,8 +374,8 @@ document.addEventListener("DOMContentLoaded", () => {
         scale: 1,
         scrollTrigger: {
           trigger: ".pvp",
-          start: "top center",
-          end: "center-=20% center",
+          start: "top bottom",
+          end: "center-=35% center",
           scrub: true,
         },
         ease: "none",
@@ -354,6 +411,32 @@ document.addEventListener("DOMContentLoaded", () => {
           trigger: '.mission',
         }
       })
+    const phoneScreens = document.querySelector('.reality__screens')
+    const phone_1 = document.querySelector('.reality__screen_1')
+    const phone_3 = document.querySelector('.reality__screen_3')
+    gsap.fromTo(phone_1, {
+      x: '17.5vw',
+      duration: 1,
+    }, {
+      x: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: phoneScreens,
+        start: "center bottom",
+      }
+    })
+    gsap.fromTo(phone_3, {
+      x: '-17.5vw',
+      duration: 1,
+    }, {
+      x: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: phoneScreens,
+        start: "center bottom",
+      }
+    })
+
     // gsap.fromTo(missionLineDiagonal,
     // 	{ width: "0px" },{
     // 	width: '113%',
@@ -502,10 +585,10 @@ document.addEventListener("DOMContentLoaded", () => {
     btnGooglePlay.addEventListener('mouseleave', leveSizeBtns)
 
     const circles = document.querySelectorAll('.svg-circle circle')
-    const circleTrigger = document.querySelector('.token')
-    circles.forEach(el => {
-      circleDraw(el, circleTrigger)
-    })
+    /*    const circleTrigger = document.querySelector('.token')
+        circles.forEach(el => {
+          circleDraw(el, circleTrigger)
+        })*/
 
     // adaptiveInit
     stepAdaptive()
@@ -524,13 +607,13 @@ const waves = new SineWaves({
 
   speed: 5,
 
-/*  width: function() {
-    return window.innerWidth;
-  },
+  /*  width: function() {
+      return window.innerWidth;
+    },
 
-  height: function() {
-    return window.innerHeight;
-  },*/
+    height: function() {
+      return window.innerHeight;
+    },*/
 
   wavesWidth: '95%',
 
@@ -570,19 +653,19 @@ const waves = new SineWaves({
     }
   ],
 
-  initialize: function (){
+  initialize: function () {
 
   },
 
-  resizeEvent: function() {
+  resizeEvent: function () {
     var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
-    gradient.addColorStop(0,"rgba(0, 0, 0, 0)");
-    gradient.addColorStop(0.5,"rgba(255, 255, 255, 0.5)");
-    gradient.addColorStop(1,"rgba(0, 0, 0, 0)");
+    gradient.addColorStop(0, "rgba(0, 0, 0, 0)");
+    gradient.addColorStop(0.5, "rgba(255, 255, 255, 0.5)");
+    gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
 
     var index = -1;
     var length = this.waves.length;
-    while(++index < length){
+    while (++index < length) {
       this.waves[index].strokeStyle = gradient;
     }
 
