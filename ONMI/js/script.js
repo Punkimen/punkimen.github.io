@@ -334,8 +334,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const pinEl = document.querySelector(".description-reality__content");
-    const text1 = document.querySelector('.description-reality__text_first')
-    const text2 = document.querySelector('.description-reality__text_second')
     const showEl = (el, isShow) => {
       if (isShow) {
         el.classList.add('show');
@@ -345,15 +343,7 @@ document.addEventListener("DOMContentLoaded", () => {
         el.classList.remove('show')
       }
     };
-    const animTextChange = (text1, text2, progress) => {
-      if (progress >= 0 && progress < 0.5) {
-        showEl(text1, true)
-        showEl(text2, false)
-      } else if (progress > 0.5 && progress <= 1) {
-        showEl(text1, false)
-        showEl(text2, true)
-      }
-    }
+
 
     const st = ScrollTrigger.create({
       trigger: ".description-reality",
@@ -362,9 +352,6 @@ document.addEventListener("DOMContentLoaded", () => {
       end: "bottom bottom",
       marker: true,
       onToggle: (self) => showEl(pinEl, self.isActive),
-      onUpdate: self => {
-        animTextChange(text1, text2, self.progress.toFixed(3))
-      }
     });
 
     gsap.fromTo(
@@ -416,24 +403,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const phone_3 = document.querySelector('.reality__screen_3')
     gsap.fromTo(phone_1, {
       x: '17.5vw',
-      duration: 1,
+      duration: 2,
+      opacity: 0,
     }, {
       x: 0,
-      duration: 1,
+      opacity: 1,
+      duration: 2,
+      ease: 'power4.out',
       scrollTrigger: {
         trigger: phoneScreens,
+        ease: 'power4.out',
         start: "center bottom",
       }
     })
     gsap.fromTo(phone_3, {
       x: '-17.5vw',
-      duration: 1,
+      duration: 2,
+      opacity: 0
     }, {
       x: 0,
-      duration: 1,
+      duration: 2,
+      opacity: 1,
+      ease: 'power4.out',
       scrollTrigger: {
         trigger: phoneScreens,
         start: "center bottom",
+        ease: 'power4.out',
       }
     })
 

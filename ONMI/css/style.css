@@ -868,18 +868,21 @@ h5.main__title {
 .description-reality__text {
   width: 100%;
   font-weight: 600;
-  font-size: 3.13vw;
-  line-height: 1.01em;
-  letter-spacing: -0.03em;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -1px;
   text-align: center;
   color: #000;
-  max-width: 816px;
+  max-width: 840px;
   width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .description-reality__text.show {
@@ -2098,6 +2101,7 @@ h5.main__title {
 }
 
 .sound__anim {
+  width: 100%;
   height: 25.94vw;
   margin-bottom: 2.29vw;
 }
@@ -2327,10 +2331,14 @@ h5.main__title {
   align-items: center;
   width: 49.53vw;
   height: 49.53vw;
-  border: 0.1vw solid rgba(255, 255, 255, 0.3);
+  border: 0.1vw solid rgba(255, 255, 255, 0.1);
   text-align: center;
   border-radius: 50%;
   opacity: 0;
+}
+
+.level-circle_center {
+  border: 0.1vw solid rgba(255, 255, 255, 0.15);
 }
 
 .level-circle__title {
@@ -3018,11 +3026,11 @@ h5.main__title {
   background-color: #121214;
   padding: 3.13vw 3.13vw 3.13vw 3.13vw;
   min-height: 27.45vw;
-  transition: background-color ease-in-out 0.3s;
+  transition: background-color ease-in-out 0.2s;
 }
 
 .culture-card:hover {
-  background-color: #303036;
+  background-color: #18181B;
 }
 
 .culture-card:not(:last-child) {
@@ -3079,7 +3087,7 @@ h5.main__title {
 }
 
 .token__circle-shadow {
-  box-shadow: inset 0px 0px 2.08vw 0.42vw rgba(255, 255, 255, 0.5), inset 0px 0px 6.51vw 1.04vw rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 115px 20px rgba(255, 255, 255, 0.5) inset, 0px 0px 40px 8px rgba(255, 255, 255, 0.5) inset;
   width: 36.98vw;
   height: 36.98vw;
   border-radius: 50%;
@@ -3136,7 +3144,7 @@ h5.main__title {
 }
 
 .svg-circle_1 {
-  stroke: rgba(255, 255, 255, 0.25);
+  stroke: rgba(255, 255, 255, 0.05);
 }
 
 .svg-circle_1 circle {
@@ -3144,11 +3152,11 @@ h5.main__title {
 }
 
 .svg-circle_2 {
-  stroke: rgba(255, 255, 255, 0.25);
+  stroke: rgba(255, 255, 255, 0.1);
 }
 
 .svg-circle_3 {
-  stroke: rgba(255, 255, 255, 0.5);
+  stroke: rgba(255, 255, 255, 0.15);
 }
 
 .cards-token__wrapper {
@@ -3174,7 +3182,6 @@ h5.main__title {
   padding: 3.85vw 2.81vw 4.11vw 2.81vw;
   border-radius: 2.6vw;
   background: #121214;
-  color: rgba(255, 255, 255, 0.6);
 }
 
 .card-token:not(:last-child) {
@@ -3190,6 +3197,7 @@ h5.main__title {
   margin-bottom: 1.56vw;
   font-weight: 600;
   font-size: 2.08vw;
+  color: #fff;
 }
 
 .card-token__text {
@@ -3197,6 +3205,7 @@ h5.main__title {
   line-height: 1.3;
   max-width: 18.13vw;
   width: 100%;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .card-token__text p:not(:last-child) {
