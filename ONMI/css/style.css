@@ -1971,7 +1971,8 @@ h5.main__title {
   background-position: 5% bottom;
 }
 
-.journey-card_2 video {
+.journey-card_2 video,
+.journey-card_2 canvas {
   background: transparent;
   position: absolute;
   left: -3.13vw;

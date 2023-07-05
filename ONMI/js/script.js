@@ -574,12 +574,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let lastScrollTop = 0;
     const headerText = document.querySelector('.header__text')
 
-/*    const rellax = new Rellax('.rellax', {
-        center: true,
-    });
-    setTimeout(() => {
-        rellax.refresh()
-    }, 100)*/
+    /*    const rellax = new Rellax('.rellax', {
+            center: true,
+        });
+        setTimeout(() => {
+            rellax.refresh()
+        }, 100)*/
     const waves = new SineWaves({
         // Canvas Element
         el: document.getElementById('waves'),
