@@ -228,9 +228,6 @@ export const circleDraw = (el, tirgger) => {
     })
 }
 export const animTextLine = (el, trigger) => {
-    const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-    const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
-
     gsap.fromTo(el, {
         opacity: 0,
         y: "100%",
@@ -243,6 +240,7 @@ export const animTextLine = (el, trigger) => {
         // duration: duration,
         scrollTrigger: {
             trigger: trigger || el,
+            start: 'top bottom+=10%'
         }
     })
 }

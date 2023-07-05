@@ -24,10 +24,6 @@ import {circlesAdaptive, stepAdaptive} from "./module/adaptiveResize.js";
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('vid').play();
     const initPage = () => {
-        const delayElem = document.querySelectorAll("[data-delay]");
-        const durationElem = document.querySelectorAll("[data-duration]");
-
-
         const readedText = document.querySelectorAll('.readed-text')
         readedText.forEach(el => {
             splitText(el)
@@ -57,12 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         })
 
-        /*   for (let elm of delayElem) {
-               setStyle(elm, elm.dataset);
-           }
-           for (let elm of durationElem) {
-               setStyle(elm, elm.dataset);
-           }*/
 
         {
             let numSize = "0.52vw"
@@ -145,26 +135,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-        const text = document.querySelectorAll(".animate-letters");
-        text.forEach((el) => {
-            splitText(el);
-        });
-
         const textLine = document.querySelectorAll('.text-line')
         textLine.forEach(el => {
             setStyle(el, el.dataset)
             animTextLine(el, el.parentElement)
         })
 
-        const textWord = document.querySelectorAll(".animate-text");
-        textWord.forEach((el) => {
-            splitText(el);
-        });
-
-        const titles = document.querySelectorAll(".title-line");
-        titles.forEach((el) => {
-            splitText(el);
-        });
         sectionHeightInit();
         // parallaxInit();
         // gsap
