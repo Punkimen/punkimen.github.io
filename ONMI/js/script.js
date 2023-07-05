@@ -146,6 +146,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // gsap
         gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
+        if (ScrollTrigger.isTouch !== 1) {
+            ScrollSmoother.create({
+                smooth: 1.3,
+                effects: true,
+                smoothTouch: 0.3,
+            });
+        }
+
         const lineElems = document.querySelectorAll('[data-effect="line"]');
         const opacityElems = document.querySelectorAll('[data-effect="opacity"]');
 
@@ -566,12 +574,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let lastScrollTop = 0;
     const headerText = document.querySelector('.header__text')
 
-    const rellax = new Rellax('.rellax', {
+/*    const rellax = new Rellax('.rellax', {
         center: true,
     });
     setTimeout(() => {
         rellax.refresh()
-    }, 100)
+    }, 100)*/
     const waves = new SineWaves({
         // Canvas Element
         el: document.getElementById('waves'),
@@ -649,7 +657,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('resize', () => {
         stepAdaptive()
         circlesAdaptive()
-        rellax.refresh();
+        // rellax.refresh();
         waves.update();
     })
 

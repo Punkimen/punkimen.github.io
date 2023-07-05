@@ -240,7 +240,7 @@ export const animTextLine = (el, trigger) => {
         // duration: duration,
         scrollTrigger: {
             trigger: trigger || el,
-            start: 'top bottom+=10%'
+            start: 'top bottom+=20%'
         }
     })
 }

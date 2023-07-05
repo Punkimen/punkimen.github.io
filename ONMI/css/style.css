@@ -913,7 +913,7 @@ h5.main__title {
   display: block;
   width: 100%;
   height: auto;
-  transition: opacity ease-in 0.4s;
+  transition: opacity ease-in 1.2s;
   will-change: opacity;
 }
 
@@ -2989,10 +2989,10 @@ h5.main__title {
 
 .culture__pose {
   width: 100%;
-  max-width: 30.68vw;
+  max-width: 25vw;
   position: absolute;
-  top: -11.41vw;
-  left: 34.74vw;
+  top: 3.2vw;
+  left: 37.74vw;
 }
 
 .culture__pose img {
@@ -3221,6 +3221,11 @@ h5.main__title {
   font-size: 3.13vw;
 }
 
+.tokenomics__wrapper {
+  position: relative;
+  z-index: 2;
+}
+
 .tokenomics__inner {
   padding-top: 3.65vw;
   position: relative;
@@ -3246,7 +3251,7 @@ h5.main__title {
 }
 
 .roadmap {
-  padding: 20.81vw 0 7.81vw;
+  padding: 25.81vw 0 7.81vw;
 }
 
 .roadmap__title {
