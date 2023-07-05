@@ -1508,9 +1508,8 @@ h5.main__title {
 
 .card_3 .card__front .card__front-img {
   position: absolute;
-  top: 58%;
+  top: 26%;
   left: -28%;
-  transform: translate(0%, -50%);
   width: 41.93vw;
 }
 
