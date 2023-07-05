@@ -30,29 +30,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const readedText = document.querySelectorAll('.readed-text')
         readedText.forEach(el => {
-            gsap.fromTo(el, {
-                opacity: .3
-            }, {
+            splitText(el)
+            /*   gsap.fromTo(el, {
+                   opacity: .3
+               }, {
+                   opacity: 1,
+                   scrollTrigger: {
+                       trigger: el,
+                       start: 'top bottom',
+                       end: 'center center',
+                       scrub: true,
+                   }
+               })*/
+            const words = el.querySelectorAll('.word')
+            gsap.to(words, {
+                duration: 2,
+                ease: 'none',
                 opacity: 1,
+                stagger: 0.5,
                 scrollTrigger: {
                     trigger: el,
-                    start: 'top bottom',
-                    end: 'center center',
-                    scrub: true,
-                }
-            })
-            gsap.fromTo(el, {
-                opacity: 1
-            }, {
-                opacity: .3,
-                scrollTrigger: {
-                    trigger: el,
-                    start: 'center center',
-                    end: 'center top',
+                    start: 'top bottom-=10%',
+                    end: 'bottom center+=25%',
                     scrub: true,
                 }
             })
         })
+
         for (let elm of delayElem) {
             setStyle(elm, elm.dataset);
         }

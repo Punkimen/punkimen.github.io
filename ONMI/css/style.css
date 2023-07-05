@@ -459,6 +459,16 @@ h5.main__title {
   border-color: #7b7b7b;
 }
 
+.readed-text {
+  opacity: 1;
+}
+
+.readed-text .word {
+  opacity: 0.3;
+  color: #fff;
+  transition: opacity ease-in 0.2s;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -2990,11 +3000,6 @@ h5.main__title {
 
 .mission__text_big p:not(:last-child) {
   margin-bottom: 3.23vw;
-}
-
-.readed-text {
-  color: #fff;
-  opacity: 0.3;
 }
 
 .culture {
