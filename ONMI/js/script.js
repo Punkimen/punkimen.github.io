@@ -57,12 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         })
 
-        for (let elm of delayElem) {
-            setStyle(elm, elm.dataset);
-        }
-        for (let elm of durationElem) {
-            setStyle(elm, elm.dataset);
-        }
+        /*   for (let elm of delayElem) {
+               setStyle(elm, elm.dataset);
+           }
+           for (let elm of durationElem) {
+               setStyle(elm, elm.dataset);
+           }*/
 
         {
             let numSize = "0.52vw"
@@ -152,6 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const textLine = document.querySelectorAll('.text-line')
         textLine.forEach(el => {
+            setStyle(el, el.dataset)
             animTextLine(el, el.parentElement)
         })
 

@@ -239,8 +239,8 @@ export const animTextLine = (el, trigger) => {
         opacity: 1,
         y: 0,
         rotate: 0,
-        delay: delay,
-        duration: duration,
+        // delay: delay,
+        // duration: duration,
         scrollTrigger: {
             trigger: trigger || el,
         }
