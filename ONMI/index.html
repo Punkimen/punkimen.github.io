@@ -2,39 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONMI</title>
-    <meta name="keywords" content=""/>
-    <meta name="description" content=""/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONMI</title>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 <div class="page-content">
-    <header class="header animate" xmlns="http://www.w3.org/1999/html">
+  <header class="header animate" xmlns="http://www.w3.org/1999/html">
   <div class="container">
     <div class="header__wrapper">
       <div class="header__left">
         <a href="#" class="header__logo">
           <img src="img/logo.svg" alt="logo" data-effect="line" data-delay="0.2">
         </a>
-        <div class="header__text">
-          <p class="hidden">
-            <span class="animate" data-effect="line" data-dlay="1"
-                  data-duration="1.5"> The XR game that shows a hidden</span>
-          </p>
-          <p class="hidden">
-            <span class="animate" data-effect="line" data-dlay="1" data-duration="1.5">level of reality.</span>
-          </p>
-        </div>
+        <a href="#" class="header__lang">
+          <span data-effect="line" data-delay="0.8">E</span>
+          <span data-effect="line" data-delay="0.9">N</span>
+        </a>
       </div>
       <div class="header__right">
+        <div class="burger" data-effect="fade-down" data-delay="0.6">
+          <span ></span>
+          <span></span>
+        </div>
         <div class="header__btns">
           <a href="#" class="app-btn" data-effect="fade-down" data-duration="1" data-delay="0.4">
             <img src="img/icons/apple.svg" alt="" class="app-btn__icon">
@@ -58,32 +57,53 @@
     </div>
 </header>
 
-    <div class="description-reality__content">
-        <div class="container">
-            <div class="description-reality__inner">
-                <div class="description-reality__text">
-                    Приложение, которое станет твоим лайфстайл-проводником и расширит границы возможного. Ты станешь
-                    героем реальной игры с сериальным сюжетом, за который отвечают сценаристы и ИИ в реальном времени.
-                </div>
-            </div>
+  <div class="description-reality__content">
+    <div class="container">
+      <div class="description-reality__inner">
+        <div class="description-reality__text">
+          <p>A game in which you can get into a hidden virtual layer over the city and the whole world.</p>
+          <p>Here you can earn money, find valuable digital art, participate in an international Hunger Games
+            tournament,
+            enter a social competition, activate access to real goods from fashion brands, stars and artists, and
+            discover corners of this world in secret itineraries.</p>
         </div>
-    </div>
-    <div id="smooth-wrapper" class="smooth-wrapper">
-        <div id="smooth-content" class="smooth-content">
-            <section class="hero">
-  <div class="container">
-    <div class="hero__wrapper">
-      <h1 class="hero__title  animate" data-duration="1.2" data-effect="fade-down">
-        Play <span class="color_gray">with the world</span>
-      </h1>
-      <a href="#" class="hero__mobile-btn btn" data-effect="opacity" data-delay="0.4">
-        Download
-      </a>
+      </div>
     </div>
   </div>
+  <div id="smooth-wrapper" class="smooth-wrapper">
+    <div id="smooth-content" class="smooth-content">
+      <section class="hero">
+    <div class="container">
+        <div class="hero__wrapper">
+            <div class="hero__content">
+                <h1 class="hero__title  animate" data-duration="1.2" data-effect="fade-down">
+                    Play <span class="color_gray">with the world</span>
+                </h1>
+                <div class="hero__info" data-effect="fade-up" data-lag="0.2" data-delay="0.7" data-duration="1.2">
+                    <div class="hero__info-text">
+                        <span id="population"></span>
+                        <span> - amount people on</span>
+                    </div>
+                    <div class="hero__info-text">
+                        <span id="waitingList">4,222</span>
+                        <span> - amount people on</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__text">
+                <span class="text-line" data-delay="0.4">onmi will open up the opportunity for you to</span>
+                <span class="text-line" data-delay="0.5">become the hero of an XR game with a story</span>
+                <span class="text-line" data-delay="0.6">written by the screenwriters of the</span>
+                <span class="text-line" data-delay="0.7">projects for Netflix.</span>
+            </div>
+            <a href="#" class="hero__mobile-btn btn" data-effect="opacity" data-delay="0.4">
+                Download
+            </a>
+        </div>
+    </div>
 </section>
 
-            <section class="description-reality">
+      <section class="description-reality">
     <picture>
         <source media="(max-width:768px)" srcset="./img/reality_bg_mob.png">
         <!--   <noscript data-webp>
@@ -93,35 +113,32 @@
     </picture>
 </section>
 
-            <section class="reality">
+      <section class="reality">
     <div class="container">
         <div class="reality__screens">
             <div class="reality__screen reality__screen_1">
                 <picture>
-                    <source media="(max-width:768px)" srcset="./img/phoneScreen_mob.png">
-                    <noscript data-webp><img src="img/phoneScreen.png" alt="screen_1"></noscript>
+<!--                    <source media="(max-width:768px)" srcset="./img/phoneScreen_mob.png">-->
+                    <noscript data-webp><img src="img/reality/phone_1.png" alt="screen_1"></noscript>
                 </picture>
             </div>
             <div class="reality__screen reality__screen_2">
                 <picture>
-                    <noscript data-webp><img src="img/reality_phone.png" alt="screen_2"></noscript>
+                    <noscript data-webp><img src="img/reality/phone_2.png" alt="screen_2"></noscript>
                 </picture>
             </div>
             <div class="reality__screen reality__screen_3">
                 <picture>
-                    <source media="(max-width:768px)" srcset="./img/phoneScreen_mob.png">
-                    <noscript data-webp><img src="img/phoneScreen.png" alt="screen_3"></noscript>
+<!--                    <source media="(max-width:768px)" srcset="./img/phoneScreen_mob.png">-->
+                    <noscript data-webp><img src="img/reality/phone_3.png" alt="screen_3"></noscript>
                 </picture>
             </div>
         </div>
+
         <div class="reality__text reality__text_small">
-            <div class="text-line color_gray" data-delay="0.1">We've combined big city and augmented</div>
-            <div class="text-line color_gray" data-delay="0.2"> reality capabilities, the spirit of competition</div>
-            <div class="text-line" data-delay="0.3"><span class="color_gray">and distant travel.</span> We have added
-                exciting
-            </div>
-            <div class="text-line" data-delay="0.4">game mechanics and attributes</div>
-            <div class="text-line" data-delay="0.5">of contemporary culture</div>
+            <div class="text-line color_gray" data-delay="0.1">Choose what it is, a game or a new image in</div>
+            <div class="text-line color_gray" data-delay="0.2">the intersection of life and technology in</div>
+            <div class="text-line" data-delay="0.3">Reality 2.0 </div>
         </div>
         <div class="reality__decor" data-effect="opacity" data-delay="0.1" data-duration="1">
             <noscript data-webp>
@@ -131,7 +148,7 @@
     </div>
 </section>
 
-            <section class="adventure">
+      <section class="adventure">
     <div class="container">
         <div class="adventure__content">
             <h2 class="main__title adventure__title" data-lag="0.1">
@@ -246,7 +263,7 @@
     </div>
 </section>
 
-            <section class="create-omi">
+      <section class="create-omi">
     <div class="container">
         <div class="create-omi__descr">
             <h2 class="main__title create-omi__title" data-lag="0.1">
@@ -392,677 +409,775 @@
     </div>-->
 </section>
 
-            <section class="cards">
-	<div class="container">
-		<div class="cards__wrapper">
-			<div class="cards__col">
-				<div data-effect="opacity" data-duration="0.9" class="card card_1">
-					<div class="card__front">
-						<div class="card__title">Choose the right subculture</div>
-						<div class="card__text">To determine your style of play</div>
-						<div class="card__front-img">
-							<div class="card__front-aura">
-								<img src="img/icons/circle-aura.svg" alt="aura"/>
-							</div>
-							<noscript data-webp>
-								<img src="img/OMI/card_2_bg.png" alt="ONMI"/>
-							</noscript>
-						</div>
-					</div>
+      <section class="cards">
+  <div class="container">
+    <div class="cards__wrapper">
+      <div class="cards__col">
+        <div data-effect="opacity" data-duration="0.9" class="card card_1">
+          <div class="card__front">
+            <div class="card__title">Choose the right subculture</div>
+            <div class="card__text">To determine your style of play</div>
+            <div class="card__front-img">
+              <div class="card__front-aura">
+                <img src="img/icons/circle-aura.svg" alt="aura"/>
+              </div>
+              <noscript data-webp>
+                <img src="img/OMI/card_2_bg.png" alt="ONMI"/>
+              </noscript>
+            </div>
+          </div>
 
-				</div>
-				<div data-effect="opacity" data-duration="0.9" data-delay="0.1" class="card card_2 ">
-					<div class="card__front card__front_bottom">
-						<div class="card__title">Raise your attributes</div>
-						<div class="card__text">And turn your skill into income</div>
+        </div>
+        <div data-effect="opacity" data-duration="0.9" data-delay="0.1" class="card card_2 ">
+          <div class="card__front card__front_bottom">
+            <div class="card__title">Raise your attributes</div>
+            <div class="card__text">And turn your skill into income</div>
 
-						<div class="card__front-img">
-							<noscript data-webp>
-								<img src="img/OMI/card_bg_phone.png" alt="ONMI"/>
-							</noscript>
-						</div>
+            <div class="card__front-img" data-speed="0.9">
+              <noscript data-webp>
+                <img src="img/OMI/card_bg_phone.png" alt="ONMI"/>
+              </noscript>
+            </div>
 
-					</div>
+          </div>
 
-				</div>
-			</div>
-			<div class="cards__col">
-				<div data-effect="opacity" data-duration="0.9" data-delay="0.2" class="card card_3">
-					<div class="card__front ">
-						<div class="card__title">Сustomize your look</div>
-						<div class="card__text">An equipped character gets more abilities</div>
-						<div class="card__front-img">
-							<noscript data-webp="">
-								<img src="img/customize_bg.png" alt="nft"/>
-							</noscript>
-						</div>
-					</div>
+        </div>
+      </div>
+      <div class="cards__col">
+        <div data-effect="opacity" data-duration="0.9" data-delay="0.2" class="card card_3">
+          <div class="card__front ">
+            <div class="card__title">Сustomize your look</div>
+            <div class="card__text">An equipped character gets more abilities</div>
+            <div class="card__front-img">
+              <noscript data-webp="">
+                <img src="img/customize_bg.png" alt="nft"/>
+              </noscript>
+            </div>
+          </div>
 
 
-				</div>
-				<div data-effect="opacity" data-duration="0.9" data-delay="0.3" class="card card_4">
-					<div class="card__front card__front_centered">
-						<div class="card__front-img card__front-img_bg">
-							<img class="" data-speed="1.1" src="./img/OMI/card_bg_map.jpg" alt="map">
-						</div>
-						<div class="card__title ">Discover new places in your city</div>
-					</div>
+        </div>
+        <div data-effect="opacity" data-duration="0.9" data-delay="0.3" class="card card_4">
+          <div class="card__front card__front_centered">
+            <div class="card__front-img card__front-img_bg">
+              <img class="" data-speed="1.1" src="./img/OMI/card_bg_map.jpg" alt="map">
+            </div>
+            <div class="card__title ">Discover new places in your city</div>
+          </div>
 
-				</div>
-			</div>
-		</div>
-	</div>
+        </div>
+      </div>
+    </div>
+    <div class="cards__omies omies">
+      <div class="omies__circles">
+        <div class="omies__circle omies__circle_1">
+          <noscript data-webp="">
+            <img src="img/OMI/OMI-circel_1.png" alt="OMI">
+          </noscript>
+        </div>
+        <div class="omies__circle omies__circle_2">
+          <noscript data-webp="">
+            <img src="img/OMI/OMI-circel_2.png" alt="OMI">
+          </noscript>
+        </div>
+        <div class="omies__circle omies__circle_3">
+          <noscript data-webp="">
+            <img src="img/OMI/OMI-circel_3.png" alt="OMI">
+          </noscript>
+        </div>
+      </div>
+      <div class="cards__omies-text color_gray">
+        <div class="text-line" data-delay="0.1">In today's reality, OMI becomes the first</div>
+        <div class="text-line" data-delay="0.2">digital ID, giving access to off-line values,</div>
+        <div class="text-line" data-delay="0.3">confirming status.</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-            <section class="find">
-    <div class="container">
-        <div class="find__descr">
-            <h2 class="find__title main__title" data-lag="0.1">
-                <div class="title-row">
+      <section class="find">
+  <div class="container">
+    <div class="find__descr">
+      <h2 class="find__title main__title" data-lag="0.1">
+        <div class="title-row">
                     <span class="text-line" data-delay="0.1">Explore <span
-                            class="color_gray">cities in </span></span>
-                </div>
-                <div class="title-row">
-                    <span class="color_gray text-line" data-delay="0.2">a new way</span>
-                </div>
-            </h2>
-            <div class="main__text find__text" data-lag="0.2">
-                <div class="text-line" data-delay="0.3">
-                    Choose interesting routes in different cities of the world, pass the
-                </div>
-                <div class="text-line" data-delay="0.4">missions and find ORBs - AR objects that are important
-                </div>
-                <div class="text-line" data-delay="0.5">elements&#160;of ONMI ecosystem.</div>
-            </div>
+                        class="color_gray">cities in </span></span>
         </div>
-    </div>
-    <div class="find-map">
-        <div class="container">
-            <div class="find-map__phone">
-                <div data-effect="opacity" data-speed="1.1">
-                    <picture>
-                        <source media="(max-width:768px)" srcset="./img/explore_phone.png">
-                        <noscript data-webp><img src="./img/explore_phone.png"></noscript>
-                    </picture>
-                </div>
-            </div>
-            <div class="find-description find-description_1">
-                <div class="find-description__text">NFT</div>
-                <div class="find-description__arrow">
-                    <img src="./img/arrows/arrow_1.png" alt="arrow">
-                </div>
-            </div>
-            <div class="find-description find-description_2">
-                <div class="find-description__text">Points</div>
-                <div class="find-description__arrow">
-                    <img src="./img/arrows/arrow_2.png" alt="arrow">
-                </div>
-            </div>
-            <div class="find-description find-description_3">
-                <div class="find-description__text">Card</div>
-                <div class="find-description__arrow">
-                    <img src="./img/arrows/arrow_3.png" alt="arrow">
-                </div>
-            </div>
-            <div class="find-description find-description_4">
-                <div class="find-description__text">Resources</div>
-                <div class="find-description__arrow">
-                    <img src="./img/arrows/arrow_4.png" alt="arrow">
-                </div>
-            </div>
-
+        <div class="title-row">
+          <span class="color_gray text-line" data-delay="0.2">a new way</span>
         </div>
+      </h2>
+      <div class="main__text find__text" data-lag="0.2">
+        <div class="text-line" data-delay="0.3">
+          Choose interesting routes in different cities of the world, pass the
+        </div>
+        <div class="text-line" data-delay="0.4">missions and find ORBs - AR objects that are important
+        </div>
+        <div class="text-line" data-delay="0.5">elements&#160;of ONMI ecosystem.</div>
+      </div>
     </div>
-</section>
-
-            <section class="journey-cards">
+  </div>
+  <div class="find-map">
+    <video id="video-scroll" class="find-map__video" src="./video/explore-map.mov" type="video/mov"></video>
     <div class="container">
-        <div class="journey-cards__wrapper">
-            <div data-effect="fade-in" data-duration="1.1" class="journey-card journey-card_1">
-                <div class="journey-card__content journey-card__content_end">
-                    <div class="journey-card__title">Orbs everywhere</div>
-                    <div class="journey-card__text">Find AR orbs that store different resources</div>
-                </div>
-                <div class="journey-card__img">
-                    <noscript data-webp>
-                        <img src="img/journey/journey_phone.png"/>
-                    </noscript>
-                </div>
-            </div>
-            <div data-effect="fade-in" data-duration="1.1" data-delay="0.2" class="journey-card journey-card_2">
-                <div class="journey-card__content journey-card__content_row">
-                    <div class="journey-card__col">
-                        <video id="vid" autoplay loop muted>
-                            <source src="/video/vid.webm" type="video/webm">
-                        </video>
-                    </div>
-                    <div class="journey-card__col">
-                        <div class="journey-card__title">Get missions from NPC</div>
-                        <div class="journey-card__text">Meet NPCs on the streets, complete tasks and get a reward</div>
-                    </div>
-                </div>
-            </div>
-            <div data-effect="fade-in" data-duration="1.1" data-delay="0.4" class="journey-card journey-card_3">
-                <div class="card__front-img_bg">
-                    <img class="" data-speed="1.1" src="./img/journey/journey_map.jpg" alt="">
-                </div>
-                <div class="journey-card__content journey-card__content_centered">
-                    <div class="journey-card__title">Grab territory with your clan</div>
-                </div>
-            </div>
-            <div data-effect="fade-in" data-duration="1.1" data-delay="0.6" class="journey-card journey-card_4">
-                <div class="journey-card__content journey-card__content_end">
-                    <div class="journey-card__title">Author's routes
-                    </div>
-                </div>
-            </div>
+      <div class="find-map__phone">
+        <div data-effect="opacity" data-speed="1.1">
+          <picture>
+            <source media="(max-width:768px)" srcset="./img/explore_phone.png">
+            <noscript data-webp><img src="./img/explore_phone.png"></noscript>
+          </picture>
         </div>
-        <h3 class="journey-cards__title main__title">
-            <div class="title-row">
-                <span class="color_gray" data-duration="1.2" data-effect="line">Onmi — is always</span>
-            </div>
-            <div class="title-row">
-                <span class="" data-duration="1.2" data-effect="line"> a&#160;journey</span>
-            </div>
-        </h3>
+      </div>
     </div>
+  </div>
 </section>
 
-            <section class="sound">
-    <div class="sound__anim">
-        <canvas id="waves"></canvas>
+      <section class="journey-cards">
+  <div class="container">
+    <div class="journey-cards__wrapper">
+      <div class="journey-cards__col">
+        <div data-effect="fade-in" data-duration="1.1" class="journey-card journey-card_1">
+          <div class="journey-card__content">
+            <div class="journey-card__title">Choose the right subculture</div>
+            <div class="journey-card__text">To determine your style of play</div>
+          </div>
+          <div class="journey-card__phone" data-speed="1.1">
+            <noscript data-webp>
+              <img src="img/phone.png"/>
+            </noscript>
+            <video id="video_phone" src="./video/journey_phone.mp4" type="video/mp4" autoplay loop/>
+          </div>
+        </div>
+        <div data-effect="fade-in" data-duration="1.1" data-delay="0.4" class="journey-card journey-card_3">
+          <div class="journey-card-video">
+            <video id="video_trap" src="./video/cyan.webm" type="video/webm" loop autoplay></video>
+          </div>
+          <div class="journey-card__content journey-card__content_end">
+            <div class="journey-card__title">Choose the right subculture</div>
+            <div class="journey-card__text">To determine your style of play</div>
+          </div>
+        </div>
+      </div>
+      <div class="journey-cards__col">
+        <div data-effect="fade-in" data-duration="1.1" data-delay="0.2" class="journey-card journey-card_2">
+          <div class="journey-card__content">
+            <div class="journey-card__title">Meet Spotters on the streets</div>
+            <div class="journey-card__text">Сomplete tasks and get a reward</div>
+          </div>
+          <div class="journey-card__omi" data-speed="1.2">
+            <noscript data-webp>
+              <img src="./img/journey/journey_omi.png" alt="omi"/>
+            </noscript>
+          </div>
+        </div>
+        <div data-effect="fade-in" data-duration="1.1" data-delay="0.6" class="journey-card journey-card_4">
+          <div class="card__front-img_bg" data-speed="1.1">
+            <noscript data-webp="">
+              <img class=""  src="./img/journey/journey_map.jpg" alt="">
+            </noscript>
+          </div>
+          <div class="journey-card__content journey-card__content_centered">
+            <div class="journey-card__title">Grab territory with your clan</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <h3 class="sound__title" data-effect="fade-down">Sound design</h3>
-    <div class="sound__text" data-effect="fade-down">
-        <div class="text-line">For a full immersion in reality 2.0 is also responsible for the sound</div>
-        <div class="text-line" data-delay="0.1">design, which we ask the best in the business to create - now you</div>
-        <div class="text-line" data-delay="0.2">will hear it authored by DJ Nina Kravitz.</div>
-    </div>
-    <h3 class="sound__coop" data-effect="fade-down">by Nina Kraviz ©</h3>
+  </div>
 </section>
 
-            <section class="pvp">
-    <div class="cotnainer">
-        <div class="pvp__wrapper">
-            <div class="pvp__descr">
-                <h2 class="pvp__title gradient-text">PVP</h2>
-            </div>
-            <div class="pvp-pose_1 ">
-                <noscript data-webp><img src="img/pvp-pose_1.png"></noscript>
-            </div>
-            <div class="pvp-pose_2 " data-speed="0.9">
-                <noscript data-webp><img src="img/pvp-pose_2.png"></noscript>
-            </div>
-        </div>
-        <div class="pvp__text" data-effect="fade-down">
-            <div class="text-line">If you want to try your hand at competing with</div>
-            <div class="text-line" data-delay="0.1">other users, we have options.</div>
-        </div>
-        <div class="container">
-            <div class="pvp-content">
-                <div class="pvp-content__col">
-                    <div class="pvp-content__screen" data-effect="fade-down" data-duration="1">
-                        <noscript data-webp="">
-                            <img src="img/pvp_phone_1.png" alt="Deck">
-                        </noscript>
-                    </div>
-                    <div class="pvp-content__descr">
-                        <h5 class="pvp-content__title">
-                            <div class="hidden">
-                                <div class="text-line">Соревнуйся с другим</div>
-                            </div>
-                            <div class="hidden">
-                                <div class="text-line" data-delay="0.1">игроком</div>
-                            </div>
-                        </h5>
-                        <div class="pvp-content__text">
-                            <div class="text-line">Сейчас в ONMI у тебя есть</div>
-                            <div class="text-line" data-delay="0.1">возможность играть один на один</div>
-                            <div class="text-line" data-delay="0.2">– благодаря мини-играм, которые</div>
-                            <div class="text-line" data-delay="0.3">мы обновляем раз в сезон.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pvp-content__col">
-                    <div class="pvp-content__screen" data-effect="fade-down" data-duration="1" data-delay="0.2">
-                        <noscript data-webp="">
-                            <img src="img/pvp_phone_2.png" alt="Tournament">
-                        </noscript>
-                    </div>
-                    <div class="pvp-content__descr">
-                        <h5 class="pvp-content__title">
-                            <div class="hidden">
-                                <div class="text-line">Соревнуйся на</div>
-                            </div>
-                            <div class="hidden">
-                                <div class="text-line" data-delay="0.1">глобальном уровне</div>
-                            </div>
-                        </h5>
-                        <div class="pvp-content__text">
-                            <div class="text-line">Ты можешь увеличить масштаб</div>
-                            <div class="text-line" data-delay="0.1">соревнований и стать участником</div>
-                            <div class="text-line" data-delay="0.2">worldwide tournament, который</div>
-                            <div class="text-line" data-delay="0.3">проходит раз в сезон. Лидеры</div>
-                            <div class="text-line" data-delay="0.4">получают выигрыш: NFT, токены и</div>
-                            <div class="text-line" data-delay="0.5">другие бонусы.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <section class="each-point">
+  <h3 class="each-point__title">
+    <div class="text-line" data-delay="0.1">Each point on the planet holds its</div>
+    <div class="text-line" data-delay="0.2">
+      own history, <span class="color_gray">events, and, of course,</span>
     </div>
+    <div class="text-line color_gray" data-delay="0.3">the impressions of the personalities</div>
+    <div class="text-line color_gray" data-delay="0.4">behind them.</div>
+  </h3>
+  <div class="each-point__text">
+    <div class="text-line" data-delay="0.3">We've prepared signature</div>
+    <div class="text-line" data-delay="0.4">itineraries from</div>
+  </div>
+  <div class="each-point__circles">
+    <div class="each-point__circle">
+      <div class="each-point__circle-text">
+        <span class="text-line" data-delay="0.1">music stars with their</span>
+        <span class="text-line" data-delay="0.2">vivid memories</span>
+      </div>
+    </div>
+    <div class="each-point__circle">
+      <div class="each-point__circle-text">
+        <span class="text-line" data-delay="0.1">brands that tell their</span>
+        <span class="text-line" data-delay="0.2">stories</span>
+      </div>
+    </div>
+    <div class="each-point__circle">
+      <div class="each-point__circle-text">
+        <span class="text-line" data-delay="0.1">bright urban personalities</span>
+        <span class="text-line" data-delay="0.2">in each region</span>
+      </div>
+    </div>
+    <div class="each-point__circle">
+      <div class="each-point__circle-text">
+        <span class="text-line" data-delay="0.1">local squatters who know</span>
+        <span class="text-line" data-delay="0.2">the secrets of the city</span>
+      </div>
+    </div>
+  </div>
+  <div class="each-point__route">
+    <div class="each-point__mark each-point__mark_1">
+      <img src="img/icons/map_marker.svg" alt="marker">
+    </div>
+    <div class="each-point__mark each-point__mark_2">
+      <img src="img/icons/map_marker.svg" alt="marker">
+    </div>
+    <div class="each-point__mark each-point__mark_3">
+      <img src="img/icons/map_marker.svg" alt="marker">
+    </div>
+    <div class="each-point__mark each-point__mark_4">
+      <img src="img/icons/map_marker.svg" alt="marker">
+    </div>
+    <div class="each-point__mark each-point__mark_5">
+      <img src="img/icons/map_marker.svg" alt="marker">
+    </div>
+    <div class="each-point__mark each-point__mark_6">
+      <img src="img/icons/map_marker.svg" alt="marker">
+    </div>
+    <div class="each-point__mark each-point__mark_7">
+      <img src="img/icons/map_marker.svg" alt="marker">
+    </div>
+    <div class="each-point__mark each-point__mark_8">
+      <img src="img/icons/map_marker.svg" alt="marker">
+    </div>
+    <div class="each-point__mark each-point__mark_9">
+      <img src="img/icons/map_marker.svg" alt="marker">
+    </div>
+    <svg viewBox="0 0 1920 347">
+      <symbol id="line">
+        <path d="M-97.6667 1.24023C-97.6667 1.24023 -42.2787 303.127 117.63 276.958C277.538 250.789 281.155 223.221 239.079
+        153.252C197.004 83.2828 152.28 334.649 235.894 345.648C319.509 356.647 401.56 46.3031 650.391 123.286C899.222
+        200.269 656.872 336.666 597.292 289.254C537.712 241.843 924.991 72.3971 1160.33 86.5552C1395.68 100.713 1381.74
+        282.434 1501.97 210.822C1622.21 139.211 1677.32 74.7717 1570.34 97.2571C1463.36 119.742 1576.05 275.001 1720.52
+        275.001C1865 275.001 1959.68 123.286 1959.68 123.286" stroke="#D6F82E" stroke-width="2"
+              stroke-linecap="round"></path>
+      </symbol>
+      <mask id="mask">
+        <use class="mask" xlink:href="#line" stroke="#000"></use>
+      </mask>
+      <use class="dashed" xlink:href="#line" mask="url(#mask)" stroke="#000" stroke-width="2" stroke-dasharray="6"
+           opacity="1"></use>
+    </svg>
+  </div>
+  <div class="each-point__text each-point__text_2">
+    <div class="text-line" data-delay="0.1">A special category will be the Intentional Routes with</div>
+    <div class="text-line" data-delay="0.2"> metropolitan nightlife, bar and restaurant guides, and</div>
+    <div class="text-line" data-delay="0.3">scenic natural sites.</div>
+  </div>
+</section>
+
+
+      <section class="pvp">
+  <div class="cotnainer">
+    <div class="pvp__wrapper">
+      <div class="pvp__descr">
+        <h2 class="pvp__title gradient-text" data-effect="opacity">Battles</h2>
+      </div>
+      <div class="pvp-pose_1 ">
+        <noscript data-webp><img src="img/pvp-pose_1.png"></noscript>
+      </div>
+      <div class="pvp-pose_2 " data-speed="0.9">
+        <noscript data-webp><img src="img/pvp-pose_2.png"></noscript>
+      </div>
+    </div>
+    <div class="pvp__text" data-effect="fade-down">
+      <p>
+        <span class="text-line" data-delay="0.1">Challenge your friends or find a worthy</span>
+        <span class="text-line" data-delay="0.2">opponent.</span>
+      </p>
+      <p>
+        <span class="text-line" data-delay="0.3">You can battle and earn unlimited,</span>
+        <span class="text-line" data-delay="0.4">picking the competition format you're</span>
+        <span class="text-line" data-delay="0.5">good at: agility, speed, tactics,</span>
+        <span class="text-line" data-delay="0.6">attentiveness, intelligence or</span>
+        <span class="text-line" data-delay="0.7">knowledge.</span>
+      </p>
+    </div>
+   <!-- <div class="container">
+      <div class="pvp-content">
+        <div class="pvp-content__col">
+          <div class="pvp-content__screen" data-effect="fade-down" data-duration="1">
+            <noscript data-webp="">
+              <img src="img/pvp_phone_1.png" alt="Deck">
+            </noscript>
+          </div>
+          <div class="pvp-content__descr">
+            <h5 class="pvp-content__title">
+              <div class="hidden">
+                <div class="text-line">Соревнуйся с другим</div>
+              </div>
+              <div class="hidden">
+                <div class="text-line" data-delay="0.1">игроком</div>
+              </div>
+            </h5>
+            <div class="pvp-content__text">
+              <div class="text-line">Сейчас в ONMI у тебя есть</div>
+              <div class="text-line" data-delay="0.1">возможность играть один на один</div>
+              <div class="text-line" data-delay="0.2">– благодаря мини-играм, которые</div>
+              <div class="text-line" data-delay="0.3">мы обновляем раз в сезон.</div>
+            </div>
+          </div>
+        </div>
+        <div class="pvp-content__col">
+          <div class="pvp-content__screen" data-effect="fade-down" data-duration="1" data-delay="0.2">
+            <noscript data-webp="">
+              <img src="img/pvp_phone_2.png" alt="Tournament">
+            </noscript>
+          </div>
+          <div class="pvp-content__descr">
+            <h5 class="pvp-content__title">
+              <div class="hidden">
+                <div class="text-line">Соревнуйся на</div>
+              </div>
+              <div class="hidden">
+                <div class="text-line" data-delay="0.1">глобальном уровне</div>
+              </div>
+            </h5>
+            <div class="pvp-content__text">
+              <div class="text-line">Ты можешь увеличить масштаб</div>
+              <div class="text-line" data-delay="0.1">соревнований и стать участником</div>
+              <div class="text-line" data-delay="0.2">worldwide tournament, который</div>
+              <div class="text-line" data-delay="0.3">проходит раз в сезон. Лидеры</div>
+              <div class="text-line" data-delay="0.4">получают выигрыш: NFT, токены и</div>
+              <div class="text-line" data-delay="0.5">другие бонусы.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+  </div>
 </section>
 
 <div id="end"></div>
 
-            <section class="level">
-    <div class="level__wrapper">
-        <div class="level-circle" data-effect="fade-down" data-delay="0.1" data-duration="1.2"></div>
-        <div class="level-circle level-circle_center" data-effect="fade-down" data-duration="1.2">
-            <h3 class="level-circle__title main__title color_gray">
-                <div class="hidden">
-                    <div class="text-line">Level</div>
-                </div>
-            </h3>
-            <div class="level-circle__text">
-                <p>
-                    <span class="text-line">In Reality 2.0 there is an unlimited</span>
-                    <span class="text-line" data-delay="0.1">number of levels.</span>
-                </p>
-                <p>
-                    <span class="text-line">With each level, the immersion in</span>
-                    <span class="text-line" data-delay="0.1">ONMI gets deeper and the tasks get</span>
-                    <span class="text-line" data-delay="0.2">more difficult.</span>
-                </p>
-            </div>
+      <section class="level">
+  <div class="level__wrapper">
+    <div class="level-circle" data-effect="fade-down" data-delay="0.1" data-duration="1.2"></div>
+    <div class="level-circle level-circle_center" data-effect="fade-down" data-duration="1.2">
+      <h4 class="level-circle__title main__title color_gray">
+        <div class="hidden">
+          <div class="text-line">ONMI LEVEL</div>
         </div>
-        <div class="level-circle" data-effect="fade-down" data-delay="0.1" data-duration="1.2"></div>
+      </h4>
+      <div class="level-circle__text">
+        <p>
+          <span class="text-line" data-delay="0.1">From the very beginning of the game</span>
+          <span class="text-line" data-delay="0.1">you enter the club system as you</span>
+          <span class="text-line" data-delay="0.1">progress: as your game level grows,</span>
+          <span class="text-line" data-delay="0.1">you gain access to the benefits</span>
+          <span class="text-line" data-delay="0.1">associated with the onmi ecosystem</span>
+          <span class="text-line" data-delay="0.1">and its partners.</span>
+        </p>
+      </div>
     </div>
+    <div class="level-circle" data-effect="fade-down" data-delay="0.1" data-duration="1.2"></div>
+  </div>
 </section>
 
-            <section class="market">
-    <div class="container">
-        <div class="market__wrapper">
-            <h2 class="market__title main__title" data-lag="0.1">
-                <div class="hidden">
-                    <div class="color_gray text-line" data-delay="0.1">Countless items</div>
-                </div>
-                <div class="hidden">
-                    <div class="text-line" data-delay="0.2">
-                        <span class="color_gray">on the</span> market
-                    </div>
-                </div>
-            </h2>
-            <div class="market__text main__text" data-lag="0.2">
-                <div class="text-line" data-delay="0.3">The gaming marketplace is becoming a</div>
-                <div class="text-line" data-delay="0.4">public showcase for art collectors and</div>
-                <div class="text-line" data-delay="0.5">connoisseurs.</div>
-            </div>
-        </div>
+      <section class="sound">
+  <div class="sound__anim">
+    <canvas id="waves"></canvas>
+  </div>
+  <h3 class="sound__title" data-effect="fade-down">Sound design</h3>
+  <div class="sound__text" data-effect="fade-down">
+    <div class="text-line" data-delay="0.1">For a full immersion in reality 2.0 is also responsible for the sound
+      design, which
     </div>
-    <div class="market-catalog marquee3k" data-speedmarque="1">
-        <div class="market-catalog__lines">
-            <div class="market-catalog__row ">
-                <div class="market-catalog__row-item">
-                    <div class="market-catalog__item">
-
-                        <noscript data-webp><img src="img/catalog/item_1.png"></noscript>
-                    </div>
-                    <div class="market-catalog__item">
-
-                        <noscript data-webp><img src="img/catalog/item_2.png"></noscript>
-                    </div>
-                    <div class="market-catalog__item">
-
-                        <noscript data-webp><img src="img/catalog/item_3.png"></noscript>
-                    </div>
-                    <div class="market-catalog__item">
-
-                        <noscript data-webp><img src="img/catalog/item_4.png"></noscript>
-                    </div>
-                    <div class="market-catalog__item">
-
-                        <noscript data-webp><img src="img/catalog/item_5.png"></noscript>
-                    </div>
-                    <div class="market-catalog__item market-catalog__item_text">
-                        <p>We open access for artists and authors from all over the world</p>
-                    </div>
-                    <div class="market-catalog__item">
-                        <noscript data-webp><img src="img/catalog/item_6.png"></noscript>
-
-                    </div>
-                    <div class="market-catalog__item">
-                        <noscript data-webp><img src="img/catalog/item_7.png"></noscript>
-
-                    </div>
-                </div>
-            </div>
-            <div class="market-catalog__row ">
-                <div class="market-catalog__row-item">
-                    <div class="market-catalog__item">
-                        <noscript data-webp><img src="img/catalog/item_8.png"></noscript>
-                    </div>
-                    <div class="market-catalog__item">
-                        <noscript data-webp><img src="img/catalog/item_9.png"></noscript>
-                    </div>
-                    <div class="market-catalog__item market-catalog__item_text">
-                        <p>Each look is the handiwork of a fashion designer</p>
-                    </div>
-                    <div class="market-catalog__item">
-                        <noscript data-webp><img src="img/catalog/item_10.png"></noscript>
-                    </div>
-                    <div class="market-catalog__item">
-                        <noscript data-webp><img src="img/catalog/item_11.png"></noscript>
-                    </div>
-                    <div class="market-catalog__item">
-                        <noscript data-webp><img src="img/catalog/item_12.png"></noscript>
-                    </div>
-                    <div class="market-catalog__item">
-                        <noscript data-webp><img src="img/catalog/item_13.png"></noscript>
-                    </div>
-                    <div class="market-catalog__item market-catalog__item_text">
-                        <p>20% of the total marketplace collections go into the gameplay for the players' rewards</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="text-line" data-delay="0.2">we ask the best in the business to create</div>
+  </div>
+  <div class="sound-season">
+    <div class="sound-season__count">1st Season</div>
+    <div class="sound-season__author">
+      <div class="sound-season__photo">
+        <noscript data-webp="">
+          <img src="img/sound/nina.jpg" alt="Nina Kraviz">
+        </noscript>
+      </div>
+      <div class="sound-season__name">Nina Kraviz</div>
     </div>
+  </div>
+  <div class="sound-season">
+    <div class="sound-season__count">2nd Season</div>
+    <div class="sound-season__author sound-season__author_unknown">
+      <div class="sound-season__photo">
+        <noscript data-webp="">
+          <img src="img/sound/unknown.jpg" alt="unknown artist">
+        </noscript>
+      </div>
+      <div class="sound-season__name"></div>
+    </div>
+  </div>
 </section>
 
-            <section class="hunger-games">
-    <div class="container">
-        <div class="hunger-games__wrapper">
-            <h2 class="hunger-games__title gradient-text" data-lag="0.2" data-effect="opacity">
-                hunger games
-            </h2>
-            <div class="hunger-games__pose ">
-                <noscript data-webp><img src="./img/hunger_pose.png"></noscript>
-                <!-- <img src="img/hunger_pose.png" alt="hunger games pose"> -->
-            </div>
+      <section class="market">
+  <div class="container">
+    <div class="market__wrapper">
+      <h2 class="market__title main__title" data-lag="0.1">
+        <div class="hidden">
+          <div class="color_gray text-line" data-delay="0.1">Countless items</div>
         </div>
+        <div class="hidden">
+          <div class="text-line" data-delay="0.2">
+            <span class="color_gray">on the</span> market
+          </div>
+        </div>
+      </h2>
 
-        <div class="main-wrapper">
-            <div class="main-wrapper__col"></div>
-            <div class="main-wrapper__col">
-                <div class="hunger-games__description">
-                    <p class="text-line">Hunger Games is one of the high points of the adventure for the user.</p>
-                    <p class="text-line" data-delay="0.1">It's simple - winners get everything
-                        and losers get nothing.</p>
-                    <p class="text-line" data-delay="0.2">Эти состязания, которые становятся настоящим зрелищем – со
-                        своим сценарием, элементами шоу и
-                        драматургией,
-                        за которую будет отвечать режиссер. </p>
-                </div>
-            </div>
-        </div>
-        <div class="hunger-progress">
-            <div class="container hunger-progress__inner">
-                <div class="hunger-progress__man hunger-progress__man_1" data-duration="0.6" data-effect="opacity">
-                    <img src="img/run/icon_1.svg" alt="run man">
-                </div>
-                <div class="hunger-progress__man hunger-progress__man_2" data-duration="0.6" data-effect="opacity"
-                     data-delay="0.2">
-                    <img src="img/run/icon_2.svg" alt="run man">
-                </div>
-                <div class="hunger-progress__man hunger-progress__man_3" data-duration="0.6" data-effect="opacity"
-                     data-delay="0.34">
-                    <img src="img/run/icon_3.svg" alt="run man">
-                </div>
-                <div class="hunger-progress__man hunger-progress__man_4" data-duration="0.6" data-effect="opacity"
-                     data-delay="0.46">
-                    <img src="img/run/icon_4.svg" alt="run man">
-                </div>
-                <div class="hunger-progress__man hunger-progress__man_5" data-duration="0.6" data-effect="opacity"
-                     data-delay="0.58">
-                    <img src="img/run/icon_5.svg" alt="run man">
-                </div>
-                <div class="hunger-progress__man hunger-progress__man_6" data-duration="0.6" data-effect="opacity"
-                     data-delay="0.7">
-                    <img src="img/run/icon_6.svg" alt="run man">
-                </div>
-                <div class="hunger-progress__man hunger-progress__man_7" data-duration="0.6" data-effect="opacity"
-                     data-delay="0.82">
-                    <img src="img/run/icon_7.svg" alt="run man">
-                </div>
-                <div class="hunger-progress__man hunger-progress__man_finish" data-duration="0.6" data-effect="opacity">
-                    <img src="img/run/finish.svg" alt="run man">
-                </div>
-                <div class="hunger-progress__line line line_top"></div>
-            </div>
-
-            <div class="main-wrapper">
-                <div class="main-wrapper__col">
-                    <div class="hunger-progress__text hunger-progress__text_1">
-                        <p class='text-line'>These contests take place four times a year. To get access to them, for
-                            three months, which
-                            is determined
-                            by the season, you have to pump your abilities as much as possible, as well as accumulate
-                            resources.
-                        </p>
-                        <p class='text-line' data-delay="0.1">Thus, having reached a certain progress, you can pass to
-                            the
-                            semifinals.</p>
-                    </div>
-                </div>
-                <div class="main-wrapper__col">
-                    <div class="hunger-progress__wrapper">
-                        <div class="hunger-progress__col">
-                            <div class="hunger-progress__text hunger-progress__text_2">
-                                <p data-effect="fade-down">In the semi-finals you are waiting for special tasks, the
-                                    success of which will
-                                    determine your place
-                                    in the final. </p>
-                            </div>
-                        </div>
-                        <div class="hunger-progress__col">
-                            <div class="hunger-progress__text hunger-progress__text_3">
-                                <p data-effect="fade-down">Финал – уникальная возможность получить эксклюзивные NFT. Они
-                                    появляются в самых
-                                    разных (и
-                                    удивительных) локациях по всему миру – тебе всего лишь нужно найти их первым</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h3 class="hunger-map__title main__title">
-            <div class="hidden">
-                <div class="text-line color_gray" data-delay="">The most exclusive NFT</div>
-            </div>
-            <div class="hidden">
-                <div class="text-line color_gray" data-delay="0.1">will be dropped in the</div>
-            </div>
-            <div class="hidden">
-                <div class="text-line" data-delay="0.2"><span class="color_gray">announced</span> amazing</div>
-            </div>
-            <div class="hidden">
-                <div class="text-line" data-delay="0.3">places</div>
-            </div>
-        </h3>
-        <div class="hunger-games__map">
-            <noscript data-webp><img src="./img/word_map.png" alt="Word map"></noscript>
-            <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_1">
-                <div class="world__map-circle"></div>
-            </div>
-            <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_2">
-                <div class="world__map-circle"></div>
-            </div>
-            <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_3">
-                <div class="world__map-circle"></div>
-            </div>
-            <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_4">
-                <div class="world__map-circle"></div>
-            </div>
-            <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_5">
-                <div class="world__map-circle"></div>
-            </div>
-            <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_6">
-                <div class="world__map-circle"></div>
-            </div>
-            <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_7">
-                <div class="world__map-circle"></div>
-            </div>
-            <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_8">
-                <div class="world__map-circle"></div>
-            </div>
-            <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_9">
-                <div class="world__map-circle"></div>
-            </div>
-            <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_10">
-                <div class="world__map-circle"></div>
-            </div>
-            <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_11">
-                <div class="world__map-circle"></div>
-            </div>
-        </div>
-        <div class="main-wrapper">
-            <div class="main-wrapper__col">
-                <div class="hunger-map__icon" data-effect="fade-down">
-                    <img src="img/icons/icon_observer.svg" alt="observer">
-                </div>
-            </div>
-            <div class="main-wrapper__col">
-                <div class="hunger-map__text">
-                    <p data-effect="fade-down">If you are not yet ready to be an active participant in the Hunger Games,
-                        you can take the
-                        position of
-                        observer.
-                    </p>
-                    <p data-effect="fade-down" data-delay="0.1">
-                        Anyone can follow the Hunger Games in real time - including betting on those players in whom you
-                        see
-                        winners.
-                    </p>
-                </div>
-            </div>
-        </div>
+      <div class="market__text main__text" data-lag="0.2">
+        <div class="text-line" data-delay="0.3">The digital art gallery is a selective gallery of</div>
+        <div class="text-line" data-delay="0.4">digital art, featuring the work of unique</div>
+        <div class="text-line" data-delay="0.5">digital artists, each of whose works is</div>
+        <div class="text-line" data-delay="0.6">limited.</div>
+      </div>
     </div>
+  </div>
+  <div class="market-catalog marquee3k" data-speedmarque="1">
+    <div class="market-catalog__lines">
+      <div class="market-catalog__row ">
+        <div class="market-catalog__row-item">
+          <div class="market-catalog__item">
+
+            <noscript data-webp><img src="img/catalog/item_1.png"></noscript>
+          </div>
+          <div class="market-catalog__item">
+
+            <noscript data-webp><img src="img/catalog/item_2.png"></noscript>
+          </div>
+          <div class="market-catalog__item">
+
+            <noscript data-webp><img src="img/catalog/item_3.png"></noscript>
+          </div>
+          <div class="market-catalog__item">
+
+            <noscript data-webp><img src="img/catalog/item_4.png"></noscript>
+          </div>
+          <div class="market-catalog__item">
+
+            <noscript data-webp><img src="img/catalog/item_5.png"></noscript>
+          </div>
+          <div class="market-catalog__item market-catalog__item_text">
+            <p>The most expensive will be author collections with artists, fashion brands and festivals, which will have
+              off-line properties that give special privileges and attributions.</p>
+          </div>
+          <div class="market-catalog__item">
+            <noscript data-webp><img src="img/catalog/item_6.png"></noscript>
+
+          </div>
+          <div class="market-catalog__item">
+            <noscript data-webp><img src="img/catalog/item_7.png"></noscript>
+
+          </div>
+        </div>
+      </div>
+      <div class="market-catalog__row ">
+        <div class="market-catalog__row-item">
+          <div class="market-catalog__item">
+            <noscript data-webp><img src="img/catalog/item_8.png"></noscript>
+          </div>
+          <div class="market-catalog__item">
+            <noscript data-webp><img src="img/catalog/item_9.png"></noscript>
+          </div>
+          <div class="market-catalog__item market-catalog__item_text">
+            <p>Each look is the handiwork of a fashion designer</p>
+          </div>
+          <div class="market-catalog__item">
+            <noscript data-webp><img src="img/catalog/item_10.png"></noscript>
+          </div>
+          <div class="market-catalog__item">
+            <noscript data-webp><img src="img/catalog/item_11.png"></noscript>
+          </div>
+          <div class="market-catalog__item">
+            <noscript data-webp><img src="img/catalog/item_12.png"></noscript>
+          </div>
+          <div class="market-catalog__item">
+            <noscript data-webp><img src="img/catalog/item_13.png"></noscript>
+          </div>
+          <div class="market-catalog__item market-catalog__item_text">
+            <p>Our in-house digital atelier prepares new collections every season for the most active users, who can
+              craft new items and earn money by selling them on the Marketplace.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-            <section class="mission">
-    <div class="container_padding container">
-        <div class="mission__wrapper main-wrapper">
-            <div class="mission__line"></div>
-            <div class="mission__line mission__line_diagonally">
-                <svg>
-                    <line x1="0" y1="0" x2="100%" y2="100%" stroke-width="2" style="stroke:#D4C9C1"></line>
-                </svg>
+      <section class="hunger-games">
+  <div class="container">
+    <div class="hunger-games__wrapper">
+      <h2 class="hunger-games__title" data-lag="0.2">
+        <span class="color_gray hunger-games__title_small text-line" data-delay="0.2">hunger</span>
+        <span class="text-line" data-delay="0.2">games</span>
+
+      </h2>
+      <div class="hunger-games__pose ">
+        <noscript data-webp><img src="./img/hunger_pose.png"></noscript>
+        <!-- <img src="img/hunger_pose.png" alt="hunger games pose"> -->
+      </div>
+    </div>
+    <div class="hunger-games__earth">
+      <img src="img/earth.png" alt="Earth">
+    </div>
+    <div class="hunger-progress">
+      <div class="container hunger-progress__inner">
+        <div class="hunger-progress__man hunger-progress__man_1" data-duration="0.6" data-effect="opacity">
+          <img src="img/run/icon_1.svg" alt="run man">
+        </div>
+        <div class="hunger-progress__man hunger-progress__man_2" data-duration="0.6" data-effect="opacity"
+             data-delay="0.2">
+          <img src="img/run/icon_2.svg" alt="run man">
+        </div>
+        <div class="hunger-progress__man hunger-progress__man_3" data-duration="0.6" data-effect="opacity"
+             data-delay="0.34">
+          <img src="img/run/icon_3.svg" alt="run man">
+        </div>
+        <div class="hunger-progress__man hunger-progress__man_4" data-duration="0.6" data-effect="opacity"
+             data-delay="0.46">
+          <img src="img/run/icon_4.svg" alt="run man">
+        </div>
+        <div class="hunger-progress__man hunger-progress__man_5" data-duration="0.6" data-effect="opacity"
+             data-delay="0.58">
+          <img src="img/run/icon_5.svg" alt="run man">
+        </div>
+        <div class="hunger-progress__man hunger-progress__man_6" data-duration="0.6" data-effect="opacity"
+             data-delay="0.7">
+          <img src="img/run/icon_6.svg" alt="run man">
+        </div>
+        <div class="hunger-progress__man hunger-progress__man_7" data-duration="0.6" data-effect="opacity"
+             data-delay="0.82">
+          <img src="img/run/icon_7.svg" alt="run man">
+        </div>
+        <div class="hunger-progress__man hunger-progress__man_finish" data-duration="0.6" data-effect="opacity">
+          <img src="img/run/finish.svg" alt="run man">
+        </div>
+        <div class="hunger-progress__line line line_top"></div>
+      </div>
+
+      <div class="main-wrapper">
+        <div class="main-wrapper__col">
+          <div class="hunger-progress__text hunger-progress__text_1">
+            <p class='text-line' data-delay="0.1">The Grand Final of the season with a colossal prize pool becomes a
+              fascinating show and
+              the quintessence of the season that every player can be a part of.
+            </p>
+          </div>
+        </div>
+        <div class="main-wrapper__col">
+
+          <div class="hunger-progress__text hunger-progress__text_2">
+            <p data-effect="fade-down" data-delay="0.1">The grand finals are for the leaderboards and the most
+              gambling players who
+              are willing to take a risk and participate for an entry fee.</p>
+            <div class="hunger-map__icon" data-effect="fade-down">
+              <img src="img/icons/icon_observer.svg" alt="observer">
             </div>
-            <div class="main-wrapper__col">
-                <h3 class="mission__title" data-effect="fade-in">
-                    Mis&shy;sion
-                    <span class="mission__title-arrow">
+            <p data-effect="fade-down" data-delay="0.2">Everyone else online becomes a spectator of the final
+              contest, which each time takes place in a different part of the world, and can bet on their favorite
+              or even help a player with their stoff.</p>
+          </div>
+
+          <!-- <div class="hunger-progress__wrapper">
+             <div class="hunger-progress__col">
+
+             </div>
+             <div class="hunger-progress__col">
+               <div class="hunger-progress__text hunger-progress__text_3">
+                 <p data-effect="fade-down">Финал – уникальная возможность получить эксклюзивные NFT. Они
+                   появляются в самых
+                   разных (и
+                   удивительных) локациях по всему миру – тебе всего лишь нужно найти их первым</p>
+               </div>
+             </div>
+           </div>-->
+        </div>
+      </div>
+    </div>
+ <!--   <h3 class="hunger-map__title main__title">
+      <div class="hidden">
+        <div class="text-line color_gray" data-delay="">The most exclusive NFT</div>
+      </div>
+      <div class="hidden">
+        <div class="text-line color_gray" data-delay="0.1">will be dropped in the</div>
+      </div>
+      <div class="hidden">
+        <div class="text-line" data-delay="0.2"><span class="color_gray">announced</span> amazing</div>
+      </div>
+      <div class="hidden">
+        <div class="text-line" data-delay="0.3">places</div>
+      </div>
+    </h3>
+    <div class="hunger-games__map">
+      <noscript data-webp><img src="./img/word_map.png" alt="Word map"></noscript>
+      <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_1">
+        <div class="world__map-circle"></div>
+      </div>
+      <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_2">
+        <div class="world__map-circle"></div>
+      </div>
+      <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_3">
+        <div class="world__map-circle"></div>
+      </div>
+      <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_4">
+        <div class="world__map-circle"></div>
+      </div>
+      <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_5">
+        <div class="world__map-circle"></div>
+      </div>
+      <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_6">
+        <div class="world__map-circle"></div>
+      </div>
+      <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_7">
+        <div class="world__map-circle"></div>
+      </div>
+      <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_8">
+        <div class="world__map-circle"></div>
+      </div>
+      <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_9">
+        <div class="world__map-circle"></div>
+      </div>
+      <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_10">
+        <div class="world__map-circle"></div>
+      </div>
+      <div data-duration="1.2" class="hunger-games__map-point world__map-point world__map-point_11">
+        <div class="world__map-circle"></div>
+      </div>
+    </div>
+    <div class="main-wrapper">
+      <div class="main-wrapper__col">
+
+      </div>
+      <div class="main-wrapper__col">
+        <div class="hunger-map__text">
+          <p data-effect="fade-down">If you are not yet ready to be an active participant in the Hunger Games,
+            you can take the
+            position of
+            observer.
+          </p>
+          <p data-effect="fade-down" data-delay="0.1">
+            Anyone can follow the Hunger Games in real time - including betting on those players in whom you
+            see
+            winners.
+          </p>
+        </div>
+      </div>
+    </div>-->
+  </div>
+</section>
+
+      <section class="mission">
+  <div class="container_padding container">
+    <div class="mission__wrapper main-wrapper">
+      <div class="mission__line"></div>
+      <div class="mission__line mission__line_diagonally">
+        <svg>
+          <line x1="0" y1="0" x2="100%" y2="100%" stroke-width="2" style="stroke:#D4C9C1"></line>
+        </svg>
+      </div>
+      <div class="main-wrapper__col">
+        <h3 class="mission__title" data-effect="fade-in">
+          Mis&shy;sion
+          <span class="mission__title-arrow">
             <img src="img/icons/arrow_slider.svg" alt="arrow">
           </span>
-                </h3>
-            </div>
-            <div class="main-wrapper__col">
-                <div class="mission__text" data-effect="fade-down">
-                    <div class="text-line" data-delay="">Merging the real world and the digital world via the passion
-                        of
-                    </div>
-                    <div class="text-line" data-delay="">
-                        adventure <span class="color_gray">and the hunger games to win in the hunt for</span>
-                    </div>
-                    <div class="text-line" data-delay="color_gray">hidden treasures. Bring back those feelings that are
-                        so
-                    </div>
-                    <div class="text-line" data-delay="color_gray">familiar to us from childhood!</div>
-                </div>
-                <div class="mission__text mission__text_big">
-                    <p class="readed-text">It's hard to call ONMI just a game - the possibilities of the application are
-                        much wider.</p>
-                    <p class="readed-text">
-                        It is an ecosystem, by becoming a part of which you acquire a variety of opportunities to make
-                        your daily
-                        life more fulfilling. Explore all the components of Reality 2.0 - in the end, only you decide
-                        how it will
-                        make your life more interesting.
-                    </p>
-                </div>
-            </div>
+        </h3>
+      </div>
+      <div class="main-wrapper__col">
+        <div class="mission__text" data-effect="fade-down">
+          <div class="text-line" data-delay="">Merging the real world and the digital world via the passion
+            of
+          </div>
+          <div class="text-line" data-delay="">
+            adventure <span class="color_gray">and the hunger games to win in the hunt for</span>
+          </div>
+          <div class="text-line" data-delay="color_gray">hidden treasures. Bring back those feelings that are
+            so
+          </div>
+          <div class="text-line" data-delay="color_gray">familiar to us from childhood!</div>
         </div>
+        <div class="mission__text mission__text_big">
+          <p class="readed-text">In its philosophy, onmi is a nexus gen-app, in which the user's interaction with
+            content and its author is rediscovered through story and gamification. Financial tools, chat rooms,
+            marketplace - the inseparable link between the entertainment content and the service app that will be part
+            of the new society.</p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-            <section class="culture">
-	<div class="container">
-		<div class="culture__hero">
-			<h2 class="culture__title">
-				<div class="title-row">
-					<span class="color_gray" data-effect="line">Onmi culture</span>
-				</div>
-				<div class="title-row">
-					<span data-effect="line"><span class="color_gray">is your</span> new social</span>
-				</div>
-				<div class="title-row">
+      <section class="culture">
+  <div class="container">
+    <div class="culture__hero">
+      <h2 class="culture__title">
+        <div class="title-row">
+          <span class="color_gray" data-effect="line">Onmi culture</span>
+        </div>
+        <div class="title-row">
+          <span data-effect="line"><span class="color_gray">is your</span> new social</span>
+        </div>
+        <div class="title-row">
           <span data-effect="line">
             flow
           </span>
-				</div>
-			</h2>
-			<div class="culture__pose" data-lag="0.2">
-				<noscript data-webp="">
-					<img src="./img/be-part_pose_mob.png" alt="culture ONMI">
-				</noscript>
-			</div>
-		</div>
-		<div class="culture-card">
-			<div class="main-wrapper">
-				<div class="main-wrapper__col">
-					<h3 class="culture-card__title main__title">Fashion</h3>
-				</div>
-				<div class="main-wrapper__col">
-					<div class="culture-card__text">
-						<p data-effect="fade-down">Fashion is an integral part of ONMI culture.</p>
-						<p data-effect="fade-down" data-delay="0.1">
-							Apparel is how users express themselves, that's why it was
-							important for us to integrate fashion brands into ONMI.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="culture-card">
-			<div class="main-wrapper">
-				<div class="main-wrapper__col">
-					<h3 class="culture-card__title main__title">Music</h3>
-				</div>
-				<div class="main-wrapper__col">
-					<div class="culture-card__text">
-						<p data-effect="fade-down">By city map we don't just mean the streets. Reality 2.0 reaches the venues of major music
-							festivals as
-							well. It's a unique experience that only works for ONMI users.</p>
-						<p data-effect="fade-down" data-delay="0.1">Imagine AR objects on a festival map that open up to you in real time and become part of your
-							trip.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="culture-card">
-			<div class="main-wrapper">
-				<div class="main-wrapper__col">
-					<h3 class="culture-card__title main__title">Art</h3>
-				</div>
-				<div class="main-wrapper__col">
-					<div class="culture-card__text">
-						<p data-effect="fade-down">ONMI is a spectacular platform for digital and AR art. We can't be responsible for the
-							imagination of
-							digital artists, but we can definitely guarantee a culture shock.
-						</p>
-						<p data-effect="fade-down" data-delay="0.1">
-							No matter where you are, your itinerary
-							will be unforgettable thanks to the open-air art objects.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        </div>
+      </h2>
+      <div class="culture__pose" data-lag="0.2">
+        <noscript data-webp="">
+          <img src="./img/be-part_pose_mob.png" alt="culture ONMI">
+        </noscript>
+      </div>
+    </div>
+  </div>
+  <div class="culture-circles">
+    <div class="culture-circle">
+      <div class="culture-circle__content">
+        <div class="culture-circle__title">Fashion</div>
+        <div class="culture-circle__text">
+          <p>Fashion is an integral part of ONMI culture.
+          </p>
+          <p>Apparel is how users express themselves, that's why it was important for us to integrate fashion brands
+            into
+            ONMI.</p>
+        </div>
+      </div>
+    </div>
+    <div class="culture-circle">
+      <div class="culture-circle__content">
+        <div class="culture-circle__title">Music</div>
+        <div class="culture-circle__text">
+          <p>By city map we don't just mean the streets. Reality 2.0 reaches the venues of major music festivals as
+            well.
+            It's a unique experience that only works for ONMI users.</p>
+          <p>Imagine AR objects on a festival map that open up to you in real time and become part of your trip.</p>
+        </div>
+      </div>
+    </div>
+    <div class="culture-circle">
+      <div class="culture-circle__content">
+        <div class="culture-circle__title">Art</div>
+        <div class="culture-circle__text">
+          <p>ONMI is a spectacular platform for digital and AR art. We can't be responsible for the imagination of
+            digital
+            artists, but we can definitely guarantee a culture shock.
+          </p>
+          <p>No matter where you are, your itinerary will be
+            unforgettable thanks to the open-air art objects.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-            <section class="token">
+      <section class="token">
   <div class="container">
     <div class="token__circle">
       <div class="token__circle-content" data-effect="opacity" data-delay="0.6">
@@ -1084,7 +1199,7 @@
   </div>
 </section>
 
-            <section class="cards-token">
+      <section class="cards-token">
   <div class="container">
     <div class="cards-token__wrapper">
       <div class="cards-token__col">
@@ -1168,7 +1283,7 @@
   </div>
 </section>
 
-            <section class="tokenomics">
+      <section class="tokenomics">
     <div class="container">
         <div class="tokenomics__inner">
             <div class="line line_top"></div>
@@ -1215,7 +1330,7 @@
     </div>
 </section>
 
-            <section class="security " data-speed="1.2">
+      <section class="security " data-speed="1.2">
   <div class="container container_padding">
     <h3 class="security__title hidden" >
       <span  data-effect="line">Security</span>
@@ -1289,7 +1404,7 @@
   </div>
 </div>
 
-            <section class="roadmap">
+      <section class="roadmap">
     <div class="container container_padding">
         <h2 class="roadmap__title gradient-text"  data-effect="opacity" data-lag="0.2">Perspective</h2>
         <div class="roadmap__content">
@@ -1529,7 +1644,7 @@
     </div>
 </section>
 
-            <section class="policy">
+      <section class="policy">
     <div class="container">
         <div class="policy__circle" data-lag="0.1">
             <div class="policy__text">
@@ -1552,7 +1667,7 @@
     </div>
 </section>
 
-            <section class="questions">
+      <section class="questions">
     <div class="question-item">
         <div class="question-item__line" data-effect="draw-line" data-duration="1.2"></div>
         <div class="question-item__header" data-effect='fade-down'>
@@ -1681,7 +1796,7 @@
     </div>
 </section>
 
-            <section class="platform">
+      <section class="platform">
     <div class="container">
         <div class="platform__content">
             <h2 class="platform__title main__title" data-lag="0.1">
@@ -1720,7 +1835,7 @@
     </div>
 </section>
 
-            <section class="keep">
+      <section class="keep">
   <div class="container container_padding">
     <div class="keep__header">
       <h3 class="keep__title">
@@ -1797,8 +1912,8 @@
   </div>
 </section>
 
-        </div>
     </div>
+  </div>
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -1808,6 +1923,7 @@
 <script src="./js/libs/marquee3k.min.js"></script>
 <script async src="./js/libs/simple-webp.min.js"></script>
 <script src="./js/libs/sine-waves.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
 <!--<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/@master/.min.js"></script>-->
 <script src="js/script.js" type="module" defer></script>
 </body>

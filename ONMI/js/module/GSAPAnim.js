@@ -244,3 +244,15 @@ export const animTextLine = (el, trigger) => {
         }
     })
 }
+
+export const horizontalTransform = (el, trigger, value) => {
+    gsap.to(el, {
+        x: value || '100%',
+        scrollTrigger: {
+            trigger: trigger || el,
+            start: "center bottom",
+            end: "top top",
+            scrub: true
+        }
+    })
+}

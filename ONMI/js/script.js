@@ -9,7 +9,7 @@ import {
     fadeIn,
     fadeUp,
     flipAnim,
-    hideElem,
+    hideElem, horizontalTransform,
     leftToRight,
     lineShow,
     opacityIn,
@@ -20,24 +20,27 @@ import {
 } from "./module/GSAPAnim.js";
 import {random} from "./module/random.js";
 import {circlesAdaptive, stepAdaptive} from "./module/adaptiveResize.js";
+import {getPopulation} from "./module/getPopulation.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('vid').play();
+
+
     const initPage = () => {
+
+        (async function () {
+            const populationText = document.querySelector('#population')
+            const population = JSON.parse(await getPopulation())
+            populationText.textContent = population.readable_format || '8,323,444,222'
+
+            const video1 = document.querySelector('#video_phone')
+            const video2 = document.querySelector('#video_trap')
+            await video1?.play()
+            await video2?.play()
+        })();
+
         const readedText = document.querySelectorAll('.readed-text')
         readedText.forEach(el => {
             splitText(el)
-            /*   gsap.fromTo(el, {
-                   opacity: .3
-               }, {
-                   opacity: 1,
-                   scrollTrigger: {
-                       trigger: el,
-                       start: 'top bottom',
-                       end: 'center center',
-                       scrub: true,
-                   }
-               })*/
             const words = el.querySelectorAll('.word')
             gsap.to(words, {
                 duration: 2,
@@ -146,6 +149,71 @@ document.addEventListener("DOMContentLoaded", () => {
         // gsap
         gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
+        const pointsContainer = document.querySelector('.each-point')
+        const maskSvg = document.querySelector('.mask')
+        const markers = document.querySelectorAll('.each-point__mark')
+
+        const showMarker = (progress) => {
+            if (progress > 0 && progress < 1) {
+                if (progress >= 0) {
+                    markers[0].classList.add('show')
+                    markers[2].classList.add('show')
+                    markers[3].classList.add('show')
+                } else {
+                    markers[0].classList.remove('show')
+                    markers[2].classList.remove('show')
+                    markers[3].classList.remove('show')
+                }
+                if (progress >= 0.25) {
+                    markers[3].classList.add('show')
+                } else {
+                    markers[3].classList.remove('show')
+                }
+                if (progress >= 0.30) {
+                    markers[4].classList.add('show')
+                } else {
+                    markers[4].classList.remove('show')
+                }
+                if (progress >= 0.35) {
+                    markers[5].classList.add('show')
+                } else {
+                    markers[5].classList.remove('show')
+                }
+                if (progress >= 0.44) {
+                    markers[6].classList.add('show')
+                } else {
+                    markers[6].classList.remove('show')
+                }
+                if (progress >= 0.50) {
+                    markers[7].classList.add('show')
+                } else {
+                    markers[7].classList.remove('show')
+                }
+                if (progress >= 0.63) {
+                    markers[8].classList.add('show')
+                } else {
+                    markers[8].classList.remove('show')
+                }
+            }
+        }
+
+        gsap.fromTo(maskSvg, {
+            strokeDashoffset: '200vw',
+        }, {
+            strokeDashoffset: 0,
+            scrollTrigger: {
+                trigger: maskSvg,
+                start: 'top bottom',
+                end: '170%',
+                scrub: true,
+                onUpdate: ((self) => {
+                    const progress = self.progress.toFixed(2)
+                    showMarker(progress)
+                })
+            }
+        })
+
+
         if (ScrollTrigger.isTouch !== 1) {
             ScrollSmoother.create({
                 smooth: 1.3,
@@ -160,8 +228,12 @@ document.addEventListener("DOMContentLoaded", () => {
         //cards animations
         const cardsAura = document.querySelector('.card_1 .card__front-aura')
         const cardsNft = document.querySelector('.card_3 .card__front-img')
-        const cardsPhone = document.querySelector('.card_2 .card__front-img')
-        const cardsPhone2 = document.querySelector('.journey-card_1 .journey-card__img')
+        const OMICircles = document.querySelector('.omies__circles')
+        const OMICircle1 = document.querySelector('.omies__circle_1')
+        const OMICircle3 = document.querySelector('.omies__circle_3')
+        horizontalTransform(OMICircle1, OMICircles, '33%')
+        horizontalTransform(OMICircle3, OMICircles, '-43%')
+
 
         gsap.fromTo(cardsAura, {
             scale: 1
@@ -189,32 +261,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 scrub: true,
             }
         })
-        gsap.fromTo(cardsPhone, {
-            y: -100,
-        }, {
-            y: 0,
-            duration: 1,
-            ease: "power2.inOut",
-            scrollTrigger: {
-                trigger: cardsPhone,
-                start: "center bottom",
-                end: "center top",
-                scrub: true,
-            }
-        })
-        gsap.fromTo(cardsPhone2, {
-            y: -100,
-        }, {
-            y: 0,
-            duration: 1,
-            ease: "power2.inOut",
-            scrollTrigger: {
-                trigger: cardsPhone2,
-                start: "center bottom",
-                end: "center top",
-                scrub: true,
-            }
-        })
+        /*        gsap.fromTo(cardsPhone, {
+                    y: -100,
+                }, {
+                    y: 0,
+                    duration: 1,
+                    ease: "power2.inOut",
+                    scrollTrigger: {
+                        trigger: cardsPhone,
+                        start: "center bottom",
+                        end: "center top",
+                        scrub: true,
+                    }
+                })*/
+
 
         lineElems.forEach((el) => {
             lineShow(el);
@@ -350,20 +410,20 @@ document.addEventListener("DOMContentLoaded", () => {
             onToggle: (self) => showEl(pinEl, self.isActive),
         });
 
-        gsap.fromTo(
-            ".pvp__title",
-            {scale: 1.7},
-            {
-                scale: 1,
-                scrollTrigger: {
-                    trigger: ".pvp",
-                    start: "top bottom",
-                    end: "center-=35% center",
-                    scrub: true,
-                },
-                ease: "none",
-            }
-        );
+        /* gsap.fromTo(
+             ".pvp__title",
+             {scale: 1.7},
+             {
+                 scale: 1,
+                 scrollTrigger: {
+                     trigger: ".pvp",
+                     start: "top bottom",
+                     end: "center-=35% center",
+                     scrub: true,
+                 },
+                 ease: "none",
+             }
+         );*/
         Marquee3k.init()
 
         let mapPoints = gsap.utils.toArray(".hunger-games__map-point");
@@ -454,6 +514,34 @@ document.addEventListener("DOMContentLoaded", () => {
                 ease: "none",
             }
         );
+
+        /*       const videoContainer = document.querySelector('.find-map');
+               const video = document.querySelector("#video-scroll");
+               const scrollPlay = (vid, time) => {
+                   vid.currentTime = +time.toFixed(2)
+               }
+               const videoPlay = ScrollTrigger.create({
+                   trigger: video,
+                   pinned: true,
+                   start: "top bottom",
+                   end: "center top",
+                   /!*      onToggle: (self) => {
+                             console.log(self)
+                             self.isActive ? video.play() : video.pause();
+                         },*!/
+                   onUpdate: (self) => {
+                       // console.log(self)
+                       // console.log(video.duration * self.progress)
+                       setInterval(scrollPlay(video, video.duration * self.progress), 10)
+                       /!*   window.requestAnimationFrame(() => {
+                              scrollPlay(video, video.duration * self.progress)
+                          });*!/
+                       // video.play()
+                       // video.currentTime = video.duration * self.progress
+                   },
+
+               });*/
+
 
         // tabs
         {
@@ -552,7 +640,6 @@ document.addEventListener("DOMContentLoaded", () => {
             scalingBtnNegative(btnGooglePlay)
         }
 
-
         const btnGooglePlay = document.querySelector('.platform__btn_google')
         const btnApplePlay = document.querySelector('.platform__btn_apple')
         btnApplePlay.addEventListener('mouseenter', hoverAppleBtn)
@@ -560,26 +647,13 @@ document.addEventListener("DOMContentLoaded", () => {
         btnApplePlay.addEventListener('mouseleave', leveSizeBtns)
         btnGooglePlay.addEventListener('mouseleave', leveSizeBtns)
 
-        const circles = document.querySelectorAll('.svg-circle circle')
-        /*    const circleTrigger = document.querySelector('.token')
-                circles.forEach(el => {
-                    circleDraw(el, circleTrigger)
-                })*/
-
         // adaptiveInit
         stepAdaptive()
         circlesAdaptive()
     };
     initPage();
     let lastScrollTop = 0;
-    const headerText = document.querySelector('.header__text')
 
-    /*    const rellax = new Rellax('.rellax', {
-            center: true,
-        });
-        setTimeout(() => {
-            rellax.refresh()
-        }, 100)*/
     const waves = new SineWaves({
         // Canvas Element
         el: document.getElementById('waves'),
@@ -657,25 +731,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('resize', () => {
         stepAdaptive()
         circlesAdaptive()
-        // rellax.refresh();
         waves.update();
     })
-
-
-    window.addEventListener(
-        "scroll",
-        function () {
-            let st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st > lastScrollTop && lastScrollTop > window.innerHeight && !headerText.classList.contains('hide')) {
-                // downscroll code
-                headerText.classList.add('hide')
-            } else if (st < lastScrollTop && headerText.classList.contains('hide')) {
-                // upscroll code
-                headerText.classList.remove('hide')
-            }
-            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-        },
-        false
-    );
 })
 
