@@ -12,7 +12,7 @@ import {
     hideElem, horizontalTransform,
     leftToRight,
     lineShow,
-    opacityIn,
+    opacityIn, readText,
     rightToLeft,
     scaling,
     showElem,
@@ -42,18 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         readedText.forEach(el => {
             splitText(el)
             const words = el.querySelectorAll('.word')
-            gsap.to(words, {
-                duration: 2,
-                ease: 'none',
-                opacity: 1,
-                stagger: 0.5,
-                scrollTrigger: {
-                    trigger: el,
-                    start: 'top bottom-=10%',
-                    end: 'bottom center+=25%',
-                    scrub: true,
-                }
-            })
+            readText(words, el)
         })
 
 

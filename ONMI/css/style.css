@@ -2071,19 +2071,14 @@ h5.main__title {
 }
 
 .sound-season:not(:last-child) {
-  margin-bottom: 4.17vw;
   position: relative;
 }
 
-.sound-season:not(:last-child)::after {
-  content: "";
+.sound-season__line {
   height: 1.93vw;
   width: 0.05vw;
   border-left: 0.05vw dashed rgba(255, 255, 255, 0.6);
-  position: absolute;
-  top: calc(100% + 1.04vw);
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 1.15vw auto;
 }
 
 .sound-season__count {

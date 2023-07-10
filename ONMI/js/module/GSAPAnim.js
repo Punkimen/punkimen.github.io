@@ -256,3 +256,19 @@ export const horizontalTransform = (el, trigger, value) => {
         }
     })
 }
+
+
+export const readText = (el, trigger) => {
+    gsap.to(el, {
+        duration: 2,
+        ease: 'none',
+        opacity: 1,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: trigger || el,
+            start: 'top bottom-=20%',
+            end: 'bottom center+=25%',
+            scrub: true,
+        }
+    })
+}
