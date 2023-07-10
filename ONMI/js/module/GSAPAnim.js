@@ -1,16 +1,8 @@
-export const scalingPositive = async (selector) => {
-    await gsap.to(selector, {
-        scale: 1.3,
-        duration: 0.1,
-    });
-    await gsap.to(selector, {
-        scale: 1,
-        duration: 0.2,
-    });
-};
+import {showMarker} from "./showMarkers.js";
+
 export const lineShow = el => {
-    const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-    const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1
+    const delay = el.getAttribute('data-delay') || 0
+    const duration = el.getAttribute('data-duration') || 1
     gsap.fromTo(el, {
         y: '110%'
     }, {
@@ -24,42 +16,27 @@ export const lineShow = el => {
         }
     })
 }
-export const opacityIn = el => {
-    const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-    const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
+export const opacityIn = (el, trigger, start) => {
+    const delay = el.getAttribute('data-delay') || 0
+    const duration = el.getAttribute('data-duration') || 0.8
     gsap.fromTo(el, {
         opacity: 0,
     }, {
         opacity: 1,
         delay: delay,
         duration: duration,
-        ease: "power1.inOut",
+        ease: 'circ.out',
         scrollTrigger: {
-            trigger: el,
+            trigger: trigger || el,
+            start: start || 'top bottom'
         }
     })
 }
-export const transformTop = el => {
-    const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-    const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
+export const fadeDown = (el, trigger, yStart, start) => {
+    const delay = el.getAttribute('data-delay') || 0
+    const duration = el.getAttribute('data-duration') || 0.8
     gsap.fromTo(el, {
-        y: '100%'
-    }, {
-        y: 0,
-        delay: delay,
-        duration: duration,
-        ease: "power1.inOut",
-        scrollTrigger: {
-            trigger: el,
-        }
-    })
-
-}
-export const fadeDown = (el, trigger) => {
-    const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-    const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
-    gsap.fromTo(el, {
-        y: "50",
+        y: yStart || "50",
     }, {
         y: 0,
         delay: delay,
@@ -67,7 +44,7 @@ export const fadeDown = (el, trigger) => {
         ease: "power2.inOut",
         scrollTrigger: {
             trigger: trigger || el,
-            start: 'top-=10% bottom-=10%'
+            start: start || 'top-=10% bottom-=10%'
         }
     })
     gsap.fromTo(el, {
@@ -81,13 +58,13 @@ export const fadeDown = (el, trigger) => {
         ease: "power4.in",
         scrollTrigger: {
             trigger: el.parentElement && el,
-            start: 'top+=10% bottom+=10%',
+            start: start || 'top+=10% bottom+=10%',
         },
     })
 }
 export const fadeIn = el => {
-    const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-    const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
+    const delay = el.getAttribute('data-delay') || 0
+    const duration = el.getAttribute('data-duration') || 0.8
     gsap.fromTo(el, {
         opacity: 0,
     }, {
@@ -101,25 +78,6 @@ export const fadeIn = el => {
         }
     })
 
-}
-export const flipAnim = el => {
-    const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-    const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
-    gsap.fromTo(el, {
-        opacity: 0,
-        rotationX: -80,
-        y: '100%'
-    }, {
-        scrollTrigger: {
-            trigger: el,
-        },
-        delay: delay,
-        duration: duration,
-        ease: "power1.inOut",
-        opacity: 1,
-        rotationX: 0,
-        y: 0
-    })
 }
 export const leftToRight = (el, trigger) => {
     if (el) {
@@ -137,8 +95,8 @@ export const leftToRight = (el, trigger) => {
     }
 }
 export const rightToLeft = (el, trigger) => {
-    const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-    const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 0.8
+    const delay = el.getAttribute('data-delay') || 0
+    const duration = el.getAttribute('data-duration') || 0.8
 
     gsap.fromTo(el, {
         opacity: 0,
@@ -177,8 +135,8 @@ export const hideElem = el => {
     })
 }
 export const fadeUp = el => {
-    const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-    const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 2
+    const delay = el.getAttribute('data-delay') || 0
+    const duration = el.getAttribute('data-duration') || 2
     gsap.fromTo(el, {
         opacity: 0,
         skewY: 3,
@@ -195,29 +153,12 @@ export const fadeUp = el => {
         }
     })
 }
-export const scaling = el => {
-    const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-    const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1.3
-    gsap.fromTo(el, {
-        scale: .3,
-        opacity: 1,
-    }, {
-        opacity: 1,
-        scale: 1,
-        delay: delay,
-        duration: duration,
-        ease: "power1.inOut",
-        scrollTrigger: {
-            trigger: el,
-        }
-    })
-}
-export const circleDraw = (el, tirgger) => {
-    const delay = el.getAttribute('data-delay') ? el.getAttribute('data-delay') : 0
-    const duration = el.getAttribute('data-duration') ? el.getAttribute('data-duration') : 1.2
+export const svgDraw = (el, tirgger, dashOffset) => {
+    const delay = el.getAttribute('data-delay') || 0
+    const duration = el.getAttribute('data-duration') || 1.2
 
     gsap.to(el, {
-        strokeDashoffset: '0',
+        strokeDashoffset: dashOffset || 0,
         delay: delay,
         duration: duration,
         ease: "power1.inOut",
@@ -244,20 +185,24 @@ export const animTextLine = (el, trigger) => {
         }
     })
 }
-
-export const horizontalTransform = (el, trigger, value) => {
-    gsap.to(el, {
-        x: value || '100%',
+export const horizontalTransform = (el, trigger, startVal, endValue, scrub = true) => {
+    const delay = el.getAttribute('data-delay') || 0
+    const duration = el.getAttribute('data-duration') || 1.2
+    gsap.fromTo(el, {
+        x: startVal || 0,
+    }, {
+        x: endValue || '100%',
+        ease: 'circ.out',
+        delay: delay,
+        duration: duration,
         scrollTrigger: {
             trigger: trigger || el,
             start: "center bottom",
             end: "top top",
-            scrub: true
+            scrub: scrub
         }
     })
 }
-
-
 export const readText = (el, trigger) => {
     gsap.to(el, {
         duration: 2,
@@ -269,6 +214,39 @@ export const readText = (el, trigger) => {
             start: 'top bottom-=20%',
             end: 'bottom center+=25%',
             scrub: true,
+        }
+    })
+}
+export const drawSvgLine = (el, trigger, markers) => {
+    gsap.fromTo(el, {
+        strokeDashoffset: '200vw',
+    }, {
+        strokeDashoffset: 0,
+        scrollTrigger: {
+            trigger: trigger || el,
+            start: 'top bottom',
+            end: '170%',
+            scrub: true,
+            onUpdate: ((self) => {
+                const progress = self.progress.toFixed(2)
+                showMarker(progress, markers)
+            })
+        }
+    })
+}
+export const scalingFoo = (el, trigger, startScale = 1, endScale = 1.4,
+                           start = 'top bottom', end = 'bottom top', scrub = false) => {
+    gsap.fromTo(el, {
+        scale: startScale
+    }, {
+        scale: endScale,
+        duration: 1,
+        ease: "power2.inOut",
+        scrollTrigger: {
+            trigger: trigger || el,
+            start: start,
+            end: end,
+            scrub: scrub,
         }
     })
 }
