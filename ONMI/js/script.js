@@ -50,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const quests = document.querySelectorAll(".question-item")
         const fadeUpElems = document.querySelectorAll('[data-effect="fade-up"]');
         const lines = document.querySelectorAll(".line");
+        const video = document.querySelector("#video-scroll");
+
         //gsap init
         gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -60,6 +62,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 smoothTouch: 0.3,
             });
         }
+
+        const videoPlay = ScrollTrigger.create({
+            trigger: video,
+            // pinned: true,
+            start: "top bottom",
+            end: "bottom top",
+            onToggle: (self) => {
+                video.currentTime = 0
+                self.isActive ? video.play() : video.pause();
+            },
+        });
 
         // functions
         const asyncInit = async () => {
@@ -104,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
             scalingBtnPositive(btnApplePlay)
             scalingBtnNegative(btnGooglePlay)
         }
+
 
         // sliders
         {
@@ -227,36 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
         lines.forEach(el => {
             leftToRight(el)
         })
-
-
         scalingFoo(".roadmap__title", ".roadmap", 1.7, 1, "top bottom", "15% center", true)
-
-        /*       const videoContainer = document.querySelector('.find-map');
-               const video = document.querySelector("#video-scroll");
-               const scrollPlay = (vid, time) => {
-                   vid.currentTime = +time.toFixed(2)
-               }
-               const videoPlay = ScrollTrigger.create({
-                   trigger: video,
-                   pinned: true,
-                   start: "top bottom",
-                   end: "center top",
-                   /!*      onToggle: (self) => {
-                             console.log(self)
-                             self.isActive ? video.play() : video.pause();
-                         },*!/
-                   onUpdate: (self) => {
-                       // console.log(self)
-                       // console.log(video.duration * self.progress)
-                       setInterval(scrollPlay(video, video.duration * self.progress), 10)
-                       /!*   window.requestAnimationFrame(() => {
-                              scrollPlay(video, video.duration * self.progress)
-                          });*!/
-                       // video.play()
-                       // video.currentTime = video.duration * self.progress
-                   },
-
-               });*/
 
 
         // tabs
