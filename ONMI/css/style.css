@@ -406,7 +406,7 @@ h5.main__title {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -55%) rotate(45deg);
+  transform: translate(-50%, -63%) rotate(45deg);
   /* left: 8px;
    top: 4px;*/
   width: 0.16vw;
@@ -1816,11 +1816,7 @@ h5.main__title {
 
 .journey-card_4 {
   height: 29.58vw;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center bottom;
-  background-image: url(../img/journey/journey_routes.svg);
-  padding: 5.6vw 3.2vw 1vw 1.6vw;
+  padding: 1vw 1.6vw 1vw 1.6vw;
 }
 
 .journey-card_4 .journey-card__title {
