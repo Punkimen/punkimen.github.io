@@ -406,7 +406,7 @@ h5.main__title {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -63%) rotate(45deg);
+  transform: translate(-50%, -55%) rotate(45deg);
   /* left: 8px;
    top: 4px;*/
   width: 0.16vw;
@@ -699,7 +699,6 @@ h5.main__title {
 
 .hero__info {
   opacity: 0;
-  display: flex;
   border-radius: 1.41vw;
   border: 0.05vw solid rgba(255, 255, 255, 0.17);
   background: #000;
@@ -707,11 +706,16 @@ h5.main__title {
   padding: 0.78vw 2.08vw 0.83vw 1.41vw;
   transform: rotate(-10deg);
   text-transform: uppercase;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   position: absolute;
   bottom: 0px;
   right: 6.41vw;
+  max-width: 30.47vw;
+  overflow: hidden;
+}
+
+.hero__info-flex {
+  display: flex;
 }
 
 .hero__info-text {
@@ -1402,7 +1406,6 @@ h5.main__title {
 
 .card__front-img {
   position: relative;
-  transition: transform ease-in-out 0.05s;
 }
 
 .card__front-img_bg {
@@ -1433,7 +1436,6 @@ h5.main__title {
   top: 1.98vw;
   left: 50%;
   transform: translateX(-50%);
-  transition: transform ease-in-out 0.05s;
 }
 
 .card_1 .card__front-img {
@@ -1649,7 +1651,7 @@ h5.main__title {
 }
 
 .find__text {
-  max-width: 38.91vw;
+  max-width: 40vw;
   width: 100%;
 }
 
@@ -2100,6 +2102,17 @@ h5.main__title {
 .sound-season__author_unknown {
   width: 9.06vw;
   height: 9.06vw;
+  position: relative;
+}
+
+.sound-season__author_unknown::after {
+  content: "";
+  position: absolute;
+  bottom: -8%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, #000 100%);
 }
 
 .sound-season__author_unknown .sound-season__photo {
@@ -2315,8 +2328,6 @@ h5.main__title {
 .level__wrapper {
   display: flex;
   position: relative;
-  left: 25%;
-  transform: translateX(-50%);
 }
 
 .level-circle {
@@ -2327,13 +2338,12 @@ h5.main__title {
   align-items: center;
   width: 49.53vw;
   height: 49.53vw;
-  border: 0.1vw solid rgba(255, 255, 255, 0.1);
   text-align: center;
   border-radius: 50%;
-  opacity: 0;
+  border: 0.1vw solid rgba(255, 255, 255, 0.1);
 }
 
-.level-circle_center {
+.level-circle.swiper-slide-active {
   border: 0.1vw solid rgba(255, 255, 255, 0.15);
 }
 
@@ -2352,6 +2362,27 @@ h5.main__title {
 
 .level-circle__text p:not(:last-child) {
   margin-bottom: 1.88vw;
+}
+
+.level-slider {
+  position: relative;
+}
+
+.level-slider__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  cursor: pointer;
+}
+
+.level-slider__arrow_prev {
+  left: 3.33vw;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.level-slider__arrow_next {
+  right: 3.33vw;
 }
 
 .market {
@@ -2977,7 +3008,7 @@ h5.main__title {
 }
 
 .mission__text {
-  width: 35.6vw;
+  width: 37vw;
   font-size: 1.25vw;
   line-height: 1.8;
 }
@@ -3050,6 +3081,17 @@ h5.main__title {
   align-items: flex-start;
   position: relative;
   padding: 2.6vw 2.6vw 2.6vw 7.14vw;
+  position: relative;
+}
+
+.culture-circle::after {
+  content: "";
+  position: absolute;
+  bottom: -8%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, #000 100%);
 }
 
 .culture-circle:nth-child(2) {
@@ -3062,9 +3104,23 @@ h5.main__title {
 
 .culture-circle__content {
   position: relative;
-  bottom: -16.56vw;
+  bottom: -4.56vw;
   max-width: 17.71vw;
   width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.culture-circle__icon {
+  max-width: 2.81vw;
+  width: 100%;
+  margin-bottom: 5.21vw;
+}
+
+.culture-circle__icon img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .culture-circle__title {
@@ -3283,10 +3339,18 @@ h5.main__title {
 }
 
 .tokenomics__earth {
-  margin: 19.11vw 0 -20.47vw;
+  margin: 19.11vw auto -20.47vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 41.77vw;
+  width: 100%;
+}
+
+.tokenomics__earth img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .tokenomics__text {

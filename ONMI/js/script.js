@@ -14,7 +14,7 @@ import {
   opacityIn, readText,
   rightToLeft,
   scalingFoo,
-  showElem, svgDraw,
+  showElem, svgDraw, verticalTransform
 } from "./module/GSAPAnim.min.js";
 import {circlesAdaptive, stepAdaptive} from "./module/adaptiveResize.min.js";
 import {getPopulation} from "./module/getPopulation.min.js";
@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const opacityElems = document.querySelectorAll('[data-effect="opacity"]');
     const cardsAura = document.querySelector('.card_1 .card__front-aura')
     const cardsNft = document.querySelector('.card_3 .card__front-img')
+    const cardsPhone = document.querySelector('.card_2 .card__front-img')
+    const cardsMap = document.querySelector('.card__front-img_bg')
     const OMICircles = document.querySelector('.omies__circles')
     const OMICircle1 = document.querySelector('.omies__circle_1')
     const OMICircle3 = document.querySelector('.omies__circle_3')
@@ -51,28 +53,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const fadeUpElems = document.querySelectorAll('[data-effect="fade-up"]');
     const lines = document.querySelectorAll(".line");
     const video = document.querySelector("#video-scroll");
-
+    const journeyCardPhone = document.querySelector('.journey-card__phone')
+    const journeyCardOmi = document.querySelector('.journey-card_2 .journey-card__omi')
+    const journeyCardMap = document.querySelector('.journey-card_4 .card__front-img_bg')
     //gsap init
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    gsap.registerPlugin(ScrollTrigger);
 
-    if (ScrollTrigger.isTouch !== 1) {
-      ScrollSmoother.create({
-        smooth: 1.3,
-        effects: true,
-        smoothTouch: 0.3,
-      });
-    }
+    verticalTransform(cardsPhone, cardsPhone, '-5%', '5%', true)
+    verticalTransform(cardsMap, cardsMap, '-5%', '5%', true)
+    verticalTransform(journeyCardPhone, journeyCardPhone, '5%', '-10%', true)
+    verticalTransform(journeyCardOmi, journeyCardOmi, '-5%', '5%', true)
+    verticalTransform(journeyCardMap, journeyCardMap, '-5%', '5%', true)
 
-    /*        const videoPlay = ScrollTrigger.create({
-                trigger: video,
-                // pinned: true,
-                start: "top bottom",
-                end: "bottom top",
-                onToggle: (self) => {
-                    video.currentTime = 0
-                    self.isActive ? video.play() : video.pause();
-                },
-            });*/
+    const videoPlay = ScrollTrigger.create({
+      trigger: video,
+      // pinned: true,
+      start: "top bottom",
+      end: "bottom top",
+      onToggle: (self) => {
+        video.currentTime = 0
+        self.isActive ? video.play() : video.pause();
+      },
+    });
 
     // functions
     const asyncInit = async () => {
@@ -169,7 +171,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const slider_1 = sliderInit(".adventure__phone");
       const slider_2 = sliderInit(".cards-slider__slider", cardSliderOptions);
 
-
       slider_2.controller.control = slider_1;
       const sliderPrety = () => {
         const windowWidth = window.innerWidth
@@ -199,6 +200,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
+      const sliderLevel = {
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loopPreventsSliding: true,
+        loop: true,
+        navigation: {
+          nextEl: ".level-slider__arrow_next",
+          prevEl: ".level-slider__arrow_prev",
+        },
+      }
+      const levelSlider = sliderInit('.level-slider', sliderLevel)
     }
 
 
@@ -233,9 +245,9 @@ document.addEventListener("DOMContentLoaded", () => {
     svgDraw(svgLine, svgLine, '400%')
     leftToRight(missionLineHorizontal, '.mission')
 
-    horizontalTransform(phone_1, phoneScreens, '17.5vw', "0", false)
+    horizontalTransform(phone_1, phoneScreens, '17.5vw', "0", false, 'circ.out')
     opacityIn(phone_1, phoneScreens, "center bottom")
-    horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", false)
+    horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", false, 'circ.out')
     opacityIn(phone_3, phoneScreens, "center bottom")
 
     lines.forEach(el => {
