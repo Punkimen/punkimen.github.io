@@ -56,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const journeyCardPhone = document.querySelector('.journey-card__phone')
     const journeyCardOmi = document.querySelector('.journey-card_2 .journey-card__omi')
     const journeyCardMap = document.querySelector('.journey-card_4 .card__front-img_bg')
+    const securityBlock = document.querySelector('.security');
+
     //gsap init
     gsap.registerPlugin(ScrollTrigger);
 
@@ -64,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     verticalTransform(journeyCardPhone, journeyCardPhone, '5%', '-10%', true)
     verticalTransform(journeyCardOmi, journeyCardOmi, '-5%', '5%', true)
     verticalTransform(journeyCardMap, journeyCardMap, '-5%', '5%', true)
+    verticalTransform(securityBlock, securityBlock, '-10%', '5%', true)
 
     /*    const videoPlay = ScrollTrigger.create({
           trigger: video,
@@ -217,6 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
         centeredSlides: true,
         slidesPerView: "auto",
         loopPreventsSliding: true,
+        speed: 800,
         loop: true,
         navigation: {
           nextEl: ".level-slider__arrow_next",
@@ -236,6 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const words = el.querySelectorAll('.word')
       readText(words, el)
     })
+
     drawSvgLine(maskSvg, pointsContainer, markers)
     horizontalTransform(OMICircle1, OMICircles, '100%', '33%')
     horizontalTransform(OMICircle3, OMICircles, '-100%', '-43%')
@@ -258,10 +263,10 @@ document.addEventListener("DOMContentLoaded", () => {
     svgDraw(svgLine, svgLine, '400%')
     leftToRight(missionLineHorizontal, '.mission')
 
-    horizontalTransform(phone_1, phoneScreens, '17.5vw', "0", false, 'circ.out')
-    opacityIn(phone_1, phoneScreens, "center bottom")
-    horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", false, 'circ.out')
-    opacityIn(phone_3, phoneScreens, "center bottom")
+    horizontalTransform(phone_1, phoneScreens, '17.5vw', '0')
+    horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0")
+    /*    opacityIn(phone_1, phoneScreens, null, true)
+        opacityIn(phone_3, phoneScreens, null, true)*/
 
     lines.forEach(el => {
       leftToRight(el)

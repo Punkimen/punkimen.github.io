@@ -610,6 +610,8 @@ h5.main__title {
 }
 
 .app-btn__icon {
+  width: 0.68vw;
+  height: auto;
   display: block;
   margin-right: 0.36vw;
 }
@@ -742,6 +744,8 @@ h5.main__title {
 }
 
 .reality {
+  position: relative;
+  top: -5vw;
   padding: 0 0 11.72vw;
 }
 
@@ -788,8 +792,16 @@ h5.main__title {
   height: auto;
 }
 
+.reality__screen_1 {
+  transform: translateX(17.5vw);
+}
+
 .reality__screen_2 {
   z-index: 5;
+}
+
+.reality__screen_3 {
+  transform: translateX(-17.5vw);
 }
 
 .reality__decor {
@@ -955,7 +967,7 @@ h5.main__title {
 }
 
 .adventure__text {
-  max-width: 24.5vw;
+  max-width: 35.5vw;
   margin: 0 auto;
   /*   right: -8.8vw;
      bottom: -2.03vw;
@@ -974,12 +986,19 @@ h5.main__title {
   left: 3.2vw;
   position: relative;
   z-index: 2;
+  /*    @media(max-width: $md3) {
+        margin: 0;
+        max-width: 50vw;
+      }*/
 }
 
 .adventure__phone-img {
   width: 31.77vw;
   position: relative;
   z-index: 2;
+  /*@media(max-width: $md3) {
+    width: 50vw;
+  }*/
 }
 
 .adventure__phone-phone {
@@ -1014,6 +1033,9 @@ h5.main__title {
   top: 0.89vw;
   left: 50%;
   transform: translateX(-67%);
+  /* @media(max-width: $md3) {
+     max-width: 28.27vw;
+   }*/
 }
 
 .adventure__phone-slide {
@@ -1041,12 +1063,19 @@ h5.main__title {
   max-width: 30vw;
   width: 100%;
   padding-bottom: 13.8vw;
+  /*  @media(max-width: $md3) {
+      max-width: 46.37vw;
+    }*/
 }
 
 .cards-slider__slide {
   max-width: 20.21vw;
   width: 100%;
   height: 14.64vw;
+  /* @media(max-width: $md3) {
+     max-width: 39.11vw;
+     height: 28.23vw;
+   }*/
 }
 
 .cards-slider__slide.swiper-slide-next .cards-slider__descr {
@@ -1087,10 +1116,17 @@ h5.main__title {
   width: 100%;
   line-height: 1.4;
   transition: all ease 0.2s;
+  /* @media(max-width: $md3) {
+     max-width: 22.38vw;
+     font-size: 2.02vw;
+   }*/
 }
 
 .cards-slider__num {
   font-size: 0.94vw;
+  /*  @media(max-width: $md3) {
+      font-size: 1.81vw;
+    }*/
 }
 
 .cards-slider__btn {
@@ -1410,9 +1446,9 @@ h5.main__title {
 
 .card__front-img_bg {
   position: absolute;
-  top: 50%;
+  top: -15%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   width: 110%;
   height: 130%;
 }
@@ -1676,7 +1712,7 @@ h5.main__title {
 }
 
 .find-map__phone {
-  width: 23.96vw;
+  width: 16.88vw;
   margin: 0 auto;
   position: relative;
   top: 5vw;
@@ -1716,7 +1752,7 @@ h5.main__title {
 }
 
 .journey-cards__col:not(:last-child) {
-  margin-bottom: 0.83vw;
+  margin-right: 0.94vw;
 }
 
 .journey-card {
@@ -1732,7 +1768,7 @@ h5.main__title {
 }
 
 .journey-card:not(:last-child) {
-  margin-bottom: 0.83vw;
+  margin-bottom: 0.94vw;
 }
 
 .journey-card_1 {
@@ -1887,11 +1923,20 @@ h5.main__title {
 
 .each-point {
   padding: 4.01vw 0 7.81vw;
+  /*   display: block;
+     width: 100vw;
+     height: auto;
+
+     * {
+       display: block;
+       width: 100%;
+       height: 100%;
+     }*/
 }
 
 .each-point__title {
   font-size: 2.45vw;
-  max-width: 41.3vw;
+  max-width: 50vw;
   width: 100%;
   margin: 0 auto 3.85vw;
   text-align: center;
@@ -1934,6 +1979,7 @@ h5.main__title {
 .each-point__circle-text {
   max-width: 15.63vw;
   width: 100%;
+  font-size: 0.94vw;
 }
 
 .each-point__route {
@@ -1943,23 +1989,31 @@ h5.main__title {
 }
 
 .each-point__svg {
-  display: block;
   width: 100vw;
+  height: 18.07vw;
 }
 
-.each-point__svg svg {
+.each-point .dashed {
   width: 100vw;
+  height: 18.07vw;
 }
 
 .each-point .mask {
-  stroke-dasharray: 200vw;
-  stroke-dashoffset: 200vw;
+  stroke-dasharray: 294vw;
+  stroke-dashoffset: 294vw;
 }
 
 .each-point__mark {
   position: absolute;
   opacity: 0;
   transition: opacity ease-out 0.1s;
+  max-width: 0.52vw;
+}
+
+.each-point__mark img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .each-point__mark.show {
@@ -2091,7 +2145,7 @@ h5.main__title {
   heihgt: 11.2vw;
   padding: 1.41vw 2.6vw 2.08vw 2.6vw;
   border-radius: 1.41vw;
-  border: 0.05vw solid rgba(255, 255, 255, 0.3);
+  border: 0.05vw solid rgba(255, 255, 255, 0.1);
   background: #0A0A0A;
   display: flex;
   flex-direction: column;
@@ -2347,9 +2401,19 @@ h5.main__title {
   border: 0.1vw solid rgba(255, 255, 255, 0.15);
 }
 
+.level-circle.swiper-slide-active .level-circle__title {
+  opacity: 1;
+}
+
+.level-circle.swiper-slide-active .level-circle__text {
+  opacity: 1;
+}
+
 .level-circle__title {
   margin-bottom: 3.85vw;
   font-size: 1.61vw;
+  opacity: 0;
+  transition: opacity ease 0.3s;
 }
 
 .level-circle__text {
@@ -2358,6 +2422,8 @@ h5.main__title {
   margin: 0 auto;
   font-size: 1.04vw;
   line-height: 1.35em;
+  opacity: 0;
+  transition: opacity ease 0.3s;
 }
 
 .level-circle__text p:not(:last-child) {
@@ -2391,7 +2457,6 @@ h5.main__title {
 
 .market__wrapper {
   position: relative;
-  left: 1.2vw;
   width: 48.96vw;
   margin: 0 auto 11.9vw;
 }
@@ -2670,7 +2735,6 @@ h5.main__title {
 
 .hunger-progress {
   margin: 15vw 0 16vw;
-  padding: 0 1.72vw 0 1.72vw;
 }
 
 .hunger-progress__inner {
@@ -2959,7 +3023,7 @@ h5.main__title {
   left: 0;
   width: 0%;
   height: 0.05vw;
-  background: #D4C9C1;
+  background: rgba(255, 255, 255, 0.3);
   transition: 1.2s ease-in-out 0.1s;
 }
 
@@ -3303,6 +3367,16 @@ h5.main__title {
   height: 42.81vw;
 }
 
+.card-token_1 .card-token__icon {
+  max-width: 7.03vw;
+}
+
+.card-token_1 .card-token__icon img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .card-token_1 .card-token__text {
   max-width: 18.75vw;
 }
@@ -3311,12 +3385,42 @@ h5.main__title {
   height: 32.86vw;
 }
 
+.card-token_2 .card-token__icon {
+  max-width: 12.55vw;
+}
+
+.card-token_2 .card-token__icon img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .card-token_3 {
   height: 31.82vw;
 }
 
+.card-token_3 .card-token__icon {
+  max-width: 9.22vw;
+}
+
+.card-token_3 .card-token__icon img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .card-token_4 {
   height: 43.85vw;
+}
+
+.card-token_4 .card-token__icon {
+  max-width: 6.77vw;
+}
+
+.card-token_4 .card-token__icon img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .tokenomics {
@@ -3440,7 +3544,7 @@ h5.main__title {
   padding: 4.95vw 0 16.9vw;
   position: relative;
   z-index: 2;
-  margin-bottom: 5vw;
+  margin: 10vw 0 10vw;
 }
 
 .security__title {
@@ -3591,7 +3695,7 @@ h5.main__title {
 
 .question-item__header {
   position: relative;
-  padding-top: 2.45vw;
+  padding-top: 2.2vw;
   padding-bottom: 2vw;
   cursor: pointer;
 }
@@ -3945,308 +4049,6 @@ h5.main__title {
     width: 16.67vw;
     left: -1.02vw;
     bottom: 12.9vw;
-  }
-}
-
-@media (max-width: 992px) {
-  .container {
-    padding: 0 2.82vw;
-  }
-
-  .btn {
-    min-width: 14.11vw;
-    padding: 1.92vw;
-    font-size: 1.41vw;
-  }
-
-  .btn_app {
-    padding: 0.58vw 0.94vw 0.58vw 0.94vw;
-  }
-
-  .main__text {
-    font-size: 1.41vw;
-  }
-
-  .swiper-btn {
-    max-width: 12vw;
-    height: 7vw;
-    border-radius: 3.83vw;
-  }
-
-  .swiper-btn img {
-    width: 2.56vw;
-    height: 1.99vw;
-  }
-
-  .header {
-    font-size: 1.21vw;
-  }
-
-  .header__list-elem:first-child {
-    margin-right: 5.08vw;
-  }
-
-  .header__link_roadmap {
-    margin-right: 9.2vw;
-  }
-
-  .dropdown__header span {
-    padding-right: 1.51vw;
-  }
-
-  .dropdown__header span::after {
-    width: 1.11vw;
-    height: 0.6vw;
-  }
-
-  .hero {
-    padding: 12vw 0 12vw;
-  }
-
-  .hero__title {
-    font-size: 12.1vw;
-  }
-
-  .description-reality__text {
-    font-size: 1.21vw;
-  }
-
-  .description-reality__text p:not(:last-child) {
-    font-size: 1.21vw;
-  }
-
-  .adventure__slider-phone {
-    margin: 0;
-    max-width: 50vw;
-  }
-
-  .adventure__phone-img {
-    width: 50vw;
-  }
-
-  .adventure__phone {
-    max-width: 28.27vw;
-  }
-
-  .cards-slider__slider {
-    max-width: 46.37vw;
-  }
-
-  .cards-slider__slide {
-    max-width: 39.11vw;
-    height: 28.23vw;
-  }
-
-  .cards-slider__descr {
-    max-width: 22.38vw;
-    font-size: 2.02vw;
-  }
-
-  .cards-slider__num {
-    font-size: 1.81vw;
-  }
-
-  .create-omi__text {
-    max-width: 29.54vw;
-    width: 100%;
-  }
-
-  .create-omi__item {
-    width: 16vw;
-  }
-
-  .create-omi__cards {
-    width: 100%;
-  }
-
-  .create-omi__cards-wrapper {
-    display: grid;
-    grid-auto-rows: 1fr;
-    justify-content: center;
-    row-gap: 2.6vw;
-  }
-
-  .create-omi__card {
-    max-width: 50.4vw;
-  }
-
-  .create-omi__card:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .omi-card__title {
-    font-size: 2.12vw;
-  }
-
-  .omi-card__text {
-    font-size: 1.41vw;
-  }
-
-  .omi-card__label-icon {
-    width: 2.22vw;
-    height: 2.22vw;
-  }
-
-  .omi-card__label-text {
-    font-size: 1.41vw;
-  }
-
-  .omi-card__point-btn {
-    width: 2.42vw;
-    height: 2.42vw;
-    font-size: 1.81vw;
-  }
-
-  .omi-card__point-value {
-    font-size: 3.63vw;
-  }
-
-  .omi-card__total {
-    margin-top: 3.23vw;
-  }
-
-  .omi-card__total-value {
-    font-size: 7.26vw;
-  }
-
-  .omi-card__total-descr {
-    font-size: 1.71vw;
-    width: 10.08vw;
-  }
-
-  .omi-card__unallocated-points {
-    width: 9.27vw;
-    height: 9.27vw;
-    font-size: 3.02vw;
-  }
-
-  .find__text {
-    width: 18vw;
-    ridht: 1.2vw;
-  }
-
-  .pvp__screen-text {
-    left: -5vw;
-    bottom: 28vw;
-  }
-
-  .pvp__screen-phone {
-    width: 28.83vw;
-  }
-
-  .pvp__screen-OMI {
-    width: 83.67vw;
-    right: 0;
-    transform: translateX(40%);
-  }
-
-  .market__text {
-    bottom: -10vw;
-    right: -4.27vw;
-    width: 24vw;
-  }
-
-  .market__subtitle {
-    font-size: 4.03vw;
-    width: 17vw;
-  }
-
-  .market__descr-text {
-    font-size: 1.61vw;
-    width: 27vw;
-  }
-
-  .market-catalog__item {
-    width: 18.25vw;
-    height: 20.77vw;
-  }
-
-  .market-catalog__item img {
-    width: 100%;
-  }
-
-  .market-catalog__item_text {
-    font-size: 1.61vw;
-  }
-
-  .hunger-games__content {
-    width: 37.27vw;
-  }
-
-  .hunger-games__content_down {
-    width: 37.27vw;
-  }
-
-  .hunger-games__subtitle {
-    font-size: 3.63vw;
-  }
-
-  .hunger-games__subtitle_small {
-    width: 100%;
-    font-size: 3.02vw;
-  }
-
-  .hunger-games__subtitle span:last-child {
-    width: 100%;
-  }
-
-  .hunger-games__text {
-    font-size: 1.61vw;
-    width: 100%;
-  }
-
-  .individual__title {
-    font-size: 2.82vw;
-  }
-
-  .individual-chose__item {
-    max-width: 100%;
-  }
-
-  .individual-chose__item:not(:last-child) {
-    margin-right: 4vw;
-  }
-
-  .individual-chose__label {
-    font-size: 2.62vw;
-  }
-
-  .individual-chose__text {
-    font-size: 1.81vw;
-    max-width: 100%;
-  }
-
-  .individual-chose__list {
-    font-size: 1.81vw;
-  }
-
-  .individual-chose__list-elem::before {
-    font-size: 1.21vw;
-    width: 2.32vw;
-    height: 2.32vw;
-    line-height: 0.9em;
-    left: -3.02vw;
-  }
-
-  .mission__title {
-    font-size: 6.05vw;
-  }
-
-  .mission__text {
-    font-size: 2.12vw;
-  }
-
-  .token__card {
-    height: 35.58vw;
-  }
-
-  .token__card-label {
-    font-size: 2.72vw;
-  }
-
-  .token__card-text {
-    font-size: 1.61vw;
-    max-width: 100%;
   }
 }
 
@@ -5213,6 +5015,277 @@ h5.main__title {
 
   .token__card-text {
     font-size: 3.76vw;
+  }
+}
+
+@media (max-width: 0px) {
+  .container {
+    padding: 0 2.82vw;
+  }
+
+  .btn {
+    min-width: 14.11vw;
+    padding: 1.92vw;
+    font-size: 1.41vw;
+  }
+
+  .btn_app {
+    padding: 0.58vw 0.94vw 0.58vw 0.94vw;
+  }
+
+  .main__text {
+    font-size: 1.41vw;
+  }
+
+  .swiper-btn {
+    max-width: 12vw;
+    height: 7vw;
+    border-radius: 3.83vw;
+  }
+
+  .swiper-btn img {
+    width: 2.56vw;
+    height: 1.99vw;
+  }
+
+  .header {
+    font-size: 1.21vw;
+  }
+
+  .header__list-elem:first-child {
+    margin-right: 5.08vw;
+  }
+
+  .header__link_roadmap {
+    margin-right: 9.2vw;
+  }
+
+  .dropdown__header span {
+    padding-right: 1.51vw;
+  }
+
+  .dropdown__header span::after {
+    width: 1.11vw;
+    height: 0.6vw;
+  }
+
+  .hero {
+    padding: 12vw 0 12vw;
+  }
+
+  .hero__title {
+    font-size: 12.1vw;
+  }
+
+  .description-reality__text {
+    font-size: 1.21vw;
+  }
+
+  .description-reality__text p:not(:last-child) {
+    font-size: 1.21vw;
+  }
+
+  .create-omi__text {
+    max-width: 29.54vw;
+    width: 100%;
+  }
+
+  .create-omi__item {
+    width: 16vw;
+  }
+
+  .create-omi__cards {
+    width: 100%;
+  }
+
+  .create-omi__cards-wrapper {
+    display: grid;
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    row-gap: 2.6vw;
+  }
+
+  .create-omi__card {
+    max-width: 50.4vw;
+  }
+
+  .create-omi__card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .omi-card__title {
+    font-size: 2.12vw;
+  }
+
+  .omi-card__text {
+    font-size: 1.41vw;
+  }
+
+  .omi-card__label-icon {
+    width: 2.22vw;
+    height: 2.22vw;
+  }
+
+  .omi-card__label-text {
+    font-size: 1.41vw;
+  }
+
+  .omi-card__point-btn {
+    width: 2.42vw;
+    height: 2.42vw;
+    font-size: 1.81vw;
+  }
+
+  .omi-card__point-value {
+    font-size: 3.63vw;
+  }
+
+  .omi-card__total {
+    margin-top: 3.23vw;
+  }
+
+  .omi-card__total-value {
+    font-size: 7.26vw;
+  }
+
+  .omi-card__total-descr {
+    font-size: 1.71vw;
+    width: 10.08vw;
+  }
+
+  .omi-card__unallocated-points {
+    width: 9.27vw;
+    height: 9.27vw;
+    font-size: 3.02vw;
+  }
+
+  .find__text {
+    width: 18vw;
+    ridht: 1.2vw;
+  }
+
+  .pvp__screen-text {
+    left: -5vw;
+    bottom: 28vw;
+  }
+
+  .pvp__screen-phone {
+    width: 28.83vw;
+  }
+
+  .pvp__screen-OMI {
+    width: 83.67vw;
+    right: 0;
+    transform: translateX(40%);
+  }
+
+  .market__text {
+    bottom: -10vw;
+    right: -4.27vw;
+    width: 24vw;
+  }
+
+  .market__subtitle {
+    font-size: 4.03vw;
+    width: 17vw;
+  }
+
+  .market__descr-text {
+    font-size: 1.61vw;
+    width: 27vw;
+  }
+
+  .market-catalog__item {
+    width: 18.25vw;
+    height: 20.77vw;
+  }
+
+  .market-catalog__item img {
+    width: 100%;
+  }
+
+  .market-catalog__item_text {
+    font-size: 1.61vw;
+  }
+
+  .hunger-games__content {
+    width: 37.27vw;
+  }
+
+  .hunger-games__content_down {
+    width: 37.27vw;
+  }
+
+  .hunger-games__subtitle {
+    font-size: 3.63vw;
+  }
+
+  .hunger-games__subtitle_small {
+    width: 100%;
+    font-size: 3.02vw;
+  }
+
+  .hunger-games__subtitle span:last-child {
+    width: 100%;
+  }
+
+  .hunger-games__text {
+    font-size: 1.61vw;
+    width: 100%;
+  }
+
+  .individual__title {
+    font-size: 2.82vw;
+  }
+
+  .individual-chose__item {
+    max-width: 100%;
+  }
+
+  .individual-chose__item:not(:last-child) {
+    margin-right: 4vw;
+  }
+
+  .individual-chose__label {
+    font-size: 2.62vw;
+  }
+
+  .individual-chose__text {
+    font-size: 1.81vw;
+    max-width: 100%;
+  }
+
+  .individual-chose__list {
+    font-size: 1.81vw;
+  }
+
+  .individual-chose__list-elem::before {
+    font-size: 1.21vw;
+    width: 2.32vw;
+    height: 2.32vw;
+    line-height: 0.9em;
+    left: -3.02vw;
+  }
+
+  .mission__title {
+    font-size: 6.05vw;
+  }
+
+  .mission__text {
+    font-size: 2.12vw;
+  }
+
+  .token__card {
+    height: 35.58vw;
+  }
+
+  .token__card-label {
+    font-size: 2.72vw;
+  }
+
+  .token__card-text {
+    font-size: 1.61vw;
+    max-width: 100%;
   }
 }
 

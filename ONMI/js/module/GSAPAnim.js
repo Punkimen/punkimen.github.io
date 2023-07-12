@@ -16,7 +16,7 @@ export const lineShow = el => {
     }
   })
 }
-export const opacityIn = (el, trigger, start) => {
+export const opacityIn = (el, trigger, start, scrub = false) => {
   const delay = el.getAttribute('data-delay') || 0
   const duration = el.getAttribute('data-duration') || 0.8
   gsap.fromTo(el, {
@@ -25,10 +25,11 @@ export const opacityIn = (el, trigger, start) => {
     opacity: 1,
     delay: delay,
     duration: duration,
-    ease: 'circ.out',
+    ease: scrub ? "none" : 'circ.out',
     scrollTrigger: {
       trigger: trigger || el,
-      start: start || 'top bottom'
+      start: start || 'top bottom',
+      scrub: scrub
     }
   })
 }
@@ -216,8 +217,8 @@ export const verticalTransform = (el, trigger, startVal, endValue, scrub = true)
     duration: duration,
     scrollTrigger: {
       trigger: trigger || el,
-      start: "center bottom",
-      end: "top top",
+      start: "top bottom",
+      end: "bottom top",
       scrub: scrub
     }
   })
@@ -239,9 +240,7 @@ export const readText = (el, trigger) => {
   })
 }
 export const drawSvgLine = (el, trigger, markers) => {
-  gsap.fromTo(el, {
-    strokeDashoffset: '200vw',
-  }, {
+  gsap.to(el, {
     strokeDashoffset: 0,
     ease: "none",
     scrollTrigger: {

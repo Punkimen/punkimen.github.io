@@ -552,7 +552,7 @@
   <div class="container">
     <div class="journey-cards__wrapper">
       <div class="journey-cards__col">
-        <div data-effect="fade-in" data-duration="1.1" class="journey-card journey-card_1">
+        <div data-effect="opacity" data-duration="0.9" class="journey-card journey-card_1">
           <div class="journey-card__content">
             <div class="journey-card__title">Choose the right subculture</div>
             <div class="journey-card__text">To determine your style of play</div>
@@ -562,10 +562,10 @@
               <img src="img/adventure_phone.png"/>
             </noscript>
             <video id="video_phone" src="./video/journey_phone.mp4" type="video/mp4" autoplay="true"
-                   muted="muted"  loop/>
+                   muted="muted" loop/>
           </div>
         </div>
-        <div data-effect="fade-in" data-duration="1.1" data-delay="0.4" class="journey-card journey-card_3">
+        <div data-effect="opacity" data-duration="0.9" data-delay="0.4" class="journey-card journey-card_3">
           <div class="journey-card-video">
             <video id="video_trap" src="./video/cyan.webm" type="video/webm" loop autoplay="true"
                    muted="muted"></video>
@@ -577,7 +577,7 @@
         </div>
       </div>
       <div class="journey-cards__col">
-        <div data-effect="fade-in" data-duration="1.1" data-delay="0.2" class="journey-card journey-card_2">
+        <div data-effect="opacity" data-duration="0.9" data-delay="0.2" class="journey-card journey-card_2">
           <div class="journey-card__content">
             <div class="journey-card__title">Meet Spotters on the streets</div>
             <div class="journey-card__text">Сomplete tasks and get a reward</div>
@@ -588,10 +588,10 @@
             </noscript>
           </div>
         </div>
-        <div data-effect="fade-in" data-duration="1.1" data-delay="0.6" class="journey-card journey-card_4">
+        <div data-effect="opacity" data-duration="0.9" data-delay="0.6" class="journey-card journey-card_4">
           <div class="card__front-img_bg">
             <noscript data-webp="">
-              <img class=""  src="./img/journey/journey_map.jpg" alt="">
+              <img class="" src="./img/journey/journey_map.jpg" alt="">
             </noscript>
           </div>
           <div class="journey-card__content journey-card__content_centered">
@@ -670,19 +670,19 @@
     <div class="each-point__mark each-point__mark_9">
       <img src="img/icons/map_marker.svg" alt="marker">
     </div>
-    <svg viewBox="0 0 1920 347">
+    <svg class="each-point__svg" viewBox="0 0 1920 347">
       <symbol id="line">
-        <path d="M-97.6667 1.24023C-97.6667 1.24023 -42.2787 303.127 117.63 276.958C277.538 250.789 281.155 223.221 239.079
-        153.252C197.004 83.2828 152.28 334.649 235.894 345.648C319.509 356.647 401.56 46.3031 650.391 123.286C899.222
-        200.269 656.872 336.666 597.292 289.254C537.712 241.843 924.991 72.3971 1160.33 86.5552C1395.68 100.713 1381.74
-        282.434 1501.97 210.822C1622.21 139.211 1677.32 74.7717 1570.34 97.2571C1463.36 119.742 1576.05 275.001 1720.52
-        275.001C1865 275.001 1959.68 123.286 1959.68 123.286" stroke="#D6F82E" stroke-width="2"
+        <path class="path" d="M-97.6667 1.24023C-97.6667 1.24023 -42.2787 303.127 117.63 276.958C277.538 250.789 281.155 223.221 239.079
+         153.252C197.004 83.2828 152.28 334.649 235.894 345.648C319.509 356.647 401.56 46.3031 650.391 123.286C899.222
+         200.269 656.872 336.666 597.292 289.254C537.712 241.843 924.991 72.3971 1160.33 86.5552C1395.68 100.713 1381.74
+         282.434 1501.97 210.822C1622.21 139.211 1677.32 74.7717 1570.34 97.2571C1463.36 119.742 1576.05 275.001 1720.52
+         275.001C1865 275.001 1959.68 123.286 1959.68 123.286" stroke="#D6F82E" stroke-width="2"
               stroke-linecap="round"></path>
       </symbol>
       <mask id="mask">
         <use class="mask" xlink:href="#line" stroke="#000"></use>
       </mask>
-      <use class="dashed" xlink:href="#line" mask="url(#mask)" stroke="#000" stroke-width="2" stroke-dasharray="6"
+      <use class="dashed" xlink:href="#line" mask="url(#mask)" stroke="#000" stroke-width="2" stroke-dasharray="0 6"
            opacity="1"></use>
     </svg>
   </div>
@@ -780,7 +780,7 @@
       <section class="level" data-effect="fade-down" data-duration="0.8">
   <div class="swiper level-slider">
     <div class="level__wrapper swiper-wrapper">
-      <div class="swiper-slide level-circle level-circle_center">
+      <div class="swiper-slide level-circle ">
         <h4 class="level-circle__title main__title color_gray">
           <div class="hidden">
             <div>ONMI LEVEL</div>
@@ -797,7 +797,7 @@
           </p>
         </div>
       </div>
-      <div class="swiper-slide level-circle level-circle_center">
+      <div class="swiper-slide level-circle ">
         <h4 class="level-circle__title main__title color_gray">
           <div class="hidden">
             <div>ONMI LEVEL</div>
@@ -814,7 +814,7 @@
           </p>
         </div>
       </div>
-      <div class="swiper-slide level-circle level-circle_center">
+      <div class="swiper-slide level-circle ">
         <h4 class="level-circle__title main__title color_gray">
           <div class="hidden">
             <div>ONMI LEVEL</div>
@@ -1142,7 +1142,7 @@
       <div class="mission__line"></div>
       <div class="mission__line mission__line_diagonally">
         <svg>
-          <line x1="0" y1="0" x2="100%" y2="100%" stroke-width="2" style="stroke:#D4C9C1"></line>
+          <line x1="0" y1="0" x2="100%" y2="100%" stroke-width="2" style="stroke:rgba(255, 255, 255, .3)"></line>
         </svg>
       </div>
       <div class="main-wrapper__col">
@@ -1203,7 +1203,7 @@
   <div class="culture-circles">
     <div class="culture-circle">
       <div class="culture-circle__content">
-        <div class="culture-circle__icon">
+        <div class="culture-circle__icon" data-effect="opacity">
           <noscript data-webp="">
             <img src="img/icons/icon_fashion.png" alt="fashion">
           </noscript>
@@ -1220,7 +1220,7 @@
     </div>
     <div class="culture-circle">
       <div class="culture-circle__content">
-        <div class="culture-circle__icon">
+        <div class="culture-circle__icon" data-effect="opacity">
           <noscript data-webp="">
             <img src="img/icons/icon_music.png" alt="music">
           </noscript>
@@ -1236,7 +1236,7 @@
     </div>
     <div class="culture-circle">
       <div class="culture-circle__content">
-        <div class="culture-circle__icon">
+        <div class="culture-circle__icon" data-effect="opacity">
           <noscript data-webp="">
             <img src="img/icons/icon_art.png" alt="art">
           </noscript>
@@ -2003,7 +2003,7 @@
 <script src="./js/libs/sine-waves.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
 <!--<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/@master/.min.js"></script>-->
-<script src="js/script.min.js" type="module" defer></script>
+<script src="js/script.js" type="module" defer></script>
 </body>
 
 </html>
