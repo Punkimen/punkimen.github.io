@@ -65,17 +65,30 @@ document.addEventListener("DOMContentLoaded", () => {
     verticalTransform(journeyCardOmi, journeyCardOmi, '-5%', '5%', true)
     verticalTransform(journeyCardMap, journeyCardMap, '-5%', '5%', true)
 
-    const videoPlay = ScrollTrigger.create({
-      trigger: video,
-      // pinned: true,
-      start: "top bottom",
-      end: "bottom top",
-      onToggle: (self) => {
-        video.currentTime = 0
-        self.isActive ? video.play() : video.pause();
-      },
+    /*    const videoPlay = ScrollTrigger.create({
+          trigger: video,
+          // pinned: true,
+          start: "top bottom",
+          end: "bottom top",
+          onToggle: (self) => {
+            video.currentTime = 0
+            self.isActive ? video.play() : video.pause();
+          },
+        });*/
+    let tl = gsap.timeline({
+      defaults: {duration: 1},
+      scrollTrigger: {
+        trigger: video,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+        onUpdate: (e) => {
+          const progress = e.progress.toFixed(2)
+          const duration = video.duration
+          video.currentTime = (duration * progress).toFixed(2)
+        }
+      }
     });
-
     // functions
     const asyncInit = async () => {
       const population = JSON.parse(await getPopulation())
