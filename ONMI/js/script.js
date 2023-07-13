@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 scrollTrigger: {
                     trigger: video,
                     start: "top bottom",
-                    end: "bottom top",
+                    end: "center center",
                     scrub: true,
                     onUpdate: (e) => {
                         const progress = e.progress.toFixed(2)
@@ -268,6 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
             leftToRight(el)
         })
         scalingFoo(".roadmap__title", ".roadmap", 1.7, 1, "top bottom", "15% center", true)
+        scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top bottom", "50% center", true)
 
 
         // tabs

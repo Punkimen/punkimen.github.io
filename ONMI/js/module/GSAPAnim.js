@@ -246,7 +246,7 @@ export const drawSvgLine = (el, trigger, markers) => {
         scrollTrigger: {
             trigger: trigger || el,
             start: 'top bottom',
-            end: 'center top',
+            end: 'center center',
             scrub: true,
             onUpdate: ((self) => {
                 const progress = self.progress.toFixed(2)
