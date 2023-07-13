@@ -2083,8 +2083,8 @@ h5.main__title {
 }
 
 .each-point .mask {
-  stroke-dasharray: 294vw;
-  stroke-dashoffset: 294vw;
+  stroke-dasharray: 3810;
+  stroke-dashoffset: 3810;
 }
 
 .each-point__mark {
@@ -2156,7 +2156,6 @@ h5.main__title {
 .sound__anim {
   width: 100%;
   height: 25.94vw;
-  margin-bottom: 7vw;
 }
 
 .sound__anim canvas {
@@ -2620,7 +2619,6 @@ h5.main__title {
   white-space: normal;
   font-size: 0.83vw;
   line-height: 1.4em;
-  text-transform: uppercase;
   background: #1A1A20;
 }
 
@@ -2831,36 +2829,50 @@ h5.main__title {
   transform: translateY(-100%);
 }
 
+.hunger-progress__man img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .hunger-progress__man_1 {
   left: 0;
+  width: 1.2vw;
 }
 
 .hunger-progress__man_2 {
   left: 2.81vw;
+  width: 1.56vw;
 }
 
 .hunger-progress__man_3 {
   left: 10.42vw;
+  width: 1.25vw;
 }
 
 .hunger-progress__man_4 {
   left: 18.75vw;
+  width: 1.56vw;
 }
 
 .hunger-progress__man_5 {
   right: 44.79vw;
+  width: 0.94vw;
 }
 
 .hunger-progress__man_6 {
   right: 26.88vw;
+  width: 1.04vw;
 }
 
 .hunger-progress__man_7 {
   right: 5.73vw;
+  width: 1.2vw;
 }
 
 .hunger-progress__man_finish {
   right: 0px;
+  width: 1.46vw;
 }
 
 .hunger-progress__img {
@@ -2905,6 +2917,13 @@ h5.main__title {
 
 .hunger-map__icon {
   margin: 8.02vw 0 2.34vw;
+  width: 3.8vw;
+}
+
+.hunger-map__icon img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hunger-map__title {
