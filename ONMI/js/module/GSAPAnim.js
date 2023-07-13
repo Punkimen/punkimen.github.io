@@ -186,9 +186,10 @@ export const animTextLine = (el, trigger) => {
     }
   })
 }
-export const horizontalTransform = (el, trigger, startVal, endValue, scrub = true, ease) => {
+export const horizontalTransform = (el, trigger, startVal, endValue, scrub = true, ease, start, end) => {
   const delay = el.getAttribute('data-delay') || 0
   const duration = el.getAttribute('data-duration') || 1.2
+  console.log(start, end)
   gsap.fromTo(el, {
     x: startVal || 0,
   }, {
@@ -198,8 +199,8 @@ export const horizontalTransform = (el, trigger, startVal, endValue, scrub = tru
     duration: duration,
     scrollTrigger: {
       trigger: trigger || el,
-      start: "center bottom",
-      end: "top top",
+      start: start || "center bottom",
+      end: end || "top top",
       scrub: scrub
     }
   })

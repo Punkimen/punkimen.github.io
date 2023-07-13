@@ -15,7 +15,7 @@ import {
   rightToLeft,
   scalingFoo,
   showElem, svgDraw, verticalTransform
-} from "./module/GSAPAnim.min.js";
+} from "./module/GSAPAnim.js";
 import {circlesAdaptive, stepAdaptive} from "./module/adaptiveResize.min.js";
 import {getPopulation} from "./module/getPopulation.min.js";
 
@@ -57,7 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const journeyCardOmi = document.querySelector('.journey-card_2 .journey-card__omi')
     const journeyCardMap = document.querySelector('.journey-card_4 .card__front-img_bg')
     const securityBlock = document.querySelector('.security');
-
+    const pvpPose1 = document.querySelector('.pvp-pose_1')
+    const pvpPose2 = document.querySelector('.pvp-pose_2')
     //gsap init
     gsap.registerPlugin(ScrollTrigger);
 
@@ -67,31 +68,26 @@ document.addEventListener("DOMContentLoaded", () => {
     verticalTransform(journeyCardOmi, journeyCardOmi, '-5%', '5%', true)
     verticalTransform(journeyCardMap, journeyCardMap, '-5%', '5%', true)
     verticalTransform(securityBlock, securityBlock, '-10%', '5%', true)
+    verticalTransform(pvpPose1, pvpPose1, '5%', '-5%', true)
+    verticalTransform(pvpPose2, pvpPose2, '-5%', '5%', true)
 
-    /*    const videoPlay = ScrollTrigger.create({
+    if (video) {
+      let tl = gsap.timeline({
+        defaults: {duration: 1},
+        scrollTrigger: {
           trigger: video,
-          // pinned: true,
           start: "top bottom",
           end: "bottom top",
-          onToggle: (self) => {
-            video.currentTime = 0
-            self.isActive ? video.play() : video.pause();
-          },
-        });*/
-    let tl = gsap.timeline({
-      defaults: {duration: 1},
-      scrollTrigger: {
-        trigger: video,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-        onUpdate: (e) => {
-          const progress = e.progress.toFixed(2)
-          const duration = video.duration
-          video.currentTime = (duration * progress).toFixed(2)
+          scrub: true,
+          onUpdate: (e) => {
+            const progress = e.progress.toFixed(2)
+            const duration = video.duration
+            video.currentTime = (duration * progress).toFixed(2)
+          }
         }
-      }
-    });
+      });
+    }
+    ;
     // functions
     const asyncInit = async () => {
       const population = JSON.parse(await getPopulation())
@@ -263,8 +259,8 @@ document.addEventListener("DOMContentLoaded", () => {
     svgDraw(svgLine, svgLine, '400%')
     leftToRight(missionLineHorizontal, '.mission')
 
-    horizontalTransform(phone_1, phoneScreens, '17.5vw', '0')
-    horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0")
+    horizontalTransform(phone_1, phoneScreens, '17.5vw', '0', true, null, 'top bottom', 'top+=25% center')
+    horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
     /*    opacityIn(phone_1, phoneScreens, null, true)
         opacityIn(phone_3, phoneScreens, null, true)*/
 

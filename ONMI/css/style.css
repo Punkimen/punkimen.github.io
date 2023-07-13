@@ -331,6 +331,7 @@ h5.main__title {
 }
 
 .line_bottom {
+  top: auto;
   bottom: 0;
 }
 
@@ -919,7 +920,7 @@ h5.main__title {
 }
 
 .adventure {
-  padding: 10.81vw 0 7.81vw;
+  padding: 0vw 0 7.81vw;
   position: relative;
 }
 
@@ -1726,6 +1727,89 @@ h5.main__title {
   height: auto;
 }
 
+.find-map__pointer {
+  position: absolute;
+  z-index: 3;
+}
+
+.find-map__pointer_1 {
+  bottom: 13.49vw;
+  left: 5.57vw;
+}
+
+.find-map__pointer_2 {
+  bottom: 15.31vw;
+  left: 10.47vw;
+}
+
+.find-map__pointer_3 {
+  bottom: 20.52vw;
+  left: 9.95vw;
+}
+
+.find-map__pointer_3 .find-map__pointer-text {
+  font-size: 0.42vw;
+}
+
+.find-map__pointer_4 {
+  bottom: 15.63vw;
+  left: 19.58vw;
+}
+
+.find-map__pointer_4 .find-map__pointer-text {
+  font-size: 0.73vw;
+}
+
+.find-map__pointer_5 {
+  bottom: 15.89vw;
+  left: 25.47vw;
+}
+
+.find-map__pointer_6 {
+  bottom: 12.24vw;
+  left: 30.63vw;
+}
+
+.find-map__pointer_7 {
+  bottom: 11.2vw;
+  right: 40.1vw;
+}
+
+.find-map__pointer_8 {
+  bottom: 17.24vw;
+  right: 27.14vw;
+}
+
+.find-map__pointer_9 {
+  bottom: 19.64vw;
+  right: 17.86vw;
+}
+
+.find-map__pointer_9 .find-map__pointer-text {
+  font-size: 0.52vw;
+}
+
+.find-map__pointer_10 {
+  bottom: 17.97vw;
+  right: 13.23vw;
+}
+
+.find-map__pointer-text {
+  font-size: 0.89vw;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.find-map__pointer-text::after {
+  content: url("../img/arrows/arrow_map.svg");
+  margin: 0 auto;
+  position: absolute;
+  top: calc(100% + 0.52vw);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .journey-cards {
   padding: 6.41vw 0 10vw;
 }
@@ -2145,7 +2229,6 @@ h5.main__title {
   heihgt: 11.2vw;
   padding: 1.41vw 2.6vw 2.08vw 2.6vw;
   border-radius: 1.41vw;
-  border: 0.05vw solid rgba(255, 255, 255, 0.1);
   background: #0A0A0A;
   display: flex;
   flex-direction: column;
@@ -3676,21 +3759,6 @@ h5.main__title {
 .question-item {
   padding: 0 2.29vw 0 1.45vw;
   position: relative;
-}
-
-.question-item__line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0.05vw;
-  background: rgba(255, 255, 255, 0.3);
-  transition: all ease-in-out 1.2s;
-}
-
-.question-item__line_bottom {
-  top: auto;
-  bottom: 0;
 }
 
 .question-item__header {
