@@ -185,6 +185,14 @@ h5.main__title {
   font-size: 1.35vw;
 }
 
+.text-desktop {
+  display: block;
+}
+
+.text-mob {
+  display: none;
+}
+
 .main__title {
   line-height: 0.85;
   font-size: 6.25vw;
@@ -215,11 +223,23 @@ h5.main__title {
 
 .title-row {
   overflow: hidden;
+  position: relative;
 }
 
-.title-row:not(:first-child) {
-  position: relative;
+.title-row:nth-child(2) {
   top: -0.6em;
+}
+
+.title-row:nth-child(3) {
+  top: -1.2em;
+}
+
+.title-row:nth-child(4) {
+  top: -1.8em;
+}
+
+.title-row:nth-child(5) {
+  top: -2.4em;
 }
 
 .swiper-btn {
@@ -487,6 +507,7 @@ h5.main__title {
   text-transform: uppercase;
   margin-right: 2.24vw;
   line-height: 2.1em;
+  font-size: 0.63vw;
 }
 
 .header__logo {
@@ -706,7 +727,7 @@ h5.main__title {
   border: 0.05vw solid rgba(255, 255, 255, 0.17);
   background: #000;
   font-size: 0.83vw;
-  padding: 0.78vw 2.08vw 0.83vw 1.41vw;
+  padding: 0.78vw 2.08vw 0.7vw 1.41vw;
   transform: rotate(-10deg);
   text-transform: uppercase;
   width: 100%;
@@ -738,6 +759,8 @@ h5.main__title {
 
 .hero__mobile-btn {
   display: none;
+  border-radius: 9.05vw;
+  min-width: 37.3vw;
 }
 
 #population {
@@ -756,7 +779,6 @@ h5.main__title {
   letter-spacing: -0.02em;
   line-height: 1.38em;
   color: #fff;
-  max-width: 30.47vw;
   width: 100%;
   margin: 0 auto 12vw;
   text-align: center;
@@ -764,9 +786,8 @@ h5.main__title {
 
 .reality__text_small {
   font-size: 1.25vw;
-  letter-spacing: -0.04vw;
+  letter-spacing: -0.02em;
   line-height: 1.4em;
-  max-width: 24.48vw;
   width: 100%;
   margin-bottom: 4vw;
 }
@@ -888,8 +909,8 @@ h5.main__title {
   width: 100%;
   font-weight: 600;
   font-size: 1.46vw;
-  line-height: 2.08vw;
-  letter-spacing: -0.05vw;
+  line-height: 1.5em;
+  letter-spacing: -0.03em;
   text-align: center;
   color: #000;
   max-width: 30vw;
@@ -922,6 +943,46 @@ h5.main__title {
 .adventure {
   padding: 0vw 0 7.81vw;
   position: relative;
+  /* &__title-row {
+     &:not(:first-child) {
+       position: relative;
+       top: -0.74em;
+     }
+
+     &_1 {
+       padding-left: 5vw;
+
+       @media(max-width: $md5) {
+         max-width: 46vw;
+         margin: 0 auto;
+
+         & > * {
+           text-align: left;
+         }
+       }
+     }
+
+     &_2 {
+       // padding-left: 15.9vw;
+       padding-left: 12.5vw;
+       transition-delay: .2s;
+
+       @media(max-width: $md5) {
+         max-width: 46vw;
+         min-width: auto;
+         margin: 0 auto;
+
+         & > * {
+           text-align: left !important;
+         }
+       }
+     }
+
+     &_3 {
+       text-align: center;
+       transition-delay: .4s
+     }
+   }*/
 }
 
 .adventure__content {
@@ -941,30 +1002,6 @@ h5.main__title {
 
 .adventure__title > * {
   min-width: 100%;
-}
-
-.adventure__title-row {
-  display: block;
-  perspective: 31.25vw;
-}
-
-.adventure__title-row:not(:first-child) {
-  position: relative;
-  top: -0.74em;
-}
-
-.adventure__title-row_1 {
-  padding-left: 5vw;
-}
-
-.adventure__title-row_2 {
-  padding-left: 12.5vw;
-  transition-delay: 0.2s;
-}
-
-.adventure__title-row_3 {
-  text-align: center;
-  transition-delay: 0.4s;
 }
 
 .adventure__text {
@@ -1148,7 +1185,6 @@ h5.main__title {
 }
 
 .create-omi__descr {
-  width: 59vw;
   margin: 0 auto 15vw;
   position: relative;
 }
@@ -1171,7 +1207,6 @@ h5.main__title {
 }
 
 .create-omi__text {
-  max-width: 38vw;
   width: 100%;
 }
 
@@ -1416,7 +1451,6 @@ h5.main__title {
 }
 
 .cards__omies-text {
-  max-width: 20.63vw;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -1434,11 +1468,6 @@ h5.main__title {
 
 .card:not(:last-child) {
   margin-bottom: 0.94vw;
-}
-
-.card__front {
-  background-color: #121214;
-  position: relative;
 }
 
 .card__front-img {
@@ -1567,10 +1596,9 @@ h5.main__title {
 }
 
 .card__front {
+  background-color: #121214;
+  position: relative;
   padding: 4.2vw 3.2vw 3vw 3.6vw;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -1606,6 +1634,7 @@ h5.main__title {
 
 .card__text {
   opacity: 0.37;
+  margin: 0 auto;
 }
 
 .omies__circles {
@@ -1657,7 +1686,6 @@ h5.main__title {
 }
 
 .find__title {
-  max-width: 43.07vw;
   width: 100%;
   letter-spacing: -0.26vw;
   position: relative;
@@ -1666,29 +1694,7 @@ h5.main__title {
   top: 1em;
 }
 
-.find__title-row {
-  perspective: 31.25vw;
-}
-
-.find__title-row_1 {
-  padding-left: 7vw;
-}
-
-.find__title-row_2 {
-  text-align: right;
-  padding-right: 6.67vw;
-}
-
-.find__title-row_3 {
-  padding-left: 20vw;
-}
-
-.find__title-row_4 {
-  padding-left: 13vw;
-}
-
 .find__text {
-  max-width: 40vw;
   width: 100%;
 }
 
@@ -1812,13 +1818,20 @@ h5.main__title {
 
 .journey-cards {
   padding: 6.41vw 0 10vw;
-}
+  /*
+    &__wrapper {
+      max-width: 52.81vw;
+      width: 100%;
+      display: flex;
+      margin: 0 auto 10.63vw;
+    }*/
+  /*  &__col {
+      width: 100%;
 
-.journey-cards__wrapper {
-  max-width: 52.81vw;
-  width: 100%;
-  display: flex;
-  margin: 0 auto 10.63vw;
+      &:not(:last-child) {
+        margin-right: .94vw;
+      }
+    }*/
 }
 
 .journey-cards__title {
@@ -1831,24 +1844,29 @@ h5.main__title {
   top: 0.6em;
 }
 
-.journey-cards__col {
-  width: 100%;
-}
-
-.journey-cards__col:not(:last-child) {
-  margin-right: 0.94vw;
-}
-
 .journey-card {
+  /*
   max-width: 25.99vw;
   background-color: #121214;
-  border-radius: 2.6vw;
+  border-radius: 2.60vw;
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
   text-align: center;
   padding: 3.2vw 3.2vw 3vw 3.6vw;
+
+  &:not(:last-child) {
+    margin-bottom: .94vw;
+  }
+  */
+  background-color: #121214;
+  border-radius: 2.6vw;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding: 4.2vw 3.2vw 3vw 3.6vw;
 }
 
 .journey-card:not(:last-child) {
@@ -1944,7 +1962,6 @@ h5.main__title {
 .journey-card_4 .journey-card__title {
   max-width: 10.42vw;
   width: 100%;
-  text-align: left;
 }
 
 .journey-card__content {
@@ -2020,7 +2037,6 @@ h5.main__title {
 
 .each-point__title {
   font-size: 2.45vw;
-  max-width: 50vw;
   width: 100%;
   margin: 0 auto 3.85vw;
   text-align: center;
@@ -2028,7 +2044,6 @@ h5.main__title {
 
 .each-point__text {
   text-align: center;
-  max-width: 15.63vw;
   width: 100%;
   margin: 0 auto 4.95vw;
   line-height: 1.8em;
@@ -2036,7 +2051,6 @@ h5.main__title {
 }
 
 .each-point__text_2 {
-  max-width: 26.04vw;
   margin: 0 auto;
 }
 
@@ -2075,6 +2089,16 @@ h5.main__title {
 .each-point__svg {
   width: 100vw;
   height: 18.07vw;
+}
+
+.each-point__svg_mob {
+  display: none;
+}
+
+.each-point__svg_mob img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .each-point .dashed {
@@ -2149,6 +2173,31 @@ h5.main__title {
   right: 5.89vw;
 }
 
+.each-point__list {
+  display: none;
+}
+
+.each-point__elem {
+  position: relative;
+  padding-left: 4vw;
+}
+
+.each-point__elem::before {
+  content: "";
+  display: block;
+  background: url("../img/icons/map_marker.svg");
+  background-size: cover;
+  width: 1vw;
+  height: 1.2vw;
+  position: absolute;
+  top: 0.6vw;
+  left: 0;
+}
+
+.each-point__elem:not(:last-child) {
+  margin-bottom: 4vw;
+}
+
 .sound {
   margin-bottom: 5vw;
 }
@@ -2175,9 +2224,7 @@ h5.main__title {
 .sound__text {
   text-align: center;
   color: #fff;
-  font-size: 1.04vw;
   line-height: 1.4em;
-  max-width: 39.84vw;
   width: 100%;
   margin: 0 auto 8.3vw;
 }
@@ -2196,7 +2243,6 @@ h5.main__title {
 }
 
 .sound-season {
-  max-width: 11.2vw;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -2282,7 +2328,7 @@ h5.main__title {
 }
 
 .pvp {
-  padding: 19vw 0 12vw;
+  padding: 19vw 0 0vw;
 }
 
 .pvp__wrapper {
@@ -2303,54 +2349,7 @@ h5.main__title {
   left: -0.04em;
 }
 
-.pvp__screen {
-  position: relative;
-  width: 55.16vw;
-  margin: -22vw auto 0;
-}
-
-.pvp__screen-text {
-  position: absolute;
-  left: 1.98vw;
-  bottom: 9.9vw;
-  width: 14.43vw;
-  padding: 1.88vw 2.08vw 2.24vw 2.4vw;
-  background: #121214;
-  border: 0.05vw solid #292929;
-  border-radius: 2.03vw;
-  font-size: 0.78vw;
-  line-height: 1.4em;
-  z-index: 2;
-}
-
-.pvp__screen-phone {
-  position: relative;
-  left: 0.52vw;
-  width: 19.11vw;
-  margin: 0 auto;
-}
-
-.pvp__screen-phone img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.pvp__screen-OMI {
-  width: 67.4vw;
-  position: absolute;
-  bottom: -25.57vw;
-  right: -17.4vw;
-}
-
-.pvp__screen-OMI img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .pvp__text {
-  max-width: 31.25vw;
   width: 100%;
   margin: 0 auto 7.29vw;
   font-weight: 500;
@@ -2466,6 +2465,20 @@ h5.main__title {
   position: relative;
 }
 
+.level__pagination {
+  display: none;
+}
+
+.level-slider .swiper-pagination-bullet {
+  width: 1.43vw;
+  height: 1.43vw;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.level-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
 .level-circle {
   flex: 0 0 49.53vw;
   display: flex;
@@ -2534,22 +2547,21 @@ h5.main__title {
 }
 
 .market {
-  padding: 14.5vw 0 15vw;
+  padding: 10vw 0 15vw;
 }
 
 .market__wrapper {
   position: relative;
-  width: 48.96vw;
   margin: 0 auto 11.9vw;
 }
 
 .market__title {
   letter-spacing: -0.04em;
   margin-bottom: 3.44vw;
+  line-height: 1.6em;
 }
 
 .market__text {
-  max-width: 30vw;
   width: 100%;
   margin: 0 auto;
 }
@@ -3214,10 +3226,6 @@ h5.main__title {
   top: 0.78em;
 }
 
-.culture__title .title-row:last-child {
-  top: -1.2em;
-}
-
 .culture__pose {
   width: 100%;
   max-width: 15vw;
@@ -3258,6 +3266,7 @@ h5.main__title {
   width: 150%;
   height: 150%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, #000 100%);
+  z-index: 1;
 }
 
 .culture-circle:nth-child(2) {
@@ -3274,7 +3283,7 @@ h5.main__title {
   max-width: 17.71vw;
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .culture-circle__icon {
@@ -4009,6 +4018,13 @@ h5.main__title {
   background-image: url(../img/OMI/card_2_bg.webp);
 }
 
+.hide-for-adaptive {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
 @media (min-width: 1920.05vw) {
   .main__text {
     font-size: 1vw;
@@ -4109,6 +4125,10 @@ h5.main__title {
     height: 0.5vw;
   }
 
+  .reality__screen {
+    min-width: 15.67vw;
+  }
+
   .omi-card__title {
     font-size: 1.75vw;
   }
@@ -4131,15 +4151,485 @@ h5.main__title {
     width: 6.6vw;
   }
 
-  .pvp__screen-text {
-    font-size: 1.33vw;
-    width: 16.67vw;
-    left: -1.02vw;
-    bottom: 12.9vw;
+  .sound-season__count {
+    font-size: 1vw;
+  }
+
+  .sound-season__author {
+    width: 13vw;
+    height: 13vw;
+  }
+
+  .sound-season__author_unknown {
+    width: 11vw;
+    height: 11vw;
+  }
+
+  .sound-season__name {
+    font-size: 1.2vw;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 990px) {
+  body {
+    font-size: 1.5vw;
+  }
+
+  .container {
+    padding: 0 2.82vw;
+  }
+
+  .btn {
+    min-width: 14.11vw;
+    padding: 1.92vw;
+    font-size: 1.41vw;
+  }
+
+  .btn_app {
+    padding: 0.58vw 0.94vw 0.58vw 0.94vw;
+  }
+
+  .main__text {
+    font-size: 1.41vw;
+  }
+
+  .header {
+    font-size: 1.21vw;
+  }
+
+  .header__logo {
+    width: 7.21vw;
+  }
+
+  .header__list-elem:first-child {
+    margin-right: 5.08vw;
+  }
+
+  .header__link_roadmap {
+    margin-right: 9.2vw;
+  }
+
+  .dropdown__header span {
+    padding-right: 1.51vw;
+  }
+
+  .dropdown__header span::after {
+    width: 1.11vw;
+    height: 0.6vw;
+  }
+
+  .app-btn {
+    font-size: 1.2vw;
+  }
+
+  .app-btn__icon {
+    width: 1.1vw;
+    margin-right: 0.8vw;
+  }
+
+  .burger {
+    width: 4vw;
+    height: 0.5vw;
+  }
+
+  .hero {
+    padding: 12vw 0 12vw;
+  }
+
+  .hero__title {
+    font-size: 12.1vw;
+  }
+
+  .hero__info {
+    font-size: 1.21vw;
+  }
+
+  .hero__text {
+    font-size: 1.01vw;
+  }
+
+  .reality__text_small {
+    max-width: 100%;
+    font-size: 2.42vw;
+    margin-bottom: 10.1vw;
+  }
+
+  .reality__screen {
+    min-width: 18.99vw;
+  }
+
+  .reality__decor {
+    width: 12.02vw;
+    height: 12.02vw;
+  }
+
+  .description-reality__text {
+    max-width: 60%;
+    font-size: 2.42vw;
+  }
+
+  .cards-slider__descr {
+    font-size: 1.21vw;
+  }
+
+  .cards-slider__num {
+    font-size: 1.01vw;
+  }
+
+  .create-omi__text {
+    width: 100%;
+  }
+
+  .create-omi__item {
+    width: 16vw;
+  }
+
+  .create-omi__cards {
+    width: 100%;
+  }
+
+  .create-omi__cards-wrapper {
+    display: grid;
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    row-gap: 2.6vw;
+  }
+
+  .create-omi__card {
+    max-width: 50.4vw;
+  }
+
+  .create-omi__card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .omi-card__title {
+    font-size: 2.12vw;
+  }
+
+  .omi-card__text {
+    font-size: 1.41vw;
+  }
+
+  .omi-card__label-icon {
+    width: 2.22vw;
+    height: 2.22vw;
+  }
+
+  .omi-card__label-text {
+    font-size: 1.41vw;
+  }
+
+  .omi-card__point-btn {
+    width: 2.42vw;
+    height: 2.42vw;
+    font-size: 1.81vw;
+  }
+
+  .omi-card__point-value {
+    font-size: 3.63vw;
+  }
+
+  .omi-card__total {
+    margin-top: 3.23vw;
+  }
+
+  .omi-card__total-value {
+    font-size: 7.26vw;
+  }
+
+  .omi-card__total-descr {
+    font-size: 1.71vw;
+    width: 10.08vw;
+  }
+
+  .omi-card__unallocated-points {
+    width: 9.27vw;
+    height: 9.27vw;
+    font-size: 3.02vw;
+  }
+
+  .cards__wrapper {
+    max-width: 70vw;
+  }
+
+  .card_1 {
+    height: 48.81vw;
+  }
+
+  .card_1 .card__front-img {
+    max-width: 85%;
+  }
+
+  .card_2 {
+    height: 37vw;
+    padding-bottom: 4vw;
+  }
+
+  .card_3 {
+    height: 42vw;
+  }
+
+  .card_3 .card__front {
+    padding-bottom: 4vw;
+  }
+
+  .card_3 .card__front .card__front-img {
+    width: 150%;
+  }
+
+  .card_3 .card__title {
+    max-width: 50%;
+  }
+
+  .card_3 .card__text {
+    max-width: 72%;
+  }
+
+  .card_4 .card__title {
+    max-width: 66%;
+  }
+
+  .card__front {
+    padding: 6vw 3vw;
+  }
+
+  .card__title {
+    font-size: 2vw;
+  }
+
+  .omies__circle {
+    width: 7vw;
+    flex: 0 0 7vw;
+  }
+
+  .omies__circle_2 {
+    width: 7.5vw;
+    flex: 0 0 7.5vw;
+  }
+
+  .journey-card {
+    padding: 6vw 3vw;
+  }
+
+  .journey-card_1 {
+    height: 40vw;
+  }
+
+  .journey-card_1 .journey-card__phone {
+    max-width: 50%;
+  }
+
+  .journey-card_2 {
+    height: 50vw;
+  }
+
+  .journey-card_2 .journey-card__omi {
+    width: 190%;
+  }
+
+  .journey-card_3 {
+    height: 50vw;
+    padding-bottom: 2vw;
+  }
+
+  .journey-card_3 .journey-card__title {
+    max-width: 75%;
+  }
+
+  .journey-card_3 .journey-card-video {
+    max-width: 22.81vw;
+  }
+
+  .journey-card_4 {
+    height: 40vw;
+  }
+
+  .journey-card_4 .journey-card__title {
+    max-width: 70%;
+  }
+
+  .each-point__text {
+    font-size: 1.2vw;
+  }
+
+  .each-point__circle {
+    padding: 7.29vw 3.52vw 7.29vw 4.52vw;
+  }
+
+  .each-point__circle-text {
+    font-size: 1.2vw;
+  }
+
+  .each-point__mark {
+    max-width: 0.8vw;
+  }
+
+  .sound__anim {
+    height: 35vw;
+  }
+
+  .sound-season__name {
+    font-size: 1.5vw;
+  }
+
+  .pvp__text {
+    font-size: 1.41vw;
+  }
+
+  .level-circle__title {
+    font-size: 3vw;
+  }
+
+  .level-circle__text {
+    font-size: 1.41vw;
+    max-width: 26.35vw;
+  }
+
+  .market__subtitle {
+    font-size: 4.03vw;
+    width: 17vw;
+  }
+
+  .market__descr-text {
+    font-size: 1.61vw;
+    width: 27vw;
+  }
+
+  .market-catalog__item {
+    width: 23.57vw;
+    height: 26.82vw;
+  }
+
+  .market-catalog__item img {
+    width: 115%;
+  }
+
+  .market-catalog__item_text {
+    font-size: 1.61vw;
+  }
+
+  .hunger-games__title {
+    font-size: 8.69vw;
+  }
+
+  .hunger-games__title_small {
+    line-height: 1em;
+    font-size: 6.26vw;
+  }
+
+  .hunger-games__pose {
+    top: -26.5vw;
+    left: 35vw;
+    width: 21.05vw;
+  }
+
+  .hunger-games__content {
+    width: 37.27vw;
+  }
+
+  .hunger-games__content_down {
+    width: 37.27vw;
+  }
+
+  .hunger-games__subtitle {
+    font-size: 3.63vw;
+  }
+
+  .hunger-games__subtitle_small {
+    width: 100%;
+    font-size: 3.02vw;
+  }
+
+  .hunger-games__subtitle span:last-child {
+    width: 100%;
+  }
+
+  .hunger-games__text {
+    font-size: 1.61vw;
+    width: 100%;
+  }
+
+  .hunger-progress__text {
+    font-size: 1.41vw;
+  }
+
+  .hunger-progress__text_1 {
+    max-width: 23.16vw;
+  }
+
+  .hunger-progress__text_2 {
+    max-width: 23.16vw;
+  }
+
+  .hunger-progress__text_3 {
+    max-width: 23.16vw;
+  }
+
+  .individual__title {
+    font-size: 2.82vw;
+  }
+
+  .individual-chose__item {
+    max-width: 100%;
+  }
+
+  .individual-chose__item:not(:last-child) {
+    margin-right: 4vw;
+  }
+
+  .individual-chose__label {
+    font-size: 2.62vw;
+  }
+
+  .individual-chose__text {
+    font-size: 1.81vw;
+    max-width: 100%;
+  }
+
+  .individual-chose__list {
+    font-size: 1.81vw;
+  }
+
+  .individual-chose__list-elem::before {
+    font-size: 1.21vw;
+    width: 2.32vw;
+    height: 2.32vw;
+    line-height: 0.9em;
+    left: -3.02vw;
+  }
+
+  .mission__title {
+    font-size: 6.05vw;
+  }
+
+  .mission__text {
+    font-size: 2.12vw;
+  }
+
+  .mission__text_big {
+    font-size: 3.03vw;
+  }
+
+  .token__card {
+    height: 35.58vw;
+  }
+
+  .token__card-label {
+    font-size: 2.72vw;
+  }
+
+  .token__card-text {
+    font-size: 1.61vw;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 2vw;
+  }
+
   .container {
     padding: 0 3.65vw;
   }
@@ -4150,9 +4640,17 @@ h5.main__title {
     font-size: 1.82vw;
   }
 
+  .text-desktop {
+    display: none;
+  }
+
+  .text-mob {
+    display: block;
+  }
+
   .main__title {
     font-size: 10.42vw;
-    line-height: 1em;
+    line-height: 1.6em;
     letter-spacing: normal;
   }
 
@@ -4165,11 +4663,18 @@ h5.main__title {
     font-size: 1.56vw;
     position: relative;
     text-align: center;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
     margin: 0 auto;
+  }
+
+  .swiper-btn {
+    max-width: 12vw;
+    height: 7vw;
+    border-radius: 3.83vw;
+  }
+
+  .swiper-btn img {
+    width: 2.56vw;
+    height: 1.99vw;
   }
 
   .header {
@@ -4202,8 +4707,10 @@ h5.main__title {
   }
 
   .hero {
-    height: 100vh;
-    min-height: 93vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero__wrapper {
@@ -4221,11 +4728,37 @@ h5.main__title {
     letter-spacing: -0.01em;
     font-size: 14.55vw;
     left: 0;
-    margin-bottom: 8vw;
+    margin-bottom: 5vw;
+  }
+
+  .hero__info {
+    display: none;
+  }
+
+  .hero__text {
+    text-align: center;
+    text-transform: none;
+    font-size: 2.86vw;
+    line-height: 1.5em;
+    margin-bottom: 13.81vw;
   }
 
   .hero__mobile-btn {
     display: block;
+  }
+
+  .reality__text_small {
+    font-size: 3.13vw;
+    margin-bottom: 13.02vw;
+  }
+
+  .reality__screen {
+    min-width: 44.76vw;
+  }
+
+  .reality__decor {
+    width: 15.49vw;
+    height: 15.49vw;
   }
 
   .fixed-btns {
@@ -4233,11 +4766,8 @@ h5.main__title {
   }
 
   .description-reality__text {
-    font-size: 1.56vw;
-  }
-
-  .description-reality__text p:not(:last-child) {
-    font-size: 1.56vw;
+    font-size: 3.13vw;
+    max-width: 80%;
   }
 
   .bordered-text {
@@ -4251,11 +4781,11 @@ h5.main__title {
   }
 
   .adventure__title {
-    margin-bottom: 4.56vw;
+    margin-bottom: 1vw;
   }
 
   .adventure__text {
-    max-width: 36.5vw;
+    max-width: 100%;
   }
 
   .adventure__slider-phone {
@@ -4317,7 +4847,6 @@ h5.main__title {
   }
 
   .create-omi__text {
-    max-width: 40.89vw;
     width: 100%;
   }
 
@@ -4383,8 +4912,46 @@ h5.main__title {
     font-size: 2.86vw;
   }
 
+  .cards__wrapper {
+    display: block;
+    max-width: 50vw;
+  }
+
+  .card:not(:last-child) {
+    margin-bottom: 1.3vw;
+  }
+
+  .card_1 {
+    height: 65vw;
+  }
+
+  .card_2 {
+    height: 52vw;
+  }
+
+  .card_2 .card__front .card__front-img {
+    max-width: 50%;
+  }
+
+  .card_3 {
+    height: 52vw;
+  }
+
+  .card_4 {
+    height: 65vw;
+  }
+
+  .card__title {
+    font-size: 3vw;
+  }
+
+  .omies {
+    display: none;
+  }
+
   .find {
     margin-bottom: 50%;
+    padding-top: 0;
   }
 
   .find__descr {
@@ -4396,15 +4963,6 @@ h5.main__title {
     margin-bottom: 5.86vw;
   }
 
-  .find__text {
-    position: relative;
-    top: 0;
-    right: 0;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-  }
-
   .find-map {
     background-size: auto;
     background-position: center;
@@ -4414,19 +4972,113 @@ h5.main__title {
   .find-map__phone {
     width: 27.34vw;
     top: 0;
-    transform: translateY(-50%);
+    transform: translateY(-25%);
   }
 
-  .pvp__screen-text {
+  .find-map__pointer {
     display: none;
   }
 
-  .pvp__screen-phone {
-    width: 37.24vw;
+  .journey-card:not(:last-child) {
+    margin-bottom: 1.3vw;
   }
 
-  .pvp__screen-OMI {
-    width: 108.07vw;
+  .journey-card_1 {
+    height: 65vw;
+  }
+
+  .journey-card_2 {
+    height: 65vw;
+  }
+
+  .journey-card_2 .journey-card__omi {
+    width: 170%;
+  }
+
+  .journey-card_3 {
+    height: 65vw;
+  }
+
+  .journey-card_4 {
+    height: 65vw;
+  }
+
+  .each-point__title {
+    font-size: 5.5vw;
+  }
+
+  .each-point__text {
+    display: none;
+  }
+
+  .each-point__circle {
+    display: none;
+  }
+
+  .each-point__route {
+    transform: translateY(0);
+    margin-bottom: 5vw;
+  }
+
+  .each-point__svg {
+    display: none;
+  }
+
+  .each-point__svg_mob {
+    display: block;
+  }
+
+  .each-point .mask {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
+
+  .each-point__mark {
+    display: none;
+  }
+
+  .each-point__list {
+    display: block;
+  }
+
+  .sound__anim {
+    height: 50vw;
+  }
+
+  .sound__title {
+    font-size: 6vw;
+  }
+
+  .sound-season__count {
+    font-size: 1.2vw;
+  }
+
+  .sound-season__author {
+    width: 18vw;
+    height: 18vw;
+  }
+
+  .sound-season__author_unknown {
+    width: 16vw;
+    height: 16vw;
+  }
+
+  .sound-season__photo {
+    width: 58%;
+    height: 58%;
+    margin-bottom: 4vw;
+  }
+
+  .pvp__title {
+    font-size: 32.4vw;
+  }
+
+  .pvp__text {
+    font-size: 1.56vw;
+  }
+
+  .level-circle__title {
+    font-size: 4.04vw;
   }
 
   .market__wrapper {
@@ -4436,7 +5088,7 @@ h5.main__title {
 
   .market__title {
     width: 100%;
-    margin-bottom: 5.21vw;
+    margin-bottom: -4.21vw;
   }
 
   .market__descr {
@@ -4461,8 +5113,8 @@ h5.main__title {
   }
 
   .market-catalog__item {
-    width: 23.57vw;
-    height: 26.82vw;
+    width: 28.57vw;
+    height: 34.82vw;
   }
 
   .market-catalog__item_text {
@@ -4470,13 +5122,81 @@ h5.main__title {
   }
 
   .hunger-games__wrapper {
-    margin-bottom: 55vw;
+    margin-bottom: -22vw;
   }
 
-  .hunger-games__pose {
-    width: 104.95vw;
-    left: 50%;
-    transform: translateX(-45%);
+  .hunger-games__title {
+    font-size: 11.2vw;
+  }
+
+  .hunger-games__title_small {
+    font-size: 8.07vw;
+  }
+
+  .hunger-progress__container {
+    padding: 0;
+  }
+
+  .hunger-progress__man_1 {
+    left: 3.65vw;
+    width: 2.2vw;
+  }
+
+  .hunger-progress__man_2 {
+    width: 2.56vw;
+    left: auto;
+    right: 26vw;
+  }
+
+  .hunger-progress__man_3 {
+    display: none;
+  }
+
+  .hunger-progress__man_4 {
+    display: none;
+  }
+
+  .hunger-progress__man_5 {
+    display: none;
+  }
+
+  .hunger-progress__man_6 {
+    display: none;
+  }
+
+  .hunger-progress__man_7 {
+    right: 15.65vw;
+    width: 2.2vw;
+  }
+
+  .hunger-progress__man_finish {
+    right: 3.65vw;
+    width: 2.46vw;
+  }
+
+  .hunger-progress__text {
+    font-size: 2.34vw;
+  }
+
+  .hunger-progress__text_1 {
+    max-width: 39.16vw;
+    margin-bottom: 2.6vw;
+  }
+
+  .hunger-progress__text_2 {
+    max-width: 39.16vw;
+  }
+
+  .hunger-progress__text_3 {
+    max-width: 39.16vw;
+  }
+
+  .hunger-progress__main-wrapper {
+    display: block;
+  }
+
+  .hunger-map__icon {
+    width: 6.8vw;
   }
 
   .be-part__content {
@@ -4545,33 +5265,20 @@ h5.main__title {
 
   .mission__wrapper {
     display: block;
-  }
-
-  .mission__line {
-    display: none;
+    padding-top: 11.5vw;
   }
 
   .mission__line_diagonally {
     display: block;
     width: 150%;
-    top: 15vw;
+    top: 66vw;
   }
 
   .mission__title {
-    font-size: 10.42vw;
-    margin-bottom: 20.44vw;
-    width: 24vw;
+    font-size: 8.2vw;
+    margin-bottom: 4.44vw;
     display: block;
-    word-wrap: break-word;
   }
-
-@supports (--css: hyphens) {
-    .mission__title {
-      word-wrap: normal;
-      -webkit-hyphens: manual;
-      hyphens: manual;
-    }
-}
 
   .mission__title-arrow {
     display: none;
@@ -4579,6 +5286,63 @@ h5.main__title {
 
   .mission__text {
     font-size: 2.73vw;
+  }
+
+  .mission__text:not(:last-child) {
+    margin-bottom: 37vw;
+  }
+
+  .mission__text_big {
+    font-size: 3.91vw;
+    width: 100%;
+  }
+
+  .culture {
+    padding: 20vw 0 0;
+  }
+
+  .culture__pose {
+    max-width: 30vw;
+    top: -29.8vw;
+    left: 32.74vw;
+  }
+
+  .culture-circles {
+    display: block;
+  }
+
+  .culture-circle {
+    padding: 6.6vw 2.6vw 2.6vw 7.14vw;
+    width: 75vw;
+    height: 75vw;
+    margin: 0 auto;
+  }
+
+  .culture-circle:nth-child(2) {
+    left: 0;
+    top: -14vw;
+  }
+
+  .culture-circle:nth-child(3) {
+    left: 0;
+    top: -24vw;
+  }
+
+  .culture-circle__content {
+    max-width: 44.27vw;
+    margin: 0 auto;
+  }
+
+  .culture-circle__icon {
+    max-width: 7.03vw;
+  }
+
+  .culture-circle__title {
+    font-size: 5.47vw;
+  }
+
+  .culture-circle__text {
+    font-size: 2.34vw;
   }
 
   .token__circle {
@@ -4635,8 +5399,12 @@ h5.main__title {
 }
 
 @media (max-width: 568px) {
+  body {
+    font-size: 4.3vw;
+  }
+
   .container {
-    padding: 0 5.63vw;
+    padding: 0 3.57vw;
   }
 
   .btn {
@@ -4650,7 +5418,7 @@ h5.main__title {
   }
 
   .main__text {
-    font-size: 2.82vw;
+    font-size: 3.81vw;
   }
 
   .header {
@@ -4661,21 +5429,28 @@ h5.main__title {
     font-size: 2.11vw;
   }
 
+  .reality__text_small {
+    font-size: 5.71vw;
+    margin-bottom: 23.81vw;
+  }
+
+  .reality__decor {
+    width: 28.33vw;
+    height: 28.33vw;
+  }
+
   .description-reality__text {
-    max-width: 68.08vw;
-    font-weight: bold;
-    font-size: 2.82vw;
-    line-height: 1.65em;
+    font-size: 5.71vw;
+    max-width: 76.67vw;
+    line-height: 1.3em;
   }
 
   .description-reality__text p:not(:last-child) {
-    font-weight: bold;
-    font-size: 2.82vw;
-    margin-bottom: 5vw;
+    margin-bottom: 7vw;
   }
 
   .description-reality__text p:last-child {
-    margin-top: 9vw;
+    line-height: 1.2em;
   }
 
   .adventure {
@@ -4687,34 +5462,11 @@ h5.main__title {
   }
 
   .adventure__title {
-    margin-bottom: 8.8vw;
+    margin-bottom: -8vw;
   }
 
   .adventure__title > * {
     min-width: auto;
-  }
-
-  .adventure__title-row_1 {
-    max-width: 46vw;
-    margin: 0 auto;
-  }
-
-  .adventure__title-row_1 > * {
-    text-align: left;
-  }
-
-  .adventure__title-row_2 {
-    max-width: 46vw;
-    min-width: auto;
-    margin: 0 auto;
-  }
-
-  .adventure__title-row_2 > * {
-    text-align: left !important;
-  }
-
-  .adventure__text {
-    max-width: 70.24vw;
   }
 
   .cards-slider__slider .swiper-wrapper {
@@ -4744,7 +5496,7 @@ h5.main__title {
   }
 
   .create-omi {
-    padding: 22.81vw 0 22.81vw;
+    padding: 0vw 0 22.81vw;
   }
 
   .create-omi__descr {
@@ -4756,7 +5508,6 @@ h5.main__title {
   }
 
   .create-omi__text {
-    max-width: 73.71vw;
     width: 100%;
   }
 
@@ -4837,47 +5588,256 @@ h5.main__title {
     font-size: 5.16vw;
   }
 
+  .cards__wrapper {
+    max-width: 100%;
+  }
+
+  .card {
+    border-radius: 12vw;
+  }
+
+  .card:not(:last-child) {
+    margin-bottom: 3.3vw;
+  }
+
+  .card_1 {
+    height: 155vw;
+  }
+
+  .card_1 .card__front-img {
+    max-width: 100%;
+  }
+
+  .card_2 {
+    height: 119vw;
+  }
+
+  .card_2 .card__text {
+    max-width: 71%;
+  }
+
+  .card_2 .card__front {
+    padding-bottom: 12vw;
+  }
+
+  .card_2 .card__front .card__front-img {
+    max-width: 63%;
+  }
+
+  .card_3 {
+    height: 114vw;
+  }
+
+  .card_3 .card__title {
+    max-width: 100%;
+  }
+
+  .card_4 {
+    height: 158vw;
+  }
+
+  .card_4 .card__title {
+    max-width: 75%;
+  }
+
+  .card__front {
+    padding: 13.2vw 5vw 8.8vw 5vw;
+  }
+
+  .card__title {
+    font-size: 6.3vw;
+    margin-bottom: 3.2vw;
+  }
+
   .find {
-    margin-bottom: 74%;
-    padding: 32.81vw 0 22.81vw;
+    margin-bottom: 46vw;
+    padding: 0 0 22.81vw;
+  }
+
+  .find__descr {
+    margin-bottom: 88vw;
   }
 
   .find__title {
-    margin-bottom: 11.86vw;
+    font-size: 14.76vw;
+    margin-bottom: 15.5vw;
+  }
+
+  .find-map__video {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 256%;
   }
 
   .find-map__phone {
     width: 49.3vw;
   }
 
+  .journey-card {
+    border-radius: 12vw;
+    padding: 13.2vw 5vw 8.8vw 5vw;
+    height: 138vw;
+  }
+
+  .journey-card:not(:last-child) {
+    margin-bottom: 3.3vw;
+  }
+
+  .journey-card_1 .journey-card__phone {
+    max-width: 65%;
+  }
+
+  .journey-card_3 .journey-card-video {
+    max-width: 51.81vw;
+  }
+
+  .each-point__title {
+    font-size: 8.2vw;
+    line-height: 1.1em;
+    margin-bottom: 17.8vw;
+  }
+
+  .each-point__route {
+    margin-bottom: 24vw;
+  }
+
+  .each-point__svg_mob {
+    display: block;
+    margin-bottom: -7vw;
+  }
+
+  .each-point__elem {
+    padding-left: 7vw;
+    font-size: 4.5vw;
+  }
+
+  .each-point__elem::before {
+    top: 1.4vw;
+    width: 2.38vw;
+    height: 2.9vw;
+  }
+
+  .each-point__elem:not(:last-child) {
+    margin-bottom: 10vw;
+  }
+
+  .sound__anim {
+    height: 80vw;
+  }
+
+  .sound__title {
+    font-size: 15vw;
+    margin: 0 auto 13vw;
+    line-height: 1;
+    max-width: 60%;
+  }
+
+  .sound__text {
+    font-size: 4vw;
+    margin-bottom: 22.3vw;
+  }
+
+  .sound-season__line {
+    height: 8.93vw;
+    margin: 6.15vw auto;
+  }
+
+  .sound-season__count {
+    font-size: 3.2vw;
+    margin-bottom: 5.15vw;
+  }
+
+  .sound-season__author {
+    border-radius: 7vw;
+    width: 51vw;
+    height: 51vw;
+  }
+
+  .sound-season__author_unknown {
+    width: 41vw;
+    height: 41vw;
+  }
+
+  .sound-season__author_unknown .sound-season__photo {
+    width: 47%;
+    height: 47%;
+  }
+
+  .sound-season__name {
+    font-size: 4.2vw;
+  }
+
   .pvp {
-    padding: 40vw 0 110vw;
+    padding: 40vw 0 30vw;
   }
 
-  .pvp__screen-phone {
-    width: 67.14vw;
-    left: -6.48vw;
+  .pvp__wrapper {
+    margin-bottom: 133vw;
   }
 
-  .pvp__screen-OMI {
-    width: 300vw;
-    transform: translate(55%, 45%);
-    bottom: 0;
+  .pvp__title {
+    font-size: 30vw;
+  }
+
+  .pvp__text {
+    font-size: 3.81vw;
+  }
+
+  .pvp-pose_1 {
+    max-width: none;
+    width: 153%;
+    top: 37.58vw;
+    left: -41.87vw;
+  }
+
+  .pvp-pose_2 {
+    top: -3vw;
+    right: 2vw;
+    max-width: 71vw;
+  }
+
+  .level__pagination {
+    display: block;
+    bottom: 13.33vw;
+  }
+
+  .level-slider {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .level-circle {
+    width: 150vw;
+    height: 150vw;
+    flex: 0 0 150vw;
+  }
+
+  .level-circle__title {
+    font-size: 7.6vw;
+  }
+
+  .level-circle__text {
+    font-size: 3.81vw;
+    max-width: 46%;
+  }
+
+  .level-slider__arrow {
+    display: none;
+  }
+
+  .market {
+    padding: 10vw 0 109vw;
   }
 
   .market__title {
     text-align: center;
-    width: 97%;
-    margin: 0 auto 12vw;
+    margin: 0 auto -10vw;
   }
 
   .market__title > * {
     display: inline;
     text-align: center;
-  }
-
-  .market__text {
-    width: 70vw;
   }
 
   .market__subtitle {
@@ -4890,9 +5850,9 @@ h5.main__title {
   }
 
   .market-catalog__item {
-    padding: 4.16vw;
-    width: 42.49vw;
-    height: 48.36vw;
+    padding: 7vw;
+    width: 56.49vw;
+    height: 68.36vw;
   }
 
   .market-catalog__item_text {
@@ -4900,16 +5860,25 @@ h5.main__title {
   }
 
   .hunger-games {
-    padding-bottom: 2.08vw;
+    padding-bottom: 68vw;
   }
 
   .hunger-games__wrapper {
-    margin-bottom: 145vw;
+    margin-bottom: -30vw;
+  }
+
+  .hunger-games__title {
+    font-size: 28.48vw;
+  }
+
+  .hunger-games__title_small {
+    font-size: 14.76vw;
   }
 
   .hunger-games__pose {
-    width: 250vw;
-    top: -37vw;
+    top: -53.5vw;
+    left: 24vw;
+    width: 43.05vw;
   }
 
   .hunger-games__content {
@@ -5003,6 +5972,55 @@ h5.main__title {
     height: 2.11vw;
   }
 
+  .hunger-progress__container {
+    padding: 0;
+  }
+
+  .hunger-progress__inner {
+    padding-bottom: 22.8vw;
+  }
+
+  .hunger-progress__man_1 {
+    width: 5.9vw;
+  }
+
+  .hunger-progress__man_2 {
+    right: 43vw;
+    width: 7.9vw;
+  }
+
+  .hunger-progress__man_7 {
+    width: 5.9vw;
+    right: 27vw;
+  }
+
+  .hunger-progress__man_finish {
+    right: 6.65vw;
+    width: 6.46vw;
+  }
+
+  .hunger-progress__text {
+    font-size: 4.29vw;
+  }
+
+  .hunger-progress__text_1 {
+    max-width: 100%;
+    margin-bottom: 5.6vw;
+  }
+
+  .hunger-progress__text_2 {
+    max-width: 100%;
+  }
+
+  .hunger-progress__text_3 {
+    max-width: 100%;
+  }
+
+  .hunger-map__icon {
+    width: 17.8vw;
+    margin: 25.02vw 0 9.34vw;
+  }
+
   .be-part__content {
     margin-bottom: 135vw;
   }
@@ -5047,19 +6065,83 @@ h5.main__title {
     margin-bottom: 52vw;
   }
 
+  .mission__line {
+    top: -19.53vw;
+  }
+
   .mission__line_diagonally {
-    top: 49vw;
+    top: 118vw;
   }
 
   .mission__title {
-    font-size: 18.78vw;
-    width: 43vw;
-    margin-bottom: 42.25vw;
+    font-size: 15vw;
+    margin-bottom: 8.25vw;
   }
 
   .mission__text {
-    font-size: 4.93vw;
+    font-size: 5.71vw;
+    line-height: 1.6em;
     width: 100%;
+  }
+
+  .mission__text:not(:last-child) {
+    margin-bottom: 63.4vw;
+  }
+
+  .mission__text_big {
+    font-size: 7.14vw;
+  }
+
+  .culture__title {
+    font-size: 19.05vw;
+    line-height: 1.45em;
+    margin-bottom: -18vw;
+  }
+
+  .culture__pose {
+    max-width: 56vw;
+    top: -50.8vw;
+    left: 21.74vw;
+  }
+
+  .culture-circle {
+    padding-top: 35.6vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160.71vw;
+    height: 160.71vw;
+  }
+
+  .culture-circle:nth-child(2) {
+    left: 50%;
+    top: 5vw;
+  }
+
+  .culture-circle:nth-child(3) {
+    left: 50%;
+    top: 30vw;
+  }
+
+  .culture-circle__content {
+    max-width: 80.95vw;
+  }
+
+  .culture-circle__icon {
+    max-width: 12.86vw;
+    margin-bottom: 21.5vw;
+  }
+
+  .culture-circle__title {
+    font-size: 10vw;
+    margin-bottom: 10.5vw;
+  }
+
+  .culture-circle__text {
+    font-size: 4.29vw;
+  }
+
+  .culture-circle__text p:not(:last-child) {
+    margin-bottom: 5.5vw;
   }
 
   .token__circle {
@@ -5102,277 +6184,6 @@ h5.main__title {
 
   .token__card-text {
     font-size: 3.76vw;
-  }
-}
-
-@media (max-width: 0px) {
-  .container {
-    padding: 0 2.82vw;
-  }
-
-  .btn {
-    min-width: 14.11vw;
-    padding: 1.92vw;
-    font-size: 1.41vw;
-  }
-
-  .btn_app {
-    padding: 0.58vw 0.94vw 0.58vw 0.94vw;
-  }
-
-  .main__text {
-    font-size: 1.41vw;
-  }
-
-  .swiper-btn {
-    max-width: 12vw;
-    height: 7vw;
-    border-radius: 3.83vw;
-  }
-
-  .swiper-btn img {
-    width: 2.56vw;
-    height: 1.99vw;
-  }
-
-  .header {
-    font-size: 1.21vw;
-  }
-
-  .header__list-elem:first-child {
-    margin-right: 5.08vw;
-  }
-
-  .header__link_roadmap {
-    margin-right: 9.2vw;
-  }
-
-  .dropdown__header span {
-    padding-right: 1.51vw;
-  }
-
-  .dropdown__header span::after {
-    width: 1.11vw;
-    height: 0.6vw;
-  }
-
-  .hero {
-    padding: 12vw 0 12vw;
-  }
-
-  .hero__title {
-    font-size: 12.1vw;
-  }
-
-  .description-reality__text {
-    font-size: 1.21vw;
-  }
-
-  .description-reality__text p:not(:last-child) {
-    font-size: 1.21vw;
-  }
-
-  .create-omi__text {
-    max-width: 29.54vw;
-    width: 100%;
-  }
-
-  .create-omi__item {
-    width: 16vw;
-  }
-
-  .create-omi__cards {
-    width: 100%;
-  }
-
-  .create-omi__cards-wrapper {
-    display: grid;
-    grid-auto-rows: 1fr;
-    justify-content: center;
-    row-gap: 2.6vw;
-  }
-
-  .create-omi__card {
-    max-width: 50.4vw;
-  }
-
-  .create-omi__card:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .omi-card__title {
-    font-size: 2.12vw;
-  }
-
-  .omi-card__text {
-    font-size: 1.41vw;
-  }
-
-  .omi-card__label-icon {
-    width: 2.22vw;
-    height: 2.22vw;
-  }
-
-  .omi-card__label-text {
-    font-size: 1.41vw;
-  }
-
-  .omi-card__point-btn {
-    width: 2.42vw;
-    height: 2.42vw;
-    font-size: 1.81vw;
-  }
-
-  .omi-card__point-value {
-    font-size: 3.63vw;
-  }
-
-  .omi-card__total {
-    margin-top: 3.23vw;
-  }
-
-  .omi-card__total-value {
-    font-size: 7.26vw;
-  }
-
-  .omi-card__total-descr {
-    font-size: 1.71vw;
-    width: 10.08vw;
-  }
-
-  .omi-card__unallocated-points {
-    width: 9.27vw;
-    height: 9.27vw;
-    font-size: 3.02vw;
-  }
-
-  .find__text {
-    width: 18vw;
-    ridht: 1.2vw;
-  }
-
-  .pvp__screen-text {
-    left: -5vw;
-    bottom: 28vw;
-  }
-
-  .pvp__screen-phone {
-    width: 28.83vw;
-  }
-
-  .pvp__screen-OMI {
-    width: 83.67vw;
-    right: 0;
-    transform: translateX(40%);
-  }
-
-  .market__text {
-    bottom: -10vw;
-    right: -4.27vw;
-    width: 24vw;
-  }
-
-  .market__subtitle {
-    font-size: 4.03vw;
-    width: 17vw;
-  }
-
-  .market__descr-text {
-    font-size: 1.61vw;
-    width: 27vw;
-  }
-
-  .market-catalog__item {
-    width: 18.25vw;
-    height: 20.77vw;
-  }
-
-  .market-catalog__item img {
-    width: 100%;
-  }
-
-  .market-catalog__item_text {
-    font-size: 1.61vw;
-  }
-
-  .hunger-games__content {
-    width: 37.27vw;
-  }
-
-  .hunger-games__content_down {
-    width: 37.27vw;
-  }
-
-  .hunger-games__subtitle {
-    font-size: 3.63vw;
-  }
-
-  .hunger-games__subtitle_small {
-    width: 100%;
-    font-size: 3.02vw;
-  }
-
-  .hunger-games__subtitle span:last-child {
-    width: 100%;
-  }
-
-  .hunger-games__text {
-    font-size: 1.61vw;
-    width: 100%;
-  }
-
-  .individual__title {
-    font-size: 2.82vw;
-  }
-
-  .individual-chose__item {
-    max-width: 100%;
-  }
-
-  .individual-chose__item:not(:last-child) {
-    margin-right: 4vw;
-  }
-
-  .individual-chose__label {
-    font-size: 2.62vw;
-  }
-
-  .individual-chose__text {
-    font-size: 1.81vw;
-    max-width: 100%;
-  }
-
-  .individual-chose__list {
-    font-size: 1.81vw;
-  }
-
-  .individual-chose__list-elem::before {
-    font-size: 1.21vw;
-    width: 2.32vw;
-    height: 2.32vw;
-    line-height: 0.9em;
-    left: -3.02vw;
-  }
-
-  .mission__title {
-    font-size: 6.05vw;
-  }
-
-  .mission__text {
-    font-size: 2.12vw;
-  }
-
-  .token__card {
-    height: 35.58vw;
-  }
-
-  .token__card-label {
-    font-size: 2.72vw;
-  }
-
-  .token__card-text {
-    font-size: 1.61vw;
-    max-width: 100%;
   }
 }
 
