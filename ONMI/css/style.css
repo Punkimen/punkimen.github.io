@@ -3399,9 +3399,11 @@ h5.main__title {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
+  stroke: #fff !important;
 }
 
 .svg-circle circle {
+  opacity: 1;
   stroke-width: 0.1vw;
 }
 
@@ -3410,7 +3412,7 @@ h5.main__title {
 }
 
 .svg-circle_1 circle {
-  r: calc(50% - 0.1vw);
+  stroke: rgba(255, 255, 255, 0.05);
 }
 
 .svg-circle_2 {
@@ -3589,9 +3591,9 @@ h5.main__title {
   text-align: center;
   margin-bottom: 3.78vw;
   position: relative;
-  letter-spacing: -0.02em;
-  left: -1.46vw;
-  width: calc(100% + 1.56vw);
+  letter-spacing: -0.03em;
+  left: -2.2vw;
+  width: calc(100% + 2.56vw);
 }
 
 .roadmap-item {
@@ -4623,6 +4625,61 @@ h5.main__title {
     font-size: 1.61vw;
     max-width: 100%;
   }
+
+  .cards-token__wrapper {
+    max-width: 70vw;
+  }
+
+  .card-token__title {
+    font-size: 4.04vw;
+  }
+
+  .card-token__text {
+    font-size: 1.62vw;
+    max-width: 28vw;
+  }
+
+  .card-token_1 {
+    height: 52.03vw;
+  }
+
+  .card-token_1 .card-token__text {
+    max-width: 28vw;
+  }
+
+  .card-token_2 {
+    height: 42.86vw;
+  }
+
+  .card-token_3 {
+    height: 41.82vw;
+  }
+
+  .card-token_3 .card-token__icon {
+    max-width: 14.22vw;
+  }
+
+  .card-token_4 {
+    height: 53.85vw;
+  }
+
+  .roadmap-item {
+    font-size: 1.2vw;
+  }
+
+  .security__title {
+    font-size: 4.17vw;
+  }
+
+  .security__label {
+    max-width: 80%;
+    font-size: 3.13vw;
+  }
+
+  .security__text {
+    max-width: 80%;
+    font-size: 2.08vw;
+  }
 }
 
 @media (max-width: 768px) {
@@ -5298,7 +5355,7 @@ h5.main__title {
   }
 
   .culture {
-    padding: 20vw 0 0;
+    padding: 20vw 0 20vw;
   }
 
   .culture__pose {
@@ -5345,6 +5402,10 @@ h5.main__title {
     font-size: 2.34vw;
   }
 
+  .token {
+    padding: 19.21vw 0 10.3vw;
+  }
+
   .token__circle {
     width: 85.29vw;
     height: 85.29vw;
@@ -5385,16 +5446,153 @@ h5.main__title {
     font-size: 2.08vw;
   }
 
+  .svg-circle circle {
+    stroke-width: 0.24vw;
+    stroke-dasharray: 0%;
+    stroke-dashoffset: 0%;
+  }
+
   .svg-circle_2 circle {
-    stroke-dasharray: 285%;
-    stroke-dashoffset: 285%;
-    r: 45%;
+    stroke: rgba(255, 255, 255, 0.1);
   }
 
   .svg-circle_3 circle {
-    r: 38%;
-    stroke-dasharray: 240%;
-    stroke-dashoffset: 240%;
+    stroke: rgba(255, 255, 255, 0.15);
+  }
+
+  .cards-token__wrapper {
+    display: block;
+    max-width: 50vw;
+  }
+
+  .card-token {
+    height: auto !important;
+    padding: 6.85vw 5.21vw 7.11vw 5.21vw;
+    margin-bottom: 1.17vw;
+  }
+
+  .card-token:not(:last-child) {
+    margin-bottom: 1.17vw;
+  }
+
+  .card-token__icon {
+    margin-bottom: 5.86vw;
+  }
+
+  .card-token__title {
+    font-size: 5.21vw;
+    margin-bottom: 2.08vw;
+  }
+
+  .card-token__text {
+    font-size: 2.08vw;
+    max-width: 100% !important;
+  }
+
+  .card-token_1 .card-token__icon {
+    max-width: 7.55vw;
+  }
+
+  .card-token_2 .card-token__icon {
+    max-width: 19.01vw;
+  }
+
+  .card-token_3 .card-token__icon {
+    max-width: 25vw;
+  }
+
+  .card-token_4 .card-token__icon {
+    max-width: 8.2vw;
+  }
+
+  .tokenomics__title {
+    font-size: 7.81vw;
+    margin-bottom: 7.81vw;
+  }
+
+  .tokenomics__wrapper {
+    display: block;
+  }
+
+  .tokenomics__inner {
+    padding-top: 7vw;
+  }
+
+  .tokenomics__earth {
+    max-width: 70%;
+    margin-bottom: -30vw;
+  }
+
+  .tokenomics__text {
+    font-size: 3.91vw;
+    max-width: 70%;
+  }
+
+  .tokenomics__text p:not(:last-child) {
+    margin-bottom: 3.91vw;
+  }
+
+  .roadmap__title {
+    width: calc(100% + 3.56vw);
+    margin-bottom: 17.78vw;
+  }
+
+  .roadmap-item {
+    font-size: 2.08vw;
+  }
+
+  .roadmap-item .line {
+    display: none;
+  }
+
+  .roadmap-item_header {
+    display: none;
+  }
+
+  .roadmap-item__wrapper {
+    display: block;
+  }
+
+  .roadmap-item__wrapper .main-wrapper__col:first-child {
+    padding-bottom: 2.6vw;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 4.17vw;
+  }
+
+  .roadmap-item__col-wrapper {
+    display: block;
+  }
+
+  .roadmap-item__time {
+    font-size: 3.65vw;
+  }
+
+  .roadmap-item__descr {
+    max-width: 80%;
+  }
+
+  .security__title {
+    font-size: 7.81vw;
+  }
+
+  .security__row {
+    padding-top: 8.15vw;
+  }
+
+  .security__wrapper {
+    display: block;
+  }
+
+  .security__label {
+    margin-bottom: 3.13vw;
+  }
+
+  .security__text p:not(:last-child) {
+    margin-bottom: 3.13vw;
+  }
+
+  .security__text_big {
+    max-width: 80%;
   }
 }
 
@@ -6145,8 +6343,8 @@ h5.main__title {
   }
 
   .token__circle {
-    width: 152.76vw;
-    height: 152.76vw;
+    width: 154.76vw;
+    height: 154.76vw;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -6162,8 +6360,8 @@ h5.main__title {
   }
 
   .token__circle-shadow {
-    width: 109.62vw;
-    height: 109.62vw;
+    width: 140.81vw;
+    height: 140.81vw;
     box-shadow: none;
   }
 
@@ -6184,6 +6382,123 @@ h5.main__title {
 
   .token__card-text {
     font-size: 3.76vw;
+  }
+
+  .svg-circle_2 circle {
+    width: 83%;
+    height: 83%;
+  }
+
+  .cards-token__wrapper {
+    max-width: 100%;
+  }
+
+  .card-token {
+    border-radius: 11.9vw;
+    padding: 11.9vw 9.52vw 27.05vw;
+  }
+
+  .card-token__icon {
+    margin-bottom: 11.86vw;
+  }
+
+  .card-token__title {
+    font-size: 9.52vw;
+    margin-bottom: 5.95vw;
+  }
+
+  .card-token__text {
+    font-size: 3.81vw;
+  }
+
+  .card-token__text p:not(:last-child) {
+    margin-bottom: 4.76vw;
+  }
+
+  .card-token_1 .card-token__icon {
+    max-width: 13.81vw;
+  }
+
+  .card-token_2 .card-token__icon {
+    max-width: 34.76vw;
+  }
+
+  .card-token_3 .card-token__icon {
+    max-width: 45.48vw;
+  }
+
+  .card-token_4 .card-token__icon {
+    max-width: 15vw;
+  }
+
+  .tokenomics {
+    padding-bottom: 49vw;
+  }
+
+  .tokenomics__title {
+    font-size: 14.29vw;
+    margin-bottom: 14.81vw;
+  }
+
+  .tokenomics__earth {
+    max-width: 100%;
+    margin-bottom: -8vw;
+  }
+
+  .tokenomics__text {
+    font-size: 7.14vw;
+    max-width: 97%;
+  }
+
+  .tokenomics__text p:not(:last-child) {
+    margin-bottom: 8.91vw;
+  }
+
+  .roadmap-item {
+    font-size: 3.81vw;
+  }
+
+  .roadmap-item:not(:last-child) {
+    margin-bottom: 12vw;
+  }
+
+  .roadmap-item__wrapper .main-wrapper__col:first-child {
+    padding-bottom: 4.76vw;
+    margin-bottom: 7.62vw;
+  }
+
+  .roadmap-item__time {
+    font-size: 6.67vw;
+  }
+
+  .roadmap-item__descr {
+    max-width: 100%;
+  }
+
+  .security {
+    border-radius: 7.62vw;
+    padding: 12.95vw 0 20.9vw;
+    margin-bottom: 35vw;
+  }
+
+  .security__title {
+    font-size: 14.29vw;
+    margin-bottom: 20.14vw;
+  }
+
+  .security__label {
+    font-size: 5.24vw;
+    margin-bottom: 5.71vw;
+  }
+
+  .security__text {
+    font-size: 5.24vw;
+    max-width: 100%;
+  }
+
+  .security__text_big {
+    max-width: 100%;
+    font-size: 7.14vw;
   }
 }
 
