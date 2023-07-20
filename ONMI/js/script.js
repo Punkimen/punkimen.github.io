@@ -288,9 +288,9 @@ const initPage = () => {
     btnGooglePlay.addEventListener('mouseleave', leveSizeBtns)
     Marquee3k && Marquee3k.init()
   } else {
-    /*    Marquee3k && Marquee3k.init({
-          selector: 'marquee3k_mob', // define a custom classname
-        });*/
+    Marquee3k && Marquee3k.init({
+      selector: 'marquee3k_mob', // define a custom classname
+    });
   }
 
   //
