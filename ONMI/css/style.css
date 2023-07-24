@@ -5331,7 +5331,6 @@ h5.main__title {
 
   .mission__wrapper {
     display: block;
-    padding-top: 11.5vw;
   }
 
   .mission__line_diagonally {
@@ -6112,6 +6111,9 @@ h5.main__title {
   }
 
   .hunger-games__title_small {
+    position: relative;
+    top: 3.1vw;
+    left: -6.9vw;
     font-size: 14.76vw;
   }
 
@@ -6119,6 +6121,10 @@ h5.main__title {
     top: -53.5vw;
     left: 24vw;
     width: 43.05vw;
+  }
+
+  .hunger-games__earth {
+    margin-bottom: 47vw;
   }
 
   .hunger-games__content {
@@ -6244,16 +6250,16 @@ h5.main__title {
   }
 
   .hunger-progress__text_1 {
-    max-width: 100%;
+    max-width: 96%;
     margin-bottom: 5.6vw;
   }
 
   .hunger-progress__text_2 {
-    max-width: 100%;
+    max-width: 96%;
   }
 
   .hunger-progress__text_3 {
-    max-width: 100%;
+    max-width: 96%;
   }
 
   .hunger-map__icon {
@@ -6320,7 +6326,7 @@ h5.main__title {
 
   .mission__text {
     font-size: 5.71vw;
-    line-height: 1.6em;
+    line-height: 1.46em;
     width: 100%;
   }
 
@@ -6329,7 +6335,13 @@ h5.main__title {
   }
 
   .mission__text_big {
+    max-width: 96%;
+    line-height: 1.25em;
     font-size: 7.14vw;
+  }
+
+  .culture {
+    padding-bottom: 75vw;
   }
 
   .culture__title {
@@ -6431,6 +6443,10 @@ h5.main__title {
     height: 83%;
   }
 
+  .cards-token {
+    padding-bottom: 60vw;
+  }
+
   .cards-token__wrapper {
     max-width: 100%;
   }
@@ -6520,7 +6536,7 @@ h5.main__title {
   .security {
     border-radius: 7.62vw;
     padding: 12.95vw 0 20.9vw;
-    margin-bottom: 35vw;
+    margin-bottom: 50vw;
   }
 
   .security__title {
