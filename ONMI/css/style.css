@@ -4746,11 +4746,11 @@ h5.main__title {
     width: 14.08vw;
   }
 
-  .header__nav {
+  .header__btns {
     display: none;
   }
 
-  .header__right {
+  .header__nav {
     display: none;
   }
 
@@ -4761,6 +4761,11 @@ h5.main__title {
   .dropdown__header span::after {
     width: 1.43vw;
     height: 0.78vw;
+  }
+
+  .burger {
+    width: 6.25vw;
+    height: 1.17vw;
   }
 
   .hero {
@@ -4972,6 +4977,10 @@ h5.main__title {
   .cards__wrapper {
     display: block;
     max-width: 50vw;
+  }
+
+  .cards__col {
+    margin-bottom: 1.3vw;
   }
 
   .card:not(:last-child) {
@@ -5627,9 +5636,22 @@ h5.main__title {
     font-size: 2.11vw;
   }
 
+  .burger {
+    width: 11.43vw;
+    height: 2.14vw;
+  }
+
+  .burger span {
+    height: 0.48vw;
+  }
+
   .reality__text_small {
     font-size: 5.71vw;
     margin-bottom: 23.81vw;
+  }
+
+  .reality__screens {
+    margin-bottom: 24.08vw;
   }
 
   .reality__decor {
@@ -5652,11 +5674,11 @@ h5.main__title {
   }
 
   .adventure {
-    padding: 7.81vw 0 22.81vw;
+    padding: 59.81vw 0 22.81vw;
   }
 
   .adventure__content {
-    margin-bottom: 29.3vw;
+    margin-bottom: 35.3vw;
   }
 
   .adventure__title {
@@ -5694,15 +5716,15 @@ h5.main__title {
   }
 
   .create-omi {
-    padding: 0vw 0 22.81vw;
+    padding: 17vw 0 14.81vw;
   }
 
   .create-omi__descr {
-    margin-bottom: 32.4vw;
+    margin-bottom: 37.4vw;
   }
 
   .create-omi__title {
-    margin-bottom: 13.22vw;
+    margin-bottom: 11.22vw;
   }
 
   .create-omi__text {
@@ -5710,7 +5732,7 @@ h5.main__title {
   }
 
   .create-omi__marquue {
-    margin-bottom: 32vw;
+    margin-bottom: 46vw;
   }
 
   .create-omi__item {
@@ -5790,6 +5812,10 @@ h5.main__title {
     max-width: 100%;
   }
 
+  .cards__col {
+    margin-bottom: 3.3vw;
+  }
+
   .card {
     border-radius: 12vw;
   }
@@ -5815,7 +5841,7 @@ h5.main__title {
   }
 
   .card_2 .card__front {
-    padding-bottom: 12vw;
+    padding-bottom: 8vw;
   }
 
   .card_2 .card__front .card__front-img {
@@ -5824,6 +5850,10 @@ h5.main__title {
 
   .card_3 {
     height: 114vw;
+  }
+
+  .card_3 .card__front {
+    padding-bottom: 8vw;
   }
 
   .card_3 .card__title {
@@ -5835,7 +5865,7 @@ h5.main__title {
   }
 
   .card_4 .card__title {
-    max-width: 75%;
+    max-width: 71%;
   }
 
   .card__front {
@@ -5849,7 +5879,7 @@ h5.main__title {
 
   .find {
     margin-bottom: 46vw;
-    padding: 0 0 22.81vw;
+    padding: 22vw 0 22.81vw;
   }
 
   .find__descr {
@@ -5869,6 +5899,7 @@ h5.main__title {
 
   .find-map__phone {
     width: 49.3vw;
+    transform: translateY(-76%);
   }
 
   .journey-card {
