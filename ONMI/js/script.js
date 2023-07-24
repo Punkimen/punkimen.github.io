@@ -357,23 +357,23 @@ const waves = new SineWaves({
 
   },
 
-  resizeEvent: function () {
-    let gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
-    gradient.addColorStop(0, "rgba(0, 0, 0, 0)");
-    gradient.addColorStop(0.5, "rgba(255, 255, 255, 0.5)");
-    gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
-
-    let index = -1;
-    let length = this.waves.length;
-    while (++index < length) {
-      this.waves[index].strokeStyle = gradient;
-    }
-
-    // Clean Up
-    index = void 0;
-    length = void 0;
-    gradient = void 0;
-  }
+  // resizeEvent: function () {
+  //   let gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
+  //   gradient.addColorStop(0, "rgba(0, 0, 0, 0)");
+  //   gradient.addColorStop(0.5, "rgba(255, 255, 255, 0.5)");
+  //   gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+  //
+  //   let index = -1;
+  //   let length = this.waves.length;
+  //   while (++index < length) {
+  //     this.waves[index].strokeStyle = gradient;
+  //   }
+  //
+  //   // Clean Up
+  //   index = void 0;
+  //   length = void 0;
+  //   gradient = void 0;
+  // }
 });
 const asyncInit = async () => {
   const populationText = document.querySelector('#population')

@@ -5950,15 +5950,24 @@ h5.main__title {
     margin-bottom: 10vw;
   }
 
+  .sound {
+    margin-bottom: 44vw;
+  }
+
   .sound__anim {
-    height: 80vw;
+    position: relative;
+    width: 150vw;
+    height: 112vw;
+    transform: translateX(-50%);
+    left: 50%;
   }
 
   .sound__title {
     font-size: 15vw;
-    margin: 0 auto 13vw;
+    margin: -24vw auto 13vw;
     line-height: 1;
     max-width: 60%;
+    position: relative;
   }
 
   .sound__text {
@@ -5997,11 +6006,11 @@ h5.main__title {
   }
 
   .pvp {
-    padding: 40vw 0 30vw;
+    padding: 60vw 0 30vw;
   }
 
   .pvp__wrapper {
-    margin-bottom: 133vw;
+    margin-bottom: 137vw;
   }
 
   .pvp__title {
@@ -6027,7 +6036,7 @@ h5.main__title {
 
   .level__pagination {
     display: block;
-    bottom: 13.33vw;
+    bottom: 13.33vw !important;
   }
 
   .level-slider {
@@ -6044,11 +6053,13 @@ h5.main__title {
 
   .level-circle__title {
     font-size: 7.6vw;
+    margin-bottom: 7.85vw;
   }
 
   .level-circle__text {
     font-size: 3.81vw;
-    max-width: 46%;
+    max-width: 48%;
+    line-height: 1.6em;
   }
 
   .level-slider__arrow {
