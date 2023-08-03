@@ -7,6 +7,7 @@ export const lineShow = el => {
         y: '110%'
     }, {
         y: '0',
+        opacity: 1,
         delay: delay,
         duration: duration,
         ease: "circ.inOut",
@@ -199,7 +200,7 @@ export const horizontalTransform = (el, trigger, startVal, endValue, scrub = tru
         scrollTrigger: {
             trigger: trigger || el,
             start: start || "center bottom",
-            end: end || "top top",
+            end: end || "bottom center",
             scrub: scrub
         }
     })
@@ -233,8 +234,8 @@ export const readText = (el, trigger) => {
         stagger: 0.5,
         scrollTrigger: {
             trigger: trigger || el,
-            start: 'top bottom-=20%',
-            end: 'bottom center+=25%',
+            start: 'top center',
+            end: 'bottom center',
             scrub: true,
         }
     })
