@@ -45,7 +45,7 @@
 			e.preventDefault();
 			const id = smoothLink.getAttribute("scroll-href");
 
-			document.querySelector(id).scrollIntoView({
+			document.querySelector(id)?.scrollIntoView({
 				behavior: "smooth",
 				block: "start",
 			});
@@ -143,41 +143,28 @@
 	});
 
 	// select choose option start
-	const fromToken = document.querySelector("#from-token");
-	const inToken = document.querySelector("#in-token");
-	const optionsInner = document.querySelector("#modal-token");
+	/*	const fromToken = document.querySelector("#from-token");
+        const inToken = document.querySelector("#in-token");
+        const optionsInner = document.querySelector("#modal-token");
 
-	fromToken.addEventListener("click", (e) => {
-		optionsInner.classList.remove("in");
-		optionsInner.classList.add("from");
-	});
-	inToken.addEventListener("click", (e) => {
-		optionsInner.classList.remove("from");
-		optionsInner.classList.add("in");
-	});
-	optionsInner.addEventListener("click", (e) => {
-		if (e.target.closest(".select-option")) {
-			const innerValue = e.target.closest(".select-option").innerHTML;
-			if (optionsInner.classList.contains("in")) {
-				inToken.querySelector(".select__value").innerHTML = innerValue;
-			} else if (optionsInner.classList.contains("from")) {
-				fromToken.querySelector(".select__value").innerHTML = innerValue;
-			}
-			closePopup();
-		}
-	});
+        fromToken.addEventListener("click", (e) => {
+            optionsInner.classList.remove("in");
+            optionsInner.classList.add("from");
+        });
+        inToken.addEventListener("click", (e) => {
+            optionsInner.classList.remove("from");
+            optionsInner.classList.add("in");
+        });
+        optionsInner.addEventListener("click", (e) => {
+            if (e.target.closest(".select-option")) {
+                const innerValue = e.target.closest(".select-option").innerHTML;
+                if (optionsInner.classList.contains("in")) {
+                    inToken.querySelector(".select__value").innerHTML = innerValue;
+                } else if (optionsInner.classList.contains("from")) {
+                    fromToken.querySelector(".select__value").innerHTML = innerValue;
+                }
+                closePopup();
+            }
+        });*/
 }
 // popups end
-
-{
-	$(window).scroll(function () {
-		$(".bg").bgscroll({
-			direction: "top", // направление bottom или top
-			bgpositionx: 50, // x позиция фонового изображения, от 0 до 100, размерность в %, 50 - означает по центру
-			debug: false, // Режим отладки
-			min: 0, // минимальное положение (в %) на которое может смещаться фон
-			max: 100, // максимальное положение (в %) на которое может смещаться фон
-		});
-	});
-	const tilt = $(".js-tilt").tilt();
-}
