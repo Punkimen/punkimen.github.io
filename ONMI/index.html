@@ -9,7 +9,7 @@
   <meta name="description" content=""/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
+  <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.min.css">
@@ -17,25 +17,27 @@
 
 <body>
 <div class="page-content">
-  <header class="header animate" xmlns="http://www.w3.org/1999/html">
-  <div class="container">
-    <div class="header__wrapper">
-      <div class="header__left">
-        <a href="#" class="header__logo">
-          <img src="img/logo.svg" alt="logo" class="text-line" data-delay="0.2">
-        </a>
-        <div class="header__text">
-          <span class="text-line" data-delay="0.2">onmi will open up the opportunity for you to</span>
-          <span class="text-line" data-delay="0.3">become the hero of an XR</span>
+  <header class="header animate">
+    <div class="container">
+        <div class="header__wrapper">
+            <div class="header__left">
+                <a href="#" class="header__logo">
+                    <img src="img/logo.svg" alt="logo" data-effect="opacity" class="first-load" data-delay="0.1">
+                </a>
+                <div class="header__text">
+                    <span class="text-line first-load"
+                          data-delay="0.3">onmi will open up the opportunity for you to</span>
+                    <span class="text-line first-load" data-delay="0.4">become the hero of an XR</span>
+                </div>
+            </div>
+            <div class="header__right">
+                <a href="#" class="header__link first-load" data-effect="opacity" data-delay="0.7">Gameplay</a>
+                <a href="#" class="header__link first-load" data-effect="opacity" data-delay="0.8">Docs</a>
+                <button class="header__btn btn first-load" data-effect="opacity" data-delay="0.9">Download</button>
+                <div class="header__burger burger" data-effect="opacity" data-delay="0.2"><span></span><span></span></div>
+            </div>
         </div>
-      </div>
-      <div class="header__right">
-        <a href="#" class="header__link" data-effect="opacity" data-duration="1" data-delay="0.7">Gameplay</a>
-        <a href="#" class="header__link" data-effect="opacity" data-duration="1" data-delay="0.8">Docs</a>
-        <button class="header__btn btn" data-effect="opacity" data-duration="1" data-delay="1">Download</button>
-      </div>
     </div>
-  </div>
 </header>
 
   <div class="description-reality__content">
@@ -46,30 +48,34 @@
           <p>Here you can earn money, find valuable digital art, participate in an international Hunger Games
             tournament,
             enter a social competition, activate access to real goods from fashion brands, stars and artists, and
-            discover corners of this world in secret itineraries.</p>
+            discover corners of this world in&nbsp;secret itineraries.</p>
         </div>
       </div>
     </div>
   </div>
 
   <section class="hero">
-  <div class="container">
-    <div class="hero__wrapper">
-      <div class="hero__content">
-        <h1 class="hero__title gradient-text" data-duration="1.2" data-effect="fade-down">
-          Play with the world
-        </h1>
-        <div class="hero__pose">
-          <noscript data-webp="">
-            <img src="./img/hero_pose.png" alt="pose 1">
-          </noscript>
+    <div class="container">
+        <div class="hero__wrapper">
+            <div class="hero__content">
+                <h1 class="hero__title gradient-text first-load" data-duration="1.2" data-effect="fade-down">
+                    Play with the world
+                </h1>
+                <div class="hero__pose">
+                    <noscript data-webp="">
+                        <img src="./img/hero_pose.png" class="" data-effect="" alt="pose 1">
+                    </noscript>
+                </div>
+            </div>
+            <div class="hero__text">
+                <p class="text-line" data-delay="0.3">onmi will open up the opportunity for you</p>
+                <p class="text-line" data-delay="0.4">to become the hero of an XR</p>
+            </div>
+            <a href="#" class="hero__mobile-btn btn" data-effect="opacity" data-delay="0.5">
+                Download App
+            </a>
         </div>
-      </div>
-      <a href="#" class="hero__mobile-btn btn" data-effect="opacity" data-delay="0.4">
-        Download App
-      </a>
     </div>
-  </div>
 </section>
 
   <section class="description-reality">
@@ -156,14 +162,14 @@
   </div>
   <div class="adventure__slider">
     <div class="adventure__slider-phone">
-      <div class="adventure__phone-img  animate" data-effect="fade-in" data-duration="2">
+      <div class="adventure__phone-img" data-effect="opacity" data-duration="2">
         <noscript data-webp><img class="adventure__phone-phone" src="./img/adventure_phone.png" alt="Phone">
         </noscript>
         <noscript data-webp><img class="adventure__phone-hand" src="./img/hand.png" alt="Phone in hand"/>
         </noscript>
 
       </div>
-      <div class="adventure__phone swiper animate" data-effect="opacity">
+      <div class="adventure__phone swiper" data-effect="opacity">
         <div class="swiper-wrapper">
           <div class="adventure__phone-slide swiper-slide">
             <noscript data-webp><img src="./img/slider_phone/screen_1.png"></noscript>
@@ -267,7 +273,11 @@
         <div class="create-omi__descr">
             <h2 class="main__title create-omi__title" >
                 <div class="create-omi__title-row hidden">
-                    <span class="color_gray text-line" data-delay="0.1">Create <span class="color_gray">unique</span> omi</span></span>
+                    <span class="color_gray text-line text-desktop" data-delay="0.1">Create <span class="color_gray">unique</span> omi</span></span>
+                    <span class="color_gray text-line text-mob" data-delay="0.1">Create </span>
+                </div>
+                <div class="create-omi__title-row hidden">
+                    <span class="text-mob text-line" data-delay="0.2"><span class="color_gray">unique</span> omi</span>
                 </div>
             </h2>
 
@@ -289,67 +299,67 @@
             <div class="create-omi__wrapper">
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/1.jpg" alt="OMI variable 1"> -->
-                    <noscript data-webp><img src="img/OMI/1.jpg"></noscript>
+                    <noscript data-webp><img src="img/OMI/1.jpg" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/2.jpg" alt="OMI variable 2"> -->
-                    <noscript data-webp><img src="img/OMI/2.jpg"></noscript>
+                    <noscript data-webp><img src="img/OMI/2.jpg" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/3.jpg" alt="OMI variable 3"> -->
-                    <noscript data-webp><img src="img/OMI/3.jpg"></noscript>
+                    <noscript data-webp><img src="img/OMI/3.jpg" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/4.jpg" alt="OMI variable 4"> -->
-                    <noscript data-webp><img src="img/OMI/4.jpg"></noscript>
+                    <noscript data-webp><img src="img/OMI/4.jpg" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/5.jpg" alt="OMI variable 5"> -->
-                    <noscript data-webp><img src="img/OMI/5.jpg"></noscript>
+                    <noscript data-webp><img src="img/OMI/5.jpg" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/6.jpg" alt="OMI variable 6"> -->
-                    <noscript data-webp><img src="img/OMI/6.jpg"></noscript>
+                    <noscript data-webp><img src="img/OMI/6.jpg" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/7.jpg" alt="OMI variable 7"> -->
-                    <noscript data-webp><img src="img/OMI/7.jpg"></noscript>
+                    <noscript data-webp><img src="img/OMI/7.jpg" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/8.jpg" alt="OMI variable 8"> -->
-                    <noscript data-webp><img src="img/OMI/8.jpg"></noscript>
+                    <noscript data-webp><img src="img/OMI/8.jpg" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/9.jpg" alt="OMI variable 9"> -->
-                    <noscript data-webp><img src="img/OMI/9.jpg"></noscript>
+                    <noscript data-webp><img src="img/OMI/9.jpg" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/10.jpg" alt="OMI variable 10"> -->
-                    <noscript data-webp><img src="img/OMI/10.jpg"></noscript>
+                    <noscript data-webp><img src="img/OMI/10.jpg" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/11.jpg" alt="OMI variable 11"> -->
-                    <noscript data-webp><img src="img/OMI/11.jpg"></noscript>
+                    <noscript data-webp><img src="img/OMI/11.jpg" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/11.jpg" alt="OMI variable 11"> -->
-                    <noscript data-webp><img src="img/OMI/12.png"></noscript>
+                    <noscript data-webp><img src="img/OMI/12.png" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/11.jpg" alt="OMI variable 11"> -->
-                    <noscript data-webp><img src="img/OMI/13.png"></noscript>
+                    <noscript data-webp><img src="img/OMI/13.png" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/11.jpg" alt="OMI variable 11"> -->
-                    <noscript data-webp><img src="img/OMI/14.png"></noscript>
+                    <noscript data-webp><img src="img/OMI/14.png" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/11.jpg" alt="OMI variable 11"> -->
-                    <noscript data-webp><img src="img/OMI/15.png"></noscript>
+                    <noscript data-webp><img src="img/OMI/15.png" alt="OMI variable 1"></noscript>
                 </div>
                 <div class="create-omi__item">
                     <!-- <img src="img/OMI/11.jpg" alt="OMI variable 11"> -->
-                    <noscript data-webp><img src="img/OMI/16.png"></noscript>
+                    <noscript data-webp><img src="img/OMI/16.png" alt="OMI variable 1"></noscript>
                 </div>
             </div>
         </div>
@@ -357,13 +367,13 @@
     <!--<div class="container">
       <div class="create-omi__cards">
         <div class="create-omi__cards-wrapper">
-          <div class="create-omi__card omi-card omi-card_custom animate" data-effect="fade-in">
+          <div class="create-omi__card omi-card omi-card_custom animate" data-effect="opacity">
             <h4 class="omi-card__title">Customize OMI look</h4>
             <div class="omi-card__text">
               <p>ORBS — are secret AR-objects in which rewards are hidden</p>
             </div>
           </div>
-          <div class="create-omi__card omi-card omi-card_points animate" data-effect="fade-in" data-delay="0.2">
+          <div class="create-omi__card omi-card omi-card_points animate" data-effect="opacity" data-delay="0.2">
             <div id="unallocated-points" class="omi-card__unallocated-points">
               <span id="score" class="unallocated-points__value">+2,1</span>
             </div>
@@ -417,7 +427,7 @@
               </div>
             </div>
           </div>
-          <div class="create-omi__card omi-card omi-card_rarity animate" data-effect="fade-in" data-delay="0.4">
+          <div class="create-omi__card omi-card omi-card_rarity animate" data-effect="opacity" data-delay="0.4">
             <h4 class="omi-card__title">Unlock a new OMI rarity</h4>
             <div class="omi-card__text">
               <p>ORBS — are secret AR-objects in which rewards are hidden</p>
@@ -453,7 +463,9 @@
             <div class="card__text">And turn your skill into income</div>
 
             <div class="card__front-img">
+              <noscript data-webp="">
                 <img src="img/OMI/card_bg_phone.png" alt="ONMI"/>
+              </noscript>
             </div>
 
           </div>
@@ -477,7 +489,9 @@
         <div data-effect="opacity" data-duration="0.9" data-delay="0.3" class="card card_4">
           <div class="card__front card__front_centered">
             <div class="card__front-img card__front-img_bg">
-              <img class="" src="./img/OMI/card_bg_map.jpg" alt="map">
+              <noscript data-webp="">
+                <img class="" src="./img/OMI/card_bg_map.jpg" alt="map">
+              </noscript>
             </div>
             <div class="card__title ">Discover new places in your city</div>
           </div>
@@ -604,7 +618,7 @@
           </div>
           <div class="journey-card__phone">
             <noscript data-webp>
-              <img src="img/adventure_phone.png"/>
+              <img src="img/adventure_phone.png" alt="phone screen"/>
             </noscript>
             <video id="video_phone" src="./video/journey_phone.mp4" type="video/mp4" autoplay="true"
                    muted="muted" loop/>
@@ -728,7 +742,7 @@
       <img src="img/icons/map_marker.svg" alt="marker">
     </div>
     <div class="each-point__svg_mob">
-      <img src="./img/router.svg" alt="router">
+      <img src="./img/router_mob.svg" alt="router">
     </div>
     <svg class="each-point__svg" viewBox="0 0 1920 347">
       <symbol id="line">
@@ -796,69 +810,34 @@
     </div>
     <div class="pvp__text" data-effect="fade-down">
       <p>
-        <span class="text-line" data-delay="0.1">Challenge your friends or find a worthy</span>
-        <span class="text-line" data-delay="0.2">opponent.</span>
+        <span class="text-line" data-delay="0.1">
+
+          <span class="text-desktop">Challenge your friends or find a worthy</span>
+          <span class="text-mob">Challenge your friends or find a</span>
+        </span>
+        <span class="text-line" data-delay="0.2">
+          <span class="text-desktop">opponent.</span>
+          <span class="text-mob">worthy opponent.</span>
+          </span>
       </p>
       <p>
-        <span class="text-line" data-delay="0.3">You can battle and earn unlimited,</span>
-        <span class="text-line" data-delay="0.4">picking the competition format you're</span>
-        <span class="text-line" data-delay="0.5">good at: agility, speed, tactics,</span>
-        <span class="text-line" data-delay="0.6">attentiveness, intelligence or</span>
-        <span class="text-line" data-delay="0.7">knowledge.</span>
+        <span class="text-line" data-delay="0.3">
+          You can battle and earn unlimited,
+          </span>
+        <span class="text-line" data-delay="0.4">
+          picking the competition format you're
+          </span>
+        <span class="text-line" data-delay="0.5">
+          good at: agility, speed, tactics,
+          </span>
+        <span class="text-line" data-delay="0.6">
+          attentiveness, intelligence or
+          </span>
+        <span class="text-line" data-delay="0.7">
+          knowledge.
+          </span>
       </p>
     </div>
-   <!-- <div class="container">
-      <div class="pvp-content">
-        <div class="pvp-content__col">
-          <div class="pvp-content__screen" data-effect="fade-down" data-duration="1">
-            <noscript data-webp="">
-              <img src="img/pvp_phone_1.png" alt="Deck">
-            </noscript>
-          </div>
-          <div class="pvp-content__descr">
-            <h5 class="pvp-content__title">
-              <div class="hidden">
-                <div class="text-line">Соревнуйся с другим</div>
-              </div>
-              <div class="hidden">
-                <div class="text-line" data-delay="0.1">игроком</div>
-              </div>
-            </h5>
-            <div class="pvp-content__text">
-              <div class="text-line">Сейчас в ONMI у тебя есть</div>
-              <div class="text-line" data-delay="0.1">возможность играть один на один</div>
-              <div class="text-line" data-delay="0.2">– благодаря мини-играм, которые</div>
-              <div class="text-line" data-delay="0.3">мы обновляем раз в сезон.</div>
-            </div>
-          </div>
-        </div>
-        <div class="pvp-content__col">
-          <div class="pvp-content__screen" data-effect="fade-down" data-duration="1" data-delay="0.2">
-            <noscript data-webp="">
-              <img src="img/pvp_phone_2.png" alt="Tournament">
-            </noscript>
-          </div>
-          <div class="pvp-content__descr">
-            <h5 class="pvp-content__title">
-              <div class="hidden">
-                <div class="text-line">Соревнуйся на</div>
-              </div>
-              <div class="hidden">
-                <div class="text-line" data-delay="0.1">глобальном уровне</div>
-              </div>
-            </h5>
-            <div class="pvp-content__text">
-              <div class="text-line">Ты можешь увеличить масштаб</div>
-              <div class="text-line" data-delay="0.1">соревнований и стать участником</div>
-              <div class="text-line" data-delay="0.2">worldwide tournament, который</div>
-              <div class="text-line" data-delay="0.3">проходит раз в сезон. Лидеры</div>
-              <div class="text-line" data-delay="0.4">получают выигрыш: NFT, токены и</div>
-              <div class="text-line" data-delay="0.5">другие бонусы.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>-->
   </div>
 </section>
 
@@ -940,7 +919,6 @@
           </div>
         </div>
       </h2>
-
       <div class="market__text main__text">
         <div class="text-line" data-delay="0.3">
           <span class="text-desktop">onmi gallery is a selective gallery of digital art,</span>
@@ -949,6 +927,9 @@
         <div class="text-line" data-delay="0.4">
           <span class="text-desktop">featuring the work of unique digital artists, each</span>
           <span class="text-mob">of digital art, featuring the work of unique</span>
+        </div>
+        <div class="text-line" data-delay="0.5">
+          <span class="text-mob">digital artists, each of whose works is</span>
         </div>
         <div class="text-line" data-delay="0.5">
           <span class="text-desktop">of whose works is limited.</span>
@@ -963,34 +944,34 @@
         <div class="market-catalog__row-item">
           <div class="market-catalog__item">
 
-            <noscript data-webp><img src="img/catalog/item_1.png"></noscript>
+            <noscript data-webp><img src="img/catalog/item_1.png" alt="catalog 1"></noscript>
           </div>
           <div class="market-catalog__item">
 
-            <noscript data-webp><img src="img/catalog/item_2.png"></noscript>
+            <noscript data-webp><img src="img/catalog/item_2.png" alt="catalog 2"></noscript>
           </div>
           <div class="market-catalog__item">
 
-            <noscript data-webp><img src="img/catalog/item_3.png"></noscript>
+            <noscript data-webp><img src="img/catalog/item_3.png" alt="catalog 3"></noscript>
           </div>
           <div class="market-catalog__item">
 
-            <noscript data-webp><img src="img/catalog/item_4.png"></noscript>
+            <noscript data-webp><img src="img/catalog/item_4.png" alt="catalog 4"></noscript>
           </div>
           <div class="market-catalog__item">
 
-            <noscript data-webp><img src="img/catalog/item_5.png"></noscript>
+            <noscript data-webp><img src="img/catalog/item_5.png" alt="catalog 5"></noscript>
           </div>
           <div class="market-catalog__item market-catalog__item_text">
             <p>The most expensive will be author collections with artists, fashion brands and festivals, which will have
               off-line properties that give special privileges and attributions.</p>
           </div>
           <div class="market-catalog__item">
-            <noscript data-webp><img src="img/catalog/item_6.png"></noscript>
+            <noscript data-webp><img src="img/catalog/item_6.png" alt="catalog 6"></noscript>
 
           </div>
           <div class="market-catalog__item">
-            <noscript data-webp><img src="img/catalog/item_7.png"></noscript>
+            <noscript data-webp><img src="img/catalog/item_7.png" alt="catalog 7"></noscript>
 
           </div>
         </div>
@@ -998,25 +979,25 @@
       <div class="market-catalog__row ">
         <div class="market-catalog__row-item">
           <div class="market-catalog__item">
-            <noscript data-webp><img src="img/catalog/item_8.png"></noscript>
+            <noscript data-webp><img src="img/catalog/item_8.png" alt="catalog 8"></noscript>
           </div>
           <div class="market-catalog__item">
-            <noscript data-webp><img src="img/catalog/item_9.png"></noscript>
+            <noscript data-webp><img src="img/catalog/item_9.png" alt="catalog 9"></noscript>
           </div>
           <div class="market-catalog__item market-catalog__item_text">
             <p>Each look is the handiwork of a fashion designer</p>
           </div>
           <div class="market-catalog__item">
-            <noscript data-webp><img src="img/catalog/item_10.png"></noscript>
+            <noscript data-webp><img src="img/catalog/item_10.png" alt="catalog 10"></noscript>
           </div>
           <div class="market-catalog__item">
-            <noscript data-webp><img src="img/catalog/item_11.png"></noscript>
+            <noscript data-webp><img src="img/catalog/item_11.png" alt="catalog 11"></noscript>
           </div>
           <div class="market-catalog__item">
             <noscript data-webp><img src="img/catalog/item_12.png"></noscript>
           </div>
           <div class="market-catalog__item">
-            <noscript data-webp><img src="img/catalog/item_13.png"></noscript>
+            <noscript data-webp><img src="img/catalog/item_13.png" alt="catalog 13"></noscript>
           </div>
           <div class="market-catalog__item market-catalog__item_text">
             <p>Our in-house digital atelier prepares new collections every season for the most active users, who can
@@ -1036,7 +1017,7 @@
         <div>games</div>
       </h2>
       <div class="hunger-games__pose ">
-        <noscript data-webp><img src="./img/hunger_pose.png"></noscript>
+        <noscript data-webp><img src="./img/hunger_pose.png" alt="OMI"></noscript>
         <!-- <img src="img/hunger_pose.png" alt="hunger games pose"> -->
       </div>
     </div>
@@ -1140,7 +1121,7 @@
         </svg>
       </div>
       <div class="main-wrapper__col">
-        <h3 class="mission__title" data-effect="fade-in">
+        <h3 class="mission__title" data-effect="opacity">
           Mis&shy;sion
           <span class="mission__title-arrow">
             <img src="img/icons/arrow_slider.svg" alt="arrow">
@@ -1248,21 +1229,29 @@
             <div class="culture-event__partners-items">
               <div class="culture-event__circle" data-effect="opacity" data-delay="0.1">
                 <div class="culture-event__circle_bg">
-                  <img src="./img/culture/abra_bg.png" alt="abra_bg">
+                  <noscript data-webp="">
+                    <img src="./img/culture/abra_bg.png" alt="abra_bg">
+                  </noscript>
                 </div>
                 <div class="culture-event__circle-name culture-event__circle-name_abra">
-                  <img src="./img/culture/abra_logo.png" alt="ABRA">
+                  <noscript data-webp="">
+                    <img src="./img/culture/abra_logo.png" alt="ABRA">
+                  </noscript>
                 </div>
               </div>
               <div class="culture-event__circle culture-event__circle_soon" data-effect="opacity" data-delay="0.2">
                 <div class="culture-event__circle_bg">
-                  <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                  <noscript data-webp="">
+                    <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                  </noscript>
                 </div>
                 <div class="culture-event__circle-soon">Soon</div>
               </div>
               <div class="culture-event__circle culture-event__circle_soon" data-effect="opacity" data-delay="0.3">
                 <div class="culture-event__circle_bg">
-                  <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                  <noscript data-webp="">
+                    <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                  </noscript>
                 </div>
                 <div class="culture-event__circle-soon">Soon</div>
               </div>
@@ -1294,7 +1283,9 @@
             <div class="culture-event__partners-items">
               <div class="culture-event__circle" data-effect="opacity" data-delay="0.1">
                 <div class="culture-event__circle_bg">
-                  <img src="./img/culture/exit_bg.png" alt="exit_bg">
+                  <noscript data-webp="">
+                    <img src="./img/culture/exit_bg.png" alt="exit_bg">
+                  </noscript>
                 </div>
                 <div class="culture-event__circle-name">
                   <img src="./img/culture/Exit_logo.svg" alt="Exit">
@@ -1302,13 +1293,17 @@
               </div>
               <div class="culture-event__circle culture-event__circle_soon" data-effect="opacity" data-delay="0.2">
                 <div class="culture-event__circle_bg">
-                  <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                  <noscript data-webp="">
+                    <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                  </noscript>
                 </div>
                 <div class="culture-event__circle-soon">Soon</div>
               </div>
               <div class="culture-event__circle culture-event__circle_soon" data-effect="opacity" data-delay="0.3">
                 <div class="culture-event__circle_bg">
-                  <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                  <noscript data-webp="">
+                    <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                  </noscript>
                 </div>
                 <div class="culture-event__circle-soon">Soon</div>
               </div>
@@ -1341,19 +1336,25 @@
             <div class="culture-event__partners-items">
               <div class="culture-event__circle" data-effect="opacity" data-delay="0.1">
                 <div class="culture-event__circle_bg">
-                  <img src="./img/culture/nina_bg.png" alt="nina_bg">
+                  <noscript data-webp="">
+                    <img src="./img/culture/nina_bg.png" alt="nina_bg">
+                  </noscript>
                 </div>
                 <div class="culture-event__circle-name culture-event__circle-name_nina">Nina Kraviz</div>
               </div>
               <div class="culture-event__circle culture-event__circle_soon" data-effect="opacity" data-delay="0.2">
                 <div class="culture-event__circle_bg">
-                  <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                  <noscript data-webp="">
+                    <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                  </noscript>
                 </div>
                 <div class="culture-event__circle-soon">Soon</div>
               </div>
               <div class="culture-event__circle culture-event__circle_soon" data-effect="opacity" data-delay="0.3">
                 <div class="culture-event__circle_bg">
-                  <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                  <noscript data-webp="">
+                    <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                  </noscript>
                 </div>
                 <div class="culture-event__circle-soon">Soon</div>
               </div>
@@ -1493,23 +1494,6 @@
             <p class="readed-text">Thus, players must intelligently strategize their use of resources to improve their
               characters and increase
               their chances of obtaining valuable materials, tokens, and models. </p>
-          </div>
-        </div>
-      </div>
-      <div class="tokenomics__earth">
-        <img src="img/earth.svg" alt="Earth">
-      </div>
-      <div class="main-wrapper tokenomics__wrapper">
-        <div class="main-wrapper__col">
-        </div>
-        <div class="main-wrapper__col">
-          <div class="tokenomics__text">
-            <p class="readed-text">The number of tokens is tied to the number of people on the planet.</p>
-            <p class="readed-text">
-              We took this number from 4 open sources and revise the number of token once a year. The idea
-              of the&#160;number
-              is embedded in the concept of humanity, where everyone can be part of the open world of onmi
-            </p>
           </div>
         </div>
       </div>
@@ -1837,8 +1821,8 @@
   <section class="questions">
   <div class="question-item">
     <div class=" line" data-duration="1.2"></div>
-    <div class="question-item__header" data-effect='fade-down'>
-      <h5 class="question-item__title">What is the project?
+    <div class="question-item__header" >
+      <h5 class="question-item__title" data-effect='fade-down'>What is the project?
       </h5>
       <div class="question-item__arrow">
         <img src="img/icons/arrow_slider.svg" alt="arrow">
@@ -1855,8 +1839,8 @@
   </div>
   <div class="question-item">
     <div class=" line" data-duration="1.2"></div>
-    <div class="question-item__header" data-effect='fade-down'>
-      <h5 class="question-item__title">Is ONMI a mobile game or not?
+    <div class="question-item__header">
+      <h5 class="question-item__title" data-effect='fade-down'>Is ONMI a mobile game or not?
       </h5>
       <div class="question-item__arrow">
         <img src="img/icons/arrow_slider.svg" alt="arrow">
@@ -1873,8 +1857,8 @@
   </div>
   <div class="question-item">
     <div class=" line" data-duration="1.2"></div>
-    <div class="question-item__header" data-effect='fade-down'>
-      <h5 class="question-item__title">What technology does ONMI use?
+    <div class="question-item__header">
+      <h5 class="question-item__title" data-effect='fade-down'>What technology does ONMI use?
       </h5>
       <div class="question-item__arrow">
         <img src="img/icons/arrow_slider.svg" alt="arrow">
@@ -1891,8 +1875,8 @@
   </div>
   <div class="question-item">
     <div class=" line" data-duration="1.2"></div>
-    <div class="question-item__header" data-effect='fade-down'>
-      <h5 class="question-item__title">How does the ONMI wallet keep my assets safe?</h5>
+    <div class="question-item__header">
+      <h5 class="question-item__title" data-effect='fade-down'>How does the ONMI wallet keep my assets safe?</h5>
       <div class="question-item__arrow">
         <img src="img/icons/arrow_slider.svg" alt="arrow">
       </div>
@@ -1908,8 +1892,8 @@
   </div>
   <div class="question-item">
     <div class=" line" data-duration="1.2"></div>
-    <div class="question-item__header" data-effect='fade-down'>
-      <h5 class="question-item__title">Is ONMI compatible with other blockchain platforms or tokens?</h5>
+    <div class="question-item__header">
+      <h5 class="question-item__title" data-effect='fade-down'>Is ONMI compatible with other blockchain platforms or tokens?</h5>
       <div class="question-item__arrow">
         <img src="img/icons/arrow_slider.svg" alt="arrow">
       </div>
@@ -1925,8 +1909,8 @@
   </div>
   <div class="question-item">
     <div class=" line" data-duration="1.2"></div>
-    <div class="question-item__header" data-effect='fade-down'>
-      <h5 class="question-item__title">Can I trade or sell my in-game assets on external trading platforms?
+    <div class="question-item__header">
+      <h5 class="question-item__title" data-effect='fade-down'>Can I trade or sell my in-game assets on external trading platforms?
       </h5>
       <div class="question-item__arrow">
         <img src="img/icons/arrow_slider.svg" alt="arrow">
@@ -1944,8 +1928,8 @@
   <div class="question-item">
     <div class=" line" data-duration="1.2"></div>
     <div class="line line_bottom"></div>
-    <div class="question-item__header" data-effect='fade-down'>
-      <h5 class="question-item__title">Are there any restrictions or limits for participating in ONMI?
+    <div class="question-item__header">
+      <h5 class="question-item__title" data-effect='fade-down'>Are there any restrictions or limits for participating in ONMI?
       </h5>
       <div class="question-item__arrow">
         <img src="img/icons/arrow_slider.svg" alt="arrow">
@@ -1973,8 +1957,8 @@
                 </div>
             </h2>
             <div class="platform__text main__text" >
-                <div class="text-line" data-delay="0.2">Become a part of a private product</div>
-                <div class="text-line" data-delay="0.3">testing team</div>
+                <span class="text-line" data-delay="0.2">Become a part of a private product</span>
+                <span class="text-line" data-delay="0.3">testing team</span>
             </div>
         </div>
     </div>
@@ -2061,7 +2045,9 @@
         price, less all other payments at the monthly payment amount. ACMI FINANCING IS SUBJECT TO CHANGE AT ANY TIME
         FOR ANY REASON, INCLUDING BUT NOT LIMITED TO, INSTALLMENT TERM LENGTHS AND ELIGIBLE PRODUCTS. SEE
         support.apple.com/en-us/HT211204 FOR INFORMATION ABOUT UPCOMING CHANGES TO ACMI:NBSP:FINANCING.
-        ** Pricing for iPhone 14 and iPhone 14 Plus includes a $30 connectivity discount that requires activation with
+      </p>
+      <p data-effect="opacity" data-delay="0.1">** Pricing for iPhone 14 and iPhone 14 Plus includes a $30 connectivity
+        discount that requires activation with
         AT&T, T‑Mobile, or Verizon. Pricing shown for iPhone 13 and iPhone13 mini includes a $30 connectivity discount
         for Verizon customers that requires activation and would otherwise be $30 higher for all other customers.</p>
     </div>
@@ -2090,9 +2076,9 @@
 <script src="./js/libs/ScrollTrigger.min.js"></script>
 <script src="./js/libs/marquee3k.min.js"></script>
 <script async src="./js/libs/simple-webp.min.js"></script>
-<script src="./js/libs/sine-waves.js"></script>
+<script src="./js/libs/sine-waves.min.js"></script>
 <!--<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/@master/.min.js"></script>-->
-<script src="js/script.js" type="module"></script>
+<script src="js/script.min.js" type="module"></script>
 </body>
 
 </html>
