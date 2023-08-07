@@ -654,7 +654,7 @@ h5.main__title {
 .hero {
   min-height: 32.29vw;
   height: 100vh;
-  position: fixed;
+  position: relative;
   z-index: 2;
   padding: 8vw 0 8vw;
   top: 0;
@@ -1780,6 +1780,7 @@ h5.main__title {
 }
 
 .find-map__pointer-text {
+  font-family: "TwinMarker", sans-serif;
   text-transform: uppercase;
   font-size: 0.89vw;
   position: relative;
@@ -4504,8 +4505,6 @@ h5.main__title {
   }
 
   .hero {
-    opacity: 1;
-    transform: scale(1);
     position: relative;
     min-height: 100vh;
     display: flex;

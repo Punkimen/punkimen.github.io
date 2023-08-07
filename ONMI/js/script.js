@@ -3,7 +3,7 @@ import {sliderInit} from "./module/sliderInit.min.js";
 import {splitText} from "./module/splitText.min.js";
 import {setHeader} from "./module/setHeader.min.js";
 import {sectionHeightInit} from "./module/sectionHeightInit.min.js";
-import {sectionAnimation} from "./module/sectionAnimate.min.js";
+// import {sectionAnimation} from "./module/sectionAnimate.min.js";
 import {
   drawSvgLine,
   leftToRight,
@@ -358,7 +358,6 @@ window.addEventListener(
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 
-    windowWidth > 768 && sectionAnimation(heroWrapper)
   },
   false
 );
