@@ -3,6 +3,7 @@ import {sliderInit} from "./module/sliderInit.min.js";
 import {splitText} from "./module/splitText.min.js";
 import {setHeader} from "./module/setHeader.min.js";
 import {sectionHeightInit} from "./module/sectionHeightInit.min.js";
+import {sectionAnimation} from "./module/sectionAnimate.min.js";
 import {
   drawSvgLine,
   leftToRight,
@@ -21,7 +22,7 @@ const firstTextLine = document.querySelectorAll('.text-line.first-load')
 const firstOpacityElems = document.querySelectorAll('[data-effect="opacity"].first-load');
 const firstFadeOpacityElems = document.querySelectorAll('[data-effect="fade-down"].first-load');
 // ------- First and massive elems
-
+const heroWrapper = document.querySelector('.hero__wrapper')
 const textLine = document.querySelectorAll('.text-line:not(.first-load)')
 const opacityElems = document.querySelectorAll('[data-effect="opacity"]:not(.first-load)');
 const fadeOpacityElems = document.querySelectorAll('[data-effect="fade-down"]:not(.first-load)');
@@ -126,11 +127,11 @@ const initPage = () => {
   });
   gsap.to(securityBlock, {
     yPercent: -100,
-    ease: "ease.in",
+    ease: 'SineInOut',
     // stagger: 0.5,
     scrollTrigger: {
       trigger: '.tokenomics__inner',
-      start: "bottom center",
+      start: "center+=25% center",
       end: `+=100%`,
       scrub: true,
       pin: true
@@ -356,32 +357,12 @@ window.addEventListener(
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 
-    sectionAnimation()
+    sectionAnimation(heroWrapper)
   },
   false
 );
 
-const heroWrapper = document.querySelector('.hero__wrapper')
 
-function sectionAnimation() {
-  const newOpacity = Math.max(
-    0,
-    Math.min(1, 1 - (window.scrollY * 2.5) / window.innerHeight),
-  );
-  const circleOpacity = Math.max(
-    0,
-    Math.min(1, 1 - (window.scrollY * 4) / window.innerHeight),
-  );
-  const newScale = Math.max(
-    0,
-    Math.min(1, 1 - (window.scrollY * 0.8) / window.innerHeight),
-  );
-  heroWrapper.style.opacity = newOpacity
-  heroWrapper.style.scale = newScale
-  if (newOpacity === 0) {
-    return
-  }
-}
 /*
 gsap.to('.hero', {
   // yPercent: -100,

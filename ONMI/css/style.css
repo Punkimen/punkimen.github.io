@@ -127,7 +127,6 @@ li {
 .page-content {
   width: 100%;
   overflow: hidden;
-  padding-top: 100vh;
 }
 
 .container {
@@ -645,6 +644,11 @@ h5.main__title {
 .burger.active span:last-child {
   transform: rotate(45deg);
   bottom: calc(50% - 0.05vw);
+}
+
+.fake-section {
+  min-height: 32.29vw;
+  height: 100vh;
 }
 
 .hero {
@@ -3402,7 +3406,7 @@ h5.main__title {
   padding: 4.95vw 0 16.9vw;
   position: relative;
   z-index: 2;
-  margin: 10vw 0 calc(-100% + 10vw);
+  margin: 10vw 0 calc(-100% + 20vw);
 }
 
 .security__title {
@@ -5340,7 +5344,7 @@ h5.main__title {
   }
 
   .platform__btns {
-    padding: 0 3.65vw;
+    padding: 0;
     display: block;
   }
 
@@ -6285,10 +6289,6 @@ h5.main__title {
 
   .platform__content {
     margin-bottom: 11.9vw;
-  }
-
-  .platform__btns {
-    padding: 0 3.57vw;
   }
 
   .platform__btn {
