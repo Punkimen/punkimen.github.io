@@ -3924,6 +3924,16 @@ h5.main__title {
     padding: 0 2.82vw;
   }
 
+  .decor-text {
+    margin: 0 0.51vw;
+  }
+
+  .decor-text::after {
+    border-radius: 1.01vw;
+    left: -0.4vw;
+    width: calc(100% + 0.8vw);
+  }
+
   .btn_app {
     padding: 0.58vw 0.94vw 0.58vw 0.94vw;
   }
@@ -3964,7 +3974,7 @@ h5.main__title {
   }
 
   .description-reality__text {
-    max-width: 60%;
+    max-width: 70%;
     font-size: 2.42vw;
   }
 
@@ -5483,6 +5493,18 @@ h5.main__title {
     padding: 0 3.57vw;
   }
 
+  .decor-text {
+    margin: 0 1.19vw;
+    padding: 0.24vw;
+  }
+
+  .decor-text::after {
+    border-radius: 2.38vw;
+    left: -0.95vw;
+    width: calc(100% + 1.9vw);
+    border: 0.24vw solid #000;
+  }
+
   .main__title {
     font-size: 14.55vw;
   }
@@ -5530,7 +5552,7 @@ h5.main__title {
 
   .description-reality__text {
     font-size: 5vw;
-    max-width: 76vw;
+    max-width: 77vw;
     line-height: 1.3em;
   }
 
