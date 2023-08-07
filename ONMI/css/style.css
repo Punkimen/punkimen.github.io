@@ -648,7 +648,7 @@ h5.main__title {
   white-space: nowrap;
   font-size: 13.49vw;
   line-height: 1.2em;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.07em;
   font-weight: 400;
   overflow: visible;
   left: -0.067em;
@@ -701,7 +701,7 @@ h5.main__title {
 }
 
 .reality__text {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.25vw;
   letter-spacing: -0.02em;
   line-height: 1.38em;
@@ -5004,7 +5004,7 @@ h5.main__title {
   .mission__text {
     width: 100%;
     font-size: 3.91vw;
-    line-height: 1.25em;
+    line-height: 1.24em;
   }
 
   .mission__text:not(:last-child) {
@@ -5982,13 +5982,14 @@ h5.main__title {
 
   .mission__text {
     font-size: 7.14vw;
-    line-height: 1.6em;
     width: 100%;
   }
 
   .mission__text_big {
     max-width: 100%;
     font-size: 7.14vw;
+    letter-spacing: 0;
+    padding-right: 4vw;
   }
 
   .culture__title {

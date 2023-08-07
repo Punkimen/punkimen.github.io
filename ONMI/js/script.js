@@ -242,10 +242,10 @@ const initPage = () => {
   }
 
   // //init functions
-  video1?.currentTime > 0 && video1?.play()
+  video1 && video1?.currentTime > 0 && video1?.play()
   sectionHeightInit();
-  cardsAdaptive();
-  journeyCardsAdaptive();
+  // cardsAdaptive();
+  // journeyCardsAdaptive();
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -326,8 +326,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   window.addEventListener('resize', () => {
     waves.update();
-    cardsAdaptive();
-    journeyCardsAdaptive();
+    // cardsAdaptive();
+    // journeyCardsAdaptive();
   })
 })
 let lastScrollTop = 0;
