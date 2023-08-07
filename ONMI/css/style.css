@@ -3367,7 +3367,7 @@ h5.main__title {
   padding: 4.95vw 0 16.9vw;
   position: relative;
   z-index: 2;
-  margin: 10vw 0 10vw;
+  margin: 10vw 0 calc(-100% + 10vw);
 }
 
 .security__title {

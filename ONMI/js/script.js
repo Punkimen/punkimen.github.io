@@ -65,25 +65,6 @@ firstFadeOpacityElems.forEach((el) => {
   triggerAnimate(el);
 });
 
-// verticalTransform(heroPose, heroPose, '-5%', '5%', true)
-verticalTransform(cardsPhone, cardsPhone, '-5%', '5%', true)
-verticalTransform(cardsMap, cardsMap, '-5%', '5%', true)
-verticalTransform(journeyCardPhone, journeyCardPhone, '5%', '-10%', true)
-verticalTransform(journeyCardOmi, journeyCardOmi, '-5%', '5%', true)
-verticalTransform(journeyCardMap, journeyCardMap, '-5%', '5%', true)
-verticalTransform(securityBlock, securityBlock, '-10%', '5%', true)
-verticalTransform(pvpPose1, pvpPose1, '5%', '-5%', true)
-verticalTransform(pvpPose2, pvpPose2, '-5%', '5%', true)
-horizontalTransform(OMICircle1, OMICircles, '100%', '33%')
-horizontalTransform(OMICircle3, OMICircles, '-100%', '-43%')
-horizontalTransform(cardsNft, cardsNft, "-3%", "3%")
-horizontalTransform(phone_1, phoneScreens, '17.5vw', '0', true, null, 'top bottom', 'top+=25% center')
-horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
-scalingFoo(cardsAura, cardsAura, 1, 1.4, "top bottom+=25%", "center top", true)
-scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
-leftToRight(missionLineHorizontal, '.mission')
-svgDraw(svgLine, svgLine, '400%')
-maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
 const showEl = (el, isShow) => {
   if (isShow) {
     el.classList.add('show');
@@ -135,6 +116,7 @@ const hoverAppleBtn = () => {
 
 const initPage = () => {
  // functions
+ //  console.log(securityBlock.getBoundingClientRect().height)
   const st = ScrollTrigger.create({
     trigger: ".description-reality",
     pinned: true,
@@ -142,6 +124,36 @@ const initPage = () => {
     end: "bottom bottom",
     onToggle: (self) => showEl(pinEl, self.isActive),
   });
+  gsap.to(securityBlock, {
+    yPercent: -100,
+    ease: "ease.in",
+    // stagger: 0.5,
+    scrollTrigger: {
+      trigger: '.tokenomics__inner',
+      start: "bottom center",
+      end: `+=100%`,
+      scrub: true,
+      pin: true
+    }
+  });
+  verticalTransform(cardsPhone, cardsPhone, '-5%', '5%', true)
+  verticalTransform(cardsMap, cardsMap, '-5%', '5%', true)
+  verticalTransform(journeyCardPhone, journeyCardPhone, '5%', '-10%', true)
+  verticalTransform(journeyCardOmi, journeyCardOmi, '-5%', '5%', true)
+  verticalTransform(journeyCardMap, journeyCardMap, '-5%', '5%', true)
+// verticalTransform(securityBlock, securityBlock, '-10%', '5%', true)
+  verticalTransform(pvpPose1, pvpPose1, '5%', '-5%', true)
+  verticalTransform(pvpPose2, pvpPose2, '-5%', '5%', true)
+  horizontalTransform(OMICircle1, OMICircles, '100%', '33%')
+  horizontalTransform(OMICircle3, OMICircles, '-100%', '-43%')
+  horizontalTransform(cardsNft, cardsNft, "-3%", "3%")
+  horizontalTransform(phone_1, phoneScreens, '17.5vw', '0', true, null, 'top bottom', 'top+=25% center')
+  horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
+  scalingFoo(cardsAura, cardsAura, 1, 1.4, "top bottom+=25%", "center top", true)
+  scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
+  leftToRight(missionLineHorizontal, '.mission')
+  svgDraw(svgLine, svgLine, '400%')
+  maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
 
   // // sliders
   {
