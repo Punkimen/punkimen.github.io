@@ -115,8 +115,8 @@ const hoverAppleBtn = () => {
 }
 
 const initPage = () => {
- // functions
- //  console.log(securityBlock.getBoundingClientRect().height)
+  // functions
+  //  console.log(securityBlock.getBoundingClientRect().height)
   const st = ScrollTrigger.create({
     trigger: ".description-reality",
     pinned: true,
@@ -151,8 +151,8 @@ const initPage = () => {
   horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
   scalingFoo(cardsAura, cardsAura, 1, 1.4, "top bottom+=25%", "center top", true)
   scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
-  leftToRight(missionLineHorizontal, '.mission','top-=25% bottom')
-  svgDraw(svgLine, '.mission', 'top-=25% bottom','400%')
+  leftToRight(missionLineHorizontal, '.mission', 'top-=25% bottom')
+  svgDraw(svgLine, '.mission', 'top-=25% bottom', '400%')
   maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
 
   // // sliders
@@ -344,18 +344,54 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 let lastScrollTop = 0;
 window.addEventListener(
-    "scroll",
-    function () {
-      let st = window.pageYOffset || document.documentElement.scrollTop;
-      if (st > lastScrollTop && lastScrollTop > window.innerHeight) {
-        // downscroll code
-        setHeader(true);
-      } else if (st === 0) {
-        // upscroll code
-        setHeader(false);
-      }
-      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-    },
-    false
+  "scroll",
+  function () {
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > lastScrollTop && lastScrollTop > window.innerHeight) {
+      // downscroll code
+      setHeader(true);
+    } else if (st === 0) {
+      // upscroll code
+      setHeader(false);
+    }
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+
+    sectionAnimation()
+  },
+  false
 );
 
+const heroWrapper = document.querySelector('.hero__wrapper')
+
+function sectionAnimation() {
+  const newOpacity = Math.max(
+    0,
+    Math.min(1, 1 - (window.scrollY * 2.5) / window.innerHeight),
+  );
+  const circleOpacity = Math.max(
+    0,
+    Math.min(1, 1 - (window.scrollY * 4) / window.innerHeight),
+  );
+  const newScale = Math.max(
+    0,
+    Math.min(1, 1 - (window.scrollY * 0.8) / window.innerHeight),
+  );
+  heroWrapper.style.opacity = newOpacity
+  heroWrapper.style.scale = newScale
+  if (newOpacity === 0) {
+    return
+  }
+}
+/*
+gsap.to('.hero', {
+  // yPercent: -100,
+  ease: "ease.in",
+  // stagger: 0.5,
+  scrollTrigger: {
+    trigger: '.hero',
+    start: "bottom center",
+    end: `+=200%`,
+    scrub: true,
+    pin: true
+  }
+});*/

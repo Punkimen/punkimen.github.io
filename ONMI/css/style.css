@@ -127,6 +127,7 @@ li {
 .page-content {
   width: 100%;
   overflow: hidden;
+  padding-top: 100vh;
 }
 
 .container {
@@ -652,6 +653,9 @@ h5.main__title {
   position: relative;
   z-index: 2;
   padding: 8vw 0 8vw;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .hero__wrapper {
