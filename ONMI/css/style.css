@@ -35,7 +35,9 @@
 }
 
 [data-effect=opacity].animate {
-  transition: opacity cubic-bezier(0.16, 0.01, 0.77, 1) 0.6s;
+  transition-property: opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.16, 0.01, 0.77, 1);
   opacity: 1;
 }
 
@@ -136,6 +138,24 @@ li {
 
 .blue-text {
   color: var(--color-main);
+}
+
+.decor-text {
+  position: relative;
+  white-space: nowrap;
+  margin: 0 0.26vw;
+}
+
+.decor-text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.05vw;
+  left: -0.31vw;
+  width: calc(100% + 0.63vw);
+  height: calc(100% + 0px);
+  border: 0.1vw solid #000;
+  border-radius: 0.52vw;
 }
 
 .btn {
@@ -521,6 +541,10 @@ h5.main__title {
   text-transform: uppercase;
 }
 
+.header__text-row {
+  overflow: hidden;
+}
+
 .header__logo {
   margin-right: 2.1vw;
   width: 5.21vw;
@@ -566,10 +590,15 @@ h5.main__title {
   border: none;
   outline: none;
   min-width: 4.3vw;
-  background: #fff;
+  background-color: #fff;
   color: #000;
   padding: 0.36vw 0.78vw 0.38vw 0.78vw;
   font-size: 0.63vw;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.header__btn:hover {
+  background-color: var(--color-gray);
 }
 
 .burger {
@@ -647,7 +676,7 @@ h5.main__title {
   position: relative;
   white-space: nowrap;
   font-size: 13.49vw;
-  line-height: 1.2em;
+  line-height: 1.3em;
   letter-spacing: -0.07em;
   font-weight: 400;
   overflow: visible;
@@ -655,6 +684,9 @@ h5.main__title {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
+  overflow: hidden;
+  position: relative;
+  top: -0.1em;
 }
 
 .hero__title span {
@@ -841,7 +873,7 @@ h5.main__title {
   letter-spacing: -0.01em;
   text-align: center;
   color: #000;
-  max-width: 35vw;
+  max-width: 36vw;
   width: 100%;
 }
 
@@ -2031,17 +2063,17 @@ h5.main__title {
 
 .each-point__mark_1 {
   left: 11.09vw;
-  top: 5.42vw;
+  top: 6vw;
 }
 
 .each-point__mark_2 {
-  bottom: 0.36vw;
+  bottom: 1vw;
   left: 12.19vw;
 }
 
 .each-point__mark_3 {
   left: 32.4vw;
-  top: 4.38vw;
+  top: 4.7vw;
 }
 
 .each-point__mark_4 {
@@ -2051,12 +2083,12 @@ h5.main__title {
 
 .each-point__mark_5 {
   left: 31.77vw;
-  bottom: 2.92vw;
+  bottom: 3.5vw;
 }
 
 .each-point__mark_6 {
   left: 53.02vw;
-  top: 3.13vw;
+  top: 3.7vw;
 }
 
 .each-point__mark_7 {
@@ -2070,7 +2102,7 @@ h5.main__title {
 }
 
 .each-point__mark_9 {
-  bottom: 4.79vw;
+  bottom: 5.2vw;
   right: 5.89vw;
 }
 
@@ -2444,7 +2476,7 @@ h5.main__title {
 
 .hunger-games__wrapper {
   position: relative;
-  margin-bottom: -7.6vw;
+  z-index: 2;
 }
 
 .hunger-games__title {
@@ -2460,13 +2492,12 @@ h5.main__title {
   position: relative;
   font-size: 4.17vw;
   line-height: 0.6em;
-  left: -1.7vw;
 }
 
 .hunger-games__pose {
   position: absolute;
-  top: -15vw;
-  left: 43vw;
+  top: -10vw;
+  left: 45vw;
   width: 15.05vw;
 }
 
@@ -3130,19 +3161,19 @@ h5.main__title {
 }
 
 .svg-circle_1 {
-  stroke: rgba(255, 255, 255, 0.05);
-}
-
-.svg-circle_1 circle {
-  stroke: rgba(255, 255, 255, 0.05);
-}
-
-.svg-circle_2 {
   stroke: rgba(255, 255, 255, 0.1);
 }
 
-.svg-circle_3 {
+.svg-circle_1 circle {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.svg-circle_2 {
   stroke: rgba(255, 255, 255, 0.15);
+}
+
+.svg-circle_3 {
+  stroke: rgba(255, 255, 255, 0.2);
 }
 
 .cards-token__wrapper {
@@ -5142,11 +5173,11 @@ h5.main__title {
   }
 
   .svg-circle_2 circle {
-    stroke: rgba(255, 255, 255, 0.1);
+    stroke: rgba(255, 255, 255, 0.15);
   }
 
   .svg-circle_3 circle {
-    stroke: rgba(255, 255, 255, 0.15);
+    stroke: rgba(255, 255, 255, 0.2);
   }
 
   .cards-token__wrapper {
@@ -6074,7 +6105,6 @@ h5.main__title {
   .token__circle-shadow {
     width: 140.81vw;
     height: 140.81vw;
-    box-shadow: none;
   }
 
   .token__card {

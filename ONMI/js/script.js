@@ -151,8 +151,8 @@ const initPage = () => {
   horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
   scalingFoo(cardsAura, cardsAura, 1, 1.4, "top bottom+=25%", "center top", true)
   scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
-  leftToRight(missionLineHorizontal, '.mission')
-  svgDraw(svgLine, svgLine, '400%')
+  leftToRight(missionLineHorizontal, '.mission','top-=25% bottom')
+  svgDraw(svgLine, '.mission', 'top-=25% bottom','400%')
   maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
 
   // // sliders
@@ -350,7 +350,7 @@ window.addEventListener(
       if (st > lastScrollTop && lastScrollTop > window.innerHeight) {
         // downscroll code
         setHeader(true);
-      } else if (st < lastScrollTop) {
+      } else if (st === 0) {
         // upscroll code
         setHeader(false);
       }

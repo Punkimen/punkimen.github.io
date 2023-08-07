@@ -57,21 +57,7 @@ export const triggerAnimate = (el, trigger, start) => {
     },
   })
 }*/
-export const leftToRight = (el, trigger) => {
-  if (el) {
-    gsap.fromTo(el, {
-      width: 0,
-    }, {
-      width: "100%",
-      delay: 0,
-      duration: 1,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: trigger ? trigger : el,
-      }
-    })
-  }
-}
+
 export const fadeUp = el => {
   const delay = el.getAttribute('data-delay') || 0
   const duration = el.getAttribute('data-duration') || 2
@@ -91,9 +77,26 @@ export const fadeUp = el => {
     }
   })
 }
-export const svgDraw = (el, tirgger, dashOffset) => {
+
+export const leftToRight = (el, trigger, start) => {
+  if (el) {
+    gsap.fromTo(el, {
+      width: 0,
+    }, {
+      width: "100%",
+      delay: 0,
+      duration: 0.8,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        start: start || "top bottom",
+        trigger: trigger ? trigger : el,
+      }
+    })
+  }
+}
+export const svgDraw = (el, tirgger, start, dashOffset) => {
   const delay = el.getAttribute('data-delay') || 0
-  const duration = el.getAttribute('data-duration') || 1.2
+  const duration = el.getAttribute('data-duration') || 0.8
 
   gsap.to(el, {
     strokeDashoffset: dashOffset || 0,
@@ -101,7 +104,7 @@ export const svgDraw = (el, tirgger, dashOffset) => {
     duration: duration,
     ease: "power1.inOut",
     scrollTrigger: {
-      start: "top bottom",
+      start: start || "top bottom",
       trigger: tirgger ? tirgger : el
     }
   })
@@ -164,7 +167,7 @@ export const drawSvgLine = (el, trigger, markers) => {
     scrollTrigger: {
       trigger: trigger || el,
       start: 'top bottom',
-      end: 'center center',
+      end: 'center-=15% top',
       scrub: true,
       onUpdate: ((self) => {
         const progress = self.progress.toFixed(2)
