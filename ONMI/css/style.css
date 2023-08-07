@@ -575,7 +575,7 @@ h5.main__title {
   content: "";
   display: block;
   position: absolute;
-  top: calc(100% + 0.26vw);
+  top: 97%;
   width: 0;
   height: 0.05vw;
   background: #fff;
@@ -594,11 +594,11 @@ h5.main__title {
   color: #000;
   padding: 0.36vw 0.78vw 0.38vw 0.78vw;
   font-size: 0.63vw;
-  transition: background-color ease-in-out 0.3s;
+  transition: background-color ease-in-out 0.3s, opacity cubic-bezier(0.16, 0.01, 0.77, 1) 0.6s 0.9s !important;
 }
 
 .header__btn:hover {
-  background-color: var(--color-gray);
+  background-color: #fff;
 }
 
 .burger {
@@ -654,12 +654,12 @@ h5.main__title {
 .hero {
   min-height: 32.29vw;
   height: 100vh;
-  position: relative;
+  position: fixed;
   z-index: 2;
   padding: 8vw 0 8vw;
-  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
 }
 
 .hero__wrapper {
@@ -695,6 +695,9 @@ h5.main__title {
   overflow: hidden;
   position: relative;
   top: -0.1em;
+  /*  @media (max-width: $md1) {
+      font-size: 12.3vw;
+    }*/
 }
 
 .hero__title span {
@@ -732,6 +735,7 @@ h5.main__title {
   color: #000;
   padding: 2.6vw 3.91vw;
   font-size: 1.82vw;
+  margin: 0 auto;
 }
 
 .reality {
@@ -1194,6 +1198,10 @@ h5.main__title {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+}
+
+.create-omi__item_15 {
+  width: 11.9vw;
 }
 
 .create-omi__item img {
@@ -3406,7 +3414,7 @@ h5.main__title {
   padding: 4.95vw 0 16.9vw;
   position: relative;
   z-index: 2;
-  margin: 10vw 0 calc(-100% + 20vw);
+  margin: -100vh 0 calc(-100vh + 70vw);
 }
 
 .security__title {
@@ -3542,14 +3550,15 @@ h5.main__title {
 
 .question-item__header {
   position: relative;
-  padding-top: 2.2vw;
-  padding-bottom: 2vw;
+  padding-top: 2vw;
+  padding-bottom: 1.8vw;
   cursor: pointer;
+  padding-right: 3vw;
 }
 
 .question-item__title {
   font-size: 1.51vw;
-  line-height: 1em;
+  line-height: 1.5em;
   font-weight: 400;
 }
 
@@ -3599,6 +3608,10 @@ h5.main__title {
 
 .question-item.open .question-item__text {
   opacity: 1;
+}
+
+.question-item.open .question-item__text p:not(:last-child) {
+  margin-bottom: 1.25vw;
 }
 
 .platform {
@@ -3827,10 +3840,6 @@ h5.main__title {
     font-size: 0.83vw;
   }
 
-  .hero__title {
-    font-size: 12.3vw;
-  }
-
   .culture-event {
     padding-left: 1.94vw;
   }
@@ -3936,7 +3945,7 @@ h5.main__title {
   }
 
   .hero__title {
-    font-size: 12.1vw;
+    font-size: 13.1vw;
   }
 
   .reality__text_small {
@@ -3973,6 +3982,10 @@ h5.main__title {
 
   .create-omi__item {
     width: 16vw;
+  }
+
+  .create-omi__item_15 {
+    width: 16.2vw;
   }
 
   .create-omi__cards {
@@ -4146,6 +4159,11 @@ h5.main__title {
 
   .each-point__circle-text {
     font-size: 1.2vw;
+  }
+
+  .each-point__svg {
+    position: relative;
+    top: 0.4vw;
   }
 
   .each-point__mark {
@@ -4462,16 +4480,28 @@ h5.main__title {
   }
 
   .burger {
-    width: 4vw;
-    height: 0.5vw;
+    width: 6.25vw;
+    height: 1.3vw;
     display: block;
   }
 
+  .burger span {
+    height: 0.26vw;
+  }
+
+  .fake-section {
+    display: none;
+  }
+
   .hero {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 75vw;
   }
 
   .hero__wrapper {
@@ -4609,6 +4639,10 @@ h5.main__title {
 
   .create-omi__item {
     width: 23vw;
+  }
+
+  .create-omi__item_15 {
+    width: 23.2vw;
   }
 
   .create-omi__card {
@@ -4827,12 +4861,12 @@ h5.main__title {
     margin-bottom: 4vw;
   }
 
-  .pvp__title {
-    font-size: 32.4vw;
-  }
-
   .pvp__text {
     font-size: 1.56vw;
+  }
+
+  .market {
+    padding-bottom: 35vw;
   }
 
   .market__wrapper {
@@ -5298,6 +5332,10 @@ h5.main__title {
     max-width: 80%;
   }
 
+  .security {
+    margin: -100vh 0 calc(-100vh + 90vw);
+  }
+
   .security__title {
     font-size: 7.81vw;
   }
@@ -5458,8 +5496,12 @@ h5.main__title {
   }
 
   .burger {
-    width: 12vw;
-    height: 2vw;
+    width: 11.43vw;
+    height: 2.38vw;
+  }
+
+  .burger span {
+    height: 0.48vw;
   }
 
   .hero__text {
@@ -5564,6 +5606,10 @@ h5.main__title {
 
   .create-omi__item {
     width: 37.56vw;
+  }
+
+  .create-omi__item_15 {
+    width: 37.7vw;
   }
 
   .create-omi__cards-wrapper {
@@ -6210,7 +6256,7 @@ h5.main__title {
   }
 
   .roadmap__title {
-    font-size: 19.28vw;
+    font-size: 18.33vw;
   }
 
   .roadmap-item {
@@ -6269,8 +6315,9 @@ h5.main__title {
   }
 
   .question-item__header {
-    padding-top: 7.4vw;
-    padding-bottom: 7vw;
+    padding-top: 7.2vw;
+    padding-bottom: 6.6vw;
+    padding-right: 5vw;
   }
 
   .question-item__title {
@@ -6285,6 +6332,15 @@ h5.main__title {
     font-size: 3.81vw;
     max-width: 100%;
     padding-right: 5vw;
+  }
+
+  .question-item.open .question-item__body {
+    padding-top: 4.82vw;
+    padding-bottom: 12.6vw;
+  }
+
+  .question-item.open .question-item__text p:not(:last-child) {
+    margin-bottom: 3.71vw;
   }
 
   .platform__content {

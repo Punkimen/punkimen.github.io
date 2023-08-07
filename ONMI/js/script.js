@@ -15,14 +15,14 @@ import {
 import {cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.js";
 
 // const
-const windowWidth = window.innerWidth
+let windowWidth = window.innerWidth
 
 // ------- First and massive elems
 const firstTextLine = document.querySelectorAll('.text-line.first-load')
 const firstOpacityElems = document.querySelectorAll('[data-effect="opacity"].first-load');
 const firstFadeOpacityElems = document.querySelectorAll('[data-effect="fade-down"].first-load');
 // ------- First and massive elems
-const heroWrapper = document.querySelector('.hero__wrapper')
+const heroWrapper = document.querySelector('.hero')
 const textLine = document.querySelectorAll('.text-line:not(.first-load)')
 const opacityElems = document.querySelectorAll('[data-effect="opacity"]:not(.first-load)');
 const fadeOpacityElems = document.querySelectorAll('[data-effect="fade-down"]:not(.first-load)');
@@ -125,8 +125,9 @@ const initPage = () => {
     end: "bottom bottom",
     onToggle: (self) => showEl(pinEl, self.isActive),
   });
+  // gsap.set(securityBlock, {yPercent:  -100})
   gsap.to(securityBlock, {
-    yPercent: -100,
+    // yPercent: -100,
     ease: 'SineInOut',
     // stagger: 0.5,
     scrollTrigger: {
@@ -151,16 +152,15 @@ const initPage = () => {
   horizontalTransform(phone_1, phoneScreens, '17.5vw', '0', true, null, 'top bottom', 'top+=25% center')
   horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
   scalingFoo(cardsAura, cardsAura, 1, 1.4, "top bottom+=25%", "center top", true)
-  scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
-  leftToRight(missionLineHorizontal, '.mission', 'top-=25% bottom')
-  svgDraw(svgLine, '.mission', 'top-=25% bottom', '400%')
+  windowWidth > 568 && scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
+  leftToRight(missionLineHorizontal, svgLine)
+  svgDraw(svgLine, svgLine, null, '400%')
   maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
 
   // // sliders
   {
     let numSize = "0.52vw"
     const initNum = () => {
-      const windowWidth = window.innerWidth
       if (windowWidth <= 568) {
         numSize = "11.52vw"
       } else {
@@ -339,6 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   window.addEventListener('resize', () => {
     waves.update();
+    windowWidth = window.innerWidth
     // cardsAdaptive();
     // journeyCardsAdaptive();
   })
@@ -357,7 +358,7 @@ window.addEventListener(
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 
-    sectionAnimation(heroWrapper)
+    windowWidth > 768 && sectionAnimation(heroWrapper)
   },
   false
 );
