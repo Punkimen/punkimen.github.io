@@ -875,7 +875,7 @@ h5.main__title {
   letter-spacing: -0.01em;
   text-align: center;
   color: #000;
-  max-width: 36vw;
+  max-width: 40vw;
   width: 100%;
 }
 
@@ -4155,8 +4155,21 @@ h5.main__title {
     font-size: 1.21vw;
   }
 
+  .header__text {
+    font-size: 1.21vw;
+  }
+
   .header__logo {
-    width: 7.21vw;
+    width: 8.08vw;
+  }
+
+  .header__link {
+    font-size: 1.21vw;
+  }
+
+  .header__btn {
+    font-size: 1.21vw;
+    padding: 0.8vw 1.2vw 0.8vw 1.2vw;
   }
 
   .hero {
@@ -4568,6 +4581,10 @@ h5.main__title {
     font-size: 1.2vw;
   }
 
+  .security {
+    margin: -100vh 0 calc(-100vh + 90vw);
+  }
+
   .security__title {
     font-size: 4.17vw;
   }
@@ -4692,7 +4709,7 @@ h5.main__title {
   }
 
   .main__text {
-    font-size: 1.56vw;
+    font-size: 2.08vw;
     position: relative;
     text-align: center;
     margin: 0 auto;
@@ -4819,7 +4836,7 @@ h5.main__title {
   }
 
   .adventure__title {
-    margin-bottom: 1vw;
+    margin-bottom: -5vw;
   }
 
   .adventure__text {
@@ -5126,18 +5143,32 @@ h5.main__title {
     height: 50vw;
   }
 
+  .sound__text {
+    font-size: 2.08vw;
+  }
+
+  .sound-season__line {
+    height: 4.93vw;
+    margin: 2.15vw auto;
+  }
+
   .sound-season__count {
-    font-size: 1.2vw;
+    font-size: 1.82vw;
   }
 
   .sound-season__author {
-    width: 18vw;
-    height: 18vw;
+    width: 24.83vw;
+    height: 24.83vw;
   }
 
   .sound-season__author_unknown {
-    width: 16vw;
-    height: 16vw;
+    width: 20.83vw;
+    height: 20.83vw;
+  }
+
+  .sound-season__author_unknown .sound-season__photo {
+    width: 47%;
+    height: 47%;
   }
 
   .sound-season__photo {
@@ -5146,8 +5177,12 @@ h5.main__title {
     margin-bottom: 4vw;
   }
 
+  .sound-season__name {
+    font-size: 2.08vw;
+  }
+
   .pvp__text {
-    font-size: 1.56vw;
+    font-size: 2.08vw;
   }
 
   .market {
@@ -5623,7 +5658,7 @@ h5.main__title {
   }
 
   .security {
-    margin: -100vh 0 calc(-100vh + 90vw);
+    margin: -100vh 0 calc(-100vh + 110vw);
   }
 
   .security__title {
@@ -6016,6 +6051,10 @@ h5.main__title {
     height: 155vw;
   }
 
+  .card_1 .card__front-aura {
+    top: -6vw;
+  }
+
   .card_1 .card__front-img {
     max-width: 65%;
   }
@@ -6181,11 +6220,6 @@ h5.main__title {
   .sound-season__author_unknown {
     width: 41vw;
     height: 41vw;
-  }
-
-  .sound-season__author_unknown .sound-season__photo {
-    width: 47%;
-    height: 47%;
   }
 
   .sound-season__name {
