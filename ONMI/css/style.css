@@ -3088,6 +3088,8 @@ h5.main__title {
 }
 
 .culture-event__circle-soon {
+  position: relative;
+  z-index: 2;
   text-transform: uppercase;
   font-size: 1.2vw;
   font-weight: 600;
