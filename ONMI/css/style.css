@@ -1845,12 +1845,9 @@ h5.main__title {
 
 .journey-card_2 .journey-card__omi {
   position: absolute;
-  bottom: -25%;
-  left: -7vw;
-  width: 38.25vw;
-  /*@media(max-width: $md2){
-    left: 90%;
-  }*/
+  bottom: 2%;
+  left: 0vw;
+  width: 25.5vw;
 }
 
 .journey-card_2 .journey-card__omi img {
