@@ -527,14 +527,13 @@ h5.main__title {
 .header__left {
   margin-right: 2.08vw;
   display: flex;
-  align-items: center;
   position: relative;
 }
 
 .header__text {
   position: relative;
   line-height: 1.1em;
-  top: 0.25em;
+  top: 0.35em;
   transition: all ease-in 0.3s;
   font-size: 0.73vw;
   letter-spacing: 0.06em;
@@ -568,7 +567,7 @@ h5.main__title {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  margin-right: 2.76vw;
+  margin-right: 1.76vw;
 }
 
 .header__link::after {
@@ -594,6 +593,7 @@ h5.main__title {
   color: #000;
   padding: 0.36vw 0.78vw 0.38vw 0.78vw;
   font-size: 0.63vw;
+  margin-left: 1.5vw;
   transition: background-color ease-in-out 0.3s, opacity cubic-bezier(0.16, 0.01, 0.77, 1) 0.6s 0.9s !important;
 }
 
@@ -2656,6 +2656,17 @@ h5.main__title {
   width: 3.44vw;
 }
 
+.hunger-map__icon_mob {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate(0, 0);
+  margin-bottom: 5.86vw;
+}
+
 .hunger-map__icon img {
   display: block;
   width: 100%;
@@ -3408,7 +3419,7 @@ h5.main__title {
 
 .security {
   background: #BABABA;
-  border-radius: 2.29vw;
+  border-radius: 2.08vw;
   color: #000;
   padding: 4.95vw 0 16.9vw;
   position: relative;
@@ -4270,7 +4281,7 @@ h5.main__title {
   }
 
   .card_1 .card__front-img {
-    max-width: 85%;
+    max-width: 60%;
   }
 
   .card_2 {
@@ -4446,7 +4457,7 @@ h5.main__title {
   }
 
   .hunger-progress__text_3 {
-    max-width: 23.16vw;
+    max-width: 20.16vw;
   }
 
   .individual__title {
@@ -4999,6 +5010,12 @@ h5.main__title {
     margin-bottom: 5.86vw;
   }
 
+  .find-map__map {
+    width: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .find-map {
     background-size: auto;
     background-position: center;
@@ -5015,6 +5032,33 @@ h5.main__title {
     display: none;
   }
 
+  .find-map__pointer_2 {
+    display: block;
+    bottom: 12vw;
+    left: 9vw;
+  }
+
+  .find-map__pointer_4 {
+    display: block;
+    bottom: 13.63vw;
+    left: 20.5vw;
+  }
+
+  .find-map__pointer_8 {
+    bottom: 14.24vw;
+    right: 18.33vw;
+    display: block;
+  }
+
+  .find-map__pointer_8 {
+    bottom: 18.24vw;
+    right: 25.33vw;
+  }
+
+  .find-map__pointer-text {
+    font-size: 2vw;
+  }
+
   .journey-card:not(:last-child) {
     margin-bottom: 1.3vw;
   }
@@ -5028,7 +5072,8 @@ h5.main__title {
   }
 
   .journey-card_2 .journey-card__omi {
-    width: 120%;
+    width: 100%;
+    bottom: -13%;
   }
 
   .journey-card_3 {
@@ -5213,7 +5258,7 @@ h5.main__title {
 
   .hunger-progress__text_2 {
     max-width: 39.16vw;
-    margin-bottom: 2.6vw;
+    margin-bottom: 12.37vw;
   }
 
   .hunger-progress__text_3 {
@@ -5228,6 +5273,10 @@ h5.main__title {
   .hunger-map__icon {
     width: 6.8vw;
     display: none;
+  }
+
+  .hunger-map__icon_mob {
+    display: block;
   }
 
   .be-part__content {
@@ -5956,7 +6005,7 @@ h5.main__title {
   }
 
   .card {
-    border-radius: 12vw;
+    border-radius: 7.14vw;
   }
 
   .card:not(:last-child) {
@@ -5968,7 +6017,7 @@ h5.main__title {
   }
 
   .card_1 .card__front-img {
-    max-width: 100%;
+    max-width: 65%;
   }
 
   .card_2 {
@@ -6037,8 +6086,23 @@ h5.main__title {
     transform: translateY(-81%);
   }
 
+  .find-map__pointer_2 {
+    bottom: 21vw;
+    left: 3vw;
+  }
+
+  .find-map__pointer_4 {
+    display: block;
+    bottom: 23.63vw;
+    left: 36.5vw;
+  }
+
+  .find-map__pointer-text {
+    font-size: 3vw;
+  }
+
   .journey-card {
-    border-radius: 12vw;
+    border-radius: 7.14vw;
     padding: 13.2vw 5vw 8.8vw 5vw;
     height: 138vw;
   }
@@ -6262,7 +6326,7 @@ h5.main__title {
 
   .hunger-progress__text_2 {
     max-width: 100%;
-    margin-bottom: 5.6vw;
+    margin-bottom: 22.62vw;
   }
 
   .hunger-progress__text_3 {
@@ -6272,6 +6336,10 @@ h5.main__title {
   .hunger-map__icon {
     width: 17.8vw;
     margin: 25.02vw 0 9.34vw;
+  }
+
+  .hunger-map__icon_mob {
+    margin-bottom: 9.52vw;
   }
 
   .be-part__content {
@@ -6547,7 +6615,7 @@ h5.main__title {
   }
 
   .security {
-    border-radius: 4.62vw;
+    border-radius: 7.14vw;
     padding: 8.95vw 0 20.9vw;
     margin-bottom: 35vw;
   }
