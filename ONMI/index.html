@@ -2,22 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONMI</title>
-    <meta name="keywords" content=""/>
-    <meta name="description" content=""/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="css/style.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONMI</title>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 <div class="page-content">
-    <header class="header animate">
+  <header class="header animate">
   <div class="container">
     <div class="header__wrapper">
       <div class="header__left">
@@ -36,7 +43,7 @@
       <div class="header__right">
         <a href="#" class="header__link first-load" data-effect="opacity" data-delay="0.7">Gameplay</a>
         <a href="#" class="header__link first-load" data-effect="opacity" data-delay="0.8">Docs</a>
-        <button class="header__btn btn first-load" data-effect="opacity" data-delay="0.9">Download</button>
+        <button class="header__btn btn first-load" data-open="#modal" data-effect="opacity" data-delay="0.9">Download</button>
         <div class="header__burger burger" data-effect="opacity" data-delay="0.2"><span></span><span></span>
         </div>
       </div>
@@ -44,22 +51,23 @@
   </div>
 </header>
 
-    <div class="description-reality__content">
-        <div class="container">
-            <div class="description-reality__inner">
-                <div class="description-reality__text">
-                    <p>A game in which you can get into a <span class="decor-text">hidden virtual layer</span> over the city and the whole world.</p>
-                    <p>Here you can earn money, find valuable digital art, participate in an international Hunger Games
-                        tournament,
-                        enter a social competition, activate access to real goods from fashion brands, stars and
-                        artists, and
-                        discover corners of this world in&nbsp;secret&nbsp;itineraries.</p>
-                </div>
-            </div>
+  <div class="description-reality__content">
+    <div class="container">
+      <div class="description-reality__inner">
+        <div class="description-reality__text">
+          <p>A game in which you can get into a <span class="decor-text">hidden virtual layer</span> over the city and
+            the whole world.</p>
+          <p>Here you can earn money, find valuable digital art, participate in an international Hunger Games
+            tournament,
+            enter a social competition, activate access to real goods from fashion brands, stars and
+            artists, and
+            discover corners of this world in&nbsp;secret&nbsp;itineraries.</p>
         </div>
+      </div>
     </div>
-<!--<div class="fake-section"></div>-->
-    <section class="hero">
+  </div>
+  <!--<div class="fake-section"></div>-->
+  <section class="hero">
     <div class="container">
         <div class="hero__wrapper">
             <div class="hero__content">
@@ -83,7 +91,7 @@
     </div>
 </section>
 
-    <section class="description-reality">
+  <section class="description-reality">
     <picture>
         <source media="(max-width:768px)" srcset="./img/reality_bg_mob.png">
         <!--   <noscript data-webp>
@@ -93,7 +101,7 @@
     </picture>
 </section>
 
-    <section class="reality">
+  <section class="reality">
   <div class="container">
     <div class="reality__screens">
       <div class="reality__screen reality__screen_1" data-duration="2">
@@ -136,7 +144,7 @@
   </div>
 </section>
 
-    <section class="adventure">
+  <section class="adventure">
   <div class="container">
     <div class="adventure__content">
       <h2 class="main__title adventure__title">
@@ -273,7 +281,7 @@
   </div>
 </section>
 
-    <section class="create-omi">
+  <section class="create-omi">
   <div class="container">
     <div class="create-omi__descr">
       <h2 class="main__title create-omi__title">
@@ -443,7 +451,7 @@
   </div>-->
 </section>
 
-    <section class="cards">
+  <section class="cards">
   <div class="container">
     <div class="cards__wrapper">
       <div class="cards__col">
@@ -531,7 +539,7 @@
   </div>
 </section>
 
-    <section class="find">
+  <section class="find">
   <div class="container">
     <div class="find__descr">
       <h2 class="find__title main__title">
@@ -576,10 +584,10 @@
       <div class="find-map__pointer-text">Item</div>
     </div>
     <div class="find-map__pointer find-map__pointer_4" data-effect="opacity" data-delay="0.4">
-      <div class="find-map__pointer-text">NFT</div>
+      <div class="find-map__pointer-text">Challenge</div>
     </div>
     <div class="find-map__pointer find-map__pointer_5" data-effect="opacity" data-delay="0.5">
-      <div class="find-map__pointer-text">Challenge</div>
+      <div class="find-map__pointer-text">NFT</div>
     </div>
     <div class="find-map__pointer find-map__pointer_6" data-effect="opacity" data-delay="0.6">
       <div class="find-map__pointer-text">Portal</div>
@@ -597,7 +605,7 @@
       <div class="find-map__pointer-text">Totem</div>
     </div>
     <noscript data-webp>
-      <img src="./img/bitmap.png" class="find-map__map" />
+      <img src="./img/bitmap.png" class="find-map__map"/>
     </noscript>
     <div class="container">
       <div class="find-map__phone">
@@ -612,7 +620,7 @@
   </div>
 </section>
 
-    <section class="journey-cards">
+  <section class="journey-cards">
   <div class="container">
     <div class="cards__wrapper journey-cards__wrapper">
       <div class="journey-cards__col cards__col">
@@ -663,7 +671,7 @@
   </div>
 </section>
 
-    <section class="each-point">
+  <section class="each-point">
   <h3 class="each-point__title">
     <div class="text-line" data-delay="0.1">
       <span class="text-desktop">Each point on the planet holds its</span>
@@ -701,20 +709,20 @@
     </div>
     <div class="each-point__circle">
       <div class="each-point__circle-text">
-        <span class="text-line" data-delay="0.1">brands that tell their</span>
-        <span class="text-line" data-delay="0.2">stories</span>
+        <span class="text-line" data-delay="0.3">brands that tell their</span>
+        <span class="text-line" data-delay="0.4">stories</span>
       </div>
     </div>
     <div class="each-point__circle">
       <div class="each-point__circle-text">
-        <span class="text-line" data-delay="0.1">bright urban personalities</span>
-        <span class="text-line" data-delay="0.2">in each region</span>
+        <span class="text-line" data-delay="0.5">bright urban personalities</span>
+        <span class="text-line" data-delay="0.6">in each region</span>
       </div>
     </div>
     <div class="each-point__circle">
       <div class="each-point__circle-text">
-        <span class="text-line" data-delay="0.1">local squatters who know</span>
-        <span class="text-line" data-delay="0.2">the secrets of the city</span>
+        <span class="text-line" data-delay="0.7">local squatters who know</span>
+        <span class="text-line" data-delay="0.8">the secrets of the city</span>
       </div>
     </div>
   </div>
@@ -800,7 +808,7 @@
 </section>
 
 
-    <section class="pvp">
+  <section class="pvp">
   <div class="cotnainer">
     <div class="pvp__wrapper">
       <div class="pvp__descr">
@@ -848,8 +856,8 @@
 
 <div id="end"></div>
 
-    
-    <section class="sound">
+  
+  <section class="sound">
   <div class="sound__anim">
     <canvas id="waves"></canvas>
   </div>
@@ -900,7 +908,7 @@
   </div>
 </section>
 
-    <section class="market">
+  <section class="market">
   <div class="container">
     <div class="market__wrapper">
       <h2 class="market__title main__title">
@@ -1014,7 +1022,7 @@
   </div>
 </section>
 
-    <section class="hunger-games">
+  <section class="hunger-games">
   <div class="container">
     <div class="hunger-games__wrapper">
       <h2 class="hunger-games__title" data-effect="opacity">
@@ -1116,7 +1124,7 @@
   </div>
 </section>
 
-    <section class="mission">
+  <section class="mission">
   <div class="container_padding container">
     <div class="mission__wrapper main-wrapper">
       <div class="mission__line"></div>
@@ -1170,7 +1178,7 @@
   </div>
 </section>
 
-    <section class="culture">
+  <section class="culture">
   <div class="container">
     <div class="culture__hero">
       <h2 class="culture__title">
@@ -1254,7 +1262,7 @@
               <div class="culture-event__circle culture-event__circle_soon" data-effect="opacity" data-delay="0.3">
                 <div class="culture-event__circle_bg">
                   <noscript data-webp="">
-                    <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                    <img src="./img/culture/soon_bg_2.png" alt="soon_bg">
                   </noscript>
                 </div>
                 <div class="culture-event__circle-soon">Soon</div>
@@ -1298,7 +1306,7 @@
               <div class="culture-event__circle culture-event__circle_soon" data-effect="opacity" data-delay="0.2">
                 <div class="culture-event__circle_bg">
                   <noscript data-webp="">
-                    <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                    <img src="./img/culture/soon_bg_3.png" alt="soon_bg">
                   </noscript>
                 </div>
                 <div class="culture-event__circle-soon">Soon</div>
@@ -1306,7 +1314,7 @@
               <div class="culture-event__circle culture-event__circle_soon" data-effect="opacity" data-delay="0.3">
                 <div class="culture-event__circle_bg">
                   <noscript data-webp="">
-                    <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                    <img src="./img/culture/soon_bg_4.png" alt="soon_bg">
                   </noscript>
                 </div>
                 <div class="culture-event__circle-soon">Soon</div>
@@ -1349,7 +1357,7 @@
               <div class="culture-event__circle culture-event__circle_soon" data-effect="opacity" data-delay="0.2">
                 <div class="culture-event__circle_bg">
                   <noscript data-webp="">
-                    <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                    <img src="./img/culture/soon_bg_5.png" alt="soon_bg">
                   </noscript>
                 </div>
                 <div class="culture-event__circle-soon">Soon</div>
@@ -1357,7 +1365,7 @@
               <div class="culture-event__circle culture-event__circle_soon" data-effect="opacity" data-delay="0.3">
                 <div class="culture-event__circle_bg">
                   <noscript data-webp="">
-                    <img src="./img/culture/soon_bg.png" alt="soon_bg">
+                    <img src="./img/culture/soon_bg_6.png" alt="soon_bg">
                   </noscript>
                 </div>
                 <div class="culture-event__circle-soon">Soon</div>
@@ -1370,7 +1378,7 @@
   </div>
 </section>
 
-    <section class="token">
+  <section class="token">
   <div class="container">
     <div class="token__circle">
       <div class="token__circle-content" data-effect="opacity" data-delay="0.4">
@@ -1392,7 +1400,7 @@
   </div>
 </section>
 
-    <section class="cards-token">
+  <section class="cards-token">
   <div class="container">
     <div class="cards-token__wrapper">
       <div class="card-token card-token_1" data-effect="opacity">
@@ -1474,7 +1482,7 @@
   </div>
 </section>
 
-    <section class="tokenomics">
+  <section class="tokenomics">
   <div class="container">
     <div class="tokenomics__inner">
       <div class="line line_top"></div>
@@ -1505,7 +1513,7 @@
   </div>
 </section>
 
-    <section class="security ">
+  <section class="security ">
   <div class="container container_padding">
     <h3 class="security__title hidden">
       <span data-effect="line">Security</span>
@@ -1583,7 +1591,7 @@
   </div>
 </div>
 
-    <section class="roadmap">
+  <section class="roadmap">
   <div class="container container_padding">
     <h2 class="roadmap__title gradient-text" data-effect="opacity">Perspective</h2>
     <div class="roadmap__content">
@@ -1823,8 +1831,8 @@
   </div>
 </section>
 
-    
-    <section class="questions">
+  
+  <section class="questions">
   <div class="question-item">
     <div class=" line" data-duration="1.2"></div>
     <div class="question-item__header">
@@ -1961,7 +1969,7 @@
   </div>
 </section>
 
-    <section class="platform">
+  <section class="platform">
     <div class="container">
         <div class="platform__content">
             <h2 class="platform__title main__title" >
@@ -2000,7 +2008,7 @@
     </div>
 </section>
 
-    <footer class="footer">
+  <footer class="footer">
   <div class="container footer__container">
     <div class="footer__wrapper">
       <div class="footer__left">
@@ -2083,9 +2091,38 @@
   </div>
 </footer>
 
-    
-    <div class="hide-for-adaptive">
+  <div id="modal" class="modal">
+  <div class="modal__container container">
+    <div class="modal__content">
+      <form id="be-part__form" action="" class="modal__form form">
+        <div class="form__label">
+          <span>Be part of beta testers</span>
+        </div>
+        <div class="form__field">
+          <input type="text" name="email" autocomplete="off" placeholder="Email" class="form__input">
+          <div class="line line__bottom"></div>
+          <button class="form__btn btn">I’m in</button>
+        </div>
+        <div class="form__text">A game in which you can get into a hidden virtual layer over the city and the whole
+          world.
+        </div>
+      </form>
     </div>
+    <div class="modal__info">
+      <div class="modal__info-icon">
+        <noscript data-webp>
+          <img src="./img/icons/reality-decor.png"/>
+        </noscript>
+      </div>
+      <div class="modal__info-text">Available this autumn</div>
+    </div>
+  </div>
+  <div class="modal__close">
+    <img src="img/icons/close.svg" alt="close">
+  </div>
+</div>
+
+  
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="./js/libs/gsap.min.js"></script>

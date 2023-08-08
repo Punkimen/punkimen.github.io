@@ -1,7 +1,6 @@
 import {addClass, removeClass} from "./handleClassnames.js"
 
-export const stepAdaptive = () => {
-    const windowWidth = window.innerWidth
+export const stepAdaptive = (windowWidth) => {
 
     const stepsWrapper = document.querySelector('.step__wrapper')
     const stepTitle = document.querySelector('.step__title')
@@ -17,8 +16,7 @@ export const stepAdaptive = () => {
     }
 }
 
-export const circlesAdaptive = () => {
-    const windowWidth = window.innerWidth
+export const circlesAdaptive = (windowWidth) => {
 
     const cirles = document.querySelector('.be-part__cirles')
     const singleCircle = document.querySelector('.circle_1')
@@ -38,8 +36,7 @@ export const circlesAdaptive = () => {
     }
 }
 
-export const cardsAdaptive = () => {
-    const windowWidth = window.innerWidth
+export const cardsAdaptive = (windowWidth) => {
     const cardsWrapper = document.querySelector('.cards .cards__wrapper')
     const card1 = cardsWrapper?.querySelector('.card_1')
     const card2 = cardsWrapper?.querySelector('.card_2')
@@ -65,9 +62,8 @@ export const cardsAdaptive = () => {
     }
 }
 
-export const journeyCardsAdaptive = () => {
+export const journeyCardsAdaptive = (windowWidth) => {
 
-    const windowWidth = window.innerWidth
     const cardsWrapper = document.querySelector('.journey-cards .journey-cards__wrapper')
     const card1 = cardsWrapper?.querySelector('.journey-card_1')
     const card2 = cardsWrapper?.querySelector('.journey-card_2')
@@ -91,4 +87,18 @@ export const journeyCardsAdaptive = () => {
             }
         })
     }
+}
+
+export const formAdaptive = (windowWidth) => {
+    const formField = document.querySelector('.form__field')
+    const formBtn = document.querySelector('.form__btn')
+    const formText = document.querySelector('.form__text')
+    if (windowWidth <= 568 && !formField.classList.contains('adaptive')) {
+        addClass(formField, 'adaptive')
+        formText.after(formBtn)
+    } else if((windowWidth > 568 && formField.classList.contains('adaptive'))) {
+        removeClass(formField, 'adaptive')
+        formField.append(formBtn)
+    }
+
 }

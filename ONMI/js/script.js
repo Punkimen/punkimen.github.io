@@ -3,7 +3,6 @@ import {sliderInit} from "./module/sliderInit.min.js";
 import {splitText} from "./module/splitText.min.js";
 import {setHeader} from "./module/setHeader.min.js";
 import {sectionHeightInit} from "./module/sectionHeightInit.min.js";
-// import {sectionAnimation} from "./module/sectionAnimate.min.js";
 import {
     drawSvgLine,
     leftToRight,
@@ -12,11 +11,12 @@ import {
     scalingFoo,
     svgDraw, verticalTransform
 } from "./module/GSAPAnim.js";
-import {cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.js";
+import {formAdaptive} from "./module/adaptiveResize.min.js";
+import {toggleClass, removeClass} from "./module/handleClassnames.min.js";
 
 // const
 let windowWidth = window.innerWidth
-
+const logo = document.querySelector('.header__logo')
 // ------- First and massive elems
 const firstTextLine = document.querySelectorAll('.text-line.first-load')
 const firstOpacityElems = document.querySelectorAll('[data-effect="opacity"].first-load');
@@ -54,7 +54,8 @@ const pvpPose1 = document.querySelector('.pvp-pose_1')
 const pvpPose2 = document.querySelector('.pvp-pose_2')
 const heroPose = document.querySelector('.hero__pose')
 const video1 = document.querySelector('#video_phone')
-
+const openElems = document.querySelectorAll('[data-open]')
+const closeElems = document.querySelectorAll('.modal__close')
 gsap.registerPlugin(ScrollTrigger);
 firstTextLine.forEach(el => {
     triggerAnimate(el, el.parentElement)
@@ -117,8 +118,12 @@ const hoverAppleBtn = () => {
 }
 
 const initPage = () => {
+    logo.addEventListener('click', e => {
+        e.preventDefault();
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    })
+
     // functions
-    //  console.log(securityBlock.getBoundingClientRect().height)
     const st = ScrollTrigger.create({
         trigger: ".description-reality",
         pinned: true,
@@ -152,7 +157,7 @@ const initPage = () => {
     horizontalTransform(cardsNft, cardsNft, "-3%", "3%")
     horizontalTransform(phone_1, phoneScreens, '17.5vw', '0', true, null, 'top bottom', 'top+=25% center')
     horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
-    scalingFoo(cardsAura, cardsAura, 1, 1.4, "top bottom+=25%", "center top", true)
+    scalingFoo(cardsAura, cardsAura, 1, 2, "top bottom+=25%", "center top", true)
     windowWidth > 568 && scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
     leftToRight(missionLineHorizontal, svgLine)
     svgDraw(svgLine, svgLine, null, '400%')
@@ -246,7 +251,7 @@ const initPage = () => {
             }
         })
     })
-
+    formAdaptive(windowWidth)
     Marquee3k && Marquee3k.init()
     if (windowWidth > 768) {
         btnApplePlay.addEventListener('mouseenter', hoverAppleBtn)
@@ -257,9 +262,19 @@ const initPage = () => {
 
     // //init functions
     video1 && video1?.currentTime > 0 && video1?.play()
-    sectionHeightInit();
-    // cardsAdaptive();
-    // journeyCardsAdaptive();
+    sectionHeightInit(windowWidth);
+    openElems.forEach(el => {
+        el.addEventListener('click', e => {
+            const selector = document.querySelector(el.dataset.open);
+            toggleClass(selector, 'show')
+        })
+    })
+    closeElems.forEach(el => {
+        el.addEventListener('click', e => {
+            const selector = el.parentElement
+            removeClass(selector, 'show')
+        })
+    })
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -339,8 +354,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     window.addEventListener('resize', () => {
-        waves.update();
         windowWidth = window.innerWidth
+        waves.update();
+        formAdaptive(windowWidth)
+        sectionHeightInit(windowWidth);
         // cardsAdaptive();
         // journeyCardsAdaptive();
     })
@@ -350,7 +367,7 @@ window.addEventListener(
     "scroll",
     function () {
         let st = window.pageYOffset || document.documentElement.scrollTop;
-        if (st > lastScrollTop && lastScrollTop > window.innerHeight) {
+        if (st > lastScrollTop && lastScrollTop > window.innerHeight / 8) {
             // downscroll code
             setHeader(true);
         } else if (st === 0) {
@@ -358,7 +375,6 @@ window.addEventListener(
             setHeader(false);
         }
         lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-
     },
     false
 );
