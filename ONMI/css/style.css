@@ -667,13 +667,6 @@ h5.main__title {
   width: 100%;
 }
 
-.hero .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .hero__content {
   position: relative;
 }
@@ -694,10 +687,7 @@ h5.main__title {
   position: relative;
   overflow: hidden;
   position: relative;
-  top: -0.1em;
-  /*  @media (max-width: $md1) {
-      font-size: 12.3vw;
-    }*/
+  top: -0.55em;
 }
 
 .hero__title span {
@@ -709,7 +699,7 @@ h5.main__title {
 .hero__pose {
   max-width: 44.79vw;
   position: absolute;
-  top: -12.86vw;
+  top: -6.86vw;
   left: 27.71vw;
 }
 
@@ -5191,6 +5181,7 @@ h5.main__title {
   }
 
   .token__circle-shadow {
+    box-shadow: 0px 0px 14.97vw 2.6vw rgba(255, 255, 255, 0.5) inset, 0px 0px 5.21vw 1.04vw rgba(255, 255, 255, 0.5) inset;
     width: 60.81vw;
     height: 60.81vw;
   }
@@ -5514,6 +5505,10 @@ h5.main__title {
 
   .header {
     padding: 6.23vw 0;
+  }
+
+  .header__logo {
+    width: 19.05vw;
   }
 
   .burger {
