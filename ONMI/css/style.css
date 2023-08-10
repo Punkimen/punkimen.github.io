@@ -563,11 +563,12 @@ h5.main__title {
 }
 
 .header__link {
-  font-size: 0.63vw;
+  font-size: 0.52vw;
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  margin-right: 1.76vw;
+  margin-right: 1.09vw;
+  padding-right: 0.73vw;
 }
 
 .header__link::after {
@@ -579,6 +580,21 @@ h5.main__title {
   height: 0.05vw;
   background: #fff;
   transition: width ease-in 0.3s;
+}
+
+.header__link::before {
+  content: "";
+  display: block;
+  width: 0.52vw;
+  height: 0.52vw;
+  background-image: url("../img/icons/arrow_link.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
 }
 
 .header__link:hover::after {
@@ -593,7 +609,7 @@ h5.main__title {
   color: #000;
   padding: 0.36vw 0.78vw 0.38vw 0.78vw;
   font-size: 0.63vw;
-  margin-left: 1.5vw;
+  margin-left: 1.6vw;
   transition: background-color ease-in-out 0.3s, opacity cubic-bezier(0.16, 0.01, 0.77, 1) 0.6s 0.9s !important;
 }
 
@@ -3396,6 +3412,7 @@ h5.main__title {
   font-weight: 600;
   font-size: 1.46vw;
   overflow: hidden;
+  color: #3D3D3D;
 }
 
 .roadmap-item__descr {
@@ -3710,13 +3727,19 @@ h5.main__title {
   letter-spacing: -0.01em;
 }
 
-.footer__container {
-  max-width: 63.54vw;
-  width: 100%;
-  margin: 0 auto;
+.footer {
+  position: relative;
+  padding: 3.13vw 0;
 }
 
 .footer__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 3.7vw;
+}
+
+.footer__left {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -3724,25 +3747,13 @@ h5.main__title {
 
 .footer__right {
   display: flex;
-  justify-content: space-between;
-  max-width: 17.19vw;
-  width: 100%;
-}
-
-.footer__text {
-  font-size: 1.2vw;
-  color: var(--color-gray);
-}
-
-.footer__text p:not(:last-child) {
-  margin-bottom: 0.5vw;
+  align-items: center;
 }
 
 .footer__logo {
+  margin-right: 3.6vw;
   width: 5.21vw;
   min-width: 3.13vw;
-  margin-bottom: 2vw;
-  overflow: hidden;
 }
 
 .footer__logo img {
@@ -3751,53 +3762,99 @@ h5.main__title {
   height: auto;
 }
 
-.footer__list-label {
-  font-size: 0.83vw;
-  color: var(--color-gray);
-  margin-bottom: 2.08vw;
-}
-
-.footer__list-elem {
+.footer__labels {
   font-size: 0.94vw;
-  overflow: hidden;
+  line-height: 1.1em;
 }
 
-.footer__list-elem:not(:last-child) {
-  margin-bottom: 0.47vw;
+.footer__labels span {
+  display: block;
 }
 
-.footer__policy {
-  position: relative;
-  margin-top: 5.21vw;
-  margin-bottom: 5.89vw;
-  font-size: 0.73vw;
-  padding-top: 2.08vw;
-  line-height: 1.43em;
-}
-
-.footer__policy p {
-  transition: opacity ease-in 0.3s;
-  text-align: justify;
-  text-indent: 3.8vw;
-}
-
-.footer-copy {
-  background: #0F0F0F;
-  padding: 2.08vw 0 2.08vw;
-  font-size: 0.73vw;
-}
-
-.footer-copy__text p {
-  overflow: hidden;
-}
-
-.footer-copy__links {
+.footer__socials {
   display: flex;
-  overflow: hidden;
+  align-items: center;
+  margin-right: 4.17vw;
 }
 
-.footer-copy__link:not(:last-child) {
-  margin-right: 0.68vw;
+.footer__socials svg {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.footer__socials .x {
+  max-width: 0.94vw;
+}
+
+.footer__socials .instagram {
+  max-width: 1.04vw;
+}
+
+.footer__socials .telegram {
+  max-width: 1.09vw;
+}
+
+.footer__socials .medium {
+  max-width: 1.46vw;
+}
+
+.footer__socials .discord {
+  max-width: 1.25vw;
+}
+
+.footer__socials-link:not(:last-child) {
+  margin-right: 1.82vw;
+}
+
+.footer__btns {
+  display: flex;
+}
+
+.footer__btn:not(:last-child) {
+  margin-right: 0.36vw;
+}
+
+.footer__text {
+  font-size: 0.52vw;
+  color: #424242;
+  margin-bottom: 2.92vw;
+  line-height: 1.5em;
+}
+
+.footer__copy {
+  font-size: 0.73vw;
+}
+
+.app-btn {
+  border-radius: 0.36vw;
+  background-color: rgba(32, 32, 32, 0.71);
+  -webkit-backdrop-filter: blur(0.78vw);
+  backdrop-filter: blur(0.78vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.42vw 0.05vw 0.31vw 0.83vw;
+  text-transform: capitalize;
+  font-size: 0.73vw;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.app-btn:hover {
+  background-color: rgba(51, 51, 51, 0.71);
+}
+
+.app-btn:not(:last-child) {
+  margin-right: 0.5vw;
+}
+
+.app-btn__icon {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-right: 0.36vw;
 }
 
 .modal {
@@ -3850,6 +3907,7 @@ h5.main__title {
 
 .modal__content {
   width: 100%;
+  margin-bottom: 7vw;
 }
 
 .modal__info {
@@ -4121,6 +4179,14 @@ h5.main__title {
     padding: 0 2.33vw;
   }
 
+  .footer__text {
+    font-size: 0.83vw;
+  }
+
+  .footer__copy {
+    font-size: 1.17vw;
+  }
+
   .modal__info {
     left: 2.33vw;
   }
@@ -4356,6 +4422,7 @@ h5.main__title {
 
   .journey-card_1 .journey-card__phone {
     max-width: 50%;
+    border-radius: 2.02vw;
   }
 
   .journey-card_2 {
@@ -4402,6 +4469,10 @@ h5.main__title {
 
   .each-point__mark {
     max-width: 0.8vw;
+  }
+
+  .sound {
+    margin-bottom: 10vw;
   }
 
   .sound__anim {
@@ -4506,6 +4577,10 @@ h5.main__title {
     height: 2.32vw;
     line-height: 0.9em;
     left: -3.02vw;
+  }
+
+  .mission__line {
+    height: 0.1vw;
   }
 
   .mission__title {
@@ -4613,41 +4688,48 @@ h5.main__title {
     font-size: 1.62vw;
   }
 
-  .footer__container {
-    max-width: 80vw;
+  .footer__logo {
+    width: 11.08vw;
   }
 
-  .footer__right {
-    max-width: 25vw;
+  .footer__labels {
+    font-size: 1.82vw;
+  }
+
+  .footer__socials .x {
+    max-width: 1.82vw;
+  }
+
+  .footer__socials .instagram {
+    max-width: 2.02vw;
+  }
+
+  .footer__socials .telegram {
+    max-width: 2.12vw;
+  }
+
+  .footer__socials .medium {
+    max-width: 2.83vw;
+  }
+
+  .footer__socials .discord {
+    max-width: 2.42vw;
   }
 
   .footer__text {
-    font-size: 2.42vw;
-  }
-
-  .footer__logo {
-    width: 10.1vw;
-  }
-
-  .footer__list-label {
-    font-size: 1.21vw;
-    margin-bottom: 1.62vw;
-  }
-
-  .footer__list-elem {
-    font-size: 1.41vw;
-  }
-
-  .footer__policy {
     font-size: 1.01vw;
   }
 
-  .footer-copy {
+  .footer__copy {
     font-size: 1.41vw;
   }
 
   .modal__container {
     max-width: 100%;
+  }
+
+  .modal__content {
+    margin-bottom: 10vw;
   }
 
   .modal__info {
@@ -5086,6 +5168,10 @@ h5.main__title {
     height: 65vw;
   }
 
+  .journey-card_1 .journey-card__phone {
+    border-radius: 4.3vw;
+  }
+
   .journey-card_2 {
     height: 65vw;
   }
@@ -5139,6 +5225,13 @@ h5.main__title {
 
   .each-point__list {
     display: block;
+    border: 0.13vw solid #303030;
+    border-radius: 3.91vw;
+    padding: 6.25vw 5.21vw;
+  }
+
+  .sound {
+    margin-bottom: 15vw;
   }
 
   .sound__anim {
@@ -5383,6 +5476,10 @@ h5.main__title {
   .mission__wrapper {
     display: block;
     padding-top: 11.5vw;
+  }
+
+  .mission__line {
+    height: 0.13vw;
   }
 
   .mission__line_diagonally {
@@ -5735,69 +5832,64 @@ h5.main__title {
     font-size: 3.52vw;
   }
 
-  .footer {
-    padding-bottom: 5vw;
-  }
-
-  .footer__container {
-    max-width: 100%;
-  }
-
   .footer__wrapper {
     display: block;
   }
 
   .footer__left {
-    margin-bottom: 6.77vw;
-  }
-
-  .footer__right {
-    max-width: 100%;
     display: block;
   }
 
-  .footer__text {
-    font-size: 2.99vw;
-  }
-
-  .footer__text p:not(:last-child) {
-    margin-bottom: 1.3vw;
+  .footer__right {
+    display: block;
   }
 
   .footer__logo {
-    width: 13.02vw;
-    margin-bottom: 5.21vw;
+    width: 14.08vw;
+    margin-bottom: 2.21vw;
   }
 
-  .footer__list:not(:last-child) {
-    margin-bottom: 7.03vw;
+  .footer__labels {
+    font-size: 2.99vw;
+    margin-bottom: 10.42vw;
   }
 
-  .footer__list-label {
-    font-size: 2.08vw;
-    margin-bottom: 2.08vw;
+  .footer__socials {
+    margin-bottom: 11.72vw;
+    margin-right: 0;
   }
 
-  .footer__list-elem {
-    font-size: 2.34vw;
+  .footer__socials .x {
+    max-width: 3.39vw;
   }
 
-  .footer__policy {
+  .footer__socials .instagram {
+    max-width: 3.78vw;
+  }
+
+  .footer__socials .telegram {
+    max-width: 3.91vw;
+  }
+
+  .footer__socials .medium {
+    max-width: 5.21vw;
+  }
+
+  .footer__socials .discord {
+    max-width: 4.69vw;
+  }
+
+  .footer__text {
     font-size: 1.3vw;
-    margin: 10.29vw 0 17.71vw;
   }
 
-  .footer-copy {
-    font-size: 1.82vw;
-    background: none;
+  .app-btn {
+    padding: 1.56vw 2.86vw 1.56vw 2.86vw;
+    border-radius: 1.3vw;
   }
 
-  .footer-copy__text {
-    margin-bottom: 5.6vw;
-  }
-
-  .footer-copy__link:not(:last-child) {
-    margin-right: 2.08vw;
+  .app-btn:not(:last-child) {
+    margin-right: 1.04vw;
   }
 
   .modal__info {
@@ -6156,6 +6248,11 @@ h5.main__title {
     max-width: 65%;
   }
 
+  .journey-card_1 .journey-card__phone video {
+    left: 4.3vw;
+    width: calc(100% - 4.76vw);
+  }
+
   .journey-card_3 .journey-card-video {
     max-width: 51.81vw;
   }
@@ -6179,6 +6276,12 @@ h5.main__title {
     margin-bottom: -7vw;
   }
 
+  .each-point__list {
+    padding: 11.43vw 9.52vw;
+    border: 0.24vw solid #303030;
+    border-radius: 7.14vw;
+  }
+
   .each-point__elem {
     padding-left: 7vw;
     font-size: 4.5vw;
@@ -6194,13 +6297,17 @@ h5.main__title {
     margin-bottom: 10vw;
   }
 
+  .sound {
+    margin-bottom: 31vw;
+  }
+
   .sound__anim {
     height: 80vw;
   }
 
   .sound__text {
     font-size: 4vw;
-    margin-bottom: 22.3vw;
+    margin-bottom: 16.3vw;
   }
 
   .sound-season__line {
@@ -6423,6 +6530,7 @@ h5.main__title {
   }
 
   .mission__line {
+    height: 0.18vw;
     top: -9vw;
   }
 
@@ -6740,54 +6848,60 @@ h5.main__title {
   }
 
   .footer {
-    padding-bottom: 10vw;
+    padding: 14.29vw 0;
   }
 
-  .footer__left {
-    margin-bottom: 12.38vw;
-  }
-
-  .footer__text {
-    font-size: 5.48vw;
-  }
-
-  .footer__text p:not(:last-child) {
-    margin-bottom: 2.38vw;
+  .footer__wrapper {
+    margin-bottom: 21.43vw;
   }
 
   .footer__logo {
     width: 23.81vw;
-    margin-bottom: 9vw;
+    margin-bottom: 4.29vw;
   }
 
-  .footer__list:not(:last-child) {
-    margin-bottom: 12.86vw;
+  .footer__labels {
+    font-size: 5.48vw;
+    margin-bottom: 19.05vw;
   }
 
-  .footer__list-label {
-    font-size: 3.81vw;
-    margin-bottom: 6.81vw;
+  .footer__socials {
+    justify-content: space-between;
+    margin-bottom: 21.43vw;
   }
 
-  .footer__list-elem {
-    font-size: 4.29vw;
+  .footer__socials .x {
+    max-width: 6.19vw;
   }
 
-  .footer__policy {
+  .footer__socials .instagram {
+    max-width: 6.9vw;
+  }
+
+  .footer__socials .telegram {
+    max-width: 7.14vw;
+  }
+
+  .footer__socials .medium {
+    max-width: 9.52vw;
+  }
+
+  .footer__socials .discord {
+    max-width: 8.57vw;
+  }
+
+  .footer__btn {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .footer__text {
     font-size: 2.38vw;
-    margin: 18.81vw 0 32.38vw;
+    margin-bottom: 21.43vw;
   }
 
-  .footer-copy {
+  .footer__copy {
     font-size: 3.33vw;
-  }
-
-  .footer-copy__text {
-    margin-bottom: 10.24vw;
-  }
-
-  .footer-copy__link:not(:last-child) {
-    margin-right: 3.81vw;
   }
 
   .modal__info {
