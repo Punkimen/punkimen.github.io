@@ -4871,7 +4871,7 @@ h5.main__title {
     letter-spacing: -0.01em;
     font-size: 14.55vw;
     left: 0;
-    margin-bottom: 7vw;
+    margin-bottom: -3vw;
   }
 
   .hero__pose {
@@ -6951,7 +6951,7 @@ h5.main__title {
 
 @media (max-width: 412px) {
   .hero__text {
-    margin-bottom: 15.56vw;
+    margin-bottom: 16vw;
   }
 }
 
