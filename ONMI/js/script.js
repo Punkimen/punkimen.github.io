@@ -57,6 +57,15 @@ const video1 = document.querySelector('#video_phone')
 const openElems = document.querySelectorAll('[data-open]')
 const closeElems = document.querySelectorAll('.modal__close')
 const decorLine = document.querySelector('.decor-line');
+const burger = document.querySelector('.burger')
+const mobMenu = document.querySelector('.mob-menu')
+burger.addEventListener('click', e => {
+    e.preventDefault();
+    toggleClass(burger, 'active')
+    toggleClass(mobMenu, 'show')
+})
+
+
 gsap.registerPlugin(ScrollTrigger);
 firstTextLine.forEach(el => {
     triggerAnimate(el, el.parentElement)

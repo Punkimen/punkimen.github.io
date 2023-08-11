@@ -90,10 +90,9 @@ export const journeyCardsAdaptive = (windowWidth) => {
 }
 
 export const formAdaptive = (windowWidth) => {
-    const form = docume.querySelector('#be-part__form')
-    const formField = form.querySelector('.form__field')
-    const formBtn = form.querySelector('.form__btn')
-    const formText = form.querySelector('.form__text')
+    const formField = document.querySelector('.form__field')
+    const formBtn = document.querySelector('.form__btn')
+    const formText = document.querySelector('.form__text')
     if (windowWidth <= 568 && !formField.classList.contains('adaptive')) {
         addClass(formField, 'adaptive')
         formText.after(formBtn)
