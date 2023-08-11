@@ -12,7 +12,7 @@ import {
     svgDraw, verticalTransform
 } from "./module/GSAPAnim.js";
 import {formAdaptive} from "./module/adaptiveResize.min.js";
-import {toggleClass, removeClass} from "./module/handleClassnames.min.js";
+import {addClass, toggleClass, removeClass} from "./module/handleClassnames.min.js";
 
 // const
 let windowWidth = window.innerWidth
@@ -29,7 +29,7 @@ const fadeOpacityElems = document.querySelectorAll('[data-effect="fade-down"]:no
 const readedText = document.querySelectorAll('.readed-text')
 const maskSvg = document.querySelector('.mask')
 const markers = document.querySelectorAll('.each-point__mark')
-const cardsAura = document.querySelector('.card_1 .card__front-aura')
+const cardsAura = document.querySelector('.card_1 .card__front-aura img')
 const cardsNft = document.querySelector('.card_3 .card__front-img')
 const cardsPhone = document.querySelector('.card_2 .card__front-img')
 const cardsMap = document.querySelector('.card__front-img_bg')
@@ -56,13 +56,14 @@ const heroPose = document.querySelector('.hero__pose')
 const video1 = document.querySelector('#video_phone')
 const openElems = document.querySelectorAll('[data-open]')
 const closeElems = document.querySelectorAll('.modal__close')
-const decorLine = document.querySelector('.decor-line');
+const decorLines = document.querySelectorAll('.decor-line');
 const burger = document.querySelector('.burger')
 const mobMenu = document.querySelector('.mob-menu')
 burger.addEventListener('click', e => {
     e.preventDefault();
     toggleClass(burger, 'active')
     toggleClass(mobMenu, 'show')
+    toggleClass(document.body, 'overflow')
 })
 
 
@@ -77,18 +78,21 @@ firstOpacityElems.forEach((el) => {
 firstFadeOpacityElems.forEach((el) => {
     triggerAnimate(el);
 });
-gsap.fromTo(decorLine, {
-    height: 0,
-}, {
-    height: "312px",
-    delay: 0,
-    duration: 0.8,
-    ease: "power1.inOut",
-    scrollTrigger: {
-        start: "top bottom",
-        trigger: decorLine,
-    }
+decorLines.forEach(el => {
+    gsap.fromTo(el, {
+        height: 0,
+    }, {
+        height: "312px",
+        delay: 0,
+        duration: 0.8,
+        ease: "power1.inOut",
+        scrollTrigger: {
+            start: "top bottom",
+            trigger: el,
+        }
+    })
 })
+
 const showEl = (el, isShow) => {
     if (isShow) {
         el.classList.add('show');
@@ -145,13 +149,23 @@ const initPage = () => {
     })
 
     // functions
-    const st = ScrollTrigger.create({
-        trigger: ".description-reality",
-        pinned: true,
-        start: "top top",
-        end: "bottom bottom",
-        onToggle: (self) => showEl(pinEl, self.isActive),
-    });
+    if (windowWidth > 768) {
+        const st = ScrollTrigger.create({
+            trigger: ".description-reality",
+            pinned: true,
+            start: "top top",
+            end: "bottom bottom",
+            onToggle: (self) => showEl(pinEl, self.isActive),
+        });
+    } else {
+        const st = ScrollTrigger.create({
+            trigger: ".description-reality",
+            pinned: true,
+            start: "top top",
+            end: "bottom+=25% bottom",
+            onToggle: (self) => showEl(pinEl, self.isActive),
+        });
+    }
     // gsap.set(securityBlock, {yPercent:  -100})
     gsap.to(securityBlock, {
         // yPercent: -100,
@@ -182,7 +196,6 @@ const initPage = () => {
     windowWidth > 568 && scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
     leftToRight(missionLineHorizontal, svgLine)
     svgDraw(svgLine, svgLine, null, '400%')
-    svgDraw(decorLine, decorLine, null, '400%')
     maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
 
 
@@ -289,13 +302,15 @@ const initPage = () => {
     openElems.forEach(el => {
         el.addEventListener('click', e => {
             const selector = document.querySelector(el.dataset.open);
-            toggleClass(selector, 'show')
+            addClass(selector, 'show')
+            addClass(document.body, 'overflow')
         })
     })
     closeElems.forEach(el => {
         el.addEventListener('click', e => {
             const selector = el.parentElement
             removeClass(selector, 'show')
+            removeClass(document.body, 'overflow')
         })
     })
 };
