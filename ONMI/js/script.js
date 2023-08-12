@@ -56,7 +56,6 @@ const heroPose = document.querySelector('.hero__pose')
 const video1 = document.querySelector('#video_phone')
 const openElems = document.querySelectorAll('[data-open]')
 const closeElems = document.querySelectorAll('.modal__close')
-const decorLines = document.querySelectorAll('.decor-line');
 const burger = document.querySelector('.burger')
 const mobMenu = document.querySelector('.mob-menu')
 burger.addEventListener('click', e => {
@@ -78,20 +77,6 @@ firstOpacityElems.forEach((el) => {
 firstFadeOpacityElems.forEach((el) => {
     triggerAnimate(el);
 });
-decorLines.forEach(el => {
-    gsap.fromTo(el, {
-        height: 0,
-    }, {
-        height: "312px",
-        delay: 0,
-        duration: 0.8,
-        ease: "power1.inOut",
-        scrollTrigger: {
-            start: "top bottom",
-            trigger: el,
-        }
-    })
-})
 
 const showEl = (el, isShow) => {
     if (isShow) {
