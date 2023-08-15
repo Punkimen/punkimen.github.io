@@ -11,11 +11,11 @@ import {
   scalingFoo,
   svgDraw, verticalTransform
 } from "./module/GSAPAnim.js";
-import {formAdaptive, cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.js";
+import {formAdaptive,cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.js";
 import {addClass, toggleClass, removeClass} from "./module/handleClassnames.min.js";
 
 // const
-let windowWidth = window.devicePixelRatio * window.innerWidth
+let windowWidth = window.innerWidth
 const logo = document.querySelector('.header__logo')
 // ------- First and massive elems
 const firstTextLine = document.querySelectorAll('.text-line.first-load')
@@ -316,8 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPage();
 })
 window.addEventListener('resize', () => {
-  windowWidth = window.devicePixelRatio * window.innerWidth
-  console.log(windowWidth)
+  windowWidth = window.innerWidth
   formAdaptive(windowWidth)
   sectionHeightInit(windowWidth);
   cardsAdaptive(windowWidth)
