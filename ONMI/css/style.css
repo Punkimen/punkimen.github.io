@@ -22957,40 +22957,6 @@ h5.main__title {
   background-image: url("../img/journey/card_3.webp");
 }
 
-@media screen and (min-width: 1920.05px) {
-  .adventure__text {
-    font-size: 1vw;
-    letter-spacing: 0.04em;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .c {
-    width: 0.14vw;
-    height: 0.14vw;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .c {
-    width: 0.2vw;
-    height: 0.2vw;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .c {
-    width: 0.26vw;
-    height: 0.26vw;
-  }
-}
-
-@media screen and (max-width: 568px) {
-  .c {
-    width: 0.48vw;
-    height: 0.48vw;
-  }
-}
 
 @media screen and (prefers-color-scheme: light) {
   body {
@@ -23014,11 +22980,171 @@ h5.main__title {
   }
 }
 
+@media screen and (min-device-width: 1920.05px) {
+  .adventure__text {
+    font-size: 1vw;
+    letter-spacing: 0.04em;
+  }
+  .main__text {
+    font-size: 1vw;
+    letter-spacing: 0.04em;
+  }
+}
+@media screen and (max-device-width: 1440px) {
+  .container {
+    padding: 0 1.94vw;
+  }
+
+  .btn_app {
+    padding: 0.2vw 0.94vw 0.1vw 0.94vw;
+    min-height: 3.06vw;
+    min-width: 9.72vw;
+  }
+
+  .btn_app img {
+    width: 100%;
+  }
+
+  .btn_app img.AppStore {
+    width: 100%;
+  }
+
+  .decor-line svg {
+    height: 21.67vw;
+  }
+
+  .header {
+    font-size: 0.83vw;
+  }
+
+  .header__link {
+    font-size: 0.69vw;
+  }
+
+  .header__btn {
+    font-size: 0.69vw;
+  }
+
+  .culture-event {
+    padding-left: 1.94vw;
+  }
+
+  .question-item {
+    padding: 0 1.94vw;
+  }
+
+  .modal__info {
+    left: 1.94vw;
+  }
+
+  .modal__close {
+    right: 1.94vw;
+  }
+}
+@media screen and (max-device-width: 1200px) {
+  .container {
+    padding: 0 2.33vw;
+  }
+  .c {
+    width: 0.14vw;
+    height: 0.14vw;
+  }
+  .btn_app {
+    padding: 0.58vw 0.94vw 0.58vw 0.94vw;
+  }
+
+  .decor-line svg {
+    height: 26vw;
+  }
+
+  .header {
+    font-size: 1vw;
+  }
+
+  .header__link {
+    font-size: 0.83vw;
+  }
+
+  .header__btn {
+    font-size: 0.83vw;
+  }
+
+  .reality__screen {
+    min-width: 15.67vw;
+  }
+
+  .omi-card__title {
+    font-size: 1.75vw;
+  }
+
+  .omi-card__text {
+    font-size: 1.17vw;
+  }
+
+  .omi-card__label-icon {
+    width: 1.83vw;
+    height: 1.83vw;
+  }
+
+  .omi-card__label-text {
+    font-size: 1.17vw;
+  }
+
+  .omi-card__point-value {
+    font-size: 3vw;
+    width: 6.6vw;
+  }
+
+  .sound-season__count {
+    font-size: 1vw;
+  }
+
+  .sound-season__author {
+    width: 13vw;
+    height: 13vw;
+  }
+
+  .sound-season__author_unknown {
+    width: 11vw;
+    height: 11vw;
+  }
+
+  .sound-season__name {
+    font-size: 1.2vw;
+  }
+
+  .culture-event {
+    padding-left: 2.33vw;
+  }
+
+  .question-item {
+    padding: 0 2.33vw;
+  }
+
+  .footer__text {
+    font-size: 0.83vw;
+  }
+
+  .footer__copy {
+    font-size: 1.17vw;
+  }
+
+  .modal__info {
+    left: 2.33vw;
+  }
+
+  .modal__close {
+    right: 2.33vw;
+  }
+}
 @media screen and (max-device-width: 990px) {
   body {
     font-size: 1.5vw;
   }
-
+  .c {
+    width: 0.2vw;
+    height: 0.2vw;
+  }
   .container {
     padding: 0 2.82vw;
   }
@@ -23591,8 +23717,11 @@ h5.main__title {
     font-size: 1.41vw;
   }
 }
-
 @media screen and (max-device-width: 768px) {
+  .c {
+    width: 0.26vw;
+    height: 0.26vw;
+  }
   body {
     font-size: 2vw;
   }
@@ -25968,12 +26097,14 @@ h5.main__title {
     top: 2vw;
   }
 }
-
 @media screen and (max-device-width: 568px) {
   body {
     font-size: 4.3vw;
   }
-
+  .c {
+    width: 0.48vw;
+    height: 0.48vw;
+  }
   .container {
     padding: 0 3.57vw;
   }
@@ -28278,160 +28409,6 @@ h5.main__title {
     margin-bottom: 9.52vw;
   }
 }
-
-@media screen and (max-device-width: 1440px) {
-  .container {
-    padding: 0 1.94vw;
-  }
-
-  .btn_app {
-    padding: 0.2vw 0.94vw 0.1vw 0.94vw;
-    min-height: 3.06vw;
-    min-width: 9.72vw;
-  }
-
-  .btn_app img {
-    width: 100%;
-  }
-
-  .btn_app img.AppStore {
-    width: 100%;
-  }
-
-  .decor-line svg {
-    height: 21.67vw;
-  }
-
-  .header {
-    font-size: 0.83vw;
-  }
-
-  .header__link {
-    font-size: 0.69vw;
-  }
-
-  .header__btn {
-    font-size: 0.69vw;
-  }
-
-  .culture-event {
-    padding-left: 1.94vw;
-  }
-
-  .question-item {
-    padding: 0 1.94vw;
-  }
-
-  .modal__info {
-    left: 1.94vw;
-  }
-
-  .modal__close {
-    right: 1.94vw;
-  }
-}
-
-@media screen and (max-device-width: 1200px) {
-  .container {
-    padding: 0 2.33vw;
-  }
-
-  .btn_app {
-    padding: 0.58vw 0.94vw 0.58vw 0.94vw;
-  }
-
-  .decor-line svg {
-    height: 26vw;
-  }
-
-  .header {
-    font-size: 1vw;
-  }
-
-  .header__link {
-    font-size: 0.83vw;
-  }
-
-  .header__btn {
-    font-size: 0.83vw;
-  }
-
-  .reality__screen {
-    min-width: 15.67vw;
-  }
-
-  .omi-card__title {
-    font-size: 1.75vw;
-  }
-
-  .omi-card__text {
-    font-size: 1.17vw;
-  }
-
-  .omi-card__label-icon {
-    width: 1.83vw;
-    height: 1.83vw;
-  }
-
-  .omi-card__label-text {
-    font-size: 1.17vw;
-  }
-
-  .omi-card__point-value {
-    font-size: 3vw;
-    width: 6.6vw;
-  }
-
-  .sound-season__count {
-    font-size: 1vw;
-  }
-
-  .sound-season__author {
-    width: 13vw;
-    height: 13vw;
-  }
-
-  .sound-season__author_unknown {
-    width: 11vw;
-    height: 11vw;
-  }
-
-  .sound-season__name {
-    font-size: 1.2vw;
-  }
-
-  .culture-event {
-    padding-left: 2.33vw;
-  }
-
-  .question-item {
-    padding: 0 2.33vw;
-  }
-
-  .footer__text {
-    font-size: 0.83vw;
-  }
-
-  .footer__copy {
-    font-size: 1.17vw;
-  }
-
-  .modal__info {
-    left: 2.33vw;
-  }
-
-  .modal__close {
-    right: 2.33vw;
-  }
-}
-
-@media screen and (min-device-width: 1920.05px) {
-  .main__text {
-    font-size: 1vw;
-    letter-spacing: 0.04em;
-  }
-}
-
 @media screen and (max-device-width: 412px) {
   .hero__text {
     margin-bottom: 16vw;
