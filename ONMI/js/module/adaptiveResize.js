@@ -17,7 +17,6 @@ export const stepAdaptive = (windowWidth) => {
 }
 
 export const circlesAdaptive = (windowWidth) => {
-
     const cirles = document.querySelector('.be-part__cirles')
     const singleCircle = document.querySelector('.circle_1')
     const circlesWrapper = document.querySelector('.circles__wrapper')
@@ -63,7 +62,6 @@ export const cardsAdaptive = (windowWidth) => {
 }
 
 export const journeyCardsAdaptive = (windowWidth) => {
-
     const cardsWrapper = document.querySelector('.journey-cards .journey-cards__wrapper')
     const card1 = cardsWrapper?.querySelector('.journey-card_1')
     const card2 = cardsWrapper?.querySelector('.journey-card_2')
