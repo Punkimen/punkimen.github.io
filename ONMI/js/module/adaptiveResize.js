@@ -46,9 +46,9 @@ export const cardsAdaptive = (windowWidth) => {
     if (windowWidth <= 768 && !cardsWrapper.classList.contains('wrapper-row')) {
         addClass(cardsWrapper, 'wrapper-row')
         cardsWrapper.append(card1)
-        cardsWrapper.append(card3)
         cardsWrapper.append(card4)
         cardsWrapper.append(card2)
+        cardsWrapper.append(card3)
     } else {
         removeClass(cardsWrapper, 'wrapper-row')
         cardsColumns.forEach((el, index) => {
@@ -56,7 +56,7 @@ export const cardsAdaptive = (windowWidth) => {
                 cardsColumns[index].append(card1, card2)
             }
             if (index === 1) {
-                cardsColumns[index].append(card3, card4)
+                cardsColumns[index].append(card4, card3)
             }
         })
     }
@@ -73,8 +73,8 @@ export const journeyCardsAdaptive = (windowWidth) => {
     if (windowWidth <= 768 && !cardsWrapper.classList.contains('wrapper-row')) {
         addClass(cardsWrapper, 'wrapper-row')
         cardsWrapper.append(card1)
-        cardsWrapper.append(card3)
         cardsWrapper.append(card2)
+        cardsWrapper.append(card3)
         cardsWrapper.append(card4)
     } else {
         removeClass(cardsWrapper, 'wrapper-row')

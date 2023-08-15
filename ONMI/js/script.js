@@ -319,6 +319,8 @@ window.addEventListener('resize', () => {
   windowWidth = window.innerWidth
   formAdaptive(windowWidth)
   sectionHeightInit(windowWidth);
+  cardsAdaptive(windowWidth)
+  journeyCardsAdaptive(windowWidth)
 })
 let lastScrollTop = 0;
 window.addEventListener(
