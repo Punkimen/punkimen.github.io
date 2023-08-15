@@ -83,9 +83,9 @@ const showEl = (el, isShow) => {
 };
 const sliderPrety = (slider) => {
   let rightProp = '7vw'
-  if (windowWidth > 992) {
+  if (windowWidth > (992 * window.devicePixelRatio)) {
     rightProp = '8.8vw'
-  } else if (windowWidth < 768) {
+  } else if (windowWidth < (768 * window.devicePixelRatio)) {
     rightProp = 0
   }
   const arrSliders = slider.slides;
@@ -124,7 +124,7 @@ const hoverAppleBtn = () => {
 // initPage start
 // functions
 const descrReality = (windowWidth) => {
-  if (windowWidth > 768) {
+  if (windowWidth > (768 * window.devicePixelRatio)) {
     gsap.to(".description-reality", {
       ease: 'none',
       scrollTrigger: {
@@ -164,7 +164,7 @@ const descrReality = (windowWidth) => {
 }
 // gsap.set(securityBlock, {yPercent:  -100})
 
-if (windowWidth > 768) {
+if (windowWidth > (768 * window.devicePixelRatio)) {
   gsap.to(securityBlock, {
     // yPercent: -100,
     ease: 'SineInOut',
@@ -207,7 +207,7 @@ quests.forEach(el => {
 })
 formAdaptive(windowWidth)
 Marquee3k && Marquee3k.init()
-if (windowWidth > 768) {
+if (windowWidth > (768 * window.devicePixelRatio)) {
   btnApplePlay.addEventListener('mouseenter', hoverAppleBtn)
   btnGooglePlay.addEventListener('mouseenter', hoverGoogleBtn)
   btnApplePlay.addEventListener('mouseleave', leveSizeBtns)
@@ -244,7 +244,7 @@ const initPage = () => {
   horizontalTransform(phone_1, phoneScreens, '17.5vw', '0', true, null, 'top bottom', 'top+=25% center')
   horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
   scalingFoo(cardsAura, cardsAura, 1, 2, "top bottom+=25%", "center top", true)
-  windowWidth > 568 && scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
+  windowWidth > (568 * window.devicePixelRatio) && scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
   leftToRight(missionLineHorizontal, svgLine)
   svgDraw(svgLine, svgLine, null, '400%')
   maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
@@ -262,7 +262,7 @@ const initPage = () => {
   {
     let numSize = "0.52vw"
     const initNum = () => {
-      if (windowWidth <= 568) {
+      if (windowWidth <= (568 * window.devicePixelRatio)) {
         numSize = "11.52vw"
       } else {
         numSize = "0.52vw"
