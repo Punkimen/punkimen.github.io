@@ -123,22 +123,44 @@ const hoverAppleBtn = () => {
 
 // initPage start
 // functions
-if (windowWidth > 768) {
-  const st = ScrollTrigger.create({
-    trigger: ".description-reality",
-    pinned: true,
-    start: "top top",
-    end: "bottom bottom",
-    onToggle: (self) => showEl(pinEl, self.isActive),
-  });
-} else {
-  const st = ScrollTrigger.create({
-    trigger: ".description-reality",
-    pinned: true,
-    start: "top top",
-    end: "bottom+=25% bottom",
-    onToggle: (self) => showEl(pinEl, self.isActive),
-  });
+const descrReality = (windowWidth) => {
+  if (windowWidth > 768) {
+    gsap.to(".description-reality", {
+      ease: 'none',
+      scrollTrigger: {
+        trigger: ".description-reality",
+        pinned: true,
+        start: "top top",
+        end: "bottom bottom",
+        onToggle: (self) => showEl(pinEl, self.isActive),
+      }
+    })
+    /*    const st = ScrollTrigger.create({
+          trigger: ".description-reality",
+          pinned: true,
+          start: "top top",
+          end: "bottom bottom",
+          onToggle: (self) => showEl(pinEl, self.isActive),
+        });*/
+  } else {
+    gsap.to(".description-reality", {
+      ease: 'none',
+      scrollTrigger: {
+        trigger: ".description-reality",
+        pinned: true,
+        start: "top top",
+        end: "bottom+=25% bottom",
+        onToggle: (self) => showEl(pinEl, self.isActive),
+      }
+    })
+    /*    const st = ScrollTrigger.create({
+          trigger: ".description-reality",
+          pinned: true,
+          start: "top top",
+          end: "bottom+=25% bottom",
+          onToggle: (self) => showEl(pinEl, self.isActive),
+        });*/
+  }
 }
 // gsap.set(securityBlock, {yPercent:  -100})
 
@@ -156,27 +178,6 @@ if (windowWidth > 768) {
     }
   });
 }
-
-verticalTransform(cardsPhone, cardsPhone, '-5%', '5%', true)
-verticalTransform(cardsMap, cardsMap, '-5%', '5%', true)
-verticalTransform(journeyCardPhone, journeyCardPhone, '5%', '-10%', true)
-verticalTransform(journeyCardOmi, journeyCardOmi, '-5%', '5%', true)
-verticalTransform(journeyCardMap, journeyCardMap, '-5%', '5%', true)
-// verticalTransform(heroPose, heroPose, '0%', '10%', true)
-verticalTransform(pvpPose1, pvpPose1, '5%', '-5%', true)
-verticalTransform(pvpPose2, pvpPose2, '-5%', '5%', true)
-horizontalTransform(OMICircle1, OMICircles, '100%', '33%')
-horizontalTransform(OMICircle3, OMICircles, '-100%', '-43%')
-horizontalTransform(cardsNft, cardsNft, "-3%", "3%")
-horizontalTransform(phone_1, phoneScreens, '17.5vw', '0', true, null, 'top bottom', 'top+=25% center')
-horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
-scalingFoo(cardsAura, cardsAura, 1, 2, "top bottom+=25%", "center top", true)
-windowWidth > 568 && scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
-leftToRight(missionLineHorizontal, svgLine)
-svgDraw(svgLine, svgLine, null, '400%')
-maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
-
-
 textLine.forEach(el => {
   triggerAnimate(el, el.parentElement)
 })
@@ -226,6 +227,31 @@ const initPage = () => {
     e.preventDefault();
     window.scrollTo({top: 0, behavior: 'smooth'});
   })
+
+  //init functions
+  descrReality(windowWidth)
+  verticalTransform(cardsPhone, cardsPhone, '-5%', '5%', true)
+  verticalTransform(cardsMap, cardsMap, '-5%', '5%', true)
+  verticalTransform(journeyCardPhone, journeyCardPhone, '5%', '-10%', true)
+  verticalTransform(journeyCardOmi, journeyCardOmi, '-5%', '5%', true)
+  verticalTransform(journeyCardMap, journeyCardMap, '-5%', '5%', true)
+// verticalTransform(heroPose, heroPose, '0%', '10%', true)
+  verticalTransform(pvpPose1, pvpPose1, '5%', '-5%', true)
+  verticalTransform(pvpPose2, pvpPose2, '-5%', '5%', true)
+  horizontalTransform(OMICircle1, OMICircles, '100%', '33%')
+  horizontalTransform(OMICircle3, OMICircles, '-100%', '-43%')
+  horizontalTransform(cardsNft, cardsNft, "-3%", "3%")
+  horizontalTransform(phone_1, phoneScreens, '17.5vw', '0', true, null, 'top bottom', 'top+=25% center')
+  horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
+  scalingFoo(cardsAura, cardsAura, 1, 2, "top bottom+=25%", "center top", true)
+  windowWidth > 568 && scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
+  leftToRight(missionLineHorizontal, svgLine)
+  svgDraw(svgLine, svgLine, null, '400%')
+  maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
+
+  // functions end
+
+
   burger.addEventListener('click', e => {
     e.preventDefault();
     toggleClass(burger, 'active')
@@ -316,7 +342,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initPage();
 })
 window.addEventListener('resize', () => {
-  windowWidth =  window.innerWidth * window.devicePixelRatio
+  descrReality(windowWidth)
+  windowWidth = window.innerWidth * window.devicePixelRatio
   formAdaptive(windowWidth)
   sectionHeightInit(windowWidth);
   cardsAdaptive(windowWidth)
