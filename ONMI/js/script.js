@@ -59,6 +59,7 @@ const closeElems = document.querySelectorAll('.modal__close')
 const burger = document.querySelector('.burger')
 const mobMenu = document.querySelector('.mob-menu')
 
+console.log(phone_1.getBoundingClientRect().y)
 
 gsap.registerPlugin(ScrollTrigger);
 firstTextLine.forEach(el => {
@@ -227,7 +228,7 @@ const initPage = () => {
     e.preventDefault();
     window.scrollTo({top: 0, behavior: 'smooth'});
   })
-
+  console.log(phone_1.getBoundingClientRect().y)
   //init functions
   descrReality(windowWidth)
   verticalTransform(cardsPhone, cardsPhone, '-5%', '5%', true)
