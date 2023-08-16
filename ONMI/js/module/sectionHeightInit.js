@@ -7,10 +7,10 @@ export const sectionHeightInit = (windowWidth) => {
   let paddingTop = 0
   let marginTop = 0
   console.log(windowWidth)
-  if (windowWidth > (768 * window.devicePixelRatio) && windowWidth < (990 * window.devicePixelRatio)) {
+  if (windowWidth > (768 ) && windowWidth < (990 )) {
     paddingTop = `${heightSection / 3.5}px`
     marginTop = `-${heightSection / 0.9}px`
-  } else if (windowWidth > (990 * window.devicePixelRatio)) {
+  } else if (windowWidth > (990 )) {
     paddingTop = `${heightSection / 3.8}px`
     marginTop = `-${heightSection / 0.9}px`
   } else {

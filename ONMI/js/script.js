@@ -15,7 +15,7 @@ import {formAdaptive, cardsAdaptive, journeyCardsAdaptive} from "./module/adapti
 import {addClass, toggleClass, removeClass} from "./module/handleClassnames.min.js";
 
 // const
-let windowWidth = window.innerWidth * window.devicePixelRatio
+let windowWidth = window.innerWidth
 const logo = document.querySelector('.header__logo')
 // ------- First and massive elems
 const firstTextLine = document.querySelectorAll('.text-line.first-load')
@@ -84,9 +84,9 @@ const showEl = (el, isShow) => {
 };
 const sliderPrety = (slider) => {
   let rightProp = '7vw'
-  if (windowWidth > (992 * window.devicePixelRatio)) {
+  if (windowWidth > (992)) {
     rightProp = '8.8vw'
-  } else if (windowWidth < (768 * window.devicePixelRatio)) {
+  } else if (windowWidth < (768)) {
     rightProp = 0
   }
   const arrSliders = slider.slides;
@@ -125,7 +125,7 @@ const hoverAppleBtn = () => {
 // initPage start
 // functions
 const descrReality = (windowWidth) => {
-  if (windowWidth > (768 * window.devicePixelRatio)) {
+  if (windowWidth > (768)) {
     gsap.to(".description-reality", {
       ease: 'none',
       scrollTrigger: {
@@ -136,13 +136,6 @@ const descrReality = (windowWidth) => {
         onToggle: (self) => showEl(pinEl, self.isActive),
       }
     })
-    /*    const st = ScrollTrigger.create({
-          trigger: ".description-reality",
-          pinned: true,
-          start: "top top",
-          end: "bottom bottom",
-          onToggle: (self) => showEl(pinEl, self.isActive),
-        });*/
   } else {
     gsap.to(".description-reality", {
       ease: 'none',
@@ -154,18 +147,10 @@ const descrReality = (windowWidth) => {
         onToggle: (self) => showEl(pinEl, self.isActive),
       }
     })
-    /*    const st = ScrollTrigger.create({
-          trigger: ".description-reality",
-          pinned: true,
-          start: "top top",
-          end: "bottom+=25% bottom",
-          onToggle: (self) => showEl(pinEl, self.isActive),
-        });*/
   }
 }
-// gsap.set(securityBlock, {yPercent:  -100})
 
-if (windowWidth > (768 * window.devicePixelRatio)) {
+if (windowWidth > (768)) {
   gsap.to(securityBlock, {
     // yPercent: -100,
     ease: 'SineInOut',
@@ -208,7 +193,7 @@ quests.forEach(el => {
 })
 formAdaptive(windowWidth)
 Marquee3k && Marquee3k.init()
-if (windowWidth > (768 * window.devicePixelRatio)) {
+if (windowWidth > (768)) {
   btnApplePlay.addEventListener('mouseenter', hoverAppleBtn)
   btnGooglePlay.addEventListener('mouseenter', hoverGoogleBtn)
   btnApplePlay.addEventListener('mouseleave', leveSizeBtns)
@@ -228,7 +213,6 @@ const initPage = () => {
     e.preventDefault();
     window.scrollTo({top: 0, behavior: 'smooth'});
   })
-  console.log(phone_1.getBoundingClientRect().y)
   //init functions
   descrReality(windowWidth)
   verticalTransform(cardsPhone, cardsPhone, '-5%', '5%', true)
@@ -245,7 +229,7 @@ const initPage = () => {
   horizontalTransform(phone_1, phoneScreens, '17.5vw', '0', true, null, 'top bottom', 'top+=25% center')
   horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
   scalingFoo(cardsAura, cardsAura, 1, 2, "top bottom+=25%", "center top", true)
-  windowWidth > (568 * window.devicePixelRatio) && scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
+  windowWidth > (568) && scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
   leftToRight(missionLineHorizontal, svgLine)
   svgDraw(svgLine, svgLine, null, '400%')
   maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
@@ -263,7 +247,7 @@ const initPage = () => {
   {
     let numSize = "0.52vw"
     const initNum = () => {
-      if (windowWidth <= (568 * window.devicePixelRatio)) {
+      if (windowWidth <= (568)) {
         numSize = "11.52vw"
       } else {
         numSize = "0.52vw"
@@ -344,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 window.addEventListener('resize', () => {
   descrReality(windowWidth)
-  windowWidth = window.innerWidth * window.devicePixelRatio
+  windowWidth = window.innerWidth
   formAdaptive(windowWidth)
   sectionHeightInit(windowWidth);
   cardsAdaptive(windowWidth)
