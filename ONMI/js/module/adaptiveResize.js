@@ -6,10 +6,10 @@ export const stepAdaptive = (windowWidth) => {
   const stepTitle = document.querySelector('.step__title')
   const stepText = document.querySelector('.step__text')
   if (stepsWrapper && stepTitle && stepText) {
-    if (windowWidth <= (768 ) && !stepsWrapper?.classList.contains('changed')) {
+    if (windowWidth <= (768) && !stepsWrapper?.classList.contains('changed')) {
       addClass(stepsWrapper, 'changed')
       stepsWrapper.append(stepText)
-    } else if (windowWidth > (768 ) && stepsWrapper?.classList.contains('changed')) {
+    } else if (windowWidth > (768) && stepsWrapper?.classList.contains('changed')) {
       removeClass(stepsWrapper, 'changed')
       stepTitle.after(stepText)
     }
@@ -23,11 +23,11 @@ export const circlesAdaptive = (windowWidth) => {
   const indItem = document.querySelector('.individual-chose__item_ind')
   const collItem = document.querySelector('.individual-chose__item_coll')
   if (cirles) {
-    if (windowWidth <= (768 ) && !cirles.classList.contains('changed')) {
+    if (windowWidth <= (768) && !cirles.classList.contains('changed')) {
       addClass(cirles, 'changed')
       indItem.prepend(singleCircle)
       collItem.prepend(circlesWrapper)
-    } else if (windowWidth > (768 ) && cirles.classList.contains('changed')) {
+    } else if (windowWidth > (768) && cirles.classList.contains('changed')) {
       removeClass(cirles, 'changed')
       cirles.prepend(singleCircle)
       cirles.append(collItem)
@@ -42,14 +42,14 @@ export const cardsAdaptive = (windowWidth) => {
   const card4 = cardsWrapper?.querySelector('.card_4')
   const card2 = cardsWrapper?.querySelector('.card_2')
   const cardsColumns = cardsWrapper?.querySelectorAll('.cards__col')
-  if (windowWidth <= (768 ) && !cardsWrapper.classList.contains('wrapper-row')) {
-    addClass(cardsWrapper, 'wrapper-row')
+  if (windowWidth <= (768) && !cardsWrapper.classList.contains('wrapper-row')) {
+    removeClass(cardsWrapper, 'wrapper-row')
     cardsWrapper.append(card1)
     cardsWrapper.append(card4)
     cardsWrapper.append(card2)
     cardsWrapper.append(card3)
   } else {
-    removeClass(cardsWrapper, 'wrapper-row')
+    addClass(cardsWrapper, 'wrapper-row')
     cardsColumns.forEach((el, index) => {
       if (index === 0) {
         cardsColumns[index].append(card1, card2)
@@ -68,14 +68,14 @@ export const journeyCardsAdaptive = (windowWidth) => {
   const card3 = cardsWrapper?.querySelector('.journey-card_3')
   const card4 = cardsWrapper?.querySelector('.journey-card_4')
   const cardsColumns = cardsWrapper?.querySelectorAll('.cards__col')
-  if (windowWidth <= (768 ) && !cardsWrapper.classList.contains('wrapper-row')) {
-    addClass(cardsWrapper, 'wrapper-row')
+  if (windowWidth <= (768) && !cardsWrapper.classList.contains('wrapper-row')) {
+    removeClass(cardsWrapper, 'wrapper-row')
     cardsWrapper.append(card1)
     cardsWrapper.append(card2)
     cardsWrapper.append(card3)
     cardsWrapper.append(card4)
   } else {
-    removeClass(cardsWrapper, 'wrapper-row')
+    addClass(cardsWrapper, 'wrapper-row')
     cardsColumns.forEach((el, index) => {
       if (index === 0) {
         cardsColumns[index].append(card1, card3)
@@ -92,10 +92,10 @@ export const formAdaptive = (windowWidth) => {
   const formField = form.querySelector('.form__field')
   const formBtn = form.querySelector('.form__btn')
   const formText = form.querySelector('.form__text')
-  if (windowWidth <= (568 ) && !formField.classList.contains('adaptive')) {
+  if (windowWidth <= (568) && !formField.classList.contains('adaptive')) {
     addClass(formField, 'adaptive')
     formText.after(formBtn)
-  } else if ((windowWidth > (568 ) && formField.classList.contains('adaptive'))) {
+  } else if ((windowWidth > (568) && formField.classList.contains('adaptive'))) {
     removeClass(formField, 'adaptive')
     formField.append(formBtn)
   }

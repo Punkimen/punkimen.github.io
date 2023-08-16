@@ -59,7 +59,7 @@ const closeElems = document.querySelectorAll('.modal__close')
 const burger = document.querySelector('.burger')
 const mobMenu = document.querySelector('.mob-menu')
 
-
+sectionHeightInit(windowWidth);
 gsap.registerPlugin(ScrollTrigger);
 firstTextLine.forEach(el => {
   triggerAnimate(el, el.parentElement)
@@ -201,13 +201,14 @@ if (windowWidth > (768)) {
 
 // //init functions
 video1 && video1?.currentTime > 0 && video1?.play()
-sectionHeightInit(windowWidth);
 
 
 // initPage end
 verticalTransform(heroPose, heroPose, '-15%', '0%', true, 'bottom center+=25%', "bottom top")
 
 const initPage = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   logo.addEventListener('click', e => {
     e.preventDefault();
     window.scrollTo({top: 0, behavior: 'smooth'});
