@@ -59,7 +59,6 @@ const closeElems = document.querySelectorAll('.modal__close')
 const burger = document.querySelector('.burger')
 const mobMenu = document.querySelector('.mob-menu')
 
-console.log(phone_1.getBoundingClientRect().y)
 
 gsap.registerPlugin(ScrollTrigger);
 firstTextLine.forEach(el => {
@@ -206,7 +205,7 @@ sectionHeightInit(windowWidth);
 
 
 // initPage end
-
+verticalTransform(heroPose, heroPose, '-15%', '0%', true, 'bottom center+=25%', "bottom top")
 
 const initPage = () => {
   logo.addEventListener('click', e => {

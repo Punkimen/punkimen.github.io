@@ -128,7 +128,7 @@ export const horizontalTransform = (el, trigger, startVal, endValue, scrub = tru
     }
   })
 }
-export const verticalTransform = (el, trigger, startVal, endValue, scrub = true) => {
+export const verticalTransform = (el, trigger, startVal, endValue, scrub = true, starAnim, endAnim) => {
   const delay = el.getAttribute('data-delay') || 0
   const duration = el.getAttribute('data-duration') || 1.2
   gsap.fromTo(el, {
@@ -139,9 +139,10 @@ export const verticalTransform = (el, trigger, startVal, endValue, scrub = true)
     delay: delay,
     duration: duration,
     scrollTrigger: {
+      markers: true,
       trigger: trigger || el,
-      start: "top bottom",
-      end: "bottom top",
+      start: starAnim || "top bottom",
+      end: endAnim || "bottom top",
       scrub: scrub
     }
   })
