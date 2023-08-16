@@ -139,7 +139,6 @@ export const verticalTransform = (el, trigger, startVal, endValue, scrub = true,
     delay: delay,
     duration: duration,
     scrollTrigger: {
-      markers: true,
       trigger: trigger || el,
       start: starAnim || "top bottom",
       end: endAnim || "bottom top",
