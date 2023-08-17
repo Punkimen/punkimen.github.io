@@ -886,9 +886,14 @@
     </div>
   </div>
   <div class="pvp__map" data-effect="opacity">
-    <noscript data-webp>
-      <img src="./img/battle_city.png" loading="lazy" alt="">
-    </noscript>
+
+    <picture>
+      <source media="(max-device-width:768px)" srcset="./img/battle_city_mob.webp">
+      <noscript data-webp>
+        <img src="img/battle_city.png" loading="lazy" alt="Battle city">
+      </noscript>
+    </picture>
+
   </div>
 </section>
 
