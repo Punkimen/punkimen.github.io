@@ -123,6 +123,10 @@ const hoverAppleBtn = () => {
 
 // initPage start
 // functions
+
+
+// initPage end
+verticalTransform(heroPose, heroPose, '-15%', '0%', true, 'bottom center+=25%', "bottom top")
 const descrReality = (windowWidth) => {
   if (windowWidth > (768)) {
     gsap.to(".description-reality", {
@@ -148,67 +152,23 @@ const descrReality = (windowWidth) => {
     })
   }
 }
-
-/*if (windowWidth > (768)) {
-  gsap.to(securityBlock, {
-    // yPercent: -100,
-    ease: 'SineInOut',
-    // stagger: 0.5,
-    scrollTrigger: {
-      trigger: '.tokenomics__inner',
-      start: "center+=25% center",
-      end: `+=100%`,
-      scrub: true,
-      pin: true
-    }
-  });
-}*/
-textLine.forEach(el => {
-  triggerAnimate(el, el.parentElement)
-})
-readedText.forEach(el => {
-  splitText(el)
-  const words = el.querySelectorAll('.word')
-  readText(words, el)
-})
-opacityElems.forEach((el) => {
-  triggerAnimate(el);
-});
-fadeOpacityElems.forEach((el) => {
-  triggerAnimate(el);
-});
-lines.forEach(el => {
-  leftToRight(el)
-})
-// // questions
-quests.forEach(el => {
-  el.addEventListener('click', e => {
-    e.preventDefault()
-    const head = e.target.closest('.question-item__header')
-    if (head) {
-      el.classList.toggle('open')
-    }
-  })
-})
-formAdaptive(windowWidth)
-Marquee3k && Marquee3k.init()
-if (windowWidth > (768)) {
-  btnApplePlay.addEventListener('mouseenter', hoverAppleBtn)
-  btnGooglePlay.addEventListener('mouseenter', hoverGoogleBtn)
-  btnApplePlay.addEventListener('mouseleave', leveSizeBtns)
-  btnGooglePlay.addEventListener('mouseleave', leveSizeBtns)
-}
-
-// //init functions
-video1 && video1?.currentTime > 0 && video1?.play()
-
-
-// initPage end
-verticalTransform(heroPose, heroPose, '-15%', '0%', true, 'bottom center+=25%', "bottom top")
-
 const initPage = () => {
   gsap.registerPlugin(ScrollTrigger);
-
+  ScrollTrigger.refresh()
+  if (windowWidth > (768)) {
+    gsap.to(securityBlock, {
+      // yPercent: -100,
+      ease: 'SineInOut',
+      // stagger: 0.5,
+      scrollTrigger: {
+        trigger: '.tokenomics__inner',
+        start: "center+=25% center",
+        end: `+=100%`,
+        scrub: true,
+        pin: true
+      }
+    });
+  }
   logo.addEventListener('click', e => {
     e.preventDefault();
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -220,7 +180,6 @@ const initPage = () => {
   verticalTransform(journeyCardPhone, journeyCardPhone, '5%', '-10%', true)
   verticalTransform(journeyCardOmi, journeyCardOmi, '-5%', '5%', true)
   verticalTransform(journeyCardMap, journeyCardMap, '-5%', '5%', true)
-// verticalTransform(heroPose, heroPose, '0%', '10%', true)
   verticalTransform(pvpPose1, pvpPose1, '5%', '-5%', true)
   verticalTransform(pvpPose2, pvpPose2, '-5%', '5%', true)
   horizontalTransform(OMICircle1, OMICircles, '100%', '33%')
@@ -236,6 +195,46 @@ const initPage = () => {
 
   // functions end
 
+
+
+  textLine.forEach(el => {
+    triggerAnimate(el, el.parentElement)
+  })
+  readedText.forEach(el => {
+    splitText(el)
+    const words = el.querySelectorAll('.word')
+    readText(words, el)
+  })
+  opacityElems.forEach((el) => {
+    triggerAnimate(el);
+  });
+  fadeOpacityElems.forEach((el) => {
+    triggerAnimate(el);
+  });
+  lines.forEach(el => {
+    leftToRight(el)
+  })
+// // questions
+  quests.forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault()
+      const head = e.target.closest('.question-item__header')
+      if (head) {
+        el.classList.toggle('open')
+      }
+    })
+  })
+  formAdaptive(windowWidth)
+  Marquee3k && Marquee3k.init()
+  if (windowWidth > (768)) {
+    btnApplePlay.addEventListener('mouseenter', hoverAppleBtn)
+    btnGooglePlay.addEventListener('mouseenter', hoverGoogleBtn)
+    btnApplePlay.addEventListener('mouseleave', leveSizeBtns)
+    btnGooglePlay.addEventListener('mouseleave', leveSizeBtns)
+  }
+
+// //init functions
+  video1 && video1?.currentTime > 0 && video1?.play()
 
   burger.addEventListener('click', e => {
     e.preventDefault();
