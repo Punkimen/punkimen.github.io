@@ -149,20 +149,22 @@ const descrReality = (windowWidth) => {
   }
 }
 
-if (windowWidth > (768)) {
-  gsap.to(securityBlock, {
-    // yPercent: -100,
-    ease: 'SineInOut',
-    // stagger: 0.5,
-    scrollTrigger: {
-      trigger: '.tokenomics__inner',
-      start: "center+=25% center",
-      end: `+=100%`,
-      scrub: true,
-      pin: true
-    }
-  });
+/*gsap.to(securityBlock, {
+  // yPercent: -100,
+  ease: 'SineInOut',
+  // stagger: 0.5,
+  scrollTrigger: {
+    trigger: '#tokenomics__inner',
+    start: "center+=25% center",
+    end: `+=100%`,
+    scrub: true,
+    pin: true
+  }
+});*/
+const pinnedSecurity = (windowWidth) => {
+
 }
+
 textLine.forEach(el => {
   triggerAnimate(el, el.parentElement)
 })
@@ -215,7 +217,7 @@ const initPage = () => {
   })
   //init functions
   descrReality(windowWidth)
-  verticalTransform(cardsPhone, cardsPhone, '-5%', '5%', true)
+/*  verticalTransform(cardsPhone, cardsPhone, '-5%', '5%', true)
   verticalTransform(cardsMap, cardsMap, '-5%', '5%', true)
   verticalTransform(journeyCardPhone, journeyCardPhone, '5%', '-10%', true)
   verticalTransform(journeyCardOmi, journeyCardOmi, '-5%', '5%', true)
@@ -233,7 +235,7 @@ const initPage = () => {
   leftToRight(missionLineHorizontal, svgLine)
   svgDraw(svgLine, svgLine, null, '400%')
   maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
-
+  pinnedSecurity(windowWidth)*/
   // functions end
 
 
@@ -325,27 +327,32 @@ const initPage = () => {
 }
 document.addEventListener('DOMContentLoaded', () => {
   initPage();
+
+  window.addEventListener('resize', () => {
+    descrReality(windowWidth)
+    windowWidth = window.innerWidth
+    formAdaptive(windowWidth)
+    sectionHeightInit(windowWidth);
+    cardsAdaptive(windowWidth)
+    journeyCardsAdaptive(windowWidth)
+    // pinnedSecurity(windowWidth)
+  })
+
+  let lastScrollTop = 0;
+  window.addEventListener(
+    "scroll",
+    function () {
+      let st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTop && lastScrollTop > window.innerHeight / 8) {
+        setHeader(true);
+      } else if (st === 0) {
+        setHeader(false);
+      }
+      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    },
+    false
+  );
+
 })
-window.addEventListener('resize', () => {
-  descrReality(windowWidth)
-  windowWidth = window.innerWidth
-  formAdaptive(windowWidth)
-  sectionHeightInit(windowWidth);
-  cardsAdaptive(windowWidth)
-  journeyCardsAdaptive(windowWidth)
-})
-let lastScrollTop = 0;
-window.addEventListener(
-  "scroll",
-  function () {
-    let st = window.pageYOffset || document.documentElement.scrollTop;
-    if (st > lastScrollTop && lastScrollTop > window.innerHeight / 8) {
-      setHeader(true);
-    } else if (st === 0) {
-      setHeader(false);
-    }
-    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-  },
-  false
-);
+
 
