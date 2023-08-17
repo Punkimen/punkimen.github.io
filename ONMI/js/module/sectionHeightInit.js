@@ -6,7 +6,6 @@ export const sectionHeightInit = (windowWidth) => {
   // const heightBg = bg.clientHeight;
   let paddingTop = 0
   let marginTop = 0
-  console.log(windowWidth)
   if (windowWidth > (768 ) && windowWidth < (990 )) {
     paddingTop = `${heightSection / 3.5}px`
     marginTop = `-${heightSection / 0.9}px`

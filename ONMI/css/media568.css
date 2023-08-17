@@ -1558,12 +1558,12 @@
   .find-map__map {
     left: 50%;
     transform: translateX(-50%);
-    width: 256%;
+    width: 100%;
   }
 
   .find-map__phone {
     width: 49.3vw;
-    transform: translateY(-81%);
+    transform: translateY(-85%);
   }
 
   .find-map__pointer_2 {
