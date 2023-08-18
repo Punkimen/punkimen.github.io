@@ -146,7 +146,7 @@ const descrReality = (windowWidth) => {
         trigger: ".description-reality",
         pinned: true,
         start: "top top",
-        end: "bottom+=25% bottom",
+        end: "bottom+=15% bottom",
         onToggle: (self) => showEl(pinEl, self.isActive),
       }
     })
@@ -194,7 +194,6 @@ const initPage = () => {
   maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
 
   // functions end
-
 
 
   textLine.forEach(el => {
