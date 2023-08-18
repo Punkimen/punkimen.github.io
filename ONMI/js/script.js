@@ -209,7 +209,7 @@ const initPage = () => {
     })
   })
   formAdaptive(windowWidth)
-  Marquee3k && Marquee3k.init()
+  // Marquee3k && Marquee3k.init()
   if (windowWidth > (768)) {
     btnApplePlay.addEventListener('mouseenter', hoverAppleBtn)
     btnGooglePlay.addEventListener('mouseenter', hoverGoogleBtn)

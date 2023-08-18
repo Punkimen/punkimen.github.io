@@ -1394,10 +1394,12 @@
 
   .create-omi__item {
     width: 37.56vw;
+    min-width: 37.56vw;
   }
 
   .create-omi__item_15 {
     width: 37.7vw;
+    min-width: 37.7vw;
   }
 
   .create-omi__cards-wrapper {
