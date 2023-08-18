@@ -52,7 +52,7 @@ const fadeOpacityElems = document.querySelectorAll('[data-effect="fade-down"]:no
 const pinEl = document.querySelector(".description-reality__content");
 const btnGooglePlay = document.querySelector('.platform__btn_google')
 const btnApplePlay = document.querySelector('.platform__btn_apple')
-
+const marqueeLines = document.querySelectorAll('.marquee3k')
 const quests = document.querySelectorAll(".question-item")
 const lines = document.querySelectorAll(".line");
 const securityBlock = document.querySelector('.security');
@@ -209,7 +209,24 @@ const initPage = () => {
     })
   })
   formAdaptive(windowWidth)
-  // Marquee3k && Marquee3k.init()
+  Marquee3k && Marquee3k.init()
+  Marquee3k.pauseAll();
+
+  marqueeLines.forEach((el,index)=>{
+    gsap.to(el, {
+      ease: 'none',
+      scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        end: "bottom top",
+        onToggle: (self) => {
+          self.isActive ? Marquee3k.play(index) : Marquee3k.pauseAll();
+        },
+      }
+    })
+  })
+
+
   if (windowWidth > (768)) {
     btnApplePlay.addEventListener('mouseenter', hoverAppleBtn)
     btnGooglePlay.addEventListener('mouseenter', hoverGoogleBtn)
