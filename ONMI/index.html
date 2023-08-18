@@ -266,25 +266,25 @@
         <noscript data-webp><img class="adventure__phone-phone" src="./img/adventure_phone.png"
                                  alt="Phone">
         </noscript>
-        <noscript data-webp><img class="adventure__phone-hand" src="./img/hand.png"  alt="Phone in hand"/>
+        <noscript data-webp><img class="adventure__phone-hand" src="./img/hand.png" alt="Phone in hand"/>
         </noscript>
 
       </div>
       <div class="adventure__phone swiper" data-effect="opacity">
         <div class="swiper-wrapper">
           <div class="adventure__phone-slide swiper-slide">
-            <noscript data-webp><img src="./img/slider_phone/screen_1.png"  alt="slide screen 1">
+            <noscript data-webp><img src="./img/slider_phone/screen_1.png" alt="slide screen 1">
             </noscript>
             <!-- <img src="./img/slider_phone/screen_1.png" > -->
           </div>
           <div class="adventure__phone-slide swiper-slide">
-            <noscript data-webp><img src="./img/slider_phone/screen_2.png"  alt="slide screen 2">
+            <noscript data-webp><img src="./img/slider_phone/screen_2.png" alt="slide screen 2">
             </noscript>
             <!-- <img src="./img/slider_phone/screen_2.jpg" alt="s-type slide"> -->
           </div>
           <div class="adventure__phone-slide swiper-slide">
             <video id="video_phone" src="./video/slider_video.mp4" type="video/mp4" autoplay="true"
-                   muted="muted" loop />
+                   muted="muted" loop/>
             <!--         <noscript data-webp><img src="./img/slider_phone/screen_2.png"  alt="slide screen 2">
                      </noscript>-->
             <!-- <img src="./img/slider_phone/screen_1.png" alt="s-type slide"> -->
@@ -298,7 +298,7 @@
           <div class="swiper-slide cards-slider__slide">
             <div class="cards-slider__phone">
               <noscript data-webp="">
-                <img src="./img/slider_phone/phone_slide_1.png"  alt="phone_slide">
+                <img src="./img/slider_phone/phone_slide_1.png" alt="phone_slide">
               </noscript>
             </div>
             <div class="cards-slider__block">
@@ -309,7 +309,7 @@
           <div class="swiper-slide cards-slider__slide">
             <div class="cards-slider__phone">
               <noscript data-webp="">
-                <img src="./img/slider_phone/phone_slide_2.png"  alt="phone_slide">
+                <img src="./img/slider_phone/phone_slide_2.png" alt="phone_slide">
               </noscript>
             </div>
             <div class="cards-slider__block">
@@ -321,9 +321,11 @@
           </div>
           <div class="swiper-slide cards-slider__slide">
             <div class="cards-slider__phone">
-              <noscript data-webp="">
-                <img src="./img/slider_phone/phone_slide_1.png"  alt="phone_slide">
+              <noscript data-webp><img class="adventure__phone-phone" src="./img/adventure_phone.png"
+                                       alt="Phone">
               </noscript>
+              <video src="./video/slider_video.mp4" type="video/mp4" autoplay="true"
+                     muted="muted" loop/>
             </div>
             <div class="cards-slider__block">
               <div class="cards-slider__descr">Activate your camera: interact with items in Reality 2.0 and earn
@@ -334,11 +336,11 @@
           </div>
         </div>
         <div class="cards-slider__btn swiper-btn swiper-button-prev animate" data-effect="opacity">
-          <img src="img/icons/arrow_slider.svg"  alt="arrow prev">
+          <img src="img/icons/arrow_slider.svg" alt="arrow prev">
         </div>
         <div class="cards-slider__btn swiper-btn  swiper-button-next animate" data-effect="opacity"
              data-delay="0.1">
-          <img src="img/icons/arrow_slider.svg"  alt="arrow next">
+          <img src="img/icons/arrow_slider.svg" alt="arrow next">
         </div>
       </div>
     </div>
@@ -1459,7 +1461,7 @@
   <section class="mission">
   <div class="container_padding container">
     <div class="mission__wrapper main-wrapper">
-      <div class="mission__line"></div>
+      <div class="mission__line mission__line_horizontal"></div>
       <div class="mission__line mission__line_diagonally">
         <svg>
           <line x1="0" y1="0" x2="100%" y2="100%" stroke-width="2" style="stroke:rgba(255, 255, 255, .3)"></line>
@@ -1637,9 +1639,9 @@
           <div class="culture-event__left">
             <div class="culture-event__title text-line" data-delay="0.1">Artist</div>
             <div class="culture-event__text">
-              <p data-effect="opacity" data-delay="0.1">Onmi establishes an immersive connection between the artiste and
+              <p data-effect="opacity" data-delay="0.1">Onmi establishes an immersive connection between the artist and
                 the listener, granting access to exclusive content. For example, the listener can see the city through
-                artiste’s eyes, get to know them personally, or even join them on stage.</p>
+                artist’s eyes, get to know them personally, or even join them on stage.</p>
               <p data-effect="opacity" data-delay="0.2">Artists will also release limited edition digital-fashion
                 collections on our creative platform.</p>
             </div>
@@ -2391,7 +2393,8 @@
     </div>
   </div>
   <div class="modal__close">
-    <img src="img/icons/close.svg" alt="close">
+    <div class="modal__burger burger active" data-effect="opacity" data-delay="0.2"><span></span><span></span>
+    </div>
   </div>
 </div>
 

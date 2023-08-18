@@ -1,54 +1,60 @@
 "use strict";
 import {sliderInit} from "./module/sliderInit.min.js";
-import {splitText} from "./module/splitText.min.js";
+
 import {setHeader} from "./module/setHeader.min.js";
 import {sectionHeightInit} from "./module/sectionHeightInit.min.js";
 import {
-  drawSvgLine,
   leftToRight,
-  horizontalTransform,
-  triggerAnimate, readText,
+  triggerAnimate,
   scalingFoo,
-  svgDraw, verticalTransform
+   verticalTransform
 } from "./module/GSAPAnim.js";
 import {formAdaptive, cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.js";
 import {addClass, toggleClass, removeClass} from "./module/handleClassnames.min.js";
 
-// const
 let windowWidth = window.innerWidth
+
+const createScript = (id, src) => {
+  const script = document.createElement('script')
+  script.setAttribute('src', src)
+  script.setAttribute('id', id)
+  script.setAttribute('type', 'module')
+  script.setAttribute('defer', '')
+  return script
+}
+
+const addScripts = (windowWidth) => {
+  if (windowWidth > 768) {
+    if (!document.querySelector('#scriptDesktop')) {
+      document.body.append(createScript('scriptDesktop', "js/scriptDesktop.min.js"))
+    }
+  } else {
+    if (!document.querySelector('#scriptMob')) {
+      document.body.append(createScript('scriptMob', "js/scriptMob.min.js"))
+    }
+    if (document.querySelector('#scriptDesktop')) {
+      document.querySelector('#scriptDesktop').remove()
+      location.reload();
+    }
+  }
+}
+addScripts(windowWidth);
+// const
 const logo = document.querySelector('.header__logo')
 // ------- First and massive elems
 const firstTextLine = document.querySelectorAll('.text-line.first-load')
 const firstOpacityElems = document.querySelectorAll('[data-effect="opacity"].first-load');
 const firstFadeOpacityElems = document.querySelectorAll('[data-effect="fade-down"].first-load');
 // ------- First and massive elems
-const heroWrapper = document.querySelector('.hero')
 const textLine = document.querySelectorAll('.text-line:not(.first-load)')
 const opacityElems = document.querySelectorAll('[data-effect="opacity"]:not(.first-load)');
 const fadeOpacityElems = document.querySelectorAll('[data-effect="fade-down"]:not(.first-load)');
-const readedText = document.querySelectorAll('.readed-text')
-const maskSvg = document.querySelector('.mask')
-const markers = document.querySelectorAll('.each-point__mark')
-const cardsAura = document.querySelector('.card_1 .card__front-aura img')
-const cardsNft = document.querySelector('.card_3 .card__front-img')
-const cardsPhone = document.querySelector('.card_2 .card__front-img')
-const cardsMap = document.querySelector('.card__front-img_bg')
-const OMICircles = document.querySelector('.omies__circles')
-const OMICircle1 = document.querySelector('.omies__circle_1')
-const OMICircle3 = document.querySelector('.omies__circle_3')
 const pinEl = document.querySelector(".description-reality__content");
 const btnGooglePlay = document.querySelector('.platform__btn_google')
 const btnApplePlay = document.querySelector('.platform__btn_apple')
-const missionLineHorizontal = document.querySelector('.mission__line')
-const svgLine = document.querySelector('.mission__line_diagonally line');
-const phoneScreens = document.querySelector('.reality__screens')
-const phone_1 = document.querySelector('.reality__screen_1')
-const phone_3 = document.querySelector('.reality__screen_3')
+
 const quests = document.querySelectorAll(".question-item")
 const lines = document.querySelectorAll(".line");
-const journeyCardPhone = document.querySelector('.journey-card__phone')
-const journeyCardOmi = document.querySelector('.journey-card_2 .journey-card__omi')
-const journeyCardMap = document.querySelector('.journey-card_4 .card__front-img_bg')
 const securityBlock = document.querySelector('.security');
 const pvpPose1 = document.querySelector('.pvp-pose_1')
 const pvpPose2 = document.querySelector('.pvp-pose_2')
@@ -56,7 +62,7 @@ const heroPose = document.querySelector('.hero__pose')
 const video1 = document.querySelector('#video_phone')
 const openElems = document.querySelectorAll('[data-open]')
 const closeElems = document.querySelectorAll('.modal__close')
-const burger = document.querySelector('.burger')
+const burger = document.querySelector('.header__burger')
 const mobMenu = document.querySelector('.mob-menu')
 
 sectionHeightInit(windowWidth);
@@ -145,8 +151,8 @@ const descrReality = (windowWidth) => {
       scrollTrigger: {
         trigger: ".description-reality",
         pinned: true,
-        start: "top top",
-        end: "bottom+=15% bottom",
+        start: "top top-=25%",
+        end: "bottom+=10% bottom",
         onToggle: (self) => showEl(pinEl, self.isActive),
       }
     })
@@ -175,34 +181,13 @@ const initPage = () => {
   })
   //init functions
   descrReality(windowWidth)
-  verticalTransform(cardsPhone, cardsPhone, '-5%', '5%', true)
-  verticalTransform(cardsMap, cardsMap, '-5%', '5%', true)
-  verticalTransform(journeyCardPhone, journeyCardPhone, '5%', '-10%', true)
-  verticalTransform(journeyCardOmi, journeyCardOmi, '-5%', '5%', true)
-  verticalTransform(journeyCardMap, journeyCardMap, '-5%', '5%', true)
   verticalTransform(pvpPose1, pvpPose1, '5%', '-5%', true)
   verticalTransform(pvpPose2, pvpPose2, '-5%', '5%', true)
-  horizontalTransform(OMICircle1, OMICircles, '100%', '33%')
-  horizontalTransform(OMICircle3, OMICircles, '-100%', '-43%')
-  horizontalTransform(cardsNft, cardsNft, "-3%", "3%")
-  horizontalTransform(phone_1, phoneScreens, '17.5vw', '0', true, null, 'top bottom', 'top+=25% center')
-  horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
-  scalingFoo(cardsAura, cardsAura, 1, 2, "top bottom+=25%", "center top", true)
   windowWidth > (568) && scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
-  leftToRight(missionLineHorizontal, svgLine)
-  svgDraw(svgLine, svgLine, null, '400%')
-  maskSvg && drawSvgLine(maskSvg, '.each-point__route', markers)
-
   // functions end
-
 
   textLine.forEach(el => {
     triggerAnimate(el, el.parentElement)
-  })
-  readedText.forEach(el => {
-    splitText(el)
-    const words = el.querySelectorAll('.word')
-    readText(words, el)
   })
   opacityElems.forEach((el) => {
     triggerAnimate(el);
@@ -326,6 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 window.addEventListener('resize', () => {
   descrReality(windowWidth)
+  addScripts(windowWidth)
   windowWidth = window.innerWidth
   formAdaptive(windowWidth)
   sectionHeightInit(windowWidth);

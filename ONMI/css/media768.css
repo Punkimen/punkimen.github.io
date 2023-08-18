@@ -1344,6 +1344,7 @@
 
   .reality__screen {
     min-width: 44.76vw;
+    transform: translateX(0);
   }
 
   .reality__decor {
@@ -1533,8 +1534,16 @@
     height: 65vw;
   }
 
+  .card_1 .card__front-aura {
+    transform: translateX(-50%) scale(2);
+  }
+
   .card_2 {
     height: 62vw;
+  }
+
+  .card_2 .card__front {
+    padding-bottom: 13.2vw;
   }
 
   .card_2 .card__front .card__front-img {
@@ -2370,6 +2379,10 @@
 
   .modal__info {
     left: 3.65vw;
+  }
+
+  .modal__content {
+    padding-top: 14vw;
   }
 
   .modal__close {
