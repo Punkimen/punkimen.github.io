@@ -1684,12 +1684,17 @@
 
   .each-point__title {
     font-size: 5.5vw;
+    text-align: left;
   }
 
   .each-point__text {
     text-align: left;
     font-size: 3.81vw;
     line-height: 1.375em;
+  }
+
+  .each-point__text_2 {
+    display: none;
   }
 
   .each-point__circle {

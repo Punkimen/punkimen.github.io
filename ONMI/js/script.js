@@ -212,7 +212,7 @@ const initPage = () => {
   Marquee3k && Marquee3k.init()
   Marquee3k.pauseAll();
 
-  marqueeLines.forEach((el,index)=>{
+  marqueeLines.forEach((el, index) => {
     gsap.to(el, {
       ease: 'none',
       scrollTrigger: {
@@ -241,12 +241,6 @@ const initPage = () => {
     e.preventDefault();
     toggleClass(burger, 'active')
     toggleClass(mobMenu, 'show')
-    if (mobMenu.classList.contains('show')) {
-      console.log('work')
-      mobMenu.style.transition = 'transform 0.2s linear, opacity linear .1s .14s'
-    } else {
-      mobMenu.style.transition = 'opacity .1s, transform .3s'
-    }
     toggleClass(document.body, 'overflow')
   })
   // // sliders
