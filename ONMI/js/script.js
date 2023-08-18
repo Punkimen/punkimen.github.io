@@ -7,7 +7,7 @@ import {
   leftToRight,
   triggerAnimate,
   scalingFoo,
-   verticalTransform
+  verticalTransform
 } from "./module/GSAPAnim.js";
 import {formAdaptive, cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.js";
 import {addClass, toggleClass, removeClass} from "./module/handleClassnames.min.js";
@@ -224,6 +224,12 @@ const initPage = () => {
     e.preventDefault();
     toggleClass(burger, 'active')
     toggleClass(mobMenu, 'show')
+    if (mobMenu.classList.contains('show')) {
+      console.log('work')
+      mobMenu.style.transition = 'transform 0.2s linear, opacity linear .1s .14s'
+    } else {
+      mobMenu.style.transition = 'opacity .1s, transform .3s'
+    }
     toggleClass(document.body, 'overflow')
   })
   // // sliders

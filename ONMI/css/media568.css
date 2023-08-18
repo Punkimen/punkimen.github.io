@@ -1332,7 +1332,7 @@
   }
 
   .adventure {
-    padding: 0vw 0 22.81vw;
+    padding: 0vw 0 0vw;
   }
 
   .adventure__content {
@@ -1579,7 +1579,7 @@
 
   .journey-card {
     border-radius: 7.14vw;
-    padding: 13.2vw 5vw 8.8vw 5vw;
+    padding: 13.2vw 6vw 8.8vw 6vw;
     height: 138vw;
   }
 
@@ -1748,7 +1748,7 @@
   }
 
   .hunger-games__wrapper {
-    margin-bottom: -30vw;
+    margin-bottom: -23vw;
   }
 
   .hunger-games__title {
@@ -1760,7 +1760,7 @@
   }
 
   .hunger-games__pose {
-    top: -73.5vw;
+    top: -85.5vw;
     left: 22vw;
     width: 54.05vw;
   }
@@ -1801,7 +1801,8 @@
   }
 
   .hunger-progress__text {
-    font-size: 4.29vw;
+    font-size: 3.81vw;
+    line-height: 1.375em;
   }
 
   .hunger-progress__text_1 {
@@ -1886,13 +1887,15 @@
   }
 
   .mission__text {
-    font-size: 7.14vw;
+    font-size: 3.81vw;
+    line-height: 1.375em;
     width: 100%;
   }
 
   .mission__text_big {
     max-width: 100%;
-    font-size: 7.14vw;
+    font-size: 3.81vw;
+    line-height: 1.375em;
     letter-spacing: 0;
     padding-right: 4vw;
   }
@@ -1928,6 +1931,7 @@
 
   .culture-event__text {
     font-size: 3.81vw;
+    line-height: 1.375em;
     letter-spacing: 0.02em;
     max-width: 87.4vw;
   }
@@ -2067,7 +2071,8 @@
   }
 
   .tokenomics__text {
-    font-size: 7.14vw;
+    font-size: 3.81vw;
+    line-height: 1.375em;
     max-width: 97%;
   }
 
@@ -2126,12 +2131,14 @@
 
   .security__text {
     font-size: 3.81vw;
+    line-height: 1.375em;
     max-width: 100%;
   }
 
   .security__text_big {
     max-width: 100%;
-    font-size: 7.14vw;
+    font-size: 3.81vw;
+    line-height: 1.375em;
   }
 
   .question-item {

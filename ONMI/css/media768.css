@@ -1395,14 +1395,25 @@
 
   .cards-slider__slider {
     max-width: 100%;
+    padding-bottom: 0;
   }
 
   .cards-slider__slide {
-    max-width: 100%;
+    max-width: calc(100% + 10vw);
+    width: calc(100% + 10vw);
     height: auto;
     display: flex;
     align-items: center;
     left: -4vw;
+    margin-right: 0vw !important;
+  }
+
+  .cards-slider__slide:first-child {
+    margin-right: -16vw !important;
+  }
+
+  .cards-slider__slide:nth-child(2) {
+    margin-right: -10vw !important;
   }
 
   .cards-slider__phone {
@@ -1423,7 +1434,7 @@
   }
 
   .cards-slider__descr {
-    max-width: 100%;
+    max-width: 90%;
     font-size: 2.6vw;
     margin-bottom: 10vw;
   }
@@ -1554,6 +1565,11 @@
     height: 62vw;
   }
 
+  .card_3 .card__front .card__front-img {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .card_4 {
     height: 65vw;
   }
@@ -1669,7 +1685,9 @@
   }
 
   .each-point__text {
-    display: none;
+    text-align: left;
+    font-size: 3.81vw;
+    line-height: 1.375em;
   }
 
   .each-point__circle {
@@ -2273,6 +2291,7 @@
 
   .question-item__text {
     font-size: 2.08vw;
+    line-height: 1.2em;
     max-width: 80vw;
   }
 
