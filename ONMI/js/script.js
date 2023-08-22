@@ -12,7 +12,7 @@ import {
 import {formAdaptive, cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.js";
 import {addClass, toggleClass, removeClass} from "./module/handleClassnames.min.js";
 
-
+let windowWidth = window.innerWidth
 
 const createScript = (id, src) => {
   const script = document.createElement('script')
