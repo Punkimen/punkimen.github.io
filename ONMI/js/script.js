@@ -12,7 +12,7 @@ import {
 import {formAdaptive, cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.js";
 import {addClass, toggleClass, removeClass} from "./module/handleClassnames.min.js";
 
-let windowWidth = window.innerWidth
+
 
 const createScript = (id, src) => {
   const script = document.createElement('script')
@@ -290,7 +290,6 @@ const initPage = () => {
     const slider_2 = sliderInit(".cards-slider__slider", cardSliderOptions);
 
     slider_2.controller.control = slider_1;
-
     slider_2.on("slideChange", function () {
       const phoneHand = document.querySelector('.adventure__phone-hand');
       sliderPrety(slider_2);
