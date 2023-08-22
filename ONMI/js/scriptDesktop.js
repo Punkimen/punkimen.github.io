@@ -4,8 +4,6 @@ import {
   horizontalTransform,
   scalingFoo,
   verticalTransform,
-  leftToRight,
-  svgDraw
 } from "./module/GSAPAnim.min.js";
 import {splitText} from "./module/splitText.min.js";
 
@@ -25,8 +23,6 @@ const cardsMap = document.querySelector('.card__front-img_bg')
 const journeyCardPhone = document.querySelector('.journey-card__phone')
 const journeyCardOmi = document.querySelector('.journey-card_2 .journey-card__omi')
 const journeyCardMap = document.querySelector('.journey-card_4 .card__front-img_bg')
-const svgLine = document.querySelector('.mission__line_diagonally line');
-const missionLineHorizontal = document.querySelector('.mission__line_horizontal')
 ScrollTrigger.refresh()
 setTimeout(() => {
   ScrollTrigger.refresh()
@@ -48,5 +44,4 @@ verticalTransform(cardsMap, cardsMap, '-5%', '5%', true)
 verticalTransform(journeyCardPhone, journeyCardPhone, '5%', '-10%', true)
 verticalTransform(journeyCardOmi, journeyCardOmi, '-5%', '5%', true)
 verticalTransform(journeyCardMap, journeyCardMap, '-5%', '5%', true)
-svgDraw(svgLine, svgLine, null, '400%')
-leftToRight(missionLineHorizontal, svgLine)
+

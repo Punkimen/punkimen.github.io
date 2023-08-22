@@ -1556,7 +1556,7 @@
   }
 
   .card_2 .card__front {
-    padding-bottom: 13.2vw;
+    padding-bottom: 6.2vw;
   }
 
   .card_2 .card__front .card__front-img {
@@ -1836,77 +1836,35 @@
     font-size: 8.07vw;
   }
 
-  .hunger-progress__container {
-    padding: 0;
+  .hunger-games__city {
+    margin-top: 28.26vw;
   }
 
-  .hunger-progress__man_1 {
-    left: 3.65vw;
-    width: 2.2vw;
+  .hunger-games__cards {
+    grid-template-columns: 1fr;
+    max-width: 50vw;
+    grid-gap: 1.69vw;
   }
 
-  .hunger-progress__man_2 {
-    width: 2.56vw;
-    left: auto;
-    right: 26vw;
+  .card-token.hunger-card {
+    padding: 6.85vw 5.21vw 7.11vw 5.21vw;
   }
 
-  .hunger-progress__man_3 {
-    display: none;
+  .hunger-card__icon_1 {
+    width: 26.56vw;
   }
 
-  .hunger-progress__man_4 {
-    display: none;
+  .hunger-card__icon_2 {
+    width: 9.64vw;
   }
 
-  .hunger-progress__man_5 {
-    display: none;
+  .hunger-card__title {
+    font-size: 5.21vw;
+    margin-bottom: 2.08vw;
   }
 
-  .hunger-progress__man_6 {
-    display: none;
-  }
-
-  .hunger-progress__man_7 {
-    right: 15.65vw;
-    width: 2.2vw;
-  }
-
-  .hunger-progress__man_finish {
-    right: 3.65vw;
-    width: 2.46vw;
-  }
-
-  .hunger-progress__text {
-    font-size: 2.34vw;
-  }
-
-  .hunger-progress__text_1 {
-    max-width: 39.16vw;
-    margin-bottom: 2.6vw;
-  }
-
-  .hunger-progress__text_2 {
-    max-width: 39.16vw;
-    margin-bottom: 12.37vw;
-  }
-
-  .hunger-progress__text_3 {
-    max-width: 39.16vw;
-    margin-left: 0;
-  }
-
-  .hunger-progress__main-wrapper {
-    display: block;
-  }
-
-  .hunger-map__icon {
-    width: 6.8vw;
-    display: none;
-  }
-
-  .hunger-map__icon_mob {
-    display: block;
+  .hunger-card__text {
+    font-size: 2.08vw;
   }
 
   .be-part__content {
@@ -1973,6 +1931,10 @@
     display: none;
   }
 
+  .mission {
+    padding-bottom: 30vw;
+  }
+
   .mission__wrapper {
     display: block;
     padding-top: 11.5vw;
@@ -2012,10 +1974,6 @@
     max-width: 50vw;
     width: 100%;
     color: var(--color-gray);
-  }
-
-  .culture {
-    padding: 20vw 0 20vw;
   }
 
   .culture__title {

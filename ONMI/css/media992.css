@@ -350,20 +350,28 @@
     width: 100%;
   }
 
-  .hunger-progress__text {
-    font-size: 1.41vw;
+  .hunger-games__cards {
+    max-width: 70vw;
   }
 
-  .hunger-progress__text_1 {
-    max-width: 23.16vw;
+  .card-token.hunger-card {
+    height: auto;
   }
 
-  .hunger-progress__text_2 {
-    max-width: 23.16vw;
+  .hunger-card__icon_1 {
+    width: 14.63vw;
   }
 
-  .hunger-progress__text_3 {
-    max-width: 20.16vw;
+  .hunger-card__icon_2 {
+    width: 6.44vw;
+  }
+
+  .hunger-card__title {
+    font-size: 4.04vw;
+  }
+
+  .hunger-card__text {
+    font-size: 1.62vw;
   }
 
   .individual__title {

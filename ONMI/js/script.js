@@ -1,19 +1,18 @@
 "use strict";
 import {sliderInit} from "./module/sliderInit.min.js";
-
+import {CustomScroll} from './module/CustomScroll.min.js'
 import {setHeader} from "./module/setHeader.min.js";
 import {sectionHeightInit} from "./module/sectionHeightInit.min.js";
 import {
-  leftToRight,
-  triggerAnimate,
   scalingFoo,
   verticalTransform
 } from "./module/GSAPAnim.js";
 import {formAdaptive, cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.js";
 import {addClass, toggleClass, removeClass} from "./module/handleClassnames.min.js";
+import {scrollTrigger} from "./module/ScrollTrigger.min.js";
+
 
 let windowWidth = window.innerWidth
-
 const createScript = (id, src) => {
   const script = document.createElement('script')
   script.setAttribute('src', src)
@@ -42,6 +41,7 @@ addScripts(windowWidth);
 // const
 const logo = document.querySelector('.header__logo')
 // ------- First and massive elems
+const firstParenLine = document.querySelectorAll('.parent-line.first-load')
 const firstTextLine = document.querySelectorAll('.text-line.first-load')
 const firstOpacityElems = document.querySelectorAll('[data-effect="opacity"].first-load');
 const firstFadeOpacityElems = document.querySelectorAll('[data-effect="fade-down"].first-load');
@@ -67,16 +67,11 @@ const mobMenu = document.querySelector('.mob-menu')
 
 sectionHeightInit(windowWidth);
 gsap.registerPlugin(ScrollTrigger);
-firstTextLine.forEach(el => {
-  triggerAnimate(el, el.parentElement)
-})
-firstOpacityElems.forEach((el) => {
-  triggerAnimate(el);
-});
 
-firstFadeOpacityElems.forEach((el) => {
-  triggerAnimate(el);
-});
+scrollTrigger(firstParenLine)
+scrollTrigger(firstTextLine)
+scrollTrigger(firstOpacityElems)
+scrollTrigger(firstFadeOpacityElems)
 
 const showEl = (el, isShow) => {
   if (isShow) {
@@ -159,6 +154,7 @@ const descrReality = (windowWidth) => {
   }
 }
 const initPage = () => {
+  CustomScroll.init();
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh()
   if (windowWidth > (768)) {
@@ -186,18 +182,10 @@ const initPage = () => {
   windowWidth > (568) && scalingFoo(".pvp__title", ".pvp__descr", 1.7, 1, "top-=25% bottom", "50% center", true)
   // functions end
 
-  textLine.forEach(el => {
-    triggerAnimate(el, el.parentElement)
-  })
-  opacityElems.forEach((el) => {
-    triggerAnimate(el);
-  });
-  fadeOpacityElems.forEach((el) => {
-    triggerAnimate(el);
-  });
-  lines.forEach(el => {
-    leftToRight(el)
-  })
+  scrollTrigger(textLine)
+  scrollTrigger(opacityElems)
+  scrollTrigger(fadeOpacityElems)
+  scrollTrigger(lines)
 // // questions
   quests.forEach(el => {
     el.addEventListener('click', e => {

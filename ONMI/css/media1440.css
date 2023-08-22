@@ -33,6 +33,11 @@
     font-size: 0.69vw;
   }
 
+  .hunger-card__icon {
+    margin-bottom: 30%;
+    min-height: 4vw;
+  }
+
   .culture-event {
     padding-left: 1.94vw;
   }

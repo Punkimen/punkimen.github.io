@@ -28,7 +28,7 @@
   }
 
   .line {
-    background: rgba(255, 255, 255, 0.5);
+    background: #282828;
     height: 0.24vw;
   }
 
@@ -1518,6 +1518,16 @@
     height: 114vw;
   }
 
+  .card_3 .card__front {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .card_3 .card__front .card__front-img {
+    top: 15%;
+  }
+
   .card_3 .card__title {
     max-width: 100%;
   }
@@ -1531,7 +1541,7 @@
   }
 
   .card__front {
-    padding: 13.2vw 5vw 8.8vw 5vw;
+    padding: 13.2vw 5vw 8.8vw 5vw !important;
   }
 
   .card__title {
@@ -1607,7 +1617,7 @@
   .each-point__title {
     font-size: 8.2vw;
     line-height: 1.1em;
-    margin-bottom: 17.8vw;
+    margin-bottom: 10.8vw;
   }
 
   .each-point__route {
@@ -1775,59 +1785,29 @@
     font-size: 3.29vw;
   }
 
-  .hunger-progress__container {
-    padding: 0;
+  .hunger-games__city {
+    margin-top: 37.26vw;
   }
 
-  .hunger-progress__inner {
-    padding-bottom: 22.8vw;
+  .hunger-games__cards {
+    max-width: 100%;
   }
 
-  .hunger-progress__man_1 {
-    width: 5.9vw;
+  .hunger-card__icon_1 {
+    width: 48.57vw;
   }
 
-  .hunger-progress__man_2 {
-    right: 43vw;
-    width: 7.9vw;
+  .hunger-card__icon_2 {
+    width: 17.62vw;
   }
 
-  .hunger-progress__man_7 {
-    width: 5.9vw;
-    right: 27vw;
+  .hunger-card__title {
+    font-size: 9.52vw;
+    margin-bottom: 5.95vw;
   }
 
-  .hunger-progress__man_finish {
-    right: 6.65vw;
-    width: 6.46vw;
-  }
-
-  .hunger-progress__text {
+  .hunger-card__text {
     font-size: 3.81vw;
-    line-height: 1.375em;
-  }
-
-  .hunger-progress__text_1 {
-    max-width: 100%;
-    margin-bottom: 5.6vw;
-  }
-
-  .hunger-progress__text_2 {
-    max-width: 100%;
-    margin-bottom: 22.62vw;
-  }
-
-  .hunger-progress__text_3 {
-    max-width: 100%;
-  }
-
-  .hunger-map__icon {
-    width: 17.8vw;
-    margin: 25.02vw 0 9.34vw;
-  }
-
-  .hunger-map__icon_mob {
-    margin-bottom: 9.52vw;
   }
 
   .be-part__content {
@@ -1879,10 +1859,6 @@
     top: -9vw;
   }
 
-  .mission__line_diagonally {
-    top: 118vw;
-  }
-
   .mission__title {
     font-size: 15vw;
     margin-bottom: 8.25vw;
@@ -1904,14 +1880,14 @@
 
   .culture__title {
     font-size: 19.05vw;
-    line-height: 1.45em;
+    line-height: 1.55em;
     margin-bottom: -18vw;
   }
 
   .culture__pose {
     width: 123vw;
-    top: -58.8vw;
-    left: -20.26vw;
+    top: -75.8vw;
+    left: -10.26vw;
   }
 
   .culture__pose img {
@@ -2148,13 +2124,13 @@
   }
 
   .question-item__header {
-    padding-top: 7.2vw;
-    padding-bottom: 6.6vw;
+    padding-top: 4.2vw;
+    padding-bottom: 3.6vw;
     padding-right: 5vw;
   }
 
   .question-item__title {
-    font-size: 3.81vw;
+    font-size: 4.29vw;
   }
 
   .question-item__arrow {
@@ -2210,9 +2186,13 @@
     margin-bottom: 21.43vw;
   }
 
+  .footer__left {
+    text-align: center;
+  }
+
   .footer__logo {
     width: 23.81vw;
-    margin-bottom: 4.29vw;
+    margin: 0 auto 4.29vw;
   }
 
   .footer__labels {
