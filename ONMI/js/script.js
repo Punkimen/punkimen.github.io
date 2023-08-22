@@ -146,7 +146,7 @@ const descrReality = (windowWidth) => {
       scrollTrigger: {
         trigger: ".description-reality",
         pinned: true,
-        start: "top top-=25%",
+        start: "top top",
         end: "bottom+=10% bottom",
         onToggle: (self) => showEl(pinEl, self.isActive),
       }

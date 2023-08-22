@@ -600,7 +600,7 @@ h5.main__title {
 
 .burger.active span:first-child {
   transform: rotate(-45deg);
-  top: calc(50% - 0.2vw);
+  top: 50%;
 }
 
 .burger.active span:last-child {
@@ -2233,7 +2233,7 @@ h5.main__title {
 
 .pvp__text {
   width: 100%;
-  margin: 0 auto 15vw;
+  margin: 0 auto 25vw;
   font-weight: 500;
   font-size: 1.25vw;
   text-align: center;
@@ -2458,10 +2458,9 @@ h5.main__title {
 .hunger-games__title {
   text-align: center;
   width: 100%;
-  text-transform: capitalize;
-  line-height: 0.8em;
+  line-height: 1.6em;
   letter-spacing: -0.03em;
-  font-size: 10.31vw;
+  font-size: 6.25vw;
 }
 
 .hunger-games__title_small {
@@ -2472,8 +2471,8 @@ h5.main__title {
 
 .hunger-games__pose {
   position: absolute;
-  top: -10vw;
-  left: 45vw;
+  top: -22vw;
+  left: 42vw;
   width: 15.05vw;
 }
 
@@ -2485,7 +2484,7 @@ h5.main__title {
 
 .hunger-games__city {
   width: 100%;
-  margin: 15.26vw auto -9.64vw;
+  margin: -15.74vw auto -9.64vw;
   position: relative;
 }
 
