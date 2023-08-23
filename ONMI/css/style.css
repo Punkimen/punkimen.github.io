@@ -1764,7 +1764,7 @@ h5.main__title {
   width: 100%;
   overflow: hidden;
   text-align: center;
-  padding: 4.2vw 3.2vw 3vw 3.6vw;
+  padding: 4vw 3.2vw 3vw 3.6vw;
 }
 
 .journey-card:not(:last-child) {
@@ -1810,7 +1810,7 @@ h5.main__title {
 
 .journey-card_2 .journey-card__omi {
   position: absolute;
-  bottom: -11%;
+  bottom: -15%;
   left: 0vw;
   width: 25.5vw;
 }

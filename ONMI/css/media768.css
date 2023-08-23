@@ -1847,7 +1847,7 @@
   }
 
   .hunger-games__city {
-    margin-top: -41.74vw;
+    margin-top: -41.74vw !important;
   }
 
   .hunger-games__cards {

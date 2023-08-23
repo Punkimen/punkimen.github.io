@@ -1758,11 +1758,8 @@
   }
 
   .hunger-games__title {
-    font-size: 28.48vw;
-  }
-
-  .hunger-games__title_small {
-    font-size: 14.76vw;
+    font-size: 14.29vw;
+    letter-spacing: -0.03em;
   }
 
   .hunger-games__pose {
