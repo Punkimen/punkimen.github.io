@@ -280,6 +280,7 @@ const initPage = () => {
     slider_2.controller.control = slider_1;
     slider_2.on("slideChange", function () {
       const phoneHand = document.querySelector('.adventure__phone-hand');
+      const phone = document.querySelector('.adventure__phone-phone');
       sliderPrety(slider_2);
       if (slider_2.slides.length - 1 === slider_2.activeIndex) {
         phoneHand.classList.add('show')

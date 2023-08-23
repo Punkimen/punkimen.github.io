@@ -1043,6 +1043,10 @@ h5.main__title {
   z-index: 2;
 }
 
+.adventure__phone-phone.hide {
+  opacity: 0;
+}
+
 .adventure__phone-hand {
   width: 31.77vw;
   display: block;
@@ -1140,13 +1144,11 @@ h5.main__title {
 }
 
 .cards-slider__phone video {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  width: 97%;
+  width: 100%;
   top: 0;
   height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .cards-slider__block {
@@ -1810,7 +1812,7 @@ h5.main__title {
   position: absolute;
   bottom: -15%;
   left: 0vw;
-  width: 25.5vw;
+  width: 100%;
 }
 
 .journey-card_2 .journey-card__omi img {
@@ -3531,6 +3533,15 @@ h5.main__title {
   color: #424242;
   margin-bottom: 2.92vw;
   line-height: 1.5em;
+}
+
+.footer__text a {
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer__text a:hover {
+  color: #fff;
 }
 
 .footer__copy {

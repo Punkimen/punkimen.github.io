@@ -1300,7 +1300,7 @@
 
   .hero__mobile-btn {
     font-size: 3.33vw;
-    padding: 4.6vw 7.91vw;
+    padding: 5.2vw 7.91vw;
   }
 
   .reality__text_small {
@@ -1502,7 +1502,7 @@
   }
 
   .card_2 {
-    height: 119vw;
+    height: 123.81vw;
   }
 
   .card_2 .card__text {
@@ -1515,7 +1515,7 @@
   }
 
   .card_3 {
-    height: 114vw;
+    height: 123.81vw;
   }
 
   .card_3 .card__front .card__front-img {
@@ -1536,6 +1536,10 @@
 
   .card__front {
     padding: 13.2vw 5vw 8.8vw 5vw !important;
+  }
+
+  .card__front_bottom {
+    padding-bottom: 12vw !important;
   }
 
   .card__title {
@@ -1624,12 +1628,6 @@
     margin-bottom: -7vw;
   }
 
-  .each-point__list {
-    padding: 11.43vw 9.52vw;
-    border: 0.24vw solid #303030;
-    border-radius: 7.14vw;
-  }
-
   .each-point__elem {
     padding-left: 7vw;
     font-size: 4.5vw;
@@ -1642,7 +1640,7 @@
   }
 
   .each-point__elem:not(:last-child) {
-    margin-bottom: 10vw;
+    margin-bottom: 7vw;
   }
 
   .sound {
@@ -1990,6 +1988,11 @@
 
   .cards-token__wrapper {
     max-width: 100%;
+  }
+
+  .card-token {
+    border-radius: 5.9vw;
+    padding: 11.9vw 9.52vw 27.05vw;
   }
 
   .card-token.hunger-card {

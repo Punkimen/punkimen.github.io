@@ -249,6 +249,10 @@
     height: 50vw;
   }
 
+  .journey-card_2 .journey-card__omi {
+    bottom: -30%;
+  }
+
   .journey-card_3 {
     height: 50vw;
     padding-bottom: 2vw;
@@ -507,7 +511,7 @@
   }
 
   .security {
-    margin: -100vh 0 calc(-100vh + 90vw);
+    margin: -100vh 0 20vw;
   }
 
   .security__title {

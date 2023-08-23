@@ -1571,6 +1571,10 @@
     height: 62vw;
   }
 
+  .card_3 .card__front {
+    padding-bottom: 6.2vw;
+  }
+
   .card_3 .card__front .card__front-img {
     left: 50%;
     transform: translateX(-50%);
@@ -1675,7 +1679,7 @@
 
   .journey-card_2 .journey-card__omi {
     width: 100%;
-    bottom: -13%;
+    bottom: -28%;
   }
 
   .journey-card_3 {
@@ -1729,9 +1733,6 @@
 
   .each-point__list {
     display: block;
-    border: 0.13vw solid #303030;
-    border-radius: 3.91vw;
-    padding: 6.25vw 5.21vw;
   }
 
   .sound {
