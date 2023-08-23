@@ -127,7 +127,7 @@ const hoverAppleBtn = () => {
 
 
 // initPage end
-verticalTransform(heroPose, heroPose, '-15%', '0%', true, 'bottom center+=25%', "bottom top")
+verticalTransform(heroPose, heroPose, '-15%', '0%', true, 'bottom center+=35%', "bottom top")
 const descrReality = (windowWidth) => {
   if (windowWidth > (768)) {
     gsap.to(".description-reality", {
@@ -157,20 +157,20 @@ const initPage = () => {
   CustomScroll.init();
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh()
-  if (windowWidth > (768)) {
-    gsap.to(securityBlock, {
-      // yPercent: -100,
-      ease: 'SineInOut',
-      // stagger: 0.5,
-      scrollTrigger: {
-        trigger: '.cards-token',
-        start: "center+=25% center",
-        end: `+=200%`,
-        scrub: true,
-        pin: true
-      }
-    });
-  }
+  /*  if (windowWidth > (768)) {
+      gsap.to(securityBlock, {
+        // yPercent: -100,
+        ease: 'SineInOut',
+        // stagger: 0.5,
+        scrollTrigger: {
+          trigger: '.cards-token',
+          start: "center+=25% center",
+          end: `+=200%`,
+          scrub: true,
+          pin: true
+        }
+      });
+    }*/
   logo.addEventListener('click', e => {
     e.preventDefault();
     window.scrollTo({top: 0, behavior: 'smooth'});

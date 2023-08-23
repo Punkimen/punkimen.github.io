@@ -1936,6 +1936,10 @@
     font-size: 4.29vw;
   }
 
+  .token {
+    padding: 35vw 0px 25vw;
+  }
+
   .token__circle {
     width: 154.76vw;
     height: 154.76vw;
