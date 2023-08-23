@@ -2158,6 +2158,14 @@
     max-width: 8.2vw;
   }
 
+  .card-token_5 .card-token__icon {
+    max-width: 8.33vw;
+  }
+
+  .card-token_6 .card-token__icon {
+    max-width: 5.6vw;
+  }
+
   .tokenomics__title {
     font-size: 7.81vw;
     margin-bottom: 7.81vw;

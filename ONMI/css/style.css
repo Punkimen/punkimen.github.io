@@ -3063,6 +3063,12 @@ h5.main__title {
   margin-bottom: 1.67vw;
 }
 
+.card-token__icon img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .card-token__content {
   min-height: 16.67vw;
   height: 63%;
@@ -3092,12 +3098,6 @@ h5.main__title {
   max-width: 2.66vw;
 }
 
-.card-token_1 .card-token__icon img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .card-token_1 .card-token__text {
   max-width: 18.75vw;
 }
@@ -3106,30 +3106,20 @@ h5.main__title {
   max-width: 9.32vw;
 }
 
-.card-token_2 .card-token__icon img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .card-token_3 .card-token__icon {
   max-width: 2.5vw;
-}
-
-.card-token_3 .card-token__icon img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .card-token_4 .card-token__icon {
   max-width: 3.13vw;
 }
 
-.card-token_4 .card-token__icon img {
-  display: block;
-  width: 100%;
-  height: auto;
+.card-token_5 .card-token__icon {
+  max-width: 3.33vw;
+}
+
+.card-token_6 .card-token__icon {
+  max-width: 2.24vw;
 }
 
 .tokenomics {
@@ -3250,7 +3240,6 @@ h5.main__title {
 
 .security {
   background: #BABABA;
-  border-radius: 2.08vw;
   color: #000;
   padding: 4.95vw 0 16.9vw;
   position: relative;

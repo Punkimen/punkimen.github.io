@@ -2024,6 +2024,14 @@
     max-width: 15vw;
   }
 
+  .card-token_5 .card-token__icon {
+    max-width: 15.24vw;
+  }
+
+  .card-token_6 .card-token__icon {
+    max-width: 10.24vw;
+  }
+
   .tokenomics {
     padding-bottom: 20vw;
     padding-top: 40vw;
@@ -2075,7 +2083,6 @@
   }
 
   .security {
-    border-radius: 7.14vw;
     padding: 8.95vw 0 20.9vw;
     margin-bottom: 35vw;
   }

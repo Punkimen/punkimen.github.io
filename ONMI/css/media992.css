@@ -482,6 +482,30 @@
     max-width: 28vw;
   }
 
+  .card-token_1 .card-token__icon {
+    max-width: 4.66vw;
+  }
+
+  .card-token_2 .card-token__icon {
+    max-width: 11.32vw;
+  }
+
+  .card-token_3 .card-token__icon {
+    max-width: 4.5vw;
+  }
+
+  .card-token_4 .card-token__icon {
+    max-width: 5.13vw;
+  }
+
+  .card-token_5 .card-token__icon {
+    max-width: 5.33vw;
+  }
+
+  .card-token_6 .card-token__icon {
+    max-width: 4.24vw;
+  }
+
   .roadmap-item {
     font-size: 1.2vw;
   }
