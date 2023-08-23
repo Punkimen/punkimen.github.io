@@ -163,9 +163,9 @@ const initPage = () => {
       ease: 'SineInOut',
       // stagger: 0.5,
       scrollTrigger: {
-        trigger: '.tokenomics__inner',
-        start: "center+=25% center",
-        end: `+=100%`,
+        trigger: '.cards-token',
+        start: "center+=20% center",
+        end: `+=200%`,
         scrub: true,
         pin: true
       }

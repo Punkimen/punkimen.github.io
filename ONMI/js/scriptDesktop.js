@@ -35,7 +35,7 @@ readedText.forEach(el => {
 })
 horizontalTransform(OMICircle1, OMICircles, '100%', '33%')
 horizontalTransform(OMICircle3, OMICircles, '-100%', '-43%')
-horizontalTransform(cardsNft, cardsNft, "-3%", "3%")
+horizontalTransform(cardsNft, cardsNft, "-5%", "5%", true, null, 'top+=50% bottom', 'bottom top-=50%')
 horizontalTransform(phone_1, phoneScreens, '17.5vw', '0', true, null, 'top bottom', 'top+=25% center')
 horizontalTransform(phone_3, phoneScreens, '-17.5vw', "0", true, null, 'top bottom', 'top+=25% center')
 scalingFoo(cardsAura, cardsAura, 1, 2, "top bottom+=25%", "center top", true)

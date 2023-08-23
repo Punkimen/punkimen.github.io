@@ -190,8 +190,8 @@
     max-width: 60%;
   }
 
-  .card_2 .card__front {
-    padding-bottom: 4.8vw;
+  .card__front_bottom {
+    padding-bottom: 4vw;
   }
 
   .card_3 {
@@ -204,10 +204,6 @@
 
   .card_3 .card__front .card__front-img {
     width: 150%;
-  }
-
-  .card_3 .card__title {
-    max-width: 50%;
   }
 
   .card_3 .card__text {

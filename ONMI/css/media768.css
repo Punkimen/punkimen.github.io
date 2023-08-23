@@ -1594,7 +1594,7 @@
   }
 
   .find__descr {
-    margin-bottom: 8.46vw;
+    margin-bottom: 16.46vw;
     width: 100%;
   }
 
@@ -1617,7 +1617,7 @@
   .find-map__phone {
     width: 27.34vw;
     top: 0;
-    transform: translateY(-25%);
+    transform: translateY(-60%);
   }
 
   .find-map__pointer {
