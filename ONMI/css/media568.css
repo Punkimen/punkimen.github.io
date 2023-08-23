@@ -1539,7 +1539,7 @@
   }
 
   .card__title {
-    font-size: 6.3vw;
+    font-size: 6.1vw;
     margin-bottom: 3.2vw;
   }
 
@@ -1609,9 +1609,10 @@
   }
 
   .each-point__title {
-    font-size: 8.1vw;
+    font-size: 8vw;
     line-height: 1.1em;
     margin-bottom: 10.8vw;
+    white-space: nowrap;
   }
 
   .each-point__route {
@@ -1645,7 +1646,12 @@
   }
 
   .sound {
+    padding-top: 25vw;
     margin-bottom: 31vw;
+  }
+
+  .sound__decor {
+    width: 130%;
   }
 
   .sound__anim {
@@ -1842,7 +1848,7 @@
   }
 
   .mission {
-    margin-bottom: 52vw;
+    margin-bottom: 80vw;
   }
 
   .mission__line {
@@ -1978,11 +1984,15 @@
     height: 83%;
   }
 
+  .cards-token {
+    padding-bottom: 40vw;
+  }
+
   .cards-token__wrapper {
     max-width: 100%;
   }
 
-  .card-token {
+  .card-token.hunger-card {
     border-radius: 5.9vw;
     padding: 11.9vw 9.52vw 27.05vw;
   }
@@ -2113,8 +2123,13 @@
 
   .security__text_big {
     max-width: 100%;
-    font-size: 3.81vw;
+    font-size: 5.95vw;
     line-height: 1.375em;
+    color: rgba(255, 255, 255, 0.58);
+  }
+
+  .security__text_big p:not(:last-child) {
+    margin-bottom: 10.13vw;
   }
 
   .question-item {

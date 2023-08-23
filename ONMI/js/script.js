@@ -164,7 +164,7 @@ const initPage = () => {
       // stagger: 0.5,
       scrollTrigger: {
         trigger: '.cards-token',
-        start: "center+=20% center",
+        start: "center+=25% center",
         end: `+=200%`,
         scrub: true,
         pin: true
