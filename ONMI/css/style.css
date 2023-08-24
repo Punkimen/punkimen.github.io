@@ -3596,6 +3596,7 @@ h5.main__title {
   opacity: 0;
   pointer-events: none;
   transition: opacity ease-in 0.3s;
+  display: none;
 }
 
 .modal.show {
