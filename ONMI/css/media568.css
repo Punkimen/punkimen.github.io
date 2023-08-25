@@ -2168,7 +2168,7 @@
     padding-bottom: 12.6vw;
   }
 
-  .question-item.open .question-item__text p:not(:last-child) {
+  .question-item__text p:not(:last-child) {
     margin-bottom: 3.71vw;
   }
 
