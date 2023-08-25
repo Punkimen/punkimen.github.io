@@ -1841,6 +1841,7 @@
 
   .hunger-games__title {
     font-size: 11.2vw;
+    margin-bottom: -16.5vw;
   }
 
   .hunger-games__title_small {
@@ -1848,7 +1849,7 @@
   }
 
   .hunger-games__city {
-    margin-top: -41.74vw !important;
+    margin-top: -20.74vw;
   }
 
   .hunger-games__cards {

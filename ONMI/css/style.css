@@ -1825,7 +1825,7 @@ h5.main__title {
   height: 40vw;
   background-size: 101%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
 }
 
 .journey-card_3 .journey-card__content {
@@ -2461,6 +2461,7 @@ h5.main__title {
   line-height: 1.6em;
   letter-spacing: -0.03em;
   font-size: 6.25vw;
+  margin-bottom: -4.5vw;
 }
 
 .hunger-games__title_small {
@@ -2484,7 +2485,7 @@ h5.main__title {
 
 .hunger-games__city {
   width: 100%;
-  margin: -15.74vw auto -9.64vw;
+  margin: -4.74vw auto -9.64vw;
   position: relative;
 }
 
