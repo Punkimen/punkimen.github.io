@@ -3321,7 +3321,7 @@ h5.main__title {
   font-weight: 500;
   line-height: 1.8em;
   opacity: 0;
-  max-width: 51.88vw;
+  max-width: 52.5vw;
   width: 100%;
   transition: all ease 0.5s;
   letter-spacing: 0.04em;
@@ -3331,6 +3331,13 @@ h5.main__title {
 .question-item__text p:not(:last-child),
 .question-item__text ul:not(:last-child) {
   margin-bottom: 1.25vw;
+}
+
+.question-item__text ul,
+.question-item__text li {
+  list-style: disc;
+  list-style-type: disc;
+  list-style-position: inside;
 }
 
 .question-item.open .question-item__body {
@@ -3345,13 +3352,6 @@ h5.main__title {
 
 .question-item.open .question-item__text {
   opacity: 1;
-}
-
-.question-item.open .question-item__text ul,
-.question-item.open .question-item__text li {
-  list-style: disc;
-  list-style-type: disc;
-  list-style-position: inside;
 }
 
 .platform {
