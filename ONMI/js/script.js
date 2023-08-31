@@ -58,7 +58,7 @@ const lines = document.querySelectorAll(".line");
 const securityBlock = document.querySelector('.security');
 const pvpPose1 = document.querySelector('.pvp-pose_1')
 const pvpPose2 = document.querySelector('.pvp-pose_2')
-const heroPose = document.querySelector('.hero__pose')
+
 const video1 = document.querySelector('#video_phone')
 const openElems = document.querySelectorAll('[data-open]')
 const closeElems = document.querySelectorAll('.modal__close')
@@ -127,7 +127,6 @@ const hoverAppleBtn = () => {
 
 
 // initPage end
-verticalTransform(heroPose, heroPose, '-15%', '0%', true, 'bottom center+=35%', "bottom top")
 const descrReality = (windowWidth) => {
     if (windowWidth > (768)) {
         gsap.to(".description-reality", {
