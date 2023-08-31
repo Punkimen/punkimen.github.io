@@ -1579,7 +1579,6 @@ h5.main__title {
 }
 
 .card_3 .card__title {
-  margin: 0 auto 1.5vw;
   position: relative;
   z-index: 2;
 }
@@ -2751,7 +2750,6 @@ h5.main__title {
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 1.46vw;
 }
 
 .mission__text {
