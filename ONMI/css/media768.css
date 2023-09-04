@@ -2409,6 +2409,10 @@
     margin-bottom: 1.3vw;
   }
 
+  .field {
+    border: 0.13vw solid rgba(151, 151, 151, 0.18);
+  }
+
   .form__text {
     margin-bottom: 7.16vw;
   }

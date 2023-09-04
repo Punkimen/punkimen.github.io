@@ -619,6 +619,7 @@
   .field {
     padding: 2.42vw 2.62vw;
     font-size: 1.81vw;
+    border: 0.1vw solid rgba(151, 151, 151, 0.18);
   }
 
   .select__arrow {

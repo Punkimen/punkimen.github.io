@@ -461,6 +461,7 @@ h5.main__title {
   font-family: "Manrope", sans-serif;
   font-weight: bold;
   color: #fff;
+  outline: none;
 }
 
 .field::-moz-placeholder {
@@ -475,6 +476,10 @@ h5.main__title {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+}
+
+.field:focus {
+  border-color: #fff;
 }
 
 .field:focus::-moz-placeholder {

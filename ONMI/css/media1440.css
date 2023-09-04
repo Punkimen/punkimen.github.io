@@ -53,4 +53,8 @@
   .modal__close {
     right: 1.94vw;
   }
+
+  .field {
+    border: 0.07vw solid rgba(151, 151, 151, 0.18);
+  }
 }

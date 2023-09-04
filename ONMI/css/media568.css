@@ -2310,6 +2310,7 @@
     font-size: 4.29vw;
     min-height: 15.71vw;
     font-weight: 500;
+    border: 0.24vw solid rgba(151, 151, 151, 0.18);
   }
 
   .select__arrow {
