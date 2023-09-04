@@ -769,6 +769,7 @@ h5.main__title {
   top: -6.86vw;
   left: 27.71vw;
   transform: translateY(-15%);
+  opacity: 0;
 }
 
 .hero__pose img {
@@ -3141,10 +3142,30 @@ h5.main__title {
   width: calc(100% + 2.56vw);
 }
 
+.roadmap__content {
+  overflow: hidden;
+  transition: max-height linear 0.3s;
+}
+
+.roadmap__content.show {
+  max-height: 1000vh !important;
+}
+
+.roadmap__btn {
+  margin: 0 auto;
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+}
+
+.roadmap__btn:hover {
+  background-color: #b9b9b9;
+}
+
 .roadmap-item {
   padding-top: 2.34vw;
   position: relative;
-  padding-bottom: 8.44vw;
+  padding-bottom: 5.3vw;
   font-size: 0.94vw;
 }
 
@@ -3160,24 +3181,16 @@ h5.main__title {
   font-size: 1.41vw;
 }
 
-.roadmap-item__col-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  -moz-column-gap: 2.08vw;
-  column-gap: 2.08vw;
-}
-
 .roadmap-item__time {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.46vw;
   overflow: hidden;
-  color: #3D3D3D;
 }
 
 .roadmap-item__descr {
   line-height: 1.5em;
-  max-width: 20.57vw;
+  max-width: 35.94vw;
   width: 100%;
 }
 

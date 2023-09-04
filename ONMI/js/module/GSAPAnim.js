@@ -142,10 +142,11 @@ export const verticalTransform = (el, trigger, startVal, endValue, scrub = true,
       trigger: trigger || el,
       start: starAnim || "top bottom",
       end: endAnim || "bottom top",
-      scrub: scrub
+      scrub: scrub,
     }
   })
 }
+
 export const readText = (el, trigger) => {
   gsap.to(el, {
     duration: 2,
