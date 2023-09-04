@@ -452,6 +452,139 @@ h5.main__title {
   opacity: 1;
 }
 
+.field {
+  border: 0.05vw solid rgba(151, 151, 151, 0.18);
+  background: #000;
+  border-radius: 0.94vw;
+  padding: 1.04vw 1.67vw 1.04vw 1.67vw;
+  font-size: 0.94vw;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  color: #fff;
+}
+
+.field::-moz-placeholder {
+  color: #585858;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.field::placeholder {
+  color: #585858;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.field:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.field:focus::placeholder {
+  color: transparent;
+}
+
+.select {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+}
+
+.select.show .select__header {
+  border-color: #fff;
+}
+
+.select.show .select__arrow {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.select.show .select__body {
+  max-height: 200px;
+  border-color: rgba(151, 151, 151, 0.18);
+}
+
+.select.selected .select__value {
+  color: #fff;
+}
+
+.select__header {
+  cursor: pointer;
+  position: relative;
+  color: #585858;
+  padding-right: 2.6vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.select__value {
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.select__arrow {
+  position: absolute;
+  top: 50%;
+  right: 0.78vw;
+  transform: translateY(-50%) rotate(90deg);
+  width: 0.57vw;
+  transition: transform ease-out 0.2s;
+}
+
+.select__arrow svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: #464646;
+}
+
+.select__body {
+  max-height: 0;
+  border-radius: 0.94vw;
+  overflow: hidden;
+  background: #000;
+  z-index: 5;
+  position: absolute;
+  top: calc(100% + 0.26vw);
+  left: 0;
+  width: 100%;
+  min-width: 10.42vw;
+  border: 0.05vw solid transparent;
+  transition: max-height ease-out 0.2s;
+}
+
+.select__list {
+  overflow: auto;
+  max-height: 200px;
+  height: 100%;
+}
+
+.select__elem {
+  position: relative;
+  padding: 0.83vw 0.63vw 0.83vw 0.63vw;
+  transition: background-color ease-out 0.2s;
+}
+
+.select__elem:hover {
+  background: #1e1e1e;
+}
+
+.select__elem:not(:last-child) {
+  border-bottom: 1px solid rgba(151, 151, 151, 0.18);
+}
+
+.select__checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -3700,15 +3833,19 @@ h5.main__title {
 }
 
 .form__label {
-  margin-bottom: 6.6vw;
+  margin-bottom: 3.39vw;
   letter-spacing: -0.04em;
   overflow: hidden;
-  max-width: 83%;
   transform: translate3d(0, 2.08vw, 0) rotate(0.001deg);
   display: block;
   opacity: 0;
   transition: transform 1.2s cubic-bezier(0.15, 0.85, 0.45, 1), opacity 1.1s cubic-bezier(0.32, 0.94, 0.6, 1);
-  font-size: 1.3vw;
+  font-size: 2.6vw;
+}
+
+.form__fields {
+  display: flex;
+  margin-bottom: 1.56vw;
 }
 
 .form__field {
@@ -3717,50 +3854,25 @@ h5.main__title {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding-bottom: 0.57vw;
-  margin-bottom: 1.67vw;
   transition-delay: 0.3s;
   transition-property: opacity;
   transition-duration: 0.6s;
   transition-timing-function: cubic-bezier(0.16, 0.01, 0.77, 1);
-}
-
-.form__field .line {
-  bottom: -0.1vw;
-}
-
-.form__input {
-  font-family: inherit;
-  font-size: 2.34vw;
-  background: none;
-  border: none;
-  outline: none;
-  color: #fff;
+  flex-grow: 1;
   width: 100%;
 }
 
-.form__input::-moz-placeholder {
-  color: #3B3B3B;
+.form__field > * {
+  display: block;
+  width: 100%;
 }
 
-.form__input::placeholder {
-  color: #3B3B3B;
+.form__field:not(:last-child) {
+  margin-right: 0.31vw;
 }
 
-.form__input:hover ~ .form__field {
-  background: #fff;
-}
-
-.form__input:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.form__input:focus::placeholder {
-  color: transparent;
-}
-
-.form__input:focus ~ .line {
-  background: #fff;
+.form__field_select {
+  max-width: 13.54vw;
 }
 
 .form__btn {
@@ -3779,6 +3891,7 @@ h5.main__title {
   font-size: 0.83vw;
   padding: 0.47vw 1.88vw 0.47vw 1.88vw;
   min-width: auto;
+  font-weight: bold;
 }
 
 .form__btn:hover {

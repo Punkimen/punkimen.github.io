@@ -2157,11 +2157,6 @@
               <use xlink:href="./img/icons/icons.svg#medium"></use>
             </svg>
           </a>
-         <!-- <a href="" target="_blank" class="footer__socials-link">
-            <svg width="29" height="34" class="discord">
-              <use xlink:href="./img/icons/icons.svg#discord"></use>
-            </svg>
-          </a>-->
         </div>
         <div class="footer__btns">
           <button type="button" data-open="#modal" class="footer__btn app-btn">
@@ -2201,14 +2196,46 @@
     <div class="modal__content">
       <form id="be-part__form" action="" class="modal__form form">
         <div class="form__label">
-          Enter your email address to get on the whitelist and receive an invitation to the <span class="color_green">first stage of testing for 10,000 users.</span>
+          <span class="color_green">Early Access</span> for the first 10.000 users
         </div>
-        <div class="form__field">
-          <input type="text" name="email" autocomplete="off" placeholder="Email" class="form__input">
-          <div class="line line__bottom"></div>
-          <button class="form__btn btn">I’m in</button>
+        <div class="form__fields">
+          <div class="form__field">
+            <input type="text" name="email" autocomplete="off" placeholder="Email" class="form__input field">
+          </div>
+          <div class="form__field form__field_select">
+            <div id="country" class="select">
+              <div class="select__header field">
+                <div class="select__value">
+                  Country
+                </div>
+                <div class="select__arrow">
+                  <svg width="29" height="34" class="arrow_link">
+                    <use xlink:href="./img/icons/icons.svg#arrow_link"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="select__body">
+                <ul class="select__list">
+                  <!--  <li class="select__elem">
+                      <input class="select__checkbox" name="country" value="France" type="radio">
+                      <div class="select__option">
+                        option 1
+                      </div>
+                    </li>
+                    <li class="select__elem">
+                      <input class="select__checkbox" name="country" value="Germany" type="radio">
+                      <div class="select__option">
+                        option 1
+                      </div>
+                    </li>-->
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="form__text text-mob">Available this autumn</div>
+          <button class="form__btn btn">Sign up</button>
         </div>
-        <div class="form__text">We'll send you a confirmation and verification email soon.</div>
+        <div class="form__text text-desktop">Email Country Sign Up</div>
       </form>
     </div>
     <div class="modal__info">
@@ -2225,6 +2252,17 @@
     </div>
   </div>
 </div>
+<div id="modal_success" class="modal">
+  <div class="modal__container container">
+    <div class="modal__content">
+    </div>
+  </div>
+  <div class="modal__close">
+    <div class="modal__burger burger active" data-effect="opacity" data-delay="0.2"><span></span><span></span>
+    </div>
+  </div>
+</div>
+<!-- gS9blfQayyTuKHunSkQbOlEzeNQbrtU3PLRcPMTg -->
 
 </div>
 

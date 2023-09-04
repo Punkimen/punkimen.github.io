@@ -87,7 +87,7 @@ export const journeyCardsAdaptive = (windowWidth) => {
   }
 }
 
-export const formAdaptive = (windowWidth) => {
+/*export const formAdaptive = (windowWidth) => {
   const form = document.querySelector('#be-part__form')
   const formField = form.querySelector('.form__field')
   const formBtn = form.querySelector('.form__btn')
@@ -100,4 +100,4 @@ export const formAdaptive = (windowWidth) => {
     formField.append(formBtn)
   }
 
-}
+}*/

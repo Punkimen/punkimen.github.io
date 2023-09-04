@@ -1,16 +1,17 @@
 "use strict";
 import {sliderInit} from "./module/sliderInit.min.js";
-import {CustomScroll} from './module/CustomScroll.min.js'
+// import {CustomScroll} from './module/CustomScroll.min.js'
 import {setHeader} from "./module/setHeader.min.js";
 import {sectionHeightInit} from "./module/sectionHeightInit.min.js";
 import {
   scalingFoo,
   verticalTransform
 } from "./module/GSAPAnim.js";
-import {formAdaptive, cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.js";
+import {cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.js";
 import {addClass, toggleClass, removeClass} from "./module/handleClassnames.min.js";
 import {scrollTrigger} from "./module/ScrollTrigger.min.js";
 import {seeMore} from "./module/seeMore.js";
+import {selectInit} from "./module/select.js";
 
 
 let windowWidth = window.innerWidth
@@ -158,34 +159,22 @@ const descrReality = (windowWidth) => {
   }
 }
 verticalTransform(heroPose, heroPose, '-15%', '0%', true, 'top center+=35%', "bottom top")
-heroPose.style.opacity = 1
+
 const initPage = () => {
+  heroPose.style.opacity = 1
   seeMore()
+  selectInit()
   modal.style.display = 'block';
-  CustomScroll.init();
+  // CustomScroll.init();
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh()
 
-  roadmapBtn.addEventListener('click', e => {
+  roadmapBtn && roadmapBtn.addEventListener('click', e => {
     toggleClass(roadmapContent, 'show')
     ScrollTrigger.refresh()
-    roadmapContent.classList.contains('show') ? roadmapBtn.textContent = 'Hide more' : roadmapBtn.textContent = 'See more'
+    roadmapContent.remove()
   })
 
-  /*  if (windowWidth > (768)) {
-      gsap.to(securityBlock, {
-        // yPercent: -100,
-        ease: 'SineInOut',
-        // stagger: 0.5,
-        scrollTrigger: {
-          trigger: '.cards-token',
-          start: "center+=25% center",
-          end: `+=200%`,
-          scrub: true,
-          pin: true
-        }
-      });
-    }*/
   logo.addEventListener('click', e => {
     e.preventDefault();
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -211,7 +200,6 @@ const initPage = () => {
       }
     })
   })
-  formAdaptive(windowWidth)
   Marquee3k && Marquee3k.init()
   Marquee3k.pauseAll();
 
@@ -333,7 +321,6 @@ window.addEventListener('resize', () => {
   descrReality(windowWidth)
   addScripts(windowWidth)
   windowWidth = window.innerWidth
-  formAdaptive(windowWidth)
   sectionHeightInit(windowWidth);
   cardsAdaptive(windowWidth)
   journeyCardsAdaptive(windowWidth)
