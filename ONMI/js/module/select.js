@@ -1,6 +1,6 @@
 import {addClass, removeClass, toggleClass} from "./handleClassnames.js";
 
-const getCountries = async () => {
+export const getCountries = async () => {
   const response = await fetch('https://countryapi.io/api/region/europe?apikey=gS9blfQayyTuKHunSkQbOlEzeNQbrtU3PLRcPMTg')
   const data = await response.json()
   return await data
@@ -15,19 +15,22 @@ const createOption = (el, parent) => {
   `
   parent.appendChild(elem)
 }
-export const createCountrySelect = async () => {
+export const createCountrySelect = (countries) => {
   const select = document.querySelector('#country')
   const list = select.querySelector('.select__list')
-  const countries = Object.values(await getCountries()).map(el => el.name).sort()
-  countries.sort().forEach(el => {
+  list.innerHTML = '';
+  countries.forEach(el => {
     createOption(el, list)
   })
-
 }
 
-export const selectInit = () => {
-  createCountrySelect();
+
+export const selectInit = async () => {
+  const search = document.querySelector('#country-search')
+  const countries = Object.values(await getCountries()).map(el => el.name).sort()
+  createCountrySelect(countries);
   const selects = document.querySelectorAll('.select');
+
   selects.forEach(el => {
     el.addEventListener('click', e => {
       if (e.target.closest('.select__header')) {
@@ -39,6 +42,8 @@ export const selectInit = () => {
         addClass(el, 'selected');
         el.querySelector('.select__value').textContent = e.target.value
         removeClass(el, 'show');
+        createCountrySelect(countries);
+        search.value = ''
       }
     })
   })

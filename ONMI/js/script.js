@@ -11,7 +11,7 @@ import {cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.j
 import {addClass, toggleClass, removeClass} from "./module/handleClassnames.min.js";
 import {scrollTrigger} from "./module/ScrollTrigger.min.js";
 import {seeMore} from "./module/seeMore.js";
-import {selectInit} from "./module/select.js";
+import {createCountrySelect, selectInit, getCountries} from "./module/select.js";
 
 
 let windowWidth = window.innerWidth
@@ -70,6 +70,7 @@ const mobMenu = document.querySelector('.mob-menu')
 const modal = document.querySelector('.modal')
 const roadmapBtn = document.querySelector('.roadmap__btn')
 const roadmapContent = document.querySelector('.roadmap__content')
+const search = document.querySelector('#country-search')
 
 sectionHeightInit(windowWidth);
 gsap.registerPlugin(ScrollTrigger);
@@ -172,7 +173,7 @@ const initPage = () => {
   roadmapBtn && roadmapBtn.addEventListener('click', e => {
     toggleClass(roadmapContent, 'show')
     ScrollTrigger.refresh()
-    roadmapContent.remove()
+    roadmapBtn.remove()
   })
 
   logo.addEventListener('click', e => {
@@ -313,6 +314,12 @@ const initPage = () => {
 
   cardsAdaptive(windowWidth)
   journeyCardsAdaptive(windowWidth)
+
+  search.addEventListener('input', async (e) => {
+    const countries = Object.values(await getCountries()).map(el => el.name)
+    const filterCountries = countries.filter(country => country.toLowerCase().includes(e.target.value.toLowerCase()))
+    createCountrySelect(filterCountries.sort())
+  })
 }
 document.addEventListener('DOMContentLoaded', () => {
   initPage();
@@ -324,6 +331,7 @@ window.addEventListener('resize', () => {
   sectionHeightInit(windowWidth);
   cardsAdaptive(windowWidth)
   journeyCardsAdaptive(windowWidth)
+  seeMore()
 })
 let lastScrollTop = 0;
 window.addEventListener(

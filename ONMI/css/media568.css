@@ -2099,6 +2099,12 @@
     max-width: 100%;
   }
 
+  .roadmap__btn {
+    font-size: 3.33vw;
+    padding: 5.2vw 7.91vw;
+    border-radius: 9.52vw;
+  }
+
   .security {
     padding: 8.95vw 0 20.9vw;
     margin-bottom: 35vw;
@@ -2311,6 +2317,10 @@
     min-height: 15.71vw;
     font-weight: 500;
     border: 0.24vw solid rgba(151, 151, 151, 0.18);
+  }
+
+  .select__body-search {
+    padding: 2.38vw 2.38vw 0;
   }
 
   .select__arrow {

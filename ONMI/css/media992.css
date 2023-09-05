@@ -510,6 +510,11 @@
     font-size: 1.2vw;
   }
 
+  .roadmap__btn {
+    font-size: 1.61vw;
+    padding: 1.01vw 1.61vw 1.01vw;
+  }
+
   .security__title {
     font-size: 4.17vw;
   }
@@ -620,6 +625,10 @@
     padding: 2.42vw 2.62vw;
     font-size: 1.81vw;
     border: 0.1vw solid rgba(151, 151, 151, 0.18);
+  }
+
+  .select__body-search {
+    padding: 1.01vw 1.01vw 0;
   }
 
   .select__arrow {
