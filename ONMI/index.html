@@ -1,11 +1,12 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>onmi</title>
-  <meta name="keywords" content=""/>
-  <meta name="description" content=""/>
+  <meta name="keywords" content="next-gen, app, game"/>
+  <meta name="description" content="next-gen app that combines entertainment and financial services within an engaging XR game.
+"/>
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -45,13 +46,14 @@
         </div>
       </div>
       <div class="header__right">
-        <a href="#" class="header__link first-load" data-effect="opacity" data-delay="0.7">
-          <span>Onmi Gallery</span>
-          <svg width="29" height="34" class="arrow_link">
-            <use xlink:href="./img/icons/icons.svg#arrow_link"></use>
-          </svg>
-        </a>
-        <a href="https://docs.onmi.io/" target="_blank" class="header__link first-load" data-effect="opacity" data-delay="0.8">
+        <!-- <a href="#" class="header__link first-load" data-effect="opacity" data-delay="0.7">
+           <span>Onmi Gallery</span>
+           <svg width="29" height="34" class="arrow_link">
+             <use xlink:href="./img/icons/icons.svg#arrow_link"></use>
+           </svg>
+         </a>-->
+        <a href="https://docs.onmi.io/" target="_blank" class="header__link first-load" data-effect="opacity"
+           data-delay="0.8">
           <span>Guide.doc</span>
           <svg width="29" height="34" class="arrow_link">
             <use xlink:href="./img/icons/icons.svg#arrow_link"></use>
@@ -69,13 +71,13 @@
 </header>
 <div class="mob-menu">
   <div class="container">
-    <a href="#" class="mob-menu__link header__link" data-delay="0.3">
+   <!-- <a href="#" class="mob-menu__link header__link" data-delay="0.3">
       <span>Onmi Gallery</span>
       <svg width="29" height="34" class="arrow_link">
         <use xlink:href="./img/icons/icons.svg#arrow_link"></use>
       </svg>
-    </a>
-    <a href="#" class="mob-menu__link header__link" data-delay="0.4">
+    </a>-->
+    <a href="https://docs.onmi.io/" target="_blank" class="mob-menu__link header__link" data-delay="0.4">
       <span>Guide.doc</span>
       <svg width="29" height="34" class="arrow_link">
         <use xlink:href="./img/icons/icons.svg#arrow_link"></use>
@@ -144,15 +146,19 @@
 </section>
 
   <section class="description-reality" data-effect="opacity" data-delay="0.2">
-  <picture>
-    <source media="(max-device-width:768px)" srcset="./img/reality_bg_mob.webp">
+  <div class="description-reality__img">
+    <picture>
+      <source media="(max-device-width:768px)" srcset="./img/reality_bg_mob.webp">
+      <noscript data-webp>
+        <img class="description-reality_bg" src="./img/reality_bg_half.png" alt="decor bg">
+      </noscript>
+    </picture>
+  </div>
+  <div class="description-reality__img">
     <noscript data-webp>
-      <img class="description-reality_bg" src="./img/reality_bg_half.png" alt="decor bg">
+      <img class="description-reality_bg description-reality_bg_2" alt="decor bg" src="./img/reality_bg_half.png">
     </noscript>
-  </picture>
-  <noscript data-webp>
-    <img class="description-reality_bg description-reality_bg_2" alt="decor bg" src="./img/reality_bg_half.png">
-  </noscript>
+  </div>
 </section>
 
   <section class="reality">
@@ -309,7 +315,7 @@
             </div>
           </div>
           <div class="swiper-slide cards-slider__slide">
-            <div class="cards-slider__phone">
+            <div class="cards-slider__phone cards-slider__phone_video">
              <!-- <noscript data-webp><img class="adventure__phone-phone" src="./img/adventure_phone.png"
                                        alt="Phone">
               </noscript>-->
@@ -1572,8 +1578,10 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr ">
-                <p data-effect="opacity">An idea is concieved during the covid lockdown of an app that would allow
-                  people to more fully immerse in the outside world, augmented by cutting edge XR technology.
+                <p data-effect="opacity">An idea is concieved during the covid lockdown of an app that
+                  would allow
+                  people to more fully immerse in the outside world, augmented by cutting edge XR
+                  technology.
                 </p>
               </div>
             </div>
@@ -1591,7 +1599,8 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr ">
-                <p data-effect="opacity">onmi's core components and principles are founded, ideas and basic mechanics
+                <p data-effect="opacity">onmi's core components and principles are founded, ideas and
+                  basic mechanics
                   were drafted. The game began development.
                 </p>
               </div>
@@ -1610,7 +1619,8 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr ">
-                <p data-effect="opacity">Key business decisions were made, development and content plan is established,
+                <p data-effect="opacity">Key business decisions were made, development and content plan
+                  is established,
                   key partners were contacted and collaboration efforts have started.
                 </p>
               </div>
@@ -1629,8 +1639,10 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr ">
-                <p data-effect="opacity">onmi Whitepaper, product documentation, roadmap and other documents are
-                  finalized. Game Economy is fully calculated and a project team scaling strategy is developed.</p>
+                <p data-effect="opacity">onmi Whitepaper, product documentation, roadmap and other
+                  documents are
+                  finalized. Game Economy is fully calculated and a project team scaling strategy is
+                  developed.</p>
               </div>
             </div>
           </div>
@@ -1647,8 +1659,10 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr">
-                <p>onmi is launched on Google Play and Apple App Store with complete core game mechanics. Internal
-                  tokenomics model is launched alongside the game. First clothing collections are launched are available
+                <p>onmi is launched on Google Play and Apple App Store with complete core game
+                  mechanics. Internal
+                  tokenomics model is launched alongside the game. First clothing collections are
+                  launched are available
                   for crafting and players start exchanging on the market. </p>
               </div>
             </div>
@@ -1666,9 +1680,12 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr">
-                <p>Omi Ghosts are launched, allowing newcomers to experience Reality 2.0 for free for a limited time.
-                  The hunger games perliminaries are carried out and the tournament is held worldwide. First competetive
-                  multilayer challenge is launched, based on a popular io game. ONM token is listed on DEX and CEX
+                <p>Omi Ghosts are launched, allowing newcomers to experience Reality 2.0 for free for a
+                  limited time.
+                  The hunger games perliminaries are carried out and the tournament is held worldwide.
+                  First competetive
+                  multilayer challenge is launched, based on a popular io game. ONM token is listed on
+                  DEX and CEX
                   listings</p>
               </div>
             </div>
@@ -1686,9 +1703,12 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr">
-                <p>A new competitive challenge is launched: a collectible card game called "Napies". Cards in player
-                  inventories can now be utilized fully in this game mode. Competitive ranking is introduced, providing
-                  profit incentives for higher skilled players. onmi spots are released, encouraging players to hang out
+                <p>A new competitive challenge is launched: a collectible card game called "Napies".
+                  Cards in player
+                  inventories can now be utilized fully in this game mode. Competitive ranking is
+                  introduced, providing
+                  profit incentives for higher skilled players. onmi spots are released, encouraging
+                  players to hang out
                   together.</p>
               </div>
             </div>
@@ -1706,8 +1726,10 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr">
-                <p>A new gameplay is added, where people join up and conquer territory block by block. A basic narrative
-                  is added to the game that expands on core principles and ideas of onmi. AR routes and festival utility
+                <p>A new gameplay is added, where people join up and conquer territory block by block. A
+                  basic narrative
+                  is added to the game that expands on core principles and ideas of onmi. AR routes
+                  and festival utility
                   is added, expanding Reality 2.0 more into the real world.</p>
               </div>
             </div>
@@ -1725,7 +1747,8 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr">
-                <p>onmi for creators programme is launched, allowing third parties to launch their custom content within
+                <p>onmi for creators programme is launched, allowing third parties to launch their
+                  custom content within
                   the game. Teams are formed to create local game content and ARGs.
                 </p>
               </div>
@@ -1744,8 +1767,10 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr">
-                <p>onmi is released for upcoming wearable AR devices, allowing Reality 2.0 to transition into the new
-                  age. Orbs are no longer random. Players can submit their places using our specialized service to
+                <p>onmi is released for upcoming wearable AR devices, allowing Reality 2.0 to transition
+                  into the new
+                  age. Orbs are no longer random. Players can submit their places using our
+                  specialized service to
                   elevate interesting places and real-life art
                 </p>
               </div>
@@ -1764,8 +1789,10 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr">
-                <p>AR elements are expanded more: Collaborative activities like sculpting are added. Omi can now be
-                  interacted with in AR, clothes recieve further utility, allowing players to wear them in AR.
+                <p>AR elements are expanded more: Collaborative activities like sculpting are added. Omi
+                  can now be
+                  interacted with in AR, clothes recieve further utility, allowing players to wear
+                  them in AR.
                 </p>
               </div>
             </div>
@@ -1783,7 +1810,8 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr">
-                <p>Main storylines are established, ARGs are lauched. People are encouraged to explore real and virtual
+                <p>Main storylines are established, ARGs are lauched. People are encouraged to explore
+                  real and virtual
                   worlds to uncover clues and crucial story details.
                 </p>
               </div>
@@ -1802,8 +1830,10 @@
           <div class="main-wrapper__col roadmap-item__col-wrapper">
             <div class="main-wrapper__col-item">
               <div class="roadmap-item__descr">
-                <p>Omi + AI. Omi are expanded significantly- they are now living beings with emotions and will. Players
-                  can now talk to their Omi, discuss issues, find support and reflect on their past adventures. Omi will
+                <p>Omi + AI. Omi are expanded significantly- they are now living beings with emotions
+                  and will. Players
+                  can now talk to their Omi, discuss issues, find support and reflect on their past
+                  adventures. Omi will
                   become intelligent and highly valued.
                 </p>
               </div>
@@ -1812,7 +1842,12 @@
         </div>
       </div>
     </div>
-    <buttom class="roadmap__btn btn">See more</buttom>
+    <div class="main-wrapper">
+      <div class="main-wrapper__col"></div>
+      <div class="main-wrapper__col">
+        <buttom class="roadmap__btn btn">See more</buttom>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -2193,7 +2228,7 @@
 
   <div id="modal" class="modal">
   <div class="modal__container container">
-    <div class="modal__content">
+    <div class="modal__content modal__content_centered">
       <form id="be-part__form" action="" class="modal__form form">
         <div class="form__label">
           <span class="color_green">Early Access</span> for the first 10.000 users
@@ -2205,8 +2240,8 @@
           <div class="form__field form__field_select">
             <div id="country" class="select">
               <div class="select__header field">
-                <div class="select__value">
-                  Country
+                <div class="">
+                  <input id="country-search" autocomplete="off" class="select__value search__input" placeholder="Country..."/>
                 </div>
                 <div class="select__arrow">
                   <svg width="29" height="34" class="arrow_link">
@@ -2215,9 +2250,6 @@
                 </div>
               </div>
               <div class="select__body">
-                <div class="select__body-search">
-                  <input id="country-search" class="search__input" placeholder="Search..."/>
-                </div>
                 <ul class="select__list">
 
                 </ul>
@@ -2263,7 +2295,7 @@
 <script src="./js/libs/ScrollTrigger.min.js"></script>
 <script src="./js/libs/marquee3k.min.js"></script>
 <script async src="./js/libs/simple-webp.min.js"></script>
-<script src="js/script.min.js" type="module" defer></script>
+<script src="js/script.js" type="module" defer></script>
 </body>
 
 </html>

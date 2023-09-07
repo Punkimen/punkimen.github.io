@@ -627,6 +627,14 @@
     border: 0.1vw solid rgba(151, 151, 151, 0.18);
   }
 
+  .select__header {
+    padding: 0;
+  }
+
+  .search__input {
+    padding: 2.42vw 2.62vw;
+  }
+
   .select__body-search {
     padding: 1.01vw 1.01vw 0;
   }

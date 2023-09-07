@@ -1360,6 +1360,10 @@
     margin-right: 5.45vw;
   }
 
+  .cards-slider__phone_video {
+    min-width: 47.53vw;
+  }
+
   .cards-slider__block {
     min-height: 41.67vw;
   }

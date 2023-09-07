@@ -11,7 +11,7 @@ import {cardsAdaptive, journeyCardsAdaptive} from "./module/adaptiveResize.min.j
 import {addClass, toggleClass, removeClass} from "./module/handleClassnames.min.js";
 import {scrollTrigger} from "./module/ScrollTrigger.min.js";
 import {seeMore} from "./module/seeMore.js";
-import {createCountrySelect, selectInit, getCountries} from "./module/select.js";
+import {createCountrySelect, selectInit, countries} from "./module/select.js";
 
 
 let windowWidth = window.innerWidth
@@ -159,9 +159,10 @@ const descrReality = (windowWidth) => {
     })
   }
 }
-verticalTransform(heroPose, heroPose, '-15%', '0%', true, 'top center+=35%', "bottom top")
 
 const initPage = () => {
+  verticalTransform(heroPose, heroPose, '0%', '15%', true, 'center top+=50%', "bottom top")
+
   heroPose.style.opacity = 1
   seeMore()
   selectInit()
@@ -315,8 +316,7 @@ const initPage = () => {
   cardsAdaptive(windowWidth)
   journeyCardsAdaptive(windowWidth)
 
-  search.addEventListener('input', async (e) => {
-    const countries = Object.values(await getCountries()).map(el => el.name)
+  search.addEventListener('input', (e) => {
     const filterCountries = countries.filter(country => country.toLowerCase().includes(e.target.value.toLowerCase()))
     createCountrySelect(filterCountries.sort())
   })

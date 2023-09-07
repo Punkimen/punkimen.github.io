@@ -1424,6 +1424,11 @@
     width: 27.47vw;
     display: block;
     margin-right: 4.69vw;
+    border-radius: 0;
+  }
+
+  .cards-slider__phone_video {
+    max-width: 25.5vw;
   }
 
   .cards-slider__block {
@@ -2193,6 +2198,11 @@
 
   .tokenomics__text p:not(:last-child) {
     margin-bottom: 3.91vw;
+  }
+
+  .roadmap,
+  .questions {
+    padding-bottom: 18vw;
   }
 
   .roadmap__title {
