@@ -1,10 +1,48 @@
 import {addClass, removeClass, toggleClass} from "./handleClassnames.js";
 
-export const getCountries = async () => {
-  const response = await fetch('https://countryapi.io/api/region/europe?apikey=gS9blfQayyTuKHunSkQbOlEzeNQbrtU3PLRcPMTg')
-  const data = await response.json()
-  return await data
-}
+export const countries = [
+  "Norway",
+  "Sweden",
+  "Finland",
+  "Denmark",
+  "Iceland",
+  "United Kingdom",
+  "Ireland",
+  "Portugal",
+  "Spain",
+  "France",
+  "Belgium",
+  "Netherlands",
+  "Luxembourg",
+  "Italy",
+  "Greece",
+  "Malta",
+  "Cyprus",
+  "Slovenia",
+  "Croatia",
+  "Russia",
+  "Estonia",
+  "Latvia",
+  "Lithuania",
+  "Belarus",
+  "Poland",
+  "Ukraine",
+  "Moldova",
+  "Romania",
+  "Bulgaria",
+  "Hungary",
+  "Serbia",
+  "Montenegro",
+  "North Macedonia",
+  "Albania",
+  "Kosovo",
+  "Bosnia and Herzegovina",
+  "Czech Republic",
+  "Slovakia",
+  "Austria",
+  "Switzerland",
+  "Germany"
+]
 
 const createOption = (el, parent) => {
   const elem = document.createElement('li');
@@ -19,31 +57,27 @@ export const createCountrySelect = (countries) => {
   const select = document.querySelector('#country')
   const list = select.querySelector('.select__list')
   list.innerHTML = '';
-  countries.forEach(el => {
+  countries.sort().forEach(el => {
     createOption(el, list)
   })
 }
 
-
-export const selectInit = async () => {
+export const selectInit = () => {
   const search = document.querySelector('#country-search')
-  const countries = Object.values(await getCountries()).map(el => el.name).sort()
   createCountrySelect(countries);
   const selects = document.querySelectorAll('.select');
-
   selects.forEach(el => {
+    const input = el.querySelector('.select__value')
+    input.addEventListener('focus', e => {
+      addClass(el, 'show')
+    })
     el.addEventListener('click', e => {
-      if (e.target.closest('.select__header')) {
-        e.stopPropagation()
-        toggleClass(el, 'show')
-      }
       if (e.target.closest('.select__checkbox')) {
         e.stopPropagation()
         addClass(el, 'selected');
-        el.querySelector('.select__value').textContent = e.target.value
+        el.querySelector('.select__value').value = e.target.value
         removeClass(el, 'show');
         createCountrySelect(countries);
-        search.value = ''
       }
     })
   })
