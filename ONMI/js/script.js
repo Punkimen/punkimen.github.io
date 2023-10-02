@@ -161,7 +161,7 @@ const descrReality = (windowWidth) => {
 }
 
 const initPage = () => {
-  verticalTransform(heroPose, heroPose, '0%', '15%', true, 'center top+=50%', "bottom top")
+  verticalTransform(heroPose, heroPose, '0%', '15%', true, 'center top+=30%', "bottom top")
 
   heroPose.style.opacity = 1
   seeMore()
